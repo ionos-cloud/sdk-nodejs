@@ -197,7 +197,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -208,7 +208,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -308,7 +308,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -319,7 +319,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -412,7 +412,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -423,7 +423,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -523,7 +523,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -534,7 +534,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -641,7 +641,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -652,7 +652,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -752,7 +752,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -763,7 +763,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -870,7 +870,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -881,7 +881,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -988,7 +988,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -999,7 +999,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1099,7 +1099,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1110,7 +1110,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1224,7 +1224,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1235,7 +1235,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1349,7 +1349,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1360,7 +1360,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1467,7 +1467,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1478,7 +1478,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1578,7 +1578,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1589,7 +1589,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1696,7 +1696,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1707,7 +1707,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1807,7 +1807,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1818,7 +1818,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -1925,7 +1925,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1936,7 +1936,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2029,7 +2029,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2040,7 +2040,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2140,7 +2140,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2151,7 +2151,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2251,7 +2251,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2262,7 +2262,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2355,7 +2355,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2366,7 +2366,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2466,7 +2466,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2477,7 +2477,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2577,7 +2577,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2588,7 +2588,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2688,7 +2688,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2699,7 +2699,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2806,7 +2806,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2817,7 +2817,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -2924,7 +2924,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -2935,7 +2935,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -3042,7 +3042,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -3053,7 +3053,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -3153,7 +3153,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -3164,7 +3164,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -3264,7 +3264,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -3275,7 +3275,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -3389,7 +3389,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -3400,7 +3400,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }
@@ -3495,7 +3495,7 @@ export class UserManagementApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -3506,7 +3506,7 @@ export class UserManagementApi {
                                 break;
                             case UserManagementApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = UserManagementApi.waitTime;
                                 }

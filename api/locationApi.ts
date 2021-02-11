@@ -185,7 +185,7 @@ export class LocationApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -196,7 +196,7 @@ export class LocationApi {
                                 break;
                             case LocationApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LocationApi.waitTime;
                                 }
@@ -303,7 +303,7 @@ export class LocationApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -314,7 +314,7 @@ export class LocationApi {
                                 break;
                             case LocationApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LocationApi.waitTime;
                                 }
@@ -407,7 +407,7 @@ export class LocationApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -418,7 +418,7 @@ export class LocationApi {
                                 break;
                             case LocationApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LocationApi.waitTime;
                                 }

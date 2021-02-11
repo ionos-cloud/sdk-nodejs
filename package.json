@@ -13,14 +13,14 @@
     "author": "OpenAPI-Generator Contributors",
     "license": "Unlicense",
     "dependencies": {
-        "bluebird": "^3.5.0",
-        "request": "^2.81.0",
         "@types/bluebird": "*",
         "@types/request": "*",
+        "bluebird": "^3.5.0",
+        "request": "^2.81.0",
         "rewire": "^3.0.2"
     },
     "devDependencies": {
-        "typescript": "^2.4.2",
-        "@types/node": "14.14.22"
+        "@types/node": "14.14.22",
+        "typescript": "^2.4.2"
     }
 }

@@ -196,7 +196,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -207,7 +207,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -314,7 +314,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -325,7 +325,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -435,7 +435,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -446,7 +446,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -560,7 +560,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -571,7 +571,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -688,7 +688,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -699,7 +699,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -813,7 +813,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -824,7 +824,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -938,7 +938,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -949,7 +949,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -1056,7 +1056,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1067,7 +1067,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }
@@ -1181,7 +1181,7 @@ export class LanApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -1192,7 +1192,7 @@ export class LanApi {
                                 break;
                             case LanApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = LanApi.waitTime;
                                 }

@@ -186,7 +186,7 @@ export class IPBlocksApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -197,7 +197,7 @@ export class IPBlocksApi {
                                 break;
                             case IPBlocksApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = IPBlocksApi.waitTime;
                                 }
@@ -297,7 +297,7 @@ export class IPBlocksApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -308,7 +308,7 @@ export class IPBlocksApi {
                                 break;
                             case IPBlocksApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = IPBlocksApi.waitTime;
                                 }
@@ -401,7 +401,7 @@ export class IPBlocksApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -412,7 +412,7 @@ export class IPBlocksApi {
                                 break;
                             case IPBlocksApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = IPBlocksApi.waitTime;
                                 }
@@ -519,7 +519,7 @@ export class IPBlocksApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -530,7 +530,7 @@ export class IPBlocksApi {
                                 break;
                             case IPBlocksApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = IPBlocksApi.waitTime;
                                 }
@@ -630,7 +630,7 @@ export class IPBlocksApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -641,7 +641,7 @@ export class IPBlocksApi {
                                 break;
                             case IPBlocksApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = IPBlocksApi.waitTime;
                                 }
@@ -748,7 +748,7 @@ export class IPBlocksApi {
                     } else {
                         let backoffTime = 0;
                         if (response.headers['retry-after'] != null) {
-                            backoffTime = response.headers['retry-after']
+                            backoffTime = parseInt(response.headers['retry-after']);
                         }
 
                         switch (response.statusCode) {
@@ -759,7 +759,7 @@ export class IPBlocksApi {
                                 break;
                             case IPBlocksApi.TOO_MANY_REQUESTS:
                                 if (response.headers['retry-after'] != null) {
-                                    backoffTime = response.headers['retry-after'];
+                                    backoffTime = parseInt(response.headers['retry-after']);
                                 } else {
                                     backoffTime = IPBlocksApi.waitTime;
                                 }
