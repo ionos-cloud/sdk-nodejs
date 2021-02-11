@@ -5,3 +5,4 @@ dist
 .idea
 .openapi-generator-ignore
 .openapi-generator/
+*.js
