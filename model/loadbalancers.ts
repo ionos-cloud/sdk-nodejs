@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,79 +12,59 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
+
 import { Loadbalancer } from './loadbalancer';
-import { PaginationLinks } from './paginationLinks';
+import { PaginationLinks } from './pagination-links';
 import { Type } from './type';
 
-export class Loadbalancers {
+/**
+ * 
+ * @export
+ * @interface Loadbalancers
+ */
+export interface Loadbalancers {
     /**
-    * The resource\'s unique identifier
-    */
-    'id'?: string;
+     * The resource\'s unique identifier
+     * @type {string}
+     * @memberof Loadbalancers
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Type;
+     * The type of object that has been created
+     * @type {Type}
+     * @memberof Loadbalancers
+     */
+    type?: Type;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof Loadbalancers
+     */
+    href?: string;
     /**
-    * Array of items in that collection
-    */
-    'items'?: Array<Loadbalancer>;
+     * Array of items in that collection
+     * @type {Array<Loadbalancer>}
+     * @memberof Loadbalancers
+     */
+    items?: Array<Loadbalancer>;
     /**
-    * the offset (if specified in the request)
-    */
-    'offset'?: number;
+     * the offset (if specified in the request)
+     * @type {number}
+     * @memberof Loadbalancers
+     */
+    offset?: number;
     /**
-    * the limit (if specified in the request)
-    */
-    'limit'?: number;
-    'links'?: PaginationLinks;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<Loadbalancer>"
-        },
-        {
-            "name": "offset",
-            "baseName": "offset",
-            "type": "number"
-        },
-        {
-            "name": "limit",
-            "baseName": "limit",
-            "type": "number"
-        },
-        {
-            "name": "links",
-            "baseName": "_links",
-            "type": "PaginationLinks"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Loadbalancers.attributeTypeMap;
-    }
+     * the limit (if specified in the request)
+     * @type {number}
+     * @memberof Loadbalancers
+     */
+    limit?: number;
+    /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof Loadbalancers
+     */
+    _links?: PaginationLinks;
 }
+
 

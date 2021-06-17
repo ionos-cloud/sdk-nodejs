@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,58 +12,47 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
-import { RequestMetadata } from './requestMetadata';
-import { RequestProperties } from './requestProperties';
+
+import { RequestMetadata } from './request-metadata';
+import { RequestProperties } from './request-properties';
 import { Type } from './type';
 
-export class Request {
+/**
+ * 
+ * @export
+ * @interface Request
+ */
+export interface Request {
     /**
-    * The resource\'s unique identifier
-    */
-    'id'?: string;
+     * The resource\'s unique identifier
+     * @type {string}
+     * @memberof Request
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Type;
+     * The type of object that has been created
+     * @type {Type}
+     * @memberof Request
+     */
+    type?: Type;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
-    'metadata'?: RequestMetadata;
-    'properties': RequestProperties;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "RequestMetadata"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "RequestProperties"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Request.attributeTypeMap;
-    }
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof Request
+     */
+    href?: string;
+    /**
+     * 
+     * @type {RequestMetadata}
+     * @memberof Request
+     */
+    metadata?: RequestMetadata;
+    /**
+     * 
+     * @type {RequestProperties}
+     * @memberof Request
+     */
+    properties: RequestProperties;
 }
+
 

@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,65 +12,54 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
-import { DatacenterElementMetadata } from './datacenterElementMetadata';
-import { ServerEntities } from './serverEntities';
-import { ServerProperties } from './serverProperties';
+
+import { DatacenterElementMetadata } from './datacenter-element-metadata';
+import { ServerEntities } from './server-entities';
+import { ServerProperties } from './server-properties';
 import { Type } from './type';
 
-export class Server {
+/**
+ * 
+ * @export
+ * @interface Server
+ */
+export interface Server {
     /**
-    * The resource\'s unique identifier
-    */
-    'id'?: string;
+     * The resource\'s unique identifier
+     * @type {string}
+     * @memberof Server
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Type;
+     * The type of object that has been created
+     * @type {Type}
+     * @memberof Server
+     */
+    type?: Type;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
-    'metadata'?: DatacenterElementMetadata;
-    'properties': ServerProperties;
-    'entities'?: ServerEntities;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "DatacenterElementMetadata"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "ServerProperties"
-        },
-        {
-            "name": "entities",
-            "baseName": "entities",
-            "type": "ServerEntities"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Server.attributeTypeMap;
-    }
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof Server
+     */
+    href?: string;
+    /**
+     * 
+     * @type {DatacenterElementMetadata}
+     * @memberof Server
+     */
+    metadata?: DatacenterElementMetadata;
+    /**
+     * 
+     * @type {ServerProperties}
+     * @memberof Server
+     */
+    properties: ServerProperties;
+    /**
+     * 
+     * @type {ServerEntities}
+     * @memberof Server
+     */
+    entities?: ServerEntities;
 }
+
 

@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,31 +12,40 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
+
+/**
+ * 
+ * @export
+ * @enum {string}
+ */
 export enum Type {
-    Datacenter = <any> 'datacenter',
-    Server = <any> 'server',
-    Volume = <any> 'volume',
-    Nic = <any> 'nic',
-    Loadbalancer = <any> 'loadbalancer',
-    Location = <any> 'location',
-    FirewallRule = <any> 'firewall-rule',
-    Image = <any> 'image',
-    Snapshot = <any> 'snapshot',
-    Lan = <any> 'lan',
-    Ipblock = <any> 'ipblock',
-    Pcc = <any> 'pcc',
-    Contract = <any> 'contract',
-    User = <any> 'user',
-    Group = <any> 'group',
-    Collection = <any> 'collection',
-    Resource = <any> 'resource',
-    Request = <any> 'request',
-    RequestStatus = <any> 'request-status',
-    S3key = <any> 's3key',
-    Backupunit = <any> 'backupunit',
-    Label = <any> 'label',
-    K8s = <any> 'k8s',
-    Nodepool = <any> 'nodepool'
+    Datacenter = 'datacenter',
+    Server = 'server',
+    Volume = 'volume',
+    Nic = 'nic',
+    Loadbalancer = 'loadbalancer',
+    Location = 'location',
+    FirewallRule = 'firewall-rule',
+    Image = 'image',
+    Snapshot = 'snapshot',
+    Lan = 'lan',
+    Ipblock = 'ipblock',
+    Pcc = 'pcc',
+    Contract = 'contract',
+    User = 'user',
+    Group = 'group',
+    Collection = 'collection',
+    Resource = 'resource',
+    Request = 'request',
+    RequestStatus = 'request-status',
+    S3key = 's3key',
+    Backupunit = 'backupunit',
+    Label = 'label',
+    K8s = 'k8s',
+    Nodepool = 'nodepool',
+    Node = 'node'
 }
+
+
+

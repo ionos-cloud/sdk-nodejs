@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,58 +12,48 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
+
 import { Label } from './label';
 
-export class Labels {
+/**
+ * 
+ * @export
+ * @interface Labels
+ */
+export interface Labels {
     /**
-    * Unique representation for Label as a collection of resource.
-    */
-    'id'?: string;
+     * Unique representation for Label as a collection of resource.
+     * @type {string}
+     * @memberof Labels
+     */
+    id?: string;
     /**
-    * The type of resource within a collection
-    */
-    'type'?: Labels.TypeEnum;
+     * The type of resource within a collection
+     * @type {string}
+     * @memberof Labels
+     */
+    type?: LabelsTypeEnum;
     /**
-    * URL to the collection representation (absolute path)
-    */
-    'href'?: string;
+     * URL to the collection representation (absolute path)
+     * @type {string}
+     * @memberof Labels
+     */
+    href?: string;
     /**
-    * Array of items in that collection
-    */
-    'items'?: Array<Label>;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Labels.TypeEnum"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<Label>"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Labels.attributeTypeMap;
-    }
+     * Array of items in that collection
+     * @type {Array<Label>}
+     * @memberof Labels
+     */
+    items?: Array<Label>;
 }
 
-export namespace Labels {
-    export enum TypeEnum {
-        Label = <any> 'label'
-    }
+/**
+    * @export
+    * @enum {string}
+    */
+export enum LabelsTypeEnum {
+    Collection = 'collection'
 }
+
+
+

@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,79 +12,59 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
-import { PaginationLinks } from './paginationLinks';
+
+import { PaginationLinks } from './pagination-links';
 import { Server } from './server';
 import { Type } from './type';
 
-export class Servers {
+/**
+ * 
+ * @export
+ * @interface Servers
+ */
+export interface Servers {
     /**
-    * The resource\'s unique identifier
-    */
-    'id'?: string;
+     * The resource\'s unique identifier
+     * @type {string}
+     * @memberof Servers
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Type;
+     * The type of object that has been created
+     * @type {Type}
+     * @memberof Servers
+     */
+    type?: Type;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof Servers
+     */
+    href?: string;
     /**
-    * Array of items in that collection
-    */
-    'items'?: Array<Server>;
+     * Array of items in that collection
+     * @type {Array<Server>}
+     * @memberof Servers
+     */
+    items?: Array<Server>;
     /**
-    * the offset (if specified in the request)
-    */
-    'offset'?: number;
+     * the offset (if specified in the request)
+     * @type {number}
+     * @memberof Servers
+     */
+    offset?: number;
     /**
-    * the limit (if specified in the request)
-    */
-    'limit'?: number;
-    'links'?: PaginationLinks;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<Server>"
-        },
-        {
-            "name": "offset",
-            "baseName": "offset",
-            "type": "number"
-        },
-        {
-            "name": "limit",
-            "baseName": "limit",
-            "type": "number"
-        },
-        {
-            "name": "links",
-            "baseName": "_links",
-            "type": "PaginationLinks"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Servers.attributeTypeMap;
-    }
+     * the limit (if specified in the request)
+     * @type {number}
+     * @memberof Servers
+     */
+    limit?: number;
+    /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof Servers
+     */
+    _links?: PaginationLinks;
 }
+
 

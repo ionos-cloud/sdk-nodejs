@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,54 +12,40 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
+
 import { Type } from './type';
 import { User } from './user';
 
-export class Users {
+/**
+ * 
+ * @export
+ * @interface Users
+ */
+export interface Users {
     /**
-    * The resource\'s unique identifier
-    */
-    'id'?: string;
+     * The resource\'s unique identifier
+     * @type {string}
+     * @memberof Users
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Type;
+     * The type of object that has been created
+     * @type {Type}
+     * @memberof Users
+     */
+    type?: Type;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof Users
+     */
+    href?: string;
     /**
-    * Array of items in that collection
-    */
-    'items'?: Array<User>;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "items",
-            "baseName": "items",
-            "type": "Array<User>"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Users.attributeTypeMap;
-    }
+     * Array of items in that collection
+     * @type {Array<User>}
+     * @memberof Users
+     */
+    items?: Array<User>;
 }
+
 

@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,65 +12,54 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
+
 import { Type } from './type';
-import { UserMetadata } from './userMetadata';
-import { UserProperties } from './userProperties';
-import { UsersEntities } from './usersEntities';
+import { UserMetadata } from './user-metadata';
+import { UserProperties } from './user-properties';
+import { UsersEntities } from './users-entities';
 
-export class User {
+/**
+ * 
+ * @export
+ * @interface User
+ */
+export interface User {
     /**
-    * The resource\'s unique identifier
-    */
-    'id'?: string;
+     * The resource\'s unique identifier
+     * @type {string}
+     * @memberof User
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Type;
+     * The type of object that has been created
+     * @type {Type}
+     * @memberof User
+     */
+    type?: Type;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
-    'metadata'?: UserMetadata;
-    'properties': UserProperties;
-    'entities'?: UsersEntities;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "UserMetadata"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "UserProperties"
-        },
-        {
-            "name": "entities",
-            "baseName": "entities",
-            "type": "UsersEntities"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return User.attributeTypeMap;
-    }
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof User
+     */
+    href?: string;
+    /**
+     * 
+     * @type {UserMetadata}
+     * @memberof User
+     */
+    metadata?: UserMetadata;
+    /**
+     * 
+     * @type {UserProperties}
+     * @memberof User
+     */
+    properties: UserProperties;
+    /**
+     * 
+     * @type {UsersEntities}
+     * @memberof User
+     */
+    entities?: UsersEntities;
 }
+
 

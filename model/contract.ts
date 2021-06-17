@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,33 +12,28 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
-import { ContractProperties } from './contractProperties';
+
+import { ContractProperties } from './contract-properties';
 import { Type } from './type';
 
-export class Contract {
+/**
+ * 
+ * @export
+ * @interface Contract
+ */
+export interface Contract {
     /**
-    * The type of the resource
-    */
-    'type'?: Type;
-    'properties': ContractProperties;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Type"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "ContractProperties"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Contract.attributeTypeMap;
-    }
+     * The type of the resource
+     * @type {Type}
+     * @memberof Contract
+     */
+    type?: Type;
+    /**
+     * 
+     * @type {ContractProperties}
+     * @memberof Contract
+     */
+    properties: ContractProperties;
 }
+
 

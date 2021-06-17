@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,62 +12,55 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
-import { LabelProperties } from './labelProperties';
-import { NoStateMetaData } from './noStateMetaData';
 
-export class Label {
+import { LabelProperties } from './label-properties';
+import { NoStateMetaData } from './no-state-meta-data';
+
+/**
+ * 
+ * @export
+ * @interface Label
+ */
+export interface Label {
     /**
-    * Label is identified using standard URN.
-    */
-    'id'?: string;
+     * Label is identified using standard URN.
+     * @type {string}
+     * @memberof Label
+     */
+    id?: string;
     /**
-    * The type of object that has been created
-    */
-    'type'?: Label.TypeEnum;
+     * The type of object that has been created
+     * @type {string}
+     * @memberof Label
+     */
+    type?: LabelTypeEnum;
     /**
-    * URL to the object representation (absolute path)
-    */
-    'href'?: string;
-    'metadata'?: NoStateMetaData;
-    'properties': LabelProperties;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "id",
-            "baseName": "id",
-            "type": "string"
-        },
-        {
-            "name": "type",
-            "baseName": "type",
-            "type": "Label.TypeEnum"
-        },
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "metadata",
-            "baseName": "metadata",
-            "type": "NoStateMetaData"
-        },
-        {
-            "name": "properties",
-            "baseName": "properties",
-            "type": "LabelProperties"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Label.attributeTypeMap;
-    }
+     * URL to the object representation (absolute path)
+     * @type {string}
+     * @memberof Label
+     */
+    href?: string;
+    /**
+     * 
+     * @type {NoStateMetaData}
+     * @memberof Label
+     */
+    metadata?: NoStateMetaData;
+    /**
+     * 
+     * @type {LabelProperties}
+     * @memberof Label
+     */
+    properties: LabelProperties;
 }
 
-export namespace Label {
-    export enum TypeEnum {
-        Label = <any> 'label'
-    }
+/**
+    * @export
+    * @enum {string}
+    */
+export enum LabelTypeEnum {
+    Label = 'label'
 }
+
+
+

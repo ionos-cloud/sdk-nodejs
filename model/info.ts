@@ -1,3 +1,5 @@
+/* tslint:disable */
+/* eslint-disable */
 /**
  * CLOUD API
  * An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API.   The API allows you to perform a variety of management tasks such as spinning up additional servers, adding volumes, adjusting networking, and so forth. It is designed to allow users to leverage the same power and flexibility found within the DCD visual tool. Both tools are consistent with their concepts and lend well to making the experience smooth and intuitive.
@@ -10,43 +12,32 @@
  * Do not edit the class manually.
  */
 
-import { RequestFile } from './models';
 
-export class Info {
+
+/**
+ * 
+ * @export
+ * @interface Info
+ */
+export interface Info {
     /**
-    * API entry point
-    */
-    'href'?: string;
+     * API entry point
+     * @type {string}
+     * @memberof Info
+     */
+    href?: string;
     /**
-    * Name of the API
-    */
-    'name'?: string;
+     * Name of the API
+     * @type {string}
+     * @memberof Info
+     */
+    name?: string;
     /**
-    * Version of the API
-    */
-    'version'?: string;
-
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-        {
-            "name": "href",
-            "baseName": "href",
-            "type": "string"
-        },
-        {
-            "name": "name",
-            "baseName": "name",
-            "type": "string"
-        },
-        {
-            "name": "version",
-            "baseName": "version",
-            "type": "string"
-        }    ];
-
-    static getAttributeTypeMap() {
-        return Info.attributeTypeMap;
-    }
+     * Version of the API
+     * @type {string}
+     * @memberof Info
+     */
+    version?: string;
 }
+
 
