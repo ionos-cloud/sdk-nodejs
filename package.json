@@ -1,6 +1,6 @@
 {
   "name": "@ionos-cloud/sdk-nodejs",
-  "version": "5.0.0-alpha.1",
+  "version": "5.0.0-alpha.2",
   "description": "NodeJS SDK for the Ionos Cloud API",
   "author": "Ionos",
   "keywords": [
@@ -21,11 +21,11 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "axios": "^0.21.1",
-    "better-docs": "^2.3.2"
+    "axios": "^0.21.1"
   },
   "devDependencies": {
     "@types/node": "^12.11.5",
+    "better-docs": "^2.3.2",
     "typescript": "^3.6.4"
   }
 }
