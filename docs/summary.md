@@ -9,7 +9,7 @@
 * [BackupUnitApi](api/BackupUnitApi.md)
 * [ContractApi](api/ContractApi.md)
 * [DataCenterApi](api/DataCenterApi.md)
-* [IPBlocksApi](api/IpBlockApi.md)
+* [IPBlocksApi](api/IPBlocksApi.md)
 * [ImageApi](api/ImageApi.md)
 * [KubernetesApi](api/KubernetesApi.md)
 * [LabelApi](api/LabelApi.md)
