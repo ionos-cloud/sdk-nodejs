@@ -7,7 +7,7 @@
 PrivateCrossConnectApi - object-oriented interface
 
 *Source:*
-[api/private-cross-connect-api.ts](api/private-cross-connect-api.ts), [line 533](api/private-cross-connect-api.ts#L533)
+[api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 533](/../../api/private-cross-connect-api.ts#L533)
 
 ---------------
 
