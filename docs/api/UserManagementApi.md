@@ -7,7 +7,7 @@
 UserManagementApi - object-oriented interface
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3112](/../../api/user-management-api.ts#L3112)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3112](/../../api/user-management-api.ts#L3112)
 
 ---------------
 
@@ -30,7 +30,7 @@ Delete a group
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3127](/../../api/user-management-api.ts#L3127)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3127](/../../api/user-management-api.ts#L3127)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ You can retrieve a group by using the group ID. This value can be found in the r
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3138](/../../api/user-management-api.ts#L3138)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3138](/../../api/user-management-api.ts#L3138)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a complete list of all groups that you have access to
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3149](/../../api/user-management-api.ts#L3149)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3149](/../../api/user-management-api.ts#L3149)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use this POST method to create a group
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3160](/../../api/user-management-api.ts#L3160)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3160](/../../api/user-management-api.ts#L3160)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ You can use this method to update properties of the group.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3171](/../../api/user-management-api.ts#L3171)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3171](/../../api/user-management-api.ts#L3171)
 
 ##### Throws:
 
@@ -124,7 +124,7 @@ Retrieve resources assigned to a group
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3182](/../../api/user-management-api.ts#L3182)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3182](/../../api/user-management-api.ts#L3182)
 
 ##### Throws:
 
@@ -143,7 +143,7 @@ This will remove a resource from a group
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3193](/../../api/user-management-api.ts#L3193)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3193](/../../api/user-management-api.ts#L3193)
 
 ##### Throws:
 
@@ -162,7 +162,7 @@ This will retrieve the properties of a group share.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3204](/../../api/user-management-api.ts#L3204)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3204](/../../api/user-management-api.ts#L3204)
 
 ##### Throws:
 
@@ -181,7 +181,7 @@ You can retrieve a list of all resources along with their permissions of the gro
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3215](/../../api/user-management-api.ts#L3215)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3215](/../../api/user-management-api.ts#L3215)
 
 ##### Throws:
 
@@ -200,7 +200,7 @@ This will add a resource to the group.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3226](/../../api/user-management-api.ts#L3226)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3226](/../../api/user-management-api.ts#L3226)
 
 ##### Throws:
 
@@ -219,7 +219,7 @@ You can use update resource permissions of a group. If empty body will be provid
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3237](/../../api/user-management-api.ts#L3237)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3237](/../../api/user-management-api.ts#L3237)
 
 ##### Throws:
 
@@ -238,7 +238,7 @@ This will remove a user from a group
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3248](/../../api/user-management-api.ts#L3248)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3248](/../../api/user-management-api.ts#L3248)
 
 ##### Throws:
 
@@ -257,7 +257,7 @@ You can retrieve a list of users who are members of the group
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3259](/../../api/user-management-api.ts#L3259)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3259](/../../api/user-management-api.ts#L3259)
 
 ##### Throws:
 
@@ -276,7 +276,7 @@ This will attach a pre-existing user to a group.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3270](/../../api/user-management-api.ts#L3270)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3270](/../../api/user-management-api.ts#L3270)
 
 ##### Throws:
 
@@ -295,7 +295,7 @@ You can retrieve a list of resources by using the type. Allowed values are { dat
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3281](/../../api/user-management-api.ts#L3281)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3281](/../../api/user-management-api.ts#L3281)
 
 ##### Throws:
 
@@ -314,7 +314,7 @@ You can retrieve a resource by using the type and its uuid. Allowed values for t
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3292](/../../api/user-management-api.ts#L3292)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3292](/../../api/user-management-api.ts#L3292)
 
 ##### Throws:
 
@@ -333,7 +333,7 @@ You can retrieve a complete list of all resources that you have access to
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3303](/../../api/user-management-api.ts#L3303)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3303](/../../api/user-management-api.ts#L3303)
 
 ##### Throws:
 
@@ -352,7 +352,7 @@ Delete a user
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3314](/../../api/user-management-api.ts#L3314)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3314](/../../api/user-management-api.ts#L3314)
 
 ##### Throws:
 
@@ -371,7 +371,7 @@ You can retrieve user details by using the users ID. This value can be found in 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3325](/../../api/user-management-api.ts#L3325)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3325](/../../api/user-management-api.ts#L3325)
 
 ##### Throws:
 
@@ -390,7 +390,7 @@ You can retrieve a complete list of users under your account
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3336](/../../api/user-management-api.ts#L3336)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3336](/../../api/user-management-api.ts#L3336)
 
 ##### Throws:
 
@@ -409,7 +409,7 @@ You can retrieve group resources of user by using the users ID. This value can b
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3347](/../../api/user-management-api.ts#L3347)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3347](/../../api/user-management-api.ts#L3347)
 
 ##### Throws:
 
@@ -428,7 +428,7 @@ You can retrieve resources owned by using the users ID. This value can be found 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3358](/../../api/user-management-api.ts#L3358)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3358](/../../api/user-management-api.ts#L3358)
 
 ##### Throws:
 
@@ -447,7 +447,7 @@ You can use this POST method to create a user
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3369](/../../api/user-management-api.ts#L3369)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3369](/../../api/user-management-api.ts#L3369)
 
 ##### Throws:
 
@@ -466,7 +466,7 @@ You can use update attributes of a User
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3380](/../../api/user-management-api.ts#L3380)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3380](/../../api/user-management-api.ts#L3380)
 
 ##### Throws:
 
@@ -485,7 +485,7 @@ Delete a S3 key
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3391](/../../api/user-management-api.ts#L3391)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3391](/../../api/user-management-api.ts#L3391)
 
 ##### Throws:
 
@@ -504,7 +504,7 @@ You can retrieve S3 key belonging to the given User. This user Id can be found i
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3402](/../../api/user-management-api.ts#L3402)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3402](/../../api/user-management-api.ts#L3402)
 
 ##### Throws:
 
@@ -523,7 +523,7 @@ You can retrieve S3 keys owned by a user by using the users ID. This user Id can
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3413](/../../api/user-management-api.ts#L3413)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3413](/../../api/user-management-api.ts#L3413)
 
 ##### Throws:
 
@@ -542,7 +542,7 @@ Creates a S3 key for the given user. This user Id can be found in the response b
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3424](/../../api/user-management-api.ts#L3424)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3424](/../../api/user-management-api.ts#L3424)
 
 ##### Throws:
 
@@ -561,7 +561,7 @@ You can enable or disable a given S3 key.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3435](/../../api/user-management-api.ts#L3435)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3435](/../../api/user-management-api.ts#L3435)
 
 ##### Throws:
 
@@ -580,7 +580,7 @@ You can retrieve S3 object storage single signon URL for the given user. This us
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/user-management-api.ts](/../../api/user-management-api.ts), [line 3446](/../../api/user-management-api.ts#L3446)
+[api/user-management-api.ts](/../../api/user-management-api.ts), [line 3446](/../../api/user-management-api.ts#L3446)
 
 ##### Throws:
 

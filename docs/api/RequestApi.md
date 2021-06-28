@@ -7,7 +7,7 @@
 RequestApi - object-oriented interface
 
 *Source:*
-[/../../api/request-api.ts](/../../api/request-api.ts), [line 432](/../../api/request-api.ts#L432)
+[api/request-api.ts](/../../api/request-api.ts), [line 432](/../../api/request-api.ts#L432)
 
 ---------------
 
@@ -30,7 +30,7 @@ Retrieves the attributes of a given request.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/request-api.ts](/../../api/request-api.ts), [line 447](/../../api/request-api.ts#L447)
+[api/request-api.ts](/../../api/request-api.ts), [line 447](/../../api/request-api.ts#L447)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieve a list of API requests.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/request-api.ts](/../../api/request-api.ts), [line 458](/../../api/request-api.ts#L458)
+[api/request-api.ts](/../../api/request-api.ts), [line 458](/../../api/request-api.ts#L458)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieves the status of a given request.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/request-api.ts](/../../api/request-api.ts), [line 469](/../../api/request-api.ts#L469)
+[api/request-api.ts](/../../api/request-api.ts), [line 469](/../../api/request-api.ts#L469)
 
 ##### Throws:
 

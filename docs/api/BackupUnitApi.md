@@ -7,7 +7,7 @@
 BackupUnitApi - object-oriented interface
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 735](/../../api/backup-unit-api.ts#L735)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 735](/../../api/backup-unit-api.ts#L735)
 
 ---------------
 
@@ -30,7 +30,7 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 750](/../../api/backup-unit-api.ts#L750)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 750](/../../api/backup-unit-api.ts#L750)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ You can retrieve the details of an specific backup unit.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 761](/../../api/backup-unit-api.ts#L761)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 761](/../../api/backup-unit-api.ts#L761)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a complete list of backup Units that you have access to.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 772](/../../api/backup-unit-api.ts#L772)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 772](/../../api/backup-unit-api.ts#L772)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use update a backup Unit properties
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 783](/../../api/backup-unit-api.ts#L783)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 783](/../../api/backup-unit-api.ts#L783)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 794](/../../api/backup-unit-api.ts#L794)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 794](/../../api/backup-unit-api.ts#L794)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ You can use update a backup Unit properties
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 805](/../../api/backup-unit-api.ts#L805)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 805](/../../api/backup-unit-api.ts#L805)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ Returns a single signon URL for the specified backup Unit.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 816](/../../api/backup-unit-api.ts#L816)
+[api/backup-unit-api.ts](/../../api/backup-unit-api.ts), [line 816](/../../api/backup-unit-api.ts#L816)
 
 ##### Throws:
 

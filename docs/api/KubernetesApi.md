@@ -7,7 +7,7 @@
 KubernetesApi - object-oriented interface
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1820](/../../api/kubernetes-api.ts#L1820)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1820](/../../api/kubernetes-api.ts#L1820)
 
 ---------------
 
@@ -30,7 +30,7 @@ This will remove a Kubernetes Cluster.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1835](/../../api/kubernetes-api.ts#L1835)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1835](/../../api/kubernetes-api.ts#L1835)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ This will retrieve a single Kubernetes Cluster.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1846](/../../api/kubernetes-api.ts#L1846)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1846](/../../api/kubernetes-api.ts#L1846)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a list of all kubernetes clusters associated with a contract
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1857](/../../api/kubernetes-api.ts#L1857)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1857](/../../api/kubernetes-api.ts#L1857)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can retrieve kubernetes configuration file for the kubernetes cluster.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1868](/../../api/kubernetes-api.ts#L1868)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1868](/../../api/kubernetes-api.ts#L1868)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ This will remove a Kubernetes Node Pool.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1879](/../../api/kubernetes-api.ts#L1879)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1879](/../../api/kubernetes-api.ts#L1879)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ You can retrieve a single Kubernetes Node Pool.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1890](/../../api/kubernetes-api.ts#L1890)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1890](/../../api/kubernetes-api.ts#L1890)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1901](/../../api/kubernetes-api.ts#L1901)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1901](/../../api/kubernetes-api.ts#L1901)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ This will remove a Kubernetes node.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1912](/../../api/kubernetes-api.ts#L1912)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1912](/../../api/kubernetes-api.ts#L1912)
 
 ##### Throws:
 
@@ -182,7 +182,7 @@ You can retrieve a single Kubernetes Node.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1923](/../../api/kubernetes-api.ts#L1923)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1923](/../../api/kubernetes-api.ts#L1923)
 
 ##### Throws:
 
@@ -201,7 +201,7 @@ You can retrieve all nodes of Kubernetes Node Pool.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1934](/../../api/kubernetes-api.ts#L1934)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1934](/../../api/kubernetes-api.ts#L1934)
 
 ##### Throws:
 
@@ -220,7 +220,7 @@ You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1945](/../../api/kubernetes-api.ts#L1945)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1945](/../../api/kubernetes-api.ts#L1945)
 
 ##### Throws:
 
@@ -239,7 +239,7 @@ This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1956](/../../api/kubernetes-api.ts#L1956)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1956](/../../api/kubernetes-api.ts#L1956)
 
 ##### Throws:
 
@@ -258,7 +258,7 @@ This will modify the Kubernetes Node Pool.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1967](/../../api/kubernetes-api.ts#L1967)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1967](/../../api/kubernetes-api.ts#L1967)
 
 ##### Throws:
 
@@ -277,7 +277,7 @@ This will create a new Kubernetes Cluster.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1978](/../../api/kubernetes-api.ts#L1978)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1978](/../../api/kubernetes-api.ts#L1978)
 
 ##### Throws:
 
@@ -296,7 +296,7 @@ This will modify the Kubernetes Cluster.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1989](/../../api/kubernetes-api.ts#L1989)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1989](/../../api/kubernetes-api.ts#L1989)
 
 ##### Throws:
 
@@ -315,7 +315,7 @@ You can retrieve a list of available kubernetes versions for nodepools depending
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2000](/../../api/kubernetes-api.ts#L2000)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2000](/../../api/kubernetes-api.ts#L2000)
 
 ##### Throws:
 
@@ -333,7 +333,7 @@ You can retrieve the current default kubernetes version for clusters and nodepoo
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2010](/../../api/kubernetes-api.ts#L2010)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2010](/../../api/kubernetes-api.ts#L2010)
 
 ##### Throws:
 
@@ -351,7 +351,7 @@ You can retrieve a list of available kubernetes versions
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2020](/../../api/kubernetes-api.ts#L2020)
+[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2020](/../../api/kubernetes-api.ts#L2020)
 
 ##### Throws:
 

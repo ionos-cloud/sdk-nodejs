@@ -7,7 +7,7 @@
 IPBlocksApi - object-oriented interface
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 646](/../../api/ipblocks-api.ts#L646)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 646](/../../api/ipblocks-api.ts#L646)
 
 ---------------
 
@@ -30,7 +30,7 @@ Removes the specific IP Block
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 661](/../../api/ipblocks-api.ts#L661)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 661](/../../api/ipblocks-api.ts#L661)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieves the attributes of a given IP Block.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 672](/../../api/ipblocks-api.ts#L672)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 672](/../../api/ipblocks-api.ts#L672)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieve a list of all reserved IP Blocks
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 683](/../../api/ipblocks-api.ts#L683)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 683](/../../api/ipblocks-api.ts#L683)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 694](/../../api/ipblocks-api.ts#L694)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 694](/../../api/ipblocks-api.ts#L694)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ This will reserve a new IP Block
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 705](/../../api/ipblocks-api.ts#L705)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 705](/../../api/ipblocks-api.ts#L705)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 716](/../../api/ipblocks-api.ts#L716)
+[api/ipblocks-api.ts](/../../api/ipblocks-api.ts), [line 716](/../../api/ipblocks-api.ts#L716)
 
 ##### Throws:
 

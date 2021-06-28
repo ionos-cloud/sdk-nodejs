@@ -7,7 +7,7 @@
 DataCenterApi - object-oriented interface
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 664](/../../api/data-center-api.ts#L664)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 664](/../../api/data-center-api.ts#L664)
 
 ---------------
 
@@ -30,7 +30,7 @@ Will remove all objects within the datacenter and remove the datacenter object i
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 679](/../../api/data-center-api.ts#L679)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 679](/../../api/data-center-api.ts#L679)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ You can retrieve a data center by using the resource\'s ID. This value can be fo
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 690](/../../api/data-center-api.ts#L690)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 690](/../../api/data-center-api.ts#L690)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a complete list of data centers provisioned under your account
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 701](/../../api/data-center-api.ts#L701)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 701](/../../api/data-center-api.ts#L701)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 712](/../../api/data-center-api.ts#L712)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 712](/../../api/data-center-api.ts#L712)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ Virtual data centers are the foundation of the platform. They act as logical con
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 723](/../../api/data-center-api.ts#L723)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 723](/../../api/data-center-api.ts#L723)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/data-center-api.ts](/../../api/data-center-api.ts), [line 734](/../../api/data-center-api.ts#L734)
+[api/data-center-api.ts](/../../api/data-center-api.ts), [line 734](/../../api/data-center-api.ts#L734)
 
 ##### Throws:
 

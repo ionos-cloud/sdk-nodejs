@@ -7,7 +7,7 @@
 VolumeApi - object-oriented interface
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 960](/../../api/volume-api.ts#L960)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 960](/../../api/volume-api.ts#L960)
 
 ---------------
 
@@ -30,7 +30,7 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 975](/../../api/volume-api.ts#L975)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 975](/../../api/volume-api.ts#L975)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Deletes the specified volume. This will result in the volume being removed from 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 986](/../../api/volume-api.ts#L986)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 986](/../../api/volume-api.ts#L986)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieves the attributes of a given Volume
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 997](/../../api/volume-api.ts#L997)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 997](/../../api/volume-api.ts#L997)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ Retrieves a list of Volumes.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 1008](/../../api/volume-api.ts#L1008)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 1008](/../../api/volume-api.ts#L1008)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ You can use update attributes of a Volume
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 1019](/../../api/volume-api.ts#L1019)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 1019](/../../api/volume-api.ts#L1019)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 1030](/../../api/volume-api.ts#L1030)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 1030](/../../api/volume-api.ts#L1030)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ You can use update attributes of a Volume
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 1041](/../../api/volume-api.ts#L1041)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 1041](/../../api/volume-api.ts#L1041)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/volume-api.ts](/../../api/volume-api.ts), [line 1052](/../../api/volume-api.ts#L1052)
+[api/volume-api.ts](/../../api/volume-api.ts), [line 1052](/../../api/volume-api.ts#L1052)
 
 ##### Throws:
 

@@ -7,7 +7,7 @@
 LabelApi - object-oriented interface
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3071](/../../api/label-api.ts#L3071)
+[api/label-api.ts](/../../api/label-api.ts), [line 3071](/../../api/label-api.ts#L3071)
 
 ---------------
 
@@ -30,7 +30,7 @@ This will remove a label from the data center.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3086](/../../api/label-api.ts#L3086)
+[api/label-api.ts](/../../api/label-api.ts), [line 3086](/../../api/label-api.ts#L3086)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ This will retrieve the properties of a associated label to a data center.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3097](/../../api/label-api.ts#L3097)
+[api/label-api.ts](/../../api/label-api.ts), [line 3097](/../../api/label-api.ts#L3097)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a list of all labels associated with a data center
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3108](/../../api/label-api.ts#L3108)
+[api/label-api.ts](/../../api/label-api.ts), [line 3108](/../../api/label-api.ts#L3108)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ This will add a label to the data center.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3119](/../../api/label-api.ts#L3119)
+[api/label-api.ts](/../../api/label-api.ts), [line 3119](/../../api/label-api.ts#L3119)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ This will modify the value of the label on a data center.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3130](/../../api/label-api.ts#L3130)
+[api/label-api.ts](/../../api/label-api.ts), [line 3130](/../../api/label-api.ts#L3130)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ This will remove a label from the server.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3141](/../../api/label-api.ts#L3141)
+[api/label-api.ts](/../../api/label-api.ts), [line 3141](/../../api/label-api.ts#L3141)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ This will retrieve the properties of a associated label to a server.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3152](/../../api/label-api.ts#L3152)
+[api/label-api.ts](/../../api/label-api.ts), [line 3152](/../../api/label-api.ts#L3152)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ You can retrieve a list of all labels associated with a server
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3163](/../../api/label-api.ts#L3163)
+[api/label-api.ts](/../../api/label-api.ts), [line 3163](/../../api/label-api.ts#L3163)
 
 ##### Throws:
 
@@ -182,7 +182,7 @@ This will add a label to the server.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3174](/../../api/label-api.ts#L3174)
+[api/label-api.ts](/../../api/label-api.ts), [line 3174](/../../api/label-api.ts#L3174)
 
 ##### Throws:
 
@@ -201,7 +201,7 @@ This will modify the value of the label on a server.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3185](/../../api/label-api.ts#L3185)
+[api/label-api.ts](/../../api/label-api.ts), [line 3185](/../../api/label-api.ts#L3185)
 
 ##### Throws:
 
@@ -220,7 +220,7 @@ This will remove a label from the volume.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3196](/../../api/label-api.ts#L3196)
+[api/label-api.ts](/../../api/label-api.ts), [line 3196](/../../api/label-api.ts#L3196)
 
 ##### Throws:
 
@@ -239,7 +239,7 @@ This will retrieve the properties of a associated label to a volume.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3207](/../../api/label-api.ts#L3207)
+[api/label-api.ts](/../../api/label-api.ts), [line 3207](/../../api/label-api.ts#L3207)
 
 ##### Throws:
 
@@ -258,7 +258,7 @@ You can retrieve a list of all labels associated with a volume
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3218](/../../api/label-api.ts#L3218)
+[api/label-api.ts](/../../api/label-api.ts), [line 3218](/../../api/label-api.ts#L3218)
 
 ##### Throws:
 
@@ -277,7 +277,7 @@ This will add a label to the volume.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3229](/../../api/label-api.ts#L3229)
+[api/label-api.ts](/../../api/label-api.ts), [line 3229](/../../api/label-api.ts#L3229)
 
 ##### Throws:
 
@@ -296,7 +296,7 @@ This will modify the value of the label on a volume.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3240](/../../api/label-api.ts#L3240)
+[api/label-api.ts](/../../api/label-api.ts), [line 3240](/../../api/label-api.ts#L3240)
 
 ##### Throws:
 
@@ -315,7 +315,7 @@ This will remove a label from the Ip Block.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3251](/../../api/label-api.ts#L3251)
+[api/label-api.ts](/../../api/label-api.ts), [line 3251](/../../api/label-api.ts#L3251)
 
 ##### Throws:
 
@@ -334,7 +334,7 @@ This will retrieve the properties of a associated label to a Ip Block.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3262](/../../api/label-api.ts#L3262)
+[api/label-api.ts](/../../api/label-api.ts), [line 3262](/../../api/label-api.ts#L3262)
 
 ##### Throws:
 
@@ -353,7 +353,7 @@ You can retrieve a list of all labels associated with a IP Block
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3273](/../../api/label-api.ts#L3273)
+[api/label-api.ts](/../../api/label-api.ts), [line 3273](/../../api/label-api.ts#L3273)
 
 ##### Throws:
 
@@ -372,7 +372,7 @@ This will add a label to the Ip Block.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3284](/../../api/label-api.ts#L3284)
+[api/label-api.ts](/../../api/label-api.ts), [line 3284](/../../api/label-api.ts#L3284)
 
 ##### Throws:
 
@@ -391,7 +391,7 @@ This will modify the value of the label on a Ip Block.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3295](/../../api/label-api.ts#L3295)
+[api/label-api.ts](/../../api/label-api.ts), [line 3295](/../../api/label-api.ts#L3295)
 
 ##### Throws:
 
@@ -410,7 +410,7 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3306](/../../api/label-api.ts#L3306)
+[api/label-api.ts](/../../api/label-api.ts), [line 3306](/../../api/label-api.ts#L3306)
 
 ##### Throws:
 
@@ -429,7 +429,7 @@ You can retrieve a complete list of labels that you have access to.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3317](/../../api/label-api.ts#L3317)
+[api/label-api.ts](/../../api/label-api.ts), [line 3317](/../../api/label-api.ts#L3317)
 
 ##### Throws:
 
@@ -448,7 +448,7 @@ This will remove a label from the snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3328](/../../api/label-api.ts#L3328)
+[api/label-api.ts](/../../api/label-api.ts), [line 3328](/../../api/label-api.ts#L3328)
 
 ##### Throws:
 
@@ -467,7 +467,7 @@ This will retrieve the properties of a associated label to a snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3339](/../../api/label-api.ts#L3339)
+[api/label-api.ts](/../../api/label-api.ts), [line 3339](/../../api/label-api.ts#L3339)
 
 ##### Throws:
 
@@ -486,7 +486,7 @@ You can retrieve a list of all labels associated with a snapshot
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3350](/../../api/label-api.ts#L3350)
+[api/label-api.ts](/../../api/label-api.ts), [line 3350](/../../api/label-api.ts#L3350)
 
 ##### Throws:
 
@@ -505,7 +505,7 @@ This will add a label to the snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3361](/../../api/label-api.ts#L3361)
+[api/label-api.ts](/../../api/label-api.ts), [line 3361](/../../api/label-api.ts#L3361)
 
 ##### Throws:
 
@@ -524,7 +524,7 @@ This will modify the value of the label on a snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/label-api.ts](/../../api/label-api.ts), [line 3372](/../../api/label-api.ts#L3372)
+[api/label-api.ts](/../../api/label-api.ts), [line 3372](/../../api/label-api.ts#L3372)
 
 ##### Throws:
 

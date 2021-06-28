@@ -7,7 +7,7 @@
 LocationApi - object-oriented interface
 
 *Source:*
-[/../../api/location-api.ts](/../../api/location-api.ts), [line 323](/../../api/location-api.ts#L323)
+[api/location-api.ts](/../../api/location-api.ts), [line 323](/../../api/location-api.ts#L323)
 
 ---------------
 
@@ -30,7 +30,7 @@ Retrieve a list of Locations within a world\'s region
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/location-api.ts](/../../api/location-api.ts), [line 338](/../../api/location-api.ts#L338)
+[api/location-api.ts](/../../api/location-api.ts), [line 338](/../../api/location-api.ts#L338)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieves the attributes of a given location
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/location-api.ts](/../../api/location-api.ts), [line 349](/../../api/location-api.ts#L349)
+[api/location-api.ts](/../../api/location-api.ts), [line 349](/../../api/location-api.ts#L349)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieve a list of Locations. This list represents where you can provision your 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/location-api.ts](/../../api/location-api.ts), [line 360](/../../api/location-api.ts#L360)
+[api/location-api.ts](/../../api/location-api.ts), [line 360](/../../api/location-api.ts#L360)
 
 ##### Throws:
 

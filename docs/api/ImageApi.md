@@ -7,7 +7,7 @@
 ImageApi - object-oriented interface
 
 *Source:*
-[/../../api/image-api.ts](/../../api/image-api.ts), [line 541](/../../api/image-api.ts#L541)
+[api/image-api.ts](/../../api/image-api.ts), [line 541](/../../api/image-api.ts#L541)
 
 ---------------
 
@@ -30,7 +30,7 @@ Deletes the specified image. This operation is permitted on private image only.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/image-api.ts](/../../api/image-api.ts), [line 556](/../../api/image-api.ts#L556)
+[api/image-api.ts](/../../api/image-api.ts), [line 556](/../../api/image-api.ts#L556)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieves the attributes of a given image.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/image-api.ts](/../../api/image-api.ts), [line 567](/../../api/image-api.ts#L567)
+[api/image-api.ts](/../../api/image-api.ts), [line 567](/../../api/image-api.ts#L567)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieve a list of images within the datacenter
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/image-api.ts](/../../api/image-api.ts), [line 578](/../../api/image-api.ts#L578)
+[api/image-api.ts](/../../api/image-api.ts), [line 578](/../../api/image-api.ts#L578)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/image-api.ts](/../../api/image-api.ts), [line 589](/../../api/image-api.ts#L589)
+[api/image-api.ts](/../../api/image-api.ts), [line 589](/../../api/image-api.ts#L589)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[/../../api/image-api.ts](/../../api/image-api.ts), [line 600](/../../api/image-api.ts#L600)
+[api/image-api.ts](/../../api/image-api.ts), [line 600](/../../api/image-api.ts#L600)
 
 ##### Throws:
 
