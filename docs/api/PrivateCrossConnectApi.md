@@ -7,7 +7,7 @@
 PrivateCrossConnectApi - object-oriented interface
 
 *Source:*
-[api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 533](/../../api/private-cross-connect-api.ts#L533)
+[/../../api/private-cross-connect-api.ts](/../..//../../api/private-cross-connect-api.ts), [line 533](/../..//../../api/private-cross-connect-api.ts#L533)
 
 ---------------
 
@@ -30,7 +30,7 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/private-cross-connect-api.ts](api/private-cross-connect-api.ts), [line 548](api/private-cross-connect-api.ts#L548)
+[/../../api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 548](/../../api/private-cross-connect-api.ts#L548)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ You can retrieve a private cross-connect by using the resource\'s ID. This value
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/private-cross-connect-api.ts](api/private-cross-connect-api.ts), [line 559](api/private-cross-connect-api.ts#L559)
+[/../../api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 559](/../../api/private-cross-connect-api.ts#L559)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a complete list of private cross-connects provisioned under you
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/private-cross-connect-api.ts](api/private-cross-connect-api.ts), [line 570](api/private-cross-connect-api.ts#L570)
+[/../../api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 570](/../../api/private-cross-connect-api.ts#L570)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use update private cross-connect to re-name or update its description
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/private-cross-connect-api.ts](api/private-cross-connect-api.ts), [line 581](api/private-cross-connect-api.ts#L581)
+[/../../api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 581](/../../api/private-cross-connect-api.ts#L581)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ You can use this POST method to create a private cross-connect
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/private-cross-connect-api.ts](api/private-cross-connect-api.ts), [line 592](api/private-cross-connect-api.ts#L592)
+[/../../api/private-cross-connect-api.ts](/../../api/private-cross-connect-api.ts), [line 592](/../../api/private-cross-connect-api.ts#L592)
 
 ##### Throws:
 

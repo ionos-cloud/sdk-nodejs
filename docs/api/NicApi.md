@@ -7,7 +7,7 @@
 NicApi - object-oriented interface
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1539](api/nic-api.ts#L1539)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1539](/../../api/nic-api.ts#L1539)
 
 ---------------
 
@@ -30,7 +30,7 @@ Deletes the specified NIC.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1554](api/nic-api.ts#L1554)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1554](/../../api/nic-api.ts#L1554)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieves the attributes of a given NIC
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1565](api/nic-api.ts#L1565)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1565](/../../api/nic-api.ts#L1565)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Removes the specific Firewall Rule
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1576](api/nic-api.ts#L1576)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1576](/../../api/nic-api.ts#L1576)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ Retrieves the attributes of a given Firewall Rule.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1587](api/nic-api.ts#L1587)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1587](/../../api/nic-api.ts#L1587)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ Retrieves a list of firewall rules associated with a particular NIC
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1598](api/nic-api.ts#L1598)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1598](/../../api/nic-api.ts#L1598)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1609](api/nic-api.ts#L1609)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1609](/../../api/nic-api.ts#L1609)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ This will add a Firewall Rule to the NIC
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1620](api/nic-api.ts#L1620)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1620](/../../api/nic-api.ts#L1620)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1631](api/nic-api.ts#L1631)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1631](/../../api/nic-api.ts#L1631)
 
 ##### Throws:
 
@@ -182,7 +182,7 @@ Retrieves a list of NICs.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1642](api/nic-api.ts#L1642)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1642](/../../api/nic-api.ts#L1642)
 
 ##### Throws:
 
@@ -201,7 +201,7 @@ You can use update attributes of a Nic
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1653](api/nic-api.ts#L1653)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1653](/../../api/nic-api.ts#L1653)
 
 ##### Throws:
 
@@ -220,7 +220,7 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1664](api/nic-api.ts#L1664)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1664](/../../api/nic-api.ts#L1664)
 
 ##### Throws:
 
@@ -239,7 +239,7 @@ You can use update attributes of a Nic
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/nic-api.ts](api/nic-api.ts), [line 1675](api/nic-api.ts#L1675)
+[/../../api/nic-api.ts](/../../api/nic-api.ts), [line 1675](/../../api/nic-api.ts#L1675)
 
 ##### Throws:
 

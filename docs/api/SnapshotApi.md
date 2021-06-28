@@ -7,7 +7,7 @@
 SnapshotApi - object-oriented interface
 
 *Source:*
-[api/snapshot-api.ts](api/snapshot-api.ts), [line 541](api/snapshot-api.ts#L541)
+[/../../api/snapshot-api.ts](/../../api/snapshot-api.ts), [line 541](/../../api/snapshot-api.ts#L541)
 
 ---------------
 
@@ -30,7 +30,7 @@ Deletes the specified Snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/snapshot-api.ts](api/snapshot-api.ts), [line 556](api/snapshot-api.ts#L556)
+[/../../api/snapshot-api.ts](/../../api/snapshot-api.ts), [line 556](/../../api/snapshot-api.ts#L556)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieves the attributes of a given Snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/snapshot-api.ts](api/snapshot-api.ts), [line 567](api/snapshot-api.ts#L567)
+[/../../api/snapshot-api.ts](/../../api/snapshot-api.ts), [line 567](/../../api/snapshot-api.ts#L567)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieve a list of available snapshots.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/snapshot-api.ts](api/snapshot-api.ts), [line 578](api/snapshot-api.ts#L578)
+[/../../api/snapshot-api.ts](/../../api/snapshot-api.ts), [line 578](/../../api/snapshot-api.ts#L578)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can use this method to update attributes of a Snapshot.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/snapshot-api.ts](api/snapshot-api.ts), [line 589](api/snapshot-api.ts#L589)
+[/../../api/snapshot-api.ts](/../../api/snapshot-api.ts), [line 589](/../../api/snapshot-api.ts#L589)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/snapshot-api.ts](api/snapshot-api.ts), [line 600](api/snapshot-api.ts#L600)
+[/../../api/snapshot-api.ts](/../../api/snapshot-api.ts), [line 600](/../../api/snapshot-api.ts#L600)
 
 ##### Throws:
 

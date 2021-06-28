@@ -7,7 +7,7 @@
 ContractApi - object-oriented interface
 
 *Source:*
-[api/contract-api.ts](api/contract-api.ts), [line 119](api/contract-api.ts#L119)
+[/../../api/contract-api.ts](/../../api/contract-api.ts), [line 119](/../../api/contract-api.ts#L119)
 
 ---------------
 
@@ -30,7 +30,7 @@ Retrieves the attributes of user\'s contract.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/contract-api.ts](api/contract-api.ts), [line 134](api/contract-api.ts#L134)
+[/../../api/contract-api.ts](/../../api/contract-api.ts), [line 134](/../../api/contract-api.ts#L134)
 
 ##### Throws:
 

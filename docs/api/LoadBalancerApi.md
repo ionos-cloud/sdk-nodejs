@@ -7,7 +7,7 @@
 LoadBalancerApi - object-oriented interface
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1185](api/load-balancer-api.ts#L1185)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1185](/../../api/load-balancer-api.ts#L1185)
 
 ---------------
 
@@ -30,7 +30,7 @@ This will remove a nic from Load Balancer
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1200](api/load-balancer-api.ts#L1200)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1200](/../../api/load-balancer-api.ts#L1200)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ This will retrieve the properties of an attached nic.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1211](api/load-balancer-api.ts#L1211)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1211](/../../api/load-balancer-api.ts#L1211)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a list of nics attached to a Load Balancer
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1222](api/load-balancer-api.ts#L1222)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1222](/../../api/load-balancer-api.ts#L1222)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ This will attach a pre-existing nic to a Load Balancer.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1233](api/load-balancer-api.ts#L1233)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1233](/../../api/load-balancer-api.ts#L1233)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ Removes the specific Loadbalancer
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1244](api/load-balancer-api.ts#L1244)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1244](/../../api/load-balancer-api.ts#L1244)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ Retrieves the attributes of a given Loadbalancer
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1255](api/load-balancer-api.ts#L1255)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1255](/../../api/load-balancer-api.ts#L1255)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ Retrieve a list of Load Balancers within the datacenter
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1266](api/load-balancer-api.ts#L1266)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1266](/../../api/load-balancer-api.ts#L1266)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1277](api/load-balancer-api.ts#L1277)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1277](/../../api/load-balancer-api.ts#L1277)
 
 ##### Throws:
 
@@ -182,7 +182,7 @@ Creates a Loadbalancer within the datacenter
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1288](api/load-balancer-api.ts#L1288)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1288](/../../api/load-balancer-api.ts#L1288)
 
 ##### Throws:
 
@@ -201,7 +201,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/load-balancer-api.ts](api/load-balancer-api.ts), [line 1299](api/load-balancer-api.ts#L1299)
+[/../../api/load-balancer-api.ts](/../../api/load-balancer-api.ts), [line 1299](/../../api/load-balancer-api.ts#L1299)
 
 ##### Throws:
 

@@ -7,7 +7,7 @@
 LanApi - object-oriented interface
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1071](api/lan-api.ts#L1071)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1071](/../../api/lan-api.ts#L1071)
 
 ---------------
 
@@ -30,7 +30,7 @@ Removes the specific Lan
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1086](api/lan-api.ts#L1086)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1086](/../../api/lan-api.ts#L1086)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ Retrieves the attributes of a given LAN
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1097](api/lan-api.ts#L1097)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1097](/../../api/lan-api.ts#L1097)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ Retrieve a list of LANs within the datacenter
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1108](api/lan-api.ts#L1108)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1108](/../../api/lan-api.ts#L1108)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ This will retrieve the properties of an attached nic.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1119](api/lan-api.ts#L1119)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1119](/../../api/lan-api.ts#L1119)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ You can retrieve a list of nics attached to a lan
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1130](api/lan-api.ts#L1130)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1130](/../../api/lan-api.ts#L1130)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ This will attach a pre-existing nic to a lan.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1141](api/lan-api.ts#L1141)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1141](/../../api/lan-api.ts#L1141)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1152](api/lan-api.ts#L1152)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1152](/../../api/lan-api.ts#L1152)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ Creates a LAN within the datacenter
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1163](api/lan-api.ts#L1163)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1163](/../../api/lan-api.ts#L1163)
 
 ##### Throws:
 
@@ -182,7 +182,7 @@ You can use update attributes of a resource
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/lan-api.ts](api/lan-api.ts), [line 1174](api/lan-api.ts#L1174)
+[/../../api/lan-api.ts](/../../api/lan-api.ts), [line 1174](/../../api/lan-api.ts#L1174)
 
 ##### Throws:
 

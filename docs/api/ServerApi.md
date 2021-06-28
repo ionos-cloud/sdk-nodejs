@@ -7,7 +7,7 @@
 ServerApi - object-oriented interface
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2077](api/server-api.ts#L2077)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2077](/../../api/server-api.ts#L2077)
 
 ---------------
 
@@ -30,7 +30,7 @@ This will detach a CD-ROM from the server
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2092](api/server-api.ts#L2092)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2092](/../../api/server-api.ts#L2092)
 
 ##### Throws:
 
@@ -49,7 +49,7 @@ You can retrieve a specific CD-ROM attached to the server
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2103](api/server-api.ts#L2103)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2103](/../../api/server-api.ts#L2103)
 
 ##### Throws:
 
@@ -68,7 +68,7 @@ You can retrieve a list of CD-ROMs attached to the server.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2114](api/server-api.ts#L2114)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2114](/../../api/server-api.ts#L2114)
 
 ##### Throws:
 
@@ -87,7 +87,7 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2125](api/server-api.ts#L2125)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2125](/../../api/server-api.ts#L2125)
 
 ##### Throws:
 
@@ -106,7 +106,7 @@ This will remove a server from your datacenter; however, it will not remove the 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2136](api/server-api.ts#L2136)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2136](/../../api/server-api.ts#L2136)
 
 ##### Throws:
 
@@ -125,7 +125,7 @@ Returns information about a server such as its configuration, provisioning statu
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2147](api/server-api.ts#L2147)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2147](/../../api/server-api.ts#L2147)
 
 ##### Throws:
 
@@ -144,7 +144,7 @@ You can retrieve a list of servers within a datacenter
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2158](api/server-api.ts#L2158)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2158](/../../api/server-api.ts#L2158)
 
 ##### Throws:
 
@@ -163,7 +163,7 @@ You can use update attributes of a server
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2169](api/server-api.ts#L2169)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2169](/../../api/server-api.ts#L2169)
 
 ##### Throws:
 
@@ -182,7 +182,7 @@ Creates a server within an existing datacenter. You can configure the boot volum
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2180](api/server-api.ts#L2180)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2180](/../../api/server-api.ts#L2180)
 
 ##### Throws:
 
@@ -201,7 +201,7 @@ Allows to modify the attributes of a Server. From v5 onwards \'allowReboot\' att
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2191](api/server-api.ts#L2191)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2191](/../../api/server-api.ts#L2191)
 
 ##### Throws:
 
@@ -220,7 +220,7 @@ This will force a hard reboot of the server. Do not use this method if you want 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2202](api/server-api.ts#L2202)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2202](/../../api/server-api.ts#L2202)
 
 ##### Throws:
 
@@ -239,7 +239,7 @@ This will start a server. If the server\'s public IP was deallocated then a new 
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2213](api/server-api.ts#L2213)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2213](/../../api/server-api.ts#L2213)
 
 ##### Throws:
 
@@ -258,7 +258,7 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2224](api/server-api.ts#L2224)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2224](/../../api/server-api.ts#L2224)
 
 ##### Throws:
 
@@ -277,7 +277,7 @@ This will upgrade the version of the server, if needed. To verify if there is an
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2235](api/server-api.ts#L2235)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2235](/../../api/server-api.ts#L2235)
 
 ##### Throws:
 
@@ -296,7 +296,7 @@ This will detach the volume from the server. This will not delete the volume fro
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2246](api/server-api.ts#L2246)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2246](/../../api/server-api.ts#L2246)
 
 ##### Throws:
 
@@ -315,7 +315,7 @@ This will retrieve the properties of an attached volume.
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2257](api/server-api.ts#L2257)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2257](/../../api/server-api.ts#L2257)
 
 ##### Throws:
 
@@ -334,7 +334,7 @@ You can retrieve a list of volumes attached to the server
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2268](api/server-api.ts#L2268)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2268](/../../api/server-api.ts#L2268)
 
 ##### Throws:
 
@@ -353,7 +353,7 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/server-api.ts](api/server-api.ts), [line 2279](api/server-api.ts#L2279)
+[/../../api/server-api.ts](/../../api/server-api.ts), [line 2279](/../../api/server-api.ts#L2279)
 
 ##### Throws:
 

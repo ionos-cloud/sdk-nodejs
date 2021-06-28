@@ -7,7 +7,7 @@
 DefaultApi - object-oriented interface
 
 *Source:*
-[api/default-api.ts](api/default-api.ts), [line 119](api/default-api.ts#L119)
+[/../../api/default-api.ts](/../../api/default-api.ts), [line 119](/../../api/default-api.ts#L119)
 
 ---------------
 
@@ -30,7 +30,7 @@ Display API information
 |`options`|***|*optional*  |Override http request option.|
 
 *Source:*
-[api/default-api.ts](api/default-api.ts), [line 134](api/default-api.ts#L134)
+[/../../api/default-api.ts](/../../api/default-api.ts), [line 134](/../../api/default-api.ts#L134)
 
 ##### Throws:
 
