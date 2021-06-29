@@ -21,69 +21,39 @@ Deletes the specified image. This operation is permitted on private image only.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete an Image
 
-begin
-  # Delete an Image
-  result = api_instance.imagesDelete(imageId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesDelete: #{e}"
-end
+api_instance.imagesDelete(imageId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete an Image
 
-begin
-  # Delete an Image
-  result = api_instance.imagesDelete(imageId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesDelete: #{e}"
-end
+api_instance.imagesDelete(imageId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -118,69 +88,39 @@ Retrieves the attributes of a given image.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve an Image
 
-begin
-  # Retrieve an Image
-  result = api_instance.imagesFindById(imageId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesFindById: #{e}"
-end
+api_instance.imagesFindById(imageId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve an Image
 
-begin
-  # Retrieve an Image
-  result = api_instance.imagesFindById(imageId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesFindById: #{e}"
-end
+api_instance.imagesFindById(imageId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -215,67 +155,39 @@ Retrieve a list of images within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Images 
 
-begin
-  # List Images 
-  result = api_instance.imagesGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesGet: #{e}"
-end
+api_instance.imagesGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Images 
 
-begin
-  # List Images 
-  result = api_instance.imagesGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesGet: #{e}"
-end
+api_instance.imagesGet(options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -309,71 +221,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-image =  # ImageProperties | Modified Image
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify an Image
 
-begin
-  # Partially modify an Image
-  result = api_instance.imagesPatch(imageId, image, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesPatch: #{e}"
-end
+api_instance.imagesPatch(imageId, image, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-image =  # ImageProperties | Modified Image
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify an Image
 
-begin
-  # Partially modify an Image
-  result = api_instance.imagesPatch(imageId, image, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesPatch: #{e}"
-end
+api_instance.imagesPatch(imageId, image, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -409,71 +289,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-image =  # Image | Modified Image
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify an Image
 
-begin
-  # Modify an Image
-  result = api_instance.imagesPut(imageId, image, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesPut: #{e}"
-end
+api_instance.imagesPut(imageId, image, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ImageApi(config)
 
-api_instance = ::ImageApi.new
-imageId =  # string | 
-image =  # Image | Modified Image
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify an Image
 
-begin
-  # Modify an Image
-  result = api_instance.imagesPut(imageId, image, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ImageApi->imagesPut: #{e}"
-end
+api_instance.imagesPut(imageId, image, options).then((response) => console.log(response));
 ```
 
 ### Parameters

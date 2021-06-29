@@ -23,69 +23,39 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup Unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Backup Unit
 
-begin
-  # Delete a Backup Unit
-  result = api_instance.backupunitsDelete(backupunitId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsDelete: #{e}"
-end
+api_instance.backupunitsDelete(backupunitId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup Unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Backup Unit
 
-begin
-  # Delete a Backup Unit
-  result = api_instance.backupunitsDelete(backupunitId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsDelete: #{e}"
-end
+api_instance.backupunitsDelete(backupunitId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -120,69 +90,39 @@ You can retrieve the details of an specific backup unit.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Returns the specified backup Unit
 
-begin
-  # Returns the specified backup Unit
-  result = api_instance.backupunitsFindById(backupunitId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsFindById: #{e}"
-end
+api_instance.backupunitsFindById(backupunitId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Returns the specified backup Unit
 
-begin
-  # Returns the specified backup Unit
-  result = api_instance.backupunitsFindById(backupunitId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsFindById: #{e}"
-end
+api_instance.backupunitsFindById(backupunitId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -217,67 +157,39 @@ You can retrieve a complete list of backup Units that you have access to.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Backup Units 
 
-begin
-  # List Backup Units 
-  result = api_instance.backupunitsGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsGet: #{e}"
-end
+api_instance.backupunitsGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Backup Units 
 
-begin
-  # List Backup Units 
-  result = api_instance.backupunitsGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsGet: #{e}"
-end
+api_instance.backupunitsGet(options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -311,71 +223,39 @@ You can use update a backup Unit properties
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup unit
-backupUnitProperties =  # BackupUnitProperties | Modified backup Unit properties
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Backup Unit
 
-begin
-  # Partially modify a Backup Unit
-  result = api_instance.backupunitsPatch(backupunitId, backupUnitProperties, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsPatch: #{e}"
-end
+api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup unit
-backupUnitProperties =  # BackupUnitProperties | Modified backup Unit properties
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Backup Unit
 
-begin
-  # Partially modify a Backup Unit
-  result = api_instance.backupunitsPatch(backupunitId, backupUnitProperties, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsPatch: #{e}"
-end
+api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -411,69 +291,39 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupUnit =  # BackupUnit | Payload containing data to create a new Backup Unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Backup Unit
 
-begin
-  # Create a Backup Unit
-  result = api_instance.backupunitsPost(backupUnit, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsPost: #{e}"
-end
+api_instance.backupunitsPost(backupUnit, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupUnit =  # BackupUnit | Payload containing data to create a new Backup Unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Backup Unit
 
-begin
-  # Create a Backup Unit
-  result = api_instance.backupunitsPost(backupUnit, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsPost: #{e}"
-end
+api_instance.backupunitsPost(backupUnit, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -508,71 +358,39 @@ You can use update a backup Unit properties
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup unit
-backupUnit =  # BackupUnit | Modified backup Unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Backup Unit
 
-begin
-  # Modify a Backup Unit
-  result = api_instance.backupunitsPut(backupunitId, backupUnit, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsPut: #{e}"
-end
+api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique ID of the backup unit
-backupUnit =  # BackupUnit | Modified backup Unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Backup Unit
 
-begin
-  # Modify a Backup Unit
-  result = api_instance.backupunitsPut(backupunitId, backupUnit, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsPut: #{e}"
-end
+api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -608,67 +426,39 @@ Returns a single signon URL for the specified backup Unit.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique UUID of the backup unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Returns a single signon URL for the specified backup Unit.
 
-begin
-  # Returns a single signon URL for the specified backup Unit.
-  result = api_instance.backupunitsSsourlGet(backupunitId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsSsourlGet: #{e}"
-end
+api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.BackupUnitApi(config)
 
-api_instance = ::BackupUnitApi.new
-backupunitId =  # string | The unique UUID of the backup unit
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Returns a single signon URL for the specified backup Unit.
 
-begin
-  # Returns a single signon URL for the specified backup Unit.
-  result = api_instance.backupunitsSsourlGet(backupunitId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling BackupUnitApi->backupunitsSsourlGet: #{e}"
-end
+api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => console.log(response));
 ```
 
 ### Parameters

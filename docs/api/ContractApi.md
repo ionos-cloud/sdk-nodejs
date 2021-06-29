@@ -17,67 +17,39 @@ Retrieves the attributes of user\'s contract.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ContractApi(config)
 
-api_instance = ::ContractApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Contract
 
-begin
-  # Retrieve a Contract
-  result = api_instance.contractsGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ContractApi->contractsGet: #{e}"
-end
+api_instance.contractsGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ContractApi(config)
 
-api_instance = ::ContractApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Contract
 
-begin
-  # Retrieve a Contract
-  result = api_instance.contractsGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ContractApi->contractsGet: #{e}"
-end
+api_instance.contractsGet(options).then((response) => console.log(response));
 ```
 
 ### Parameters

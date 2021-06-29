@@ -21,69 +21,39 @@ Deletes the specified Snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Snapshot
 
-begin
-  # Delete a Snapshot
-  result = api_instance.snapshotsDelete(snapshotId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsDelete: #{e}"
-end
+api_instance.snapshotsDelete(snapshotId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Snapshot
 
-begin
-  # Delete a Snapshot
-  result = api_instance.snapshotsDelete(snapshotId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsDelete: #{e}"
-end
+api_instance.snapshotsDelete(snapshotId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -118,69 +88,39 @@ Retrieves the attributes of a given Snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Snapshot by its uuid.
 
-begin
-  # Retrieve a Snapshot by its uuid.
-  result = api_instance.snapshotsFindById(snapshotId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsFindById: #{e}"
-end
+api_instance.snapshotsFindById(snapshotId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Snapshot by its uuid.
 
-begin
-  # Retrieve a Snapshot by its uuid.
-  result = api_instance.snapshotsFindById(snapshotId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsFindById: #{e}"
-end
+api_instance.snapshotsFindById(snapshotId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -215,67 +155,39 @@ Retrieve a list of available snapshots.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Snapshots 
 
-begin
-  # List Snapshots 
-  result = api_instance.snapshotsGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsGet: #{e}"
-end
+api_instance.snapshotsGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Snapshots 
 
-begin
-  # List Snapshots 
-  result = api_instance.snapshotsGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsGet: #{e}"
-end
+api_instance.snapshotsGet(options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -309,71 +221,39 @@ You can use this method to update attributes of a Snapshot.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-snapshot =  # SnapshotProperties | Modified Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Snapshot
 
-begin
-  # Partially modify a Snapshot
-  result = api_instance.snapshotsPatch(snapshotId, snapshot, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsPatch: #{e}"
-end
+api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-snapshot =  # SnapshotProperties | Modified Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Snapshot
 
-begin
-  # Partially modify a Snapshot
-  result = api_instance.snapshotsPatch(snapshotId, snapshot, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsPatch: #{e}"
-end
+api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -409,71 +289,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-snapshot =  # Snapshot | Modified Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Snapshot
 
-begin
-  # Modify a Snapshot
-  result = api_instance.snapshotsPut(snapshotId, snapshot, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsPut: #{e}"
-end
+api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.SnapshotApi(config)
 
-api_instance = ::SnapshotApi.new
-snapshotId =  # string | The unique ID of the Snapshot
-snapshot =  # Snapshot | Modified Snapshot
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Snapshot
 
-begin
-  # Modify a Snapshot
-  result = api_instance.snapshotsPut(snapshotId, snapshot, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling SnapshotApi->snapshotsPut: #{e}"
-end
+api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => console.log(response));
 ```
 
 ### Parameters

@@ -24,79 +24,39 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  name: , # string | The name of the snapshot
-  description: , # string | The description of the snapshot
-  secAuthProtection: , # boolean | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc.
-  licenceType:  # string | The OS type of this Snapshot
-}
+# Create Volume Snapshot
 
-begin
-  # Create Volume Snapshot
-  result = api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesCreateSnapshotPost: #{e}"
-end
+api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  name: , # string | The name of the snapshot
-  description: , # string | The description of the snapshot
-  secAuthProtection: , # boolean | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc.
-  licenceType:  # string | The OS type of this Snapshot
-}
+# Create Volume Snapshot
 
-begin
-  # Create Volume Snapshot
-  result = api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesCreateSnapshotPost: #{e}"
-end
+api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -136,71 +96,39 @@ Deletes the specified volume. This will result in the volume being removed from 
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Volume
 
-begin
-  # Delete a Volume
-  result = api_instance.datacentersVolumesDelete(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesDelete: #{e}"
-end
+api_instance.datacentersVolumesDelete(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Volume
 
-begin
-  # Delete a Volume
-  result = api_instance.datacentersVolumesDelete(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesDelete: #{e}"
-end
+api_instance.datacentersVolumesDelete(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -236,71 +164,39 @@ Retrieves the attributes of a given Volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Volume
 
-begin
-  # Retrieve a Volume
-  result = api_instance.datacentersVolumesFindById(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesFindById: #{e}"
-end
+api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Volume
 
-begin
-  # Retrieve a Volume
-  result = api_instance.datacentersVolumesFindById(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesFindById: #{e}"
-end
+api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -336,73 +232,39 @@ Retrieves a list of Volumes.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Volumes 
 
-begin
-  # List Volumes 
-  result = api_instance.datacentersVolumesGet(datacenterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesGet: #{e}"
-end
+api_instance.datacentersVolumesGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Volumes 
 
-begin
-  # List Volumes 
-  result = api_instance.datacentersVolumesGet(datacenterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesGet: #{e}"
-end
+api_instance.datacentersVolumesGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -439,73 +301,39 @@ You can use update attributes of a Volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-volume =  # VolumeProperties | Modified properties of Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Volume
 
-begin
-  # Partially modify a Volume
-  result = api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesPatch: #{e}"
-end
+api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-volume =  # VolumeProperties | Modified properties of Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Volume
 
-begin
-  # Partially modify a Volume
-  result = api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesPatch: #{e}"
-end
+api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -542,71 +370,39 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volume =  # Volume | Volume to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Volume
 
-begin
-  # Create a Volume
-  result = api_instance.datacentersVolumesPost(datacenterId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesPost: #{e}"
-end
+api_instance.datacentersVolumesPost(datacenterId, volume, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volume =  # Volume | Volume to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Volume
 
-begin
-  # Create a Volume
-  result = api_instance.datacentersVolumesPost(datacenterId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesPost: #{e}"
-end
+api_instance.datacentersVolumesPost(datacenterId, volume, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -642,73 +438,39 @@ You can use update attributes of a Volume
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-volume =  # Volume | Modified Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Volume
 
-begin
-  # Modify a Volume
-  result = api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesPut: #{e}"
-end
+api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-volume =  # Volume | Modified Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Volume
 
-begin
-  # Modify a Volume
-  result = api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesPut: #{e}"
-end
+api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -745,73 +507,39 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  snapshotId:  # string | This is the ID of the snapshot
-}
+# Restore Volume Snapshot
 
-begin
-  # Restore Volume Snapshot
-  result = api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesRestoreSnapshotPost: #{e}"
-end
+api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.VolumeApi(config)
 
-api_instance = ::VolumeApi.new
-datacenterId =  # string | The unique ID of the datacenter
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  snapshotId:  # string | This is the ID of the snapshot
-}
+# Restore Volume Snapshot
 
-begin
-  # Restore Volume Snapshot
-  result = api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling VolumeApi->datacentersVolumesRestoreSnapshotPost: #{e}"
-end
+api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters

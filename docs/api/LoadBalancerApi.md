@@ -26,73 +26,39 @@ This will remove a nic from Load Balancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Detach a nic from loadbalancer
 
-begin
-  # Detach a nic from loadbalancer
-  result = api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsDelete: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Detach a nic from loadbalancer
 
-begin
-  # Detach a nic from loadbalancer
-  result = api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsDelete: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -129,73 +95,39 @@ This will retrieve the properties of an attached nic.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a nic attached to Load Balancer
 
-begin
-  # Retrieve a nic attached to Load Balancer
-  result = api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsFindByNicId: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a nic attached to Load Balancer
 
-begin
-  # Retrieve a nic attached to Load Balancer
-  result = api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsFindByNicId: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -232,75 +164,39 @@ You can retrieve a list of nics attached to a Load Balancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Load Balancer Members 
 
-begin
-  # List Load Balancer Members 
-  result = api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsGet: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Load Balancer Members 
 
-begin
-  # List Load Balancer Members 
-  result = api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsGet: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -338,73 +234,39 @@ This will attach a pre-existing nic to a Load Balancer.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-nic =  # Nic | Nic id to be attached
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Attach a nic to Load Balancer
 
-begin
-  # Attach a nic to Load Balancer
-  result = api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsPost: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-nic =  # Nic | Nic id to be attached
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Attach a nic to Load Balancer
 
-begin
-  # Attach a nic to Load Balancer
-  result = api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersBalancednicsPost: #{e}"
-end
+api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -441,71 +303,39 @@ Removes the specific Loadbalancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Loadbalancer.
 
-begin
-  # Delete a Loadbalancer.
-  result = api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersDelete: #{e}"
-end
+api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Loadbalancer.
 
-begin
-  # Delete a Loadbalancer.
-  result = api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersDelete: #{e}"
-end
+api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -541,71 +371,39 @@ Retrieves the attributes of a given Loadbalancer
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a loadbalancer
 
-begin
-  # Retrieve a loadbalancer
-  result = api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersFindById: #{e}"
-end
+api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a loadbalancer
 
-begin
-  # Retrieve a loadbalancer
-  result = api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersFindById: #{e}"
-end
+api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -641,73 +439,39 @@ Retrieve a list of Load Balancers within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Load Balancers
 
-begin
-  # List Load Balancers
-  result = api_instance.datacentersLoadbalancersGet(datacenterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersGet: #{e}"
-end
+api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Load Balancers
 
-begin
-  # List Load Balancers
-  result = api_instance.datacentersLoadbalancersGet(datacenterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersGet: #{e}"
-end
+api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -744,73 +508,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-loadbalancer =  # LoadbalancerProperties | Modified Loadbalancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Loadbalancer
 
-begin
-  # Partially modify a Loadbalancer
-  result = api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersPatch: #{e}"
-end
+api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-loadbalancer =  # LoadbalancerProperties | Modified Loadbalancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Loadbalancer
 
-begin
-  # Partially modify a Loadbalancer
-  result = api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersPatch: #{e}"
-end
+api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -847,71 +577,39 @@ Creates a Loadbalancer within the datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancer =  # Loadbalancer | Loadbalancer to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Load Balancer
 
-begin
-  # Create a Load Balancer
-  result = api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersPost: #{e}"
-end
+api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancer =  # Loadbalancer | Loadbalancer to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Load Balancer
 
-begin
-  # Create a Load Balancer
-  result = api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersPost: #{e}"
-end
+api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -947,73 +645,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-loadbalancer =  # Loadbalancer | Modified Loadbalancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Load Balancer
 
-begin
-  # Modify a Load Balancer
-  result = api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersPut: #{e}"
-end
+api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.LoadBalancerApi(config)
 
-api_instance = ::LoadBalancerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-loadbalancerId =  # string | The unique ID of the Load Balancer
-loadbalancer =  # Loadbalancer | Modified Loadbalancer
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Load Balancer
 
-begin
-  # Modify a Load Balancer
-  result = api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling LoadBalancerApi->datacentersLoadbalancersPut: #{e}"
-end
+api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 ### Parameters

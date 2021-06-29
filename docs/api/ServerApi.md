@@ -34,73 +34,39 @@ This will detach a CD-ROM from the server
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-cdromId =  # string | The unique ID of the CD-ROM
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Detach a CD-ROM
 
-begin
-  # Detach a CD-ROM
-  result = api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsDelete: #{e}"
-end
+api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-cdromId =  # string | The unique ID of the CD-ROM
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Detach a CD-ROM
 
-begin
-  # Detach a CD-ROM
-  result = api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsDelete: #{e}"
-end
+api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -137,73 +103,39 @@ You can retrieve a specific CD-ROM attached to the server
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-cdromId =  # string | The unique ID of the CD-ROM
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve an attached CD-ROM
 
-begin
-  # Retrieve an attached CD-ROM
-  result = api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsFindById: #{e}"
-end
+api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-cdromId =  # string | The unique ID of the CD-ROM
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve an attached CD-ROM
 
-begin
-  # Retrieve an attached CD-ROM
-  result = api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsFindById: #{e}"
-end
+api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -240,75 +172,39 @@ You can retrieve a list of CD-ROMs attached to the server.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List attached CD-ROMs 
 
-begin
-  # List attached CD-ROMs 
-  result = api_instance.datacentersServersCdromsGet(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsGet: #{e}"
-end
+api_instance.datacentersServersCdromsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List attached CD-ROMs 
 
-begin
-  # List attached CD-ROMs 
-  result = api_instance.datacentersServersCdromsGet(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsGet: #{e}"
-end
+api_instance.datacentersServersCdromsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -346,73 +242,39 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-cdrom =  # Image | CD-ROM to be attached
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Attach a CD-ROM
 
-begin
-  # Attach a CD-ROM
-  result = api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsPost: #{e}"
-end
+api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-cdrom =  # Image | CD-ROM to be attached
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Attach a CD-ROM
 
-begin
-  # Attach a CD-ROM
-  result = api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersCdromsPost: #{e}"
-end
+api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -449,71 +311,39 @@ This will remove a server from your datacenter; however, it will not remove the 
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Server
 
-begin
-  # Delete a Server
-  result = api_instance.datacentersServersDelete(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersDelete: #{e}"
-end
+api_instance.datacentersServersDelete(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Server
 
-begin
-  # Delete a Server
-  result = api_instance.datacentersServersDelete(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersDelete: #{e}"
-end
+api_instance.datacentersServersDelete(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -549,71 +379,39 @@ Returns information about a server such as its configuration, provisioning statu
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Server
 
-begin
-  # Retrieve a Server
-  result = api_instance.datacentersServersFindById(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersFindById: #{e}"
-end
+api_instance.datacentersServersFindById(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Server
 
-begin
-  # Retrieve a Server
-  result = api_instance.datacentersServersFindById(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersFindById: #{e}"
-end
+api_instance.datacentersServersFindById(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -649,75 +447,39 @@ You can retrieve a list of servers within a datacenter
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  upgradeNeeded: , # boolean | It can be used to filter which servers can be upgraded which can not be upgraded.
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Servers 
 
-begin
-  # List Servers 
-  result = api_instance.datacentersServersGet(datacenterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersGet: #{e}"
-end
+api_instance.datacentersServersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  upgradeNeeded: , # boolean | It can be used to filter which servers can be upgraded which can not be upgraded.
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Servers 
 
-begin
-  # List Servers 
-  result = api_instance.datacentersServersGet(datacenterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersGet: #{e}"
-end
+api_instance.datacentersServersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -755,73 +517,39 @@ You can use update attributes of a server
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the server
-server =  # ServerProperties | Modified properties of Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Server
 
-begin
-  # Partially modify a Server
-  result = api_instance.datacentersServersPatch(datacenterId, serverId, server, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersPatch: #{e}"
-end
+api_instance.datacentersServersPatch(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the server
-server =  # ServerProperties | Modified properties of Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Server
 
-begin
-  # Partially modify a Server
-  result = api_instance.datacentersServersPatch(datacenterId, serverId, server, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersPatch: #{e}"
-end
+api_instance.datacentersServersPatch(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -858,71 +586,39 @@ Creates a server within an existing datacenter. You can configure the boot volum
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-server =  # Server | Server to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Server
 
-begin
-  # Create a Server
-  result = api_instance.datacentersServersPost(datacenterId, server, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersPost: #{e}"
-end
+api_instance.datacentersServersPost(datacenterId, server, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-server =  # Server | Server to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Server
 
-begin
-  # Create a Server
-  result = api_instance.datacentersServersPost(datacenterId, server, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersPost: #{e}"
-end
+api_instance.datacentersServersPost(datacenterId, server, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -958,73 +654,39 @@ Allows to modify the attributes of a Server. From v5 onwards \'allowReboot\' att
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the server
-server =  # Server | Modified Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Server
 
-begin
-  # Modify a Server
-  result = api_instance.datacentersServersPut(datacenterId, serverId, server, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersPut: #{e}"
-end
+api_instance.datacentersServersPut(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the server
-server =  # Server | Modified Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Server
 
-begin
-  # Modify a Server
-  result = api_instance.datacentersServersPut(datacenterId, serverId, server, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersPut: #{e}"
-end
+api_instance.datacentersServersPut(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1061,71 +723,39 @@ This will force a hard reboot of the server. Do not use this method if you want 
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Reboot a Server
 
-begin
-  # Reboot a Server
-  result = api_instance.datacentersServersRebootPost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersRebootPost: #{e}"
-end
+api_instance.datacentersServersRebootPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Reboot a Server
 
-begin
-  # Reboot a Server
-  result = api_instance.datacentersServersRebootPost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersRebootPost: #{e}"
-end
+api_instance.datacentersServersRebootPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1161,71 +791,39 @@ This will start a server. If the server\'s public IP was deallocated then a new 
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Start a Server
 
-begin
-  # Start a Server
-  result = api_instance.datacentersServersStartPost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersStartPost: #{e}"
-end
+api_instance.datacentersServersStartPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Start a Server
 
-begin
-  # Start a Server
-  result = api_instance.datacentersServersStartPost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersStartPost: #{e}"
-end
+api_instance.datacentersServersStartPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1261,71 +859,39 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Stop a Server
 
-begin
-  # Stop a Server
-  result = api_instance.datacentersServersStopPost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersStopPost: #{e}"
-end
+api_instance.datacentersServersStopPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Stop a Server
 
-begin
-  # Stop a Server
-  result = api_instance.datacentersServersStopPost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersStopPost: #{e}"
-end
+api_instance.datacentersServersStopPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1361,71 +927,39 @@ This will upgrade the version of the server, if needed. To verify if there is an
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Upgrade a Server
 
-begin
-  # Upgrade a Server
-  result = api_instance.datacentersServersUpgradePost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersUpgradePost: #{e}"
-end
+api_instance.datacentersServersUpgradePost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Upgrade a Server
 
-begin
-  # Upgrade a Server
-  result = api_instance.datacentersServersUpgradePost(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersUpgradePost: #{e}"
-end
+api_instance.datacentersServersUpgradePost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1461,73 +995,39 @@ This will detach the volume from the server. This will not delete the volume fro
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Detach a volume
 
-begin
-  # Detach a volume
-  result = api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersVolumesDelete: #{e}"
-end
+api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Detach a volume
 
-begin
-  # Detach a volume
-  result = api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersVolumesDelete: #{e}"
-end
+api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1564,73 +1064,39 @@ This will retrieve the properties of an attached volume.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve an attached volume
 
-begin
-  # Retrieve an attached volume
-  result = api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersVolumesFindById: #{e}"
-end
+api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.ServerApi(config)
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-volumeId =  # string | The unique ID of the Volume
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve an attached volume
 
-begin
-  # Retrieve an attached volume
-  result = api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersVolumesFindById: #{e}"
-end
+api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1667,34 +1133,21 @@ You can retrieve a list of volumes attached to the server
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+api_instance = ionoscloud.ServerApi(config)
 
-begin
-  # List Attached Volumes
-  result = api_instance.datacentersServersVolumesGet(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersVolumesGet: #{e}"
-end
+# List Attached Volumes
+
+api_instance.datacentersServersVolumesGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1732,33 +1185,21 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
-end
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-api_instance = ::ServerApi.new
-datacenterId =  # string | The unique ID of the Datacenter
-serverId =  # string | The unique ID of the Server
-volume =  # Volume | Volume to be attached (created and attached)
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+api_instance = ionoscloud.ServerApi(config)
 
-begin
-  # Attach a volume
-  result = api_instance.datacentersServersVolumesPost(datacenterId, serverId, volume, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling ServerApi->datacentersServersVolumesPost: #{e}"
-end
+# Attach a volume
+
+api_instance.datacentersServersVolumesPost(datacenterId, serverId, volume, options).then((response) => console.log(response));
 ```
 
 ### Parameters

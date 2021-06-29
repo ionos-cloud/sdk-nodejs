@@ -34,69 +34,39 @@ This will remove a Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete Kubernetes Cluster
 
-begin
-  # Delete Kubernetes Cluster
-  result = api_instance.k8sDelete(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sDelete: #{e}"
-end
+api_instance.k8sDelete(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete Kubernetes Cluster
 
-begin
-  # Delete Kubernetes Cluster
-  result = api_instance.k8sDelete(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sDelete: #{e}"
-end
+api_instance.k8sDelete(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -131,69 +101,39 @@ This will retrieve a single Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes Cluster
 
-begin
-  # Retrieve Kubernetes Cluster
-  result = api_instance.k8sFindByClusterId(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sFindByClusterId: #{e}"
-end
+api_instance.k8sFindByClusterId(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes Cluster
 
-begin
-  # Retrieve Kubernetes Cluster
-  result = api_instance.k8sFindByClusterId(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sFindByClusterId: #{e}"
-end
+api_instance.k8sFindByClusterId(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -228,67 +168,39 @@ You can retrieve a list of all kubernetes clusters associated with a contract
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Kubernetes Clusters
 
-begin
-  # List Kubernetes Clusters
-  result = api_instance.k8sGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sGet: #{e}"
-end
+api_instance.k8sGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Kubernetes Clusters
 
-begin
-  # List Kubernetes Clusters
-  result = api_instance.k8sGet(opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sGet: #{e}"
-end
+api_instance.k8sGet(options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -322,69 +234,39 @@ You can retrieve kubernetes configuration file for the kubernetes cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes Configuration File
 
-begin
-  # Retrieve Kubernetes Configuration File
-  result = api_instance.k8sKubeconfigGet(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sKubeconfigGet: #{e}"
-end
+api_instance.k8sKubeconfigGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes Configuration File
 
-begin
-  # Retrieve Kubernetes Configuration File
-  result = api_instance.k8sKubeconfigGet(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sKubeconfigGet: #{e}"
-end
+api_instance.k8sKubeconfigGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -419,71 +301,39 @@ This will remove a Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete Kubernetes Node Pool
 
-begin
-  # Delete Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsDelete: #{e}"
-end
+api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete Kubernetes Node Pool
 
-begin
-  # Delete Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsDelete: #{e}"
-end
+api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -519,71 +369,39 @@ You can retrieve a single Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes Node Pool
 
-begin
-  # Retrieve Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsFindById: #{e}"
-end
+api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes Node Pool
 
-begin
-  # Retrieve Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsFindById: #{e}"
-end
+api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -619,69 +437,39 @@ You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Kubernetes Node Pools
 
-begin
-  # List Kubernetes Node Pools
-  result = api_instance.k8sNodepoolsGet(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsGet: #{e}"
-end
+api_instance.k8sNodepoolsGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# List Kubernetes Node Pools
 
-begin
-  # List Kubernetes Node Pools
-  result = api_instance.k8sNodepoolsGet(k8sClusterId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsGet: #{e}"
-end
+api_instance.k8sNodepoolsGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -716,73 +504,39 @@ This will remove a Kubernetes node.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-nodeId =  # string | The unique ID of the Kubernetes node
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete Kubernetes node
 
-begin
-  # Delete Kubernetes node
-  result = api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesDelete: #{e}"
-end
+api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-nodeId =  # string | The unique ID of the Kubernetes node
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete Kubernetes node
 
-begin
-  # Delete Kubernetes node
-  result = api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesDelete: #{e}"
-end
+api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -819,73 +573,39 @@ You can retrieve a single Kubernetes Node.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-nodeId =  # string | The unique ID of the Kubernetes Node.
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes node
 
-begin
-  # Retrieve Kubernetes node
-  result = api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesFindById: #{e}"
-end
+api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-nodeId =  # string | The unique ID of the Kubernetes Node.
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes node
 
-begin
-  # Retrieve Kubernetes node
-  result = api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesFindById: #{e}"
-end
+api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -922,71 +642,39 @@ You can retrieve all nodes of Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes nodes.
 
-begin
-  # Retrieve Kubernetes nodes.
-  result = api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesGet: #{e}"
-end
+api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve Kubernetes nodes.
 
-begin
-  # Retrieve Kubernetes nodes.
-  result = api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesGet: #{e}"
-end
+api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1022,73 +710,39 @@ You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process 
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-nodeId =  # string | The unique ID of the Kubernetes Node.
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Recreate the Kubernetes node
 
-begin
-  # Recreate the Kubernetes node
-  result = api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesReplacePost: #{e}"
-end
+api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-nodeId =  # string | The unique ID of the Kubernetes Node.
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Recreate the Kubernetes node
 
-begin
-  # Recreate the Kubernetes node
-  result = api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsNodesReplacePost: #{e}"
-end
+api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1125,71 +779,39 @@ This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-kubernetesNodePool =  # KubernetesNodePoolForPost | Details of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Kubernetes Node Pool
 
-begin
-  # Create a Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsPost: #{e}"
-end
+api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-kubernetesNodePool =  # KubernetesNodePoolForPost | Details of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Kubernetes Node Pool
 
-begin
-  # Create a Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsPost: #{e}"
-end
+api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1225,73 +847,39 @@ This will modify the Kubernetes Node Pool.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-kubernetesNodePool =  # KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify Kubernetes Node Pool
 
-begin
-  # Modify Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsPut: #{e}"
-end
+api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
-kubernetesNodePool =  # KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify Kubernetes Node Pool
 
-begin
-  # Modify Kubernetes Node Pool
-  result = api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sNodepoolsPut: #{e}"
-end
+api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1328,69 +916,39 @@ This will create a new Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-kubernetesCluster =  # KubernetesClusterForPost | Details of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create Kubernetes Cluster
 
-begin
-  # Create Kubernetes Cluster
-  result = api_instance.k8sPost(kubernetesCluster, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sPost: #{e}"
-end
+api_instance.k8sPost(kubernetesCluster, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-kubernetesCluster =  # KubernetesClusterForPost | Details of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create Kubernetes Cluster
 
-begin
-  # Create Kubernetes Cluster
-  result = api_instance.k8sPost(kubernetesCluster, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sPost: #{e}"
-end
+api_instance.k8sPost(kubernetesCluster, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1425,71 +983,39 @@ This will modify the Kubernetes Cluster.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-kubernetesCluster =  # KubernetesClusterForPut | Details of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify Kubernetes Cluster
 
-begin
-  # Modify Kubernetes Cluster
-  result = api_instance.k8sPut(k8sClusterId, kubernetesCluster, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sPut: #{e}"
-end
+api_instance.k8sPut(k8sClusterId, kubernetesCluster, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
-kubernetesCluster =  # KubernetesClusterForPut | Details of the Kubernetes Cluster
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify Kubernetes Cluster
 
-begin
-  # Modify Kubernetes Cluster
-  result = api_instance.k8sPut(k8sClusterId, kubernetesCluster, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sPut: #{e}"
-end
+api_instance.k8sPut(k8sClusterId, kubernetesCluster, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1525,59 +1051,39 @@ You can retrieve a list of available kubernetes versions for nodepools depending
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-clusterVersion =  # string | 
+# Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
 
-begin
-  # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-  result = api_instance.k8sVersionsCompatibilitiesGet(clusterVersion)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sVersionsCompatibilitiesGet: #{e}"
-end
+api_instance.k8sVersionsCompatibilitiesGet(clusterVersion).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
-clusterVersion =  # string | 
+# Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
 
-begin
-  # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-  result = api_instance.k8sVersionsCompatibilitiesGet(clusterVersion)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sVersionsCompatibilitiesGet: #{e}"
-end
+api_instance.k8sVersionsCompatibilitiesGet(clusterVersion).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1609,57 +1115,39 @@ You can retrieve the current default kubernetes version for clusters and nodepoo
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
+# Retrieve the current default kubernetes version for clusters and nodepools.
 
-begin
-  # Retrieve the current default kubernetes version for clusters and nodepools.
-  result = api_instance.k8sVersionsDefaultGet
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sVersionsDefaultGet: #{e}"
-end
+api_instance.k8sVersionsDefaultGet.then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
+# Retrieve the current default kubernetes version for clusters and nodepools.
 
-begin
-  # Retrieve the current default kubernetes version for clusters and nodepools.
-  result = api_instance.k8sVersionsDefaultGet
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sVersionsDefaultGet: #{e}"
-end
+api_instance.k8sVersionsDefaultGet.then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1688,57 +1176,39 @@ You can retrieve a list of available kubernetes versions
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
+# Retrieve available Kubernetes versions
 
-begin
-  # Retrieve available Kubernetes versions
-  result = api_instance.k8sVersionsGet
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sVersionsGet: #{e}"
-end
+api_instance.k8sVersionsGet.then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.KubernetesApi(config)
 
-api_instance = ::KubernetesApi.new
+# Retrieve available Kubernetes versions
 
-begin
-  # Retrieve available Kubernetes versions
-  result = api_instance.k8sVersionsGet
-  p result
-rescue ::ApiError => e
-  puts "Error when calling KubernetesApi->k8sVersionsGet: #{e}"
-end
+api_instance.k8sVersionsGet.then((response) => console.log(response));
 ```
 
 ### Parameters

@@ -28,73 +28,39 @@ Deletes the specified NIC.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Nic
 
-begin
-  # Delete a Nic
-  result = api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsDelete: #{e}"
-end
+api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Nic
 
-begin
-  # Delete a Nic
-  result = api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsDelete: #{e}"
-end
+api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -131,73 +97,39 @@ Retrieves the attributes of a given NIC
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Nic
 
-begin
-  # Retrieve a Nic
-  result = api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFindById: #{e}"
-end
+api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Nic
 
-begin
-  # Retrieve a Nic
-  result = api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFindById: #{e}"
-end
+api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -234,75 +166,39 @@ Removes the specific Firewall Rule
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Firewall Rule
 
-begin
-  # Delete a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesDelete: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Delete a Firewall Rule
 
-begin
-  # Delete a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesDelete: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -340,75 +236,39 @@ Retrieves the attributes of a given Firewall Rule.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Firewall Rule
 
-begin
-  # Retrieve a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesFindById: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Retrieve a Firewall Rule
 
-begin
-  # Retrieve a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesFindById: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -446,77 +306,39 @@ Retrieves a list of firewall rules associated with a particular NIC
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Firewall Rules 
 
-begin
-  # List Firewall Rules 
-  result = api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesGet: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Firewall Rules 
 
-begin
-  # List Firewall Rules 
-  result = api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesGet: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -555,77 +377,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-firewallrule =  # FirewallruleProperties | Modified Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Firewall Rule
 
-begin
-  # Partially modify a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesPatch: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-firewallrule =  # FirewallruleProperties | Modified Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Firewall Rule
 
-begin
-  # Partially modify a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesPatch: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -664,75 +448,39 @@ This will add a Firewall Rule to the NIC
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the server
-nicId =  # string | The unique ID of the NIC
-firewallrule =  # FirewallRule | Firewall Rule to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Firewall Rule
 
-begin
-  # Create a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesPost: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the server
-nicId =  # string | The unique ID of the NIC
-firewallrule =  # FirewallRule | Firewall Rule to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Firewall Rule
 
-begin
-  # Create a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesPost: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -770,77 +518,39 @@ You can use update attributes of a resource
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-firewallrule =  # FirewallRule | Modified Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Firewall Rule
 
-begin
-  # Modify a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesPut: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-firewallruleId =  # string | The unique ID of the Firewall Rule
-firewallrule =  # FirewallRule | Modified Firewall Rule
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Firewall Rule
 
-begin
-  # Modify a Firewall Rule
-  result = api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsFirewallrulesPut: #{e}"
-end
+api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -879,75 +589,39 @@ Retrieves a list of NICs.
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Nics 
 
-begin
-  # List Nics 
-  result = api_instance.datacentersServersNicsGet(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsGet: #{e}"
-end
+api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
-  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
-}
+# List Nics 
 
-begin
-  # List Nics 
-  result = api_instance.datacentersServersNicsGet(datacenterId, serverId, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsGet: #{e}"
-end
+api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -985,75 +659,39 @@ You can use update attributes of a Nic
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-nic =  # NicProperties | Modified properties of Nic
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Nic
 
-begin
-  # Partially modify a Nic
-  result = api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsPatch: #{e}"
-end
+api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-nic =  # NicProperties | Modified properties of Nic
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Partially modify a Nic
 
-begin
-  # Partially modify a Nic
-  result = api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsPatch: #{e}"
-end
+api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1091,73 +729,39 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nic =  # Nic | Nic to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Nic
 
-begin
-  # Create a Nic
-  result = api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsPost: #{e}"
-end
+api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nic =  # Nic | Nic to be created
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Create a Nic
 
-begin
-  # Create a Nic
-  result = api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsPost: #{e}"
-end
+api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).then((response) => console.log(response));
 ```
 
 ### Parameters
@@ -1194,75 +798,39 @@ You can use update attributes of a Nic
 ### Example
 
 * Basic Authentication (Basic Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-nic =  # Nic | Modified Nic
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Nic
 
-begin
-  # Modify a Nic
-  result = api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsPut: #{e}"
-end
+api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
-```ruby
-require 'time'
-require ''
+```javascript
+
+const ionoscloud = require('@ionos-cloud/sdk-nodejs')
+
 # setup authorization
-.configure do |config|
-  # Configure HTTP basic authorization: Basic Authentication
-  config.username = 'YOUR USERNAME'
-  config.password = 'YOUR PASSWORD'
+const config = new ionoscloud.Configuration({
+  username: 'YOUR_USERNAME',
+  password: 'YOUR_PASSWORD'
+});
 
-  # Configure API key authorization: Token Authentication
-  config.api_key['Authorization'] = 'YOUR API KEY'
-  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
-  # config.api_key_prefix['Authorization'] = 'Bearer'
-end
+api_instance = ionoscloud.NicApi(config)
 
-api_instance = ::NicApi.new
-datacenterId =  # string | The unique ID of the datacenter
-serverId =  # string | The unique ID of the Server
-nicId =  # string | The unique ID of the NIC
-nic =  # Nic | Modified Nic
-opts = {
-  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
-  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
-  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
-}
+# Modify a Nic
 
-begin
-  # Modify a Nic
-  result = api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, opts)
-  p result
-rescue ::ApiError => e
-  puts "Error when calling NicApi->datacentersServersNicsPut: #{e}"
-end
+api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
 ```
 
 ### Parameters
