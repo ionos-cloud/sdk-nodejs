@@ -18,37 +18,27 @@ Display API information
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.DefaultApi(config)
-
 # Display API information
-
 api_instance.apiInfoGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.DefaultApi(config)
-
 # Display API information
-
 api_instance.apiInfoGet(options).then((response) => console.log(response));
 ```
 

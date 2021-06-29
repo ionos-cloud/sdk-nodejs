@@ -22,37 +22,27 @@ Deletes the specified image. This operation is permitted on private image only.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Delete an Image
-
 api_instance.imagesDelete(imageId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Delete an Image
-
 api_instance.imagesDelete(imageId, options).then((response) => console.log(response));
 ```
 
@@ -89,37 +79,27 @@ Retrieves the attributes of a given image.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Retrieve an Image
-
 api_instance.imagesFindById(imageId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Retrieve an Image
-
 api_instance.imagesFindById(imageId, options).then((response) => console.log(response));
 ```
 
@@ -156,37 +136,27 @@ Retrieve a list of images within the datacenter
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # List Images 
-
 api_instance.imagesGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # List Images 
-
 api_instance.imagesGet(options).then((response) => console.log(response));
 ```
 
@@ -222,37 +192,27 @@ You can use update attributes of a resource
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Partially modify an Image
-
 api_instance.imagesPatch(imageId, image, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Partially modify an Image
-
 api_instance.imagesPatch(imageId, image, options).then((response) => console.log(response));
 ```
 
@@ -290,37 +250,27 @@ You can use update attributes of a resource
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Modify an Image
-
 api_instance.imagesPut(imageId, image, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ImageApi(config)
-
 # Modify an Image
-
 api_instance.imagesPut(imageId, image, options).then((response) => console.log(response));
 ```
 

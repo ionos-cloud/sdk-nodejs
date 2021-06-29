@@ -27,37 +27,27 @@ This will remove a nic from Load Balancer
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Detach a nic from loadbalancer
-
 api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Detach a nic from loadbalancer
-
 api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
@@ -96,37 +86,27 @@ This will retrieve the properties of an attached nic.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Retrieve a nic attached to Load Balancer
-
 api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Retrieve a nic attached to Load Balancer
-
 api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, options).then((response) => console.log(response));
 ```
 
@@ -165,37 +145,27 @@ You can retrieve a list of nics attached to a Load Balancer
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # List Load Balancer Members 
-
 api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # List Load Balancer Members 
-
 api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
@@ -235,37 +205,27 @@ This will attach a pre-existing nic to a Load Balancer.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Attach a nic to Load Balancer
-
 api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Attach a nic to Load Balancer
-
 api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, options).then((response) => console.log(response));
 ```
 
@@ -304,37 +264,27 @@ Removes the specific Loadbalancer
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Delete a Loadbalancer.
-
 api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Delete a Loadbalancer.
-
 api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
@@ -372,37 +322,27 @@ Retrieves the attributes of a given Loadbalancer
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Retrieve a loadbalancer
-
 api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Retrieve a loadbalancer
-
 api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, options).then((response) => console.log(response));
 ```
 
@@ -440,37 +380,27 @@ Retrieve a list of Load Balancers within the datacenter
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # List Load Balancers
-
 api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # List Load Balancers
-
 api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
@@ -509,37 +439,27 @@ You can use update attributes of a resource
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Partially modify a Loadbalancer
-
 api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Partially modify a Loadbalancer
-
 api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
@@ -578,37 +498,27 @@ Creates a Loadbalancer within the datacenter
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Create a Load Balancer
-
 api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Create a Load Balancer
-
 api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).then((response) => console.log(response));
 ```
 
@@ -646,37 +556,27 @@ You can use update attributes of a resource
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Modify a Load Balancer
-
 api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LoadBalancerApi(config)
-
 # Modify a Load Balancer
-
 api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, options).then((response) => console.log(response));
 ```
 

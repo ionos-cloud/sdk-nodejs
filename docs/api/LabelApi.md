@@ -44,37 +44,27 @@ This will remove a label from the data center.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Data Center
-
 api_instance.datacentersLabelsDelete(datacenterId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Data Center
-
 api_instance.datacentersLabelsDelete(datacenterId, key, options).then((response) => console.log(response));
 ```
 
@@ -112,37 +102,27 @@ This will retrieve the properties of a associated label to a data center.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Data Center
-
 api_instance.datacentersLabelsFindByKey(datacenterId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Data Center
-
 api_instance.datacentersLabelsFindByKey(datacenterId, key, options).then((response) => console.log(response));
 ```
 
@@ -180,37 +160,27 @@ You can retrieve a list of all labels associated with a data center
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Data Center Labels
-
 api_instance.datacentersLabelsGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Data Center Labels
-
 api_instance.datacentersLabelsGet(datacenterId, options).then((response) => console.log(response));
 ```
 
@@ -249,37 +219,27 @@ This will add a label to the data center.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Data Center
-
 api_instance.datacentersLabelsPost(datacenterId, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Data Center
-
 api_instance.datacentersLabelsPost(datacenterId, label, options).then((response) => console.log(response));
 ```
 
@@ -317,37 +277,27 @@ This will modify the value of the label on a data center.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Data Center
-
 api_instance.datacentersLabelsPut(datacenterId, key, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Data Center
-
 api_instance.datacentersLabelsPut(datacenterId, key, label, options).then((response) => console.log(response));
 ```
 
@@ -386,37 +336,27 @@ This will remove a label from the server.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Server
-
 api_instance.datacentersServersLabelsDelete(datacenterId, serverId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Server
-
 api_instance.datacentersServersLabelsDelete(datacenterId, serverId, key, options).then((response) => console.log(response));
 ```
 
@@ -455,37 +395,27 @@ This will retrieve the properties of a associated label to a server.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Server
-
 api_instance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Server
-
 api_instance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, options).then((response) => console.log(response));
 ```
 
@@ -524,37 +454,27 @@ You can retrieve a list of all labels associated with a server
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Server Labels
-
 api_instance.datacentersServersLabelsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Server Labels
-
 api_instance.datacentersServersLabelsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -594,37 +514,27 @@ This will add a label to the server.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Server
-
 api_instance.datacentersServersLabelsPost(datacenterId, serverId, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Server
-
 api_instance.datacentersServersLabelsPost(datacenterId, serverId, label, options).then((response) => console.log(response));
 ```
 
@@ -663,37 +573,27 @@ This will modify the value of the label on a server.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Server
-
 api_instance.datacentersServersLabelsPut(datacenterId, serverId, key, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Server
-
 api_instance.datacentersServersLabelsPut(datacenterId, serverId, key, label, options).then((response) => console.log(response));
 ```
 
@@ -733,37 +633,27 @@ This will remove a label from the volume.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Volume
-
 api_instance.datacentersVolumesLabelsDelete(datacenterId, volumeId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Volume
-
 api_instance.datacentersVolumesLabelsDelete(datacenterId, volumeId, key, options).then((response) => console.log(response));
 ```
 
@@ -802,37 +692,27 @@ This will retrieve the properties of a associated label to a volume.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Volume
-
 api_instance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Volume
-
 api_instance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, options).then((response) => console.log(response));
 ```
 
@@ -871,37 +751,27 @@ You can retrieve a list of all labels associated with a volume
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Volume Labels
-
 api_instance.datacentersVolumesLabelsGet(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Volume Labels
-
 api_instance.datacentersVolumesLabelsGet(datacenterId, volumeId, options).then((response) => console.log(response));
 ```
 
@@ -941,37 +811,27 @@ This will add a label to the volume.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Volume
-
 api_instance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Volume
-
 api_instance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, options).then((response) => console.log(response));
 ```
 
@@ -1010,37 +870,27 @@ This will modify the value of the label on a volume.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Volume
-
 api_instance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Volume
-
 api_instance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, options).then((response) => console.log(response));
 ```
 
@@ -1080,37 +930,27 @@ This will remove a label from the Ip Block.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from IP Block
-
 api_instance.ipblocksLabelsDelete(ipblockId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from IP Block
-
 api_instance.ipblocksLabelsDelete(ipblockId, key, options).then((response) => console.log(response));
 ```
 
@@ -1148,37 +988,27 @@ This will retrieve the properties of a associated label to a Ip Block.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of IP Block
-
 api_instance.ipblocksLabelsFindByKey(ipblockId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of IP Block
-
 api_instance.ipblocksLabelsFindByKey(ipblockId, key, options).then((response) => console.log(response));
 ```
 
@@ -1216,37 +1046,27 @@ You can retrieve a list of all labels associated with a IP Block
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Ip Block Labels
-
 api_instance.ipblocksLabelsGet(ipblockId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Ip Block Labels
-
 api_instance.ipblocksLabelsGet(ipblockId, options).then((response) => console.log(response));
 ```
 
@@ -1283,37 +1103,27 @@ This will add a label to the Ip Block.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to IP Block
-
 api_instance.ipblocksLabelsPost(ipblockId, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to IP Block
-
 api_instance.ipblocksLabelsPost(ipblockId, label, options).then((response) => console.log(response));
 ```
 
@@ -1351,37 +1161,27 @@ This will modify the value of the label on a Ip Block.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of IP Block
-
 api_instance.ipblocksLabelsPut(ipblockId, key, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of IP Block
-
 api_instance.ipblocksLabelsPut(ipblockId, key, label, options).then((response) => console.log(response));
 ```
 
@@ -1420,37 +1220,27 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Returns the label by its URN.
-
 api_instance.labelsFindByUrn(labelurn, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Returns the label by its URN.
-
 api_instance.labelsFindByUrn(labelurn, options).then((response) => console.log(response));
 ```
 
@@ -1487,37 +1277,27 @@ You can retrieve a complete list of labels that you have access to.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List Labels 
-
 api_instance.labelsGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List Labels 
-
 api_instance.labelsGet(options).then((response) => console.log(response));
 ```
 
@@ -1553,37 +1333,27 @@ This will remove a label from the snapshot.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Snapshot
-
 api_instance.snapshotsLabelsDelete(snapshotId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Delete a Label from Snapshot
-
 api_instance.snapshotsLabelsDelete(snapshotId, key, options).then((response) => console.log(response));
 ```
 
@@ -1621,37 +1391,27 @@ This will retrieve the properties of a associated label to a snapshot.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Snapshot
-
 api_instance.snapshotsLabelsFindByKey(snapshotId, key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Retrieve a Label of Snapshot
-
 api_instance.snapshotsLabelsFindByKey(snapshotId, key, options).then((response) => console.log(response));
 ```
 
@@ -1689,37 +1449,27 @@ You can retrieve a list of all labels associated with a snapshot
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Snapshot Labels
-
 api_instance.snapshotsLabelsGet(snapshotId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # List all Snapshot Labels
-
 api_instance.snapshotsLabelsGet(snapshotId, options).then((response) => console.log(response));
 ```
 
@@ -1756,37 +1506,27 @@ This will add a label to the snapshot.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Snapshot
-
 api_instance.snapshotsLabelsPost(snapshotId, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Add a Label to Snapshot
-
 api_instance.snapshotsLabelsPost(snapshotId, label, options).then((response) => console.log(response));
 ```
 
@@ -1824,37 +1564,27 @@ This will modify the value of the label on a snapshot.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Snapshot
-
 api_instance.snapshotsLabelsPut(snapshotId, key, label, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LabelApi(config)
-
 # Modify a Label of Snapshot
-
 api_instance.snapshotsLabelsPut(snapshotId, key, label, options).then((response) => console.log(response));
 ```
 

@@ -20,37 +20,27 @@ Retrieve a list of Locations within a world\'s region
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LocationApi(config)
-
 # List Locations within a region
-
 api_instance.locationsFindByRegionId(regionId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LocationApi(config)
-
 # List Locations within a region
-
 api_instance.locationsFindByRegionId(regionId, options).then((response) => console.log(response));
 ```
 
@@ -87,37 +77,27 @@ Retrieves the attributes of a given location
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LocationApi(config)
-
 # Retrieve a Location
-
 api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LocationApi(config)
-
 # Retrieve a Location
-
 api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((response) => console.log(response));
 ```
 
@@ -155,37 +135,27 @@ Retrieve a list of Locations. This list represents where you can provision your 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LocationApi(config)
-
 # List Locations
-
 api_instance.locationsGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.LocationApi(config)
-
 # List Locations
-
 api_instance.locationsGet(options).then((response) => console.log(response));
 ```
 

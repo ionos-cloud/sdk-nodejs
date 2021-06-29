@@ -35,37 +35,27 @@ This will remove a Kubernetes Cluster.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Delete Kubernetes Cluster
-
 api_instance.k8sDelete(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Delete Kubernetes Cluster
-
 api_instance.k8sDelete(k8sClusterId, options).then((response) => console.log(response));
 ```
 
@@ -102,37 +92,27 @@ This will retrieve a single Kubernetes Cluster.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes Cluster
-
 api_instance.k8sFindByClusterId(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes Cluster
-
 api_instance.k8sFindByClusterId(k8sClusterId, options).then((response) => console.log(response));
 ```
 
@@ -169,37 +149,27 @@ You can retrieve a list of all kubernetes clusters associated with a contract
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # List Kubernetes Clusters
-
 api_instance.k8sGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # List Kubernetes Clusters
-
 api_instance.k8sGet(options).then((response) => console.log(response));
 ```
 
@@ -235,37 +205,27 @@ You can retrieve kubernetes configuration file for the kubernetes cluster.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes Configuration File
-
 api_instance.k8sKubeconfigGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes Configuration File
-
 api_instance.k8sKubeconfigGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
@@ -302,37 +262,27 @@ This will remove a Kubernetes Node Pool.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Delete Kubernetes Node Pool
-
 api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Delete Kubernetes Node Pool
-
 api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
@@ -370,37 +320,27 @@ You can retrieve a single Kubernetes Node Pool.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes Node Pool
-
 api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes Node Pool
-
 api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
@@ -438,37 +378,27 @@ You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # List Kubernetes Node Pools
-
 api_instance.k8sNodepoolsGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # List Kubernetes Node Pools
-
 api_instance.k8sNodepoolsGet(k8sClusterId, options).then((response) => console.log(response));
 ```
 
@@ -505,37 +435,27 @@ This will remove a Kubernetes node.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Delete Kubernetes node
-
 api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Delete Kubernetes node
-
 api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
@@ -574,37 +494,27 @@ You can retrieve a single Kubernetes Node.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes node
-
 api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes node
-
 api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
@@ -643,37 +553,27 @@ You can retrieve all nodes of Kubernetes Node Pool.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes nodes.
-
 api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve Kubernetes nodes.
-
 api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, options).then((response) => console.log(response));
 ```
 
@@ -711,37 +611,27 @@ You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Recreate the Kubernetes node
-
 api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Recreate the Kubernetes node
-
 api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, options).then((response) => console.log(response));
 ```
 
@@ -780,37 +670,27 @@ This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Create a Kubernetes Node Pool
-
 api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Create a Kubernetes Node Pool
-
 api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
@@ -848,37 +728,27 @@ This will modify the Kubernetes Node Pool.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Modify Kubernetes Node Pool
-
 api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Modify Kubernetes Node Pool
-
 api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, options).then((response) => console.log(response));
 ```
 
@@ -917,37 +787,27 @@ This will create a new Kubernetes Cluster.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Create Kubernetes Cluster
-
 api_instance.k8sPost(kubernetesCluster, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Create Kubernetes Cluster
-
 api_instance.k8sPost(kubernetesCluster, options).then((response) => console.log(response));
 ```
 
@@ -984,37 +844,27 @@ This will modify the Kubernetes Cluster.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Modify Kubernetes Cluster
-
 api_instance.k8sPut(k8sClusterId, kubernetesCluster, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Modify Kubernetes Cluster
-
 api_instance.k8sPut(k8sClusterId, kubernetesCluster, options).then((response) => console.log(response));
 ```
 
@@ -1052,37 +902,27 @@ You can retrieve a list of available kubernetes versions for nodepools depending
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-
 api_instance.k8sVersionsCompatibilitiesGet(clusterVersion).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-
 api_instance.k8sVersionsCompatibilitiesGet(clusterVersion).then((response) => console.log(response));
 ```
 
@@ -1116,37 +956,27 @@ You can retrieve the current default kubernetes version for clusters and nodepoo
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve the current default kubernetes version for clusters and nodepools.
-
 api_instance.k8sVersionsDefaultGet.then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve the current default kubernetes version for clusters and nodepools.
-
 api_instance.k8sVersionsDefaultGet.then((response) => console.log(response));
 ```
 
@@ -1177,37 +1007,27 @@ You can retrieve a list of available kubernetes versions
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve available Kubernetes versions
-
 api_instance.k8sVersionsGet.then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.KubernetesApi(config)
-
 # Retrieve available Kubernetes versions
-
 api_instance.k8sVersionsGet.then((response) => console.log(response));
 ```
 

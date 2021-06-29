@@ -47,37 +47,27 @@ Delete a group
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Delete a Group
-
 api_instance.umGroupsDelete(groupId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Delete a Group
-
 api_instance.umGroupsDelete(groupId, options).then((response) => console.log(response));
 ```
 
@@ -114,37 +104,27 @@ You can retrieve a group by using the group ID. This value can be found in the r
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a Group
-
 api_instance.umGroupsFindById(groupId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a Group
-
 api_instance.umGroupsFindById(groupId, options).then((response) => console.log(response));
 ```
 
@@ -181,37 +161,27 @@ You can retrieve a complete list of all groups that you have access to
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List All Groups.
-
 api_instance.umGroupsGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List All Groups.
-
 api_instance.umGroupsGet(options).then((response) => console.log(response));
 ```
 
@@ -247,37 +217,27 @@ You can use this POST method to create a group
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Create a Group
-
 api_instance.umGroupsPost(group, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Create a Group
-
 api_instance.umGroupsPost(group, options).then((response) => console.log(response));
 ```
 
@@ -314,37 +274,27 @@ You can use this method to update properties of the group.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify a group
-
 api_instance.umGroupsPut(groupId, group, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify a group
-
 api_instance.umGroupsPut(groupId, group, options).then((response) => console.log(response));
 ```
 
@@ -380,37 +330,27 @@ Retrieve resources assigned to a group
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve resources assigned to a group
-
 api_instance.umGroupsResourcesGet(groupId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve resources assigned to a group
-
 api_instance.umGroupsResourcesGet(groupId, options).then((response) => console.log(response));
 ```
 
@@ -447,37 +387,27 @@ This will remove a resource from a group
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Remove a resource from a group
-
 api_instance.umGroupsSharesDelete(groupId, resourceId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Remove a resource from a group
-
 api_instance.umGroupsSharesDelete(groupId, resourceId, options).then((response) => console.log(response));
 ```
 
@@ -515,37 +445,27 @@ This will retrieve the properties of a group share.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a group share
-
 api_instance.umGroupsSharesFindByResourceId(groupId, resourceId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a group share
-
 api_instance.umGroupsSharesFindByResourceId(groupId, resourceId, options).then((response) => console.log(response));
 ```
 
@@ -583,37 +503,27 @@ You can retrieve a list of all resources along with their permissions of the gro
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List Group Shares 
-
 api_instance.umGroupsSharesGet(groupId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List Group Shares 
-
 api_instance.umGroupsSharesGet(groupId, options).then((response) => console.log(response));
 ```
 
@@ -650,37 +560,27 @@ This will add a resource to the group.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Add a resource to a group
-
 api_instance.umGroupsSharesPost(groupId, resourceId, resource, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Add a resource to a group
-
 api_instance.umGroupsSharesPost(groupId, resourceId, resource, options).then((response) => console.log(response));
 ```
 
@@ -719,37 +619,27 @@ You can use update resource permissions of a group. If empty body will be provid
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify resource permissions of a group
-
 api_instance.umGroupsSharesPut(groupId, resourceId, resource, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify resource permissions of a group
-
 api_instance.umGroupsSharesPut(groupId, resourceId, resource, options).then((response) => console.log(response));
 ```
 
@@ -788,37 +678,27 @@ This will remove a user from a group
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Remove a user from a group
-
 api_instance.umGroupsUsersDelete(groupId, userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Remove a user from a group
-
 api_instance.umGroupsUsersDelete(groupId, userId, options).then((response) => console.log(response));
 ```
 
@@ -856,37 +736,27 @@ You can retrieve a list of users who are members of the group
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List Group Members 
-
 api_instance.umGroupsUsersGet(groupId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List Group Members 
-
 api_instance.umGroupsUsersGet(groupId, options).then((response) => console.log(response));
 ```
 
@@ -923,37 +793,27 @@ This will attach a pre-existing user to a group.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Add a user to a group
-
 api_instance.umGroupsUsersPost(groupId, user, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Add a user to a group
-
 api_instance.umGroupsUsersPost(groupId, user, options).then((response) => console.log(response));
 ```
 
@@ -991,37 +851,27 @@ You can retrieve a list of resources by using the type. Allowed values are { dat
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a list of Resources by type.
-
 api_instance.umResourcesFindByType(resourceType, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a list of Resources by type.
-
 api_instance.umResourcesFindByType(resourceType, options).then((response) => console.log(response));
 ```
 
@@ -1058,37 +908,27 @@ You can retrieve a resource by using the type and its uuid. Allowed values for t
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a Resource by type.
-
 api_instance.umResourcesFindByTypeAndId(resourceType, resourceId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a Resource by type.
-
 api_instance.umResourcesFindByTypeAndId(resourceType, resourceId, options).then((response) => console.log(response));
 ```
 
@@ -1126,37 +966,27 @@ You can retrieve a complete list of all resources that you have access to
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List All Resources.
-
 api_instance.umResourcesGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List All Resources.
-
 api_instance.umResourcesGet(options).then((response) => console.log(response));
 ```
 
@@ -1192,37 +1022,27 @@ Delete a user
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Delete a User
-
 api_instance.umUsersDelete(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Delete a User
-
 api_instance.umUsersDelete(userId, options).then((response) => console.log(response));
 ```
 
@@ -1259,37 +1079,27 @@ You can retrieve user details by using the users ID. This value can be found in 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User
-
 api_instance.umUsersFindById(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User
-
 api_instance.umUsersFindById(userId, options).then((response) => console.log(response));
 ```
 
@@ -1326,37 +1136,27 @@ You can retrieve a complete list of users under your account
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List all Users 
-
 api_instance.umUsersGet(options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # List all Users 
-
 api_instance.umUsersGet(options).then((response) => console.log(response));
 ```
 
@@ -1392,37 +1192,27 @@ You can retrieve group resources of user by using the users ID. This value can b
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User\'s group resources
-
 api_instance.umUsersGroupsGet(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User\'s group resources
-
 api_instance.umUsersGroupsGet(userId, options).then((response) => console.log(response));
 ```
 
@@ -1459,37 +1249,27 @@ You can retrieve resources owned by using the users ID. This value can be found 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User\'s own resources
-
 api_instance.umUsersOwnsGet(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User\'s own resources
-
 api_instance.umUsersOwnsGet(userId, options).then((response) => console.log(response));
 ```
 
@@ -1526,37 +1306,27 @@ You can use this POST method to create a user
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Create a user
-
 api_instance.umUsersPost(user, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Create a user
-
 api_instance.umUsersPost(user, options).then((response) => console.log(response));
 ```
 
@@ -1593,37 +1363,27 @@ You can use update attributes of a User
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify a user
-
 api_instance.umUsersPut(userId, user, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify a user
-
 api_instance.umUsersPut(userId, user, options).then((response) => console.log(response));
 ```
 
@@ -1661,37 +1421,27 @@ Delete a S3 key
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Delete a S3 key
-
 api_instance.umUsersS3keysDelete(userId, keyId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Delete a S3 key
-
 api_instance.umUsersS3keysDelete(userId, keyId, options).then((response) => console.log(response));
 ```
 
@@ -1729,37 +1479,27 @@ You can retrieve S3 key belonging to the given User. This user Id can be found i
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve given S3 key belonging to the given User
-
 api_instance.umUsersS3keysFindByKeyId(userId, keyId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve given S3 key belonging to the given User
-
 api_instance.umUsersS3keysFindByKeyId(userId, keyId, options).then((response) => console.log(response));
 ```
 
@@ -1797,37 +1537,27 @@ You can retrieve S3 keys owned by a user by using the users ID. This user Id can
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User\'s S3 keys
-
 api_instance.umUsersS3keysGet(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve a User\'s S3 keys
-
 api_instance.umUsersS3keysGet(userId, options).then((response) => console.log(response));
 ```
 
@@ -1864,37 +1594,27 @@ Creates a S3 key for the given user. This user Id can be found in the response b
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Create a S3 key for the given user
-
 api_instance.umUsersS3keysPost(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Create a S3 key for the given user
-
 api_instance.umUsersS3keysPost(userId, options).then((response) => console.log(response));
 ```
 
@@ -1931,37 +1651,27 @@ You can enable or disable a given S3 key.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify a S3 key having the given key id
-
 api_instance.umUsersS3keysPut(userId, keyId, s3Key, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Modify a S3 key having the given key id
-
 api_instance.umUsersS3keysPut(userId, keyId, s3Key, options).then((response) => console.log(response));
 ```
 
@@ -2000,37 +1710,27 @@ You can retrieve S3 object storage single signon URL for the given user. This us
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve S3 object storage single signon URL for the given user
-
 api_instance.umUsersS3ssourlGet(userId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.UserManagementApi(config)
-
 # Retrieve S3 object storage single signon URL for the given user
-
 api_instance.umUsersS3ssourlGet(userId, options).then((response) => console.log(response));
 ```
 

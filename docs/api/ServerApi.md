@@ -35,37 +35,27 @@ This will detach a CD-ROM from the server
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Detach a CD-ROM
-
 api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Detach a CD-ROM
-
 api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
@@ -104,37 +94,27 @@ You can retrieve a specific CD-ROM attached to the server
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Retrieve an attached CD-ROM
-
 api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Retrieve an attached CD-ROM
-
 api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, options).then((response) => console.log(response));
 ```
 
@@ -173,37 +153,27 @@ You can retrieve a list of CD-ROMs attached to the server.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # List attached CD-ROMs 
-
 api_instance.datacentersServersCdromsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # List attached CD-ROMs 
-
 api_instance.datacentersServersCdromsGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -243,37 +213,27 @@ You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Attach a CD-ROM
-
 api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Attach a CD-ROM
-
 api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, options).then((response) => console.log(response));
 ```
 
@@ -312,37 +272,27 @@ This will remove a server from your datacenter; however, it will not remove the 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Delete a Server
-
 api_instance.datacentersServersDelete(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Delete a Server
-
 api_instance.datacentersServersDelete(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -380,37 +330,27 @@ Returns information about a server such as its configuration, provisioning statu
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Retrieve a Server
-
 api_instance.datacentersServersFindById(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Retrieve a Server
-
 api_instance.datacentersServersFindById(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -448,37 +388,27 @@ You can retrieve a list of servers within a datacenter
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # List Servers 
-
 api_instance.datacentersServersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # List Servers 
-
 api_instance.datacentersServersGet(datacenterId, options).then((response) => console.log(response));
 ```
 
@@ -518,37 +448,27 @@ You can use update attributes of a server
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Partially modify a Server
-
 api_instance.datacentersServersPatch(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Partially modify a Server
-
 api_instance.datacentersServersPatch(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
@@ -587,37 +507,27 @@ Creates a server within an existing datacenter. You can configure the boot volum
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Create a Server
-
 api_instance.datacentersServersPost(datacenterId, server, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Create a Server
-
 api_instance.datacentersServersPost(datacenterId, server, options).then((response) => console.log(response));
 ```
 
@@ -655,37 +565,27 @@ Allows to modify the attributes of a Server. From v5 onwards \'allowReboot\' att
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Modify a Server
-
 api_instance.datacentersServersPut(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Modify a Server
-
 api_instance.datacentersServersPut(datacenterId, serverId, server, options).then((response) => console.log(response));
 ```
 
@@ -724,37 +624,27 @@ This will force a hard reboot of the server. Do not use this method if you want 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Reboot a Server
-
 api_instance.datacentersServersRebootPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Reboot a Server
-
 api_instance.datacentersServersRebootPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -792,37 +682,27 @@ This will start a server. If the server\'s public IP was deallocated then a new 
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Start a Server
-
 api_instance.datacentersServersStartPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Start a Server
-
 api_instance.datacentersServersStartPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -860,37 +740,27 @@ This will stop a server. The machine will be forcefully powered off, billing wil
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Stop a Server
-
 api_instance.datacentersServersStopPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Stop a Server
-
 api_instance.datacentersServersStopPost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -928,37 +798,27 @@ This will upgrade the version of the server, if needed. To verify if there is an
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Upgrade a Server
-
 api_instance.datacentersServersUpgradePost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Upgrade a Server
-
 api_instance.datacentersServersUpgradePost(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -996,37 +856,27 @@ This will detach the volume from the server. This will not delete the volume fro
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Detach a volume
-
 api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Detach a volume
-
 api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
@@ -1065,37 +915,27 @@ This will retrieve the properties of an attached volume.
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Retrieve an attached volume
-
 api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Retrieve an attached volume
-
 api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, options).then((response) => console.log(response));
 ```
 
@@ -1134,19 +974,14 @@ You can retrieve a list of volumes attached to the server
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # List Attached Volumes
-
 api_instance.datacentersServersVolumesGet(datacenterId, serverId, options).then((response) => console.log(response));
 ```
 
@@ -1186,19 +1021,14 @@ This will attach a pre-existing storage volume to the server. It is also possibl
 
 * Basic Authentication (Basic Authentication):
 ```javascript
-
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-
 # setup authorization
 const config = new ionoscloud.Configuration({
   username: 'YOUR_USERNAME',
   password: 'YOUR_PASSWORD'
 });
-
 api_instance = ionoscloud.ServerApi(config)
-
 # Attach a volume
-
 api_instance.datacentersServersVolumesPost(datacenterId, serverId, volume, options).then((response) => console.log(response));
 ```
 
