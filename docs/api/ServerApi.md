@@ -1,360 +1,1787 @@
-# Class: ServerApi
+# ServerApi
 
-## ServerApi
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-#### new ServerApi()
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**datacentersServersCdromsDelete**](ServerApi.md#datacentersServersCdromsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM |
+| [**datacentersServersCdromsFindById**](ServerApi.md#datacentersServersCdromsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM |
+| [**datacentersServersCdromsGet**](ServerApi.md#datacentersServersCdromsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs  |
+| [**datacentersServersCdromsPost**](ServerApi.md#datacentersServersCdromsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM |
+| [**datacentersServersDelete**](ServerApi.md#datacentersServersDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server |
+| [**datacentersServersFindById**](ServerApi.md#datacentersServersFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server |
+| [**datacentersServersGet**](ServerApi.md#datacentersServersGet) | **GET** /datacenters/{datacenterId}/servers | List Servers  |
+| [**datacentersServersPatch**](ServerApi.md#datacentersServersPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server |
+| [**datacentersServersPost**](ServerApi.md#datacentersServersPost) | **POST** /datacenters/{datacenterId}/servers | Create a Server |
+| [**datacentersServersPut**](ServerApi.md#datacentersServersPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server |
+| [**datacentersServersRebootPost**](ServerApi.md#datacentersServersRebootPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server |
+| [**datacentersServersStartPost**](ServerApi.md#datacentersServersStartPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server |
+| [**datacentersServersStopPost**](ServerApi.md#datacentersServersStopPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server |
+| [**datacentersServersUpgradePost**](ServerApi.md#datacentersServersUpgradePost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server |
+| [**datacentersServersVolumesDelete**](ServerApi.md#datacentersServersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume |
+| [**datacentersServersVolumesFindById**](ServerApi.md#datacentersServersVolumesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume |
+| [**datacentersServersVolumesGet**](ServerApi.md#datacentersServersVolumesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes |
+| [**datacentersServersVolumesPost**](ServerApi.md#datacentersServersVolumesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume |
 
-ServerApi - object-oriented interface
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2077](/../../api/server-api.ts#L2077)
-
----------------
-
-### Extends
-
-- BaseAPI
-
-### Methods
-
-#### datacentersServersCdromsDelete(requestParameters, options)
+# **datacentersServersCdromsDelete**
+> object datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Detach a CD-ROM
+
 This will detach a CD-ROM from the server
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersCdromsDeleteRequest](global.md#ServerApiDatacentersServersCdromsDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2092](/../../api/server-api.ts#L2092)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+cdromId =  # string | The unique ID of the CD-ROM
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Detach a CD-ROM
+  result = api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsDelete: #{e}"
+end
+```
 
-#### datacentersServersCdromsFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+cdromId =  # string | The unique ID of the CD-ROM
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Detach a CD-ROM
+  result = api_instance.datacentersServersCdromsDelete(datacenterId, serverId, cdromId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **cdromId** | **string**| The unique ID of the CD-ROM | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersCdromsFindById**
+> Image datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve an attached CD-ROM
+
 You can retrieve a specific CD-ROM attached to the server
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersCdromsFindByIdRequest](global.md#ServerApiDatacentersServersCdromsFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2103](/../../api/server-api.ts#L2103)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+cdromId =  # string | The unique ID of the CD-ROM
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve an attached CD-ROM
+  result = api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsFindById: #{e}"
+end
+```
 
-#### datacentersServersCdromsGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-List attached CD-ROMs
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+cdromId =  # string | The unique ID of the CD-ROM
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve an attached CD-ROM
+  result = api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **cdromId** | **string**| The unique ID of the CD-ROM | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersCdromsGet**
+> Cdroms datacentersServersCdromsGet(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber, offset=offset, limit=limit)
+
+List attached CD-ROMs 
+
 You can retrieve a list of CD-ROMs attached to the server.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersCdromsGetRequest](global.md#ServerApiDatacentersServersCdromsGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2114](/../../api/server-api.ts#L2114)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
 
-*RequiredError*
+begin
+  # List attached CD-ROMs 
+  result = api_instance.datacentersServersCdromsGet(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsGet: #{e}"
+end
+```
 
-#### datacentersServersCdromsPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
+
+begin
+  # List attached CD-ROMs 
+  result = api_instance.datacentersServersCdromsGet(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+| **offset** | **number**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0] |
+| **limit** | **number**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000] |
+
+### Return type
+
+[**Cdroms**](Cdroms.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersCdromsPost**
+> Image datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Attach a CD-ROM
-You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to one server.
 
-##### Parameters:
+You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to one server. 
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersCdromsPostRequest](global.md#ServerApiDatacentersServersCdromsPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+### Example
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2125](/../../api/server-api.ts#L2125)
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-##### Throws:
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-*RequiredError*
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+cdrom =  # Image | CD-ROM to be attached
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-#### datacentersServersDelete(requestParameters, options)
+begin
+  # Attach a CD-ROM
+  result = api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsPost: #{e}"
+end
+```
+
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+cdrom =  # Image | CD-ROM to be attached
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Attach a CD-ROM
+  result = api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersCdromsPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **cdrom** | [**Image**](Image.md)| CD-ROM to be attached |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersServersDelete**
+> object datacentersServersDelete(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Delete a Server
+
 This will remove a server from your datacenter; however, it will not remove the storage volumes attached to the server. You will need to make a separate API call to perform that action
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersDeleteRequest](global.md#ServerApiDatacentersServersDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2136](/../../api/server-api.ts#L2136)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Delete a Server
+  result = api_instance.datacentersServersDelete(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersDelete: #{e}"
+end
+```
 
-#### datacentersServersFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Delete a Server
+  result = api_instance.datacentersServersDelete(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersFindById**
+> Server datacentersServersFindById(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve a Server
+
 Returns information about a server such as its configuration, provisioning status, etc.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersFindByIdRequest](global.md#ServerApiDatacentersServersFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2147](/../../api/server-api.ts#L2147)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve a Server
+  result = api_instance.datacentersServersFindById(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersFindById: #{e}"
+end
+```
 
-#### datacentersServersGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-List Servers
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve a Server
+  result = api_instance.datacentersServersFindById(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersGet**
+> Servers datacentersServersGet(datacenterId, pretty=pretty, depth=depth, upgradeNeeded=upgradeNeeded, xContractNumber=xContractNumber, offset=offset, limit=limit)
+
+List Servers 
+
 You can retrieve a list of servers within a datacenter
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersGetRequest](global.md#ServerApiDatacentersServersGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2158](/../../api/server-api.ts#L2158)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  upgradeNeeded: , # boolean | It can be used to filter which servers can be upgraded which can not be upgraded.
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
 
-*RequiredError*
+begin
+  # List Servers 
+  result = api_instance.datacentersServersGet(datacenterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersGet: #{e}"
+end
+```
 
-#### datacentersServersPatch(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  upgradeNeeded: , # boolean | It can be used to filter which servers can be upgraded which can not be upgraded.
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
+
+begin
+  # List Servers 
+  result = api_instance.datacentersServersGet(datacenterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **upgradeNeeded** | **boolean**| It can be used to filter which servers can be upgraded which can not be upgraded. | [optional] [default to undefined] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+| **offset** | **number**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0] |
+| **limit** | **number**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000] |
+
+### Return type
+
+[**Servers**](Servers.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersPatch**
+> Server datacentersServersPatch(datacenterId, serverId, server, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Partially modify a Server
+
 You can use update attributes of a server
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersPatchRequest](global.md#ServerApiDatacentersServersPatchRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2169](/../../api/server-api.ts#L2169)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the server
+server =  # ServerProperties | Modified properties of Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Partially modify a Server
+  result = api_instance.datacentersServersPatch(datacenterId, serverId, server, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersPatch: #{e}"
+end
+```
 
-#### datacentersServersPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the server
+server =  # ServerProperties | Modified properties of Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Partially modify a Server
+  result = api_instance.datacentersServersPatch(datacenterId, serverId, server, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersPatch: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the server | [default to undefined] |
+| **server** | [**ServerProperties**](ServerProperties.md)| Modified properties of Server |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersServersPost**
+> Server datacentersServersPost(datacenterId, server, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Create a Server
+
 Creates a server within an existing datacenter. You can configure the boot volume and connect the server to an existing LAN.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersPostRequest](global.md#ServerApiDatacentersServersPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2180](/../../api/server-api.ts#L2180)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+server =  # Server | Server to be created
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Create a Server
+  result = api_instance.datacentersServersPost(datacenterId, server, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersPost: #{e}"
+end
+```
 
-#### datacentersServersPut(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+server =  # Server | Server to be created
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Create a Server
+  result = api_instance.datacentersServersPost(datacenterId, server, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **server** | [**Server**](Server.md)| Server to be created |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersServersPut**
+> Server datacentersServersPut(datacenterId, serverId, server, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Modify a Server
+
 Allows to modify the attributes of a Server. From v5 onwards \'allowReboot\' attribute will no longer be available. For certain server property change it was earlier forced to be provided. Now this behaviour is implicit and backend will do this automatically e.g. in earlier versions, when CPU family changes, the \'allowReboot\' property was required to be set to true which will no longer be the case and the server will be rebooted automatically
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersPutRequest](global.md#ServerApiDatacentersServersPutRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2191](/../../api/server-api.ts#L2191)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the server
+server =  # Server | Modified Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Modify a Server
+  result = api_instance.datacentersServersPut(datacenterId, serverId, server, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersPut: #{e}"
+end
+```
 
-#### datacentersServersRebootPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the server
+server =  # Server | Modified Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Modify a Server
+  result = api_instance.datacentersServersPut(datacenterId, serverId, server, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersPut: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the server | [default to undefined] |
+| **server** | [**Server**](Server.md)| Modified Server |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Server**](Server.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersServersRebootPost**
+> object datacentersServersRebootPost(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Reboot a Server
+
 This will force a hard reboot of the server. Do not use this method if you want to gracefully reboot the machine. This is the equivalent of powering off the machine and turning it back on.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersRebootPostRequest](global.md#ServerApiDatacentersServersRebootPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2202](/../../api/server-api.ts#L2202)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Reboot a Server
+  result = api_instance.datacentersServersRebootPost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersRebootPost: #{e}"
+end
+```
 
-#### datacentersServersStartPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Reboot a Server
+  result = api_instance.datacentersServersRebootPost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersRebootPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersStartPost**
+> object datacentersServersStartPost(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Start a Server
+
 This will start a server. If the server\'s public IP was deallocated then a new IP will be assigned
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersStartPostRequest](global.md#ServerApiDatacentersServersStartPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2213](/../../api/server-api.ts#L2213)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Start a Server
+  result = api_instance.datacentersServersStartPost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersStartPost: #{e}"
+end
+```
 
-#### datacentersServersStopPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Start a Server
+  result = api_instance.datacentersServersStartPost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersStartPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersStopPost**
+> object datacentersServersStopPost(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Stop a Server
+
 This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersStopPostRequest](global.md#ServerApiDatacentersServersStopPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2224](/../../api/server-api.ts#L2224)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Stop a Server
+  result = api_instance.datacentersServersStopPost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersStopPost: #{e}"
+end
+```
 
-#### datacentersServersUpgradePost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Stop a Server
+  result = api_instance.datacentersServersStopPost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersStopPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersUpgradePost**
+> object datacentersServersUpgradePost(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Upgrade a Server
+
 This will upgrade the version of the server, if needed. To verify if there is an upgrade available for a server, call \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersUpgradePostRequest](global.md#ServerApiDatacentersServersUpgradePostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2235](/../../api/server-api.ts#L2235)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Upgrade a Server
+  result = api_instance.datacentersServersUpgradePost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersUpgradePost: #{e}"
+end
+```
 
-#### datacentersServersVolumesDelete(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Upgrade a Server
+  result = api_instance.datacentersServersUpgradePost(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersUpgradePost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersVolumesDelete**
+> object datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Detach a volume
+
 This will detach the volume from the server. This will not delete the volume from your datacenter. You will need to make a separate request to perform a deletion
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersVolumesDeleteRequest](global.md#ServerApiDatacentersServersVolumesDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2246](/../../api/server-api.ts#L2246)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+volumeId =  # string | The unique ID of the Volume
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Detach a volume
+  result = api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersVolumesDelete: #{e}"
+end
+```
 
-#### datacentersServersVolumesFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+volumeId =  # string | The unique ID of the Volume
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Detach a volume
+  result = api_instance.datacentersServersVolumesDelete(datacenterId, serverId, volumeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersVolumesDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **volumeId** | **string**| The unique ID of the Volume | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersVolumesFindById**
+> Volume datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve an attached volume
+
 This will retrieve the properties of an attached volume.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersVolumesFindByIdRequest](global.md#ServerApiDatacentersServersVolumesFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2257](/../../api/server-api.ts#L2257)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+volumeId =  # string | The unique ID of the Volume
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve an attached volume
+  result = api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersVolumesFindById: #{e}"
+end
+```
 
-#### datacentersServersVolumesGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+volumeId =  # string | The unique ID of the Volume
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve an attached volume
+  result = api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersVolumesFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **volumeId** | **string**| The unique ID of the Volume | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersVolumesGet**
+> AttachedVolumes datacentersServersVolumesGet(datacenterId, serverId, pretty=pretty, depth=depth, xContractNumber=xContractNumber, offset=offset, limit=limit)
 
 List Attached Volumes
+
 You can retrieve a list of volumes attached to the server
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersVolumesGetRequest](global.md#ServerApiDatacentersServersVolumesGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2268](/../../api/server-api.ts#L2268)
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
 
-##### Throws:
+begin
+  # List Attached Volumes
+  result = api_instance.datacentersServersVolumesGet(datacenterId, serverId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersVolumesGet: #{e}"
+end
+```
 
-*RequiredError*
+### Parameters
 
-#### datacentersServersVolumesPost(requestParameters, options)
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+| **offset** | **number**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0] |
+| **limit** | **number**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000] |
+
+### Return type
+
+[**AttachedVolumes**](AttachedVolumes.md)
+
+### Authorization
+
+Basic Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersServersVolumesPost**
+> Volume datacentersServersVolumesPost(datacenterId, serverId, volume, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Attach a volume
+
 This will attach a pre-existing storage volume to the server. It is also possible to create and attach a volume in one step just by providing a new volume description as payload. Combine count of Nics and volumes attached to the server should not exceed size 24.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ServerApiDatacentersServersVolumesPostRequest](global.md#ServerApiDatacentersServersVolumesPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+end
 
-*Source:*
-[api/server-api.ts](/../../api/server-api.ts), [line 2279](/../../api/server-api.ts#L2279)
+api_instance = ::ServerApi.new
+datacenterId =  # string | The unique ID of the Datacenter
+serverId =  # string | The unique ID of the Server
+volume =  # Volume | Volume to be attached (created and attached)
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-##### Throws:
+begin
+  # Attach a volume
+  result = api_instance.datacentersServersVolumesPost(datacenterId, serverId, volume, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ServerApi->datacentersServersVolumesPost: #{e}"
+end
+```
 
-*RequiredError*
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the Datacenter | [default to undefined] |
+| **serverId** | **string**| The unique ID of the Server | [default to undefined] |
+| **volume** | [**Volume**](Volume.md)| Volume to be attached (created and attached) |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Volume**](Volume.md)
+
+### Authorization
+
+Basic Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+

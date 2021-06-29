@@ -1,113 +1,501 @@
-# Class: ImageApi
+# ImageApi
 
-## ImageApi
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-#### new ImageApi()
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**imagesDelete**](ImageApi.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image |
+| [**imagesFindById**](ImageApi.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image |
+| [**imagesGet**](ImageApi.md#imagesGet) | **GET** /images | List Images  |
+| [**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image |
+| [**imagesPut**](ImageApi.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image |
 
-ImageApi - object-oriented interface
 
-*Source:*
-[api/image-api.ts](/../../api/image-api.ts), [line 541](/../../api/image-api.ts#L541)
-
----------------
-
-### Extends
-
-- BaseAPI
-
-### Methods
-
-#### imagesDelete(requestParameters, options)
+# **imagesDelete**
+> object imagesDelete(imageId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Delete an Image
+
 Deletes the specified image. This operation is permitted on private image only.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ImageApiImagesDeleteRequest](global.md#ImageApiImagesDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/image-api.ts](/../../api/image-api.ts), [line 556](/../../api/image-api.ts#L556)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ImageApi.new
+imageId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Delete an Image
+  result = api_instance.imagesDelete(imageId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesDelete: #{e}"
+end
+```
 
-#### imagesFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ImageApi.new
+imageId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Delete an Image
+  result = api_instance.imagesDelete(imageId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **imageId** | **string**|  | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **imagesFindById**
+> Image imagesFindById(imageId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve an Image
+
 Retrieves the attributes of a given image.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ImageApiImagesFindByIdRequest](global.md#ImageApiImagesFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/image-api.ts](/../../api/image-api.ts), [line 567](/../../api/image-api.ts#L567)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ImageApi.new
+imageId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve an Image
+  result = api_instance.imagesFindById(imageId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesFindById: #{e}"
+end
+```
 
-#### imagesGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-List Images
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ImageApi.new
+imageId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve an Image
+  result = api_instance.imagesFindById(imageId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **imageId** | **string**|  | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **imagesGet**
+> Images imagesGet(pretty=pretty, depth=depth, xContractNumber=xContractNumber)
+
+List Images 
+
 Retrieve a list of images within the datacenter
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ImageApiImagesGetRequest](global.md#ImageApiImagesGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/image-api.ts](/../../api/image-api.ts), [line 578](/../../api/image-api.ts#L578)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ImageApi.new
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # List Images 
+  result = api_instance.imagesGet(opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesGet: #{e}"
+end
+```
 
-#### imagesPatch(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ImageApi.new
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # List Images 
+  result = api_instance.imagesGet(opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Images**](Images.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **imagesPatch**
+> Image imagesPatch(imageId, image, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Partially modify an Image
+
 You can use update attributes of a resource
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ImageApiImagesPatchRequest](global.md#ImageApiImagesPatchRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/image-api.ts](/../../api/image-api.ts), [line 589](/../../api/image-api.ts#L589)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ImageApi.new
+imageId =  # string | 
+image =  # ImageProperties | Modified Image
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Partially modify an Image
+  result = api_instance.imagesPatch(imageId, image, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesPatch: #{e}"
+end
+```
 
-#### imagesPut(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ImageApi.new
+imageId =  # string | 
+image =  # ImageProperties | Modified Image
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Partially modify an Image
+  result = api_instance.imagesPatch(imageId, image, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesPatch: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **imageId** | **string**|  | [default to undefined] |
+| **image** | [**ImageProperties**](ImageProperties.md)| Modified Image |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **imagesPut**
+> Image imagesPut(imageId, image, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Modify an Image
+
 You can use update attributes of a resource
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[ImageApiImagesPutRequest](global.md#ImageApiImagesPutRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/image-api.ts](/../../api/image-api.ts), [line 600](/../../api/image-api.ts#L600)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::ImageApi.new
+imageId =  # string | 
+image =  # Image | Modified Image
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Modify an Image
+  result = api_instance.imagesPut(imageId, image, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesPut: #{e}"
+end
+```
+
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::ImageApi.new
+imageId =  # string | 
+image =  # Image | Modified Image
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Modify an Image
+  result = api_instance.imagesPut(imageId, image, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling ImageApi->imagesPut: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **imageId** | **string**|  | [default to undefined] |
+| **image** | [**Image**](Image.md)| Modified Image |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Image**](Image.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+

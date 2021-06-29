@@ -1,75 +1,302 @@
-# Class: LocationApi
+# LocationApi
 
-## LocationApi
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-#### new LocationApi()
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**locationsFindByRegionId**](LocationApi.md#locationsFindByRegionId) | **GET** /locations/{regionId} | List Locations within a region |
+| [**locationsFindByRegionIdAndId**](LocationApi.md#locationsFindByRegionIdAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location |
+| [**locationsGet**](LocationApi.md#locationsGet) | **GET** /locations | List Locations |
 
-LocationApi - object-oriented interface
 
-*Source:*
-[api/location-api.ts](/../../api/location-api.ts), [line 323](/../../api/location-api.ts#L323)
-
----------------
-
-### Extends
-
-- BaseAPI
-
-### Methods
-
-#### locationsFindByRegionId(requestParameters, options)
+# **locationsFindByRegionId**
+> Locations locationsFindByRegionId(regionId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 List Locations within a region
+
 Retrieve a list of Locations within a world\'s region
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LocationApiLocationsFindByRegionIdRequest](global.md#LocationApiLocationsFindByRegionIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/location-api.ts](/../../api/location-api.ts), [line 338](/../../api/location-api.ts#L338)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LocationApi.new
+regionId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # List Locations within a region
+  result = api_instance.locationsFindByRegionId(regionId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LocationApi->locationsFindByRegionId: #{e}"
+end
+```
 
-#### locationsFindByRegionIdAndId(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LocationApi.new
+regionId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # List Locations within a region
+  result = api_instance.locationsFindByRegionId(regionId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LocationApi->locationsFindByRegionId: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **regionId** | **string**|  | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Locations**](Locations.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **locationsFindByRegionIdAndId**
+> Location locationsFindByRegionIdAndId(regionId, locationId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve a Location
+
 Retrieves the attributes of a given location
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LocationApiLocationsFindByRegionIdAndIdRequest](global.md#LocationApiLocationsFindByRegionIdAndIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/location-api.ts](/../../api/location-api.ts), [line 349](/../../api/location-api.ts#L349)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LocationApi.new
+regionId =  # string | 
+locationId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve a Location
+  result = api_instance.locationsFindByRegionIdAndId(regionId, locationId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LocationApi->locationsFindByRegionIdAndId: #{e}"
+end
+```
 
-#### locationsGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LocationApi.new
+regionId =  # string | 
+locationId =  # string | 
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve a Location
+  result = api_instance.locationsFindByRegionIdAndId(regionId, locationId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LocationApi->locationsFindByRegionIdAndId: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **regionId** | **string**|  | [default to undefined] |
+| **locationId** | **string**|  | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Location**](Location.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **locationsGet**
+> Locations locationsGet(pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 List Locations
+
 Retrieve a list of Locations. This list represents where you can provision your virtual data centers
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LocationApiLocationsGetRequest](global.md#LocationApiLocationsGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/location-api.ts](/../../api/location-api.ts), [line 360](/../../api/location-api.ts#L360)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LocationApi.new
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # List Locations
+  result = api_instance.locationsGet(opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LocationApi->locationsGet: #{e}"
+end
+```
+
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LocationApi.new
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # List Locations
+  result = api_instance.locationsGet(opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LocationApi->locationsGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Locations**](Locations.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+

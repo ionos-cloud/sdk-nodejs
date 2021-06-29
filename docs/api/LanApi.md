@@ -1,189 +1,938 @@
-# Class: LanApi
+# LanApi
 
-## LanApi
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-#### new LanApi()
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**datacentersLansDelete**](LanApi.md#datacentersLansDelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan. |
+| [**datacentersLansFindById**](LanApi.md#datacentersLansFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan |
+| [**datacentersLansGet**](LanApi.md#datacentersLansGet) | **GET** /datacenters/{datacenterId}/lans | List Lans |
+| [**datacentersLansNicsFindById**](LanApi.md#datacentersLansNicsFindById) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan |
+| [**datacentersLansNicsGet**](LanApi.md#datacentersLansNicsGet) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members  |
+| [**datacentersLansNicsPost**](LanApi.md#datacentersLansNicsPost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic |
+| [**datacentersLansPatch**](LanApi.md#datacentersLansPatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan |
+| [**datacentersLansPost**](LanApi.md#datacentersLansPost) | **POST** /datacenters/{datacenterId}/lans | Create a Lan |
+| [**datacentersLansPut**](LanApi.md#datacentersLansPut) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan |
 
-LanApi - object-oriented interface
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1071](/../../api/lan-api.ts#L1071)
-
----------------
-
-### Extends
-
-- BaseAPI
-
-### Methods
-
-#### datacentersLansDelete(requestParameters, options)
+# **datacentersLansDelete**
+> object datacentersLansDelete(datacenterId, lanId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Delete a Lan.
+
 Removes the specific Lan
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansDeleteRequest](global.md#LanApiDatacentersLansDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1086](/../../api/lan-api.ts#L1086)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Delete a Lan.
+  result = api_instance.datacentersLansDelete(datacenterId, lanId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansDelete: #{e}"
+end
+```
 
-#### datacentersLansFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Delete a Lan.
+  result = api_instance.datacentersLansDelete(datacenterId, lanId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersLansFindById**
+> Lan datacentersLansFindById(datacenterId, lanId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve a Lan
+
 Retrieves the attributes of a given LAN
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansFindByIdRequest](global.md#LanApiDatacentersLansFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1097](/../../api/lan-api.ts#L1097)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve a Lan
+  result = api_instance.datacentersLansFindById(datacenterId, lanId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansFindById: #{e}"
+end
+```
 
-#### datacentersLansGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve a Lan
+  result = api_instance.datacentersLansFindById(datacenterId, lanId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Lan**](Lan.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersLansGet**
+> Lans datacentersLansGet(datacenterId, pretty=pretty, depth=depth, xContractNumber=xContractNumber, offset=offset, limit=limit)
 
 List Lans
+
 Retrieve a list of LANs within the datacenter
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansGetRequest](global.md#LanApiDatacentersLansGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1108](/../../api/lan-api.ts#L1108)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
 
-*RequiredError*
+begin
+  # List Lans
+  result = api_instance.datacentersLansGet(datacenterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansGet: #{e}"
+end
+```
 
-#### datacentersLansNicsFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
+
+begin
+  # List Lans
+  result = api_instance.datacentersLansGet(datacenterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+| **offset** | **number**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0] |
+| **limit** | **number**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000] |
+
+### Return type
+
+[**Lans**](Lans.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersLansNicsFindById**
+> Nic datacentersLansNicsFindById(datacenterId, lanId, nicId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve a nic attached to lan
+
 This will retrieve the properties of an attached nic.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansNicsFindByIdRequest](global.md#LanApiDatacentersLansNicsFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1119](/../../api/lan-api.ts#L1119)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+nicId =  # string | The unique ID of the NIC
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve a nic attached to lan
+  result = api_instance.datacentersLansNicsFindById(datacenterId, lanId, nicId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansNicsFindById: #{e}"
+end
+```
 
-#### datacentersLansNicsGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-List Lan Members
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+nicId =  # string | The unique ID of the NIC
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve a nic attached to lan
+  result = api_instance.datacentersLansNicsFindById(datacenterId, lanId, nicId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansNicsFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **nicId** | **string**| The unique ID of the NIC | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersLansNicsGet**
+> LanNics datacentersLansNicsGet(datacenterId, lanId, pretty=pretty, depth=depth, xContractNumber=xContractNumber, offset=offset, limit=limit)
+
+List Lan Members 
+
 You can retrieve a list of nics attached to a lan
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansNicsGetRequest](global.md#LanApiDatacentersLansNicsGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1130](/../../api/lan-api.ts#L1130)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
 
-*RequiredError*
+begin
+  # List Lan Members 
+  result = api_instance.datacentersLansNicsGet(datacenterId, lanId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansNicsGet: #{e}"
+end
+```
 
-#### datacentersLansNicsPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber: , # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+  offset: , # number | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination)
+  limit:  # number | the maximum number of elements to return (use together with <code>offset</code> for pagination)
+}
+
+begin
+  # List Lan Members 
+  result = api_instance.datacentersLansNicsGet(datacenterId, lanId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansNicsGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+| **offset** | **number**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [optional] [default to 0] |
+| **limit** | **number**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional] [default to 1000] |
+
+### Return type
+
+[**LanNics**](LanNics.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **datacentersLansNicsPost**
+> Nic datacentersLansNicsPost(datacenterId, lanId, nic, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Attach a nic
-This will attach a pre-existing nic to a lan.
 
-##### Parameters:
+This will attach a pre-existing nic to a lan. 
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansNicsPostRequest](global.md#LanApiDatacentersLansNicsPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+### Example
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1141](/../../api/lan-api.ts#L1141)
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-##### Throws:
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-*RequiredError*
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+nic =  # Nic | Nic to be attached
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-#### datacentersLansPatch(requestParameters, options)
+begin
+  # Attach a nic
+  result = api_instance.datacentersLansNicsPost(datacenterId, lanId, nic, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansNicsPost: #{e}"
+end
+```
+
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+nic =  # Nic | Nic to be attached
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Attach a nic
+  result = api_instance.datacentersLansNicsPost(datacenterId, lanId, nic, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansNicsPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **nic** | [**Nic**](Nic.md)| Nic to be attached |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Nic**](Nic.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersLansPatch**
+> Lan datacentersLansPatch(datacenterId, lanId, lan, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Partially modify a Lan
+
 You can use update attributes of a resource
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansPatchRequest](global.md#LanApiDatacentersLansPatchRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1152](/../../api/lan-api.ts#L1152)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+lan =  # LanProperties | Modified Lan
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Partially modify a Lan
+  result = api_instance.datacentersLansPatch(datacenterId, lanId, lan, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansPatch: #{e}"
+end
+```
 
-#### datacentersLansPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+lan =  # LanProperties | Modified Lan
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Partially modify a Lan
+  result = api_instance.datacentersLansPatch(datacenterId, lanId, lan, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansPatch: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **lan** | [**LanProperties**](LanProperties.md)| Modified Lan |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Lan**](Lan.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersLansPost**
+> LanPost datacentersLansPost(datacenterId, lan, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Create a Lan
+
 Creates a LAN within the datacenter
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansPostRequest](global.md#LanApiDatacentersLansPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1163](/../../api/lan-api.ts#L1163)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lan =  # LanPost | Lan to be created
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Create a Lan
+  result = api_instance.datacentersLansPost(datacenterId, lan, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansPost: #{e}"
+end
+```
 
-#### datacentersLansPut(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lan =  # LanPost | Lan to be created
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Create a Lan
+  result = api_instance.datacentersLansPost(datacenterId, lan, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lan** | [**LanPost**](LanPost.md)| Lan to be created |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**LanPost**](LanPost.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **datacentersLansPut**
+> Lan datacentersLansPut(datacenterId, lanId, lan, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Modify a Lan
+
 You can use update attributes of a resource
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[LanApiDatacentersLansPutRequest](global.md#LanApiDatacentersLansPutRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/lan-api.ts](/../../api/lan-api.ts), [line 1174](/../../api/lan-api.ts#L1174)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+lan =  # Lan | Modified Lan
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Modify a Lan
+  result = api_instance.datacentersLansPut(datacenterId, lanId, lan, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansPut: #{e}"
+end
+```
+
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::LanApi.new
+datacenterId =  # string | The unique ID of the datacenter
+lanId =  # string | The unique ID of the LAN
+lan =  # Lan | Modified Lan
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Modify a Lan
+  result = api_instance.datacentersLansPut(datacenterId, lanId, lan, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling LanApi->datacentersLansPut: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **datacenterId** | **string**| The unique ID of the datacenter | [default to undefined] |
+| **lanId** | **string**| The unique ID of the LAN | [default to undefined] |
+| **lan** | [**Lan**](Lan.md)| Modified Lan |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**Lan**](Lan.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+

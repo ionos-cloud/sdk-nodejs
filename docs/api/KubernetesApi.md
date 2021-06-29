@@ -1,358 +1,1759 @@
-# Class: KubernetesApi
+# KubernetesApi
 
-## KubernetesApi
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-#### new KubernetesApi()
+| Method | HTTP request | Description |
+| ------------- | ------------- | ------------- |
+| [**k8sDelete**](KubernetesApi.md#k8sDelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes Cluster |
+| [**k8sFindByClusterId**](KubernetesApi.md#k8sFindByClusterId) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster |
+| [**k8sGet**](KubernetesApi.md#k8sGet) | **GET** /k8s | List Kubernetes Clusters |
+| [**k8sKubeconfigGet**](KubernetesApi.md#k8sKubeconfigGet) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File |
+| [**k8sNodepoolsDelete**](KubernetesApi.md#k8sNodepoolsDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool |
+| [**k8sNodepoolsFindById**](KubernetesApi.md#k8sNodepoolsFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool |
+| [**k8sNodepoolsGet**](KubernetesApi.md#k8sNodepoolsGet) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools |
+| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8sNodepoolsNodesDelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node |
+| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8sNodepoolsNodesFindById) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node |
+| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8sNodepoolsNodesGet) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes. |
+| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8sNodepoolsNodesReplacePost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node |
+| [**k8sNodepoolsPost**](KubernetesApi.md#k8sNodepoolsPost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool |
+| [**k8sNodepoolsPut**](KubernetesApi.md#k8sNodepoolsPut) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool |
+| [**k8sPost**](KubernetesApi.md#k8sPost) | **POST** /k8s | Create Kubernetes Cluster |
+| [**k8sPut**](KubernetesApi.md#k8sPut) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes Cluster |
+| [**k8sVersionsCompatibilitiesGet**](KubernetesApi.md#k8sVersionsCompatibilitiesGet) | **GET** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster. |
+| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sVersionsDefaultGet) | **GET** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools. |
+| [**k8sVersionsGet**](KubernetesApi.md#k8sVersionsGet) | **GET** /k8s/versions | Retrieve available Kubernetes versions |
 
-KubernetesApi - object-oriented interface
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1820](/../../api/kubernetes-api.ts#L1820)
-
----------------
-
-### Extends
-
-- BaseAPI
-
-### Methods
-
-#### k8sDelete(requestParameters, options)
+# **k8sDelete**
+> object k8sDelete(k8sClusterId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Delete Kubernetes Cluster
+
 This will remove a Kubernetes Cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sDeleteRequest](global.md#KubernetesApiK8sDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1835](/../../api/kubernetes-api.ts#L1835)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Delete Kubernetes Cluster
+  result = api_instance.k8sDelete(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sDelete: #{e}"
+end
+```
 
-#### k8sFindByClusterId(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Delete Kubernetes Cluster
+  result = api_instance.k8sDelete(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sFindByClusterId**
+> KubernetesCluster k8sFindByClusterId(k8sClusterId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve Kubernetes Cluster
+
 This will retrieve a single Kubernetes Cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sFindByClusterIdRequest](global.md#KubernetesApiK8sFindByClusterIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1846](/../../api/kubernetes-api.ts#L1846)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve Kubernetes Cluster
+  result = api_instance.k8sFindByClusterId(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sFindByClusterId: #{e}"
+end
+```
 
-#### k8sGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve Kubernetes Cluster
+  result = api_instance.k8sFindByClusterId(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sFindByClusterId: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesCluster**](KubernetesCluster.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sGet**
+> KubernetesClusters k8sGet(pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 List Kubernetes Clusters
+
 You can retrieve a list of all kubernetes clusters associated with a contract
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sGetRequest](global.md#KubernetesApiK8sGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1857](/../../api/kubernetes-api.ts#L1857)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # List Kubernetes Clusters
+  result = api_instance.k8sGet(opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sGet: #{e}"
+end
+```
 
-#### k8sKubeconfigGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # List Kubernetes Clusters
+  result = api_instance.k8sGet(opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesClusters**](KubernetesClusters.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sKubeconfigGet**
+> KubernetesConfig k8sKubeconfigGet(k8sClusterId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve Kubernetes Configuration File
+
 You can retrieve kubernetes configuration file for the kubernetes cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sKubeconfigGetRequest](global.md#KubernetesApiK8sKubeconfigGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1868](/../../api/kubernetes-api.ts#L1868)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve Kubernetes Configuration File
+  result = api_instance.k8sKubeconfigGet(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sKubeconfigGet: #{e}"
+end
+```
 
-#### k8sNodepoolsDelete(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve Kubernetes Configuration File
+  result = api_instance.k8sKubeconfigGet(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sKubeconfigGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesConfig**](KubernetesConfig.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsDelete**
+> object k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Delete Kubernetes Node Pool
+
 This will remove a Kubernetes Node Pool.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsDeleteRequest](global.md#KubernetesApiK8sNodepoolsDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1879](/../../api/kubernetes-api.ts#L1879)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Delete Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsDelete: #{e}"
+end
+```
 
-#### k8sNodepoolsFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Delete Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsDelete(k8sClusterId, nodepoolId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsFindById**
+> KubernetesNodePool k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve Kubernetes Node Pool
+
 You can retrieve a single Kubernetes Node Pool.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsFindByIdRequest](global.md#KubernetesApiK8sNodepoolsFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1890](/../../api/kubernetes-api.ts#L1890)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsFindById: #{e}"
+end
+```
 
-#### k8sNodepoolsGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesNodePool**](KubernetesNodePool.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsGet**
+> KubernetesNodePools k8sNodepoolsGet(k8sClusterId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 List Kubernetes Node Pools
+
 You can retrieve a list of all kubernetes node pools part of kubernetes cluster
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsGetRequest](global.md#KubernetesApiK8sNodepoolsGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1901](/../../api/kubernetes-api.ts#L1901)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # List Kubernetes Node Pools
+  result = api_instance.k8sNodepoolsGet(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsGet: #{e}"
+end
+```
 
-#### k8sNodepoolsNodesDelete(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # List Kubernetes Node Pools
+  result = api_instance.k8sNodepoolsGet(k8sClusterId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesNodePools**](KubernetesNodePools.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsNodesDelete**
+> object k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Delete Kubernetes node
+
 This will remove a Kubernetes node.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsNodesDeleteRequest](global.md#KubernetesApiK8sNodepoolsNodesDeleteRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1912](/../../api/kubernetes-api.ts#L1912)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+nodeId =  # string | The unique ID of the Kubernetes node
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Delete Kubernetes node
+  result = api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesDelete: #{e}"
+end
+```
 
-#### k8sNodepoolsNodesFindById(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+nodeId =  # string | The unique ID of the Kubernetes node
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Delete Kubernetes node
+  result = api_instance.k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesDelete: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **nodeId** | **string**| The unique ID of the Kubernetes node | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsNodesFindById**
+> KubernetesNode k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve Kubernetes node
+
 You can retrieve a single Kubernetes Node.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsNodesFindByIdRequest](global.md#KubernetesApiK8sNodepoolsNodesFindByIdRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1923](/../../api/kubernetes-api.ts#L1923)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+nodeId =  # string | The unique ID of the Kubernetes Node.
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve Kubernetes node
+  result = api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesFindById: #{e}"
+end
+```
 
-#### k8sNodepoolsNodesGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+nodeId =  # string | The unique ID of the Kubernetes Node.
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve Kubernetes node
+  result = api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesFindById: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **nodeId** | **string**| The unique ID of the Kubernetes Node. | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesNode**](KubernetesNode.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsNodesGet**
+> KubernetesNodes k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Retrieve Kubernetes nodes.
+
 You can retrieve all nodes of Kubernetes Node Pool.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsNodesGetRequest](global.md#KubernetesApiK8sNodepoolsNodesGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1934](/../../api/kubernetes-api.ts#L1934)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Retrieve Kubernetes nodes.
+  result = api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesGet: #{e}"
+end
+```
 
-#### k8sNodepoolsNodesReplacePost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Retrieve Kubernetes nodes.
+  result = api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesNodes**](KubernetesNodes.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsNodesReplacePost**
+> object k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Recreate the Kubernetes node
+
 You can recreate a single Kubernetes Node.  Managed Kubernetes starts a process which based on the nodepool\'s template creates & configures a new node, waits for status \"ACTIVE\", and migrates all the pods from the faulty node, deleting it once empty. While this operation occurs, the nodepool will have an extra billable \"ACTIVE\" node.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsNodesReplacePostRequest](global.md#KubernetesApiK8sNodepoolsNodesReplacePostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1945](/../../api/kubernetes-api.ts#L1945)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+nodeId =  # string | The unique ID of the Kubernetes Node.
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Recreate the Kubernetes node
+  result = api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesReplacePost: #{e}"
+end
+```
 
-#### k8sNodepoolsPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+nodeId =  # string | The unique ID of the Kubernetes Node.
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Recreate the Kubernetes node
+  result = api_instance.k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsNodesReplacePost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **nodeId** | **string**| The unique ID of the Kubernetes Node. | [default to undefined] |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+**object**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sNodepoolsPost**
+> KubernetesNodePool k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Create a Kubernetes Node Pool
+
 This will create a new Kubernetes Node Pool inside a Kubernetes Cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsPostRequest](global.md#KubernetesApiK8sNodepoolsPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1956](/../../api/kubernetes-api.ts#L1956)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+kubernetesNodePool =  # KubernetesNodePoolForPost | Details of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Create a Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsPost: #{e}"
+end
+```
 
-#### k8sNodepoolsPut(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+kubernetesNodePool =  # KubernetesNodePoolForPost | Details of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Create a Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **kubernetesNodePool** | [**KubernetesNodePoolForPost**](KubernetesNodePoolForPost.md)| Details of the Kubernetes Node Pool |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesNodePool**](KubernetesNodePool.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **k8sNodepoolsPut**
+> KubernetesNodePool k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Modify Kubernetes Node Pool
+
 This will modify the Kubernetes Node Pool.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sNodepoolsPutRequest](global.md#KubernetesApiK8sNodepoolsPutRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1967](/../../api/kubernetes-api.ts#L1967)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+kubernetesNodePool =  # KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Modify Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsPut: #{e}"
+end
+```
 
-#### k8sPost(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+nodepoolId =  # string | The unique ID of the Kubernetes Node Pool
+kubernetesNodePool =  # KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Modify Kubernetes Node Pool
+  result = api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sNodepoolsPut: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | [default to undefined] |
+| **kubernetesNodePool** | [**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md)| Details of the Kubernetes Node Pool |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesNodePool**](KubernetesNodePool.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **k8sPost**
+> KubernetesCluster k8sPost(kubernetesCluster, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Create Kubernetes Cluster
+
 This will create a new Kubernetes Cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sPostRequest](global.md#KubernetesApiK8sPostRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1978](/../../api/kubernetes-api.ts#L1978)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+kubernetesCluster =  # KubernetesClusterForPost | Details of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Create Kubernetes Cluster
+  result = api_instance.k8sPost(kubernetesCluster, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sPost: #{e}"
+end
+```
 
-#### k8sPut(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+kubernetesCluster =  # KubernetesClusterForPost | Details of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Create Kubernetes Cluster
+  result = api_instance.k8sPost(kubernetesCluster, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sPost: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **kubernetesCluster** | [**KubernetesClusterForPost**](KubernetesClusterForPost.md)| Details of the Kubernetes Cluster |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesCluster**](KubernetesCluster.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **k8sPut**
+> KubernetesCluster k8sPut(k8sClusterId, kubernetesCluster, pretty=pretty, depth=depth, xContractNumber=xContractNumber)
 
 Modify Kubernetes Cluster
+
 This will modify the Kubernetes Cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sPutRequest](global.md#KubernetesApiK8sPutRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 1989](/../../api/kubernetes-api.ts#L1989)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+kubernetesCluster =  # KubernetesClusterForPut | Details of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
 
-*RequiredError*
+begin
+  # Modify Kubernetes Cluster
+  result = api_instance.k8sPut(k8sClusterId, kubernetesCluster, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sPut: #{e}"
+end
+```
 
-#### k8sVersionsCompatibilitiesGet(requestParameters, options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+k8sClusterId =  # string | The unique ID of the Kubernetes Cluster
+kubernetesCluster =  # KubernetesClusterForPut | Details of the Kubernetes Cluster
+opts = {
+  pretty: , # boolean | Controls whether response is pretty-printed (with indentation and new lines)
+  depth: , # number | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children\'s children are included  - depth=... and so on
+  xContractNumber:  # number | Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+}
+
+begin
+  # Modify Kubernetes Cluster
+  result = api_instance.k8sPut(k8sClusterId, kubernetesCluster, opts)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sPut: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | [default to undefined] |
+| **kubernetesCluster** | [**KubernetesClusterForPut**](KubernetesClusterForPut.md)| Details of the Kubernetes Cluster |  |
+| **pretty** | **boolean**| Controls whether response is pretty-printed (with indentation and new lines) | [optional] [default to true] |
+| **depth** | **number**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional] [default to 0] |
+| **xContractNumber** | **number**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional] [default to undefined] |
+
+### Return type
+
+[**KubernetesCluster**](KubernetesCluster.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+# **k8sVersionsCompatibilitiesGet**
+> Array<string> k8sVersionsCompatibilitiesGet(clusterVersion)
 
 Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+
 You can retrieve a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`requestParameters`|*[KubernetesApiK8sVersionsCompatibilitiesGetRequest](global.md#KubernetesApiK8sVersionsCompatibilitiesGetRequest)*|  |Request parameters.|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2000](/../../api/kubernetes-api.ts#L2000)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
+clusterVersion =  # string | 
 
-*RequiredError*
+begin
+  # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+  result = api_instance.k8sVersionsCompatibilitiesGet(clusterVersion)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sVersionsCompatibilitiesGet: #{e}"
+end
+```
 
-#### k8sVersionsDefaultGet(options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+clusterVersion =  # string | 
+
+begin
+  # Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
+  result = api_instance.k8sVersionsCompatibilitiesGet(clusterVersion)
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sVersionsCompatibilitiesGet: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **clusterVersion** | **string**|  | [default to undefined] |
+
+### Return type
+
+**Array<string>**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sVersionsDefaultGet**
+> string k8sVersionsDefaultGet()
 
 Retrieve the current default kubernetes version for clusters and nodepools.
+
 You can retrieve the current default kubernetes version for clusters and nodepools.
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2010](/../../api/kubernetes-api.ts#L2010)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
 
-*RequiredError*
+begin
+  # Retrieve the current default kubernetes version for clusters and nodepools.
+  result = api_instance.k8sVersionsDefaultGet
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sVersionsDefaultGet: #{e}"
+end
+```
 
-#### k8sVersionsGet(options)
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+
+begin
+  # Retrieve the current default kubernetes version for clusters and nodepools.
+  result = api_instance.k8sVersionsDefaultGet
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sVersionsDefaultGet: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**string**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+# **k8sVersionsGet**
+> Array<string> k8sVersionsGet()
 
 Retrieve available Kubernetes versions
+
 You can retrieve a list of available kubernetes versions
 
-##### Parameters:
+### Example
 
-|Name|Type|Argument|Description|
-|----|----|--------|-----------|
-|`options`|***|*optional*  |Override http request option.|
+* Basic Authentication (Basic Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
 
-*Source:*
-[api/kubernetes-api.ts](/../../api/kubernetes-api.ts), [line 2020](/../../api/kubernetes-api.ts#L2020)
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
 
-##### Throws:
+api_instance = ::KubernetesApi.new
 
-*RequiredError*
+begin
+  # Retrieve available Kubernetes versions
+  result = api_instance.k8sVersionsGet
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sVersionsGet: #{e}"
+end
+```
+
+* Api Key Authentication (Token Authentication):
+```ruby
+require 'time'
+require ''
+# setup authorization
+.configure do |config|
+  # Configure HTTP basic authorization: Basic Authentication
+  config.username = 'YOUR USERNAME'
+  config.password = 'YOUR PASSWORD'
+
+  # Configure API key authorization: Token Authentication
+  config.api_key['Authorization'] = 'YOUR API KEY'
+  # Uncomment the following line to set a prefix for the API key, e.g. 'Bearer' (defaults to nil)
+  # config.api_key_prefix['Authorization'] = 'Bearer'
+end
+
+api_instance = ::KubernetesApi.new
+
+begin
+  # Retrieve available Kubernetes versions
+  result = api_instance.k8sVersionsGet
+  p result
+rescue ::ApiError => e
+  puts "Error when calling KubernetesApi->k8sVersionsGet: #{e}"
+end
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+**Array<string>**
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
