@@ -21,8 +21,8 @@ Display API information
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DefaultApi(config)
 # Display API information
@@ -34,8 +34,8 @@ api_instance.apiInfoGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DefaultApi(config)
 # Display API information
@@ -52,7 +52,7 @@ api_instance.apiInfoGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Info**](Info.md)
+[**Info**](models/Info.md)
 
 ### Authorization
 

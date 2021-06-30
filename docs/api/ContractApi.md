@@ -21,8 +21,8 @@ Retrieves the attributes of user\'s contract.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ContractApi(config)
 # Retrieve a Contract
@@ -34,8 +34,8 @@ api_instance.contractsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ContractApi(config)
 # Retrieve a Contract
@@ -52,7 +52,7 @@ api_instance.contractsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Contract**](Contract.md)
+[**Contract**](models/Contract.md)
 
 ### Authorization
 

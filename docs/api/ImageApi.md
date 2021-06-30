@@ -25,8 +25,8 @@ Deletes the specified image. This operation is permitted on private image only.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Delete an Image
@@ -38,8 +38,8 @@ api_instance.imagesDelete(imageId, options).then((response) => console.log(respo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Delete an Image
@@ -82,8 +82,8 @@ Retrieves the attributes of a given image.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Retrieve an Image
@@ -95,8 +95,8 @@ api_instance.imagesFindById(imageId, options).then((response) => console.log(res
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Retrieve an Image
@@ -114,7 +114,7 @@ api_instance.imagesFindById(imageId, options).then((response) => console.log(res
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](models/Image.md)
 
 ### Authorization
 
@@ -139,8 +139,8 @@ Retrieve a list of images within the datacenter
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # List Images 
@@ -152,8 +152,8 @@ api_instance.imagesGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # List Images 
@@ -170,7 +170,7 @@ api_instance.imagesGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Images**](Images.md)
+[**Images**](models/Images.md)
 
 ### Authorization
 
@@ -195,8 +195,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Partially modify an Image
@@ -208,8 +208,8 @@ api_instance.imagesPatch(imageId, image, options).then((response) => console.log
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Partially modify an Image
@@ -228,7 +228,7 @@ api_instance.imagesPatch(imageId, image, options).then((response) => console.log
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](models/Image.md)
 
 ### Authorization
 
@@ -253,8 +253,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Modify an Image
@@ -266,8 +266,8 @@ api_instance.imagesPut(imageId, image, options).then((response) => console.log(r
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.ImageApi(config)
 # Modify an Image
@@ -286,7 +286,7 @@ api_instance.imagesPut(imageId, image, options).then((response) => console.log(r
 
 ### Return type
 
-[**Image**](Image.md)
+[**Image**](models/Image.md)
 
 ### Authorization
 

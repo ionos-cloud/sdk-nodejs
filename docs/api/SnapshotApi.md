@@ -25,8 +25,8 @@ Deletes the specified Snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Delete a Snapshot
@@ -38,8 +38,8 @@ api_instance.snapshotsDelete(snapshotId, options).then((response) => console.log
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Delete a Snapshot
@@ -82,8 +82,8 @@ Retrieves the attributes of a given Snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Retrieve a Snapshot by its uuid.
@@ -95,8 +95,8 @@ api_instance.snapshotsFindById(snapshotId, options).then((response) => console.l
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Retrieve a Snapshot by its uuid.
@@ -114,7 +114,7 @@ api_instance.snapshotsFindById(snapshotId, options).then((response) => console.l
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 
@@ -139,8 +139,8 @@ Retrieve a list of available snapshots.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # List Snapshots 
@@ -152,8 +152,8 @@ api_instance.snapshotsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # List Snapshots 
@@ -170,7 +170,7 @@ api_instance.snapshotsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Snapshots**](Snapshots.md)
+[**Snapshots**](models/Snapshots.md)
 
 ### Authorization
 
@@ -195,8 +195,8 @@ You can use this method to update attributes of a Snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Partially modify a Snapshot
@@ -208,8 +208,8 @@ api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => co
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Partially modify a Snapshot
@@ -228,7 +228,7 @@ api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => co
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 
@@ -253,8 +253,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Modify a Snapshot
@@ -266,8 +266,8 @@ api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => cons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.SnapshotApi(config)
 # Modify a Snapshot
@@ -286,7 +286,7 @@ api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => cons
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 

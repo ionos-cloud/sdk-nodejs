@@ -23,8 +23,8 @@ Retrieves the attributes of a given request.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.RequestApi(config)
 # Retrieve a Request
@@ -36,8 +36,8 @@ api_instance.requestsFindById(requestId, options).then((response) => console.log
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.RequestApi(config)
 # Retrieve a Request
@@ -55,7 +55,7 @@ api_instance.requestsFindById(requestId, options).then((response) => console.log
 
 ### Return type
 
-[**Request**](Request.md)
+[**Request**](models/Request.md)
 
 ### Authorization
 
@@ -80,8 +80,8 @@ Retrieve a list of API requests.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.RequestApi(config)
 # List Requests
@@ -93,8 +93,8 @@ api_instance.requestsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.RequestApi(config)
 # List Requests
@@ -124,7 +124,7 @@ api_instance.requestsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Requests**](Requests.md)
+[**Requests**](models/Requests.md)
 
 ### Authorization
 
@@ -149,8 +149,8 @@ Retrieves the status of a given request.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.RequestApi(config)
 # Retrieve Request Status
@@ -162,8 +162,8 @@ api_instance.requestsStatusGet(requestId, options).then((response) => console.lo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.RequestApi(config)
 # Retrieve Request Status
@@ -181,7 +181,7 @@ api_instance.requestsStatusGet(requestId, options).then((response) => console.lo
 
 ### Return type
 
-[**RequestStatus**](RequestStatus.md)
+[**RequestStatus**](models/RequestStatus.md)
 
 ### Authorization
 

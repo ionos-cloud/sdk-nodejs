@@ -28,8 +28,8 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Create Volume Snapshot
@@ -41,8 +41,8 @@ api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, option
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Create Volume Snapshot
@@ -65,7 +65,7 @@ api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, option
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 
@@ -90,8 +90,8 @@ Deletes the specified volume. This will result in the volume being removed from 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Delete a Volume
@@ -103,8 +103,8 @@ api_instance.datacentersVolumesDelete(datacenterId, volumeId, options).then((res
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Delete a Volume
@@ -148,8 +148,8 @@ Retrieves the attributes of a given Volume
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Retrieve a Volume
@@ -161,8 +161,8 @@ api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((r
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Retrieve a Volume
@@ -181,7 +181,7 @@ api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((r
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -206,8 +206,8 @@ Retrieves a list of Volumes.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # List Volumes 
@@ -219,8 +219,8 @@ api_instance.datacentersVolumesGet(datacenterId, options).then((response) => con
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # List Volumes 
@@ -240,7 +240,7 @@ api_instance.datacentersVolumesGet(datacenterId, options).then((response) => con
 
 ### Return type
 
-[**Volumes**](Volumes.md)
+[**Volumes**](models/Volumes.md)
 
 ### Authorization
 
@@ -265,8 +265,8 @@ You can use update attributes of a Volume
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Partially modify a Volume
@@ -278,8 +278,8 @@ api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).th
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Partially modify a Volume
@@ -299,7 +299,7 @@ api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).th
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -324,8 +324,8 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Create a Volume
@@ -337,8 +337,8 @@ api_instance.datacentersVolumesPost(datacenterId, volume, options).then((respons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Create a Volume
@@ -357,7 +357,7 @@ api_instance.datacentersVolumesPost(datacenterId, volume, options).then((respons
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -382,8 +382,8 @@ You can use update attributes of a Volume
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Modify a Volume
@@ -395,8 +395,8 @@ api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Modify a Volume
@@ -416,7 +416,7 @@ api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -441,8 +441,8 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Restore Volume Snapshot
@@ -454,8 +454,8 @@ api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, optio
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.VolumeApi(config)
 # Restore Volume Snapshot

@@ -26,8 +26,8 @@ Will remove all objects within the datacenter and remove the datacenter object i
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Delete a Data Center
@@ -39,8 +39,8 @@ api_instance.datacentersDelete(datacenterId, options).then((response) => console
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Delete a Data Center
@@ -83,8 +83,8 @@ You can retrieve a data center by using the resource\'s ID. This value can be fo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Retrieve a Data Center
@@ -96,8 +96,8 @@ api_instance.datacentersFindById(datacenterId, options).then((response) => conso
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Retrieve a Data Center
@@ -115,7 +115,7 @@ api_instance.datacentersFindById(datacenterId, options).then((response) => conso
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 
@@ -140,8 +140,8 @@ You can retrieve a complete list of data centers provisioned under your account
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # List Data Centers under your account
@@ -153,8 +153,8 @@ api_instance.datacentersGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # List Data Centers under your account
@@ -173,7 +173,7 @@ api_instance.datacentersGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Datacenters**](Datacenters.md)
+[**Datacenters**](models/Datacenters.md)
 
 ### Authorization
 
@@ -198,8 +198,8 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Partially modify a Data Center
@@ -211,8 +211,8 @@ api_instance.datacentersPatch(datacenterId, datacenter, options).then((response)
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Partially modify a Data Center
@@ -231,7 +231,7 @@ api_instance.datacentersPatch(datacenterId, datacenter, options).then((response)
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 
@@ -256,8 +256,8 @@ Virtual data centers are the foundation of the platform. They act as logical con
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Create a Data Center
@@ -269,8 +269,8 @@ api_instance.datacentersPost(datacenter, options).then((response) => console.log
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Create a Data Center
@@ -288,7 +288,7 @@ api_instance.datacentersPost(datacenter, options).then((response) => console.log
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 
@@ -313,8 +313,8 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Modify a Data Center
@@ -326,8 +326,8 @@ api_instance.datacentersPut(datacenterId, datacenter, options).then((response) =
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.DataCenterApi(config)
 # Modify a Data Center
@@ -346,7 +346,7 @@ api_instance.datacentersPut(datacenterId, datacenter, options).then((response) =
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 

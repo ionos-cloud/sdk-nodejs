@@ -32,8 +32,8 @@ Deletes the specified NIC.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Delete a Nic
@@ -45,8 +45,8 @@ api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, options
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Delete a Nic
@@ -91,8 +91,8 @@ Retrieves the attributes of a given NIC
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Retrieve a Nic
@@ -104,8 +104,8 @@ api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, optio
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Retrieve a Nic
@@ -125,7 +125,7 @@ api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, optio
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -150,8 +150,8 @@ Removes the specific Firewall Rule
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Delete a Firewall Rule
@@ -163,8 +163,8 @@ api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, n
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Delete a Firewall Rule
@@ -210,8 +210,8 @@ Retrieves the attributes of a given Firewall Rule.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Retrieve a Firewall Rule
@@ -223,8 +223,8 @@ api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId,
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Retrieve a Firewall Rule
@@ -245,7 +245,7 @@ api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId,
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -270,8 +270,8 @@ Retrieves a list of firewall rules associated with a particular NIC
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # List Firewall Rules 
@@ -283,8 +283,8 @@ api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicI
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # List Firewall Rules 
@@ -306,7 +306,7 @@ api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicI
 
 ### Return type
 
-[**FirewallRules**](FirewallRules.md)
+[**FirewallRules**](models/FirewallRules.md)
 
 ### Authorization
 
@@ -331,8 +331,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Partially modify a Firewall Rule
@@ -344,8 +344,8 @@ api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, ni
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Partially modify a Firewall Rule
@@ -367,7 +367,7 @@ api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, ni
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -392,8 +392,8 @@ This will add a Firewall Rule to the NIC
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Create a Firewall Rule
@@ -405,8 +405,8 @@ api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nic
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Create a Firewall Rule
@@ -427,7 +427,7 @@ api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nic
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -452,8 +452,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Modify a Firewall Rule
@@ -465,8 +465,8 @@ api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicI
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Modify a Firewall Rule
@@ -488,7 +488,7 @@ api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicI
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -513,8 +513,8 @@ Retrieves a list of NICs.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # List Nics 
@@ -526,8 +526,8 @@ api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((re
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # List Nics 
@@ -548,7 +548,7 @@ api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((re
 
 ### Return type
 
-[**Nics**](Nics.md)
+[**Nics**](models/Nics.md)
 
 ### Authorization
 
@@ -573,8 +573,8 @@ You can use update attributes of a Nic
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Partially modify a Nic
@@ -586,8 +586,8 @@ api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, opt
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Partially modify a Nic
@@ -608,7 +608,7 @@ api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, opt
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -633,8 +633,8 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Create a Nic
@@ -646,8 +646,8 @@ api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).th
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Create a Nic
@@ -667,7 +667,7 @@ api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).th
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -692,8 +692,8 @@ You can use update attributes of a Nic
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Modify a Nic
@@ -705,8 +705,8 @@ api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, optio
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.NicApi(config)
 # Modify a Nic
@@ -727,7 +727,7 @@ api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, optio
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 

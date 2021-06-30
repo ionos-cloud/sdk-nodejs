@@ -23,8 +23,8 @@ Retrieve a list of Locations within a world\'s region
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LocationApi(config)
 # List Locations within a region
@@ -36,8 +36,8 @@ api_instance.locationsFindByRegionId(regionId, options).then((response) => conso
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LocationApi(config)
 # List Locations within a region
@@ -55,7 +55,7 @@ api_instance.locationsFindByRegionId(regionId, options).then((response) => conso
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](models/Locations.md)
 
 ### Authorization
 
@@ -80,8 +80,8 @@ Retrieves the attributes of a given location
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LocationApi(config)
 # Retrieve a Location
@@ -93,8 +93,8 @@ api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((r
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LocationApi(config)
 # Retrieve a Location
@@ -113,7 +113,7 @@ api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((r
 
 ### Return type
 
-[**Location**](Location.md)
+[**Location**](models/Location.md)
 
 ### Authorization
 
@@ -138,8 +138,8 @@ Retrieve a list of Locations. This list represents where you can provision your 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LocationApi(config)
 # List Locations
@@ -151,8 +151,8 @@ api_instance.locationsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LocationApi(config)
 # List Locations
@@ -169,7 +169,7 @@ api_instance.locationsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](models/Locations.md)
 
 ### Authorization
 

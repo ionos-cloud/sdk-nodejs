@@ -29,8 +29,8 @@ Removes the specific Lan
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Delete a Lan.
@@ -42,8 +42,8 @@ api_instance.datacentersLansDelete(datacenterId, lanId, options).then((response)
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Delete a Lan.
@@ -87,8 +87,8 @@ Retrieves the attributes of a given LAN
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Retrieve a Lan
@@ -100,8 +100,8 @@ api_instance.datacentersLansFindById(datacenterId, lanId, options).then((respons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Retrieve a Lan
@@ -120,7 +120,7 @@ api_instance.datacentersLansFindById(datacenterId, lanId, options).then((respons
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](models/Lan.md)
 
 ### Authorization
 
@@ -145,8 +145,8 @@ Retrieve a list of LANs within the datacenter
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # List Lans
@@ -158,8 +158,8 @@ api_instance.datacentersLansGet(datacenterId, options).then((response) => consol
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # List Lans
@@ -179,7 +179,7 @@ api_instance.datacentersLansGet(datacenterId, options).then((response) => consol
 
 ### Return type
 
-[**Lans**](Lans.md)
+[**Lans**](models/Lans.md)
 
 ### Authorization
 
@@ -204,8 +204,8 @@ This will retrieve the properties of an attached nic.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Retrieve a nic attached to lan
@@ -217,8 +217,8 @@ api_instance.datacentersLansNicsFindById(datacenterId, lanId, nicId, options).th
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Retrieve a nic attached to lan
@@ -238,7 +238,7 @@ api_instance.datacentersLansNicsFindById(datacenterId, lanId, nicId, options).th
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -263,8 +263,8 @@ You can retrieve a list of nics attached to a lan
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # List Lan Members 
@@ -276,8 +276,8 @@ api_instance.datacentersLansNicsGet(datacenterId, lanId, options).then((response
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # List Lan Members 
@@ -298,7 +298,7 @@ api_instance.datacentersLansNicsGet(datacenterId, lanId, options).then((response
 
 ### Return type
 
-[**LanNics**](LanNics.md)
+[**LanNics**](models/LanNics.md)
 
 ### Authorization
 
@@ -323,8 +323,8 @@ This will attach a pre-existing nic to a lan.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Attach a nic
@@ -336,8 +336,8 @@ api_instance.datacentersLansNicsPost(datacenterId, lanId, nic, options).then((re
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Attach a nic
@@ -357,7 +357,7 @@ api_instance.datacentersLansNicsPost(datacenterId, lanId, nic, options).then((re
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -382,8 +382,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Partially modify a Lan
@@ -395,8 +395,8 @@ api_instance.datacentersLansPatch(datacenterId, lanId, lan, options).then((respo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Partially modify a Lan
@@ -416,7 +416,7 @@ api_instance.datacentersLansPatch(datacenterId, lanId, lan, options).then((respo
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](models/Lan.md)
 
 ### Authorization
 
@@ -441,8 +441,8 @@ Creates a LAN within the datacenter
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Create a Lan
@@ -454,8 +454,8 @@ api_instance.datacentersLansPost(datacenterId, lan, options).then((response) => 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Create a Lan
@@ -474,7 +474,7 @@ api_instance.datacentersLansPost(datacenterId, lan, options).then((response) => 
 
 ### Return type
 
-[**LanPost**](LanPost.md)
+[**LanPost**](models/LanPost.md)
 
 ### Authorization
 
@@ -499,8 +499,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Modify a Lan
@@ -512,8 +512,8 @@ api_instance.datacentersLansPut(datacenterId, lanId, lan, options).then((respons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LanApi(config)
 # Modify a Lan
@@ -533,7 +533,7 @@ api_instance.datacentersLansPut(datacenterId, lanId, lan, options).then((respons
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](models/Lan.md)
 
 ### Authorization
 

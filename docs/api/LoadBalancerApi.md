@@ -30,8 +30,8 @@ This will remove a nic from Load Balancer
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Detach a nic from loadbalancer
@@ -43,8 +43,8 @@ api_instance.datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalanc
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Detach a nic from loadbalancer
@@ -89,8 +89,8 @@ This will retrieve the properties of an attached nic.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Retrieve a nic attached to Load Balancer
@@ -102,8 +102,8 @@ api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadb
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Retrieve a nic attached to Load Balancer
@@ -123,7 +123,7 @@ api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadb
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -148,8 +148,8 @@ You can retrieve a list of nics attached to a Load Balancer
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # List Load Balancer Members 
@@ -161,8 +161,8 @@ api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerI
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # List Load Balancer Members 
@@ -183,7 +183,7 @@ api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerI
 
 ### Return type
 
-[**BalancedNics**](BalancedNics.md)
+[**BalancedNics**](models/BalancedNics.md)
 
 ### Authorization
 
@@ -208,8 +208,8 @@ This will attach a pre-existing nic to a Load Balancer.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Attach a nic to Load Balancer
@@ -221,8 +221,8 @@ api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancer
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Attach a nic to Load Balancer
@@ -242,7 +242,7 @@ api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancer
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -267,8 +267,8 @@ Removes the specific Loadbalancer
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Delete a Loadbalancer.
@@ -280,8 +280,8 @@ api_instance.datacentersLoadbalancersDelete(datacenterId, loadbalancerId, option
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Delete a Loadbalancer.
@@ -325,8 +325,8 @@ Retrieves the attributes of a given Loadbalancer
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Retrieve a loadbalancer
@@ -338,8 +338,8 @@ api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, opti
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Retrieve a loadbalancer
@@ -358,7 +358,7 @@ api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, opti
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
@@ -383,8 +383,8 @@ Retrieve a list of Load Balancers within the datacenter
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # List Load Balancers
@@ -396,8 +396,8 @@ api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # List Load Balancers
@@ -417,7 +417,7 @@ api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) 
 
 ### Return type
 
-[**Loadbalancers**](Loadbalancers.md)
+[**Loadbalancers**](models/Loadbalancers.md)
 
 ### Authorization
 
@@ -442,8 +442,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Partially modify a Loadbalancer
@@ -455,8 +455,8 @@ api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbal
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Partially modify a Loadbalancer
@@ -476,7 +476,7 @@ api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbal
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
@@ -501,8 +501,8 @@ Creates a Loadbalancer within the datacenter
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Create a Load Balancer
@@ -514,8 +514,8 @@ api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).t
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Create a Load Balancer
@@ -534,7 +534,7 @@ api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).t
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
@@ -559,8 +559,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Modify a Load Balancer
@@ -572,8 +572,8 @@ api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalan
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LoadBalancerApi(config)
 # Modify a Load Balancer
@@ -593,7 +593,7 @@ api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalan
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 

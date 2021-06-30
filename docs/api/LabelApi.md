@@ -47,8 +47,8 @@ This will remove a label from the data center.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Data Center
@@ -60,8 +60,8 @@ api_instance.datacentersLabelsDelete(datacenterId, key, options).then((response)
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Data Center
@@ -105,8 +105,8 @@ This will retrieve the properties of a associated label to a data center.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Data Center
@@ -118,8 +118,8 @@ api_instance.datacentersLabelsFindByKey(datacenterId, key, options).then((respon
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Data Center
@@ -138,7 +138,7 @@ api_instance.datacentersLabelsFindByKey(datacenterId, key, options).then((respon
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -163,8 +163,8 @@ You can retrieve a list of all labels associated with a data center
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Data Center Labels
@@ -176,8 +176,8 @@ api_instance.datacentersLabelsGet(datacenterId, options).then((response) => cons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Data Center Labels
@@ -197,7 +197,7 @@ api_instance.datacentersLabelsGet(datacenterId, options).then((response) => cons
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -222,8 +222,8 @@ This will add a label to the data center.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Data Center
@@ -235,8 +235,8 @@ api_instance.datacentersLabelsPost(datacenterId, label, options).then((response)
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Data Center
@@ -255,7 +255,7 @@ api_instance.datacentersLabelsPost(datacenterId, label, options).then((response)
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -280,8 +280,8 @@ This will modify the value of the label on a data center.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Data Center
@@ -293,8 +293,8 @@ api_instance.datacentersLabelsPut(datacenterId, key, label, options).then((respo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Data Center
@@ -314,7 +314,7 @@ api_instance.datacentersLabelsPut(datacenterId, key, label, options).then((respo
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -339,8 +339,8 @@ This will remove a label from the server.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Server
@@ -352,8 +352,8 @@ api_instance.datacentersServersLabelsDelete(datacenterId, serverId, key, options
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Server
@@ -398,8 +398,8 @@ This will retrieve the properties of a associated label to a server.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Server
@@ -411,8 +411,8 @@ api_instance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, opti
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Server
@@ -432,7 +432,7 @@ api_instance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, opti
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -457,8 +457,8 @@ You can retrieve a list of all labels associated with a server
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Server Labels
@@ -470,8 +470,8 @@ api_instance.datacentersServersLabelsGet(datacenterId, serverId, options).then((
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Server Labels
@@ -492,7 +492,7 @@ api_instance.datacentersServersLabelsGet(datacenterId, serverId, options).then((
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -517,8 +517,8 @@ This will add a label to the server.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Server
@@ -530,8 +530,8 @@ api_instance.datacentersServersLabelsPost(datacenterId, serverId, label, options
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Server
@@ -551,7 +551,7 @@ api_instance.datacentersServersLabelsPost(datacenterId, serverId, label, options
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -576,8 +576,8 @@ This will modify the value of the label on a server.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Server
@@ -589,8 +589,8 @@ api_instance.datacentersServersLabelsPut(datacenterId, serverId, key, label, opt
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Server
@@ -611,7 +611,7 @@ api_instance.datacentersServersLabelsPut(datacenterId, serverId, key, label, opt
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -636,8 +636,8 @@ This will remove a label from the volume.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Volume
@@ -649,8 +649,8 @@ api_instance.datacentersVolumesLabelsDelete(datacenterId, volumeId, key, options
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Volume
@@ -695,8 +695,8 @@ This will retrieve the properties of a associated label to a volume.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Volume
@@ -708,8 +708,8 @@ api_instance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, opti
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Volume
@@ -729,7 +729,7 @@ api_instance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, opti
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -754,8 +754,8 @@ You can retrieve a list of all labels associated with a volume
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Volume Labels
@@ -767,8 +767,8 @@ api_instance.datacentersVolumesLabelsGet(datacenterId, volumeId, options).then((
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Volume Labels
@@ -789,7 +789,7 @@ api_instance.datacentersVolumesLabelsGet(datacenterId, volumeId, options).then((
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -814,8 +814,8 @@ This will add a label to the volume.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Volume
@@ -827,8 +827,8 @@ api_instance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, options
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Volume
@@ -848,7 +848,7 @@ api_instance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, options
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -873,8 +873,8 @@ This will modify the value of the label on a volume.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Volume
@@ -886,8 +886,8 @@ api_instance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, opt
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Volume
@@ -908,7 +908,7 @@ api_instance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, opt
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -933,8 +933,8 @@ This will remove a label from the Ip Block.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from IP Block
@@ -946,8 +946,8 @@ api_instance.ipblocksLabelsDelete(ipblockId, key, options).then((response) => co
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from IP Block
@@ -991,8 +991,8 @@ This will retrieve the properties of a associated label to a Ip Block.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of IP Block
@@ -1004,8 +1004,8 @@ api_instance.ipblocksLabelsFindByKey(ipblockId, key, options).then((response) =>
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of IP Block
@@ -1024,7 +1024,7 @@ api_instance.ipblocksLabelsFindByKey(ipblockId, key, options).then((response) =>
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1049,8 +1049,8 @@ You can retrieve a list of all labels associated with a IP Block
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Ip Block Labels
@@ -1062,8 +1062,8 @@ api_instance.ipblocksLabelsGet(ipblockId, options).then((response) => console.lo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Ip Block Labels
@@ -1081,7 +1081,7 @@ api_instance.ipblocksLabelsGet(ipblockId, options).then((response) => console.lo
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -1106,8 +1106,8 @@ This will add a label to the Ip Block.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to IP Block
@@ -1119,8 +1119,8 @@ api_instance.ipblocksLabelsPost(ipblockId, label, options).then((response) => co
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to IP Block
@@ -1139,7 +1139,7 @@ api_instance.ipblocksLabelsPost(ipblockId, label, options).then((response) => co
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1164,8 +1164,8 @@ This will modify the value of the label on a Ip Block.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of IP Block
@@ -1177,8 +1177,8 @@ api_instance.ipblocksLabelsPut(ipblockId, key, label, options).then((response) =
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of IP Block
@@ -1198,7 +1198,7 @@ api_instance.ipblocksLabelsPut(ipblockId, key, label, options).then((response) =
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1223,8 +1223,8 @@ You can retrieve the details of a specific label using its URN. A URN is for uni
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Returns the label by its URN.
@@ -1236,8 +1236,8 @@ api_instance.labelsFindByUrn(labelurn, options).then((response) => console.log(r
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Returns the label by its URN.
@@ -1255,7 +1255,7 @@ api_instance.labelsFindByUrn(labelurn, options).then((response) => console.log(r
 
 ### Return type
 
-[**Label**](Label.md)
+[**Label**](models/Label.md)
 
 ### Authorization
 
@@ -1280,8 +1280,8 @@ You can retrieve a complete list of labels that you have access to.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List Labels 
@@ -1293,8 +1293,8 @@ api_instance.labelsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List Labels 
@@ -1311,7 +1311,7 @@ api_instance.labelsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Labels**](Labels.md)
+[**Labels**](models/Labels.md)
 
 ### Authorization
 
@@ -1336,8 +1336,8 @@ This will remove a label from the snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Snapshot
@@ -1349,8 +1349,8 @@ api_instance.snapshotsLabelsDelete(snapshotId, key, options).then((response) => 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Delete a Label from Snapshot
@@ -1394,8 +1394,8 @@ This will retrieve the properties of a associated label to a snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Snapshot
@@ -1407,8 +1407,8 @@ api_instance.snapshotsLabelsFindByKey(snapshotId, key, options).then((response) 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Retrieve a Label of Snapshot
@@ -1427,7 +1427,7 @@ api_instance.snapshotsLabelsFindByKey(snapshotId, key, options).then((response) 
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1452,8 +1452,8 @@ You can retrieve a list of all labels associated with a snapshot
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Snapshot Labels
@@ -1465,8 +1465,8 @@ api_instance.snapshotsLabelsGet(snapshotId, options).then((response) => console.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # List all Snapshot Labels
@@ -1484,7 +1484,7 @@ api_instance.snapshotsLabelsGet(snapshotId, options).then((response) => console.
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -1509,8 +1509,8 @@ This will add a label to the snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Snapshot
@@ -1522,8 +1522,8 @@ api_instance.snapshotsLabelsPost(snapshotId, label, options).then((response) => 
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Add a Label to Snapshot
@@ -1542,7 +1542,7 @@ api_instance.snapshotsLabelsPost(snapshotId, label, options).then((response) => 
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1567,8 +1567,8 @@ This will modify the value of the label on a snapshot.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Snapshot
@@ -1580,8 +1580,8 @@ api_instance.snapshotsLabelsPut(snapshotId, key, label, options).then((response)
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.LabelApi(config)
 # Modify a Label of Snapshot
@@ -1601,7 +1601,7 @@ api_instance.snapshotsLabelsPut(snapshotId, key, label, options).then((response)
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 

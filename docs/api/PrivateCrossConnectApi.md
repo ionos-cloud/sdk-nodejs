@@ -25,8 +25,8 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Delete a Private Cross-Connect
@@ -38,8 +38,8 @@ api_instance.pccsDelete(pccId, options).then((response) => console.log(response)
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Delete a Private Cross-Connect
@@ -82,8 +82,8 @@ You can retrieve a private cross-connect by using the resource\'s ID. This value
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Retrieve a Private Cross-Connect
@@ -95,8 +95,8 @@ api_instance.pccsFindById(pccId, options).then((response) => console.log(respons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Retrieve a Private Cross-Connect
@@ -114,7 +114,7 @@ api_instance.pccsFindById(pccId, options).then((response) => console.log(respons
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -139,8 +139,8 @@ You can retrieve a complete list of private cross-connects provisioned under you
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # List Private Cross-Connects 
@@ -152,8 +152,8 @@ api_instance.pccsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # List Private Cross-Connects 
@@ -170,7 +170,7 @@ api_instance.pccsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**PrivateCrossConnects**](PrivateCrossConnects.md)
+[**PrivateCrossConnects**](models/PrivateCrossConnects.md)
 
 ### Authorization
 
@@ -195,8 +195,8 @@ You can use update private cross-connect to re-name or update its description
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Partially modify a private cross-connect
@@ -208,8 +208,8 @@ api_instance.pccsPatch(pccId, pcc, options).then((response) => console.log(respo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Partially modify a private cross-connect
@@ -228,7 +228,7 @@ api_instance.pccsPatch(pccId, pcc, options).then((response) => console.log(respo
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -253,8 +253,8 @@ You can use this POST method to create a private cross-connect
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Create a Private Cross-Connect
@@ -266,8 +266,8 @@ api_instance.pccsPost(pcc, options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.PrivateCrossConnectApi(config)
 # Create a Private Cross-Connect
@@ -285,7 +285,7 @@ api_instance.pccsPost(pcc, options).then((response) => console.log(response));
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
 
 ### Authorization
 

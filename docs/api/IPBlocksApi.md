@@ -26,8 +26,8 @@ Removes the specific IP Block
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Delete IP Block
@@ -39,8 +39,8 @@ api_instance.ipblocksDelete(ipblockId, options).then((response) => console.log(r
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Delete IP Block
@@ -83,8 +83,8 @@ Retrieves the attributes of a given IP Block.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Retrieve an IP Block
@@ -96,8 +96,8 @@ api_instance.ipblocksFindById(ipblockId, options).then((response) => console.log
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Retrieve an IP Block
@@ -115,7 +115,7 @@ api_instance.ipblocksFindById(ipblockId, options).then((response) => console.log
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 
@@ -140,8 +140,8 @@ Retrieve a list of all reserved IP Blocks
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # List IP Blocks 
@@ -153,8 +153,8 @@ api_instance.ipblocksGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # List IP Blocks 
@@ -171,7 +171,7 @@ api_instance.ipblocksGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**IpBlocks**](IpBlocks.md)
+[**IpBlocks**](models/IpBlocks.md)
 
 ### Authorization
 
@@ -196,8 +196,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Partially modify IP Block
@@ -209,8 +209,8 @@ api_instance.ipblocksPatch(ipblockId, ipblock, options).then((response) => conso
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Partially modify IP Block
@@ -229,7 +229,7 @@ api_instance.ipblocksPatch(ipblockId, ipblock, options).then((response) => conso
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 
@@ -254,8 +254,8 @@ This will reserve a new IP Block
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Reserve IP Block
@@ -267,8 +267,8 @@ api_instance.ipblocksPost(ipblock, options).then((response) => console.log(respo
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Reserve IP Block
@@ -286,7 +286,7 @@ api_instance.ipblocksPost(ipblock, options).then((response) => console.log(respo
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 
@@ -311,8 +311,8 @@ You can use update attributes of a resource
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Modify IP Block
@@ -324,8 +324,8 @@ api_instance.ipblocksPut(ipblockId, ipblock, options).then((response) => console
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.IPBlocksApi(config)
 # Modify IP Block
@@ -344,7 +344,7 @@ api_instance.ipblocksPut(ipblockId, ipblock, options).then((response) => console
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 

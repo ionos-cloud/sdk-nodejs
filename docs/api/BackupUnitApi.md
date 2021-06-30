@@ -27,8 +27,8 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Delete a Backup Unit
@@ -40,8 +40,8 @@ api_instance.backupunitsDelete(backupunitId, options).then((response) => console
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Delete a Backup Unit
@@ -84,8 +84,8 @@ You can retrieve the details of an specific backup unit.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Returns the specified backup Unit
@@ -97,8 +97,8 @@ api_instance.backupunitsFindById(backupunitId, options).then((response) => conso
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Returns the specified backup Unit
@@ -116,7 +116,7 @@ api_instance.backupunitsFindById(backupunitId, options).then((response) => conso
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -141,8 +141,8 @@ You can retrieve a complete list of backup Units that you have access to.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # List Backup Units 
@@ -154,8 +154,8 @@ api_instance.backupunitsGet(options).then((response) => console.log(response));
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # List Backup Units 
@@ -172,7 +172,7 @@ api_instance.backupunitsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**BackupUnits**](BackupUnits.md)
+[**BackupUnits**](models/BackupUnits.md)
 
 ### Authorization
 
@@ -197,8 +197,8 @@ You can use update a backup Unit properties
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Partially modify a Backup Unit
@@ -210,8 +210,8 @@ api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then(
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Partially modify a Backup Unit
@@ -230,7 +230,7 @@ api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then(
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -255,8 +255,8 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Create a Backup Unit
@@ -268,8 +268,8 @@ api_instance.backupunitsPost(backupUnit, options).then((response) => console.log
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Create a Backup Unit
@@ -287,7 +287,7 @@ api_instance.backupunitsPost(backupUnit, options).then((response) => console.log
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -312,8 +312,8 @@ You can use update a backup Unit properties
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Modify a Backup Unit
@@ -325,8 +325,8 @@ api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) =
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Modify a Backup Unit
@@ -345,7 +345,7 @@ api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) =
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -370,8 +370,8 @@ Returns a single signon URL for the specified backup Unit.
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Returns a single signon URL for the specified backup Unit.
@@ -383,8 +383,8 @@ api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => cons
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
 # setup authorization
 const config = new ionoscloud.Configuration({
-  username: 'YOUR_USERNAME',
-  password: 'YOUR_PASSWORD'
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD'
 });
 api_instance = ionoscloud.BackupUnitApi(config)
 # Returns a single signon URL for the specified backup Unit.
@@ -401,7 +401,7 @@ api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => cons
 
 ### Return type
 
-[**BackupUnitSSO**](BackupUnitSSO.md)
+[**BackupUnitSSO**](models/BackupUnitSSO.md)
 
 ### Authorization
 
