@@ -4,18 +4,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersServersNicsDelete**](NicApi.md#datacentersServersNicsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic |
-| [**datacentersServersNicsFindById**](NicApi.md#datacentersServersNicsFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic |
-| [**datacentersServersNicsFirewallrulesDelete**](NicApi.md#datacentersServersNicsFirewallrulesDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesFindById**](NicApi.md#datacentersServersNicsFirewallrulesFindById) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesGet**](NicApi.md#datacentersServersNicsFirewallrulesGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules  |
-| [**datacentersServersNicsFirewallrulesPatch**](NicApi.md#datacentersServersNicsFirewallrulesPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesPost**](NicApi.md#datacentersServersNicsFirewallrulesPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesPut**](NicApi.md#datacentersServersNicsFirewallrulesPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule |
-| [**datacentersServersNicsGet**](NicApi.md#datacentersServersNicsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics  |
-| [**datacentersServersNicsPatch**](NicApi.md#datacentersServersNicsPatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic |
-| [**datacentersServersNicsPost**](NicApi.md#datacentersServersNicsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic |
-| [**datacentersServersNicsPut**](NicApi.md#datacentersServersNicsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic |
+| [**datacentersServersNicsDelete**](NicApi.md#datacentersserversnicsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic |
+| [**datacentersServersNicsFindById**](NicApi.md#datacentersserversnicsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic |
+| [**datacentersServersNicsFirewallrulesDelete**](NicApi.md#datacentersserversnicsfirewallrulesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesFindById**](NicApi.md#datacentersserversnicsfirewallrulesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesGet**](NicApi.md#datacentersserversnicsfirewallrulesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules  |
+| [**datacentersServersNicsFirewallrulesPatch**](NicApi.md#datacentersserversnicsfirewallrulespatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesPost**](NicApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesPut**](NicApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule |
+| [**datacentersServersNicsGet**](NicApi.md#datacentersserversnicsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics  |
+| [**datacentersServersNicsPatch**](NicApi.md#datacentersserversnicspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic |
+| [**datacentersServersNicsPost**](NicApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic |
+| [**datacentersServersNicsPut**](NicApi.md#datacentersserversnicsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic |
 
 
 # **datacentersServersNicsDelete**

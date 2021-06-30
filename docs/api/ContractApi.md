@@ -4,7 +4,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**contractsGet**](ContractApi.md#contractsGet) | **GET** /contracts | Retrieve a Contract |
+| [**contractsGet**](ContractApi.md#contractsget) | **GET** /contracts | Retrieve a Contract |
 
 
 # **contractsGet**

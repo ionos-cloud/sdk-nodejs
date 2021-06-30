@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**pccsDelete**](PrivateCrossConnectApi.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
-| [**pccsFindById**](PrivateCrossConnectApi.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
-| [**pccsGet**](PrivateCrossConnectApi.md#pccsGet) | **GET** /pccs | List Private Cross-Connects  |
-| [**pccsPatch**](PrivateCrossConnectApi.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect |
-| [**pccsPost**](PrivateCrossConnectApi.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect |
+| [**pccsDelete**](PrivateCrossConnectApi.md#pccsdelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
+| [**pccsFindById**](PrivateCrossConnectApi.md#pccsfindbyid) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
+| [**pccsGet**](PrivateCrossConnectApi.md#pccsget) | **GET** /pccs | List Private Cross-Connects  |
+| [**pccsPatch**](PrivateCrossConnectApi.md#pccspatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect |
+| [**pccsPost**](PrivateCrossConnectApi.md#pccspost) | **POST** /pccs | Create a Private Cross-Connect |
 
 
 # **pccsDelete**

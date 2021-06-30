@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersDelete**](DataCenterApi.md#datacentersDelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center |
-| [**datacentersFindById**](DataCenterApi.md#datacentersFindById) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center |
-| [**datacentersGet**](DataCenterApi.md#datacentersGet) | **GET** /datacenters | List Data Centers under your account |
-| [**datacentersPatch**](DataCenterApi.md#datacentersPatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center |
-| [**datacentersPost**](DataCenterApi.md#datacentersPost) | **POST** /datacenters | Create a Data Center |
-| [**datacentersPut**](DataCenterApi.md#datacentersPut) | **PUT** /datacenters/{datacenterId} | Modify a Data Center |
+| [**datacentersDelete**](DataCenterApi.md#datacentersdelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center |
+| [**datacentersFindById**](DataCenterApi.md#datacentersfindbyid) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center |
+| [**datacentersGet**](DataCenterApi.md#datacentersget) | **GET** /datacenters | List Data Centers under your account |
+| [**datacentersPatch**](DataCenterApi.md#datacenterspatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center |
+| [**datacentersPost**](DataCenterApi.md#datacenterspost) | **POST** /datacenters | Create a Data Center |
+| [**datacentersPut**](DataCenterApi.md#datacentersput) | **PUT** /datacenters/{datacenterId} | Modify a Data Center |
 
 
 # **datacentersDelete**

@@ -4,36 +4,36 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**umGroupsDelete**](UserManagementApi.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
-| [**umGroupsFindById**](UserManagementApi.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group |
-| [**umGroupsGet**](UserManagementApi.md#umGroupsGet) | **GET** /um/groups | List All Groups. |
-| [**umGroupsPost**](UserManagementApi.md#umGroupsPost) | **POST** /um/groups | Create a Group |
-| [**umGroupsPut**](UserManagementApi.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group |
-| [**umGroupsResourcesGet**](UserManagementApi.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
-| [**umGroupsSharesDelete**](UserManagementApi.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
-| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umGroupsSharesFindByResourceId) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
-| [**umGroupsSharesGet**](UserManagementApi.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
-| [**umGroupsSharesPost**](UserManagementApi.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
-| [**umGroupsSharesPut**](UserManagementApi.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
-| [**umGroupsUsersDelete**](UserManagementApi.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
-| [**umGroupsUsersGet**](UserManagementApi.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members  |
-| [**umGroupsUsersPost**](UserManagementApi.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
-| [**umResourcesFindByType**](UserManagementApi.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
-| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
-| [**umResourcesGet**](UserManagementApi.md#umResourcesGet) | **GET** /um/resources | List All Resources. |
-| [**umUsersDelete**](UserManagementApi.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User |
-| [**umUsersFindById**](UserManagementApi.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User |
-| [**umUsersGet**](UserManagementApi.md#umUsersGet) | **GET** /um/users | List all Users  |
-| [**umUsersGroupsGet**](UserManagementApi.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User\&#39;s group resources |
-| [**umUsersOwnsGet**](UserManagementApi.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User\&#39;s own resources |
-| [**umUsersPost**](UserManagementApi.md#umUsersPost) | **POST** /um/users | Create a user |
-| [**umUsersPut**](UserManagementApi.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user |
-| [**umUsersS3keysDelete**](UserManagementApi.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key |
-| [**umUsersS3keysFindByKeyId**](UserManagementApi.md#umUsersS3keysFindByKeyId) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User |
-| [**umUsersS3keysGet**](UserManagementApi.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User\&#39;s S3 keys |
-| [**umUsersS3keysPost**](UserManagementApi.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user |
-| [**umUsersS3keysPut**](UserManagementApi.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
-| [**umUsersS3ssourlGet**](UserManagementApi.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
+| [**umGroupsDelete**](UserManagementApi.md#umgroupsdelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
+| [**umGroupsFindById**](UserManagementApi.md#umgroupsfindbyid) | **GET** /um/groups/{groupId} | Retrieve a Group |
+| [**umGroupsGet**](UserManagementApi.md#umgroupsget) | **GET** /um/groups | List All Groups. |
+| [**umGroupsPost**](UserManagementApi.md#umgroupspost) | **POST** /um/groups | Create a Group |
+| [**umGroupsPut**](UserManagementApi.md#umgroupsput) | **PUT** /um/groups/{groupId} | Modify a group |
+| [**umGroupsResourcesGet**](UserManagementApi.md#umgroupsresourcesget) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
+| [**umGroupsSharesDelete**](UserManagementApi.md#umgroupssharesdelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
+| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umgroupssharesfindbyresourceid) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
+| [**umGroupsSharesGet**](UserManagementApi.md#umgroupssharesget) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
+| [**umGroupsSharesPost**](UserManagementApi.md#umgroupssharespost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
+| [**umGroupsSharesPut**](UserManagementApi.md#umgroupssharesput) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
+| [**umGroupsUsersDelete**](UserManagementApi.md#umgroupsusersdelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
+| [**umGroupsUsersGet**](UserManagementApi.md#umgroupsusersget) | **GET** /um/groups/{groupId}/users | List Group Members  |
+| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
+| [**umResourcesFindByType**](UserManagementApi.md#umresourcesfindbytype) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
+| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umresourcesfindbytypeandid) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
+| [**umResourcesGet**](UserManagementApi.md#umresourcesget) | **GET** /um/resources | List All Resources. |
+| [**umUsersDelete**](UserManagementApi.md#umusersdelete) | **DELETE** /um/users/{userId} | Delete a User |
+| [**umUsersFindById**](UserManagementApi.md#umusersfindbyid) | **GET** /um/users/{userId} | Retrieve a User |
+| [**umUsersGet**](UserManagementApi.md#umusersget) | **GET** /um/users | List all Users  |
+| [**umUsersGroupsGet**](UserManagementApi.md#umusersgroupsget) | **GET** /um/users/{userId}/groups | Retrieve a User\&#39;s group resources |
+| [**umUsersOwnsGet**](UserManagementApi.md#umusersownsget) | **GET** /um/users/{userId}/owns | Retrieve a User\&#39;s own resources |
+| [**umUsersPost**](UserManagementApi.md#umuserspost) | **POST** /um/users | Create a user |
+| [**umUsersPut**](UserManagementApi.md#umusersput) | **PUT** /um/users/{userId} | Modify a user |
+| [**umUsersS3keysDelete**](UserManagementApi.md#umuserss3keysdelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key |
+| [**umUsersS3keysFindByKeyId**](UserManagementApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User |
+| [**umUsersS3keysGet**](UserManagementApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | Retrieve a User\&#39;s S3 keys |
+| [**umUsersS3keysPost**](UserManagementApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user |
+| [**umUsersS3keysPut**](UserManagementApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
+| [**umUsersS3ssourlGet**](UserManagementApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
 
 
 # **umGroupsDelete**

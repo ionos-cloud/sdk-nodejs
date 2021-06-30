@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**datacentersLoadbalancersBalancednicsDelete**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer |
-| [**datacentersLoadbalancersBalancednicsFindByNicId**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsFindByNicId) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer |
-| [**datacentersLoadbalancersBalancednicsGet**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members  |
-| [**datacentersLoadbalancersBalancednicsPost**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer |
-| [**datacentersLoadbalancersDelete**](LoadBalancerApi.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer. |
-| [**datacentersLoadbalancersFindById**](LoadBalancerApi.md#datacentersLoadbalancersFindById) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer |
-| [**datacentersLoadbalancersGet**](LoadBalancerApi.md#datacentersLoadbalancersGet) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
-| [**datacentersLoadbalancersPatch**](LoadBalancerApi.md#datacentersLoadbalancersPatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer |
-| [**datacentersLoadbalancersPost**](LoadBalancerApi.md#datacentersLoadbalancersPost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
-| [**datacentersLoadbalancersPut**](LoadBalancerApi.md#datacentersLoadbalancersPut) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer |
+| [**datacentersLoadbalancersBalancednicsDelete**](LoadBalancerApi.md#datacentersloadbalancersbalancednicsdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer |
+| [**datacentersLoadbalancersBalancednicsFindByNicId**](LoadBalancerApi.md#datacentersloadbalancersbalancednicsfindbynicid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer |
+| [**datacentersLoadbalancersBalancednicsGet**](LoadBalancerApi.md#datacentersloadbalancersbalancednicsget) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members  |
+| [**datacentersLoadbalancersBalancednicsPost**](LoadBalancerApi.md#datacentersloadbalancersbalancednicspost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer |
+| [**datacentersLoadbalancersDelete**](LoadBalancerApi.md#datacentersloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer. |
+| [**datacentersLoadbalancersFindById**](LoadBalancerApi.md#datacentersloadbalancersfindbyid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer |
+| [**datacentersLoadbalancersGet**](LoadBalancerApi.md#datacentersloadbalancersget) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
+| [**datacentersLoadbalancersPatch**](LoadBalancerApi.md#datacentersloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer |
+| [**datacentersLoadbalancersPost**](LoadBalancerApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
+| [**datacentersLoadbalancersPut**](LoadBalancerApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer |
 
 
 # **datacentersLoadbalancersBalancednicsDelete**

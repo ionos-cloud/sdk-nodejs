@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**snapshotsDelete**](SnapshotApi.md#snapshotsDelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot |
-| [**snapshotsFindById**](SnapshotApi.md#snapshotsFindById) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid. |
-| [**snapshotsGet**](SnapshotApi.md#snapshotsGet) | **GET** /snapshots | List Snapshots  |
-| [**snapshotsPatch**](SnapshotApi.md#snapshotsPatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot |
-| [**snapshotsPut**](SnapshotApi.md#snapshotsPut) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot |
+| [**snapshotsDelete**](SnapshotApi.md#snapshotsdelete) | **DELETE** /snapshots/{snapshotId} | Delete a Snapshot |
+| [**snapshotsFindById**](SnapshotApi.md#snapshotsfindbyid) | **GET** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid. |
+| [**snapshotsGet**](SnapshotApi.md#snapshotsget) | **GET** /snapshots | List Snapshots  |
+| [**snapshotsPatch**](SnapshotApi.md#snapshotspatch) | **PATCH** /snapshots/{snapshotId} | Partially modify a Snapshot |
+| [**snapshotsPut**](SnapshotApi.md#snapshotsput) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot |
 
 
 # **snapshotsDelete**

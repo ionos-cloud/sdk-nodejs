@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**backupunitsDelete**](BackupUnitApi.md#backupunitsDelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit |
-| [**backupunitsFindById**](BackupUnitApi.md#backupunitsFindById) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit |
-| [**backupunitsGet**](BackupUnitApi.md#backupunitsGet) | **GET** /backupunits | List Backup Units  |
-| [**backupunitsPatch**](BackupUnitApi.md#backupunitsPatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit |
-| [**backupunitsPost**](BackupUnitApi.md#backupunitsPost) | **POST** /backupunits | Create a Backup Unit |
-| [**backupunitsPut**](BackupUnitApi.md#backupunitsPut) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit |
-| [**backupunitsSsourlGet**](BackupUnitApi.md#backupunitsSsourlGet) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit. |
+| [**backupunitsDelete**](BackupUnitApi.md#backupunitsdelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit |
+| [**backupunitsFindById**](BackupUnitApi.md#backupunitsfindbyid) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit |
+| [**backupunitsGet**](BackupUnitApi.md#backupunitsget) | **GET** /backupunits | List Backup Units  |
+| [**backupunitsPatch**](BackupUnitApi.md#backupunitspatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit |
+| [**backupunitsPost**](BackupUnitApi.md#backupunitspost) | **POST** /backupunits | Create a Backup Unit |
+| [**backupunitsPut**](BackupUnitApi.md#backupunitsput) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit |
+| [**backupunitsSsourlGet**](BackupUnitApi.md#backupunitsssourlget) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit. |
 
 
 # **backupunitsDelete**

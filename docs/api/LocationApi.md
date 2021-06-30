@@ -4,9 +4,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**locationsFindByRegionId**](LocationApi.md#locationsFindByRegionId) | **GET** /locations/{regionId} | List Locations within a region |
-| [**locationsFindByRegionIdAndId**](LocationApi.md#locationsFindByRegionIdAndId) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location |
-| [**locationsGet**](LocationApi.md#locationsGet) | **GET** /locations | List Locations |
+| [**locationsFindByRegionId**](LocationApi.md#locationsfindbyregionid) | **GET** /locations/{regionId} | List Locations within a region |
+| [**locationsFindByRegionIdAndId**](LocationApi.md#locationsfindbyregionidandid) | **GET** /locations/{regionId}/{locationId} | Retrieve a Location |
+| [**locationsGet**](LocationApi.md#locationsget) | **GET** /locations | List Locations |
 
 
 # **locationsFindByRegionId**

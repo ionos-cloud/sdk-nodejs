@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**ipblocksDelete**](IPBlocksApi.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block |
-| [**ipblocksFindById**](IPBlocksApi.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block |
-| [**ipblocksGet**](IPBlocksApi.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks  |
-| [**ipblocksPatch**](IPBlocksApi.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block |
-| [**ipblocksPost**](IPBlocksApi.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block |
-| [**ipblocksPut**](IPBlocksApi.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block |
+| [**ipblocksDelete**](IPBlocksApi.md#ipblocksdelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block |
+| [**ipblocksFindById**](IPBlocksApi.md#ipblocksfindbyid) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block |
+| [**ipblocksGet**](IPBlocksApi.md#ipblocksget) | **GET** /ipblocks | List IP Blocks  |
+| [**ipblocksPatch**](IPBlocksApi.md#ipblockspatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block |
+| [**ipblocksPost**](IPBlocksApi.md#ipblockspost) | **POST** /ipblocks | Reserve IP Block |
+| [**ipblocksPut**](IPBlocksApi.md#ipblocksput) | **PUT** /ipblocks/{ipblockId} | Modify IP Block |
 
 
 # **ipblocksDelete**

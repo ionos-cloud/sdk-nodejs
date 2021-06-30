@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
-| [**imagesDelete**](ImageApi.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image |
-| [**imagesFindById**](ImageApi.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image |
-| [**imagesGet**](ImageApi.md#imagesGet) | **GET** /images | List Images  |
-| [**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image |
-| [**imagesPut**](ImageApi.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image |
+| [**imagesDelete**](ImageApi.md#imagesdelete) | **DELETE** /images/{imageId} | Delete an Image |
+| [**imagesFindById**](ImageApi.md#imagesfindbyid) | **GET** /images/{imageId} | Retrieve an Image |
+| [**imagesGet**](ImageApi.md#imagesget) | **GET** /images | List Images  |
+| [**imagesPatch**](ImageApi.md#imagespatch) | **PATCH** /images/{imageId} | Partially modify an Image |
+| [**imagesPut**](ImageApi.md#imagesput) | **PUT** /images/{imageId} | Modify an Image |
 
 
 # **imagesDelete**
