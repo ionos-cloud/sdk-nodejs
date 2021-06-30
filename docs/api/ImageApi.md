@@ -114,7 +114,7 @@ api_instance.imagesFindById(imageId, options).then((response) => console.log(res
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ api_instance.imagesGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Images**](models/Images.md)
+[**Images**](../models/Images.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ api_instance.imagesPatch(imageId, image, options).then((response) => console.log
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ api_instance.imagesPut(imageId, image, options).then((response) => console.log(r
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 

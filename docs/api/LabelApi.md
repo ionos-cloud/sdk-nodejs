@@ -138,7 +138,7 @@ api_instance.datacentersLabelsFindByKey(datacenterId, key, options).then((respon
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ api_instance.datacentersLabelsGet(datacenterId, options).then((response) => cons
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ api_instance.datacentersLabelsPost(datacenterId, label, options).then((response)
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -314,7 +314,7 @@ api_instance.datacentersLabelsPut(datacenterId, key, label, options).then((respo
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -432,7 +432,7 @@ api_instance.datacentersServersLabelsFindByKey(datacenterId, serverId, key, opti
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -492,7 +492,7 @@ api_instance.datacentersServersLabelsGet(datacenterId, serverId, options).then((
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -551,7 +551,7 @@ api_instance.datacentersServersLabelsPost(datacenterId, serverId, label, options
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -611,7 +611,7 @@ api_instance.datacentersServersLabelsPut(datacenterId, serverId, key, label, opt
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -729,7 +729,7 @@ api_instance.datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, opti
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -789,7 +789,7 @@ api_instance.datacentersVolumesLabelsGet(datacenterId, volumeId, options).then((
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -848,7 +848,7 @@ api_instance.datacentersVolumesLabelsPost(datacenterId, volumeId, label, options
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -908,7 +908,7 @@ api_instance.datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, opt
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1024,7 +1024,7 @@ api_instance.ipblocksLabelsFindByKey(ipblockId, key, options).then((response) =>
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1081,7 +1081,7 @@ api_instance.ipblocksLabelsGet(ipblockId, options).then((response) => console.lo
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -1139,7 +1139,7 @@ api_instance.ipblocksLabelsPost(ipblockId, label, options).then((response) => co
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1198,7 +1198,7 @@ api_instance.ipblocksLabelsPut(ipblockId, key, label, options).then((response) =
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1255,7 +1255,7 @@ api_instance.labelsFindByUrn(labelurn, options).then((response) => console.log(r
 
 ### Return type
 
-[**Label**](models/Label.md)
+[**Label**](../models/Label.md)
 
 ### Authorization
 
@@ -1311,7 +1311,7 @@ api_instance.labelsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Labels**](models/Labels.md)
+[**Labels**](../models/Labels.md)
 
 ### Authorization
 
@@ -1427,7 +1427,7 @@ api_instance.snapshotsLabelsFindByKey(snapshotId, key, options).then((response) 
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1484,7 +1484,7 @@ api_instance.snapshotsLabelsGet(snapshotId, options).then((response) => console.
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -1542,7 +1542,7 @@ api_instance.snapshotsLabelsPost(snapshotId, label, options).then((response) => 
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1601,7 +1601,7 @@ api_instance.snapshotsLabelsPut(snapshotId, key, label, options).then((response)
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 

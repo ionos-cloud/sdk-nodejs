@@ -65,7 +65,7 @@ api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, option
 
 ### Return type
 
-[**Snapshot**](models/Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((r
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ api_instance.datacentersVolumesGet(datacenterId, options).then((response) => con
 
 ### Return type
 
-[**Volumes**](models/Volumes.md)
+[**Volumes**](../models/Volumes.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).th
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ api_instance.datacentersVolumesPost(datacenterId, volume, options).then((respons
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -416,7 +416,7 @@ api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 

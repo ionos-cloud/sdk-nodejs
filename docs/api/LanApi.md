@@ -120,7 +120,7 @@ api_instance.datacentersLansFindById(datacenterId, lanId, options).then((respons
 
 ### Return type
 
-[**Lan**](models/Lan.md)
+[**Lan**](../models/Lan.md)
 
 ### Authorization
 
@@ -179,7 +179,7 @@ api_instance.datacentersLansGet(datacenterId, options).then((response) => consol
 
 ### Return type
 
-[**Lans**](models/Lans.md)
+[**Lans**](../models/Lans.md)
 
 ### Authorization
 
@@ -238,7 +238,7 @@ api_instance.datacentersLansNicsFindById(datacenterId, lanId, nicId, options).th
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -298,7 +298,7 @@ api_instance.datacentersLansNicsGet(datacenterId, lanId, options).then((response
 
 ### Return type
 
-[**LanNics**](models/LanNics.md)
+[**LanNics**](../models/LanNics.md)
 
 ### Authorization
 
@@ -357,7 +357,7 @@ api_instance.datacentersLansNicsPost(datacenterId, lanId, nic, options).then((re
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -416,7 +416,7 @@ api_instance.datacentersLansPatch(datacenterId, lanId, lan, options).then((respo
 
 ### Return type
 
-[**Lan**](models/Lan.md)
+[**Lan**](../models/Lan.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ api_instance.datacentersLansPost(datacenterId, lan, options).then((response) => 
 
 ### Return type
 
-[**LanPost**](models/LanPost.md)
+[**LanPost**](../models/LanPost.md)
 
 ### Authorization
 
@@ -533,7 +533,7 @@ api_instance.datacentersLansPut(datacenterId, lanId, lan, options).then((respons
 
 ### Return type
 
-[**Lan**](models/Lan.md)
+[**Lan**](../models/Lan.md)
 
 ### Authorization
 

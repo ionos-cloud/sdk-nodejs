@@ -55,7 +55,7 @@ api_instance.requestsFindById(requestId, options).then((response) => console.log
 
 ### Return type
 
-[**Request**](models/Request.md)
+[**Request**](../models/Request.md)
 
 ### Authorization
 
@@ -124,7 +124,7 @@ api_instance.requestsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Requests**](models/Requests.md)
+[**Requests**](../models/Requests.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ api_instance.requestsStatusGet(requestId, options).then((response) => console.lo
 
 ### Return type
 
-[**RequestStatus**](models/RequestStatus.md)
+[**RequestStatus**](../models/RequestStatus.md)
 
 ### Authorization
 

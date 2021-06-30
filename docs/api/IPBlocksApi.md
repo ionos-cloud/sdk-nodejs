@@ -115,7 +115,7 @@ api_instance.ipblocksFindById(ipblockId, options).then((response) => console.log
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ api_instance.ipblocksGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**IpBlocks**](models/IpBlocks.md)
+[**IpBlocks**](../models/IpBlocks.md)
 
 ### Authorization
 
@@ -229,7 +229,7 @@ api_instance.ipblocksPatch(ipblockId, ipblock, options).then((response) => conso
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ api_instance.ipblocksPost(ipblock, options).then((response) => console.log(respo
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ api_instance.ipblocksPut(ipblockId, ipblock, options).then((response) => console
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 

@@ -115,7 +115,7 @@ api_instance.datacentersFindById(datacenterId, options).then((response) => conso
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ api_instance.datacentersGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Datacenters**](models/Datacenters.md)
+[**Datacenters**](../models/Datacenters.md)
 
 ### Authorization
 
@@ -231,7 +231,7 @@ api_instance.datacentersPatch(datacenterId, datacenter, options).then((response)
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 
@@ -288,7 +288,7 @@ api_instance.datacentersPost(datacenter, options).then((response) => console.log
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 
@@ -346,7 +346,7 @@ api_instance.datacentersPut(datacenterId, datacenter, options).then((response) =
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 

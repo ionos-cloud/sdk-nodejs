@@ -131,7 +131,7 @@ api_instance.datacentersServersCdromsFindById(datacenterId, serverId, cdromId, o
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -191,7 +191,7 @@ api_instance.datacentersServersCdromsGet(datacenterId, serverId, options).then((
 
 ### Return type
 
-[**Cdroms**](models/Cdroms.md)
+[**Cdroms**](../models/Cdroms.md)
 
 ### Authorization
 
@@ -250,7 +250,7 @@ api_instance.datacentersServersCdromsPost(datacenterId, serverId, cdrom, options
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -366,7 +366,7 @@ api_instance.datacentersServersFindById(datacenterId, serverId, options).then((r
 
 ### Return type
 
-[**Server**](models/Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -426,7 +426,7 @@ api_instance.datacentersServersGet(datacenterId, options).then((response) => con
 
 ### Return type
 
-[**Servers**](models/Servers.md)
+[**Servers**](../models/Servers.md)
 
 ### Authorization
 
@@ -485,7 +485,7 @@ api_instance.datacentersServersPatch(datacenterId, serverId, server, options).th
 
 ### Return type
 
-[**Server**](models/Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -543,7 +543,7 @@ api_instance.datacentersServersPost(datacenterId, server, options).then((respons
 
 ### Return type
 
-[**Server**](models/Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -602,7 +602,7 @@ api_instance.datacentersServersPut(datacenterId, serverId, server, options).then
 
 ### Return type
 
-[**Server**](models/Server.md)
+[**Server**](../models/Server.md)
 
 ### Authorization
 
@@ -952,7 +952,7 @@ api_instance.datacentersServersVolumesFindById(datacenterId, serverId, volumeId,
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -999,7 +999,7 @@ api_instance.datacentersServersVolumesGet(datacenterId, serverId, options).then(
 
 ### Return type
 
-[**AttachedVolumes**](models/AttachedVolumes.md)
+[**AttachedVolumes**](../models/AttachedVolumes.md)
 
 ### Authorization
 
@@ -1045,7 +1045,7 @@ api_instance.datacentersServersVolumesPost(datacenterId, serverId, volume, optio
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 

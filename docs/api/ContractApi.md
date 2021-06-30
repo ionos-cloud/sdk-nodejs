@@ -52,7 +52,7 @@ api_instance.contractsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Contract**](models/Contract.md)
+[**Contract**](../models/Contract.md)
 
 ### Authorization
 

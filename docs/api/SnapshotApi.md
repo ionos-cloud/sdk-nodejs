@@ -114,7 +114,7 @@ api_instance.snapshotsFindById(snapshotId, options).then((response) => console.l
 
 ### Return type
 
-[**Snapshot**](models/Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ api_instance.snapshotsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Snapshots**](models/Snapshots.md)
+[**Snapshots**](../models/Snapshots.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => co
 
 ### Return type
 
-[**Snapshot**](models/Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### Authorization
 
@@ -286,7 +286,7 @@ api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => cons
 
 ### Return type
 
-[**Snapshot**](models/Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### Authorization
 

@@ -139,7 +139,7 @@ api_instance.umGroupsFindById(groupId, options).then((response) => console.log(r
 
 ### Return type
 
-[**Group**](models/Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ api_instance.umGroupsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Groups**](models/Groups.md)
+[**Groups**](../models/Groups.md)
 
 ### Authorization
 
@@ -252,7 +252,7 @@ api_instance.umGroupsPost(group, options).then((response) => console.log(respons
 
 ### Return type
 
-[**Group**](models/Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -310,7 +310,7 @@ api_instance.umGroupsPut(groupId, group, options).then((response) => console.log
 
 ### Return type
 
-[**Group**](models/Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -365,7 +365,7 @@ api_instance.umGroupsResourcesGet(groupId, options).then((response) => console.l
 
 ### Return type
 
-[**ResourceGroups**](models/ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### Authorization
 
@@ -481,7 +481,7 @@ api_instance.umGroupsSharesFindByResourceId(groupId, resourceId, options).then((
 
 ### Return type
 
-[**GroupShare**](models/GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -538,7 +538,7 @@ api_instance.umGroupsSharesGet(groupId, options).then((response) => console.log(
 
 ### Return type
 
-[**GroupShares**](models/GroupShares.md)
+[**GroupShares**](../models/GroupShares.md)
 
 ### Authorization
 
@@ -597,7 +597,7 @@ api_instance.umGroupsSharesPost(groupId, resourceId, resource, options).then((re
 
 ### Return type
 
-[**GroupShare**](models/GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -656,7 +656,7 @@ api_instance.umGroupsSharesPut(groupId, resourceId, resource, options).then((res
 
 ### Return type
 
-[**GroupShare**](models/GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -771,7 +771,7 @@ api_instance.umGroupsUsersGet(groupId, options).then((response) => console.log(r
 
 ### Return type
 
-[**GroupMembers**](models/GroupMembers.md)
+[**GroupMembers**](../models/GroupMembers.md)
 
 ### Authorization
 
@@ -829,7 +829,7 @@ api_instance.umGroupsUsersPost(groupId, user, options).then((response) => consol
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -886,7 +886,7 @@ api_instance.umResourcesFindByType(resourceType, options).then((response) => con
 
 ### Return type
 
-[**Resources**](models/Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### Authorization
 
@@ -944,7 +944,7 @@ api_instance.umResourcesFindByTypeAndId(resourceType, resourceId, options).then(
 
 ### Return type
 
-[**Resource**](models/Resource.md)
+[**Resource**](../models/Resource.md)
 
 ### Authorization
 
@@ -1000,7 +1000,7 @@ api_instance.umResourcesGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Resources**](models/Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### Authorization
 
@@ -1114,7 +1114,7 @@ api_instance.umUsersFindById(userId, options).then((response) => console.log(res
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1170,7 +1170,7 @@ api_instance.umUsersGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Users**](models/Users.md)
+[**Users**](../models/Users.md)
 
 ### Authorization
 
@@ -1227,7 +1227,7 @@ api_instance.umUsersGroupsGet(userId, options).then((response) => console.log(re
 
 ### Return type
 
-[**ResourceGroups**](models/ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### Authorization
 
@@ -1284,7 +1284,7 @@ api_instance.umUsersOwnsGet(userId, options).then((response) => console.log(resp
 
 ### Return type
 
-[**ResourcesUsers**](models/ResourcesUsers.md)
+[**ResourcesUsers**](../models/ResourcesUsers.md)
 
 ### Authorization
 
@@ -1341,7 +1341,7 @@ api_instance.umUsersPost(user, options).then((response) => console.log(response)
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1399,7 +1399,7 @@ api_instance.umUsersPut(userId, user, options).then((response) => console.log(re
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1515,7 +1515,7 @@ api_instance.umUsersS3keysFindByKeyId(userId, keyId, options).then((response) =>
 
 ### Return type
 
-[**S3Key**](models/S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -1572,7 +1572,7 @@ api_instance.umUsersS3keysGet(userId, options).then((response) => console.log(re
 
 ### Return type
 
-[**S3Keys**](models/S3Keys.md)
+[**S3Keys**](../models/S3Keys.md)
 
 ### Authorization
 
@@ -1629,7 +1629,7 @@ api_instance.umUsersS3keysPost(userId, options).then((response) => console.log(r
 
 ### Return type
 
-[**S3Key**](models/S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -1688,7 +1688,7 @@ api_instance.umUsersS3keysPut(userId, keyId, s3Key, options).then((response) => 
 
 ### Return type
 
-[**S3Key**](models/S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -1744,7 +1744,7 @@ api_instance.umUsersS3ssourlGet(userId, options).then((response) => console.log(
 
 ### Return type
 
-[**S3ObjectStorageSSO**](models/S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](../models/S3ObjectStorageSSO.md)
 
 ### Authorization
 

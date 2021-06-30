@@ -125,7 +125,7 @@ api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, optio
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId,
 
 ### Return type
 
-[**FirewallRule**](models/FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### Authorization
 
@@ -306,7 +306,7 @@ api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicI
 
 ### Return type
 
-[**FirewallRules**](models/FirewallRules.md)
+[**FirewallRules**](../models/FirewallRules.md)
 
 ### Authorization
 
@@ -367,7 +367,7 @@ api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, ni
 
 ### Return type
 
-[**FirewallRule**](models/FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### Authorization
 
@@ -427,7 +427,7 @@ api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nic
 
 ### Return type
 
-[**FirewallRule**](models/FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### Authorization
 
@@ -488,7 +488,7 @@ api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicI
 
 ### Return type
 
-[**FirewallRule**](models/FirewallRule.md)
+[**FirewallRule**](../models/FirewallRule.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((re
 
 ### Return type
 
-[**Nics**](models/Nics.md)
+[**Nics**](../models/Nics.md)
 
 ### Authorization
 
@@ -608,7 +608,7 @@ api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, opt
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -667,7 +667,7 @@ api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).th
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -727,7 +727,7 @@ api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, optio
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 

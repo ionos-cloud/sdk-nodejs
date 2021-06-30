@@ -55,7 +55,7 @@ api_instance.locationsFindByRegionId(regionId, options).then((response) => conso
 
 ### Return type
 
-[**Locations**](models/Locations.md)
+[**Locations**](../models/Locations.md)
 
 ### Authorization
 
@@ -113,7 +113,7 @@ api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((r
 
 ### Return type
 
-[**Location**](models/Location.md)
+[**Location**](../models/Location.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ api_instance.locationsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Locations**](models/Locations.md)
+[**Locations**](../models/Locations.md)
 
 ### Authorization
 

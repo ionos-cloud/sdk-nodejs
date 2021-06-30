@@ -52,7 +52,7 @@ api_instance.apiInfoGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**Info**](models/Info.md)
+[**Info**](../models/Info.md)
 
 ### Authorization
 

@@ -116,7 +116,7 @@ api_instance.backupunitsFindById(backupunitId, options).then((response) => conso
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -172,7 +172,7 @@ api_instance.backupunitsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**BackupUnits**](models/BackupUnits.md)
+[**BackupUnits**](../models/BackupUnits.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then(
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -287,7 +287,7 @@ api_instance.backupunitsPost(backupUnit, options).then((response) => console.log
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -345,7 +345,7 @@ api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) =
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -401,7 +401,7 @@ api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => cons
 
 ### Return type
 
-[**BackupUnitSSO**](models/BackupUnitSSO.md)
+[**BackupUnitSSO**](../models/BackupUnitSSO.md)
 
 ### Authorization
 

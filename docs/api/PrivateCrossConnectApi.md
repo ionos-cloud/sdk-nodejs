@@ -114,7 +114,7 @@ api_instance.pccsFindById(pccId, options).then((response) => console.log(respons
 
 ### Return type
 
-[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -170,7 +170,7 @@ api_instance.pccsGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**PrivateCrossConnects**](models/PrivateCrossConnects.md)
+[**PrivateCrossConnects**](../models/PrivateCrossConnects.md)
 
 ### Authorization
 
@@ -228,7 +228,7 @@ api_instance.pccsPatch(pccId, pcc, options).then((response) => console.log(respo
 
 ### Return type
 
-[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -285,7 +285,7 @@ api_instance.pccsPost(pcc, options).then((response) => console.log(response));
 
 ### Return type
 
-[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### Authorization
 

@@ -123,7 +123,7 @@ api_instance.datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadb
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ api_instance.datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerI
 
 ### Return type
 
-[**BalancedNics**](models/BalancedNics.md)
+[**BalancedNics**](../models/BalancedNics.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ api_instance.datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancer
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -358,7 +358,7 @@ api_instance.datacentersLoadbalancersFindById(datacenterId, loadbalancerId, opti
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 
@@ -417,7 +417,7 @@ api_instance.datacentersLoadbalancersGet(datacenterId, options).then((response) 
 
 ### Return type
 
-[**Loadbalancers**](models/Loadbalancers.md)
+[**Loadbalancers**](../models/Loadbalancers.md)
 
 ### Authorization
 
@@ -476,7 +476,7 @@ api_instance.datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbal
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 
@@ -534,7 +534,7 @@ api_instance.datacentersLoadbalancersPost(datacenterId, loadbalancer, options).t
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 
@@ -593,7 +593,7 @@ api_instance.datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalan
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 

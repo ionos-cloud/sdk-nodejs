@@ -127,7 +127,7 @@ api_instance.k8sFindByClusterId(k8sClusterId, options).then((response) => consol
 
 ### Return type
 
-[**KubernetesCluster**](models/KubernetesCluster.md)
+[**KubernetesCluster**](../models/KubernetesCluster.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ api_instance.k8sGet(options).then((response) => console.log(response));
 
 ### Return type
 
-[**KubernetesClusters**](models/KubernetesClusters.md)
+[**KubernetesClusters**](../models/KubernetesClusters.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ api_instance.k8sKubeconfigGet(k8sClusterId, options).then((response) => console.
 
 ### Return type
 
-[**KubernetesConfig**](models/KubernetesConfig.md)
+[**KubernetesConfig**](../models/KubernetesConfig.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ api_instance.k8sNodepoolsFindById(k8sClusterId, nodepoolId, options).then((respo
 
 ### Return type
 
-[**KubernetesNodePool**](models/KubernetesNodePool.md)
+[**KubernetesNodePool**](../models/KubernetesNodePool.md)
 
 ### Authorization
 
@@ -413,7 +413,7 @@ api_instance.k8sNodepoolsGet(k8sClusterId, options).then((response) => console.l
 
 ### Return type
 
-[**KubernetesNodePools**](models/KubernetesNodePools.md)
+[**KubernetesNodePools**](../models/KubernetesNodePools.md)
 
 ### Authorization
 
@@ -531,7 +531,7 @@ api_instance.k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, options
 
 ### Return type
 
-[**KubernetesNode**](models/KubernetesNode.md)
+[**KubernetesNode**](../models/KubernetesNode.md)
 
 ### Authorization
 
@@ -589,7 +589,7 @@ api_instance.k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, options).then((respo
 
 ### Return type
 
-[**KubernetesNodes**](models/KubernetesNodes.md)
+[**KubernetesNodes**](../models/KubernetesNodes.md)
 
 ### Authorization
 
@@ -706,7 +706,7 @@ api_instance.k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, options).then((r
 
 ### Return type
 
-[**KubernetesNodePool**](models/KubernetesNodePool.md)
+[**KubernetesNodePool**](../models/KubernetesNodePool.md)
 
 ### Authorization
 
@@ -765,7 +765,7 @@ api_instance.k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, optio
 
 ### Return type
 
-[**KubernetesNodePool**](models/KubernetesNodePool.md)
+[**KubernetesNodePool**](../models/KubernetesNodePool.md)
 
 ### Authorization
 
@@ -822,7 +822,7 @@ api_instance.k8sPost(kubernetesCluster, options).then((response) => console.log(
 
 ### Return type
 
-[**KubernetesCluster**](models/KubernetesCluster.md)
+[**KubernetesCluster**](../models/KubernetesCluster.md)
 
 ### Authorization
 
@@ -880,7 +880,7 @@ api_instance.k8sPut(k8sClusterId, kubernetesCluster, options).then((response) =>
 
 ### Return type
 
-[**KubernetesCluster**](models/KubernetesCluster.md)
+[**KubernetesCluster**](../models/KubernetesCluster.md)
 
 ### Authorization
 
