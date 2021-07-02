@@ -30,27 +30,45 @@ Deletes the specified NIC.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Delete a Nic
-api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Delete a Nic
+api_instance.datacentersServersNicsDelete({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Delete a Nic
-api_instance.datacentersServersNicsDelete(datacenterId, serverId, nicId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Delete a Nic
+api_instance.datacentersServersNicsDelete({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -89,27 +107,45 @@ Retrieves the attributes of a given NIC
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Retrieve a Nic
-api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Retrieve a Nic
+api_instance.datacentersServersNicsFindById({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Retrieve a Nic
-api_instance.datacentersServersNicsFindById(datacenterId, serverId, nicId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Retrieve a Nic
+api_instance.datacentersServersNicsFindById({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -148,27 +184,47 @@ Removes the specific Firewall Rule
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Delete a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Delete a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesDelete({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Delete a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Delete a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesDelete({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -208,27 +264,47 @@ Retrieves the attributes of a given Firewall Rule.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Retrieve a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Retrieve a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesFindById({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Retrieve a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Retrieve a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesFindById({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -268,27 +344,49 @@ Retrieves a list of firewall rules associated with a particular NIC
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# List Firewall Rules 
-api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// List Firewall Rules 
+api_instance.datacentersServersNicsFirewallrulesGet({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# List Firewall Rules 
-api_instance.datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// List Firewall Rules 
+api_instance.datacentersServersNicsFirewallrulesGet({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -329,27 +427,49 @@ You can use update attributes of a resource
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Partially modify a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Partially modify a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesPatch({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  firewallrule: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Partially modify a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Partially modify a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesPatch({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  firewallrule: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -390,27 +510,47 @@ This will add a Firewall Rule to the NIC
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Create a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Create a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesPost({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallrule: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Create a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Create a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesPost({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallrule: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -450,27 +590,49 @@ You can use update attributes of a resource
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Modify a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Modify a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesPut({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  firewallrule: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Modify a Firewall Rule
-api_instance.datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Modify a Firewall Rule
+api_instance.datacentersServersNicsFirewallrulesPut({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  firewallruleId: firewallruleId_example,
+  firewallrule: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -511,27 +673,47 @@ Retrieves a list of NICs.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# List Nics 
-api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// List Nics 
+api_instance.datacentersServersNicsGet({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# List Nics 
-api_instance.datacentersServersNicsGet(datacenterId, serverId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// List Nics 
+api_instance.datacentersServersNicsGet({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -571,27 +753,47 @@ You can use update attributes of a Nic
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Partially modify a Nic
-api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Partially modify a Nic
+api_instance.datacentersServersNicsPatch({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  nic: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Partially modify a Nic
-api_instance.datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Partially modify a Nic
+api_instance.datacentersServersNicsPatch({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  nic: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -631,27 +833,45 @@ Adds a NIC to the target server. Combine count of Nics and volumes attached to t
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Create a Nic
-api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Create a Nic
+api_instance.datacentersServersNicsPost({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nic: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Create a Nic
-api_instance.datacentersServersNicsPost(datacenterId, serverId, nic, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Create a Nic
+api_instance.datacentersServersNicsPost({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nic: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -690,27 +910,47 @@ You can use update attributes of a Nic
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Modify a Nic
-api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Modify a Nic
+api_instance.datacentersServersNicsPut({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  nic: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.NicApi(config)
-# Modify a Nic
-api_instance.datacentersServersNicsPut(datacenterId, serverId, nicId, nic, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.NicApi(config)
+// Modify a Nic
+api_instance.datacentersServersNicsPut({
+  datacenterId: datacenterId_example,
+  serverId: serverId_example,
+  nicId: nicId_example,
+  nic: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

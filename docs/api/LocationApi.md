@@ -21,27 +21,41 @@ Retrieve a list of Locations within a world\'s region
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.LocationApi(config)
-# List Locations within a region
-api_instance.locationsFindByRegionId(regionId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.LocationApi(config)
+// List Locations within a region
+api_instance.locationsFindByRegionId({
+  regionId: regionId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.LocationApi(config)
-# List Locations within a region
-api_instance.locationsFindByRegionId(regionId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.LocationApi(config)
+// List Locations within a region
+api_instance.locationsFindByRegionId({
+  regionId: regionId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -78,27 +92,43 @@ Retrieves the attributes of a given location
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.LocationApi(config)
-# Retrieve a Location
-api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.LocationApi(config)
+// Retrieve a Location
+api_instance.locationsFindByRegionIdAndId({
+  regionId: regionId_example,
+  locationId: locationId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.LocationApi(config)
-# Retrieve a Location
-api_instance.locationsFindByRegionIdAndId(regionId, locationId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.LocationApi(config)
+// Retrieve a Location
+api_instance.locationsFindByRegionIdAndId({
+  regionId: regionId_example,
+  locationId: locationId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -136,27 +166,39 @@ Retrieve a list of Locations. This list represents where you can provision your 
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.LocationApi(config)
-# List Locations
-api_instance.locationsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.LocationApi(config)
+// List Locations
+api_instance.locationsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.LocationApi(config)
-# List Locations
-api_instance.locationsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.LocationApi(config)
+// List Locations
+api_instance.locationsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

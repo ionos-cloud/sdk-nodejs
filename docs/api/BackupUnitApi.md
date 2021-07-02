@@ -25,27 +25,41 @@ NOTE: Running through the deletion process will delete: - the backup plans insid
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Delete a Backup Unit
-api_instance.backupunitsDelete(backupunitId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Delete a Backup Unit
+api_instance.backupunitsDelete({
+  backupunitId: backupunitId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Delete a Backup Unit
-api_instance.backupunitsDelete(backupunitId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Delete a Backup Unit
+api_instance.backupunitsDelete({
+  backupunitId: backupunitId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -82,27 +96,41 @@ You can retrieve the details of an specific backup unit.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Returns the specified backup Unit
-api_instance.backupunitsFindById(backupunitId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Returns the specified backup Unit
+api_instance.backupunitsFindById({
+  backupunitId: backupunitId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Returns the specified backup Unit
-api_instance.backupunitsFindById(backupunitId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Returns the specified backup Unit
+api_instance.backupunitsFindById({
+  backupunitId: backupunitId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -139,27 +167,39 @@ You can retrieve a complete list of backup Units that you have access to.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# List Backup Units 
-api_instance.backupunitsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// List Backup Units 
+api_instance.backupunitsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# List Backup Units 
-api_instance.backupunitsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// List Backup Units 
+api_instance.backupunitsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -195,27 +235,43 @@ You can use update a backup Unit properties
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Partially modify a Backup Unit
-api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Partially modify a Backup Unit
+api_instance.backupunitsPatch({
+  backupunitId: backupunitId_example,
+  backupUnitProperties: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Partially modify a Backup Unit
-api_instance.backupunitsPatch(backupunitId, backupUnitProperties, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Partially modify a Backup Unit
+api_instance.backupunitsPatch({
+  backupunitId: backupunitId_example,
+  backupUnitProperties: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -253,27 +309,41 @@ Create a Backup Unit. A Backup Unit is considered a resource like a virtual data
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Create a Backup Unit
-api_instance.backupunitsPost(backupUnit, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Create a Backup Unit
+api_instance.backupunitsPost({
+  backupUnit: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Create a Backup Unit
-api_instance.backupunitsPost(backupUnit, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Create a Backup Unit
+api_instance.backupunitsPost({
+  backupUnit: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -310,27 +380,43 @@ You can use update a backup Unit properties
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Modify a Backup Unit
-api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Modify a Backup Unit
+api_instance.backupunitsPut({
+  backupunitId: backupunitId_example,
+  backupUnit: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Modify a Backup Unit
-api_instance.backupunitsPut(backupunitId, backupUnit, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Modify a Backup Unit
+api_instance.backupunitsPut({
+  backupunitId: backupunitId_example,
+  backupUnit: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -368,27 +454,39 @@ Returns a single signon URL for the specified backup Unit.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Returns a single signon URL for the specified backup Unit.
-api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Returns a single signon URL for the specified backup Unit.
+api_instance.backupunitsSsourlGet({
+  backupunitId: backupunitId_example,
+  pretty: true,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.BackupUnitApi(config)
-# Returns a single signon URL for the specified backup Unit.
-api_instance.backupunitsSsourlGet(backupunitId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.BackupUnitApi(config)
+// Returns a single signon URL for the specified backup Unit.
+api_instance.backupunitsSsourlGet({
+  backupunitId: backupunitId_example,
+  pretty: true,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

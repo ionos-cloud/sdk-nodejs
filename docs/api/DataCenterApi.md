@@ -24,27 +24,41 @@ Will remove all objects within the datacenter and remove the datacenter object i
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Delete a Data Center
-api_instance.datacentersDelete(datacenterId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Delete a Data Center
+api_instance.datacentersDelete({
+  datacenterId: datacenterId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Delete a Data Center
-api_instance.datacentersDelete(datacenterId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Delete a Data Center
+api_instance.datacentersDelete({
+  datacenterId: datacenterId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -81,27 +95,41 @@ You can retrieve a data center by using the resource\'s ID. This value can be fo
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Retrieve a Data Center
-api_instance.datacentersFindById(datacenterId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Retrieve a Data Center
+api_instance.datacentersFindById({
+  datacenterId: datacenterId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Retrieve a Data Center
-api_instance.datacentersFindById(datacenterId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Retrieve a Data Center
+api_instance.datacentersFindById({
+  datacenterId: datacenterId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -138,27 +166,43 @@ You can retrieve a complete list of data centers provisioned under your account
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# List Data Centers under your account
-api_instance.datacentersGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// List Data Centers under your account
+api_instance.datacentersGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# List Data Centers under your account
-api_instance.datacentersGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// List Data Centers under your account
+api_instance.datacentersGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -196,27 +240,43 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Partially modify a Data Center
-api_instance.datacentersPatch(datacenterId, datacenter, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Partially modify a Data Center
+api_instance.datacentersPatch({
+  datacenterId: datacenterId_example,
+  datacenter: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Partially modify a Data Center
-api_instance.datacentersPatch(datacenterId, datacenter, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Partially modify a Data Center
+api_instance.datacentersPatch({
+  datacenterId: datacenterId_example,
+  datacenter: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -254,27 +314,41 @@ Virtual data centers are the foundation of the platform. They act as logical con
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Create a Data Center
-api_instance.datacentersPost(datacenter, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Create a Data Center
+api_instance.datacentersPost({
+  datacenter: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Create a Data Center
-api_instance.datacentersPost(datacenter, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Create a Data Center
+api_instance.datacentersPost({
+  datacenter: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -311,27 +385,43 @@ You can use update datacenter to re-name the datacenter or update its descriptio
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Modify a Data Center
-api_instance.datacentersPut(datacenterId, datacenter, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Modify a Data Center
+api_instance.datacentersPut({
+  datacenterId: datacenterId_example,
+  datacenter: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DataCenterApi(config)
-# Modify a Data Center
-api_instance.datacentersPut(datacenterId, datacenter, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DataCenterApi(config)
+// Modify a Data Center
+api_instance.datacentersPut({
+  datacenterId: datacenterId_example,
+  datacenter: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

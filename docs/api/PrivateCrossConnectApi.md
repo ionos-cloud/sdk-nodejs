@@ -23,27 +23,41 @@ Delete a private cross-connect if no datacenters are joined to the given PCC
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Delete a Private Cross-Connect
-api_instance.pccsDelete(pccId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Delete a Private Cross-Connect
+api_instance.pccsDelete({
+  pccId: pccId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Delete a Private Cross-Connect
-api_instance.pccsDelete(pccId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Delete a Private Cross-Connect
+api_instance.pccsDelete({
+  pccId: pccId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -80,27 +94,41 @@ You can retrieve a private cross-connect by using the resource\'s ID. This value
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Retrieve a Private Cross-Connect
-api_instance.pccsFindById(pccId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Retrieve a Private Cross-Connect
+api_instance.pccsFindById({
+  pccId: pccId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Retrieve a Private Cross-Connect
-api_instance.pccsFindById(pccId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Retrieve a Private Cross-Connect
+api_instance.pccsFindById({
+  pccId: pccId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -137,27 +165,39 @@ You can retrieve a complete list of private cross-connects provisioned under you
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# List Private Cross-Connects 
-api_instance.pccsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// List Private Cross-Connects 
+api_instance.pccsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# List Private Cross-Connects 
-api_instance.pccsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// List Private Cross-Connects 
+api_instance.pccsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -193,27 +233,43 @@ You can use update private cross-connect to re-name or update its description
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Partially modify a private cross-connect
-api_instance.pccsPatch(pccId, pcc, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Partially modify a private cross-connect
+api_instance.pccsPatch({
+  pccId: pccId_example,
+  pcc: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Partially modify a private cross-connect
-api_instance.pccsPatch(pccId, pcc, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Partially modify a private cross-connect
+api_instance.pccsPatch({
+  pccId: pccId_example,
+  pcc: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -251,27 +307,41 @@ You can use this POST method to create a private cross-connect
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Create a Private Cross-Connect
-api_instance.pccsPost(pcc, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Create a Private Cross-Connect
+api_instance.pccsPost({
+  pcc: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.PrivateCrossConnectApi(config)
-# Create a Private Cross-Connect
-api_instance.pccsPost(pcc, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.PrivateCrossConnectApi(config)
+// Create a Private Cross-Connect
+api_instance.pccsPost({
+  pcc: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

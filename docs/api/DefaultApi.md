@@ -19,27 +19,39 @@ Display API information
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DefaultApi(config)
-# Display API information
-api_instance.apiInfoGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DefaultApi(config)
+// Display API information
+api_instance.apiInfoGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.DefaultApi(config)
-# Display API information
-api_instance.apiInfoGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.DefaultApi(config)
+// Display API information
+api_instance.apiInfoGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

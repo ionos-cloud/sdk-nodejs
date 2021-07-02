@@ -23,27 +23,41 @@ Deletes the specified Snapshot.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Delete a Snapshot
-api_instance.snapshotsDelete(snapshotId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Delete a Snapshot
+api_instance.snapshotsDelete({
+  snapshotId: snapshotId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Delete a Snapshot
-api_instance.snapshotsDelete(snapshotId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Delete a Snapshot
+api_instance.snapshotsDelete({
+  snapshotId: snapshotId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -80,27 +94,41 @@ Retrieves the attributes of a given Snapshot.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Retrieve a Snapshot by its uuid.
-api_instance.snapshotsFindById(snapshotId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Retrieve a Snapshot by its uuid.
+api_instance.snapshotsFindById({
+  snapshotId: snapshotId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Retrieve a Snapshot by its uuid.
-api_instance.snapshotsFindById(snapshotId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Retrieve a Snapshot by its uuid.
+api_instance.snapshotsFindById({
+  snapshotId: snapshotId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -137,27 +165,39 @@ Retrieve a list of available snapshots.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# List Snapshots 
-api_instance.snapshotsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// List Snapshots 
+api_instance.snapshotsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# List Snapshots 
-api_instance.snapshotsGet(options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// List Snapshots 
+api_instance.snapshotsGet({
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -193,27 +233,43 @@ You can use this method to update attributes of a Snapshot.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Partially modify a Snapshot
-api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Partially modify a Snapshot
+api_instance.snapshotsPatch({
+  snapshotId: snapshotId_example,
+  snapshot: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Partially modify a Snapshot
-api_instance.snapshotsPatch(snapshotId, snapshot, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Partially modify a Snapshot
+api_instance.snapshotsPatch({
+  snapshotId: snapshotId_example,
+  snapshot: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -251,27 +307,43 @@ You can use update attributes of a resource
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Modify a Snapshot
-api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Modify a Snapshot
+api_instance.snapshotsPut({
+  snapshotId: snapshotId_example,
+  snapshot: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.SnapshotApi(config)
-# Modify a Snapshot
-api_instance.snapshotsPut(snapshotId, snapshot, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.SnapshotApi(config)
+// Modify a Snapshot
+api_instance.snapshotsPut({
+  snapshotId: snapshotId_example,
+  snapshot: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters

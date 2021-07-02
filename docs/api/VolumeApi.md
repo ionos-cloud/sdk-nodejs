@@ -26,27 +26,51 @@ Creates a snapshot of a volume within the datacenter. You can use a snapshot to 
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Create Volume Snapshot
-api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Create Volume Snapshot
+api_instance.datacentersVolumesCreateSnapshotPost({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  name: name_example,
+  description: description_example,
+  secAuthProtection: true,
+  licenceType: licenceType_example, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Create Volume Snapshot
-api_instance.datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Create Volume Snapshot
+api_instance.datacentersVolumesCreateSnapshotPost({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  name: name_example,
+  description: description_example,
+  secAuthProtection: true,
+  licenceType: licenceType_example, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -88,27 +112,43 @@ Deletes the specified volume. This will result in the volume being removed from 
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Delete a Volume
-api_instance.datacentersVolumesDelete(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Delete a Volume
+api_instance.datacentersVolumesDelete({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Delete a Volume
-api_instance.datacentersVolumesDelete(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Delete a Volume
+api_instance.datacentersVolumesDelete({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -146,27 +186,43 @@ Retrieves the attributes of a given Volume
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Retrieve a Volume
-api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Retrieve a Volume
+api_instance.datacentersVolumesFindById({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Retrieve a Volume
-api_instance.datacentersVolumesFindById(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Retrieve a Volume
+api_instance.datacentersVolumesFindById({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -204,27 +260,45 @@ Retrieves a list of Volumes.
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# List Volumes 
-api_instance.datacentersVolumesGet(datacenterId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// List Volumes 
+api_instance.datacentersVolumesGet({
+  datacenterId: datacenterId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# List Volumes 
-api_instance.datacentersVolumesGet(datacenterId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// List Volumes 
+api_instance.datacentersVolumesGet({
+  datacenterId: datacenterId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  offset: 56,
+  limit: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -263,27 +337,45 @@ You can use update attributes of a Volume
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Partially modify a Volume
-api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Partially modify a Volume
+api_instance.datacentersVolumesPatch({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  volume: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Partially modify a Volume
-api_instance.datacentersVolumesPatch(datacenterId, volumeId, volume, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Partially modify a Volume
+api_instance.datacentersVolumesPatch({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  volume: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -322,27 +414,43 @@ Creates a volume within the datacenter. This will not attach the volume to a ser
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Create a Volume
-api_instance.datacentersVolumesPost(datacenterId, volume, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Create a Volume
+api_instance.datacentersVolumesPost({
+  datacenterId: datacenterId_example,
+  volume: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Create a Volume
-api_instance.datacentersVolumesPost(datacenterId, volume, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Create a Volume
+api_instance.datacentersVolumesPost({
+  datacenterId: datacenterId_example,
+  volume: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -380,27 +488,45 @@ You can use update attributes of a Volume
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Modify a Volume
-api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Modify a Volume
+api_instance.datacentersVolumesPut({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  volume: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Modify a Volume
-api_instance.datacentersVolumesPut(datacenterId, volumeId, volume, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Modify a Volume
+api_instance.datacentersVolumesPut({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  volume: ,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
@@ -439,27 +565,45 @@ This will restore a snapshot onto a volume. A snapshot is created as just anothe
 * Basic Authentication (Basic Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Restore Volume Snapshot
-api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Restore Volume Snapshot
+api_instance.datacentersVolumesRestoreSnapshotPost({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  snapshotId: snapshotId_example, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 * Api Key Authentication (Token Authentication):
 ```javascript
 const ionoscloud = require('@ionos-cloud/sdk-nodejs')
-# setup authorization
+// setup authorization
 const config = new ionoscloud.Configuration({
     username: 'YOUR_USERNAME',
     password: 'YOUR_PASSWORD'
 });
-api_instance = ionoscloud.VolumeApi(config)
-# Restore Volume Snapshot
-api_instance.datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, options).then((response) => console.log(response));
+const api_instance = new ionoscloud.VolumeApi(config)
+// Restore Volume Snapshot
+api_instance.datacentersVolumesRestoreSnapshotPost({
+  datacenterId: datacenterId_example,
+  volumeId: volumeId_example,
+  pretty: true,
+  depth: 56,
+  xContractNumber: 56,
+  snapshotId: snapshotId_example, 
+  options: {}
+}).then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
 ```
 
 ### Parameters
