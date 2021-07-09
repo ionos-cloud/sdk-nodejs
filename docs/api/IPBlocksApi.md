@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**ipblocksDelete**](IPBlocksApi.md#ipblocksDelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block |
-| [**ipblocksFindById**](IPBlocksApi.md#ipblocksFindById) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block |
-| [**ipblocksGet**](IPBlocksApi.md#ipblocksGet) | **GET** /ipblocks | List IP Blocks  |
-| [**ipblocksPatch**](IPBlocksApi.md#ipblocksPatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block |
-| [**ipblocksPost**](IPBlocksApi.md#ipblocksPost) | **POST** /ipblocks | Reserve IP Block |
-| [**ipblocksPut**](IPBlocksApi.md#ipblocksPut) | **PUT** /ipblocks/{ipblockId} | Modify IP Block |
+| [**ipblocksDelete**](IPBlocksApi.md#ipblocksdelete) | **DELETE** /ipblocks/{ipblockId} | Delete IP Block |
+| [**ipblocksFindById**](IPBlocksApi.md#ipblocksfindbyid) | **GET** /ipblocks/{ipblockId} | Retrieve an IP Block |
+| [**ipblocksGet**](IPBlocksApi.md#ipblocksget) | **GET** /ipblocks | List IP Blocks  |
+| [**ipblocksPatch**](IPBlocksApi.md#ipblockspatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP Block |
+| [**ipblocksPost**](IPBlocksApi.md#ipblockspost) | **POST** /ipblocks | Reserve IP Block |
+| [**ipblocksPut**](IPBlocksApi.md#ipblocksput) | **PUT** /ipblocks/{ipblockId} | Modify IP Block |
 
 
 ## ipblocksDelete
@@ -110,7 +110,7 @@ api_instance
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ api_instance
 
 ### Return type
 
-[**IpBlocks**](models/IpBlocks.md)
+[**IpBlocks**](../models/IpBlocks.md)
 
 ### Authorization
 
@@ -213,14 +213,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **ipblockId** | **string** |  | [default to undefined] |
-| **ipblock** | [**IpBlockProperties**](IpBlockProperties.md) | IP Block to be modified |  |
+| **ipblock** | [**IpBlockProperties**](../models/IpBlockProperties.md) | IP Block to be modified |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 
@@ -268,14 +268,14 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ipblock** | [**IpBlock**](IpBlock.md) | IP Block to be reserved |  |
+| **ipblock** | [**IpBlock**](../models/IpBlock.md) | IP Block to be reserved |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 
@@ -325,14 +325,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **ipblockId** | **string** |  | [default to undefined] |
-| **ipblock** | [**IpBlock**](IpBlock.md) | IP Block to be modified |  |
+| **ipblock** | [**IpBlock**](../models/IpBlock.md) | IP Block to be modified |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**IpBlock**](models/IpBlock.md)
+[**IpBlock**](../models/IpBlock.md)
 
 ### Authorization
 

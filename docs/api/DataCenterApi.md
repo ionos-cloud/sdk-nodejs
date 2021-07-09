@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersDelete**](DataCenterApi.md#datacentersDelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center |
-| [**datacentersFindById**](DataCenterApi.md#datacentersFindById) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center |
-| [**datacentersGet**](DataCenterApi.md#datacentersGet) | **GET** /datacenters | List Data Centers under your account |
-| [**datacentersPatch**](DataCenterApi.md#datacentersPatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center |
-| [**datacentersPost**](DataCenterApi.md#datacentersPost) | **POST** /datacenters | Create a Data Center |
-| [**datacentersPut**](DataCenterApi.md#datacentersPut) | **PUT** /datacenters/{datacenterId} | Modify a Data Center |
+| [**datacentersDelete**](DataCenterApi.md#datacentersdelete) | **DELETE** /datacenters/{datacenterId} | Delete a Data Center |
+| [**datacentersFindById**](DataCenterApi.md#datacentersfindbyid) | **GET** /datacenters/{datacenterId} | Retrieve a Data Center |
+| [**datacentersGet**](DataCenterApi.md#datacentersget) | **GET** /datacenters | List Data Centers under your account |
+| [**datacentersPatch**](DataCenterApi.md#datacenterspatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center |
+| [**datacentersPost**](DataCenterApi.md#datacenterspost) | **POST** /datacenters | Create a Data Center |
+| [**datacentersPut**](DataCenterApi.md#datacentersput) | **PUT** /datacenters/{datacenterId} | Modify a Data Center |
 
 
 ## datacentersDelete
@@ -110,7 +110,7 @@ api_instance
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ api_instance
 
 ### Return type
 
-[**Datacenters**](models/Datacenters.md)
+[**Datacenters**](../models/Datacenters.md)
 
 ### Authorization
 
@@ -217,14 +217,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
-| **datacenter** | [**DatacenterProperties**](DatacenterProperties.md) | Modified properties of Data Center |  |
+| **datacenter** | [**DatacenterProperties**](../models/DatacenterProperties.md) | Modified properties of Data Center |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 
@@ -272,14 +272,14 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenter** | [**Datacenter**](Datacenter.md) | Datacenter to be created |  |
+| **datacenter** | [**Datacenter**](../models/Datacenter.md) | Datacenter to be created |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 
@@ -329,14 +329,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
-| **datacenter** | [**Datacenter**](Datacenter.md) | Modified Data Center |  |
+| **datacenter** | [**Datacenter**](../models/Datacenter.md) | Modified Data Center |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Datacenter**](models/Datacenter.md)
+[**Datacenter**](../models/Datacenter.md)
 
 ### Authorization
 

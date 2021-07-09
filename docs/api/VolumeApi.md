@@ -4,14 +4,14 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersVolumesCreateSnapshotPost**](VolumeApi.md#datacentersVolumesCreateSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot |
-| [**datacentersVolumesDelete**](VolumeApi.md#datacentersVolumesDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume |
-| [**datacentersVolumesFindById**](VolumeApi.md#datacentersVolumesFindById) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume |
-| [**datacentersVolumesGet**](VolumeApi.md#datacentersVolumesGet) | **GET** /datacenters/{datacenterId}/volumes | List Volumes  |
-| [**datacentersVolumesPatch**](VolumeApi.md#datacentersVolumesPatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume |
-| [**datacentersVolumesPost**](VolumeApi.md#datacentersVolumesPost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume |
-| [**datacentersVolumesPut**](VolumeApi.md#datacentersVolumesPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume |
-| [**datacentersVolumesRestoreSnapshotPost**](VolumeApi.md#datacentersVolumesRestoreSnapshotPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot |
+| [**datacentersVolumesCreateSnapshotPost**](VolumeApi.md#datacentersvolumescreatesnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create Volume Snapshot |
+| [**datacentersVolumesDelete**](VolumeApi.md#datacentersvolumesdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete a Volume |
+| [**datacentersVolumesFindById**](VolumeApi.md#datacentersvolumesfindbyid) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve a Volume |
+| [**datacentersVolumesGet**](VolumeApi.md#datacentersvolumesget) | **GET** /datacenters/{datacenterId}/volumes | List Volumes  |
+| [**datacentersVolumesPatch**](VolumeApi.md#datacentersvolumespatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify a Volume |
+| [**datacentersVolumesPost**](VolumeApi.md#datacentersvolumespost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume |
+| [**datacentersVolumesPut**](VolumeApi.md#datacentersvolumesput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume |
+| [**datacentersVolumesRestoreSnapshotPost**](VolumeApi.md#datacentersvolumesrestoresnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore Volume Snapshot |
 
 
 ## datacentersVolumesCreateSnapshotPost
@@ -67,7 +67,7 @@ api_instance
 
 ### Return type
 
-[**Snapshot**](models/Snapshot.md)
+[**Snapshot**](../models/Snapshot.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ api_instance
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ api_instance
 
 ### Return type
 
-[**Volumes**](models/Volumes.md)
+[**Volumes**](../models/Volumes.md)
 
 ### Authorization
 
@@ -292,14 +292,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
 | **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **volume** | [**VolumeProperties**](VolumeProperties.md) | Modified properties of Volume |  |
+| **volume** | [**VolumeProperties**](../models/VolumeProperties.md) | Modified properties of Volume |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -349,14 +349,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
-| **volume** | [**Volume**](Volume.md) | Volume to be created |  |
+| **volume** | [**Volume**](../models/Volume.md) | Volume to be created |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 
@@ -408,14 +408,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
 | **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **volume** | [**Volume**](Volume.md) | Modified Volume |  |
+| **volume** | [**Volume**](../models/Volume.md) | Modified Volume |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Volume**](models/Volume.md)
+[**Volume**](../models/Volume.md)
 
 ### Authorization
 

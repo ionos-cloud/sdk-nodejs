@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**pccsDelete**](PrivateCrossConnectApi.md#pccsDelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
-| [**pccsFindById**](PrivateCrossConnectApi.md#pccsFindById) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
-| [**pccsGet**](PrivateCrossConnectApi.md#pccsGet) | **GET** /pccs | List Private Cross-Connects  |
-| [**pccsPatch**](PrivateCrossConnectApi.md#pccsPatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect |
-| [**pccsPost**](PrivateCrossConnectApi.md#pccsPost) | **POST** /pccs | Create a Private Cross-Connect |
+| [**pccsDelete**](PrivateCrossConnectApi.md#pccsdelete) | **DELETE** /pccs/{pccId} | Delete a Private Cross-Connect |
+| [**pccsFindById**](PrivateCrossConnectApi.md#pccsfindbyid) | **GET** /pccs/{pccId} | Retrieve a Private Cross-Connect |
+| [**pccsGet**](PrivateCrossConnectApi.md#pccsget) | **GET** /pccs | List Private Cross-Connects  |
+| [**pccsPatch**](PrivateCrossConnectApi.md#pccspatch) | **PATCH** /pccs/{pccId} | Partially modify a private cross-connect |
+| [**pccsPost**](PrivateCrossConnectApi.md#pccspost) | **POST** /pccs | Create a Private Cross-Connect |
 
 
 ## pccsDelete
@@ -109,7 +109,7 @@ api_instance
 
 ### Return type
 
-[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ api_instance
 
 ### Return type
 
-[**PrivateCrossConnects**](models/PrivateCrossConnects.md)
+[**PrivateCrossConnects**](../models/PrivateCrossConnects.md)
 
 ### Authorization
 
@@ -212,14 +212,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **pccId** | **string** | The unique ID of the private cross-connect | [default to undefined] |
-| **pcc** | [**PrivateCrossConnectProperties**](PrivateCrossConnectProperties.md) | Modified properties of private cross-connect |  |
+| **pcc** | [**PrivateCrossConnectProperties**](../models/PrivateCrossConnectProperties.md) | Modified properties of private cross-connect |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -267,14 +267,14 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **pcc** | [**PrivateCrossConnect**](PrivateCrossConnect.md) | Private Cross-Connect to be created |  |
+| **pcc** | [**PrivateCrossConnect**](../models/PrivateCrossConnect.md) | Private Cross-Connect to be created |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
+[**PrivateCrossConnect**](../models/PrivateCrossConnect.md)
 
 ### Authorization
 

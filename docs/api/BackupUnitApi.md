@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**backupunitsDelete**](BackupUnitApi.md#backupunitsDelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit |
-| [**backupunitsFindById**](BackupUnitApi.md#backupunitsFindById) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit |
-| [**backupunitsGet**](BackupUnitApi.md#backupunitsGet) | **GET** /backupunits | List Backup Units  |
-| [**backupunitsPatch**](BackupUnitApi.md#backupunitsPatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit |
-| [**backupunitsPost**](BackupUnitApi.md#backupunitsPost) | **POST** /backupunits | Create a Backup Unit |
-| [**backupunitsPut**](BackupUnitApi.md#backupunitsPut) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit |
-| [**backupunitsSsourlGet**](BackupUnitApi.md#backupunitsSsourlGet) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit. |
+| [**backupunitsDelete**](BackupUnitApi.md#backupunitsdelete) | **DELETE** /backupunits/{backupunitId} | Delete a Backup Unit |
+| [**backupunitsFindById**](BackupUnitApi.md#backupunitsfindbyid) | **GET** /backupunits/{backupunitId} | Returns the specified backup Unit |
+| [**backupunitsGet**](BackupUnitApi.md#backupunitsget) | **GET** /backupunits | List Backup Units  |
+| [**backupunitsPatch**](BackupUnitApi.md#backupunitspatch) | **PATCH** /backupunits/{backupunitId} | Partially modify a Backup Unit |
+| [**backupunitsPost**](BackupUnitApi.md#backupunitspost) | **POST** /backupunits | Create a Backup Unit |
+| [**backupunitsPut**](BackupUnitApi.md#backupunitsput) | **PUT** /backupunits/{backupunitId} | Modify a Backup Unit |
+| [**backupunitsSsourlGet**](BackupUnitApi.md#backupunitsssourlget) | **GET** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified backup Unit. |
 
 
 ## backupunitsDelete
@@ -111,7 +111,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnits**](models/BackupUnits.md)
+[**BackupUnits**](../models/BackupUnits.md)
 
 ### Authorization
 
@@ -214,14 +214,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **backupunitId** | **string** | The unique ID of the backup unit | [default to undefined] |
-| **backupUnitProperties** | [**BackupUnitProperties**](BackupUnitProperties.md) | Modified backup Unit properties |  |
+| **backupUnitProperties** | [**BackupUnitProperties**](../models/BackupUnitProperties.md) | Modified backup Unit properties |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -269,14 +269,14 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **backupUnit** | [**BackupUnit**](BackupUnit.md) | Payload containing data to create a new Backup Unit |  |
+| **backupUnit** | [**BackupUnit**](../models/BackupUnit.md) | Payload containing data to create a new Backup Unit |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -326,14 +326,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **backupunitId** | **string** | The unique ID of the backup unit | [default to undefined] |
-| **backupUnit** | [**BackupUnit**](BackupUnit.md) | Modified backup Unit |  |
+| **backupUnit** | [**BackupUnit**](../models/BackupUnit.md) | Modified backup Unit |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**BackupUnit**](models/BackupUnit.md)
+[**BackupUnit**](../models/BackupUnit.md)
 
 ### Authorization
 
@@ -386,7 +386,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnitSSO**](models/BackupUnitSSO.md)
+[**BackupUnitSSO**](../models/BackupUnitSSO.md)
 
 ### Authorization
 

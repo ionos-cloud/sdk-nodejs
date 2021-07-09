@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersLoadbalancersBalancednicsDelete**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer |
-| [**datacentersLoadbalancersBalancednicsFindByNicId**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsFindByNicId) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer |
-| [**datacentersLoadbalancersBalancednicsGet**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsGet) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members  |
-| [**datacentersLoadbalancersBalancednicsPost**](LoadBalancerApi.md#datacentersLoadbalancersBalancednicsPost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer |
-| [**datacentersLoadbalancersDelete**](LoadBalancerApi.md#datacentersLoadbalancersDelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer. |
-| [**datacentersLoadbalancersFindById**](LoadBalancerApi.md#datacentersLoadbalancersFindById) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer |
-| [**datacentersLoadbalancersGet**](LoadBalancerApi.md#datacentersLoadbalancersGet) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
-| [**datacentersLoadbalancersPatch**](LoadBalancerApi.md#datacentersLoadbalancersPatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer |
-| [**datacentersLoadbalancersPost**](LoadBalancerApi.md#datacentersLoadbalancersPost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
-| [**datacentersLoadbalancersPut**](LoadBalancerApi.md#datacentersLoadbalancersPut) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer |
+| [**datacentersLoadbalancersBalancednicsDelete**](LoadBalancerApi.md#datacentersloadbalancersbalancednicsdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer |
+| [**datacentersLoadbalancersBalancednicsFindByNicId**](LoadBalancerApi.md#datacentersloadbalancersbalancednicsfindbynicid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer |
+| [**datacentersLoadbalancersBalancednicsGet**](LoadBalancerApi.md#datacentersloadbalancersbalancednicsget) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members  |
+| [**datacentersLoadbalancersBalancednicsPost**](LoadBalancerApi.md#datacentersloadbalancersbalancednicspost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer |
+| [**datacentersLoadbalancersDelete**](LoadBalancerApi.md#datacentersloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer. |
+| [**datacentersLoadbalancersFindById**](LoadBalancerApi.md#datacentersloadbalancersfindbyid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer |
+| [**datacentersLoadbalancersGet**](LoadBalancerApi.md#datacentersloadbalancersget) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
+| [**datacentersLoadbalancersPatch**](LoadBalancerApi.md#datacentersloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer |
+| [**datacentersLoadbalancersPost**](LoadBalancerApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
+| [**datacentersLoadbalancersPut**](LoadBalancerApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer |
 
 
 ## datacentersLoadbalancersBalancednicsDelete
@@ -122,7 +122,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ api_instance
 
 ### Return type
 
-[**BalancedNics**](models/BalancedNics.md)
+[**BalancedNics**](../models/BalancedNics.md)
 
 ### Authorization
 
@@ -235,14 +235,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
 | **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **nic** | [**Nic**](Nic.md) | Nic id to be attached |  |
+| **nic** | [**Nic**](../models/Nic.md) | Nic id to be attached |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Nic**](models/Nic.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancers**](models/Loadbalancers.md)
+[**Loadbalancers**](../models/Loadbalancers.md)
 
 ### Authorization
 
@@ -467,14 +467,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
 | **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **loadbalancer** | [**LoadbalancerProperties**](LoadbalancerProperties.md) | Modified Loadbalancer |  |
+| **loadbalancer** | [**LoadbalancerProperties**](../models/LoadbalancerProperties.md) | Modified Loadbalancer |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 
@@ -524,14 +524,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
-| **loadbalancer** | [**Loadbalancer**](Loadbalancer.md) | Loadbalancer to be created |  |
+| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | Loadbalancer to be created |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 
@@ -583,14 +583,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the datacenter | [default to undefined] |
 | **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **loadbalancer** | [**Loadbalancer**](Loadbalancer.md) | Modified Loadbalancer |  |
+| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | Modified Loadbalancer |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Loadbalancer**](models/Loadbalancer.md)
+[**Loadbalancer**](../models/Loadbalancer.md)
 
 ### Authorization
 

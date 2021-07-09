@@ -4,33 +4,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersLabelsDelete**](LabelApi.md#datacentersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center |
-| [**datacentersLabelsFindByKey**](LabelApi.md#datacentersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center |
-| [**datacentersLabelsGet**](LabelApi.md#datacentersLabelsGet) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels |
-| [**datacentersLabelsPost**](LabelApi.md#datacentersLabelsPost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center |
-| [**datacentersLabelsPut**](LabelApi.md#datacentersLabelsPut) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center |
-| [**datacentersServersLabelsDelete**](LabelApi.md#datacentersServersLabelsDelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server |
-| [**datacentersServersLabelsFindByKey**](LabelApi.md#datacentersServersLabelsFindByKey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server |
-| [**datacentersServersLabelsGet**](LabelApi.md#datacentersServersLabelsGet) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels |
-| [**datacentersServersLabelsPost**](LabelApi.md#datacentersServersLabelsPost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server |
-| [**datacentersServersLabelsPut**](LabelApi.md#datacentersServersLabelsPut) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server |
-| [**datacentersVolumesLabelsDelete**](LabelApi.md#datacentersVolumesLabelsDelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume |
-| [**datacentersVolumesLabelsFindByKey**](LabelApi.md#datacentersVolumesLabelsFindByKey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume |
-| [**datacentersVolumesLabelsGet**](LabelApi.md#datacentersVolumesLabelsGet) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels |
-| [**datacentersVolumesLabelsPost**](LabelApi.md#datacentersVolumesLabelsPost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume |
-| [**datacentersVolumesLabelsPut**](LabelApi.md#datacentersVolumesLabelsPut) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume |
-| [**ipblocksLabelsDelete**](LabelApi.md#ipblocksLabelsDelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block |
-| [**ipblocksLabelsFindByKey**](LabelApi.md#ipblocksLabelsFindByKey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block |
-| [**ipblocksLabelsGet**](LabelApi.md#ipblocksLabelsGet) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels |
-| [**ipblocksLabelsPost**](LabelApi.md#ipblocksLabelsPost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block |
-| [**ipblocksLabelsPut**](LabelApi.md#ipblocksLabelsPut) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block |
-| [**labelsFindByUrn**](LabelApi.md#labelsFindByUrn) | **GET** /labels/{labelurn} | Returns the label by its URN. |
-| [**labelsGet**](LabelApi.md#labelsGet) | **GET** /labels | List Labels  |
-| [**snapshotsLabelsDelete**](LabelApi.md#snapshotsLabelsDelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot |
-| [**snapshotsLabelsFindByKey**](LabelApi.md#snapshotsLabelsFindByKey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot |
-| [**snapshotsLabelsGet**](LabelApi.md#snapshotsLabelsGet) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels |
-| [**snapshotsLabelsPost**](LabelApi.md#snapshotsLabelsPost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot |
-| [**snapshotsLabelsPut**](LabelApi.md#snapshotsLabelsPut) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot |
+| [**datacentersLabelsDelete**](LabelApi.md#datacenterslabelsdelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center |
+| [**datacentersLabelsFindByKey**](LabelApi.md#datacenterslabelsfindbykey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center |
+| [**datacentersLabelsGet**](LabelApi.md#datacenterslabelsget) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels |
+| [**datacentersLabelsPost**](LabelApi.md#datacenterslabelspost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center |
+| [**datacentersLabelsPut**](LabelApi.md#datacenterslabelsput) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center |
+| [**datacentersServersLabelsDelete**](LabelApi.md#datacentersserverslabelsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server |
+| [**datacentersServersLabelsFindByKey**](LabelApi.md#datacentersserverslabelsfindbykey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server |
+| [**datacentersServersLabelsGet**](LabelApi.md#datacentersserverslabelsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels |
+| [**datacentersServersLabelsPost**](LabelApi.md#datacentersserverslabelspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server |
+| [**datacentersServersLabelsPut**](LabelApi.md#datacentersserverslabelsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server |
+| [**datacentersVolumesLabelsDelete**](LabelApi.md#datacentersvolumeslabelsdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume |
+| [**datacentersVolumesLabelsFindByKey**](LabelApi.md#datacentersvolumeslabelsfindbykey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume |
+| [**datacentersVolumesLabelsGet**](LabelApi.md#datacentersvolumeslabelsget) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels |
+| [**datacentersVolumesLabelsPost**](LabelApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume |
+| [**datacentersVolumesLabelsPut**](LabelApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume |
+| [**ipblocksLabelsDelete**](LabelApi.md#ipblockslabelsdelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block |
+| [**ipblocksLabelsFindByKey**](LabelApi.md#ipblockslabelsfindbykey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block |
+| [**ipblocksLabelsGet**](LabelApi.md#ipblockslabelsget) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels |
+| [**ipblocksLabelsPost**](LabelApi.md#ipblockslabelspost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block |
+| [**ipblocksLabelsPut**](LabelApi.md#ipblockslabelsput) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block |
+| [**labelsFindByUrn**](LabelApi.md#labelsfindbyurn) | **GET** /labels/{labelurn} | Returns the label by its URN. |
+| [**labelsGet**](LabelApi.md#labelsget) | **GET** /labels | List Labels  |
+| [**snapshotsLabelsDelete**](LabelApi.md#snapshotslabelsdelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot |
+| [**snapshotsLabelsFindByKey**](LabelApi.md#snapshotslabelsfindbykey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot |
+| [**snapshotsLabelsGet**](LabelApi.md#snapshotslabelsget) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels |
+| [**snapshotsLabelsPost**](LabelApi.md#snapshotslabelspost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot |
+| [**snapshotsLabelsPut**](LabelApi.md#snapshotslabelsput) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot |
 
 
 ## datacentersLabelsDelete
@@ -135,7 +135,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -244,14 +244,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -303,14 +303,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
 | **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -541,14 +541,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the Datacenter | [default to undefined] |
 | **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -602,14 +602,14 @@ api_instance
 | **datacenterId** | **string** | The unique ID of the Datacenter | [default to undefined] |
 | **serverId** | **string** | The unique ID of the Server | [default to undefined] |
 | **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -727,7 +727,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -788,7 +788,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -840,14 +840,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the Datacenter | [default to undefined] |
 | **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -901,14 +901,14 @@ api_instance
 | **datacenterId** | **string** | The unique ID of the Datacenter | [default to undefined] |
 | **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
 | **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1022,7 +1022,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1077,7 +1077,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -1127,14 +1127,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1186,14 +1186,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
 | **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1248,7 +1248,7 @@ api_instance
 
 ### Return type
 
-[**Label**](models/Label.md)
+[**Label**](../models/Label.md)
 
 ### Authorization
 
@@ -1301,7 +1301,7 @@ api_instance
 
 ### Return type
 
-[**Labels**](models/Labels.md)
+[**Labels**](../models/Labels.md)
 
 ### Authorization
 
@@ -1415,7 +1415,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1470,7 +1470,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](models/LabelResources.md)
+[**LabelResources**](../models/LabelResources.md)
 
 ### Authorization
 
@@ -1520,14 +1520,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 
@@ -1579,14 +1579,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
 | **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label |  |
+| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**LabelResource**](models/LabelResource.md)
+[**LabelResource**](../models/LabelResource.md)
 
 ### Authorization
 

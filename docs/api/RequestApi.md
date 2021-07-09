@@ -4,9 +4,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**requestsFindById**](RequestApi.md#requestsFindById) | **GET** /requests/{requestId} | Retrieve a Request |
-| [**requestsGet**](RequestApi.md#requestsGet) | **GET** /requests | List Requests |
-| [**requestsStatusGet**](RequestApi.md#requestsStatusGet) | **GET** /requests/{requestId}/status | Retrieve Request Status |
+| [**requestsFindById**](RequestApi.md#requestsfindbyid) | **GET** /requests/{requestId} | Retrieve a Request |
+| [**requestsGet**](RequestApi.md#requestsget) | **GET** /requests | List Requests |
+| [**requestsStatusGet**](RequestApi.md#requestsstatusget) | **GET** /requests/{requestId}/status | Retrieve Request Status |
 
 
 ## requestsFindById
@@ -52,7 +52,7 @@ api_instance
 
 ### Return type
 
-[**Request**](models/Request.md)
+[**Request**](../models/Request.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ api_instance
 
 ### Return type
 
-[**Requests**](models/Requests.md)
+[**Requests**](../models/Requests.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ api_instance
 
 ### Return type
 
-[**RequestStatus**](models/RequestStatus.md)
+[**RequestStatus**](../models/RequestStatus.md)
 
 ### Authorization
 

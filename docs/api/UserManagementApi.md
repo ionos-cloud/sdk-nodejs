@@ -4,36 +4,36 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**umGroupsDelete**](UserManagementApi.md#umGroupsDelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
-| [**umGroupsFindById**](UserManagementApi.md#umGroupsFindById) | **GET** /um/groups/{groupId} | Retrieve a Group |
-| [**umGroupsGet**](UserManagementApi.md#umGroupsGet) | **GET** /um/groups | List All Groups. |
-| [**umGroupsPost**](UserManagementApi.md#umGroupsPost) | **POST** /um/groups | Create a Group |
-| [**umGroupsPut**](UserManagementApi.md#umGroupsPut) | **PUT** /um/groups/{groupId} | Modify a group |
-| [**umGroupsResourcesGet**](UserManagementApi.md#umGroupsResourcesGet) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
-| [**umGroupsSharesDelete**](UserManagementApi.md#umGroupsSharesDelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
-| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umGroupsSharesFindByResourceId) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
-| [**umGroupsSharesGet**](UserManagementApi.md#umGroupsSharesGet) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
-| [**umGroupsSharesPost**](UserManagementApi.md#umGroupsSharesPost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
-| [**umGroupsSharesPut**](UserManagementApi.md#umGroupsSharesPut) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
-| [**umGroupsUsersDelete**](UserManagementApi.md#umGroupsUsersDelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
-| [**umGroupsUsersGet**](UserManagementApi.md#umGroupsUsersGet) | **GET** /um/groups/{groupId}/users | List Group Members  |
-| [**umGroupsUsersPost**](UserManagementApi.md#umGroupsUsersPost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
-| [**umResourcesFindByType**](UserManagementApi.md#umResourcesFindByType) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
-| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umResourcesFindByTypeAndId) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
-| [**umResourcesGet**](UserManagementApi.md#umResourcesGet) | **GET** /um/resources | List All Resources. |
-| [**umUsersDelete**](UserManagementApi.md#umUsersDelete) | **DELETE** /um/users/{userId} | Delete a User |
-| [**umUsersFindById**](UserManagementApi.md#umUsersFindById) | **GET** /um/users/{userId} | Retrieve a User |
-| [**umUsersGet**](UserManagementApi.md#umUsersGet) | **GET** /um/users | List all Users  |
-| [**umUsersGroupsGet**](UserManagementApi.md#umUsersGroupsGet) | **GET** /um/users/{userId}/groups | Retrieve a User\&#39;s group resources |
-| [**umUsersOwnsGet**](UserManagementApi.md#umUsersOwnsGet) | **GET** /um/users/{userId}/owns | Retrieve a User\&#39;s own resources |
-| [**umUsersPost**](UserManagementApi.md#umUsersPost) | **POST** /um/users | Create a user |
-| [**umUsersPut**](UserManagementApi.md#umUsersPut) | **PUT** /um/users/{userId} | Modify a user |
-| [**umUsersS3keysDelete**](UserManagementApi.md#umUsersS3keysDelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key |
-| [**umUsersS3keysFindByKeyId**](UserManagementApi.md#umUsersS3keysFindByKeyId) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User |
-| [**umUsersS3keysGet**](UserManagementApi.md#umUsersS3keysGet) | **GET** /um/users/{userId}/s3keys | Retrieve a User\&#39;s S3 keys |
-| [**umUsersS3keysPost**](UserManagementApi.md#umUsersS3keysPost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user |
-| [**umUsersS3keysPut**](UserManagementApi.md#umUsersS3keysPut) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
-| [**umUsersS3ssourlGet**](UserManagementApi.md#umUsersS3ssourlGet) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
+| [**umGroupsDelete**](UserManagementApi.md#umgroupsdelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
+| [**umGroupsFindById**](UserManagementApi.md#umgroupsfindbyid) | **GET** /um/groups/{groupId} | Retrieve a Group |
+| [**umGroupsGet**](UserManagementApi.md#umgroupsget) | **GET** /um/groups | List All Groups. |
+| [**umGroupsPost**](UserManagementApi.md#umgroupspost) | **POST** /um/groups | Create a Group |
+| [**umGroupsPut**](UserManagementApi.md#umgroupsput) | **PUT** /um/groups/{groupId} | Modify a group |
+| [**umGroupsResourcesGet**](UserManagementApi.md#umgroupsresourcesget) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
+| [**umGroupsSharesDelete**](UserManagementApi.md#umgroupssharesdelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
+| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umgroupssharesfindbyresourceid) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
+| [**umGroupsSharesGet**](UserManagementApi.md#umgroupssharesget) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
+| [**umGroupsSharesPost**](UserManagementApi.md#umgroupssharespost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
+| [**umGroupsSharesPut**](UserManagementApi.md#umgroupssharesput) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
+| [**umGroupsUsersDelete**](UserManagementApi.md#umgroupsusersdelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
+| [**umGroupsUsersGet**](UserManagementApi.md#umgroupsusersget) | **GET** /um/groups/{groupId}/users | List Group Members  |
+| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
+| [**umResourcesFindByType**](UserManagementApi.md#umresourcesfindbytype) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
+| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umresourcesfindbytypeandid) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
+| [**umResourcesGet**](UserManagementApi.md#umresourcesget) | **GET** /um/resources | List All Resources. |
+| [**umUsersDelete**](UserManagementApi.md#umusersdelete) | **DELETE** /um/users/{userId} | Delete a User |
+| [**umUsersFindById**](UserManagementApi.md#umusersfindbyid) | **GET** /um/users/{userId} | Retrieve a User |
+| [**umUsersGet**](UserManagementApi.md#umusersget) | **GET** /um/users | List all Users  |
+| [**umUsersGroupsGet**](UserManagementApi.md#umusersgroupsget) | **GET** /um/users/{userId}/groups | Retrieve a User\&#39;s group resources |
+| [**umUsersOwnsGet**](UserManagementApi.md#umusersownsget) | **GET** /um/users/{userId}/owns | Retrieve a User\&#39;s own resources |
+| [**umUsersPost**](UserManagementApi.md#umuserspost) | **POST** /um/users | Create a user |
+| [**umUsersPut**](UserManagementApi.md#umusersput) | **PUT** /um/users/{userId} | Modify a user |
+| [**umUsersS3keysDelete**](UserManagementApi.md#umuserss3keysdelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key |
+| [**umUsersS3keysFindByKeyId**](UserManagementApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User |
+| [**umUsersS3keysGet**](UserManagementApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | Retrieve a User\&#39;s S3 keys |
+| [**umUsersS3keysPost**](UserManagementApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create a S3 key for the given user |
+| [**umUsersS3keysPut**](UserManagementApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
+| [**umUsersS3ssourlGet**](UserManagementApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
 
 
 ## umGroupsDelete
@@ -134,7 +134,7 @@ api_instance
 
 ### Return type
 
-[**Group**](models/Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ api_instance
 
 ### Return type
 
-[**Groups**](models/Groups.md)
+[**Groups**](../models/Groups.md)
 
 ### Authorization
 
@@ -235,14 +235,14 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **group** | [**Group**](Group.md) | Group to be created |  |
+| **group** | [**Group**](../models/Group.md) | Group to be created |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Group**](models/Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -292,14 +292,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **groupId** | **string** | The unique ID of the group | [default to undefined] |
-| **group** | [**Group**](Group.md) | Modified properties of the Group |  |
+| **group** | [**Group**](../models/Group.md) | Modified properties of the Group |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Group**](models/Group.md)
+[**Group**](../models/Group.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ api_instance
 
 ### Return type
 
-[**ResourceGroups**](models/ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ api_instance
 
 ### Return type
 
-[**GroupShare**](models/GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ api_instance
 
 ### Return type
 
-[**GroupShares**](models/GroupShares.md)
+[**GroupShares**](../models/GroupShares.md)
 
 ### Authorization
 
@@ -573,14 +573,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **groupId** | **string** |  | [default to undefined] |
 | **resourceId** | **string** |  | [default to undefined] |
-| **resource** | [**GroupShare**](GroupShare.md) | Resource to be added |  |
+| **resource** | [**GroupShare**](../models/GroupShare.md) | Resource to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**GroupShare**](models/GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -632,14 +632,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **groupId** | **string** |  | [default to undefined] |
 | **resourceId** | **string** |  | [default to undefined] |
-| **resource** | [**GroupShare**](GroupShare.md) | Modified Resource |  |
+| **resource** | [**GroupShare**](../models/GroupShare.md) | Modified Resource |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**GroupShare**](models/GroupShare.md)
+[**GroupShare**](../models/GroupShare.md)
 
 ### Authorization
 
@@ -751,7 +751,7 @@ api_instance
 
 ### Return type
 
-[**GroupMembers**](models/GroupMembers.md)
+[**GroupMembers**](../models/GroupMembers.md)
 
 ### Authorization
 
@@ -801,14 +801,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **groupId** | **string** |  | [default to undefined] |
-| **user** | [**User**](User.md) | User to be added |  |
+| **user** | [**User**](../models/User.md) | User to be added |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -863,7 +863,7 @@ api_instance
 
 ### Return type
 
-[**Resources**](models/Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### Authorization
 
@@ -920,7 +920,7 @@ api_instance
 
 ### Return type
 
-[**Resource**](models/Resource.md)
+[**Resource**](../models/Resource.md)
 
 ### Authorization
 
@@ -973,7 +973,7 @@ api_instance
 
 ### Return type
 
-[**Resources**](models/Resources.md)
+[**Resources**](../models/Resources.md)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ api_instance
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1136,7 +1136,7 @@ api_instance
 
 ### Return type
 
-[**Users**](models/Users.md)
+[**Users**](../models/Users.md)
 
 ### Authorization
 
@@ -1191,7 +1191,7 @@ api_instance
 
 ### Return type
 
-[**ResourceGroups**](models/ResourceGroups.md)
+[**ResourceGroups**](../models/ResourceGroups.md)
 
 ### Authorization
 
@@ -1246,7 +1246,7 @@ api_instance
 
 ### Return type
 
-[**ResourcesUsers**](models/ResourcesUsers.md)
+[**ResourcesUsers**](../models/ResourcesUsers.md)
 
 ### Authorization
 
@@ -1294,14 +1294,14 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **user** | [**UserPost**](UserPost.md) | User to be created |  |
+| **user** | [**UserPost**](../models/UserPost.md) | User to be created |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1351,14 +1351,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **userId** | **string** |  | [default to undefined] |
-| **user** | [**UserPut**](UserPut.md) | Modified user |  |
+| **user** | [**UserPut**](../models/UserPut.md) | Modified user |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**User**](models/User.md)
+[**User**](../models/User.md)
 
 ### Authorization
 
@@ -1472,7 +1472,7 @@ api_instance
 
 ### Return type
 
-[**S3Key**](models/S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -1527,7 +1527,7 @@ api_instance
 
 ### Return type
 
-[**S3Keys**](models/S3Keys.md)
+[**S3Keys**](../models/S3Keys.md)
 
 ### Authorization
 
@@ -1582,7 +1582,7 @@ api_instance
 
 ### Return type
 
-[**S3Key**](models/S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -1634,14 +1634,14 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **userId** | **string** |  | [default to undefined] |
 | **keyId** | **string** | The unique access key ID of the S3 key | [default to undefined] |
-| **s3Key** | [**S3Key**](S3Key.md) | Modified S3 key |  |
+| **s3Key** | [**S3Key**](../models/S3Key.md) | Modified S3 key |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**S3Key**](models/S3Key.md)
+[**S3Key**](../models/S3Key.md)
 
 ### Authorization
 
@@ -1694,7 +1694,7 @@ api_instance
 
 ### Return type
 
-[**S3ObjectStorageSSO**](models/S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](../models/S3ObjectStorageSSO.md)
 
 ### Authorization
 

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**imagesDelete**](ImageApi.md#imagesDelete) | **DELETE** /images/{imageId} | Delete an Image |
-| [**imagesFindById**](ImageApi.md#imagesFindById) | **GET** /images/{imageId} | Retrieve an Image |
-| [**imagesGet**](ImageApi.md#imagesGet) | **GET** /images | List Images  |
-| [**imagesPatch**](ImageApi.md#imagesPatch) | **PATCH** /images/{imageId} | Partially modify an Image |
-| [**imagesPut**](ImageApi.md#imagesPut) | **PUT** /images/{imageId} | Modify an Image |
+| [**imagesDelete**](ImageApi.md#imagesdelete) | **DELETE** /images/{imageId} | Delete an Image |
+| [**imagesFindById**](ImageApi.md#imagesfindbyid) | **GET** /images/{imageId} | Retrieve an Image |
+| [**imagesGet**](ImageApi.md#imagesget) | **GET** /images | List Images  |
+| [**imagesPatch**](ImageApi.md#imagespatch) | **PATCH** /images/{imageId} | Partially modify an Image |
+| [**imagesPut**](ImageApi.md#imagesput) | **PUT** /images/{imageId} | Modify an Image |
 
 
 ## imagesDelete
@@ -109,7 +109,7 @@ api_instance
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ api_instance
 
 ### Return type
 
-[**Images**](models/Images.md)
+[**Images**](../models/Images.md)
 
 ### Authorization
 
@@ -212,14 +212,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **imageId** | **string** |  | [default to undefined] |
-| **image** | [**ImageProperties**](ImageProperties.md) | Modified Image |  |
+| **image** | [**ImageProperties**](../models/ImageProperties.md) | Modified Image |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
@@ -269,14 +269,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **imageId** | **string** |  | [default to undefined] |
-| **image** | [**Image**](Image.md) | Modified Image |  |
+| **image** | [**Image**](../models/Image.md) | Modified Image |  |
 | **pretty** | **boolean** | Controls whether response is pretty-printed (with indentation and new lines) | [optional][default to true] |
 | **depth** | **number** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | [optional][default to undefined] |
 
 ### Return type
 
-[**Image**](models/Image.md)
+[**Image**](../models/Image.md)
 
 ### Authorization
 
