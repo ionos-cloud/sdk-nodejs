@@ -134,7 +134,7 @@ api_instance
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](models/Group.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ api_instance
 
 ### Return type
 
-[**Groups**](Groups.md)
+[**Groups**](models/Groups.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ api_instance
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](models/Group.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ api_instance
 
 ### Return type
 
-[**Group**](Group.md)
+[**Group**](models/Group.md)
 
 ### Authorization
 
@@ -352,7 +352,7 @@ api_instance
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](models/ResourceGroups.md)
 
 ### Authorization
 
@@ -466,7 +466,7 @@ api_instance
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](models/GroupShare.md)
 
 ### Authorization
 
@@ -521,7 +521,7 @@ api_instance
 
 ### Return type
 
-[**GroupShares**](GroupShares.md)
+[**GroupShares**](models/GroupShares.md)
 
 ### Authorization
 
@@ -580,7 +580,7 @@ api_instance
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](models/GroupShare.md)
 
 ### Authorization
 
@@ -639,7 +639,7 @@ api_instance
 
 ### Return type
 
-[**GroupShare**](GroupShare.md)
+[**GroupShare**](models/GroupShare.md)
 
 ### Authorization
 
@@ -751,7 +751,7 @@ api_instance
 
 ### Return type
 
-[**GroupMembers**](GroupMembers.md)
+[**GroupMembers**](models/GroupMembers.md)
 
 ### Authorization
 
@@ -808,7 +808,7 @@ api_instance
 
 ### Return type
 
-[**User**](User.md)
+[**User**](models/User.md)
 
 ### Authorization
 
@@ -863,7 +863,7 @@ api_instance
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](models/Resources.md)
 
 ### Authorization
 
@@ -920,7 +920,7 @@ api_instance
 
 ### Return type
 
-[**Resource**](Resource.md)
+[**Resource**](models/Resource.md)
 
 ### Authorization
 
@@ -973,7 +973,7 @@ api_instance
 
 ### Return type
 
-[**Resources**](Resources.md)
+[**Resources**](models/Resources.md)
 
 ### Authorization
 
@@ -1083,7 +1083,7 @@ api_instance
 
 ### Return type
 
-[**User**](User.md)
+[**User**](models/User.md)
 
 ### Authorization
 
@@ -1136,7 +1136,7 @@ api_instance
 
 ### Return type
 
-[**Users**](Users.md)
+[**Users**](models/Users.md)
 
 ### Authorization
 
@@ -1191,7 +1191,7 @@ api_instance
 
 ### Return type
 
-[**ResourceGroups**](ResourceGroups.md)
+[**ResourceGroups**](models/ResourceGroups.md)
 
 ### Authorization
 
@@ -1246,7 +1246,7 @@ api_instance
 
 ### Return type
 
-[**ResourcesUsers**](ResourcesUsers.md)
+[**ResourcesUsers**](models/ResourcesUsers.md)
 
 ### Authorization
 
@@ -1301,7 +1301,7 @@ api_instance
 
 ### Return type
 
-[**User**](User.md)
+[**User**](models/User.md)
 
 ### Authorization
 
@@ -1358,7 +1358,7 @@ api_instance
 
 ### Return type
 
-[**User**](User.md)
+[**User**](models/User.md)
 
 ### Authorization
 
@@ -1472,7 +1472,7 @@ api_instance
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](models/S3Key.md)
 
 ### Authorization
 
@@ -1527,7 +1527,7 @@ api_instance
 
 ### Return type
 
-[**S3Keys**](S3Keys.md)
+[**S3Keys**](models/S3Keys.md)
 
 ### Authorization
 
@@ -1582,7 +1582,7 @@ api_instance
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](models/S3Key.md)
 
 ### Authorization
 
@@ -1641,7 +1641,7 @@ api_instance
 
 ### Return type
 
-[**S3Key**](S3Key.md)
+[**S3Key**](models/S3Key.md)
 
 ### Authorization
 
@@ -1694,7 +1694,7 @@ api_instance
 
 ### Return type
 
-[**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
+[**S3ObjectStorageSSO**](models/S3ObjectStorageSSO.md)
 
 ### Authorization
 

@@ -67,7 +67,7 @@ api_instance
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 
@@ -181,7 +181,7 @@ api_instance
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -240,7 +240,7 @@ api_instance
 
 ### Return type
 
-[**Volumes**](Volumes.md)
+[**Volumes**](models/Volumes.md)
 
 ### Authorization
 
@@ -299,7 +299,7 @@ api_instance
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ api_instance
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ api_instance
 
 ### Return type
 
-[**Volume**](Volume.md)
+[**Volume**](models/Volume.md)
 
 ### Authorization
 

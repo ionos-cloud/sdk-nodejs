@@ -52,7 +52,7 @@ api_instance
 
 ### Return type
 
-[**Request**](Request.md)
+[**Request**](models/Request.md)
 
 ### Authorization
 
@@ -131,7 +131,7 @@ api_instance
 
 ### Return type
 
-[**Requests**](Requests.md)
+[**Requests**](models/Requests.md)
 
 ### Authorization
 
@@ -186,7 +186,7 @@ api_instance
 
 ### Return type
 
-[**RequestStatus**](RequestStatus.md)
+[**RequestStatus**](models/RequestStatus.md)
 
 ### Authorization
 

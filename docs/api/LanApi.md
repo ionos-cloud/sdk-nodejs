@@ -117,7 +117,7 @@ api_instance
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](models/Lan.md)
 
 ### Authorization
 
@@ -176,7 +176,7 @@ api_instance
 
 ### Return type
 
-[**Lans**](Lans.md)
+[**Lans**](models/Lans.md)
 
 ### Authorization
 
@@ -235,7 +235,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -296,7 +296,7 @@ api_instance
 
 ### Return type
 
-[**LanNics**](LanNics.md)
+[**LanNics**](models/LanNics.md)
 
 ### Authorization
 
@@ -355,7 +355,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -414,7 +414,7 @@ api_instance
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](models/Lan.md)
 
 ### Authorization
 
@@ -471,7 +471,7 @@ api_instance
 
 ### Return type
 
-[**LanPost**](LanPost.md)
+[**LanPost**](models/LanPost.md)
 
 ### Authorization
 
@@ -530,7 +530,7 @@ api_instance
 
 ### Return type
 
-[**Lan**](Lan.md)
+[**Lan**](models/Lan.md)
 
 ### Authorization
 

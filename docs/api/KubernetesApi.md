@@ -122,7 +122,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](models/KubernetesCluster.md)
 
 ### Authorization
 
@@ -175,7 +175,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesClusters**](KubernetesClusters.md)
+[**KubernetesClusters**](models/KubernetesClusters.md)
 
 ### Authorization
 
@@ -230,7 +230,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesConfig**](KubernetesConfig.md)
+[**KubernetesConfig**](models/KubernetesConfig.md)
 
 ### Authorization
 
@@ -344,7 +344,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](models/KubernetesNodePool.md)
 
 ### Authorization
 
@@ -399,7 +399,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesNodePools**](KubernetesNodePools.md)
+[**KubernetesNodePools**](models/KubernetesNodePools.md)
 
 ### Authorization
 
@@ -517,7 +517,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesNode**](KubernetesNode.md)
+[**KubernetesNode**](models/KubernetesNode.md)
 
 ### Authorization
 
@@ -574,7 +574,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesNodes**](KubernetesNodes.md)
+[**KubernetesNodes**](models/KubernetesNodes.md)
 
 ### Authorization
 
@@ -690,7 +690,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](models/KubernetesNodePool.md)
 
 ### Authorization
 
@@ -749,7 +749,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesNodePool**](KubernetesNodePool.md)
+[**KubernetesNodePool**](models/KubernetesNodePool.md)
 
 ### Authorization
 
@@ -804,7 +804,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](models/KubernetesCluster.md)
 
 ### Authorization
 
@@ -861,7 +861,7 @@ api_instance
 
 ### Return type
 
-[**KubernetesCluster**](KubernetesCluster.md)
+[**KubernetesCluster**](models/KubernetesCluster.md)
 
 ### Authorization
 

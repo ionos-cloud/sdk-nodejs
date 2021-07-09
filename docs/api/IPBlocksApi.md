@@ -110,7 +110,7 @@ api_instance
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 
@@ -163,7 +163,7 @@ api_instance
 
 ### Return type
 
-[**IpBlocks**](IpBlocks.md)
+[**IpBlocks**](models/IpBlocks.md)
 
 ### Authorization
 
@@ -220,7 +220,7 @@ api_instance
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ api_instance
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 
@@ -332,7 +332,7 @@ api_instance
 
 ### Return type
 
-[**IpBlock**](IpBlock.md)
+[**IpBlock**](models/IpBlock.md)
 
 ### Authorization
 

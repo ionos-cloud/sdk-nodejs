@@ -109,7 +109,7 @@ api_instance
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ api_instance
 
 ### Return type
 
-[**PrivateCrossConnects**](PrivateCrossConnects.md)
+[**PrivateCrossConnects**](models/PrivateCrossConnects.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ api_instance
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ api_instance
 
 ### Return type
 
-[**PrivateCrossConnect**](PrivateCrossConnect.md)
+[**PrivateCrossConnect**](models/PrivateCrossConnect.md)
 
 ### Authorization
 

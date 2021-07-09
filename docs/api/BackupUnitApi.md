@@ -111,7 +111,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -164,7 +164,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnits**](BackupUnits.md)
+[**BackupUnits**](models/BackupUnits.md)
 
 ### Authorization
 
@@ -221,7 +221,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -333,7 +333,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnit**](BackupUnit.md)
+[**BackupUnit**](models/BackupUnit.md)
 
 ### Authorization
 
@@ -386,7 +386,7 @@ api_instance
 
 ### Return type
 
-[**BackupUnitSSO**](BackupUnitSSO.md)
+[**BackupUnitSSO**](models/BackupUnitSSO.md)
 
 ### Authorization
 

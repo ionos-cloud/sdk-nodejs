@@ -109,7 +109,7 @@ api_instance
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ api_instance
 
 ### Return type
 
-[**Snapshots**](Snapshots.md)
+[**Snapshots**](models/Snapshots.md)
 
 ### Authorization
 
@@ -219,7 +219,7 @@ api_instance
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 
@@ -276,7 +276,7 @@ api_instance
 
 ### Return type
 
-[**Snapshot**](Snapshot.md)
+[**Snapshot**](models/Snapshot.md)
 
 ### Authorization
 

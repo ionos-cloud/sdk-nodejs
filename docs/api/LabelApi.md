@@ -135,7 +135,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -194,7 +194,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -251,7 +251,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -310,7 +310,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -489,7 +489,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -548,7 +548,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -609,7 +609,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -727,7 +727,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -788,7 +788,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -847,7 +847,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -908,7 +908,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1022,7 +1022,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1077,7 +1077,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -1134,7 +1134,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1193,7 +1193,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1248,7 +1248,7 @@ api_instance
 
 ### Return type
 
-[**Label**](Label.md)
+[**Label**](models/Label.md)
 
 ### Authorization
 
@@ -1301,7 +1301,7 @@ api_instance
 
 ### Return type
 
-[**Labels**](Labels.md)
+[**Labels**](models/Labels.md)
 
 ### Authorization
 
@@ -1415,7 +1415,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1470,7 +1470,7 @@ api_instance
 
 ### Return type
 
-[**LabelResources**](LabelResources.md)
+[**LabelResources**](models/LabelResources.md)
 
 ### Authorization
 
@@ -1527,7 +1527,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 
@@ -1586,7 +1586,7 @@ api_instance
 
 ### Return type
 
-[**LabelResource**](LabelResource.md)
+[**LabelResource**](models/LabelResource.md)
 
 ### Authorization
 

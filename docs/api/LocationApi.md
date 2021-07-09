@@ -52,7 +52,7 @@ api_instance
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](models/Locations.md)
 
 ### Authorization
 
@@ -109,7 +109,7 @@ api_instance
 
 ### Return type
 
-[**Location**](Location.md)
+[**Location**](models/Location.md)
 
 ### Authorization
 
@@ -162,7 +162,7 @@ api_instance
 
 ### Return type
 
-[**Locations**](Locations.md)
+[**Locations**](models/Locations.md)
 
 ### Authorization
 

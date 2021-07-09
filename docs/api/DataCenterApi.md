@@ -110,7 +110,7 @@ api_instance
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 
@@ -167,7 +167,7 @@ api_instance
 
 ### Return type
 
-[**Datacenters**](Datacenters.md)
+[**Datacenters**](models/Datacenters.md)
 
 ### Authorization
 
@@ -224,7 +224,7 @@ api_instance
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ api_instance
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 
@@ -336,7 +336,7 @@ api_instance
 
 ### Return type
 
-[**Datacenter**](Datacenter.md)
+[**Datacenter**](models/Datacenter.md)
 
 ### Authorization
 

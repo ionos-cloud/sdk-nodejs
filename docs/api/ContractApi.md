@@ -48,7 +48,7 @@ api_instance
 
 ### Return type
 
-[**Contract**](Contract.md)
+[**Contract**](models/Contract.md)
 
 ### Authorization
 

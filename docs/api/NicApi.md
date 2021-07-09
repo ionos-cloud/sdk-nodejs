@@ -124,7 +124,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -246,7 +246,7 @@ api_instance
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -309,7 +309,7 @@ api_instance
 
 ### Return type
 
-[**FirewallRules**](FirewallRules.md)
+[**FirewallRules**](models/FirewallRules.md)
 
 ### Authorization
 
@@ -372,7 +372,7 @@ api_instance
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -433,7 +433,7 @@ api_instance
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -496,7 +496,7 @@ api_instance
 
 ### Return type
 
-[**FirewallRule**](FirewallRule.md)
+[**FirewallRule**](models/FirewallRule.md)
 
 ### Authorization
 
@@ -557,7 +557,7 @@ api_instance
 
 ### Return type
 
-[**Nics**](Nics.md)
+[**Nics**](models/Nics.md)
 
 ### Authorization
 
@@ -618,7 +618,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -677,7 +677,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -738,7 +738,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 

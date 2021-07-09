@@ -48,7 +48,7 @@ api_instance
 
 ### Return type
 
-[**Info**](Info.md)
+[**Info**](models/Info.md)
 
 ### Authorization
 

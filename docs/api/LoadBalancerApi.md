@@ -122,7 +122,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -183,7 +183,7 @@ api_instance
 
 ### Return type
 
-[**BalancedNics**](BalancedNics.md)
+[**BalancedNics**](models/BalancedNics.md)
 
 ### Authorization
 
@@ -242,7 +242,7 @@ api_instance
 
 ### Return type
 
-[**Nic**](Nic.md)
+[**Nic**](models/Nic.md)
 
 ### Authorization
 
@@ -356,7 +356,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
@@ -415,7 +415,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancers**](Loadbalancers.md)
+[**Loadbalancers**](models/Loadbalancers.md)
 
 ### Authorization
 
@@ -474,7 +474,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
@@ -531,7 +531,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
@@ -590,7 +590,7 @@ api_instance
 
 ### Return type
 
-[**Loadbalancer**](Loadbalancer.md)
+[**Loadbalancer**](models/Loadbalancer.md)
 
 ### Authorization
 
