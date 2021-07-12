@@ -29,3 +29,44 @@ const dcApi = new sdk.DataCenterApi(config);
 
 dcApi.datacentersGet().then((response) => console.log(response));
 ```
+Environment variables can also be used; the SDK uses the following variables:
+
+* IONOS\_USERNAME - to specify the username used to login
+* IONOS\_PASSWORD - to specify the password
+* IONOS\_TOKEN - if an authentication token is being used
+
+**Warning**: Make sure to follow the Information Security Best Practices when using credentials within your code or storing them in a file.
+
+### Depth
+
+Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, but it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
+
+| Depth | Description |
+| :--- | :--- |
+| 0 | Only direct properties are included. Children are not included. |
+| 1 | Direct properties and children's references are returned. |
+| 2 | Direct properties and children's properties are returned. |
+| 3 | Direct properties, children's properties, and descendants' references are returned. |
+| 4 | Direct properties, children's properties, and descendants' properties are returned. |
+| 5 | Returns all available properties. |
+
+### Pretty
+
+The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether the response is pretty-printed \(with indentation and new lines\). By default, the SDK sets the _pretty_ argument to `true`.
+
+## Feature Reference
+
+The IONOS Cloud SDK for NodeJs aims to offer access to all resources in the IONOS Cloud API and also offers some additional features that make the integration easier:
+
+* authentication for API calls
+* handling of asynchronous requests 
+
+## FAQ
+
+1. How can I open a bug/feature request? 
+
+Bugs & feature requests can be open on the repository issues: [https://github.com/ionos-cloud/sdk-nodejs/issues/new/choose](https://github.com/ionos-cloud/sdk-nodejs/issues/new/choose)
+
+2. Can I contribute to the NodeJs SDK?
+
+Pure SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
