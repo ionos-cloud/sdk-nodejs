@@ -67,6 +67,6 @@ The IONOS Cloud SDK for NodeJs aims to offer access to all resources in the IONO
 
 Bugs & feature requests can be open on the repository issues: [https://github.com/ionos-cloud/sdk-nodejs/issues/new/choose](https://github.com/ionos-cloud/sdk-nodejs/issues/new/choose)
 
-3. Can I contribute to the NodeJs SDK?
+2. Can I contribute to the NodeJs SDK?
 
 Pure SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
