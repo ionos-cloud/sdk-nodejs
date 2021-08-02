@@ -20,7 +20,7 @@
 | **discVirtioHotPlug** | **boolean** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] [default to undefined] |
 | **discVirtioHotUnplug** | **boolean** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] [default to undefined] |
 | **deviceNumber** | **number** | The LUN ID of the storage volume. Null for volumes not mounted to any VM | [optional] [readonly] [default to undefined] |
-| **backupunitId** | **string** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either \&#39;public image\&#39; or \&#39;imageAlias\&#39; in conjunction with this property. | [optional] [default to undefined] |
-| **userData** | **string** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either \&#39;public image\&#39; or \&#39;imageAlias\&#39; that has cloud-init compatibility in conjunction with this property. | [optional] [default to undefined] |
+| **backupunitId** | **string** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either \'public image\' or \'imageAlias\' in conjunction with this property. | [optional] [default to undefined] |
+| **userData** | **string** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either \'public image\' or \'imageAlias\' that has cloud-init compatibility in conjunction with this property. | [optional] [default to undefined] |
 
 

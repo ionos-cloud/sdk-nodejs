@@ -17,15 +17,15 @@
 /**
  * 
  * @export
- * @interface KubernetesNodePoolLan
+ * @interface S3Bucket
  */
-export interface KubernetesNodePoolLan {
+export interface S3Bucket {
     /**
-     * The LAN ID of an existing LAN at the related datacenter
-     * @type {number}
-     * @memberof KubernetesNodePoolLan
+     * Name of the S3 bucket.
+     * @type {string}
+     * @memberof S3Bucket
      */
-    id: number;
+    name: string;
 }
 
 

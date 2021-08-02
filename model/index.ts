@@ -105,6 +105,7 @@ export * from './resource-properties';
 export * from './resource-reference';
 export * from './resources';
 export * from './resources-users';
+export * from './s3-bucket';
 export * from './s3-key';
 export * from './s3-key-metadata';
 export * from './s3-key-properties';

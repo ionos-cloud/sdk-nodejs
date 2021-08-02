@@ -12,7 +12,7 @@
 | **availabilityZone** | **string** | The availability zone in which the target VM should exist | [default to undefined] |
 | **storageType** | **string** | Hardware type of the volume | [default to undefined] |
 | **storageSize** | **number** | The size of the volume in GB. The size should be greater than 10GB. | [default to undefined] |
-| **k8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster\&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] [default to undefined] |
+| **k8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] [default to undefined] |
 | **maintenanceWindow** | [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] [default to undefined] |
 | **autoScaling** | [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] [default to undefined] |
 | **lans** | [**Array&lt;KubernetesNodePoolLan&gt;**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes | [optional] [default to undefined] |

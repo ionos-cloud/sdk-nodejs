@@ -28,7 +28,7 @@ export interface RequestProperties {
     method?: string;
     /**
      * 
-     * @type {Object.<string, string>}
+     * @type {{ [key: string]: string; }}
      * @memberof RequestProperties
      */
     headers?: { [key: string]: string; };

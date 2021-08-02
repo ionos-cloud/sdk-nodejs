@@ -126,6 +126,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
     
             localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
     
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -214,6 +215,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -301,6 +303,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -398,6 +401,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -491,7 +495,6 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -586,7 +589,6 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -687,7 +689,6 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -790,6 +791,7 @@ export const VolumeApiAxiosParamCreator = function (configuration?: Configuratio
     
             localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
     
+            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);

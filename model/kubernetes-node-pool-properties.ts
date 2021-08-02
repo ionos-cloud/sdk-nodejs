@@ -103,13 +103,13 @@ export interface KubernetesNodePoolProperties {
     lans?: Array<KubernetesNodePoolLan>;
     /**
      * map of labels attached to node pool
-     * @type {Object.<string, string>}
+     * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolProperties
      */
     labels?: { [key: string]: string; };
     /**
      * map of annotations attached to node pool
-     * @type {Object.<string, string>}
+     * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolProperties
      */
     annotations?: { [key: string]: string; };

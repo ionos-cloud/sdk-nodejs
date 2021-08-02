@@ -61,13 +61,13 @@ export interface KubernetesNodePoolPropertiesForPut {
     lans?: Array<KubernetesNodePoolLan>;
     /**
      * map of labels attached to node pool
-     * @type {Object.<string, string>}
+     * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     labels?: { [key: string]: string; };
     /**
      * map of annotations attached to node pool
-     * @type {Object.<string, string>}
+     * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     annotations?: { [key: string]: string; };

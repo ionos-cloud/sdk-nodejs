@@ -1,6 +1,6 @@
 {
   "name": "@ionos-cloud/sdk-nodejs",
-  "version": "5.0.0-alpha.2",
+  "version": "5.0.0-alpha.3",
   "description": "NodeJS SDK for the Ionos Cloud API",
   "author": "Ionos",
   "keywords": [
@@ -11,9 +11,7 @@
     ""
   ],
   "license": "MIT",
-  "files": [
-    "dist/**/*"
-  ],
+  "files": [ "dist/**/*" ],
   "main": "./dist/index.js",
   "typings": "./dist/index.d.ts",
   "scripts": {
@@ -25,7 +23,6 @@
   },
   "devDependencies": {
     "@types/node": "^12.11.5",
-    "better-docs": "^2.3.2",
     "typescript": "^3.6.4"
   }
 }

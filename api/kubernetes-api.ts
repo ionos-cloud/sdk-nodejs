@@ -111,6 +111,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -192,6 +193,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -267,6 +269,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -348,6 +351,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -435,6 +439,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -522,6 +527,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -603,6 +609,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -696,6 +703,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -789,6 +797,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -876,6 +885,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -969,6 +979,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1056,7 +1067,6 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1157,7 +1167,6 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1246,7 +1255,6 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1341,7 +1349,6 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
-
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1406,6 +1413,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1457,6 +1465,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -1508,6 +1517,7 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 
 
     
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
