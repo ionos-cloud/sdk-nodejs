@@ -1,0 +1,1369 @@
+# UserManagementApi
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v6*
+
+| Method | HTTP request | Description |
+| ------ | ------------ | ----------- |
+| [**umGroupsDelete**](UserManagementApi.md#umgroupsdelete) | **DELETE** /um/groups/{groupId} | Delete a Group |
+| [**umGroupsFindById**](UserManagementApi.md#umgroupsfindbyid) | **GET** /um/groups/{groupId} | Retrieve a Group |
+| [**umGroupsGet**](UserManagementApi.md#umgroupsget) | **GET** /um/groups | List All Groups. |
+| [**umGroupsPost**](UserManagementApi.md#umgroupspost) | **POST** /um/groups | Create a Group |
+| [**umGroupsPut**](UserManagementApi.md#umgroupsput) | **PUT** /um/groups/{groupId} | Modify a group |
+| [**umGroupsResourcesGet**](UserManagementApi.md#umgroupsresourcesget) | **GET** /um/groups/{groupId}/resources | Retrieve resources assigned to a group |
+| [**umGroupsSharesDelete**](UserManagementApi.md#umgroupssharesdelete) | **DELETE** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group |
+| [**umGroupsSharesFindByResourceId**](UserManagementApi.md#umgroupssharesfindbyresourceid) | **GET** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share |
+| [**umGroupsSharesGet**](UserManagementApi.md#umgroupssharesget) | **GET** /um/groups/{groupId}/shares | List Group Shares  |
+| [**umGroupsSharesPost**](UserManagementApi.md#umgroupssharespost) | **POST** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group |
+| [**umGroupsSharesPut**](UserManagementApi.md#umgroupssharesput) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group |
+| [**umGroupsUsersDelete**](UserManagementApi.md#umgroupsusersdelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove a user from a group |
+| [**umGroupsUsersGet**](UserManagementApi.md#umgroupsusersget) | **GET** /um/groups/{groupId}/users | List Group Members  |
+| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add a user to a group |
+| [**umResourcesFindByType**](UserManagementApi.md#umresourcesfindbytype) | **GET** /um/resources/{resourceType} | Retrieve a list of Resources by type. |
+| [**umResourcesFindByTypeAndId**](UserManagementApi.md#umresourcesfindbytypeandid) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type. |
+| [**umResourcesGet**](UserManagementApi.md#umresourcesget) | **GET** /um/resources | List All Resources. |
+| [**umUsersDelete**](UserManagementApi.md#umusersdelete) | **DELETE** /um/users/{userId} | Delete a User |
+| [**umUsersFindById**](UserManagementApi.md#umusersfindbyid) | **GET** /um/users/{userId} | Retrieve a User |
+| [**umUsersGet**](UserManagementApi.md#umusersget) | **GET** /um/users | List all Users  |
+| [**umUsersGroupsGet**](UserManagementApi.md#umusersgroupsget) | **GET** /um/users/{userId}/groups | Retrieve a User\&#39;s group resources |
+| [**umUsersOwnsGet**](UserManagementApi.md#umusersownsget) | **GET** /um/users/{userId}/owns | Retrieve a User\&#39;s own resources |
+| [**umUsersPost**](UserManagementApi.md#umuserspost) | **POST** /um/users | Create a user |
+| [**umUsersPut**](UserManagementApi.md#umusersput) | **PUT** /um/users/{userId} | Modify a user |
+
+
+## umGroupsDelete
+
+> umGroupsDelete(groupId, opts)
+
+Delete a Group
+
+Delete a group
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Delete a Group
+api_instance
+  .umGroupsDelete({
+    groupId: groupId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** | The unique ID of the group | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsFindById
+
+> <Group> umGroupsFindById(groupId, opts)
+
+Retrieve a Group
+
+You can retrieve a group by using the group ID. This value can be found in the response body when a group is created or when you GET a list of groups.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a Group
+api_instance
+  .umGroupsFindById({
+    groupId: groupId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** | The unique ID of the group | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Group**](../models/Group.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsGet
+
+> <Groups> umGroupsGet(opts)
+
+List All Groups.
+
+You can retrieve a complete list of all groups that you have access to
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// List All Groups.
+api_instance
+  .umGroupsGet({
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Groups**](../models/Groups.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsPost
+
+> <Group> umGroupsPost(group, opts)
+
+Create a Group
+
+You can use this POST method to create a group
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Create a Group
+api_instance
+  .umGroupsPost({
+    group: group_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **group** | [**Group**](../models/Group.md) | Group to be created |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Group**](../models/Group.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## umGroupsPut
+
+> <Group> umGroupsPut(groupId, group, opts)
+
+Modify a group
+
+You can use this method to update properties of the group.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Modify a group
+api_instance
+  .umGroupsPut({
+    groupId: groupId_example,
+    group: group_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** | The unique ID of the group | [default to undefined] |
+| **group** | [**Group**](../models/Group.md) | Modified properties of the Group |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Group**](../models/Group.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## umGroupsResourcesGet
+
+> <ResourceGroups> umGroupsResourcesGet(groupId, opts)
+
+Retrieve resources assigned to a group
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve resources assigned to a group
+api_instance
+  .umGroupsResourcesGet({
+    groupId: groupId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** | The unique ID of the group | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**ResourceGroups**](../models/ResourceGroups.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsSharesDelete
+
+> umGroupsSharesDelete(groupId, resourceId, opts)
+
+Remove a resource from a group
+
+This will remove a resource from a group
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Remove a resource from a group
+api_instance
+  .umGroupsSharesDelete({
+    groupId: groupId_example,
+    resourceId: resourceId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **resourceId** | **string** |  | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsSharesFindByResourceId
+
+> <GroupShare> umGroupsSharesFindByResourceId(groupId, resourceId, opts)
+
+Retrieve a group share
+
+This will retrieve the properties of a group share.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a group share
+api_instance
+  .umGroupsSharesFindByResourceId({
+    groupId: groupId_example,
+    resourceId: resourceId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **resourceId** | **string** |  | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**GroupShare**](../models/GroupShare.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsSharesGet
+
+> <GroupShares> umGroupsSharesGet(groupId, opts)
+
+List Group Shares 
+
+You can retrieve a list of all resources along with their permissions of the group
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// List Group Shares 
+api_instance
+  .umGroupsSharesGet({
+    groupId: groupId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**GroupShares**](../models/GroupShares.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsSharesPost
+
+> <GroupShare> umGroupsSharesPost(groupId, resourceId, resource, opts)
+
+Add a resource to a group
+
+This will add a resource to the group. 
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Add a resource to a group
+api_instance
+  .umGroupsSharesPost({
+    groupId: groupId_example,
+    resourceId: resourceId_example,
+    resource: resource_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **resourceId** | **string** |  | [default to undefined] |
+| **resource** | [**GroupShare**](../models/GroupShare.md) | Resource to be added |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**GroupShare**](../models/GroupShare.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsSharesPut
+
+> <GroupShare> umGroupsSharesPut(groupId, resourceId, resource, opts)
+
+Modify resource permissions of a group
+
+You can use update resource permissions of a group. If empty body will be provided, no updates will happen, instead you will be returned the current permissions of resource in a group. In this case response code will be 200
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Modify resource permissions of a group
+api_instance
+  .umGroupsSharesPut({
+    groupId: groupId_example,
+    resourceId: resourceId_example,
+    resource: resource_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **resourceId** | **string** |  | [default to undefined] |
+| **resource** | [**GroupShare**](../models/GroupShare.md) | Modified Resource |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**GroupShare**](../models/GroupShare.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## umGroupsUsersDelete
+
+> umGroupsUsersDelete(groupId, userId, opts)
+
+Remove a user from a group
+
+This will remove a user from a group.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Remove a user from a group
+api_instance
+  .umGroupsUsersDelete({
+    groupId: groupId_example,
+    userId: userId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **userId** | **string** |  | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsUsersGet
+
+> <GroupMembers> umGroupsUsersGet(groupId, opts)
+
+List Group Members 
+
+You can retrieve a list of users who are members of the group
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// List Group Members 
+api_instance
+  .umGroupsUsersGet({
+    groupId: groupId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**GroupMembers**](../models/GroupMembers.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umGroupsUsersPost
+
+> <User> umGroupsUsersPost(groupId, user, opts)
+
+Add a user to a group
+
+This will attach a pre-existing user to a group. 
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Add a user to a group
+api_instance
+  .umGroupsUsersPost({
+    groupId: groupId_example,
+    user: user_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **groupId** | **string** |  | [default to undefined] |
+| **user** | [**User**](../models/User.md) | User to be added |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**User**](../models/User.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## umResourcesFindByType
+
+> <Resources> umResourcesFindByType(resourceType, opts)
+
+Retrieve a list of Resources by type.
+
+You can retrieve a list of resources by using the type. Allowed values are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. This value of resource type also be found in the response body when you GET a list of all resources.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a list of Resources by type.
+api_instance
+  .umResourcesFindByType({
+    resourceType: resourceType_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **resourceType** | **string** | The resource Type | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Resources**](../models/Resources.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umResourcesFindByTypeAndId
+
+> <Resource> umResourcesFindByTypeAndId(resourceType, resourceId, opts)
+
+Retrieve a Resource by type.
+
+You can retrieve a resource by using the type and its uuid. Allowed values for types are { datacenter, snapshot, image, ipblock, pcc, backupunit, k8s }. The value of resource type can also be found in the response body when you GET a list of all resources.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a Resource by type.
+api_instance
+  .umResourcesFindByTypeAndId({
+    resourceType: resourceType_example,
+    resourceId: resourceId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **resourceType** | **string** | The resource Type | [default to undefined] |
+| **resourceId** | **string** | The resource Uuid | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Resource**](../models/Resource.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umResourcesGet
+
+> <Resources> umResourcesGet(opts)
+
+List All Resources.
+
+You can retrieve a complete list of all resources that you have access to.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// List All Resources.
+api_instance
+  .umResourcesGet({
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Resources**](../models/Resources.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umUsersDelete
+
+> umUsersDelete(userId, opts)
+
+Delete a User
+
+Delete a user
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Delete a User
+api_instance
+  .umUsersDelete({
+    userId: userId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umUsersFindById
+
+> <User> umUsersFindById(userId, opts)
+
+Retrieve a User
+
+You can retrieve user details by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a User
+api_instance
+  .umUsersFindById({
+    userId: userId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**User**](../models/User.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umUsersGet
+
+> <Users> umUsersGet(opts)
+
+List all Users 
+
+You can retrieve a complete list of users under your account
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// List all Users 
+api_instance
+  .umUsersGet({
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56,
+    offset: 56,
+    limit: 56
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
+| **limit** | **number** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [optional][default to 100] |
+
+### Return type
+
+[**Users**](../models/Users.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umUsersGroupsGet
+
+> <ResourceGroups> umUsersGroupsGet(userId, opts)
+
+Retrieve a User\'s group resources
+
+You can retrieve group resources of user by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a User\'s group resources
+api_instance
+  .umUsersGroupsGet({
+    userId: userId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**ResourceGroups**](../models/ResourceGroups.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umUsersOwnsGet
+
+> <ResourcesUsers> umUsersOwnsGet(userId, opts)
+
+Retrieve a User\'s own resources
+
+You can retrieve resources owned by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Retrieve a User\'s own resources
+api_instance
+  .umUsersOwnsGet({
+    userId: userId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**ResourcesUsers**](../models/ResourcesUsers.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## umUsersPost
+
+> <User> umUsersPost(user, opts)
+
+Create a user
+
+You can use this POST method to create a user
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Create a user
+api_instance
+  .umUsersPost({
+    user: user_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **user** | [**UserPost**](../models/UserPost.md) | User to be created |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**User**](../models/User.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## umUsersPut
+
+> <User> umUsersPut(userId, user, opts)
+
+Modify a user
+
+You can use update attributes of a User
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.UserManagementApi(config);
+// Modify a user
+api_instance
+  .umUsersPut({
+    userId: userId_example,
+    user: user_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **userId** | **string** |  | [default to undefined] |
+| **user** | [**UserPut**](../models/UserPut.md) | Modified user |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**User**](../models/User.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
