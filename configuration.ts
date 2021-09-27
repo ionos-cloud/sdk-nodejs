@@ -120,7 +120,7 @@ export class Configuration {
         this.maxRetries = DEFAULT_MAX_RETRIES;
         this.maxWaitTime = DEFAULT_MAX_WAIT_TIME;
         this.debug = false;
-        this.setUserAgent('ionos-cloud-sdk-node/6.0.0-beta.1');
+        this.setUserAgent('ionos-cloud-sdk-node/v6.0.0-beta.1');
     }
 
     static fromEnv(): Configuration {
