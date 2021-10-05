@@ -1,4 +1,4 @@
-![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg)
+![CI](https://github.com/ionos-cloud/sdk-resources/workflows/%5B%20CI%20%5D%20CloudApi%20V5%20/%20NodeJS/badge.svg)
 [![Npm Version](https://img.shields.io/node/v/@ionos-cloud/sdk-nodejs)](https://www.npmjs.com/package/@ionos-cloud/sdk-nodejs) 
 [![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
