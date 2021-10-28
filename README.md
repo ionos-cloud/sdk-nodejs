@@ -1,12 +1,12 @@
 ![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg)
 [![Npm Version](https://img.shields.io/node/v/@ionos-cloud/sdk-nodejs)](https://www.npmjs.com/package/@ionos-cloud/sdk-nodejs) 
 [![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-nodejs)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-nodejs&metric=bugs)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-nodejs)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-nodejs&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-nodejs)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-nodejs&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-nodejs)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-nodejs&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-nodejs)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-nodejs&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-nodejs)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=bugs)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=security_rating)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
 
 ![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
 
