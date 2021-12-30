@@ -23,30 +23,35 @@ import { Type } from './type';
  * @interface Location
  */
 export interface Location {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Location
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Location
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Location
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Location
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {LocationProperties}

@@ -21,6 +21,7 @@ import { BalancedNics } from './balanced-nics';
  * @interface LoadbalancerEntities
  */
 export interface LoadbalancerEntities {
+
     /**
      * 
      * @type {BalancedNics}

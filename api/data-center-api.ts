@@ -195,7 +195,7 @@ export const DataCenterApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * You can retrieve a complete list of data centers provisioned under your account
+         * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
          * @summary List Data Centers under your account
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
@@ -600,7 +600,7 @@ export const DataCenterApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * You can retrieve a complete list of data centers provisioned under your account
+         * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
          * @summary List Data Centers under your account
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
@@ -694,7 +694,7 @@ export const DataCenterApiFactory = function (configuration?: Configuration, bas
             return DataCenterApiFp(configuration).datacentersFindById(datacenterId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * You can retrieve a complete list of data centers provisioned under your account
+         * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
          * @summary List Data Centers under your account
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
@@ -1014,7 +1014,7 @@ export class DataCenterApi extends BaseAPI {
     }
 
     /**
-     * You can retrieve a complete list of data centers provisioned under your account
+     * You can retrieve a list of data centers provisioned under your account. Default list will contain first 100 items. For more items use pagination query parameters
      * @summary List Data Centers under your account
      * @param {DataCenterApiDatacentersGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.

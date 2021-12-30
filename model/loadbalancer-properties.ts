@@ -20,18 +20,21 @@
  * @interface LoadbalancerProperties
  */
 export interface LoadbalancerProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof LoadbalancerProperties
      */
     name?: string;
+
     /**
      * IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically
      * @type {string}
      * @memberof LoadbalancerProperties
      */
     ip?: string;
+
     /**
      * Indicates if the loadbalancer will reserve an IP using DHCP
      * @type {boolean}

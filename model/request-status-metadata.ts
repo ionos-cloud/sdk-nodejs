@@ -21,24 +21,28 @@ import { RequestTarget } from './request-target';
  * @interface RequestStatusMetadata
  */
 export interface RequestStatusMetadata {
+
     /**
      * 
      * @type {string}
      * @memberof RequestStatusMetadata
      */
     status?: RequestStatusMetadataStatusEnum;
+
     /**
      * 
      * @type {string}
      * @memberof RequestStatusMetadata
      */
     message?: string;
+
     /**
      * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
      * @type {string}
      * @memberof RequestStatusMetadata
      */
     etag?: string;
+
     /**
      * 
      * @type {Array<RequestTarget>}
@@ -46,6 +50,7 @@ export interface RequestStatusMetadata {
      */
     targets?: Array<RequestTarget>;
 }
+
 
 /**
     * @export
@@ -57,6 +62,9 @@ export enum RequestStatusMetadataStatusEnum {
     Done = 'DONE',
     Failed = 'FAILED'
 }
+
+
+
 
 
 

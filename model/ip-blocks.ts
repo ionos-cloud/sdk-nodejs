@@ -14,6 +14,7 @@
 
 
 import { IpBlock } from './ip-block';
+import { PaginationLinks } from './pagination-links';
 import { Type } from './type';
 
 /**
@@ -22,30 +23,55 @@ import { Type } from './type';
  * @interface IpBlocks
  */
 export interface IpBlocks {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof IpBlocks
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof IpBlocks
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof IpBlocks
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<IpBlock>}
      * @memberof IpBlocks
      */
     items?: Array<IpBlock>;
+
+    /**
+     * the offset specified in the request (or, if none was specified, the default offset of 0)
+     * @type {number}
+     * @memberof IpBlocks
+     */
+    offset?: number;
+
+    /**
+     * the limit specified in the request (or, if none was specified use the endpoint\'s default pagination limit)
+     * @type {number}
+     * @memberof IpBlocks
+     */
+    limit?: number;
+
+    /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof IpBlocks
+     */
+    _links?: PaginationLinks;
 }
 
 

@@ -24,36 +24,42 @@ import { UsersEntities } from './users-entities';
  * @interface User
  */
 export interface User {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof User
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof User
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof User
      */
     href?: string;
+
     /**
      * 
      * @type {UserMetadata}
      * @memberof User
      */
     metadata?: UserMetadata;
+
     /**
      * 
      * @type {UserProperties}
      * @memberof User
      */
     properties: UserProperties;
+
     /**
      * 
      * @type {UsersEntities}

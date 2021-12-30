@@ -20,30 +20,35 @@
  * @interface LabelProperties
  */
 export interface LabelProperties {
+
     /**
      * A Label Key
      * @type {string}
      * @memberof LabelProperties
      */
     key?: string;
+
     /**
      * A Label Value
      * @type {string}
      * @memberof LabelProperties
      */
     value?: string;
+
     /**
      * The id of the resource
      * @type {string}
      * @memberof LabelProperties
      */
     resourceId?: string;
+
     /**
      * The type of the resource on which the label is applied.
      * @type {string}
      * @memberof LabelProperties
      */
     resourceType?: string;
+
     /**
      * URL to the Resource (absolute path) on which the label is applied.
      * @type {string}

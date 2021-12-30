@@ -23,30 +23,35 @@ import { Type } from './type';
  * @interface FirewallRule
  */
 export interface FirewallRule {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof FirewallRule
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof FirewallRule
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof FirewallRule
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof FirewallRule
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {FirewallruleProperties}

@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface S3Keys
  */
 export interface S3Keys {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof S3Keys
      */
     id?: string;
+
     /**
      * The type of the resource
      * @type {Type}
      * @memberof S3Keys
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof S3Keys
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<S3Key>}

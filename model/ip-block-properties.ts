@@ -21,30 +21,35 @@ import { IpConsumer } from './ip-consumer';
  * @interface IpBlockProperties
  */
 export interface IpBlockProperties {
+
     /**
      * A collection of IPs associated with the IP Block
      * @type {Array<string>}
      * @memberof IpBlockProperties
      */
     ips?: Array<string>;
+
     /**
      * Location of that IP Block. Property cannot be modified after creation (disallowed in update requests)
      * @type {string}
      * @memberof IpBlockProperties
      */
     location: string;
+
     /**
      * The size of the IP block
      * @type {number}
      * @memberof IpBlockProperties
      */
     size: number;
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof IpBlockProperties
      */
     name?: string;
+
     /**
      * Read-Only attribute. Lists consumption detail of an individual ip
      * @type {Array<IpConsumer>}

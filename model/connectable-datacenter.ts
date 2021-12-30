@@ -20,18 +20,21 @@
  * @interface ConnectableDatacenter
  */
 export interface ConnectableDatacenter {
+
     /**
      * 
      * @type {string}
      * @memberof ConnectableDatacenter
      */
     id?: string;
+
     /**
      * 
      * @type {string}
      * @memberof ConnectableDatacenter
      */
     name?: string;
+
     /**
      * 
      * @type {string}

@@ -20,6 +20,7 @@
  * @interface S3ObjectStorageSSO
  */
 export interface S3ObjectStorageSSO {
+
     /**
      * The S3 object storage single sign on url
      * @type {string}

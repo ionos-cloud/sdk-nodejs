@@ -100,6 +100,9 @@ export class Configuration {
 
     /**
      * Debug flag
+     * Note: We recommend you only use IONOS_DEBUG for debugging purposes. Disable it in your production environments because it can log sensitive data.
+     *  It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly
+     *  impact your application’s performance.
      */
     debug: boolean;
 
@@ -120,7 +123,7 @@ export class Configuration {
         this.maxRetries = DEFAULT_MAX_RETRIES;
         this.maxWaitTime = DEFAULT_MAX_WAIT_TIME;
         this.debug = false;
-        this.setUserAgent('ionos-cloud-sdk-node/v5.0.0-alpha.3');
+        this.setUserAgent('ionos-cloud-sdk-node/v5.0.0');
     }
 
     static fromEnv(): Configuration {

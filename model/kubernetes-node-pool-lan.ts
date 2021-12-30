@@ -20,6 +20,7 @@
  * @interface KubernetesNodePoolLan
  */
 export interface KubernetesNodePoolLan {
+
     /**
      * The LAN ID of an existing LAN at the related datacenter
      * @type {number}

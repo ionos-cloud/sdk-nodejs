@@ -22,30 +22,35 @@ import { KubernetesNodePoolPropertiesForPut } from './kubernetes-node-pool-prope
  * @interface KubernetesNodePoolForPut
  */
 export interface KubernetesNodePoolForPut {
+
     /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesNodePoolForPut
      */
     id?: string;
+
     /**
      * The type of object
      * @type {string}
      * @memberof KubernetesNodePoolForPut
      */
     type?: KubernetesNodePoolForPutTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof KubernetesNodePoolForPut
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof KubernetesNodePoolForPut
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {KubernetesNodePoolPropertiesForPut}
@@ -54,6 +59,8 @@ export interface KubernetesNodePoolForPut {
     properties: KubernetesNodePoolPropertiesForPut;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -61,6 +68,9 @@ export interface KubernetesNodePoolForPut {
 export enum KubernetesNodePoolForPutTypeEnum {
     Nodepool = 'nodepool'
 }
+
+
+
 
 
 

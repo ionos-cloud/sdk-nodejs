@@ -23,30 +23,35 @@ import { Type } from './type';
  * @interface IpBlock
  */
 export interface IpBlock {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof IpBlock
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof IpBlock
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof IpBlock
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof IpBlock
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {IpBlockProperties}

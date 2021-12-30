@@ -20,42 +20,56 @@
  * @interface UserPropertiesPut
  */
 export interface UserPropertiesPut {
+
     /**
      * first name of the user
      * @type {string}
      * @memberof UserPropertiesPut
      */
     firstname?: string;
+
     /**
      * last name of the user
      * @type {string}
      * @memberof UserPropertiesPut
      */
     lastname?: string;
+
     /**
      * email address of the user
      * @type {string}
      * @memberof UserPropertiesPut
      */
     email?: string;
+
+    /**
+     * password of the user
+     * @type {string}
+     * @memberof UserPropertiesPut
+     */
+    password?: string;
+
     /**
      * indicates if the user has admin rights or not
      * @type {boolean}
      * @memberof UserPropertiesPut
      */
     administrator?: boolean;
+
     /**
      * indicates if secure authentication should be forced on the user or not
      * @type {boolean}
      * @memberof UserPropertiesPut
      */
     forceSecAuth?: boolean;
+
     /**
      * indicates if secure authentication is active for the user or not
      * @type {boolean}
      * @memberof UserPropertiesPut
      */
     secAuthActive?: boolean;
+
     /**
      * indicates if the user is active
      * @type {boolean}

@@ -21,12 +21,14 @@ import { UserPropertiesPut } from './user-properties-put';
  * @interface UserPut
  */
 export interface UserPut {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof UserPut
      */
     id?: string;
+
     /**
      * 
      * @type {UserPropertiesPut}

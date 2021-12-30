@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface Requests
  */
 export interface Requests {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Requests
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Requests
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Requests
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Request>}
      * @memberof Requests
      */
     items?: Array<Request>;
+
     /**
      * the offset specified in the request (or, if none was specified, the default offset of 0)
      * @type {number}
      * @memberof Requests
      */
     offset: number;
+
     /**
-     * the limit specified in the request (or, if none was specified, the default limit of 0)
+     * the limit specified in the request (or, if none was specified use the endpoint\'s default pagination limit)
      * @type {number}
      * @memberof Requests
      */
     limit: number;
+
     /**
      * 
      * @type {PaginationLinks}

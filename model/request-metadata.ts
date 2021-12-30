@@ -21,24 +21,28 @@ import { RequestStatus } from './request-status';
  * @interface RequestMetadata
  */
 export interface RequestMetadata {
+
     /**
      * The last time the resource was created
      * @type {string}
      * @memberof RequestMetadata
      */
     createdDate?: string;
+
     /**
      * The user who created the resource.
      * @type {string}
      * @memberof RequestMetadata
      */
     createdBy?: string;
+
     /**
      * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
      * @type {string}
      * @memberof RequestMetadata
      */
     etag?: string;
+
     /**
      * 
      * @type {RequestStatus}

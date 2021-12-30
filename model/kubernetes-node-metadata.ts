@@ -20,30 +20,35 @@
  * @interface KubernetesNodeMetadata
  */
 export interface KubernetesNodeMetadata {
+
     /**
      * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     etag?: string;
+
     /**
      * The last time the resource was created
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     createdDate?: string;
+
     /**
      * The last time the resource has been modified
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     lastModifiedDate?: string;
+
     /**
      * State of the resource.
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     state?: KubernetesNodeMetadataStateEnum;
+
     /**
      * The last time the software updated on node.
      * @type {string}
@@ -51,6 +56,10 @@ export interface KubernetesNodeMetadata {
      */
     lastSoftwareUpdatedDate?: string;
 }
+
+
+
+
 
 /**
     * @export
@@ -65,6 +74,7 @@ export enum KubernetesNodeMetadataStateEnum {
     Busy = 'BUSY',
     Unknown = 'UNKNOWN'
 }
+
 
 
 

@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface RequestStatus
  */
 export interface RequestStatus {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof RequestStatus
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof RequestStatus
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof RequestStatus
      */
     href?: string;
+
     /**
      * 
      * @type {RequestStatusMetadata}

@@ -23,54 +23,63 @@ import { KubernetesNodePoolLan } from './kubernetes-node-pool-lan';
  * @interface KubernetesNodePoolPropertiesForPut
  */
 export interface KubernetesNodePoolPropertiesForPut {
+
     /**
      * A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
-    name: string;
+    name?: string;
+
     /**
      * Number of nodes part of the Node Pool
      * @type {number}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     nodeCount: number;
+
     /**
      * The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     k8sVersion?: string;
+
     /**
      * 
      * @type {KubernetesMaintenanceWindow}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     maintenanceWindow?: KubernetesMaintenanceWindow;
+
     /**
      * 
      * @type {KubernetesAutoScaling}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     autoScaling?: KubernetesAutoScaling;
+
     /**
      * array of additional LANs attached to worker nodes
      * @type {Array<KubernetesNodePoolLan>}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     lans?: Array<KubernetesNodePoolLan>;
+
     /**
      * map of labels attached to node pool
      * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     labels?: { [key: string]: string; };
+
     /**
      * map of annotations attached to node pool
      * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     annotations?: { [key: string]: string; };
+
     /**
      * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
      * @type {Array<string>}

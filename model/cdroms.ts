@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface Cdroms
  */
 export interface Cdroms {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Cdroms
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Cdroms
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Cdroms
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Image>}
      * @memberof Cdroms
      */
     items?: Array<Image>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof Cdroms
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof Cdroms
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

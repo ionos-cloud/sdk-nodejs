@@ -22,54 +22,49 @@ import { S3Bucket } from './s3-bucket';
  * @interface KubernetesClusterProperties
  */
 export interface KubernetesClusterProperties {
+
     /**
      * A Kubernetes Cluster Name. Valid Kubernetes Cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * @type {string}
      * @memberof KubernetesClusterProperties
      */
     name: string;
+
     /**
      * The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
      * @type {string}
      * @memberof KubernetesClusterProperties
      */
     k8sVersion?: string;
+
     /**
      * 
      * @type {KubernetesMaintenanceWindow}
      * @memberof KubernetesClusterProperties
      */
     maintenanceWindow?: KubernetesMaintenanceWindow;
+
     /**
      * List of available versions for upgrading the cluster
      * @type {Array<string>}
      * @memberof KubernetesClusterProperties
      */
     availableUpgradeVersions?: Array<string>;
+
     /**
      * List of versions that may be used for node pools under this cluster
      * @type {Array<string>}
      * @memberof KubernetesClusterProperties
      */
     viableNodePoolVersions?: Array<string>;
-    /**
-     * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
-     * @type {boolean}
-     * @memberof KubernetesClusterProperties
-     */
-    _public?: boolean;
-    /**
-     * The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.
-     * @type {string}
-     * @memberof KubernetesClusterProperties
-     */
-    gatewayIp?: string;
+
     /**
      * Access to the K8s API server is restricted to these CIDRs. Cluster-internal traffic is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.
      * @type {Array<string>}
      * @memberof KubernetesClusterProperties
      */
     apiSubnetAllowList?: Array<string>;
+
     /**
      * List of S3 bucket configured for K8s usage. For now it contains only one S3 bucket used to store K8s API audit logs
      * @type {Array<S3Bucket>}

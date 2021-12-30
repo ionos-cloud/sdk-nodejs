@@ -20,42 +20,49 @@
  * @interface NoStateMetaData
  */
 export interface NoStateMetaData {
+
     /**
      * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
      * @type {string}
      * @memberof NoStateMetaData
      */
     etag?: string;
+
     /**
      * The time the Resource was created
      * @type {string}
      * @memberof NoStateMetaData
      */
     createdDate?: string;
+
     /**
      * The user who has created the resource.
      * @type {string}
      * @memberof NoStateMetaData
      */
     createdBy?: string;
+
     /**
      * The user id of the user who has created the resource.
      * @type {string}
      * @memberof NoStateMetaData
      */
     createdByUserId?: string;
+
     /**
      * The last time the resource has been modified
      * @type {string}
      * @memberof NoStateMetaData
      */
     lastModifiedDate?: string;
+
     /**
      * The user who last modified the resource.
      * @type {string}
      * @memberof NoStateMetaData
      */
     lastModifiedBy?: string;
+
     /**
      * The user id of the user who has last modified the resource.
      * @type {string}

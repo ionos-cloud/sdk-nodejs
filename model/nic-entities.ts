@@ -21,6 +21,7 @@ import { FirewallRules } from './firewall-rules';
  * @interface NicEntities
  */
 export interface NicEntities {
+
     /**
      * 
      * @type {FirewallRules}

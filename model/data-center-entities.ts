@@ -24,24 +24,28 @@ import { Volumes } from './volumes';
  * @interface DataCenterEntities
  */
 export interface DataCenterEntities {
+
     /**
      * 
      * @type {Servers}
      * @memberof DataCenterEntities
      */
     servers?: Servers;
+
     /**
      * 
      * @type {Volumes}
      * @memberof DataCenterEntities
      */
     volumes?: Volumes;
+
     /**
      * 
      * @type {Loadbalancers}
      * @memberof DataCenterEntities
      */
     loadbalancers?: Loadbalancers;
+
     /**
      * 
      * @type {Lans}

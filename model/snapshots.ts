@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface Snapshots
  */
 export interface Snapshots {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Snapshots
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Snapshots
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Snapshots
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Snapshot>}

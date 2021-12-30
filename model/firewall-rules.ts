@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface FirewallRules
  */
 export interface FirewallRules {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof FirewallRules
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof FirewallRules
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof FirewallRules
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<FirewallRule>}
      * @memberof FirewallRules
      */
     items?: Array<FirewallRule>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof FirewallRules
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof FirewallRules
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface LanNics
  */
 export interface LanNics {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof LanNics
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof LanNics
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof LanNics
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Nic>}
      * @memberof LanNics
      */
     items?: Array<Nic>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof LanNics
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof LanNics
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

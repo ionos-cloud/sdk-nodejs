@@ -23,36 +23,42 @@ import { KubernetesClusterPropertiesForPost } from './kubernetes-cluster-propert
  * @interface KubernetesClusterForPost
  */
 export interface KubernetesClusterForPost {
+
     /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesClusterForPost
      */
     id?: string;
+
     /**
      * The type of object
      * @type {string}
      * @memberof KubernetesClusterForPost
      */
     type?: KubernetesClusterForPostTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof KubernetesClusterForPost
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof KubernetesClusterForPost
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {KubernetesClusterPropertiesForPost}
      * @memberof KubernetesClusterForPost
      */
     properties: KubernetesClusterPropertiesForPost;
+
     /**
      * 
      * @type {KubernetesClusterEntities}
@@ -61,6 +67,8 @@ export interface KubernetesClusterForPost {
     entities?: KubernetesClusterEntities;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -68,6 +76,10 @@ export interface KubernetesClusterForPost {
 export enum KubernetesClusterForPostTypeEnum {
     K8s = 'k8s'
 }
+
+
+
+
 
 
 

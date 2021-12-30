@@ -21,18 +21,21 @@ import { Type } from './type';
  * @interface ResourceReference
  */
 export interface ResourceReference {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof ResourceReference
      */
     id: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof ResourceReference
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}

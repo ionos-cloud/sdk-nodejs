@@ -21,6 +21,7 @@ import { ResourceGroups } from './resource-groups';
  * @interface ResourceEntities
  */
 export interface ResourceEntities {
+
     /**
      * 
      * @type {ResourceGroups}

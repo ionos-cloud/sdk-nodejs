@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface Datacenters
  */
 export interface Datacenters {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Datacenters
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Datacenters
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Datacenters
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Datacenter>}
      * @memberof Datacenters
      */
     items?: Array<Datacenter>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof Datacenters
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof Datacenters
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

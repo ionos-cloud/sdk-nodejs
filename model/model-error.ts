@@ -21,12 +21,14 @@ import { ErrorMessage } from './error-message';
  * @interface ModelError
  */
 export interface ModelError {
+
     /**
      * HTTP status code of the operation
      * @type {number}
      * @memberof ModelError
      */
     httpStatus?: number;
+
     /**
      * 
      * @type {Array<ErrorMessage>}

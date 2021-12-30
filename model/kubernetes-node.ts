@@ -22,30 +22,35 @@ import { KubernetesNodeProperties } from './kubernetes-node-properties';
  * @interface KubernetesNode
  */
 export interface KubernetesNode {
+
     /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesNode
      */
     id?: string;
+
     /**
      * The type of object
      * @type {string}
      * @memberof KubernetesNode
      */
     type?: KubernetesNodeTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof KubernetesNode
      */
     href?: string;
+
     /**
      * 
      * @type {KubernetesNodeMetadata}
      * @memberof KubernetesNode
      */
     metadata?: KubernetesNodeMetadata;
+
     /**
      * 
      * @type {KubernetesNodeProperties}
@@ -54,6 +59,8 @@ export interface KubernetesNode {
     properties: KubernetesNodeProperties;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -61,6 +68,9 @@ export interface KubernetesNode {
 export enum KubernetesNodeTypeEnum {
     Node = 'node'
 }
+
+
+
 
 
 

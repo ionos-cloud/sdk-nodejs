@@ -20,114 +20,133 @@
  * @interface VolumeProperties
  */
 export interface VolumeProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof VolumeProperties
      */
     name?: string;
+
     /**
      * Hardware type of the volume.
      * @type {string}
      * @memberof VolumeProperties
      */
     type?: VolumePropertiesTypeEnum;
+
     /**
      * The size of the volume in GB
      * @type {number}
      * @memberof VolumeProperties
      */
     size: number;
+
     /**
      * The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront
      * @type {string}
      * @memberof VolumeProperties
      */
     availabilityZone?: VolumePropertiesAvailabilityZoneEnum;
+
     /**
      * Image or snapshot ID to be used as template for this volume
      * @type {string}
      * @memberof VolumeProperties
      */
     image?: string;
+
     /**
      * Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9
      * @type {string}
      * @memberof VolumeProperties
      */
     imagePassword?: string;
+
     /**
      * 
      * @type {string}
      * @memberof VolumeProperties
      */
     imageAlias?: string;
+
     /**
      * Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.
      * @type {Array<string>}
      * @memberof VolumeProperties
      */
     sshKeys?: Array<string>;
+
     /**
      * The bus type of the volume. Default is VIRTIO
      * @type {string}
      * @memberof VolumeProperties
      */
     bus?: VolumePropertiesBusEnum;
+
     /**
      * OS type of this volume
      * @type {string}
      * @memberof VolumeProperties
      */
     licenceType?: VolumePropertiesLicenceTypeEnum;
+
     /**
      * Is capable of CPU hot plug (no reboot required)
      * @type {boolean}
      * @memberof VolumeProperties
      */
     cpuHotPlug?: boolean;
+
     /**
      * Is capable of memory hot plug (no reboot required)
      * @type {boolean}
      * @memberof VolumeProperties
      */
     ramHotPlug?: boolean;
+
     /**
      * Is capable of nic hot plug (no reboot required)
      * @type {boolean}
      * @memberof VolumeProperties
      */
     nicHotPlug?: boolean;
+
     /**
      * Is capable of nic hot unplug (no reboot required)
      * @type {boolean}
      * @memberof VolumeProperties
      */
     nicHotUnplug?: boolean;
+
     /**
      * Is capable of Virt-IO drive hot plug (no reboot required)
      * @type {boolean}
      * @memberof VolumeProperties
      */
     discVirtioHotPlug?: boolean;
+
     /**
      * Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
      * @type {boolean}
      * @memberof VolumeProperties
      */
     discVirtioHotUnplug?: boolean;
+
     /**
      * The LUN ID of the storage volume. Null for volumes not mounted to any VM
      * @type {number}
      * @memberof VolumeProperties
      */
     deviceNumber?: number;
+
     /**
      * The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either \'public image\' or \'imageAlias\' in conjunction with this property.
      * @type {string}
      * @memberof VolumeProperties
      */
     backupunitId?: string;
+
     /**
      * The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either \'public image\' or \'imageAlias\' that has cloud-init compatibility in conjunction with this property.
      * @type {string}
@@ -135,6 +154,8 @@ export interface VolumeProperties {
      */
     userData?: string;
 }
+
+
 
 /**
     * @export
@@ -144,8 +165,12 @@ export enum VolumePropertiesTypeEnum {
     Hdd = 'HDD',
     Ssd = 'SSD',
     SsdStandard = 'SSD Standard',
-    SsdPremium = 'SSD Premium'
+    SsdPremium = 'SSD Premium',
+    Das = 'DAS',
+    Iso = 'ISO'
 }
+
+
 /**
     * @export
     * @enum {string}
@@ -156,14 +181,21 @@ export enum VolumePropertiesAvailabilityZoneEnum {
     Zone2 = 'ZONE_2',
     Zone3 = 'ZONE_3'
 }
+
+
+
+
+
 /**
     * @export
     * @enum {string}
     */
 export enum VolumePropertiesBusEnum {
     Virtio = 'VIRTIO',
-    Ide = 'IDE'
+    Ide = 'IDE',
+    Unknown = 'UNKNOWN'
 }
+
 /**
     * @export
     * @enum {string}
@@ -175,6 +207,15 @@ export enum VolumePropertiesLicenceTypeEnum {
     Linux = 'LINUX',
     Other = 'OTHER'
 }
+
+
+
+
+
+
+
+
+
 
 
 

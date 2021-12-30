@@ -22,30 +22,35 @@ import { KubernetesNodePoolProperties } from './kubernetes-node-pool-properties'
  * @interface KubernetesNodePool
  */
 export interface KubernetesNodePool {
+
     /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesNodePool
      */
     id?: string;
+
     /**
      * The type of object
      * @type {string}
      * @memberof KubernetesNodePool
      */
     type?: KubernetesNodePoolTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof KubernetesNodePool
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof KubernetesNodePool
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {KubernetesNodePoolProperties}
@@ -54,6 +59,8 @@ export interface KubernetesNodePool {
     properties: KubernetesNodePoolProperties;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -61,6 +68,9 @@ export interface KubernetesNodePool {
 export enum KubernetesNodePoolTypeEnum {
     Nodepool = 'nodepool'
 }
+
+
+
 
 
 

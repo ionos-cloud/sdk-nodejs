@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface Loadbalancers
  */
 export interface Loadbalancers {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Loadbalancers
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Loadbalancers
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Loadbalancers
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Loadbalancer>}
      * @memberof Loadbalancers
      */
     items?: Array<Loadbalancer>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof Loadbalancers
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof Loadbalancers
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

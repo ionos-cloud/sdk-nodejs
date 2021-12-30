@@ -20,24 +20,28 @@
  * @interface RequestProperties
  */
 export interface RequestProperties {
+
     /**
      * 
      * @type {string}
      * @memberof RequestProperties
      */
     method?: string;
+
     /**
      * 
      * @type {{ [key: string]: string; }}
      * @memberof RequestProperties
      */
     headers?: { [key: string]: string; };
+
     /**
      * 
      * @type {string}
      * @memberof RequestProperties
      */
     body?: string;
+
     /**
      * 
      * @type {string}

@@ -21,24 +21,28 @@ import { KubernetesConfigProperties } from './kubernetes-config-properties';
  * @interface KubernetesConfig
  */
 export interface KubernetesConfig {
+
     /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesConfig
      */
     id?: string;
+
     /**
      * The type of object
      * @type {string}
      * @memberof KubernetesConfig
      */
     type?: KubernetesConfigTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof KubernetesConfig
      */
     href?: string;
+
     /**
      * 
      * @type {KubernetesConfigProperties}
@@ -47,6 +51,8 @@ export interface KubernetesConfig {
     properties: KubernetesConfigProperties;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -54,6 +60,8 @@ export interface KubernetesConfig {
 export enum KubernetesConfigTypeEnum {
     Kubeconfig = 'kubeconfig'
 }
+
+
 
 
 

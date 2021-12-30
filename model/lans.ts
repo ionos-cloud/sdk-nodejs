@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface Lans
  */
 export interface Lans {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Lans
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Lans
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Lans
      */
     href?: string;
+
     /**
      * Array of items in lans collection
      * @type {Array<Lan>}
      * @memberof Lans
      */
     items?: Array<Lan>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof Lans
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof Lans
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

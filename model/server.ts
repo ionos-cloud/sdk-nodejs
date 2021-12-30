@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface Server
  */
 export interface Server {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Server
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Server
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Server
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Server
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {ServerProperties}
      * @memberof Server
      */
     properties: ServerProperties;
+
     /**
      * 
      * @type {ServerEntities}

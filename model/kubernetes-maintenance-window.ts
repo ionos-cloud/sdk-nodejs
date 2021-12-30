@@ -20,12 +20,14 @@
  * @interface KubernetesMaintenanceWindow
  */
 export interface KubernetesMaintenanceWindow {
+
     /**
      * The day of the week for a maintenance window.
      * @type {string}
      * @memberof KubernetesMaintenanceWindow
      */
     dayOfTheWeek?: KubernetesMaintenanceWindowDayOfTheWeekEnum;
+
     /**
      * The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\"Z\"; HH:mm:ssZ. This time may varies by 15 minutes.
      * @type {string}
@@ -33,6 +35,7 @@ export interface KubernetesMaintenanceWindow {
      */
     time?: string;
 }
+
 
 /**
     * @export
@@ -47,6 +50,7 @@ export enum KubernetesMaintenanceWindowDayOfTheWeekEnum {
     Saturday = 'Saturday',
     Sunday = 'Sunday'
 }
+
 
 
 

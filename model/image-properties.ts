@@ -20,114 +20,133 @@
  * @interface ImageProperties
  */
 export interface ImageProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof ImageProperties
      */
     name?: string;
+
     /**
      * Human readable description
      * @type {string}
      * @memberof ImageProperties
      */
     description?: string;
+
     /**
      * Location of that image/snapshot. 
      * @type {string}
      * @memberof ImageProperties
      */
     location?: string;
+
     /**
      * The size of the image in GB
      * @type {number}
      * @memberof ImageProperties
      */
     size?: number;
+
     /**
      * Is capable of CPU hot plug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     cpuHotPlug?: boolean;
+
     /**
      * Is capable of CPU hot unplug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     cpuHotUnplug?: boolean;
+
     /**
      * Is capable of memory hot plug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     ramHotPlug?: boolean;
+
     /**
      * Is capable of memory hot unplug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     ramHotUnplug?: boolean;
+
     /**
      * Is capable of nic hot plug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     nicHotPlug?: boolean;
+
     /**
      * Is capable of nic hot unplug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     nicHotUnplug?: boolean;
+
     /**
      * Is capable of Virt-IO drive hot plug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     discVirtioHotPlug?: boolean;
+
     /**
      * Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
      * @type {boolean}
      * @memberof ImageProperties
      */
     discVirtioHotUnplug?: boolean;
+
     /**
      * Is capable of SCSI drive hot plug (no reboot required)
      * @type {boolean}
      * @memberof ImageProperties
      */
     discScsiHotPlug?: boolean;
+
     /**
      * Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines.
      * @type {boolean}
      * @memberof ImageProperties
      */
     discScsiHotUnplug?: boolean;
+
     /**
      * OS type of this Image
      * @type {string}
      * @memberof ImageProperties
      */
     licenceType: ImagePropertiesLicenceTypeEnum;
+
     /**
      * This indicates the type of image
      * @type {string}
      * @memberof ImageProperties
      */
     imageType?: ImagePropertiesImageTypeEnum;
+
     /**
      * Indicates if the image is part of the public repository or not
      * @type {boolean}
      * @memberof ImageProperties
      */
     _public?: boolean;
+
     /**
      * List of image aliases mapped for this Image
      * @type {Array<string>}
      * @memberof ImageProperties
      */
     imageAliases?: Array<string>;
+
     /**
      * Cloud init compatibility
      * @type {string}
@@ -135,6 +154,21 @@ export interface ImageProperties {
      */
     cloudInit?: ImagePropertiesCloudInitEnum;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /**
     * @export
@@ -147,14 +181,19 @@ export enum ImagePropertiesLicenceTypeEnum {
     Linux = 'LINUX',
     Other = 'OTHER'
 }
+
 /**
     * @export
     * @enum {string}
     */
 export enum ImagePropertiesImageTypeEnum {
     Hdd = 'HDD',
-    Cdrom = 'CDROM'
+    Cdrom = 'CDROM',
+    Unknown = 'UNKNOWN'
 }
+
+
+
 /**
     * @export
     * @enum {string}

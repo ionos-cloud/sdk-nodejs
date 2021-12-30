@@ -23,96 +23,112 @@ import { KubernetesNodePoolLan } from './kubernetes-node-pool-lan';
  * @interface KubernetesNodePoolPropertiesForPost
  */
 export interface KubernetesNodePoolPropertiesForPost {
+
     /**
      * A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     name: string;
+
     /**
      * A valid uuid of the datacenter on which user has access
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     datacenterId: string;
+
     /**
      * Number of nodes part of the Node Pool
      * @type {number}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     nodeCount: number;
+
     /**
      * A valid cpu family name
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     cpuFamily: string;
+
     /**
      * Number of cores for node
      * @type {number}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     coresCount: number;
+
     /**
      * RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB.
      * @type {number}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     ramSize: number;
+
     /**
      * The availability zone in which the target VM should exist
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     availabilityZone: KubernetesNodePoolPropertiesForPostAvailabilityZoneEnum;
+
     /**
      * Hardware type of the volume
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     storageType: KubernetesNodePoolPropertiesForPostStorageTypeEnum;
+
     /**
      * The size of the volume in GB. The size should be greater than 10GB.
      * @type {number}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     storageSize: number;
+
     /**
      * The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
      * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     k8sVersion?: string;
+
     /**
      * 
      * @type {KubernetesMaintenanceWindow}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     maintenanceWindow?: KubernetesMaintenanceWindow;
+
     /**
      * 
      * @type {KubernetesAutoScaling}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     autoScaling?: KubernetesAutoScaling;
+
     /**
      * array of additional LANs attached to worker nodes
      * @type {Array<KubernetesNodePoolLan>}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     lans?: Array<KubernetesNodePoolLan>;
+
     /**
      * map of labels attached to node pool
      * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     labels?: { [key: string]: string; };
+
     /**
      * map of annotations attached to node pool
      * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPost
      */
     annotations?: { [key: string]: string; };
+
     /**
      * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
      * @type {Array<string>}
@@ -120,6 +136,13 @@ export interface KubernetesNodePoolPropertiesForPost {
      */
     publicIps?: Array<string>;
 }
+
+
+
+
+
+
+
 
 /**
     * @export
@@ -130,6 +153,7 @@ export enum KubernetesNodePoolPropertiesForPostAvailabilityZoneEnum {
     Zone1 = 'ZONE_1',
     Zone2 = 'ZONE_2'
 }
+
 /**
     * @export
     * @enum {string}
@@ -138,6 +162,14 @@ export enum KubernetesNodePoolPropertiesForPostStorageTypeEnum {
     Hdd = 'HDD',
     Ssd = 'SSD'
 }
+
+
+
+
+
+
+
+
 
 
 

@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface PrivateCrossConnects
  */
 export interface PrivateCrossConnects {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof PrivateCrossConnects
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof PrivateCrossConnects
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof PrivateCrossConnects
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<PrivateCrossConnect>}

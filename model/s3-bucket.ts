@@ -20,6 +20,7 @@
  * @interface S3Bucket
  */
 export interface S3Bucket {
+
     /**
      * Name of the S3 bucket.
      * @type {string}

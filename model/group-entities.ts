@@ -22,12 +22,14 @@ import { ResourceGroups } from './resource-groups';
  * @interface GroupEntities
  */
 export interface GroupEntities {
+
     /**
      * 
      * @type {GroupMembers}
      * @memberof GroupEntities
      */
     users?: GroupMembers;
+
     /**
      * 
      * @type {ResourceGroups}

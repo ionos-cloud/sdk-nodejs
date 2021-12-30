@@ -23,30 +23,35 @@ import { Type } from './type';
  * @interface Image
  */
 export interface Image {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Image
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Image
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Image
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Image
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {ImageProperties}

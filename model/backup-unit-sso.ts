@@ -20,6 +20,7 @@
  * @interface BackupUnitSSO
  */
 export interface BackupUnitSSO {
+
     /**
      * The backup unit single sign on url
      * @type {string}

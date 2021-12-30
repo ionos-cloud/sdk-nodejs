@@ -20,18 +20,21 @@
  * @interface LocationProperties
  */
 export interface LocationProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof LocationProperties
      */
     name?: string;
+
     /**
      * List of features supported by the location
      * @type {Array<string>}
      * @memberof LocationProperties
      */
     features?: Array<string>;
+
     /**
      * List of image aliases available for the location
      * @type {Array<string>}

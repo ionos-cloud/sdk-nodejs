@@ -20,12 +20,14 @@
  * @interface LabelResourceProperties
  */
 export interface LabelResourceProperties {
+
     /**
      * A Label Key
      * @type {string}
      * @memberof LabelResourceProperties
      */
     key?: string;
+
     /**
      * A Label Value
      * @type {string}

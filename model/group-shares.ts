@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface GroupShares
  */
 export interface GroupShares {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof GroupShares
      */
     id?: string;
+
     /**
      * Share representing groups and resource relationship
      * @type {Type}
      * @memberof GroupShares
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof GroupShares
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<GroupShare>}

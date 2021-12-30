@@ -23,36 +23,42 @@ import { KubernetesClusterProperties } from './kubernetes-cluster-properties';
  * @interface KubernetesCluster
  */
 export interface KubernetesCluster {
+
     /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesCluster
      */
     id?: string;
+
     /**
      * The type of object
      * @type {string}
      * @memberof KubernetesCluster
      */
     type?: KubernetesClusterTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof KubernetesCluster
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof KubernetesCluster
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {KubernetesClusterProperties}
      * @memberof KubernetesCluster
      */
     properties: KubernetesClusterProperties;
+
     /**
      * 
      * @type {KubernetesClusterEntities}
@@ -61,6 +67,8 @@ export interface KubernetesCluster {
     entities?: KubernetesClusterEntities;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -68,6 +76,10 @@ export interface KubernetesCluster {
 export enum KubernetesClusterTypeEnum {
     K8s = 'k8s'
 }
+
+
+
+
 
 
 

@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface Datacenter
  */
 export interface Datacenter {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Datacenter
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Datacenter
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Datacenter
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Datacenter
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {DatacenterProperties}
      * @memberof Datacenter
      */
     properties: DatacenterProperties;
+
     /**
      * 
      * @type {DataCenterEntities}

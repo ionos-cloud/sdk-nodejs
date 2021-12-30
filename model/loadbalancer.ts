@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface Loadbalancer
  */
 export interface Loadbalancer {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Loadbalancer
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Loadbalancer
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Loadbalancer
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Loadbalancer
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {LoadbalancerProperties}
      * @memberof Loadbalancer
      */
     properties: LoadbalancerProperties;
+
     /**
      * 
      * @type {LoadbalancerEntities}

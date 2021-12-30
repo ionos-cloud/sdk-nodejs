@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface BalancedNics
  */
 export interface BalancedNics {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof BalancedNics
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof BalancedNics
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof BalancedNics
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Nic>}
      * @memberof BalancedNics
      */
     items?: Array<Nic>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof BalancedNics
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof BalancedNics
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

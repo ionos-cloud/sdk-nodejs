@@ -21,30 +21,35 @@ import { ResourceLimits } from './resource-limits';
  * @interface ContractProperties
  */
 export interface ContractProperties {
+
     /**
      * contract number
      * @type {number}
      * @memberof ContractProperties
      */
     contractNumber?: number;
+
     /**
      * owner of the contract
      * @type {string}
      * @memberof ContractProperties
      */
     owner?: string;
+
     /**
      * status of the contract
      * @type {string}
      * @memberof ContractProperties
      */
     status?: string;
+
     /**
      * Registration domain of the contract
      * @type {string}
      * @memberof ContractProperties
      */
     regDomain?: string;
+
     /**
      * 
      * @type {ResourceLimits}

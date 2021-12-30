@@ -20,18 +20,21 @@
  * @interface BackupUnitProperties
  */
 export interface BackupUnitProperties {
+
     /**
      * A name of that resource (only alphanumeric characters are acceptable)
      * @type {string}
      * @memberof BackupUnitProperties
      */
     name: string;
+
     /**
      * the password associated to that resource
      * @type {string}
      * @memberof BackupUnitProperties
      */
     password?: string;
+
     /**
      * The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.
      * @type {string}

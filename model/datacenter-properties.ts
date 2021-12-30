@@ -20,36 +20,42 @@
  * @interface DatacenterProperties
  */
 export interface DatacenterProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof DatacenterProperties
      */
     name?: string;
+
     /**
      * A description for the datacenter, e.g. staging, production
      * @type {string}
      * @memberof DatacenterProperties
      */
     description?: string;
+
     /**
      * The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests)
      * @type {string}
      * @memberof DatacenterProperties
      */
     location: string;
+
     /**
      * The version of that Data Center. Gets incremented with every change
      * @type {number}
      * @memberof DatacenterProperties
      */
     version?: number;
+
     /**
      * List of features supported by the location this data center is part of
      * @type {Array<string>}
      * @memberof DatacenterProperties
      */
     features?: Array<string>;
+
     /**
      * Boolean value representing if the data center requires extra protection e.g. two factor protection
      * @type {boolean}

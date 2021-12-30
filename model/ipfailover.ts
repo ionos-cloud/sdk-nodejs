@@ -20,12 +20,14 @@
  * @interface IPFailover
  */
 export interface IPFailover {
+
     /**
      * 
      * @type {string}
      * @memberof IPFailover
      */
     ip?: string;
+
     /**
      * 
      * @type {string}

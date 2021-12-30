@@ -21,6 +21,7 @@ import { UserPropertiesPost } from './user-properties-post';
  * @interface UserPost
  */
 export interface UserPost {
+
     /**
      * 
      * @type {UserPropertiesPost}

@@ -21,24 +21,28 @@ import { IPFailover } from './ipfailover';
  * @interface LanProperties
  */
 export interface LanProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof LanProperties
      */
     name?: string;
+
     /**
      * IP failover configurations for lan
      * @type {Array<IPFailover>}
      * @memberof LanProperties
      */
     ipFailover?: Array<IPFailover>;
+
     /**
      * Unique identifier of the private cross connect the given LAN is connected to if any
      * @type {string}
      * @memberof LanProperties
      */
     pcc?: string;
+
     /**
      * Does this LAN faces the public Internet or not
      * @type {boolean}

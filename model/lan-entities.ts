@@ -21,6 +21,7 @@ import { LanNics } from './lan-nics';
  * @interface LanEntities
  */
 export interface LanEntities {
+
     /**
      * 
      * @type {LanNics}

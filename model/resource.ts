@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface Resource
  */
 export interface Resource {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Resource
      */
     id?: string;
+
     /**
      * The type of the resource
      * @type {Type}
      * @memberof Resource
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Resource
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Resource
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {ResourceProperties}
      * @memberof Resource
      */
     properties?: ResourceProperties;
+
     /**
      * 
      * @type {ResourceEntities}

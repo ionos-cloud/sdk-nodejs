@@ -23,30 +23,35 @@ import { Type } from './type';
  * @interface Snapshot
  */
 export interface Snapshot {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Snapshot
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Snapshot
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Snapshot
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Snapshot
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {SnapshotProperties}

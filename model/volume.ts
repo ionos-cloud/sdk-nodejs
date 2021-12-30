@@ -23,30 +23,35 @@ import { VolumeProperties } from './volume-properties';
  * @interface Volume
  */
 export interface Volume {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Volume
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Volume
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Volume
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Volume
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {VolumeProperties}

@@ -23,42 +23,49 @@ import { Volume } from './volume';
  * @interface Volumes
  */
 export interface Volumes {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Volumes
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Volumes
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Volumes
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Volume>}
      * @memberof Volumes
      */
     items?: Array<Volume>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof Volumes
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof Volumes
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

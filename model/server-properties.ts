@@ -21,48 +21,56 @@ import { ResourceReference } from './resource-reference';
  * @interface ServerProperties
  */
 export interface ServerProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof ServerProperties
      */
     name?: string;
+
     /**
      * The total number of cores for the server
      * @type {number}
      * @memberof ServerProperties
      */
     cores: number;
+
     /**
      * The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB.
      * @type {number}
      * @memberof ServerProperties
      */
     ram: number;
+
     /**
      * The availability zone in which the server should exist
      * @type {string}
      * @memberof ServerProperties
      */
     availabilityZone?: ServerPropertiesAvailabilityZoneEnum;
+
     /**
      * Status of the virtual Machine
      * @type {string}
      * @memberof ServerProperties
      */
     vmState?: ServerPropertiesVmStateEnum;
+
     /**
      * 
      * @type {ResourceReference}
      * @memberof ServerProperties
      */
     bootCdrom?: ResourceReference;
+
     /**
      * 
      * @type {ResourceReference}
      * @memberof ServerProperties
      */
     bootVolume?: ResourceReference;
+
     /**
      * Cpu family of pserver
      * @type {string}
@@ -70,6 +78,10 @@ export interface ServerProperties {
      */
     cpuFamily?: string;
 }
+
+
+
+
 
 /**
     * @export
@@ -80,6 +92,7 @@ export enum ServerPropertiesAvailabilityZoneEnum {
     Zone1 = 'ZONE_1',
     Zone2 = 'ZONE_2'
 }
+
 /**
     * @export
     * @enum {string}
@@ -91,8 +104,12 @@ export enum ServerPropertiesVmStateEnum {
     Paused = 'PAUSED',
     Shutdown = 'SHUTDOWN',
     Shutoff = 'SHUTOFF',
-    Crashed = 'CRASHED'
+    Crashed = 'CRASHED',
+    Suspended = 'SUSPENDED'
 }
+
+
+
 
 
 

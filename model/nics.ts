@@ -23,42 +23,49 @@ import { Type } from './type';
  * @interface Nics
  */
 export interface Nics {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Nics
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Nics
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Nics
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Nic>}
      * @memberof Nics
      */
     items?: Array<Nic>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof Nics
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof Nics
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}

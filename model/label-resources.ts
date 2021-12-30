@@ -22,42 +22,49 @@ import { PaginationLinks } from './pagination-links';
  * @interface LabelResources
  */
 export interface LabelResources {
+
     /**
      * Unique representation for Label as a collection on a resource.
      * @type {string}
      * @memberof LabelResources
      */
     id?: string;
+
     /**
      * The type of resource within a collection
      * @type {string}
      * @memberof LabelResources
      */
     type?: LabelResourcesTypeEnum;
+
     /**
      * URL to the collection representation (absolute path)
      * @type {string}
      * @memberof LabelResources
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<LabelResource>}
      * @memberof LabelResources
      */
     items?: Array<LabelResource>;
+
     /**
      * the offset (if specified in the request)
      * @type {number}
      * @memberof LabelResources
      */
     offset?: number;
+
     /**
      * the limit (if specified in the request)
      * @type {number}
      * @memberof LabelResources
      */
     limit?: number;
+
     /**
      * 
      * @type {PaginationLinks}
@@ -66,6 +73,8 @@ export interface LabelResources {
     _links?: PaginationLinks;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -73,6 +82,11 @@ export interface LabelResources {
 export enum LabelResourcesTypeEnum {
     Collection = 'collection'
 }
+
+
+
+
+
 
 
 

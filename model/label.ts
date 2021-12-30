@@ -22,30 +22,35 @@ import { NoStateMetaData } from './no-state-meta-data';
  * @interface Label
  */
 export interface Label {
+
     /**
      * Label is identified using standard URN.
      * @type {string}
      * @memberof Label
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {string}
      * @memberof Label
      */
     type?: LabelTypeEnum;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Label
      */
     href?: string;
+
     /**
      * 
      * @type {NoStateMetaData}
      * @memberof Label
      */
     metadata?: NoStateMetaData;
+
     /**
      * 
      * @type {LabelProperties}
@@ -54,6 +59,8 @@ export interface Label {
     properties: LabelProperties;
 }
 
+
+
 /**
     * @export
     * @enum {string}
@@ -61,6 +68,9 @@ export interface Label {
 export enum LabelTypeEnum {
     Label = 'label'
 }
+
+
+
 
 
 

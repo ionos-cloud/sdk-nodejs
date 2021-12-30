@@ -13,6 +13,7 @@
  */
 
 
+import { PaginationLinks } from './pagination-links';
 import { Type } from './type';
 import { User } from './user';
 
@@ -22,30 +23,55 @@ import { User } from './user';
  * @interface Users
  */
 export interface Users {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Users
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Users
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Users
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<User>}
      * @memberof Users
      */
     items?: Array<User>;
+
+    /**
+     * the offset (if specified in the request)
+     * @type {number}
+     * @memberof Users
+     */
+    offset?: number;
+
+    /**
+     * the limit (if specified in the request)
+     * @type {number}
+     * @memberof Users
+     */
+    limit?: number;
+
+    /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof Users
+     */
+    _links?: PaginationLinks;
 }
 
 

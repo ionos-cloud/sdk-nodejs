@@ -20,6 +20,7 @@
  * @interface KubernetesConfigProperties
  */
 export interface KubernetesConfigProperties {
+
     /**
      * A Kubernetes Config file data
      * @type {string}

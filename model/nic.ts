@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface Nic
  */
 export interface Nic {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Nic
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Nic
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Nic
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Nic
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {NicProperties}
      * @memberof Nic
      */
     properties: NicProperties;
+
     /**
      * 
      * @type {NicEntities}

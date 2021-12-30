@@ -21,6 +21,7 @@ import { KubernetesNodePools } from './kubernetes-node-pools';
  * @interface KubernetesClusterEntities
  */
 export interface KubernetesClusterEntities {
+
     /**
      * 
      * @type {KubernetesNodePools}

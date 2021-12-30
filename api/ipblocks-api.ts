@@ -200,10 +200,12 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+         * @param {number} [offset] the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+         * @param {number} [limit] the maximum number of elements to return (use together with offset for pagination)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
+        ipblocksGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/ipblocks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -242,6 +244,20 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
             }
             if (depth !== undefined) {
                 localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((offset === undefined) && (configuration !== undefined)) {
+                offset = configuration.getDefaultParamValue('offset');
+            }
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if ((limit === undefined) && (configuration !== undefined)) {
+                limit = configuration.getDefaultParamValue('limit');
+            }
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
@@ -589,11 +605,13 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+         * @param {number} [offset] the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+         * @param {number} [limit] the maximum number of elements to return (use together with offset for pagination)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ipblocksGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpBlocks>> {
-            const axiosArgs = await IPBlocksApiAxiosParamCreator(configuration).ipblocksGet(pretty, depth, xContractNumber, options);
+        async ipblocksGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpBlocks>> {
+            const axiosArgs = await IPBlocksApiAxiosParamCreator(configuration).ipblocksGet(pretty, depth, xContractNumber, offset, limit, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -681,11 +699,13 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+         * @param {number} [offset] the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+         * @param {number} [limit] the maximum number of elements to return (use together with offset for pagination)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<IpBlocks> {
-            return IPBlocksApiFp(configuration).ipblocksGet(pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        ipblocksGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): AxiosPromise<IpBlocks> {
+            return IPBlocksApiFp(configuration).ipblocksGet(pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * You can use update attributes of a resource
@@ -827,6 +847,20 @@ export interface IPBlocksApiIpblocksGetRequest {
      * @memberof IPBlocksApiIpblocksGet
      */
     readonly xContractNumber?: number
+
+    /**
+     * the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+     * @type {number}
+     * @memberof IPBlocksApiIpblocksGet
+     */
+    readonly offset?: number
+
+    /**
+     * the maximum number of elements to return (use together with offset for pagination)
+     * @type {number}
+     * @memberof IPBlocksApiIpblocksGet
+     */
+    readonly limit?: number
 }
 
 /**
@@ -988,7 +1022,7 @@ export class IPBlocksApi extends BaseAPI {
      * @memberof IPBlocksApi
      */
     public ipblocksGet(requestParameters: IPBlocksApiIpblocksGetRequest = {}, options?: any) {
-        return IPBlocksApiFp(this.configuration).ipblocksGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return IPBlocksApiFp(this.configuration).ipblocksGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

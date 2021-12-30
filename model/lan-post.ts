@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface LanPost
  */
 export interface LanPost {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof LanPost
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof LanPost
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof LanPost
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof LanPost
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {LanEntities}
      * @memberof LanPost
      */
     entities?: LanEntities;
+
     /**
      * 
      * @type {LanPropertiesPost}

@@ -20,12 +20,14 @@
  * @interface ErrorMessage
  */
 export interface ErrorMessage {
+
     /**
      * Application internal error code
      * @type {string}
      * @memberof ErrorMessage
      */
     errorCode?: string;
+
     /**
      * Human readable message
      * @type {string}

@@ -20,54 +20,63 @@
  * @interface IpConsumer
  */
 export interface IpConsumer {
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     ip?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     mac?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     nicId?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     serverId?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     serverName?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     datacenterId?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     datacenterName?: string;
+
     /**
      * 
      * @type {string}
      * @memberof IpConsumer
      */
     k8sNodePoolUuid?: string;
+
     /**
      * 
      * @type {string}

@@ -20,48 +20,56 @@
  * @interface UserPropertiesPost
  */
 export interface UserPropertiesPost {
+
     /**
      * first name of the user
      * @type {string}
      * @memberof UserPropertiesPost
      */
     firstname?: string;
+
     /**
      * last name of the user
      * @type {string}
      * @memberof UserPropertiesPost
      */
     lastname?: string;
+
     /**
      * email address of the user
      * @type {string}
      * @memberof UserPropertiesPost
      */
     email?: string;
+
     /**
      * indicates if the user has admin rights or not
      * @type {boolean}
      * @memberof UserPropertiesPost
      */
     administrator?: boolean;
+
     /**
      * indicates if secure authentication should be forced on the user or not
      * @type {boolean}
      * @memberof UserPropertiesPost
      */
     forceSecAuth?: boolean;
+
     /**
      * indicates if secure authentication is active for the user or not
      * @type {boolean}
      * @memberof UserPropertiesPost
      */
     secAuthActive?: boolean;
+
     /**
      * User password
      * @type {string}
      * @memberof UserPropertiesPost
      */
     password?: string;
+
     /**
      * indicates if the user is active
      * @type {boolean}

@@ -20,102 +20,119 @@
  * @interface ResourceLimits
  */
 export interface ResourceLimits {
+
     /**
      * maximum number of cores per server
      * @type {number}
      * @memberof ResourceLimits
      */
     coresPerServer: number;
+
     /**
      * maximum cores per contract
      * @type {number}
      * @memberof ResourceLimits
      */
     coresPerContract: number;
+
     /**
      * number of cores provisioned
      * @type {number}
      * @memberof ResourceLimits
      */
     coresProvisioned: number;
+
     /**
      * maximum ram per server
      * @type {number}
      * @memberof ResourceLimits
      */
     ramPerServer: number;
+
     /**
      * maximum ram per contract
      * @type {number}
      * @memberof ResourceLimits
      */
     ramPerContract: number;
+
     /**
      * ram provisioned
      * @type {number}
      * @memberof ResourceLimits
      */
     ramProvisioned: number;
+
     /**
      * hdd limit per volume
      * @type {number}
      * @memberof ResourceLimits
      */
     hddLimitPerVolume: number;
+
     /**
      * hdd limit per contract
      * @type {number}
      * @memberof ResourceLimits
      */
     hddLimitPerContract: number;
+
     /**
      * hdd volume provisioned
      * @type {number}
      * @memberof ResourceLimits
      */
     hddVolumeProvisioned: number;
+
     /**
      * ssd limit per volume
      * @type {number}
      * @memberof ResourceLimits
      */
     ssdLimitPerVolume: number;
+
     /**
      * ssd limit per contract
      * @type {number}
      * @memberof ResourceLimits
      */
     ssdLimitPerContract: number;
+
     /**
      * ssd volume provisioned
      * @type {number}
      * @memberof ResourceLimits
      */
     ssdVolumeProvisioned: number;
+
     /**
      * total reservable ip limit of the customer
      * @type {number}
      * @memberof ResourceLimits
      */
     reservableIps: number;
+
     /**
      * reserved ips on a contract
      * @type {number}
      * @memberof ResourceLimits
      */
     reservedIpsOnContract: number;
+
     /**
      * reserved ips in use
      * @type {number}
      * @memberof ResourceLimits
      */
     reservedIpsInUse: number;
+
     /**
      * k8s clusters total limit
      * @type {number}
      * @memberof ResourceLimits
      */
     k8sClusterLimitTotal: number;
+
     /**
      * k8s clusters provisioned
      * @type {number}

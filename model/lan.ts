@@ -24,36 +24,42 @@ import { Type } from './type';
  * @interface Lan
  */
 export interface Lan {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Lan
      */
     id?: string;
+
     /**
      * The type of object that has been created
      * @type {Type}
      * @memberof Lan
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Lan
      */
     href?: string;
+
     /**
      * 
      * @type {DatacenterElementMetadata}
      * @memberof Lan
      */
     metadata?: DatacenterElementMetadata;
+
     /**
      * 
      * @type {LanProperties}
      * @memberof Lan
      */
     properties: LanProperties;
+
     /**
      * 
      * @type {LanEntities}

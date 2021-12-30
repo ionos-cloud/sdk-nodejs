@@ -20,60 +20,70 @@
  * @interface GroupProperties
  */
 export interface GroupProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof GroupProperties
      */
     name?: string;
+
     /**
      * create data center privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     createDataCenter?: boolean;
+
     /**
      * create snapshot privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     createSnapshot?: boolean;
+
     /**
      * reserve ip block privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     reserveIp?: boolean;
+
     /**
      * activity log access privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     accessActivityLog?: boolean;
+
     /**
      * create pcc privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     createPcc?: boolean;
+
     /**
      * S3 privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     s3Privilege?: boolean;
+
     /**
      * create backup unit privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     createBackupUnit?: boolean;
+
     /**
      * create internet access privilege
      * @type {boolean}
      * @memberof GroupProperties
      */
     createInternetAccess?: boolean;
+
     /**
      * create kubernetes cluster privilege
      * @type {boolean}

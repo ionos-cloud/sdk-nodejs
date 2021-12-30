@@ -20,12 +20,14 @@
  * @interface GroupShareProperties
  */
 export interface GroupShareProperties {
+
     /**
      * edit privilege on a resource
      * @type {boolean}
      * @memberof GroupShareProperties
      */
     editPrivilege?: boolean;
+
     /**
      * share privilege on a resource
      * @type {boolean}

@@ -1698,10 +1698,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+         * @param {number} [offset] the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+         * @param {number} [limit] the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
+        umUsersGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/um/users`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -1740,6 +1742,20 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             }
             if (depth !== undefined) {
                 localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((offset === undefined) && (configuration !== undefined)) {
+                offset = configuration.getDefaultParamValue('offset');
+            }
+            if (offset !== undefined) {
+                localVarQueryParameter['offset'] = offset;
+            }
+
+            if ((limit === undefined) && (configuration !== undefined)) {
+                limit = configuration.getDefaultParamValue('limit');
+            }
+            if (limit !== undefined) {
+                localVarQueryParameter['limit'] = limit;
             }
 
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
@@ -2917,11 +2933,13 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+         * @param {number} [offset] the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+         * @param {number} [limit] the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umUsersGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Users>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersGet(pretty, depth, xContractNumber, options);
+        async umUsersGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Users>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersGet(pretty, depth, xContractNumber, offset, limit, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -3338,11 +3356,13 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {boolean} [pretty] Controls whether response is pretty-printed (with indentation and new lines)
          * @param {number} [depth] Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children\&#39;s children are included  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users having more than 1 contract need to provide contract number, against which all API requests should be executed
+         * @param {number} [offset] the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+         * @param {number} [limit] the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination)
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Users> {
-            return UserManagementApiFp(configuration).umUsersGet(pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        umUsersGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): AxiosPromise<Users> {
+            return UserManagementApiFp(configuration).umUsersGet(pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * You can retrieve group resources of user by using the users ID. This value can be found in the response body when a user is created or when you GET a list of users.
@@ -4228,6 +4248,20 @@ export interface UserManagementApiUmUsersGetRequest {
      * @memberof UserManagementApiUmUsersGet
      */
     readonly xContractNumber?: number
+
+    /**
+     * the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination)
+     * @type {number}
+     * @memberof UserManagementApiUmUsersGet
+     */
+    readonly offset?: number
+
+    /**
+     * the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination)
+     * @type {number}
+     * @memberof UserManagementApiUmUsersGet
+     */
+    readonly limit?: number
 }
 
 /**
@@ -4852,7 +4886,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umUsersGet(requestParameters: UserManagementApiUmUsersGetRequest = {}, options?: any) {
-        return UserManagementApiFp(this.configuration).umUsersGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umUsersGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

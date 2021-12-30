@@ -21,12 +21,14 @@ import { ResourceReference } from './resource-reference';
  * @interface RequestTarget
  */
 export interface RequestTarget {
+
     /**
      * 
      * @type {ResourceReference}
      * @memberof RequestTarget
      */
     target?: ResourceReference;
+
     /**
      * 
      * @type {string}
@@ -34,6 +36,8 @@ export interface RequestTarget {
      */
     status?: RequestTargetStatusEnum;
 }
+
+
 
 /**
     * @export

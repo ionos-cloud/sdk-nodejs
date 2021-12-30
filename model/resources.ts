@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface Resources
  */
 export interface Resources {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof Resources
      */
     id?: string;
+
     /**
      * The type of the resource
      * @type {Type}
      * @memberof Resources
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof Resources
      */
     href?: string;
+
     /**
      * Array of items in that collection
      * @type {Array<Resource>}

@@ -22,24 +22,28 @@ import { Type } from './type';
  * @interface GroupShare
  */
 export interface GroupShare {
+
     /**
      * The resource\'s unique identifier
      * @type {string}
      * @memberof GroupShare
      */
     id?: string;
+
     /**
      * resource as generic type
      * @type {Type}
      * @memberof GroupShare
      */
     type?: Type;
+
     /**
      * URL to the object representation (absolute path)
      * @type {string}
      * @memberof GroupShare
      */
     href?: string;
+
     /**
      * 
      * @type {GroupShareProperties}

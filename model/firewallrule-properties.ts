@@ -20,54 +20,63 @@
  * @interface FirewallruleProperties
  */
 export interface FirewallruleProperties {
+
     /**
      * A name of that resource
      * @type {string}
      * @memberof FirewallruleProperties
      */
     name?: string;
+
     /**
      * The protocol for the rule. Property cannot be modified after creation (disallowed in update requests)
      * @type {string}
      * @memberof FirewallruleProperties
      */
     protocol: FirewallrulePropertiesProtocolEnum;
+
     /**
      * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source MAC address
      * @type {string}
      * @memberof FirewallruleProperties
      */
     sourceMac?: string;
+
     /**
      * Only traffic originating from the respective IPv4 address is allowed. Value null allows all source IPs
      * @type {string}
      * @memberof FirewallruleProperties
      */
     sourceIp?: string;
+
     /**
      * In case the target NIC has multiple IP addresses, only traffic directed to the respective IP address of the NIC is allowed. Value null allows all target IPs
      * @type {string}
      * @memberof FirewallruleProperties
      */
     targetIp?: string;
+
     /**
      * Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes
      * @type {number}
      * @memberof FirewallruleProperties
      */
     icmpCode?: number;
+
     /**
      * Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types
      * @type {number}
      * @memberof FirewallruleProperties
      */
     icmpType?: number;
+
     /**
      * Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports
      * @type {number}
      * @memberof FirewallruleProperties
      */
     portRangeStart?: number;
+
     /**
      * Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports
      * @type {number}
@@ -75,6 +84,8 @@ export interface FirewallruleProperties {
      */
     portRangeEnd?: number;
 }
+
+
 
 /**
     * @export
@@ -86,6 +97,13 @@ export enum FirewallrulePropertiesProtocolEnum {
     Icmp = 'ICMP',
     Any = 'ANY'
 }
+
+
+
+
+
+
+
 
 
 

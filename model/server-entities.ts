@@ -23,18 +23,21 @@ import { Nics } from './nics';
  * @interface ServerEntities
  */
 export interface ServerEntities {
+
     /**
      * 
      * @type {Cdroms}
      * @memberof ServerEntities
      */
     cdroms?: Cdroms;
+
     /**
      * 
      * @type {AttachedVolumes}
      * @memberof ServerEntities
      */
     volumes?: AttachedVolumes;
+
     /**
      * 
      * @type {Nics}

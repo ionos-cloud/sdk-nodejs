@@ -20,24 +20,28 @@
  * @interface KubernetesNodeProperties
  */
 export interface KubernetesNodeProperties {
+
     /**
      * A Kubernetes Node Name.
      * @type {string}
      * @memberof KubernetesNodeProperties
      */
     name: string;
+
     /**
      * A valid public IP.
      * @type {string}
      * @memberof KubernetesNodeProperties
      */
     publicIP?: string;
+
     /**
      * A valid private IP.
      * @type {string}
      * @memberof KubernetesNodeProperties
      */
     privateIP?: string;
+
     /**
      * The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
      * @type {string}
