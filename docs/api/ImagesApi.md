@@ -4,20 +4,20 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**imagesDelete**](ImagesApi.md#imagesdelete) | **DELETE** /images/{imageId} | Delete an Image |
-| [**imagesFindById**](ImagesApi.md#imagesfindbyid) | **GET** /images/{imageId} | Retrieve an Image |
-| [**imagesGet**](ImagesApi.md#imagesget) | **GET** /images | List Images |
-| [**imagesPatch**](ImagesApi.md#imagespatch) | **PATCH** /images/{imageId} | Partially modify an Image |
-| [**imagesPut**](ImagesApi.md#imagesput) | **PUT** /images/{imageId} | Modify an Image |
+| [**imagesDelete**](ImagesApi.md#imagesdelete) | **DELETE** /images/{imageId} | Delete images |
+| [**imagesFindById**](ImagesApi.md#imagesfindbyid) | **GET** /images/{imageId} | Retrieve images |
+| [**imagesGet**](ImagesApi.md#imagesget) | **GET** /images | List images |
+| [**imagesPatch**](ImagesApi.md#imagespatch) | **PATCH** /images/{imageId} | Partially modify images |
+| [**imagesPut**](ImagesApi.md#imagesput) | **PUT** /images/{imageId} | Modify images |
 
 
 ## imagesDelete
 
 > imagesDelete(imageId, opts)
 
-Delete an Image
+Delete images
 
-Deletes the specified image. This operation is permitted on private image only.
+Delete the specified image; this operation is only supported for private images.
 
 ### Examples
 
@@ -30,7 +30,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ImagesApi(config);
-// Delete an Image
+// Delete images
 api_instance
   .imagesDelete({
     imageId: imageId_example,
@@ -47,7 +47,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **imageId** | **string** |  | [default to undefined] |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -70,9 +70,9 @@ Basic Authentication, Token Authentication
 
 > <Image> imagesFindById(imageId, opts)
 
-Retrieve an Image
+Retrieve images
 
-Retrieves the attributes of a given image.
+Retrieve the properties of the specified image.
 
 ### Examples
 
@@ -85,7 +85,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ImagesApi(config);
-// Retrieve an Image
+// Retrieve images
 api_instance
   .imagesFindById({
     imageId: imageId_example,
@@ -102,7 +102,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **imageId** | **string** |  | [default to undefined] |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -125,9 +125,9 @@ Basic Authentication, Token Authentication
 
 > <Images> imagesGet(opts)
 
-List Images
+List images
 
-Retrieve a list of images within the datacenter
+List all the images within the data center.
 
 ### Examples
 
@@ -140,7 +140,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ImagesApi(config);
-// List Images
+// List images
 api_instance
   .imagesGet({
     pretty: true,
@@ -178,9 +178,9 @@ Basic Authentication, Token Authentication
 
 > <Image> imagesPatch(imageId, image, opts)
 
-Partially modify an Image
+Partially modify images
 
-You can use update attributes of a resource
+Update the properties of the specified image.
 
 ### Examples
 
@@ -193,7 +193,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ImagesApi(config);
-// Partially modify an Image
+// Partially modify images
 api_instance
   .imagesPatch({
     imageId: imageId_example,
@@ -211,8 +211,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **imageId** | **string** |  | [default to undefined] |
-| **image** | [**ImageProperties**](../models/ImageProperties.md) | Modified Image |  |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
+| **image** | [**ImageProperties**](../models/ImageProperties.md) | The image properties to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -235,9 +235,9 @@ Basic Authentication, Token Authentication
 
 > <Image> imagesPut(imageId, image, opts)
 
-Modify an Image
+Modify images
 
-You can use update attributes of a resource
+Modify the properties of the specified image.
 
 ### Examples
 
@@ -250,7 +250,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ImagesApi(config);
-// Modify an Image
+// Modify images
 api_instance
   .imagesPut({
     imageId: imageId_example,
@@ -268,8 +268,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **imageId** | **string** |  | [default to undefined] |
-| **image** | [**Image**](../models/Image.md) | Modified Image |  |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
+| **image** | [**Image**](../models/Image.md) | The modified image |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

@@ -4,21 +4,21 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersServersNicsFirewallrulesDelete**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules |
-| [**datacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially Modify a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule |
-| [**datacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesDelete**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete firewall rules |
+| [**datacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve firewall rules |
+| [**datacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List firewall rules |
+| [**datacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify firewall rules |
+| [**datacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create firewall rules |
+| [**datacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify firewall rules |
 
 
 ## datacentersServersNicsFirewallrulesDelete
 
 > datacentersServersNicsFirewallrulesDelete(datacenterId, serverId, nicId, firewallruleId, opts)
 
-Delete a Firewall Rule
+Delete firewall rules
 
-Removes the specified firewall rule.
+Delete the specified firewall rule.
 
 ### Examples
 
@@ -31,7 +31,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Delete a Firewall Rule
+// Delete firewall rules
 api_instance
   .datacentersServersNicsFirewallrulesDelete({
     datacenterId: datacenterId_example,
@@ -52,9 +52,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **firewallruleId** | **string** | The unique ID of the Firewall Rule | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **firewallruleId** | **string** | The unique ID of the firewall rule. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -77,9 +77,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRule> datacentersServersNicsFirewallrulesFindById(datacenterId, serverId, nicId, firewallruleId, opts)
 
-Retrieve a Firewall Rule
+Retrieve firewall rules
 
-Retrieves the attributes of a given firewall rule.
+Retrieve the properties of the specified firewall rule.
 
 ### Examples
 
@@ -92,7 +92,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Retrieve a Firewall Rule
+// Retrieve firewall rules
 api_instance
   .datacentersServersNicsFirewallrulesFindById({
     datacenterId: datacenterId_example,
@@ -113,9 +113,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **firewallruleId** | **string** | The unique ID of the Firewall Rule | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **firewallruleId** | **string** | The unique ID of the firewall rule. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -138,9 +138,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRules> datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, opts)
 
-List Firewall Rules
+List firewall rules
 
-Retrieves a list of firewall rules associated with a particular network interface.
+List all firewall rules for the specified NIC.
 
 ### Examples
 
@@ -153,7 +153,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// List Firewall Rules
+// List firewall rules
 api_instance
   .datacentersServersNicsFirewallrulesGet({
     datacenterId: datacenterId_example,
@@ -175,8 +175,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -201,9 +201,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRule> datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
 
-Partially Modify a Firewall Rule
+Partially modify firewall rules
 
-You can use update attributes of a resource.
+Update the properties of the specified firewall rule.
 
 ### Examples
 
@@ -216,7 +216,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Partially Modify a Firewall Rule
+// Partially modify firewall rules
 api_instance
   .datacentersServersNicsFirewallrulesPatch({
     datacenterId: datacenterId_example,
@@ -238,10 +238,10 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **firewallruleId** | **string** | The unique ID of the Firewall Rule | [default to undefined] |
-| **firewallrule** | [**FirewallruleProperties**](../models/FirewallruleProperties.md) | Modified Firewall Rule |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **firewallruleId** | **string** | The unique ID of the firewall rule. | [default to undefined] |
+| **firewallrule** | [**FirewallruleProperties**](../models/FirewallruleProperties.md) | The properties of the firewall rule to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -264,9 +264,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRule> datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, opts)
 
-Create a Firewall Rule
+Create firewall rules
 
-This will add a Firewall Rule to the network interface.
+Create a firewall rule for the specified NIC.
 
 ### Examples
 
@@ -279,7 +279,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Create a Firewall Rule
+// Create firewall rules
 api_instance
   .datacentersServersNicsFirewallrulesPost({
     datacenterId: datacenterId_example,
@@ -300,9 +300,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **firewallrule** | [**FirewallRule**](../models/FirewallRule.md) | Firewall Rule to be created |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **firewallrule** | [**FirewallRule**](../models/FirewallRule.md) | The firewall rule to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -325,9 +325,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRule> datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
 
-Modify a Firewall Rule
+Modify firewall rules
 
-You can use update attributes of a resource.
+Modify the properties of the specified firewall rule.
 
 ### Examples
 
@@ -340,7 +340,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Modify a Firewall Rule
+// Modify firewall rules
 api_instance
   .datacentersServersNicsFirewallrulesPut({
     datacenterId: datacenterId_example,
@@ -362,10 +362,10 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **firewallruleId** | **string** | The unique ID of the Firewall Rule | [default to undefined] |
-| **firewallrule** | [**FirewallRule**](../models/FirewallRule.md) | Modified Firewall Rule |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **firewallruleId** | **string** | The unique ID of the firewall rule. | [default to undefined] |
+| **firewallrule** | [**FirewallRule**](../models/FirewallRule.md) | The modified firewall rule. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

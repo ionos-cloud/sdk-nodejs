@@ -3,9 +3,9 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **name** | **string** | A name of that resource | [optional] [default to undefined] |
+| **name** | **string** | The name of the  resource. | [optional] [default to undefined] |
 | **ipFailover** | [**Array&lt;IPFailover&gt;**](IPFailover.md) | IP failover configurations for lan | [optional] [default to undefined] |
-| **pcc** | **string** | Unique identifier of the private cross connect the given LAN is connected to if any | [optional] [default to undefined] |
-| **_public** | **boolean** | Does this LAN faces the public Internet or not | [optional] [default to undefined] |
+| **pcc** | **string** | The unique identifier of the private Cross-Connect the LAN is connected to, if any. | [optional] [default to undefined] |
+| **_public** | **boolean** | This LAN faces the public Internet. | [optional] [default to undefined] |
 
 

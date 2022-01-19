@@ -4,33 +4,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersNetworkloadbalancersDelete**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Remove an Network Load Balancer |
-| [**datacentersNetworkloadbalancersFindByNetworkLoadBalancerId**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersfindbynetworkloadbalancerid) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Retrieve an Network Load Balancer |
-| [**datacentersNetworkloadbalancersFlowlogsDelete**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Remove Flow Log from Network Load Balancer |
-| [**datacentersNetworkloadbalancersFlowlogsFindByFlowLogId**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Retrieve a Flow Log of the Network Load Balancer |
-| [**datacentersNetworkloadbalancersFlowlogsGet**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsget) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | List Network Load Balancer Flow Logs |
-| [**datacentersNetworkloadbalancersFlowlogsPatch**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogspatch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Partially modify a Flow Log of the Network Load Balancer |
-| [**datacentersNetworkloadbalancersFlowlogsPost**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogspost) | **POST** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Add a Network Load Balancer Flow Log |
-| [**datacentersNetworkloadbalancersFlowlogsPut**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsput) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Modify a Flow Log of the Network Load Balancer |
-| [**datacentersNetworkloadbalancersForwardingrulesDelete**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesdelete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Remove Forwarding Rule from Network Load Balancer |
-| [**datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesfindbyforwardingruleid) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve a Forwarding Rule of the Network Load Balancer |
-| [**datacentersNetworkloadbalancersForwardingrulesGet**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesget) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | List Network Load Balancer Forwarding Rules |
-| [**datacentersNetworkloadbalancersForwardingrulesPatch**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulespatch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify a forwarding rule of the Network Load Balancer |
-| [**datacentersNetworkloadbalancersForwardingrulesPost**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulespost) | **POST** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Add a Network Load Balancer Forwarding Rule |
-| [**datacentersNetworkloadbalancersForwardingrulesPut**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesput) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify a forwarding rule of the Network Load Balancer |
+| [**datacentersNetworkloadbalancersDelete**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Delete Network Load Balancers |
+| [**datacentersNetworkloadbalancersFindByNetworkLoadBalancerId**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersfindbynetworkloadbalancerid) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Retrieve Network Load Balancers |
+| [**datacentersNetworkloadbalancersFlowlogsDelete**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Delete NLB Flow Logs |
+| [**datacentersNetworkloadbalancersFlowlogsFindByFlowLogId**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Retrieve NLB Flow Logs |
+| [**datacentersNetworkloadbalancersFlowlogsGet**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsget) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | List NLB Flow Logs |
+| [**datacentersNetworkloadbalancersFlowlogsPatch**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogspatch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Partially modify NLB Flow Logs |
+| [**datacentersNetworkloadbalancersFlowlogsPost**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogspost) | **POST** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Create NLB Flow Logs |
+| [**datacentersNetworkloadbalancersFlowlogsPut**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersflowlogsput) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Modify NLB Flow Logs |
+| [**datacentersNetworkloadbalancersForwardingrulesDelete**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesdelete) | **DELETE** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete NLB forwarding rules |
+| [**datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesfindbyforwardingruleid) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve NLB forwarding rules |
+| [**datacentersNetworkloadbalancersForwardingrulesGet**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesget) | **GET** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | List NLB forwarding rules |
+| [**datacentersNetworkloadbalancersForwardingrulesPatch**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulespatch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify NLB forwarding rules |
+| [**datacentersNetworkloadbalancersForwardingrulesPost**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulespost) | **POST** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Create NLB forwarding rules |
+| [**datacentersNetworkloadbalancersForwardingrulesPut**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersforwardingrulesput) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify NLB forwarding rules |
 | [**datacentersNetworkloadbalancersGet**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersget) | **GET** /datacenters/{datacenterId}/networkloadbalancers | List Network Load Balancers |
-| [**datacentersNetworkloadbalancersPatch**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Partially update an Network Load Balancer |
-| [**datacentersNetworkloadbalancersPost**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancerspost) | **POST** /datacenters/{datacenterId}/networkloadbalancers | Create an Network Load Balancer |
-| [**datacentersNetworkloadbalancersPut**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersput) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Update an Network Load Balancer |
+| [**datacentersNetworkloadbalancersPatch**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Partially modify Network Load Balancers |
+| [**datacentersNetworkloadbalancersPost**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancerspost) | **POST** /datacenters/{datacenterId}/networkloadbalancers | Create Network Load Balancers |
+| [**datacentersNetworkloadbalancersPut**](NetworkLoadBalancersApi.md#datacentersnetworkloadbalancersput) | **PUT** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Modify Network Load Balancers |
 
 
 ## datacentersNetworkloadbalancersDelete
 
 > datacentersNetworkloadbalancersDelete(datacenterId, networkLoadBalancerId, opts)
 
-Remove an Network Load Balancer
+Delete Network Load Balancers
 
-Removes the specified Network Load Balancer.
+Remove the specified Network Load Balancer from the data center.
 
 ### Examples
 
@@ -43,7 +43,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Remove an Network Load Balancer
+// Delete Network Load Balancers
 api_instance
   .datacentersNetworkloadbalancersDelete({
     datacenterId: datacenterId_example,
@@ -62,7 +62,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -85,9 +85,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancer> datacentersNetworkloadbalancersFindByNetworkLoadBalancerId(datacenterId, networkLoadBalancerId, opts)
 
-Retrieve an Network Load Balancer
+Retrieve Network Load Balancers
 
-Retrieves the attributes of a given Network Load Balancer.
+Retrieve the properties of the specified Network Load Balancer within the data center.
 
 ### Examples
 
@@ -100,7 +100,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Retrieve an Network Load Balancer
+// Retrieve Network Load Balancers
 api_instance
   .datacentersNetworkloadbalancersFindByNetworkLoadBalancerId({
     datacenterId: datacenterId_example,
@@ -119,7 +119,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -142,9 +142,9 @@ Basic Authentication, Token Authentication
 
 > datacentersNetworkloadbalancersFlowlogsDelete(datacenterId, networkLoadBalancerId, flowLogId, opts)
 
-Remove Flow Log from Network Load Balancer
+Delete NLB Flow Logs
 
-This will remove a flow log from the network load balancer.
+Delete the specified Network Load Balancer Flow Log.
 
 ### Examples
 
@@ -157,7 +157,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Remove Flow Log from Network Load Balancer
+// Delete NLB Flow Logs
 api_instance
   .datacentersNetworkloadbalancersFlowlogsDelete({
     datacenterId: datacenterId_example,
@@ -177,8 +177,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the flow log | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -201,9 +201,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersNetworkloadbalancersFlowlogsFindByFlowLogId(datacenterId, networkLoadBalancerId, flowLogId, opts)
 
-Retrieve a Flow Log of the Network Load Balancer
+Retrieve NLB Flow Logs
 
-This will return a Flow Log of the Network Load Balancer.
+Retrieve the specified Network Load Balancer Flow Log.
 
 ### Examples
 
@@ -216,7 +216,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Retrieve a Flow Log of the Network Load Balancer
+// Retrieve NLB Flow Logs
 api_instance
   .datacentersNetworkloadbalancersFlowlogsFindByFlowLogId({
     datacenterId: datacenterId_example,
@@ -236,8 +236,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -260,9 +260,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLogs> datacentersNetworkloadbalancersFlowlogsGet(datacenterId, networkLoadBalancerId, opts)
 
-List Network Load Balancer Flow Logs
+List NLB Flow Logs
 
-You can retrieve a list of Flow Logs of the Network Load Balancer.
+List all the Flow Logs for the specified Network Load Balancer.
 
 ### Examples
 
@@ -275,7 +275,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// List Network Load Balancer Flow Logs
+// List NLB Flow Logs
 api_instance
   .datacentersNetworkloadbalancersFlowlogsGet({
     datacenterId: datacenterId_example,
@@ -294,7 +294,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -317,9 +317,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersNetworkloadbalancersFlowlogsPatch(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties, opts)
 
-Partially modify a Flow Log of the Network Load Balancer
+Partially modify NLB Flow Logs
 
-You can use to partially update a Flow Log of a Network Load Balancer.
+Update the properties of the specified Network Load Balancer Flow Log.
 
 ### Examples
 
@@ -332,7 +332,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Partially modify a Flow Log of the Network Load Balancer
+// Partially modify NLB Flow Logs
 api_instance
   .datacentersNetworkloadbalancersFlowlogsPatch({
     datacenterId: datacenterId_example,
@@ -353,9 +353,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
-| **networkLoadBalancerFlowLogProperties** | [**FlowLogProperties**](../models/FlowLogProperties.md) | Properties of a Flow Log to be updated |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
+| **networkLoadBalancerFlowLogProperties** | [**FlowLogProperties**](../models/FlowLogProperties.md) | The properties of the Flow Log to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -378,9 +378,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersNetworkloadbalancersFlowlogsPost(datacenterId, networkLoadBalancerId, networkLoadBalancerFlowLog, opts)
 
-Add a Network Load Balancer Flow Log
+Create NLB Flow Logs
 
-This will add a new Flow Log to the Network Load Balancer.
+Add a new Flow Log for the Network Load Balancer.
 
 ### Examples
 
@@ -393,7 +393,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Add a Network Load Balancer Flow Log
+// Create NLB Flow Logs
 api_instance
   .datacentersNetworkloadbalancersFlowlogsPost({
     datacenterId: datacenterId_example,
@@ -413,8 +413,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **networkLoadBalancerFlowLog** | [**FlowLog**](../models/FlowLog.md) | Flow Log to add |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **networkLoadBalancerFlowLog** | [**FlowLog**](../models/FlowLog.md) | The Flow Log to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -437,9 +437,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersNetworkloadbalancersFlowlogsPut(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLog, opts)
 
-Modify a Flow Log of the Network Load Balancer
+Modify NLB Flow Logs
 
-You can use to update a Flow Log of the Network Load Balancer.
+Modify the specified Network Load Balancer Flow Log.
 
 ### Examples
 
@@ -452,7 +452,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Modify a Flow Log of the Network Load Balancer
+// Modify NLB Flow Logs
 api_instance
   .datacentersNetworkloadbalancersFlowlogsPut({
     datacenterId: datacenterId_example,
@@ -473,9 +473,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
-| **networkLoadBalancerFlowLog** | [**FlowLogPut**](../models/FlowLogPut.md) | Modified Network Load Balancer Flow Log |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
+| **networkLoadBalancerFlowLog** | [**FlowLogPut**](../models/FlowLogPut.md) | The modified NLB Flow Log. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -498,9 +498,9 @@ Basic Authentication, Token Authentication
 
 > datacentersNetworkloadbalancersForwardingrulesDelete(datacenterId, networkLoadBalancerId, forwardingRuleId, opts)
 
-Remove Forwarding Rule from Network Load Balancer
+Delete NLB forwarding rules
 
-This will remove a forwarding rule from the Network Load Balancer.
+Delete the specified Network Load Balancer forwarding rule.
 
 ### Examples
 
@@ -513,7 +513,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Remove Forwarding Rule from Network Load Balancer
+// Delete NLB forwarding rules
 api_instance
   .datacentersNetworkloadbalancersForwardingrulesDelete({
     datacenterId: datacenterId_example,
@@ -533,8 +533,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **forwardingRuleId** | **string** | The unique ID of the forwarding rule | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **forwardingRuleId** | **string** | The unique ID of the forwarding rule. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -557,9 +557,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancerForwardingRule> datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId(datacenterId, networkLoadBalancerId, forwardingRuleId, opts)
 
-Retrieve a Forwarding Rule of the Network Load Balancer
+Retrieve NLB forwarding rules
 
-This will a forwarding rule of the Network Load Balancer.
+Retrieve the specified Network Load Balance forwarding rule.
 
 ### Examples
 
@@ -572,7 +572,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Retrieve a Forwarding Rule of the Network Load Balancer
+// Retrieve NLB forwarding rules
 api_instance
   .datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId({
     datacenterId: datacenterId_example,
@@ -592,8 +592,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **forwardingRuleId** | **string** | The unique ID of the forwarding rule | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **forwardingRuleId** | **string** | The unique ID of the forwarding rule. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -616,9 +616,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancerForwardingRules> datacentersNetworkloadbalancersForwardingrulesGet(datacenterId, networkLoadBalancerId, opts)
 
-List Network Load Balancer Forwarding Rules
+List NLB forwarding rules
 
-You can retrieve a list of forwarding rules of the Network Load Balancer.
+List the forwarding rules for the specified Network Load Balancer.
 
 ### Examples
 
@@ -631,7 +631,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// List Network Load Balancer Forwarding Rules
+// List NLB forwarding rules
 api_instance
   .datacentersNetworkloadbalancersForwardingrulesGet({
     datacenterId: datacenterId_example,
@@ -650,7 +650,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -673,9 +673,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancerForwardingRule> datacentersNetworkloadbalancersForwardingrulesPatch(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties, opts)
 
-Partially modify a forwarding rule of the Network Load Balancer
+Partially modify NLB forwarding rules
 
-You can use to partially update a forwarding rule of a Network Load Balancer.
+Update the properties of the specified Network Load Balancer forwarding rule.
 
 ### Examples
 
@@ -688,7 +688,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Partially modify a forwarding rule of the Network Load Balancer
+// Partially modify NLB forwarding rules
 api_instance
   .datacentersNetworkloadbalancersForwardingrulesPatch({
     datacenterId: datacenterId_example,
@@ -709,9 +709,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **forwardingRuleId** | **string** | The unique ID of the forwarding rule | [default to undefined] |
-| **networkLoadBalancerForwardingRuleProperties** | [**NetworkLoadBalancerForwardingRuleProperties**](../models/NetworkLoadBalancerForwardingRuleProperties.md) | Properties of a forwarding rule to be updated |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **forwardingRuleId** | **string** | The unique ID of the forwarding rule. | [default to undefined] |
+| **networkLoadBalancerForwardingRuleProperties** | [**NetworkLoadBalancerForwardingRuleProperties**](../models/NetworkLoadBalancerForwardingRuleProperties.md) | The properties of the forwarding rule to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -734,9 +734,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancerForwardingRule> datacentersNetworkloadbalancersForwardingrulesPost(datacenterId, networkLoadBalancerId, networkLoadBalancerForwardingRule, opts)
 
-Add a Network Load Balancer Forwarding Rule
+Create NLB forwarding rules
 
-This will add a new forwarding rule to the Network Load Balancer.
+Create a forwarding rule for the specified Network Load Balancer.
 
 ### Examples
 
@@ -749,7 +749,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Add a Network Load Balancer Forwarding Rule
+// Create NLB forwarding rules
 api_instance
   .datacentersNetworkloadbalancersForwardingrulesPost({
     datacenterId: datacenterId_example,
@@ -769,8 +769,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md) | forwarding rule to add |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRule**](../models/NetworkLoadBalancerForwardingRule.md) | The forwarding rule to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -793,9 +793,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancerForwardingRule> datacentersNetworkloadbalancersForwardingrulesPut(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRule, opts)
 
-Modify a forwarding rule of the Network Load Balancer
+Modify NLB forwarding rules
 
-You can use to update a forwarding rule of the Network Load Balancer.
+Modify the specified Network Load Balancer forwarding rule.
 
 ### Examples
 
@@ -808,7 +808,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Modify a forwarding rule of the Network Load Balancer
+// Modify NLB forwarding rules
 api_instance
   .datacentersNetworkloadbalancersForwardingrulesPut({
     datacenterId: datacenterId_example,
@@ -829,9 +829,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **forwardingRuleId** | **string** | The unique ID of the forwarding rule | [default to undefined] |
-| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRulePut**](../models/NetworkLoadBalancerForwardingRulePut.md) | Modified Network Load Balancer Forwarding Rule |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **forwardingRuleId** | **string** | The unique ID of the forwarding rule. | [default to undefined] |
+| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRulePut**](../models/NetworkLoadBalancerForwardingRulePut.md) | The modified NLB forwarding rule. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -856,7 +856,7 @@ Basic Authentication, Token Authentication
 
 List Network Load Balancers
 
-Retrieve a list of Network Load Balancers within the datacenter.
+List all the Network Load Balancers within the data center.
 
 ### Examples
 
@@ -913,9 +913,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancer> datacentersNetworkloadbalancersPatch(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties, opts)
 
-Partially update an Network Load Balancer
+Partially modify Network Load Balancers
 
-Partially update the attributes of a given Network Load Balancer
+Update the properties of the specified Network Load Balancer within the data center.
 
 ### Examples
 
@@ -928,7 +928,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Partially update an Network Load Balancer
+// Partially modify Network Load Balancers
 api_instance
   .datacentersNetworkloadbalancersPatch({
     datacenterId: datacenterId_example,
@@ -948,8 +948,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **networkLoadBalancerProperties** | [**NetworkLoadBalancerProperties**](../models/NetworkLoadBalancerProperties.md) | Network Load Balancer properties to be updated |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **networkLoadBalancerProperties** | [**NetworkLoadBalancerProperties**](../models/NetworkLoadBalancerProperties.md) | The properties of the Network Load Balancer to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -972,9 +972,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancer> datacentersNetworkloadbalancersPost(datacenterId, networkLoadBalancer, opts)
 
-Create an Network Load Balancer
+Create Network Load Balancers
 
-Creates an Network Load Balancer within the datacenter.
+Create a Network Load Balancer within the data center.
 
 ### Examples
 
@@ -987,7 +987,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Create an Network Load Balancer
+// Create Network Load Balancers
 api_instance
   .datacentersNetworkloadbalancersPost({
     datacenterId: datacenterId_example,
@@ -1006,7 +1006,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancer** | [**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md) | Network Load Balancer to be created |  |
+| **networkLoadBalancer** | [**NetworkLoadBalancer**](../models/NetworkLoadBalancer.md) | The Network Load Balancer to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1029,9 +1029,9 @@ Basic Authentication, Token Authentication
 
 > <NetworkLoadBalancer> datacentersNetworkloadbalancersPut(datacenterId, networkLoadBalancerId, networkLoadBalancer, opts)
 
-Update an Network Load Balancer
+Modify Network Load Balancers
 
-Update the attributes of a given Network Load Balancer
+Modify the properties of the specified Network Load Balancer within the data center.
 
 ### Examples
 
@@ -1044,7 +1044,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkLoadBalancersApi(config);
-// Update an Network Load Balancer
+// Modify Network Load Balancers
 api_instance
   .datacentersNetworkloadbalancersPut({
     datacenterId: datacenterId_example,
@@ -1064,8 +1064,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | [default to undefined] |
-| **networkLoadBalancer** | [**NetworkLoadBalancerPut**](../models/NetworkLoadBalancerPut.md) | Modified Network Load Balancer |  |
+| **networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | [default to undefined] |
+| **networkLoadBalancer** | [**NetworkLoadBalancerPut**](../models/NetworkLoadBalancerPut.md) | The modified Network Load Balancer. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

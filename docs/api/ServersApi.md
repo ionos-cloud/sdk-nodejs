@@ -4,37 +4,37 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersServersCdromsDelete**](ServersApi.md#datacentersserverscdromsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM |
-| [**datacentersServersCdromsFindById**](ServersApi.md#datacentersserverscdromsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM |
+| [**datacentersServersCdromsDelete**](ServersApi.md#datacentersserverscdromsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach CD-ROMs |
+| [**datacentersServersCdromsFindById**](ServersApi.md#datacentersserverscdromsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve attached CD-ROMs |
 | [**datacentersServersCdromsGet**](ServersApi.md#datacentersserverscdromsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs  |
-| [**datacentersServersCdromsPost**](ServersApi.md#datacentersserverscdromspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM |
-| [**datacentersServersDelete**](ServersApi.md#datacentersserversdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server |
-| [**datacentersServersFindById**](ServersApi.md#datacentersserversfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server |
-| [**datacentersServersGet**](ServersApi.md#datacentersserversget) | **GET** /datacenters/{datacenterId}/servers | List Servers  |
-| [**datacentersServersPatch**](ServersApi.md#datacentersserverspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server |
-| [**datacentersServersPost**](ServersApi.md#datacentersserverspost) | **POST** /datacenters/{datacenterId}/servers | Create a Server |
-| [**datacentersServersPut**](ServersApi.md#datacentersserversput) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server |
-| [**datacentersServersRebootPost**](ServersApi.md#datacentersserversrebootpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server |
-| [**datacentersServersRemoteConsoleGet**](ServersApi.md#datacentersserversremoteconsoleget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/remoteconsole | Get the server remote console link |
-| [**datacentersServersResumePost**](ServersApi.md#datacentersserversresumepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume a Cube Server |
-| [**datacentersServersStartPost**](ServersApi.md#datacentersserversstartpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server |
-| [**datacentersServersStopPost**](ServersApi.md#datacentersserversstoppost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server |
-| [**datacentersServersSuspendPost**](ServersApi.md#datacentersserverssuspendpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server |
-| [**datacentersServersTokenGet**](ServersApi.md#datacentersserverstokenget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get the server\&#39;s jwToken |
-| [**datacentersServersUpgradePost**](ServersApi.md#datacentersserversupgradepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server |
-| [**datacentersServersVolumesDelete**](ServersApi.md#datacentersserversvolumesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume |
-| [**datacentersServersVolumesFindById**](ServersApi.md#datacentersserversvolumesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume |
-| [**datacentersServersVolumesGet**](ServersApi.md#datacentersserversvolumesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes |
-| [**datacentersServersVolumesPost**](ServersApi.md#datacentersserversvolumespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume |
+| [**datacentersServersCdromsPost**](ServersApi.md#datacentersserverscdromspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach CD-ROMs |
+| [**datacentersServersDelete**](ServersApi.md#datacentersserversdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete servers |
+| [**datacentersServersFindById**](ServersApi.md#datacentersserversfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve servers by ID |
+| [**datacentersServersGet**](ServersApi.md#datacentersserversget) | **GET** /datacenters/{datacenterId}/servers | List servers  |
+| [**datacentersServersPatch**](ServersApi.md#datacentersserverspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify servers |
+| [**datacentersServersPost**](ServersApi.md#datacentersserverspost) | **POST** /datacenters/{datacenterId}/servers | Create servers |
+| [**datacentersServersPut**](ServersApi.md#datacentersserversput) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify servers |
+| [**datacentersServersRebootPost**](ServersApi.md#datacentersserversrebootpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot servers |
+| [**datacentersServersRemoteConsoleGet**](ServersApi.md#datacentersserversremoteconsoleget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/remoteconsole | Get Remote Console link |
+| [**datacentersServersResumePost**](ServersApi.md#datacentersserversresumepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume Cubes instances |
+| [**datacentersServersStartPost**](ServersApi.md#datacentersserversstartpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start servers |
+| [**datacentersServersStopPost**](ServersApi.md#datacentersserversstoppost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop VMs |
+| [**datacentersServersSuspendPost**](ServersApi.md#datacentersserverssuspendpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend Cubes instances |
+| [**datacentersServersTokenGet**](ServersApi.md#datacentersserverstokenget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token |
+| [**datacentersServersUpgradePost**](ServersApi.md#datacentersserversupgradepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade servers |
+| [**datacentersServersVolumesDelete**](ServersApi.md#datacentersserversvolumesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach volumes |
+| [**datacentersServersVolumesFindById**](ServersApi.md#datacentersserversvolumesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve attached volumes |
+| [**datacentersServersVolumesGet**](ServersApi.md#datacentersserversvolumesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List attached volumes |
+| [**datacentersServersVolumesPost**](ServersApi.md#datacentersserversvolumespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach volumes |
 
 
 ## datacentersServersCdromsDelete
 
 > datacentersServersCdromsDelete(datacenterId, serverId, cdromId, opts)
 
-Detach a CD-ROM
+Detach CD-ROMs
 
-This will detach a CD-ROM from the server
+Detach the specified CD-ROM from the server.
 
 ### Examples
 
@@ -47,7 +47,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Detach a CD-ROM
+// Detach CD-ROMs
 api_instance
   .datacentersServersCdromsDelete({
     datacenterId: datacenterId_example,
@@ -67,8 +67,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **cdromId** | **string** | The unique ID of the CD-ROM | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **cdromId** | **string** | The unique ID of the CD-ROM. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -91,9 +91,9 @@ Basic Authentication, Token Authentication
 
 > <Image> datacentersServersCdromsFindById(datacenterId, serverId, cdromId, opts)
 
-Retrieve an attached CD-ROM
+Retrieve attached CD-ROMs
 
-You can retrieve a specific CD-ROM attached to the server
+Retrieve the properties of the CD-ROM, attached to the specified server.
 
 ### Examples
 
@@ -106,7 +106,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Retrieve an attached CD-ROM
+// Retrieve attached CD-ROMs
 api_instance
   .datacentersServersCdromsFindById({
     datacenterId: datacenterId_example,
@@ -126,8 +126,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **cdromId** | **string** | The unique ID of the CD-ROM | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **cdromId** | **string** | The unique ID of the CD-ROM. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -152,7 +152,7 @@ Basic Authentication, Token Authentication
 
 List attached CD-ROMs 
 
-You can retrieve a list of CD-ROMs attached to the server.
+List all CD-ROMs, attached to the specified server.
 
 ### Examples
 
@@ -186,7 +186,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -211,9 +211,9 @@ Basic Authentication, Token Authentication
 
 > <Image> datacentersServersCdromsPost(datacenterId, serverId, cdrom, opts)
 
-Attach a CD-ROM
+Attach CD-ROMs
 
-You can attach a CD-ROM to an existing server. You can attach up to 2 CD-ROMs to one server. 
+Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
 
 ### Examples
 
@@ -226,7 +226,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Attach a CD-ROM
+// Attach CD-ROMs
 api_instance
   .datacentersServersCdromsPost({
     datacenterId: datacenterId_example,
@@ -246,8 +246,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **cdrom** | [**Image**](../models/Image.md) | CD-ROM to be attached |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **cdrom** | [**Image**](../models/Image.md) | The CD-ROM to be attached. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -270,9 +270,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersDelete(datacenterId, serverId, opts)
 
-Delete a Server
+Delete servers
 
-This will remove a server from your datacenter; however, it will not remove the storage volumes attached to the server. You will need to make a separate API call to perform that action
+Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
 
 ### Examples
 
@@ -285,7 +285,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Delete a Server
+// Delete servers
 api_instance
   .datacentersServersDelete({
     datacenterId: datacenterId_example,
@@ -304,7 +304,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -327,9 +327,9 @@ Basic Authentication, Token Authentication
 
 > <Server> datacentersServersFindById(datacenterId, serverId, opts)
 
-Retrieve a Server
+Retrieve servers by ID
 
-Returns information about a server such as its configuration, provisioning status, etc.
+Retrieve information about the specified server within the data center, such as its configuration, provisioning status, and so on.
 
 ### Examples
 
@@ -342,7 +342,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Retrieve a Server
+// Retrieve servers by ID
 api_instance
   .datacentersServersFindById({
     datacenterId: datacenterId_example,
@@ -361,7 +361,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -384,9 +384,9 @@ Basic Authentication, Token Authentication
 
 > <Servers> datacentersServersGet(datacenterId, opts)
 
-List Servers 
+List servers 
 
-You can retrieve a list of servers within a datacenter
+List all servers within the data center.
 
 ### Examples
 
@@ -399,7 +399,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// List Servers 
+// List servers 
 api_instance
   .datacentersServersGet({
     datacenterId: datacenterId_example,
@@ -422,7 +422,7 @@ api_instance
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **upgradeNeeded** | **boolean** | It can be used to filter which servers can be upgraded which can not be upgraded. | [optional][default to undefined] |
+| **upgradeNeeded** | **boolean** | Filter servers that can or that cannot be upgraded. | [optional][default to undefined] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
 | **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
 | **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
@@ -445,9 +445,9 @@ Basic Authentication, Token Authentication
 
 > <Server> datacentersServersPatch(datacenterId, serverId, server, opts)
 
-Partially modify a Server
+Partially modify servers
 
-You can use update attributes of a server
+Update the properties of the specified server within the data center.
 
 ### Examples
 
@@ -460,7 +460,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Partially modify a Server
+// Partially modify servers
 api_instance
   .datacentersServersPatch({
     datacenterId: datacenterId_example,
@@ -480,8 +480,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the server | [default to undefined] |
-| **server** | [**ServerProperties**](../models/ServerProperties.md) | Modified properties of Server |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **server** | [**ServerProperties**](../models/ServerProperties.md) | The properties of the server to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -504,9 +504,9 @@ Basic Authentication, Token Authentication
 
 > <Server> datacentersServersPost(datacenterId, server, opts)
 
-Create a Server
+Create servers
 
-Creates a server within an existing datacenter. You can configure the boot volume and connect the server to an existing LAN.
+Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
 
 ### Examples
 
@@ -519,7 +519,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Create a Server
+// Create servers
 api_instance
   .datacentersServersPost({
     datacenterId: datacenterId_example,
@@ -538,7 +538,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **server** | [**Server**](../models/Server.md) | Server to be created |  |
+| **server** | [**Server**](../models/Server.md) | The server to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -561,9 +561,9 @@ Basic Authentication, Token Authentication
 
 > <Server> datacentersServersPut(datacenterId, serverId, server, opts)
 
-Modify a Server
+Modify servers
 
-Allows to modify the attributes of a Server. From v5 onwards \'allowReboot\' attribute will no longer be available. For certain server property change it was earlier forced to be provided. Now this behaviour is implicit and backend will do this automatically e.g. in earlier versions, when CPU family changes, the \'allowReboot\' property was required to be set to true which will no longer be the case and the server will be rebooted automatically
+Modify the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
 
 ### Examples
 
@@ -576,7 +576,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Modify a Server
+// Modify servers
 api_instance
   .datacentersServersPut({
     datacenterId: datacenterId_example,
@@ -596,8 +596,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the server | [default to undefined] |
-| **server** | [**Server**](../models/Server.md) | Modified Server |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **server** | [**Server**](../models/Server.md) | The modified server |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -620,9 +620,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersRebootPost(datacenterId, serverId, opts)
 
-Reboot a Server
+Reboot servers
 
-This will force a hard reboot of the server. Do not use this method if you want to gracefully reboot the machine. This is the equivalent of powering off the machine and turning it back on.
+Force a hard reboot of the specified server within the data center. Don\'t use this method if you wish to reboot gracefully. This is an equivalent of powering down a computer and turning it back on.
 
 ### Examples
 
@@ -635,7 +635,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Reboot a Server
+// Reboot servers
 api_instance
   .datacentersServersRebootPost({
     datacenterId: datacenterId_example,
@@ -654,7 +654,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -677,9 +677,9 @@ Basic Authentication, Token Authentication
 
 > <RemoteConsoleUrl> datacentersServersRemoteConsoleGet(datacenterId, serverId, opts)
 
-Get the server remote console link
+Get Remote Console link
 
-Returns the link with the jwToken to access the server remote console
+Retrieve a link with a JSON Web Token for accessing the server\'s Remote Console.
 
 ### Examples
 
@@ -692,7 +692,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Get the server remote console link
+// Get Remote Console link
 api_instance
   .datacentersServersRemoteConsoleGet({
     datacenterId: datacenterId_example,
@@ -711,7 +711,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -734,9 +734,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersResumePost(datacenterId, serverId, opts)
 
-Resume a Cube Server
+Resume Cubes instances
 
-This will resume a suspended server. The operation can only be applied to suspended Cube servers. No billing event will be generated.
+Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
 
 ### Examples
 
@@ -749,7 +749,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Resume a Cube Server
+// Resume Cubes instances
 api_instance
   .datacentersServersResumePost({
     datacenterId: datacenterId_example,
@@ -768,7 +768,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -791,9 +791,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersStartPost(datacenterId, serverId, opts)
 
-Start a Server
+Start servers
 
-This will start a server. If the server\'s public IP was deallocated then a new IP will be assigned
+Start the specified server within the data center; if the server\'s public IP address has been deallocated, a new IP address will be assigned.
 
 ### Examples
 
@@ -806,7 +806,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Start a Server
+// Start servers
 api_instance
   .datacentersServersStartPost({
     datacenterId: datacenterId_example,
@@ -825,7 +825,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -848,9 +848,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersStopPost(datacenterId, serverId, opts)
 
-Stop a Server
+Stop VMs
 
-This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.
+Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
 
 ### Examples
 
@@ -863,7 +863,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Stop a Server
+// Stop VMs
 api_instance
   .datacentersServersStopPost({
     datacenterId: datacenterId_example,
@@ -882,7 +882,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -905,9 +905,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersSuspendPost(datacenterId, serverId, opts)
 
-Suspend a Cube Server
+Suspend Cubes instances
 
-This will suspend a server. The operation can only be applied to Cube servers. Note: The virtual machine will not be deleted, and the consumed resources will continue to be billed.
+Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
 
 ### Examples
 
@@ -920,7 +920,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Suspend a Cube Server
+// Suspend Cubes instances
 api_instance
   .datacentersServersSuspendPost({
     datacenterId: datacenterId_example,
@@ -939,7 +939,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -962,9 +962,9 @@ Basic Authentication, Token Authentication
 
 > <Token> datacentersServersTokenGet(datacenterId, serverId, opts)
 
-Get the server\'s jwToken
+Get JASON Web Token
 
-Returns the server json web token to be used for login operations (ex: accessing the server console)
+Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server\'s console).
 
 ### Examples
 
@@ -977,7 +977,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Get the server\'s jwToken
+// Get JASON Web Token
 api_instance
   .datacentersServersTokenGet({
     datacenterId: datacenterId_example,
@@ -996,7 +996,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1019,9 +1019,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersUpgradePost(datacenterId, serverId, opts)
 
-Upgrade a Server
+Upgrade servers
 
-This will upgrade the version of the server, if needed. To verify if there is an upgrade available for a server, call \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
+Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
 
 ### Examples
 
@@ -1034,7 +1034,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Upgrade a Server
+// Upgrade servers
 api_instance
   .datacentersServersUpgradePost({
     datacenterId: datacenterId_example,
@@ -1053,7 +1053,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1076,9 +1076,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersVolumesDelete(datacenterId, serverId, volumeId, opts)
 
-Detach a volume
+Detach volumes
 
-This will detach the volume from the server. This will not delete the volume from your datacenter. You will need to make a separate request to perform a deletion
+Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
 
 ### Examples
 
@@ -1091,7 +1091,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Detach a volume
+// Detach volumes
 api_instance
   .datacentersServersVolumesDelete({
     datacenterId: datacenterId_example,
@@ -1111,8 +1111,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1135,9 +1135,9 @@ Basic Authentication, Token Authentication
 
 > <Volume> datacentersServersVolumesFindById(datacenterId, serverId, volumeId, opts)
 
-Retrieve an attached volume
+Retrieve attached volumes
 
-This will retrieve the properties of an attached volume.
+Retrieve the properties of the volume, attached to the specified server.
 
 ### Examples
 
@@ -1150,7 +1150,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Retrieve an attached volume
+// Retrieve attached volumes
 api_instance
   .datacentersServersVolumesFindById({
     datacenterId: datacenterId_example,
@@ -1170,8 +1170,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1194,9 +1194,9 @@ Basic Authentication, Token Authentication
 
 > <AttachedVolumes> datacentersServersVolumesGet(datacenterId, serverId, opts)
 
-List Attached Volumes
+List attached volumes
 
-You can retrieve a list of volumes attached to the server
+List all volumes, attached to the specified server.
 
 ### Examples
 
@@ -1209,7 +1209,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// List Attached Volumes
+// List attached volumes
 api_instance
   .datacentersServersVolumesGet({
     datacenterId: datacenterId_example,
@@ -1230,7 +1230,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1255,9 +1255,9 @@ Basic Authentication
 
 > <Volume> datacentersServersVolumesPost(datacenterId, serverId, volume, opts)
 
-Attach a volume
+Attach volumes
 
-This will attach a pre-existing storage volume to the server. It is also possible to create and attach a volume in one step just by providing a new volume description as payload. Combine count of Nics and volumes attached to the server should not exceed size 24.
+Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
 
 ### Examples
 
@@ -1270,7 +1270,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Attach a volume
+// Attach volumes
 api_instance
   .datacentersServersVolumesPost({
     datacenterId: datacenterId_example,
@@ -1290,8 +1290,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **volume** | [**Volume**](../models/Volume.md) | Volume to be attached (created and attached) |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **volume** | [**Volume**](../models/Volume.md) | The volume to be attached (or created and attached). |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

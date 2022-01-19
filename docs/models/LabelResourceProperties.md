@@ -3,7 +3,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **key** | **string** | A Label Key | [optional] [default to undefined] |
-| **value** | **string** | A Label Value | [optional] [default to undefined] |
+| **key** | **string** | A label key | [optional] [default to undefined] |
+| **value** | **string** | A label value | [optional] [default to undefined] |
 
 

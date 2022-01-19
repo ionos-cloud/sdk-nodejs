@@ -4,18 +4,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**requestsFindById**](RequestsApi.md#requestsfindbyid) | **GET** /requests/{requestId} | Retrieve a Request |
-| [**requestsGet**](RequestsApi.md#requestsget) | **GET** /requests | List Requests |
-| [**requestsStatusGet**](RequestsApi.md#requestsstatusget) | **GET** /requests/{requestId}/status | Retrieve Request Status |
+| [**requestsFindById**](RequestsApi.md#requestsfindbyid) | **GET** /requests/{requestId} | Retrieve requests |
+| [**requestsGet**](RequestsApi.md#requestsget) | **GET** /requests | List requests |
+| [**requestsStatusGet**](RequestsApi.md#requestsstatusget) | **GET** /requests/{requestId}/status | Retrieve request status |
 
 
 ## requestsFindById
 
 > <Request> requestsFindById(requestId, opts)
 
-Retrieve a Request
+Retrieve requests
 
-Retrieves the attributes of a given request.
+Retrieve the properties of the specified request.
 
 ### Examples
 
@@ -28,7 +28,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.RequestsApi(config);
-// Retrieve a Request
+// Retrieve requests
 api_instance
   .requestsFindById({
     requestId: requestId_example,
@@ -45,7 +45,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **requestId** | **string** |  | [default to undefined] |
+| **requestId** | **string** | The unique ID of the request. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -68,9 +68,9 @@ Basic Authentication, Token Authentication
 
 > <Requests> requestsGet(opts)
 
-List Requests
+List requests
 
-Retrieve a list of API requests.
+List all API requests.
 
 ### Examples
 
@@ -83,7 +83,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.RequestsApi(config);
-// List Requests
+// List requests
 api_instance
   .requestsGet({
     pretty: true,
@@ -115,17 +115,17 @@ api_instance
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
-| **filterStatus** | **string** | Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn\&#39;t depend on depth query parameter | [optional][default to undefined] |
-| **filterCreatedAfter** | **string** | Request filter to fetch all requests created after the specified date. It doesn\&#39;t depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 | [optional][default to undefined] |
-| **filterCreatedBefore** | **string** | Request filter to fetch all requests created before the specified date. It doesn\&#39;t depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 | [optional][default to undefined] |
-| **filterCreatedDate** | **string** | Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z | [optional][default to undefined] |
-| **filterCreatedBy** | **string** | Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
-| **filterEtag** | **string** | Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
-| **filterRequestStatus** | **string** | Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
-| **filterMethod** | **string** | Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
-| **filterHeaders** | **string** | Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
-| **filterBody** | **string** | Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
-| **filterUrl** | **string** | Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | [optional][default to undefined] |
+| **filterStatus** | **string** | Filter the list by request status [QUEUED, RUNNING, DONE, FAILED]. Filter is not affected by the depth query parameter. | [optional][default to undefined] |
+| **filterCreatedAfter** | **string** | Filter the list to only include the requests created after the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. | [optional][default to undefined] |
+| **filterCreatedBefore** | **string** | Filter the list to only include the requests created before the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. | [optional][default to undefined] |
+| **filterCreatedDate** | **string** | Filter the list to only include the requests that contain the createdDate, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterCreatedBy** | **string** | Filter the list to only include the requests that contain the createdBy, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterEtag** | **string** | Filter the list to only include the requests that contain the specified etag. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterRequestStatus** | **string** | Filter the list to only include the requests that contain the specified requestStatus. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterMethod** | **string** | Filter the list to only include the requests that contain the specified method. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterHeaders** | **string** | Filter the list to only include the requests that contain the specified headers. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterBody** | **string** | Filter the list to only include the requests that contain the specified body. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterUrl** | **string** | Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
 | **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
 | **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
 
@@ -147,9 +147,9 @@ Basic Authentication, Token Authentication
 
 > <RequestStatus> requestsStatusGet(requestId, opts)
 
-Retrieve Request Status
+Retrieve request status
 
-Retrieves the status of a given request.
+Retrieve the status of the specified request.
 
 ### Examples
 
@@ -162,7 +162,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.RequestsApi(config);
-// Retrieve Request Status
+// Retrieve request status
 api_instance
   .requestsStatusGet({
     requestId: requestId_example,
@@ -179,7 +179,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **requestId** | **string** |  | [default to undefined] |
+| **requestId** | **string** | The unique ID of the request. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

@@ -3,27 +3,27 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **coresPerServer** | **number** | maximum number of cores per server | [default to undefined] |
-| **coresPerContract** | **number** | maximum cores per contract | [default to undefined] |
-| **coresProvisioned** | **number** | number of cores provisioned | [default to undefined] |
-| **ramPerServer** | **number** | maximum ram per server | [default to undefined] |
-| **ramPerContract** | **number** | maximum ram per contract | [default to undefined] |
-| **ramProvisioned** | **number** | ram provisioned | [default to undefined] |
-| **hddLimitPerVolume** | **number** | hdd limit per volume | [default to undefined] |
-| **hddLimitPerContract** | **number** | hdd limit per contract | [default to undefined] |
-| **hddVolumeProvisioned** | **number** | hdd volume provisioned | [default to undefined] |
-| **ssdLimitPerVolume** | **number** | ssd limit per volume | [default to undefined] |
-| **ssdLimitPerContract** | **number** | ssd limit per contract | [default to undefined] |
-| **ssdVolumeProvisioned** | **number** | ssd volume provisioned | [default to undefined] |
-| **dasVolumeProvisioned** | **number** | DAS (Direct Attached Storage) volume provisioned | [default to undefined] |
-| **reservableIps** | **number** | total reservable ip limit of the customer | [default to undefined] |
-| **reservedIpsOnContract** | **number** | reserved ips on a contract | [default to undefined] |
-| **reservedIpsInUse** | **number** | reserved ips in use | [default to undefined] |
-| **k8sClusterLimitTotal** | **number** | k8s clusters total limit | [default to undefined] |
-| **k8sClustersProvisioned** | **number** | k8s clusters provisioned | [default to undefined] |
-| **nlbLimitTotal** | **number** | NLB total limit | [default to undefined] |
-| **nlbProvisioned** | **number** | NLBs provisioned | [default to undefined] |
-| **natGatewayLimitTotal** | **number** | NAT gateway total limit | [default to undefined] |
-| **natGatewayProvisioned** | **number** | NAT gateways provisioned | [default to undefined] |
+| **coresPerServer** | **number** | The maximum number of cores per server. | [default to undefined] |
+| **coresPerContract** | **number** | The maximum number of cores per contract. | [default to undefined] |
+| **coresProvisioned** | **number** | The number of cores provisioned. | [default to undefined] |
+| **ramPerServer** | **number** | The maximum RAM per server. | [default to undefined] |
+| **ramPerContract** | **number** | The maximum RAM per contract. | [default to undefined] |
+| **ramProvisioned** | **number** | RAM provisioned. | [default to undefined] |
+| **hddLimitPerVolume** | **number** | HDD limit per volume. | [default to undefined] |
+| **hddLimitPerContract** | **number** | HDD limit per contract. | [default to undefined] |
+| **hddVolumeProvisioned** | **number** | HDD volume provisioned. | [default to undefined] |
+| **ssdLimitPerVolume** | **number** | SSD limit per volume. | [default to undefined] |
+| **ssdLimitPerContract** | **number** | SSD limit per contract. | [default to undefined] |
+| **ssdVolumeProvisioned** | **number** | SSD volume provisioned. | [default to undefined] |
+| **dasVolumeProvisioned** | **number** | DAS (Direct Attached Storage) volume provisioned. | [default to undefined] |
+| **reservableIps** | **number** | Total reservable IP limit for the customer. | [default to undefined] |
+| **reservedIpsOnContract** | **number** | Reserved ips for the contract. | [default to undefined] |
+| **reservedIpsInUse** | **number** | Reserved ips in use. | [default to undefined] |
+| **k8sClusterLimitTotal** | **number** | K8s clusters total limit. | [default to undefined] |
+| **k8sClustersProvisioned** | **number** | K8s clusters provisioned. | [default to undefined] |
+| **nlbLimitTotal** | **number** | NLB total limit. | [default to undefined] |
+| **nlbProvisioned** | **number** | NLBs provisioned. | [default to undefined] |
+| **natGatewayLimitTotal** | **number** | NAT Gateway total limit. | [default to undefined] |
+| **natGatewayProvisioned** | **number** | NAT Gateways provisioned. | [default to undefined] |
 
 

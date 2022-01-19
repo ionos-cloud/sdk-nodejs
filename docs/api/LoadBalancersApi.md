@@ -4,25 +4,25 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersLoadbalancersBalancednicsDelete**](LoadBalancersApi.md#datacentersloadbalancersbalancednicsdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer |
-| [**datacentersLoadbalancersBalancednicsFindByNicId**](LoadBalancersApi.md#datacentersloadbalancersbalancednicsfindbynicid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a network interface attached to Load Balancer |
-| [**datacentersLoadbalancersBalancednicsGet**](LoadBalancersApi.md#datacentersloadbalancersbalancednicsget) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer balaced NICs |
-| [**datacentersLoadbalancersBalancednicsPost**](LoadBalancersApi.md#datacentersloadbalancersbalancednicspost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer |
-| [**datacentersLoadbalancersDelete**](LoadBalancersApi.md#datacentersloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer. |
-| [**datacentersLoadbalancersFindById**](LoadBalancersApi.md#datacentersloadbalancersfindbyid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve a loadbalancer |
+| [**datacentersLoadbalancersBalancednicsDelete**](LoadBalancersApi.md#datacentersloadbalancersbalancednicsdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach balanced NICs |
+| [**datacentersLoadbalancersBalancednicsFindByNicId**](LoadBalancersApi.md#datacentersloadbalancersbalancednicsfindbynicid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve balanced NICs |
+| [**datacentersLoadbalancersBalancednicsGet**](LoadBalancersApi.md#datacentersloadbalancersbalancednicsget) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List balanced NICs |
+| [**datacentersLoadbalancersBalancednicsPost**](LoadBalancersApi.md#datacentersloadbalancersbalancednicspost) | **POST** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach balanced NICs |
+| [**datacentersLoadbalancersDelete**](LoadBalancersApi.md#datacentersloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete Load Balancers |
+| [**datacentersLoadbalancersFindById**](LoadBalancersApi.md#datacentersloadbalancersfindbyid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve Load Balancers |
 | [**datacentersLoadbalancersGet**](LoadBalancersApi.md#datacentersloadbalancersget) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
-| [**datacentersLoadbalancersPatch**](LoadBalancersApi.md#datacentersloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer |
-| [**datacentersLoadbalancersPost**](LoadBalancersApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
-| [**datacentersLoadbalancersPut**](LoadBalancersApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer |
+| [**datacentersLoadbalancersPatch**](LoadBalancersApi.md#datacentersloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify Load Balancers |
+| [**datacentersLoadbalancersPost**](LoadBalancersApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create Load Balancers |
+| [**datacentersLoadbalancersPut**](LoadBalancersApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify Load Balancers |
 
 
 ## datacentersLoadbalancersBalancednicsDelete
 
 > datacentersLoadbalancersBalancednicsDelete(datacenterId, loadbalancerId, nicId, opts)
 
-Detach a nic from loadbalancer
+Detach balanced NICs
 
-This will remove a network interface from load balancer.
+Detach the specified NIC from the Load Balancer.
 
 ### Examples
 
@@ -35,7 +35,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Detach a nic from loadbalancer
+// Detach balanced NICs
 api_instance
   .datacentersLoadbalancersBalancednicsDelete({
     datacenterId: datacenterId_example,
@@ -55,8 +55,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -79,9 +79,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersLoadbalancersBalancednicsFindByNicId(datacenterId, loadbalancerId, nicId, opts)
 
-Retrieve a network interface attached to Load Balancer
+Retrieve balanced NICs
 
-This will retrieve the properties of an attached network interface.
+Retrieve the properties of the specified NIC, attached to the Load Balancer.
 
 ### Examples
 
@@ -94,7 +94,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Retrieve a network interface attached to Load Balancer
+// Retrieve balanced NICs
 api_instance
   .datacentersLoadbalancersBalancednicsFindByNicId({
     datacenterId: datacenterId_example,
@@ -114,8 +114,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -138,9 +138,9 @@ Basic Authentication, Token Authentication
 
 > <BalancedNics> datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, opts)
 
-List Load Balancer balaced NICs
+List balanced NICs
 
-You can retrieve a list of nics attached to a load balancer.
+List all NICs, attached to the specified Load Balancer.
 
 ### Examples
 
@@ -153,7 +153,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// List Load Balancer balaced NICs
+// List balanced NICs
 api_instance
   .datacentersLoadbalancersBalancednicsGet({
     datacenterId: datacenterId_example,
@@ -172,7 +172,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -195,9 +195,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersLoadbalancersBalancednicsPost(datacenterId, loadbalancerId, nic, opts)
 
-Attach a nic to Load Balancer
+Attach balanced NICs
 
-This will attach a pre-existing nic to a load balancer.
+Attach an existing NIC to the specified Load Balancer.
 
 ### Examples
 
@@ -210,7 +210,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Attach a nic to Load Balancer
+// Attach balanced NICs
 api_instance
   .datacentersLoadbalancersBalancednicsPost({
     datacenterId: datacenterId_example,
@@ -230,8 +230,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **nic** | [**Nic**](../models/Nic.md) | Nic id to be attached |  |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
+| **nic** | [**Nic**](../models/Nic.md) | The NIC to be attached. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -254,9 +254,9 @@ Basic Authentication, Token Authentication
 
 > datacentersLoadbalancersDelete(datacenterId, loadbalancerId, opts)
 
-Delete a Loadbalancer.
+Delete Load Balancers
 
-Removes the specified load balancer.
+Remove the specified Load Balancer from the data center.
 
 ### Examples
 
@@ -269,7 +269,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Delete a Loadbalancer.
+// Delete Load Balancers
 api_instance
   .datacentersLoadbalancersDelete({
     datacenterId: datacenterId_example,
@@ -288,7 +288,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -311,9 +311,9 @@ Basic Authentication, Token Authentication
 
 > <Loadbalancer> datacentersLoadbalancersFindById(datacenterId, loadbalancerId, opts)
 
-Retrieve a loadbalancer
+Retrieve Load Balancers
 
-Retrieves the attributes of a given load balancer.
+Retrieve the properties of the specified Load Balancer within the data center.
 
 ### Examples
 
@@ -326,7 +326,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Retrieve a loadbalancer
+// Retrieve Load Balancers
 api_instance
   .datacentersLoadbalancersFindById({
     datacenterId: datacenterId_example,
@@ -345,7 +345,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -370,7 +370,7 @@ Basic Authentication, Token Authentication
 
 List Load Balancers
 
-Retrieve a list of Load Balancers within the datacenter.
+List all the Load Balancers within the data center.
 
 ### Examples
 
@@ -427,9 +427,9 @@ Basic Authentication, Token Authentication
 
 > <Loadbalancer> datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, opts)
 
-Partially modify a Loadbalancer
+Partially modify Load Balancers
 
-You can use update attributes of a resource.
+Update the properties of the specified Load Balancer within the data center.
 
 ### Examples
 
@@ -442,7 +442,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Partially modify a Loadbalancer
+// Partially modify Load Balancers
 api_instance
   .datacentersLoadbalancersPatch({
     datacenterId: datacenterId_example,
@@ -462,8 +462,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **loadbalancer** | [**LoadbalancerProperties**](../models/LoadbalancerProperties.md) | Modified Loadbalancer |  |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
+| **loadbalancer** | [**LoadbalancerProperties**](../models/LoadbalancerProperties.md) | The properties of the Load Balancer to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -486,9 +486,9 @@ Basic Authentication, Token Authentication
 
 > <Loadbalancer> datacentersLoadbalancersPost(datacenterId, loadbalancer, opts)
 
-Create a Load Balancer
+Create Load Balancers
 
-Creates a Loadbalancer within the datacenter.
+Create a Load Balancer within the data center.
 
 ### Examples
 
@@ -501,7 +501,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Create a Load Balancer
+// Create Load Balancers
 api_instance
   .datacentersLoadbalancersPost({
     datacenterId: datacenterId_example,
@@ -520,7 +520,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | Loadbalancer to be created |  |
+| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | The Load Balancer to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -543,9 +543,9 @@ Basic Authentication, Token Authentication
 
 > <Loadbalancer> datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, opts)
 
-Modify a Load Balancer
+Modify Load Balancers
 
-You can use update attributes of a resource.
+Modify the properties of the specified Load Balancer within the data center.
 
 ### Examples
 
@@ -558,7 +558,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Modify a Load Balancer
+// Modify Load Balancers
 api_instance
   .datacentersLoadbalancersPut({
     datacenterId: datacenterId_example,
@@ -578,8 +578,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **loadbalancerId** | **string** | The unique ID of the Load Balancer | [default to undefined] |
-| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | Modified Loadbalancer |  |
+| **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
+| **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | The modified Load Balancer. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

@@ -4,21 +4,21 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**umUsersS3keysDelete**](UserS3KeysApi.md#umuserss3keysdelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete an S3 Key |
-| [**umUsersS3keysFindByKeyId**](UserS3KeysApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 Key belonging to the given User |
-| [**umUsersS3keysGet**](UserS3KeysApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | Retrieve a User\&#39;s S3 keys |
-| [**umUsersS3keysPost**](UserS3KeysApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create a S3 Key for the given User |
-| [**umUsersS3keysPut**](UserS3KeysApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id |
-| [**umUsersS3ssourlGet**](UserS3KeysApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user |
+| [**umUsersS3keysDelete**](UserS3KeysApi.md#umuserss3keysdelete) | **DELETE** /um/users/{userId}/s3keys/{keyId} | Delete S3 keys |
+| [**umUsersS3keysFindByKeyId**](UserS3KeysApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve user S3 keys by key ID |
+| [**umUsersS3keysGet**](UserS3KeysApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | List user S3 keys |
+| [**umUsersS3keysPost**](UserS3KeysApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create user S3 keys |
+| [**umUsersS3keysPut**](UserS3KeysApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify S3 keys by key ID |
+| [**umUsersS3ssourlGet**](UserS3KeysApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 single sign-on URLs |
 
 
 ## umUsersS3keysDelete
 
 > umUsersS3keysDelete(userId, keyId, opts)
 
-Delete an S3 Key
+Delete S3 keys
 
-Delete an S3 key.
+Delete the specified user S3 key.
 
 ### Examples
 
@@ -31,7 +31,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Delete an S3 Key
+// Delete S3 keys
 api_instance
   .umUsersS3keysDelete({
     userId: userId_example,
@@ -49,8 +49,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **userId** | **string** | The unique ID of the user | [default to undefined] |
-| **keyId** | **string** | The unique access key ID of the S3 key | [default to undefined] |
+| **userId** | **string** | The unique ID of the user. | [default to undefined] |
+| **keyId** | **string** | The unique ID of the S3 key. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -73,9 +73,9 @@ Basic Authentication, Token Authentication
 
 > <S3Key> umUsersS3keysFindByKeyId(userId, keyId, opts)
 
-Retrieve given S3 Key belonging to the given User
+Retrieve user S3 keys by key ID
 
-You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user
+Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.
 
 ### Examples
 
@@ -88,7 +88,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Retrieve given S3 Key belonging to the given User
+// Retrieve user S3 keys by key ID
 api_instance
   .umUsersS3keysFindByKeyId({
     userId: userId_example,
@@ -106,8 +106,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **userId** | **string** | The unique ID of the user | [default to undefined] |
-| **keyId** | **string** | The unique access key ID of the S3 key | [default to undefined] |
+| **userId** | **string** | The unique ID of the user. | [default to undefined] |
+| **keyId** | **string** | The unique ID of the S3 key. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -130,9 +130,9 @@ Basic Authentication, Token Authentication
 
 > <S3Keys> umUsersS3keysGet(userId, opts)
 
-Retrieve a User\'s S3 keys
+List user S3 keys
 
-You can retrieve S3 keys owned by a user by using the users ID. This user Id can be found in the response body when a user is created or when you GET a list of users.
+List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
 
 ### Examples
 
@@ -145,7 +145,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Retrieve a User\'s S3 keys
+// List user S3 keys
 api_instance
   .umUsersS3keysGet({
     userId: userId_example,
@@ -162,7 +162,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **userId** | **string** | The unique ID of the user. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -185,9 +185,9 @@ Basic Authentication, Token Authentication
 
 > <S3Key> umUsersS3keysPost(userId, opts)
 
-Create a S3 Key for the given User
+Create user S3 keys
 
-Creates a S3 key for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users. Maximum of 5 keys can be generated for a given user
+Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
 
 ### Examples
 
@@ -200,7 +200,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Create a S3 Key for the given User
+// Create user S3 keys
 api_instance
   .umUsersS3keysPost({
     userId: userId_example,
@@ -217,7 +217,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **userId** | **string** | The unique ID of the user. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -240,9 +240,9 @@ Basic Authentication, Token Authentication
 
 > <S3Key> umUsersS3keysPut(userId, keyId, s3Key, opts)
 
-Modify a S3 key having the given key id
+Modify S3 keys by key ID
 
-You can enable or disable a given S3 key.
+Enable or disable the specified user S3 key.
 
 ### Examples
 
@@ -255,7 +255,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Modify a S3 key having the given key id
+// Modify S3 keys by key ID
 api_instance
   .umUsersS3keysPut({
     userId: userId_example,
@@ -274,9 +274,9 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **userId** | **string** |  | [default to undefined] |
-| **keyId** | **string** | The unique access key ID of the S3 key | [default to undefined] |
-| **s3Key** | [**S3Key**](../models/S3Key.md) | Modified S3 key |  |
+| **userId** | **string** | The unique ID of the user. | [default to undefined] |
+| **keyId** | **string** | The unique ID of the S3 key. | [default to undefined] |
+| **s3Key** | [**S3Key**](../models/S3Key.md) | The modified S3 key. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -299,9 +299,9 @@ Basic Authentication, Token Authentication
 
 > <S3ObjectStorageSSO> umUsersS3ssourlGet(userId, opts)
 
-Retrieve S3 object storage single signon URL for the given user
+Retrieve S3 single sign-on URLs
 
-You can retrieve S3 object storage single signon URL for the given user. This user Id can be found in the response body when a user is created or when you GET a list of users.
+Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
 
 ### Examples
 
@@ -314,7 +314,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Retrieve S3 object storage single signon URL for the given user
+// Retrieve S3 single sign-on URLs
 api_instance
   .umUsersS3ssourlGet({
     userId: userId_example,
@@ -330,7 +330,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **userId** | **string** | The unique ID of the user | [default to undefined] |
+| **userId** | **string** | The unique ID of the user. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
 

@@ -18,7 +18,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 Delete data centers
 
-Remove the specified data center and all the elements it contains. This is method is destructive and should be used carefully.
+Delete the specified data center and all the elements it contains. This is method is destructive and should be used carefully.
 
 ### Examples
 
@@ -185,7 +185,7 @@ Basic Authentication, Token Authentication
 
 Partially modify data centers
 
-Update data centers, rename them, or change their descriptions.
+Update the properties of the specified data center, rename it, or change the description.
 
 ### Examples
 
@@ -217,7 +217,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **datacenter** | [**DatacenterProperties**](../models/DatacenterProperties.md) | The modified properties of the data center. |  |
+| **datacenter** | [**DatacenterProperties**](../models/DatacenterProperties.md) | The properties of the data center to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -242,7 +242,7 @@ Basic Authentication, Token Authentication
 
 Create data centers
 
-Create new data centers, and data centers that already contain elements, such as servers and storage volumes, with this POST method.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
 
 ### Examples
 
@@ -272,7 +272,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenter** | [**Datacenter**](../models/Datacenter.md) | The data center to be created. |  |
+| **datacenter** | [**Datacenter**](../models/Datacenter.md) | The data center to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -297,7 +297,7 @@ Basic Authentication, Token Authentication
 
 Modify data centers
 
-Update data centers, rename them, or change their descriptions.
+Modify the properties of the specified data center, rename it, or change the description.
 
 ### Examples
 

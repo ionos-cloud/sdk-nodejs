@@ -4,21 +4,21 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersServersNicsFlowlogsDelete**](FlowLogsApi.md#datacentersserversnicsflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Delete a Flow Log |
-| [**datacentersServersNicsFlowlogsFindById**](FlowLogsApi.md#datacentersserversnicsflowlogsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve a Flow Log |
+| [**datacentersServersNicsFlowlogsDelete**](FlowLogsApi.md#datacentersserversnicsflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Delete Flow Logs |
+| [**datacentersServersNicsFlowlogsFindById**](FlowLogsApi.md#datacentersserversnicsflowlogsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve Flow Logs |
 | [**datacentersServersNicsFlowlogsGet**](FlowLogsApi.md#datacentersserversnicsflowlogsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | List Flow Logs |
-| [**datacentersServersNicsFlowlogsPatch**](FlowLogsApi.md#datacentersserversnicsflowlogspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially update a Flow Log |
-| [**datacentersServersNicsFlowlogsPost**](FlowLogsApi.md#datacentersserversnicsflowlogspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create a Flow Log |
-| [**datacentersServersNicsFlowlogsPut**](FlowLogsApi.md#datacentersserversnicsflowlogsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify a Flow Log |
+| [**datacentersServersNicsFlowlogsPatch**](FlowLogsApi.md#datacentersserversnicsflowlogspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially modify Flow Logs |
+| [**datacentersServersNicsFlowlogsPost**](FlowLogsApi.md#datacentersserversnicsflowlogspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create Flow Logs |
+| [**datacentersServersNicsFlowlogsPut**](FlowLogsApi.md#datacentersserversnicsflowlogsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify Flow Logs |
 
 
 ## datacentersServersNicsFlowlogsDelete
 
 > datacentersServersNicsFlowlogsDelete(datacenterId, serverId, nicId, flowlogId, opts)
 
-Delete a Flow Log
+Delete Flow Logs
 
-Removes the specified Flow Log.
+Delete the specified Flow Log.
 
 ### Examples
 
@@ -31,7 +31,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FlowLogsApi(config);
-// Delete a Flow Log
+// Delete Flow Logs
 api_instance
   .datacentersServersNicsFlowlogsDelete({
     datacenterId: datacenterId_example,
@@ -51,9 +51,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **flowlogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **flowlogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 
@@ -75,9 +75,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersServersNicsFlowlogsFindById(datacenterId, serverId, nicId, flowlogId, opts)
 
-Retrieve a Flow Log
+Retrieve Flow Logs
 
-Retrieves the attributes of a given Flow Log.
+Retrieve the properties of the specified Flow Log.
 
 ### Examples
 
@@ -90,7 +90,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FlowLogsApi(config);
-// Retrieve a Flow Log
+// Retrieve Flow Logs
 api_instance
   .datacentersServersNicsFlowlogsFindById({
     datacenterId: datacenterId_example,
@@ -110,9 +110,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **flowlogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **flowlogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 
@@ -136,7 +136,7 @@ Basic Authentication, Token Authentication
 
 List Flow Logs
 
-Retrieves a list of Flow Logs associated with a particular network interface.
+List all the Flow Logs for the specified NIC.
 
 ### Examples
 
@@ -170,8 +170,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
@@ -195,9 +195,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersServersNicsFlowlogsPatch(datacenterId, serverId, nicId, flowlogId, flowlog, opts)
 
-Partially update a Flow Log
+Partially modify Flow Logs
 
-This will partially update a Flow Log record.
+Update the specified Flow Log record.
 
 ### Examples
 
@@ -210,7 +210,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FlowLogsApi(config);
-// Partially update a Flow Log
+// Partially modify Flow Logs
 api_instance
   .datacentersServersNicsFlowlogsPatch({
     datacenterId: datacenterId_example,
@@ -231,10 +231,10 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **flowlogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
-| **flowlog** | [**FlowLogProperties**](../models/FlowLogProperties.md) | Modified Flow Log |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **flowlogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
+| **flowlog** | [**FlowLogProperties**](../models/FlowLogProperties.md) | The Flow Log record to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 
@@ -256,9 +256,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersServersNicsFlowlogsPost(datacenterId, serverId, nicId, flowlog, opts)
 
-Create a Flow Log
+Create Flow Logs
 
-This will add a Flow Log to the network interface.
+Add a new Flow Log for the specified NIC.
 
 ### Examples
 
@@ -271,7 +271,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FlowLogsApi(config);
-// Create a Flow Log
+// Create Flow Logs
 api_instance
   .datacentersServersNicsFlowlogsPost({
     datacenterId: datacenterId_example,
@@ -291,9 +291,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **flowlog** | [**FlowLog**](../models/FlowLog.md) | Flow Log to be created |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **flowlog** | [**FlowLog**](../models/FlowLog.md) | The Flow Log to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 
@@ -315,9 +315,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersServersNicsFlowlogsPut(datacenterId, serverId, nicId, flowlogId, flowlog, opts)
 
-Modify a Flow Log
+Modify Flow Logs
 
-This will update a Flow Log record.
+Modify the specified Flow Log record.
 
 ### Examples
 
@@ -330,7 +330,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FlowLogsApi(config);
-// Modify a Flow Log
+// Modify Flow Logs
 api_instance
   .datacentersServersNicsFlowlogsPut({
     datacenterId: datacenterId_example,
@@ -351,10 +351,10 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **flowlogId** | **string** | The unique ID of the Flow Log | [default to undefined] |
-| **flowlog** | [**FlowLogPut**](../models/FlowLogPut.md) | Modified Flow Log |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **flowlogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
+| **flowlog** | [**FlowLogPut**](../models/FlowLogPut.md) | The modified Flow Log. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 

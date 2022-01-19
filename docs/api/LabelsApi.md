@@ -4,42 +4,42 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersLabelsDelete**](LabelsApi.md#datacenterslabelsdelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center |
-| [**datacentersLabelsFindByKey**](LabelsApi.md#datacenterslabelsfindbykey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center |
-| [**datacentersLabelsGet**](LabelsApi.md#datacenterslabelsget) | **GET** /datacenters/{datacenterId}/labels | List all Data Center Labels |
-| [**datacentersLabelsPost**](LabelsApi.md#datacenterslabelspost) | **POST** /datacenters/{datacenterId}/labels | Add a Label to Data Center |
-| [**datacentersLabelsPut**](LabelsApi.md#datacenterslabelsput) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center |
-| [**datacentersServersLabelsDelete**](LabelsApi.md#datacentersserverslabelsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server |
-| [**datacentersServersLabelsFindByKey**](LabelsApi.md#datacentersserverslabelsfindbykey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server |
-| [**datacentersServersLabelsGet**](LabelsApi.md#datacentersserverslabelsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels |
-| [**datacentersServersLabelsPost**](LabelsApi.md#datacentersserverslabelspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server |
-| [**datacentersServersLabelsPut**](LabelsApi.md#datacentersserverslabelsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server |
-| [**datacentersVolumesLabelsDelete**](LabelsApi.md#datacentersvolumeslabelsdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume |
-| [**datacentersVolumesLabelsFindByKey**](LabelsApi.md#datacentersvolumeslabelsfindbykey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume |
-| [**datacentersVolumesLabelsGet**](LabelsApi.md#datacentersvolumeslabelsget) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels |
-| [**datacentersVolumesLabelsPost**](LabelsApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume |
-| [**datacentersVolumesLabelsPut**](LabelsApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume |
-| [**ipblocksLabelsDelete**](LabelsApi.md#ipblockslabelsdelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block |
-| [**ipblocksLabelsFindByKey**](LabelsApi.md#ipblockslabelsfindbykey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block |
-| [**ipblocksLabelsGet**](LabelsApi.md#ipblockslabelsget) | **GET** /ipblocks/{ipblockId}/labels | List all Ip Block Labels |
-| [**ipblocksLabelsPost**](LabelsApi.md#ipblockslabelspost) | **POST** /ipblocks/{ipblockId}/labels | Add a Label to IP Block |
-| [**ipblocksLabelsPut**](LabelsApi.md#ipblockslabelsput) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block |
-| [**labelsFindByUrn**](LabelsApi.md#labelsfindbyurn) | **GET** /labels/{labelurn} | Returns the label by its URN. |
-| [**labelsGet**](LabelsApi.md#labelsget) | **GET** /labels | List Labels  |
-| [**snapshotsLabelsDelete**](LabelsApi.md#snapshotslabelsdelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot |
-| [**snapshotsLabelsFindByKey**](LabelsApi.md#snapshotslabelsfindbykey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot |
-| [**snapshotsLabelsGet**](LabelsApi.md#snapshotslabelsget) | **GET** /snapshots/{snapshotId}/labels | List all Snapshot Labels |
-| [**snapshotsLabelsPost**](LabelsApi.md#snapshotslabelspost) | **POST** /snapshots/{snapshotId}/labels | Add a Label to Snapshot |
-| [**snapshotsLabelsPut**](LabelsApi.md#snapshotslabelsput) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot |
+| [**datacentersLabelsDelete**](LabelsApi.md#datacenterslabelsdelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete data center labels |
+| [**datacentersLabelsFindByKey**](LabelsApi.md#datacenterslabelsfindbykey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve data center labels |
+| [**datacentersLabelsGet**](LabelsApi.md#datacenterslabelsget) | **GET** /datacenters/{datacenterId}/labels | List data center labels |
+| [**datacentersLabelsPost**](LabelsApi.md#datacenterslabelspost) | **POST** /datacenters/{datacenterId}/labels | Create data center labels |
+| [**datacentersLabelsPut**](LabelsApi.md#datacenterslabelsput) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify data center labels |
+| [**datacentersServersLabelsDelete**](LabelsApi.md#datacentersserverslabelsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete server labels |
+| [**datacentersServersLabelsFindByKey**](LabelsApi.md#datacentersserverslabelsfindbykey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve server labels |
+| [**datacentersServersLabelsGet**](LabelsApi.md#datacentersserverslabelsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List server labels |
+| [**datacentersServersLabelsPost**](LabelsApi.md#datacentersserverslabelspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Create server labels |
+| [**datacentersServersLabelsPut**](LabelsApi.md#datacentersserverslabelsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify server labels |
+| [**datacentersVolumesLabelsDelete**](LabelsApi.md#datacentersvolumeslabelsdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete volume labels |
+| [**datacentersVolumesLabelsFindByKey**](LabelsApi.md#datacentersvolumeslabelsfindbykey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve volume labels |
+| [**datacentersVolumesLabelsGet**](LabelsApi.md#datacentersvolumeslabelsget) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels |
+| [**datacentersVolumesLabelsPost**](LabelsApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create volume labels |
+| [**datacentersVolumesLabelsPut**](LabelsApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify volume labels |
+| [**ipblocksLabelsDelete**](LabelsApi.md#ipblockslabelsdelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels |
+| [**ipblocksLabelsFindByKey**](LabelsApi.md#ipblockslabelsfindbykey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels |
+| [**ipblocksLabelsGet**](LabelsApi.md#ipblockslabelsget) | **GET** /ipblocks/{ipblockId}/labels | List IP block labels |
+| [**ipblocksLabelsPost**](LabelsApi.md#ipblockslabelspost) | **POST** /ipblocks/{ipblockId}/labels | Create IP block labels |
+| [**ipblocksLabelsPut**](LabelsApi.md#ipblockslabelsput) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify IP block labels |
+| [**labelsFindByUrn**](LabelsApi.md#labelsfindbyurn) | **GET** /labels/{labelurn} | Retrieve labels by URN |
+| [**labelsGet**](LabelsApi.md#labelsget) | **GET** /labels | List labels  |
+| [**snapshotsLabelsDelete**](LabelsApi.md#snapshotslabelsdelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete snapshot labels |
+| [**snapshotsLabelsFindByKey**](LabelsApi.md#snapshotslabelsfindbykey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve snapshot labels |
+| [**snapshotsLabelsGet**](LabelsApi.md#snapshotslabelsget) | **GET** /snapshots/{snapshotId}/labels | List snapshot labels |
+| [**snapshotsLabelsPost**](LabelsApi.md#snapshotslabelspost) | **POST** /snapshots/{snapshotId}/labels | Create snapshot labels |
+| [**snapshotsLabelsPut**](LabelsApi.md#snapshotslabelsput) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify snapshot labels |
 
 
 ## datacentersLabelsDelete
 
 > datacentersLabelsDelete(datacenterId, key, opts)
 
-Delete a Label from Data Center
+Delete data center labels
 
-This will remove a label from the data center.
+Delete the specified data center label.
 
 ### Examples
 
@@ -52,7 +52,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Delete a Label from Data Center
+// Delete data center labels
 api_instance
   .datacentersLabelsDelete({
     datacenterId: datacenterId_example,
@@ -70,8 +70,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -94,9 +94,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersLabelsFindByKey(datacenterId, key, opts)
 
-Retrieve a Label of Data Center
+Retrieve data center labels
 
-This will retrieve the properties of a associated label to a data center.
+Retrieve the properties of the specified data center label.
 
 ### Examples
 
@@ -109,7 +109,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Retrieve a Label of Data Center
+// Retrieve data center labels
 api_instance
   .datacentersLabelsFindByKey({
     datacenterId: datacenterId_example,
@@ -127,8 +127,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -151,9 +151,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResources> datacentersLabelsGet(datacenterId, opts)
 
-List all Data Center Labels
+List data center labels
 
-You can retrieve a list of all labels associated with a data center.
+List all the the labels for the specified data center.
 
 ### Examples
 
@@ -166,7 +166,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// List all Data Center Labels
+// List data center labels
 api_instance
   .datacentersLabelsGet({
     datacenterId: datacenterId_example,
@@ -183,7 +183,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -206,9 +206,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersLabelsPost(datacenterId, label, opts)
 
-Add a Label to Data Center
+Create data center labels
 
-This will add a label to the data center.
+Add a new label to the specified data center.
 
 ### Examples
 
@@ -221,7 +221,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Add a Label to Data Center
+// Create data center labels
 api_instance
   .datacentersLabelsPost({
     datacenterId: datacenterId_example,
@@ -239,8 +239,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -263,9 +263,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersLabelsPut(datacenterId, key, label, opts)
 
-Modify a Label of Data Center
+Modify data center labels
 
-This will modify the value of the label on a data center.
+Modify the specified data center label.
 
 ### Examples
 
@@ -278,7 +278,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify a Label of Data Center
+// Modify data center labels
 api_instance
   .datacentersLabelsPut({
     datacenterId: datacenterId_example,
@@ -297,9 +297,9 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the Data Center | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -322,9 +322,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersLabelsDelete(datacenterId, serverId, key, opts)
 
-Delete a Label from Server
+Delete server labels
 
-This will remove a label from the server.
+Delete the specified server label.
 
 ### Examples
 
@@ -337,7 +337,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Delete a Label from Server
+// Delete server labels
 api_instance
   .datacentersServersLabelsDelete({
     datacenterId: datacenterId_example,
@@ -357,8 +357,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -381,9 +381,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersServersLabelsFindByKey(datacenterId, serverId, key, opts)
 
-Retrieve a Label of Server
+Retrieve server labels
 
-This will retrieve the properties of a associated label to a server.
+Retrieve the properties of the specified server label.
 
 ### Examples
 
@@ -396,7 +396,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Retrieve a Label of Server
+// Retrieve server labels
 api_instance
   .datacentersServersLabelsFindByKey({
     datacenterId: datacenterId_example,
@@ -416,8 +416,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -440,9 +440,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResources> datacentersServersLabelsGet(datacenterId, serverId, opts)
 
-List all Server Labels
+List server labels
 
-You can retrieve a list of all labels associated with a server.
+List all the the labels for the specified server.
 
 ### Examples
 
@@ -455,7 +455,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// List all Server Labels
+// List server labels
 api_instance
   .datacentersServersLabelsGet({
     datacenterId: datacenterId_example,
@@ -474,7 +474,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -497,9 +497,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersServersLabelsPost(datacenterId, serverId, label, opts)
 
-Add a Label to Server
+Create server labels
 
-This will add a label to the server.
+Add a new label to the specified server.
 
 ### Examples
 
@@ -512,7 +512,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Add a Label to Server
+// Create server labels
 api_instance
   .datacentersServersLabelsPost({
     datacenterId: datacenterId_example,
@@ -532,8 +532,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -556,9 +556,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersServersLabelsPut(datacenterId, serverId, key, label, opts)
 
-Modify a Label of Server
+Modify server labels
 
-This will modify the value of the label on a server.
+Modify the specified server label.
 
 ### Examples
 
@@ -571,7 +571,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify a Label of Server
+// Modify server labels
 api_instance
   .datacentersServersLabelsPut({
     datacenterId: datacenterId_example,
@@ -592,9 +592,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -617,9 +617,9 @@ Basic Authentication, Token Authentication
 
 > datacentersVolumesLabelsDelete(datacenterId, volumeId, key, opts)
 
-Delete a Label from Volume
+Delete volume labels
 
-This will remove a label from the volume.
+Delete the specified volume label.
 
 ### Examples
 
@@ -632,7 +632,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Delete a Label from Volume
+// Delete volume labels
 api_instance
   .datacentersVolumesLabelsDelete({
     datacenterId: datacenterId_example,
@@ -652,8 +652,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -676,9 +676,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersVolumesLabelsFindByKey(datacenterId, volumeId, key, opts)
 
-Retrieve a Label of Volume
+Retrieve volume labels
 
-This will retrieve the properties of a associated label to a volume.
+Retrieve the properties of the specified volume label.
 
 ### Examples
 
@@ -691,7 +691,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Retrieve a Label of Volume
+// Retrieve volume labels
 api_instance
   .datacentersVolumesLabelsFindByKey({
     datacenterId: datacenterId_example,
@@ -711,8 +711,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -735,9 +735,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResources> datacentersVolumesLabelsGet(datacenterId, volumeId, opts)
 
-List all Volume Labels
+List volume labels
 
-You can retrieve a list of all labels associated with a volume.
+List all the the labels for the specified volume.
 
 ### Examples
 
@@ -750,7 +750,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// List all Volume Labels
+// List volume labels
 api_instance
   .datacentersVolumesLabelsGet({
     datacenterId: datacenterId_example,
@@ -769,7 +769,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -792,9 +792,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersVolumesLabelsPost(datacenterId, volumeId, label, opts)
 
-Add a Label to Volume
+Create volume labels
 
-This will add a label to the volume.
+Add a new label to the specified volume.
 
 ### Examples
 
@@ -807,7 +807,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Add a Label to Volume
+// Create volume labels
 api_instance
   .datacentersVolumesLabelsPost({
     datacenterId: datacenterId_example,
@@ -827,8 +827,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -851,9 +851,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, opts)
 
-Modify a Label of Volume
+Modify volume labels
 
-This will modify the value of the label on a volume.
+Modify the specified volume label.
 
 ### Examples
 
@@ -866,7 +866,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify a Label of Volume
+// Modify volume labels
 api_instance
   .datacentersVolumesLabelsPut({
     datacenterId: datacenterId_example,
@@ -887,9 +887,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the Volume | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
+| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -912,9 +912,9 @@ Basic Authentication, Token Authentication
 
 > ipblocksLabelsDelete(ipblockId, key, opts)
 
-Delete a Label from IP Block
+Delete IP block labels
 
-This will remove a label from the Ip Block.
+Delete the specified IP block label.
 
 ### Examples
 
@@ -927,7 +927,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Delete a Label from IP Block
+// Delete IP block labels
 api_instance
   .ipblocksLabelsDelete({
     ipblockId: ipblockId_example,
@@ -945,8 +945,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **ipblockId** | **string** | The unique ID of the IP block. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -969,9 +969,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> ipblocksLabelsFindByKey(ipblockId, key, opts)
 
-Retrieve a Label of IP Block
+Retrieve IP block labels
 
-This will retrieve the properties of a associated label to a Ip Block.
+Retrieve the properties of the specified IP block label.
 
 ### Examples
 
@@ -984,7 +984,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Retrieve a Label of IP Block
+// Retrieve IP block labels
 api_instance
   .ipblocksLabelsFindByKey({
     ipblockId: ipblockId_example,
@@ -1002,8 +1002,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **ipblockId** | **string** | The unique ID of the IP block. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1026,9 +1026,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResources> ipblocksLabelsGet(ipblockId, opts)
 
-List all Ip Block Labels
+List IP block labels
 
-You can retrieve a list of all labels associated with a IP Block.
+List all the the labels for the specified IP block.
 
 ### Examples
 
@@ -1041,7 +1041,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// List all Ip Block Labels
+// List IP block labels
 api_instance
   .ipblocksLabelsGet({
     ipblockId: ipblockId_example,
@@ -1058,7 +1058,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
+| **ipblockId** | **string** | The unique ID of the IP block. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1081,9 +1081,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> ipblocksLabelsPost(ipblockId, label, opts)
 
-Add a Label to IP Block
+Create IP block labels
 
-This will add a label to the Ip Block.
+Add a new label to the specified IP block.
 
 ### Examples
 
@@ -1096,7 +1096,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Add a Label to IP Block
+// Create IP block labels
 api_instance
   .ipblocksLabelsPost({
     ipblockId: ipblockId_example,
@@ -1114,8 +1114,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
+| **ipblockId** | **string** | The unique ID of the IP block. | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1138,9 +1138,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> ipblocksLabelsPut(ipblockId, key, label, opts)
 
-Modify a Label of IP Block
+Modify IP block labels
 
-This will modify the value of the label on a Ip Block.
+Modify the specified IP block label.
 
 ### Examples
 
@@ -1153,7 +1153,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify a Label of IP Block
+// Modify IP block labels
 api_instance
   .ipblocksLabelsPut({
     ipblockId: ipblockId_example,
@@ -1172,9 +1172,9 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **ipblockId** | **string** | The unique ID of the Ip Block | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
+| **ipblockId** | **string** | The unique ID of the IP block. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1197,9 +1197,9 @@ Basic Authentication, Token Authentication
 
 > <Label> labelsFindByUrn(labelurn, opts)
 
-Returns the label by its URN.
+Retrieve labels by URN
 
-You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
+Retrieve a label by label URN.  The URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key>
 
 ### Examples
 
@@ -1212,7 +1212,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Returns the label by its URN.
+// Retrieve labels by URN
 api_instance
   .labelsFindByUrn({
     labelurn: labelurn_example,
@@ -1229,7 +1229,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **labelurn** | **string** | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; | [default to undefined] |
+| **labelurn** | **string** | The label URN; URN is unique for each label, and consists of:  urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt;&lt;key&gt; | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1252,9 +1252,9 @@ Basic Authentication, Token Authentication
 
 > <Labels> labelsGet(opts)
 
-List Labels 
+List labels 
 
-You can retrieve a complete list of labels that you have access to.
+List all available labels.
 
 ### Examples
 
@@ -1267,7 +1267,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// List Labels 
+// List labels 
 api_instance
   .labelsGet({
     pretty: true,
@@ -1305,9 +1305,9 @@ Basic Authentication, Token Authentication
 
 > snapshotsLabelsDelete(snapshotId, key, opts)
 
-Delete a Label from Snapshot
+Delete snapshot labels
 
-This will remove a label from the snapshot.
+Delete the specified snapshot label.
 
 ### Examples
 
@@ -1320,7 +1320,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Delete a Label from Snapshot
+// Delete snapshot labels
 api_instance
   .snapshotsLabelsDelete({
     snapshotId: snapshotId_example,
@@ -1338,8 +1338,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **snapshotId** | **string** | The unique ID of the snapshot. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1362,9 +1362,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> snapshotsLabelsFindByKey(snapshotId, key, opts)
 
-Retrieve a Label of Snapshot
+Retrieve snapshot labels
 
-This will retrieve the properties of a associated label to a snapshot.
+Retrieve the properties of the specified snapshot label.
 
 ### Examples
 
@@ -1377,7 +1377,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Retrieve a Label of Snapshot
+// Retrieve snapshot labels
 api_instance
   .snapshotsLabelsFindByKey({
     snapshotId: snapshotId_example,
@@ -1395,8 +1395,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
+| **snapshotId** | **string** | The unique ID of the snapshot. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1419,9 +1419,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResources> snapshotsLabelsGet(snapshotId, opts)
 
-List all Snapshot Labels
+List snapshot labels
 
-You can retrieve a list of all labels associated with a snapshot.
+List all the the labels for the specified snapshot.
 
 ### Examples
 
@@ -1434,7 +1434,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// List all Snapshot Labels
+// List snapshot labels
 api_instance
   .snapshotsLabelsGet({
     snapshotId: snapshotId_example,
@@ -1451,7 +1451,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
+| **snapshotId** | **string** | The unique ID of the snapshot. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1474,9 +1474,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> snapshotsLabelsPost(snapshotId, label, opts)
 
-Add a Label to Snapshot
+Create snapshot labels
 
-This will add a label to the snapshot.
+Add a new label to the specified snapshot.
 
 ### Examples
 
@@ -1489,7 +1489,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Add a Label to Snapshot
+// Create snapshot labels
 api_instance
   .snapshotsLabelsPost({
     snapshotId: snapshotId_example,
@@ -1507,8 +1507,8 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Label to be added |  |
+| **snapshotId** | **string** | The unique ID of the snapshot. | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -1531,9 +1531,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> snapshotsLabelsPut(snapshotId, key, label, opts)
 
-Modify a Label of Snapshot
+Modify snapshot labels
 
-This will modify the value of the label on a snapshot.
+Modify the specified snapshot label.
 
 ### Examples
 
@@ -1546,7 +1546,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify a Label of Snapshot
+// Modify snapshot labels
 api_instance
   .snapshotsLabelsPut({
     snapshotId: snapshotId_example,
@@ -1565,9 +1565,9 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **snapshotId** | **string** | The unique ID of the Snapshot | [default to undefined] |
-| **key** | **string** | The key of the Label | [default to undefined] |
-| **label** | [**LabelResource**](../models/LabelResource.md) | Modified Label |  |
+| **snapshotId** | **string** | The unique ID of the snapshot. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

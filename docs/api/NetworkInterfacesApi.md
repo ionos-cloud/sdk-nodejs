@@ -4,21 +4,21 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersServersNicsDelete**](NetworkInterfacesApi.md#datacentersserversnicsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Network Interface |
-| [**datacentersServersNicsFindById**](NetworkInterfacesApi.md#datacentersserversnicsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Network Interface |
-| [**datacentersServersNicsGet**](NetworkInterfacesApi.md#datacentersserversnicsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List Network Interfaces |
-| [**datacentersServersNicsPatch**](NetworkInterfacesApi.md#datacentersserversnicspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially Modify a Network Interface |
-| [**datacentersServersNicsPost**](NetworkInterfacesApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Network Interface |
-| [**datacentersServersNicsPut**](NetworkInterfacesApi.md#datacentersserversnicsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Network Interface |
+| [**datacentersServersNicsDelete**](NetworkInterfacesApi.md#datacentersserversnicsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete NICs |
+| [**datacentersServersNicsFindById**](NetworkInterfacesApi.md#datacentersserversnicsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve NICs |
+| [**datacentersServersNicsGet**](NetworkInterfacesApi.md#datacentersserversnicsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List NICs |
+| [**datacentersServersNicsPatch**](NetworkInterfacesApi.md#datacentersserversnicspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs |
+| [**datacentersServersNicsPost**](NetworkInterfacesApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create NICs |
+| [**datacentersServersNicsPut**](NetworkInterfacesApi.md#datacentersserversnicsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs |
 
 
 ## datacentersServersNicsDelete
 
 > datacentersServersNicsDelete(datacenterId, serverId, nicId, opts)
 
-Delete a Network Interface
+Delete NICs
 
-Deletes the specified network interface.
+Remove the specified NIC.
 
 ### Examples
 
@@ -31,7 +31,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// Delete a Network Interface
+// Delete NICs
 api_instance
   .datacentersServersNicsDelete({
     datacenterId: datacenterId_example,
@@ -51,8 +51,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -75,9 +75,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersServersNicsFindById(datacenterId, serverId, nicId, opts)
 
-Retrieve a Network Interface
+Retrieve NICs
 
-Retrieves the attributes of a given network interface.
+Retrieve the properties of the specified NIC.
 
 ### Examples
 
@@ -90,7 +90,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// Retrieve a Network Interface
+// Retrieve NICs
 api_instance
   .datacentersServersNicsFindById({
     datacenterId: datacenterId_example,
@@ -110,8 +110,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -134,9 +134,9 @@ Basic Authentication, Token Authentication
 
 > <Nics> datacentersServersNicsGet(datacenterId, serverId, opts)
 
-List Network Interfaces
+List NICs
 
-Retrieves a list of network interfaces.
+List all NICs, attached to the specified server.
 
 ### Examples
 
@@ -149,7 +149,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// List Network Interfaces
+// List NICs
 api_instance
   .datacentersServersNicsGet({
     datacenterId: datacenterId_example,
@@ -170,7 +170,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -195,9 +195,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, opts)
 
-Partially Modify a Network Interface
+Partially modify NICs
 
-You can use update attributes of a network interface.
+Update the properties of the specified NIC.
 
 ### Examples
 
@@ -210,7 +210,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// Partially Modify a Network Interface
+// Partially modify NICs
 api_instance
   .datacentersServersNicsPatch({
     datacenterId: datacenterId_example,
@@ -231,9 +231,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **nic** | [**NicProperties**](../models/NicProperties.md) | Modified properties of Nic |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **nic** | [**NicProperties**](../models/NicProperties.md) | The properties of the NIC to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -256,9 +256,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersServersNicsPost(datacenterId, serverId, nic, opts)
 
-Create a Network Interface
+Create NICs
 
-Adds a network interface to the target server. Combined count of network interfaces and volumes attached to the server should not exceed size 24.
+Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
 
 ### Examples
 
@@ -271,7 +271,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// Create a Network Interface
+// Create NICs
 api_instance
   .datacentersServersNicsPost({
     datacenterId: datacenterId_example,
@@ -291,8 +291,8 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nic** | [**Nic**](../models/Nic.md) | Nic to be created |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nic** | [**Nic**](../models/Nic.md) | The NIC to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -315,9 +315,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersServersNicsPut(datacenterId, serverId, nicId, nic, opts)
 
-Modify a Network Interface
+Modify NICs
 
-You can use update attributes of a network interface.
+Modify the properties of the specified NIC.
 
 ### Examples
 
@@ -330,7 +330,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// Modify a Network Interface
+// Modify NICs
 api_instance
   .datacentersServersNicsPut({
     datacenterId: datacenterId_example,
@@ -351,9 +351,9 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **serverId** | **string** | The unique ID of the Server | [default to undefined] |
-| **nicId** | **string** | The unique ID of the NIC | [default to undefined] |
-| **nic** | [**NicPut**](../models/NicPut.md) | Modified Nic |  |
+| **serverId** | **string** | The unique ID of the server. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
+| **nic** | [**NicPut**](../models/NicPut.md) | The modified NIC |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |

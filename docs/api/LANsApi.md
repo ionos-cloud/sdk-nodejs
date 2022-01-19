@@ -1,91 +1,27 @@
-# VolumesApi
+# LANsApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersVolumesCreateSnapshotPost**](VolumesApi.md#datacentersvolumescreatesnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/create-snapshot | Create volume snapshots |
-| [**datacentersVolumesDelete**](VolumesApi.md#datacentersvolumesdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId} | Delete volumes |
-| [**datacentersVolumesFindById**](VolumesApi.md#datacentersvolumesfindbyid) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve volumes |
-| [**datacentersVolumesGet**](VolumesApi.md#datacentersvolumesget) | **GET** /datacenters/{datacenterId}/volumes | List volumes |
-| [**datacentersVolumesPatch**](VolumesApi.md#datacentersvolumespatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify volumes |
-| [**datacentersVolumesPost**](VolumesApi.md#datacentersvolumespost) | **POST** /datacenters/{datacenterId}/volumes | Create volumes |
-| [**datacentersVolumesPut**](VolumesApi.md#datacentersvolumesput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify volumes |
-| [**datacentersVolumesRestoreSnapshotPost**](VolumesApi.md#datacentersvolumesrestoresnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore volume snapshots |
+| [**datacentersLansDelete**](LANsApi.md#datacenterslansdelete) | **DELETE** /datacenters/{datacenterId}/lans/{lanId} | Delete LANs |
+| [**datacentersLansFindById**](LANsApi.md#datacenterslansfindbyid) | **GET** /datacenters/{datacenterId}/lans/{lanId} | Retrieve LANs |
+| [**datacentersLansGet**](LANsApi.md#datacenterslansget) | **GET** /datacenters/{datacenterId}/lans | List LANs |
+| [**datacentersLansNicsFindById**](LANsApi.md#datacenterslansnicsfindbyid) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve attached NICs |
+| [**datacentersLansNicsGet**](LANsApi.md#datacenterslansnicsget) | **GET** /datacenters/{datacenterId}/lans/{lanId}/nics | List LAN members |
+| [**datacentersLansNicsPost**](LANsApi.md#datacenterslansnicspost) | **POST** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach NICs |
+| [**datacentersLansPatch**](LANsApi.md#datacenterslanspatch) | **PATCH** /datacenters/{datacenterId}/lans/{lanId} | Partially modify LANs |
+| [**datacentersLansPost**](LANsApi.md#datacenterslanspost) | **POST** /datacenters/{datacenterId}/lans | Create LANs |
+| [**datacentersLansPut**](LANsApi.md#datacenterslansput) | **PUT** /datacenters/{datacenterId}/lans/{lanId} | Modify LANs |
 
 
-## datacentersVolumesCreateSnapshotPost
+## datacentersLansDelete
 
-> <Snapshot> datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, opts)
+> datacentersLansDelete(datacenterId, lanId, opts)
 
-Create volume snapshots
+Delete LANs
 
-Create a snapshot of the specified volume within the data center; this snapshot can later be used to restore this volume.
-
-### Examples
-
-```javascript
-const ionoscloud = require('@ionos-cloud/sdk-nodejs');
-// setup authorization
-const config = new ionoscloud.Configuration({
-    username: 'YOUR_USERNAME',
-    password: 'YOUR_PASSWORD',
-    apiKey: 'YOUR_API_KEY'
-});
-const api_instance = new ionoscloud.VolumesApi(config);
-// Create volume snapshots
-api_instance
-  .datacentersVolumesCreateSnapshotPost({
-    datacenterId: datacenterId_example,
-    volumeId: volumeId_example,
-    pretty: true,
-    depth: 56,
-    xContractNumber: 56,
-    name: name_example,
-    description: description_example,
-    secAuthProtection: true,
-    licenceType: licenceType_example, 
-    options: {}
-  })
-  .then((response) => console.log(response.data))
-  .catch((error) => console.log(error.response.data));
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
-| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
-| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
-| **name** | **string** | Snapshot name | [optional][default to undefined] |
-| **description** | **string** | Snapshot description | [optional][default to undefined] |
-| **secAuthProtection** | **boolean** | Flag for enabling extra protection for this snapshot, such as two-step verification. | [optional][default to undefined] |
-| **licenceType** | **string** | The OS type for this snapshot. | [optional][default to undefined] |
-
-### Return type
-
-[**Snapshot**](../models/Snapshot.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
-- **Content-Type**: application/x-www-form-urlencoded
-- **Accept**: application/json
-
-
-## datacentersVolumesDelete
-
-> datacentersVolumesDelete(datacenterId, volumeId, opts)
-
-Delete volumes
-
-Delete the specified volume within the data center. Use with caution, the volume will be permanently removed!
+Delete the specified LAN within the data center.
 
 ### Examples
 
@@ -97,12 +33,12 @@ const config = new ionoscloud.Configuration({
     password: 'YOUR_PASSWORD',
     apiKey: 'YOUR_API_KEY'
 });
-const api_instance = new ionoscloud.VolumesApi(config);
-// Delete volumes
+const api_instance = new ionoscloud.LANsApi(config);
+// Delete LANs
 api_instance
-  .datacentersVolumesDelete({
+  .datacentersLansDelete({
     datacenterId: datacenterId_example,
-    volumeId: volumeId_example,
+    lanId: lanId_example,
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
@@ -117,7 +53,7 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
@@ -136,13 +72,13 @@ Basic Authentication, Token Authentication
 - **Accept**: application/json
 
 
-## datacentersVolumesFindById
+## datacentersLansFindById
 
-> <Volume> datacentersVolumesFindById(datacenterId, volumeId, opts)
+> <Lan> datacentersLansFindById(datacenterId, lanId, opts)
 
-Retrieve volumes
+Retrieve LANs
 
-Retrieve the properties of the specified volume within the data center.
+Retrieve the properties of the specified LAN within the data center.
 
 ### Examples
 
@@ -154,12 +90,12 @@ const config = new ionoscloud.Configuration({
     password: 'YOUR_PASSWORD',
     apiKey: 'YOUR_API_KEY'
 });
-const api_instance = new ionoscloud.VolumesApi(config);
-// Retrieve volumes
+const api_instance = new ionoscloud.LANsApi(config);
+// Retrieve LANs
 api_instance
-  .datacentersVolumesFindById({
+  .datacentersLansFindById({
     datacenterId: datacenterId_example,
-    volumeId: volumeId_example,
+    lanId: lanId_example,
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
@@ -174,14 +110,14 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
-[**Volume**](../models/Volume.md)
+[**Lan**](../models/Lan.md)
 
 ### Authorization
 
@@ -193,13 +129,13 @@ Basic Authentication, Token Authentication
 - **Accept**: application/json
 
 
-## datacentersVolumesGet
+## datacentersLansGet
 
-> <Volumes> datacentersVolumesGet(datacenterId, opts)
+> <Lans> datacentersLansGet(datacenterId, opts)
 
-List volumes
+List LANs
 
-List all the volumes within the data center.
+List all LANs within the data center.
 
 ### Examples
 
@@ -211,10 +147,10 @@ const config = new ionoscloud.Configuration({
     password: 'YOUR_PASSWORD',
     apiKey: 'YOUR_API_KEY'
 });
-const api_instance = new ionoscloud.VolumesApi(config);
-// List volumes
+const api_instance = new ionoscloud.LANsApi(config);
+// List LANs
 api_instance
-  .datacentersVolumesGet({
+  .datacentersLansGet({
     datacenterId: datacenterId_example,
     pretty: true,
     depth: 56,
@@ -240,7 +176,7 @@ api_instance
 
 ### Return type
 
-[**Volumes**](../models/Volumes.md)
+[**Lans**](../models/Lans.md)
 
 ### Authorization
 
@@ -252,13 +188,13 @@ Basic Authentication, Token Authentication
 - **Accept**: application/json
 
 
-## datacentersVolumesPatch
+## datacentersLansNicsFindById
 
-> <Volume> datacentersVolumesPatch(datacenterId, volumeId, volume, opts)
+> <Nic> datacentersLansNicsFindById(datacenterId, lanId, nicId, opts)
 
-Partially modify volumes
+Retrieve attached NICs
 
-Update the properties of the specified storage volume within the data center.
+Retrieve the properties of the NIC, attached to the specified LAN.
 
 ### Examples
 
@@ -270,13 +206,13 @@ const config = new ionoscloud.Configuration({
     password: 'YOUR_PASSWORD',
     apiKey: 'YOUR_API_KEY'
 });
-const api_instance = new ionoscloud.VolumesApi(config);
-// Partially modify volumes
+const api_instance = new ionoscloud.LANsApi(config);
+// Retrieve attached NICs
 api_instance
-  .datacentersVolumesPatch({
+  .datacentersLansNicsFindById({
     datacenterId: datacenterId_example,
-    volumeId: volumeId_example,
-    volume: volume_example,
+    lanId: lanId_example,
+    nicId: nicId_example,
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
@@ -291,15 +227,15 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
-| **volume** | [**VolumeProperties**](../models/VolumeProperties.md) | The properties of the volume to be updated. |  |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
+| **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
-[**Volume**](../models/Volume.md)
+[**Nic**](../models/Nic.md)
 
 ### Authorization
 
@@ -307,17 +243,17 @@ Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
-- **Content-Type**: application/json
+- **Content-Type**: Not defined
 - **Accept**: application/json
 
 
-## datacentersVolumesPost
+## datacentersLansNicsGet
 
-> <Volume> datacentersVolumesPost(datacenterId, volume, opts)
+> <LanNics> datacentersLansNicsGet(datacenterId, lanId, opts)
 
-Create volumes
+List LAN members
 
-Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+List all NICs, attached to the specified LAN.
 
 ### Examples
 
@@ -329,132 +265,17 @@ const config = new ionoscloud.Configuration({
     password: 'YOUR_PASSWORD',
     apiKey: 'YOUR_API_KEY'
 });
-const api_instance = new ionoscloud.VolumesApi(config);
-// Create volumes
+const api_instance = new ionoscloud.LANsApi(config);
+// List LAN members
 api_instance
-  .datacentersVolumesPost({
+  .datacentersLansNicsGet({
     datacenterId: datacenterId_example,
-    volume: volume_example,
-    pretty: true,
-    depth: 56,
-    xContractNumber: 56, 
-    options: {}
-  })
-  .then((response) => console.log(response.data))
-  .catch((error) => console.log(error.response.data));
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volume** | [**Volume**](../models/Volume.md) | The volume to create. |  |
-| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
-| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
-
-### Return type
-
-[**Volume**](../models/Volume.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## datacentersVolumesPut
-
-> <Volume> datacentersVolumesPut(datacenterId, volumeId, volume, opts)
-
-Modify volumes
-
-Modify the properties of the specified volume within the data center.
-
-### Examples
-
-```javascript
-const ionoscloud = require('@ionos-cloud/sdk-nodejs');
-// setup authorization
-const config = new ionoscloud.Configuration({
-    username: 'YOUR_USERNAME',
-    password: 'YOUR_PASSWORD',
-    apiKey: 'YOUR_API_KEY'
-});
-const api_instance = new ionoscloud.VolumesApi(config);
-// Modify volumes
-api_instance
-  .datacentersVolumesPut({
-    datacenterId: datacenterId_example,
-    volumeId: volumeId_example,
-    volume: volume_example,
-    pretty: true,
-    depth: 56,
-    xContractNumber: 56, 
-    options: {}
-  })
-  .then((response) => console.log(response.data))
-  .catch((error) => console.log(error.response.data));
-```
-
-### Parameters
-
-| Name | Type | Description | Notes |
-| ---- | ---- | ----------- | ----- |
-| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
-| **volume** | [**Volume**](../models/Volume.md) | The modified volume |  |
-| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
-| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
-
-### Return type
-
-[**Volume**](../models/Volume.md)
-
-### Authorization
-
-Basic Authentication, Token Authentication
-
-### HTTP request headers
-
-- **Content-Type**: application/json
-- **Accept**: application/json
-
-
-## datacentersVolumesRestoreSnapshotPost
-
-> datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, opts)
-
-Restore volume snapshots
-
-Restore a snapshot for the specified volume within the data center. A snapshot is an image of a volume, which can be used to restore this volume at a later time.
-
-### Examples
-
-```javascript
-const ionoscloud = require('@ionos-cloud/sdk-nodejs');
-// setup authorization
-const config = new ionoscloud.Configuration({
-    username: 'YOUR_USERNAME',
-    password: 'YOUR_PASSWORD',
-    apiKey: 'YOUR_API_KEY'
-});
-const api_instance = new ionoscloud.VolumesApi(config);
-// Restore volume snapshots
-api_instance
-  .datacentersVolumesRestoreSnapshotPost({
-    datacenterId: datacenterId_example,
-    volumeId: volumeId_example,
+    lanId: lanId_example,
     pretty: true,
     depth: 56,
     xContractNumber: 56,
-    snapshotId: snapshotId_example, 
+    offset: 56,
+    limit: 56, 
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -466,15 +287,16 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **volumeId** | **string** | The unique ID of the volume. | [default to undefined] |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
-| **snapshotId** | **string** | The unique ID of the snapshot. | [optional][default to undefined] |
+| **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
+| **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
 
 ### Return type
 
-nil (empty response body)
+[**LanNics**](../models/LanNics.md)
 
 ### Authorization
 
@@ -482,6 +304,240 @@ Basic Authentication, Token Authentication
 
 ### HTTP request headers
 
-- **Content-Type**: application/x-www-form-urlencoded
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## datacentersLansNicsPost
+
+> <Nic> datacentersLansNicsPost(datacenterId, lanId, nic, opts)
+
+Attach NICs
+
+Attach an existing NIC to the specified LAN.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LANsApi(config);
+// Attach NICs
+api_instance
+  .datacentersLansNicsPost({
+    datacenterId: datacenterId_example,
+    lanId: lanId_example,
+    nic: nic_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
+| **nic** | [**Nic**](../models/Nic.md) | The NIC to be attached. |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Nic**](../models/Nic.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## datacentersLansPatch
+
+> <Lan> datacentersLansPatch(datacenterId, lanId, lan, opts)
+
+Partially modify LANs
+
+Update the properties of the specified LAN within the data center.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LANsApi(config);
+// Partially modify LANs
+api_instance
+  .datacentersLansPatch({
+    datacenterId: datacenterId_example,
+    lanId: lanId_example,
+    lan: lan_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
+| **lan** | [**LanProperties**](../models/LanProperties.md) | The properties of the LAN to be updated. |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Lan**](../models/Lan.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## datacentersLansPost
+
+> <LanPost> datacentersLansPost(datacenterId, lan, opts)
+
+Create LANs
+
+Create a LAN within the data center.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LANsApi(config);
+// Create LANs
+api_instance
+  .datacentersLansPost({
+    datacenterId: datacenterId_example,
+    lan: lan_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **lan** | [**LanPost**](../models/LanPost.md) | The LAN to create. |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**LanPost**](../models/LanPost.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## datacentersLansPut
+
+> <Lan> datacentersLansPut(datacenterId, lanId, lan, opts)
+
+Modify LANs
+
+Modify the properties of the specified LAN within the data center.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LANsApi(config);
+// Modify LANs
+api_instance
+  .datacentersLansPut({
+    datacenterId: datacenterId_example,
+    lanId: lanId_example,
+    lan: lan_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
+| **lanId** | **string** | The unique ID of the LAN. | [default to undefined] |
+| **lan** | [**Lan**](../models/Lan.md) | The modified LAN |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**Lan**](../models/Lan.md)
+
+### Authorization
+
+Basic Authentication, Token Authentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
 - **Accept**: application/json
 
