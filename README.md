@@ -1,4 +1,4 @@
-![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg)
+[![[ CI ] CloudApi V6 / NodeJS](https://github.com/ionos-cloud/sdk-resources/actions/workflows/ci-cloudapi-v6-node.yml/badge.svg)](https://github.com/ionos-cloud/sdk-resources/actions/workflows/ci-cloudapi-v6-node.yml)
 [![Npm Version](https://img.shields.io/node/v/@ionos-cloud/sdk-nodejs)](https://www.npmjs.com/package/@ionos-cloud/sdk-nodejs) 
 [![Gitter](https://badges.gitter.im/ionos-cloud/sdk-general.png)](https://gitter.im/ionos-cloud/sdk-general)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sdk-nodejs&metric=alert_status)](https://sonarcloud.io/dashboard?id=sdk-nodejs)
