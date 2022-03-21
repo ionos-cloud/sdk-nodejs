@@ -37,16 +37,15 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} keyId The unique ID of the S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersS3keysDelete: async (userId: string, keyId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersS3keysDelete: async (userId: string, keyId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersS3keysDelete.');
             }
-            // verify required parameter 'keyId' is not null or undefined
             if (keyId === null || keyId === undefined) {
                 throw new RequiredError('keyId','Required parameter keyId was null or undefined when calling umUsersS3keysDelete.');
             }
@@ -125,16 +124,15 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} keyId The unique ID of the S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersS3keysFindByKeyId: async (userId: string, keyId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersS3keysFindByKeyId: async (userId: string, keyId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersS3keysFindByKeyId.');
             }
-            // verify required parameter 'keyId' is not null or undefined
             if (keyId === null || keyId === undefined) {
                 throw new RequiredError('keyId','Required parameter keyId was null or undefined when calling umUsersS3keysFindByKeyId.');
             }
@@ -212,12 +210,14 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersS3keysGet: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersS3keysGet: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersS3keysGet.');
             }
@@ -262,6 +262,17 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -294,12 +305,12 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersS3keysPost: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersS3keysPost: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersS3keysPost.');
             }
@@ -378,20 +389,18 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
          * @param {S3Key} s3Key The modified S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersS3keysPut: async (userId: string, keyId: string, s3Key: S3Key, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersS3keysPut: async (userId: string, keyId: string, s3Key: S3Key, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersS3keysPut.');
             }
-            // verify required parameter 'keyId' is not null or undefined
             if (keyId === null || keyId === undefined) {
                 throw new RequiredError('keyId','Required parameter keyId was null or undefined when calling umUsersS3keysPut.');
             }
-            // verify required parameter 's3Key' is not null or undefined
             if (s3Key === null || s3Key === undefined) {
                 throw new RequiredError('s3Key','Required parameter s3Key was null or undefined when calling umUsersS3keysPut.');
             }
@@ -475,12 +484,14 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
          * @summary Retrieve S3 single sign-on URLs
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersS3ssourlGet: async (userId: string, pretty?: boolean, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersS3ssourlGet: async (userId: string, pretty?: boolean, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersS3ssourlGet.');
             }
@@ -518,6 +529,17 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['pretty'] = pretty;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -560,7 +582,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
          * @param {string} keyId The unique ID of the S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -575,7 +598,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
          * @param {string} keyId The unique ID of the S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -589,12 +613,15 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umUsersS3keysGet(userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<S3Keys>> {
-            const axiosArgs = await UserS3KeysApiAxiosParamCreator(configuration).umUsersS3keysGet(userId, pretty, depth, xContractNumber, options);
+        async umUsersS3keysGet(userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<S3Keys>> {
+            const axiosArgs = await UserS3KeysApiAxiosParamCreator(configuration).umUsersS3keysGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -603,7 +630,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -619,7 +647,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
          * @param {S3Key} s3Key The modified S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -632,12 +661,15 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
          * @summary Retrieve S3 single sign-on URLs
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umUsersS3ssourlGet(userId: string, pretty?: boolean, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<S3ObjectStorageSSO>> {
-            const axiosArgs = await UserS3KeysApiAxiosParamCreator(configuration).umUsersS3ssourlGet(userId, pretty, xContractNumber, options);
+        async umUsersS3ssourlGet(userId: string, pretty?: boolean, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<S3ObjectStorageSSO>> {
+            const axiosArgs = await UserS3KeysApiAxiosParamCreator(configuration).umUsersS3ssourlGet(userId, pretty, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
     }
@@ -656,7 +688,7 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
          * @param {string} keyId The unique ID of the S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -670,7 +702,7 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
          * @param {string} keyId The unique ID of the S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -683,7 +715,7 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -696,7 +728,7 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -711,7 +743,7 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
          * @param {S3Key} s3Key The modified S3 key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -723,7 +755,7 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
          * @summary Retrieve S3 single sign-on URLs
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -768,7 +800,7 @@ export interface UserS3KeysApiUmUsersS3keysDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserS3KeysApiUmUsersS3keysDelete
      */
@@ -810,7 +842,7 @@ export interface UserS3KeysApiUmUsersS3keysFindByKeyIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserS3KeysApiUmUsersS3keysFindByKeyId
      */
@@ -845,11 +877,29 @@ export interface UserS3KeysApiUmUsersS3keysGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserS3KeysApiUmUsersS3keysGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserS3KeysApiUmUsersS3keysGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserS3KeysApiUmUsersS3keysGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserS3KeysApiUmUsersS3keysGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -880,7 +930,7 @@ export interface UserS3KeysApiUmUsersS3keysPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserS3KeysApiUmUsersS3keysPost
      */
@@ -929,7 +979,7 @@ export interface UserS3KeysApiUmUsersS3keysPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserS3KeysApiUmUsersS3keysPut
      */
@@ -957,11 +1007,29 @@ export interface UserS3KeysApiUmUsersS3ssourlGetRequest {
     readonly pretty?: boolean
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserS3KeysApiUmUsersS3ssourlGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserS3KeysApiUmUsersS3ssourlGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserS3KeysApiUmUsersS3ssourlGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserS3KeysApiUmUsersS3ssourlGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -1004,7 +1072,7 @@ export class UserS3KeysApi extends BaseAPI {
      * @memberof UserS3KeysApi
      */
     public umUsersS3keysGet(requestParameters: UserS3KeysApiUmUsersS3keysGetRequest, options?: any) {
-        return UserS3KeysApiFp(this.configuration).umUsersS3keysGet(requestParameters.userId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserS3KeysApiFp(this.configuration).umUsersS3keysGet(requestParameters.userId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1040,6 +1108,6 @@ export class UserS3KeysApi extends BaseAPI {
      * @memberof UserS3KeysApi
      */
     public umUsersS3ssourlGet(requestParameters: UserS3KeysApiUmUsersS3ssourlGetRequest, options?: any) {
-        return UserS3KeysApiFp(this.configuration).umUsersS3ssourlGet(requestParameters.userId, requestParameters.pretty, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserS3KeysApiFp(this.configuration).umUsersS3ssourlGet(requestParameters.userId, requestParameters.pretty, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -36,12 +36,12 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksDelete: async (ipblockId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'ipblockId' is not null or undefined
+        ipblocksDelete: async (ipblockId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (ipblockId === null || ipblockId === undefined) {
                 throw new RequiredError('ipblockId','Required parameter ipblockId was null or undefined when calling ipblocksDelete.');
             }
@@ -118,12 +118,12 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksFindById: async (ipblockId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'ipblockId' is not null or undefined
+        ipblocksFindById: async (ipblockId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (ipblockId === null || ipblockId === undefined) {
                 throw new RequiredError('ipblockId','Required parameter ipblockId was null or undefined when calling ipblocksFindById.');
             }
@@ -199,13 +199,16 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @summary List IP blocks 
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
+        ipblocksGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/ipblocks`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -260,6 +263,17 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -293,16 +307,15 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {IpBlockProperties} ipblock The properties of the IP block to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksPatch: async (ipblockId: string, ipblock: IpBlockProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'ipblockId' is not null or undefined
+        ipblocksPatch: async (ipblockId: string, ipblock: IpBlockProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (ipblockId === null || ipblockId === undefined) {
                 throw new RequiredError('ipblockId','Required parameter ipblockId was null or undefined when calling ipblocksPatch.');
             }
-            // verify required parameter 'ipblock' is not null or undefined
             if (ipblock === null || ipblock === undefined) {
                 throw new RequiredError('ipblock','Required parameter ipblock was null or undefined when calling ipblocksPatch.');
             }
@@ -386,12 +399,12 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {IpBlock} ipblock The IP block to be reserved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksPost: async (ipblock: IpBlock, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'ipblock' is not null or undefined
+        ipblocksPost: async (ipblock: IpBlock, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (ipblock === null || ipblock === undefined) {
                 throw new RequiredError('ipblock','Required parameter ipblock was null or undefined when calling ipblocksPost.');
             }
@@ -475,16 +488,15 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
          * @param {IpBlock} ipblock The modified IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        ipblocksPut: async (ipblockId: string, ipblock: IpBlock, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'ipblockId' is not null or undefined
+        ipblocksPut: async (ipblockId: string, ipblock: IpBlock, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (ipblockId === null || ipblockId === undefined) {
                 throw new RequiredError('ipblockId','Required parameter ipblockId was null or undefined when calling ipblocksPut.');
             }
-            // verify required parameter 'ipblock' is not null or undefined
             if (ipblock === null || ipblock === undefined) {
                 throw new RequiredError('ipblock','Required parameter ipblock was null or undefined when calling ipblocksPut.');
             }
@@ -577,7 +589,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -591,7 +604,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -604,14 +618,17 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @summary List IP blocks 
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async ipblocksGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpBlocks>> {
-            const axiosArgs = await IPBlocksApiAxiosParamCreator(configuration).ipblocksGet(pretty, depth, xContractNumber, offset, limit, options);
+        async ipblocksGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<IpBlocks>> {
+            const axiosArgs = await IPBlocksApiAxiosParamCreator(configuration).ipblocksGet(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -621,7 +638,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @param {IpBlockProperties} ipblock The properties of the IP block to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -635,7 +653,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @param {IpBlock} ipblock The IP block to be reserved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -650,7 +669,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
          * @param {IpBlock} ipblock The modified IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -673,7 +693,7 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -686,7 +706,7 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -698,8 +718,8 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @summary List IP blocks 
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -714,7 +734,7 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @param {IpBlockProperties} ipblock The properties of the IP block to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -727,7 +747,7 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @param {IpBlock} ipblock The IP block to be reserved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -741,7 +761,7 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
          * @param {IpBlock} ipblock The modified IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -779,7 +799,7 @@ export interface IPBlocksApiIpblocksDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof IPBlocksApiIpblocksDelete
      */
@@ -814,7 +834,7 @@ export interface IPBlocksApiIpblocksFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof IPBlocksApiIpblocksFindById
      */
@@ -842,14 +862,14 @@ export interface IPBlocksApiIpblocksGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof IPBlocksApiIpblocksGet
      */
     readonly xContractNumber?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof IPBlocksApiIpblocksGet
      */
@@ -861,6 +881,24 @@ export interface IPBlocksApiIpblocksGetRequest {
      * @memberof IPBlocksApiIpblocksGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof IPBlocksApiIpblocksGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof IPBlocksApiIpblocksGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof IPBlocksApiIpblocksGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -898,7 +936,7 @@ export interface IPBlocksApiIpblocksPatchRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof IPBlocksApiIpblocksPatch
      */
@@ -933,7 +971,7 @@ export interface IPBlocksApiIpblocksPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof IPBlocksApiIpblocksPost
      */
@@ -975,7 +1013,7 @@ export interface IPBlocksApiIpblocksPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof IPBlocksApiIpblocksPut
      */
@@ -1022,7 +1060,7 @@ export class IPBlocksApi extends BaseAPI {
      * @memberof IPBlocksApi
      */
     public ipblocksGet(requestParameters: IPBlocksApiIpblocksGetRequest = {}, options?: any) {
-        return IPBlocksApiFp(this.configuration).ipblocksGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return IPBlocksApiFp(this.configuration).ipblocksGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

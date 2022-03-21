@@ -39,20 +39,19 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {string} [name] Snapshot name
          * @param {string} [description] Snapshot description
          * @param {boolean} [secAuthProtection] Flag for enabling extra protection for this snapshot, such as two-step verification.
          * @param {string} [licenceType] The OS type for this snapshot.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesCreateSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, name?: string, description?: string, secAuthProtection?: boolean, licenceType?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesCreateSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, name?: string, description?: string, secAuthProtection?: boolean, licenceType?: string,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesCreateSnapshotPost.');
             }
-            // verify required parameter 'volumeId' is not null or undefined
             if (volumeId === null || volumeId === undefined) {
                 throw new RequiredError('volumeId','Required parameter volumeId was null or undefined when calling datacentersVolumesCreateSnapshotPost.');
             }
@@ -151,16 +150,15 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesDelete: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesDelete: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesDelete.');
             }
-            // verify required parameter 'volumeId' is not null or undefined
             if (volumeId === null || volumeId === undefined) {
                 throw new RequiredError('volumeId','Required parameter volumeId was null or undefined when calling datacentersVolumesDelete.');
             }
@@ -239,16 +237,15 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesFindById: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesFindById: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesFindById.');
             }
-            // verify required parameter 'volumeId' is not null or undefined
             if (volumeId === null || volumeId === undefined) {
                 throw new RequiredError('volumeId','Required parameter volumeId was null or undefined when calling datacentersVolumesFindById.');
             }
@@ -326,14 +323,16 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesGet.');
             }
@@ -392,6 +391,17 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -426,20 +436,18 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {VolumeProperties} volume The properties of the volume to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesPatch: async (datacenterId: string, volumeId: string, volume: VolumeProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesPatch: async (datacenterId: string, volumeId: string, volume: VolumeProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesPatch.');
             }
-            // verify required parameter 'volumeId' is not null or undefined
             if (volumeId === null || volumeId === undefined) {
                 throw new RequiredError('volumeId','Required parameter volumeId was null or undefined when calling datacentersVolumesPatch.');
             }
-            // verify required parameter 'volume' is not null or undefined
             if (volume === null || volume === undefined) {
                 throw new RequiredError('volume','Required parameter volume was null or undefined when calling datacentersVolumesPatch.');
             }
@@ -525,16 +533,15 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Volume} volume The volume to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesPost: async (datacenterId: string, volume: Volume, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesPost: async (datacenterId: string, volume: Volume, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesPost.');
             }
-            // verify required parameter 'volume' is not null or undefined
             if (volume === null || volume === undefined) {
                 throw new RequiredError('volume','Required parameter volume was null or undefined when calling datacentersVolumesPost.');
             }
@@ -620,20 +627,18 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {Volume} volume The modified volume
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesPut: async (datacenterId: string, volumeId: string, volume: Volume, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesPut: async (datacenterId: string, volumeId: string, volume: Volume, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesPut.');
             }
-            // verify required parameter 'volumeId' is not null or undefined
             if (volumeId === null || volumeId === undefined) {
                 throw new RequiredError('volumeId','Required parameter volumeId was null or undefined when calling datacentersVolumesPut.');
             }
-            // verify required parameter 'volume' is not null or undefined
             if (volume === null || volume === undefined) {
                 throw new RequiredError('volume','Required parameter volume was null or undefined when calling datacentersVolumesPut.');
             }
@@ -719,17 +724,16 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {string} [snapshotId] The unique ID of the snapshot.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesRestoreSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshotId?: string, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersVolumesRestoreSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshotId?: string,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesRestoreSnapshotPost.');
             }
-            // verify required parameter 'volumeId' is not null or undefined
             if (volumeId === null || volumeId === undefined) {
                 throw new RequiredError('volumeId','Required parameter volumeId was null or undefined when calling datacentersVolumesRestoreSnapshotPost.');
             }
@@ -825,11 +829,12 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {string} [name] Snapshot name
          * @param {string} [description] Snapshot description
          * @param {boolean} [secAuthProtection] Flag for enabling extra protection for this snapshot, such as two-step verification.
          * @param {string} [licenceType] The OS type for this snapshot.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -844,7 +849,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -859,7 +865,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -873,14 +880,17 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersVolumesGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Volumes>> {
-            const axiosArgs = await VolumesApiAxiosParamCreator(configuration).datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit, options);
+        async datacentersVolumesGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Volumes>> {
+            const axiosArgs = await VolumesApiAxiosParamCreator(configuration).datacentersVolumesGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -891,7 +901,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {VolumeProperties} volume The properties of the volume to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -906,7 +917,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {Volume} volume The volume to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -922,7 +934,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {Volume} volume The modified volume
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -937,8 +950,9 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {string} [snapshotId] The unique ID of the snapshot.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -962,7 +976,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {string} [name] Snapshot name
          * @param {string} [description] Snapshot description
          * @param {boolean} [secAuthProtection] Flag for enabling extra protection for this snapshot, such as two-step verification.
@@ -980,7 +994,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -994,7 +1008,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1007,8 +1021,8 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1024,7 +1038,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {VolumeProperties} volume The properties of the volume to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1038,7 +1052,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {Volume} volume The volume to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1053,7 +1067,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {Volume} volume The modified volume
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1067,7 +1081,7 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {string} volumeId The unique ID of the volume.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {string} [snapshotId] The unique ID of the snapshot.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -1113,7 +1127,7 @@ export interface VolumesApiDatacentersVolumesCreateSnapshotPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesCreateSnapshotPost
      */
@@ -1183,7 +1197,7 @@ export interface VolumesApiDatacentersVolumesDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesDelete
      */
@@ -1225,7 +1239,7 @@ export interface VolumesApiDatacentersVolumesFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesFindById
      */
@@ -1260,14 +1274,14 @@ export interface VolumesApiDatacentersVolumesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesGet
      */
     readonly xContractNumber?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesGet
      */
@@ -1279,6 +1293,24 @@ export interface VolumesApiDatacentersVolumesGetRequest {
      * @memberof VolumesApiDatacentersVolumesGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof VolumesApiDatacentersVolumesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof VolumesApiDatacentersVolumesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof VolumesApiDatacentersVolumesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -1323,7 +1355,7 @@ export interface VolumesApiDatacentersVolumesPatchRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesPatch
      */
@@ -1365,7 +1397,7 @@ export interface VolumesApiDatacentersVolumesPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesPost
      */
@@ -1414,7 +1446,7 @@ export interface VolumesApiDatacentersVolumesPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesPut
      */
@@ -1456,7 +1488,7 @@ export interface VolumesApiDatacentersVolumesRestoreSnapshotPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof VolumesApiDatacentersVolumesRestoreSnapshotPost
      */
@@ -1522,7 +1554,7 @@ export class VolumesApi extends BaseAPI {
      * @memberof VolumesApi
      */
     public datacentersVolumesGet(requestParameters: VolumesApiDatacentersVolumesGetRequest, options?: any) {
-        return VolumesApiFp(this.configuration).datacentersVolumesGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return VolumesApiFp(this.configuration).datacentersVolumesGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

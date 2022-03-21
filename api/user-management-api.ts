@@ -56,12 +56,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsDelete: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsDelete: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsDelete.');
             }
@@ -138,12 +138,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsFindById: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsFindById: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsFindById.');
             }
@@ -219,11 +219,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @summary List all groups
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
+        umGroupsGet: async (pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/um/groups`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -264,6 +267,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -296,12 +310,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {Group} group The group to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsPost: async (group: Group, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'group' is not null or undefined
+        umGroupsPost: async (group: Group, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (group === null || group === undefined) {
                 throw new RequiredError('group','Required parameter group was null or undefined when calling umGroupsPost.');
             }
@@ -385,16 +399,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {Group} group The modified group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsPut: async (groupId: string, group: Group, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsPut: async (groupId: string, group: Group, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsPut.');
             }
-            // verify required parameter 'group' is not null or undefined
             if (group === null || group === undefined) {
                 throw new RequiredError('group','Required parameter group was null or undefined when calling umGroupsPut.');
             }
@@ -478,12 +491,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsResourcesGet: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsResourcesGet: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsResourcesGet.');
             }
@@ -528,6 +543,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -561,16 +587,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} resourceId The unique ID of the resource.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsSharesDelete: async (groupId: string, resourceId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsSharesDelete: async (groupId: string, resourceId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsSharesDelete.');
             }
-            // verify required parameter 'resourceId' is not null or undefined
             if (resourceId === null || resourceId === undefined) {
                 throw new RequiredError('resourceId','Required parameter resourceId was null or undefined when calling umGroupsSharesDelete.');
             }
@@ -649,16 +674,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} resourceId The unique ID of the resource.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsSharesFindByResourceId: async (groupId: string, resourceId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsSharesFindByResourceId: async (groupId: string, resourceId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsSharesFindByResourceId.');
             }
-            // verify required parameter 'resourceId' is not null or undefined
             if (resourceId === null || resourceId === undefined) {
                 throw new RequiredError('resourceId','Required parameter resourceId was null or undefined when calling umGroupsSharesFindByResourceId.');
             }
@@ -736,12 +760,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsSharesGet: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsSharesGet: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsSharesGet.');
             }
@@ -786,6 +812,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -820,20 +857,18 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {GroupShare} resource The resource to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsSharesPost: async (groupId: string, resourceId: string, resource: GroupShare, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsSharesPost: async (groupId: string, resourceId: string, resource: GroupShare, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsSharesPost.');
             }
-            // verify required parameter 'resourceId' is not null or undefined
             if (resourceId === null || resourceId === undefined) {
                 throw new RequiredError('resourceId','Required parameter resourceId was null or undefined when calling umGroupsSharesPost.');
             }
-            // verify required parameter 'resource' is not null or undefined
             if (resource === null || resource === undefined) {
                 throw new RequiredError('resource','Required parameter resource was null or undefined when calling umGroupsSharesPost.');
             }
@@ -920,20 +955,18 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {GroupShare} resource The modified resource
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsSharesPut: async (groupId: string, resourceId: string, resource: GroupShare, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsSharesPut: async (groupId: string, resourceId: string, resource: GroupShare, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsSharesPut.');
             }
-            // verify required parameter 'resourceId' is not null or undefined
             if (resourceId === null || resourceId === undefined) {
                 throw new RequiredError('resourceId','Required parameter resourceId was null or undefined when calling umGroupsSharesPut.');
             }
-            // verify required parameter 'resource' is not null or undefined
             if (resource === null || resource === undefined) {
                 throw new RequiredError('resource','Required parameter resource was null or undefined when calling umGroupsSharesPut.');
             }
@@ -1019,16 +1052,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsUsersDelete: async (groupId: string, userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsUsersDelete: async (groupId: string, userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsUsersDelete.');
             }
-            // verify required parameter 'userId' is not null or undefined
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umGroupsUsersDelete.');
             }
@@ -1106,12 +1138,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsUsersGet: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsUsersGet: async (groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsUsersGet.');
             }
@@ -1156,6 +1190,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1189,16 +1234,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {User} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsUsersPost: async (groupId: string, user: User, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'groupId' is not null or undefined
+        umGroupsUsersPost: async (groupId: string, user: User, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsUsersPost.');
             }
-            // verify required parameter 'user' is not null or undefined
             if (user === null || user === undefined) {
                 throw new RequiredError('user','Required parameter user was null or undefined when calling umGroupsUsersPost.');
             }
@@ -1282,12 +1326,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} resourceType The resource type
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umResourcesFindByType: async (resourceType: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'resourceType' is not null or undefined
+        umResourcesFindByType: async (resourceType: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (resourceType === null || resourceType === undefined) {
                 throw new RequiredError('resourceType','Required parameter resourceType was null or undefined when calling umResourcesFindByType.');
             }
@@ -1365,16 +1409,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} resourceId The resource ID
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umResourcesFindByTypeAndId: async (resourceType: string, resourceId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'resourceType' is not null or undefined
+        umResourcesFindByTypeAndId: async (resourceType: string, resourceId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (resourceType === null || resourceType === undefined) {
                 throw new RequiredError('resourceType','Required parameter resourceType was null or undefined when calling umResourcesFindByTypeAndId.');
             }
-            // verify required parameter 'resourceId' is not null or undefined
             if (resourceId === null || resourceId === undefined) {
                 throw new RequiredError('resourceId','Required parameter resourceId was null or undefined when calling umResourcesFindByTypeAndId.');
             }
@@ -1451,11 +1494,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @summary List all resources
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umResourcesGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
+        umResourcesGet: async (pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/um/resources`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -1496,6 +1542,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1528,12 +1585,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersDelete: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersDelete: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersDelete.');
             }
@@ -1610,12 +1667,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersFindById: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersFindById: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersFindById.');
             }
@@ -1691,13 +1748,16 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @summary List all users 
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
+        umUsersGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/um/users`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -1752,6 +1812,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1784,12 +1855,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersGroupsGet: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersGroupsGet: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersGroupsGet.');
             }
@@ -1834,6 +1907,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1866,12 +1950,14 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersOwnsGet: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersOwnsGet: async (userId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersOwnsGet.');
             }
@@ -1916,6 +2002,17 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1948,12 +2045,12 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {UserPost} user The user to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersPost: async (user: UserPost, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'user' is not null or undefined
+        umUsersPost: async (user: UserPost, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (user === null || user === undefined) {
                 throw new RequiredError('user','Required parameter user was null or undefined when calling umUsersPost.');
             }
@@ -2037,16 +2134,15 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {UserPut} user The modified user
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umUsersPut: async (userId: string, user: UserPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'userId' is not null or undefined
+        umUsersPut: async (userId: string, user: UserPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (userId === null || userId === undefined) {
                 throw new RequiredError('userId','Required parameter userId was null or undefined when calling umUsersPut.');
             }
-            // verify required parameter 'user' is not null or undefined
             if (user === null || user === undefined) {
                 throw new RequiredError('user','Required parameter user was null or undefined when calling umUsersPut.');
             }
@@ -2139,7 +2235,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2153,7 +2250,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2166,12 +2264,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @summary List all groups
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umGroupsGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Groups>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsGet(pretty, depth, xContractNumber, options);
+        async umGroupsGet(pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Groups>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2180,7 +2281,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {Group} group The group to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2195,7 +2297,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {Group} group The modified group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2209,12 +2312,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umGroupsResourcesGet(groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceGroups>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsResourcesGet(groupId, pretty, depth, xContractNumber, options);
+        async umGroupsResourcesGet(groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceGroups>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsResourcesGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2224,7 +2330,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} resourceId The unique ID of the resource.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2239,7 +2346,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} resourceId The unique ID of the resource.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2253,12 +2361,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umGroupsSharesGet(groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupShares>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsSharesGet(groupId, pretty, depth, xContractNumber, options);
+        async umGroupsSharesGet(groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupShares>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsSharesGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2269,7 +2380,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {GroupShare} resource The resource to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2285,7 +2397,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {GroupShare} resource The modified resource
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2300,7 +2413,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2314,12 +2428,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umGroupsUsersGet(groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupMembers>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsUsersGet(groupId, pretty, depth, xContractNumber, options);
+        async umGroupsUsersGet(groupId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<GroupMembers>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsUsersGet(groupId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2329,7 +2446,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {User} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2343,7 +2461,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} resourceType The resource type
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2358,7 +2477,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} resourceId The resource ID
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2371,12 +2491,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @summary List all resources
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umResourcesGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resources>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umResourcesGet(pretty, depth, xContractNumber, options);
+        async umResourcesGet(pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Resources>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umResourcesGet(pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2385,7 +2508,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2399,7 +2523,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2412,14 +2537,17 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @summary List all users 
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umUsersGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Users>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersGet(pretty, depth, xContractNumber, offset, limit, options);
+        async umUsersGet(pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Users>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersGet(pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2428,12 +2556,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umUsersGroupsGet(userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceGroups>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersGroupsGet(userId, pretty, depth, xContractNumber, options);
+        async umUsersGroupsGet(userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourceGroups>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersGroupsGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2442,12 +2573,15 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umUsersOwnsGet(userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourcesUsers>> {
-            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersOwnsGet(userId, pretty, depth, xContractNumber, options);
+        async umUsersOwnsGet(userId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<ResourcesUsers>> {
+            const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umUsersOwnsGet(userId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2456,7 +2590,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {UserPost} user The user to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2471,7 +2606,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {UserPut} user The modified user
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2494,7 +2630,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2507,7 +2643,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2519,7 +2655,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @summary List all groups
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2532,7 +2668,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {Group} group The group to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2546,7 +2682,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {Group} group The modified group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2559,7 +2695,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2573,7 +2709,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} resourceId The unique ID of the resource.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2587,7 +2723,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} resourceId The unique ID of the resource.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2600,7 +2736,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2615,7 +2751,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {GroupShare} resource The resource to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2630,7 +2766,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {GroupShare} resource The modified resource
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2644,7 +2780,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2657,7 +2793,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} groupId The unique ID of the group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2671,7 +2807,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {User} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2684,7 +2820,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} resourceType The resource type
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2698,7 +2834,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} resourceId The resource ID
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2710,7 +2846,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @summary List all resources
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2723,7 +2859,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2736,7 +2872,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2748,8 +2884,8 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @summary List all users 
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2763,7 +2899,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2776,7 +2912,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2789,7 +2925,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {UserPost} user The user to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2803,7 +2939,7 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * @param {UserPut} user The modified user
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2841,7 +2977,7 @@ export interface UserManagementApiUmGroupsDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsDelete
      */
@@ -2876,7 +3012,7 @@ export interface UserManagementApiUmGroupsFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsFindById
      */
@@ -2904,11 +3040,29 @@ export interface UserManagementApiUmGroupsGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmGroupsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmGroupsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmGroupsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2939,7 +3093,7 @@ export interface UserManagementApiUmGroupsPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsPost
      */
@@ -2981,7 +3135,7 @@ export interface UserManagementApiUmGroupsPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsPut
      */
@@ -3016,11 +3170,29 @@ export interface UserManagementApiUmGroupsResourcesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsResourcesGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmGroupsResourcesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmGroupsResourcesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmGroupsResourcesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3058,7 +3230,7 @@ export interface UserManagementApiUmGroupsSharesDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsSharesDelete
      */
@@ -3100,7 +3272,7 @@ export interface UserManagementApiUmGroupsSharesFindByResourceIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsSharesFindByResourceId
      */
@@ -3135,11 +3307,29 @@ export interface UserManagementApiUmGroupsSharesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsSharesGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmGroupsSharesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmGroupsSharesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmGroupsSharesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3184,7 +3374,7 @@ export interface UserManagementApiUmGroupsSharesPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsSharesPost
      */
@@ -3233,7 +3423,7 @@ export interface UserManagementApiUmGroupsSharesPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsSharesPut
      */
@@ -3275,7 +3465,7 @@ export interface UserManagementApiUmGroupsUsersDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsUsersDelete
      */
@@ -3310,11 +3500,29 @@ export interface UserManagementApiUmGroupsUsersGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsUsersGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmGroupsUsersGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmGroupsUsersGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmGroupsUsersGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3352,7 +3560,7 @@ export interface UserManagementApiUmGroupsUsersPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmGroupsUsersPost
      */
@@ -3387,7 +3595,7 @@ export interface UserManagementApiUmResourcesFindByTypeRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmResourcesFindByType
      */
@@ -3429,7 +3637,7 @@ export interface UserManagementApiUmResourcesFindByTypeAndIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmResourcesFindByTypeAndId
      */
@@ -3457,11 +3665,29 @@ export interface UserManagementApiUmResourcesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmResourcesGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmResourcesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmResourcesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmResourcesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3492,7 +3718,7 @@ export interface UserManagementApiUmUsersDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersDelete
      */
@@ -3527,7 +3753,7 @@ export interface UserManagementApiUmUsersFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersFindById
      */
@@ -3555,14 +3781,14 @@ export interface UserManagementApiUmUsersGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersGet
      */
     readonly xContractNumber?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof UserManagementApiUmUsersGet
      */
@@ -3574,6 +3800,24 @@ export interface UserManagementApiUmUsersGetRequest {
      * @memberof UserManagementApiUmUsersGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmUsersGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmUsersGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmUsersGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3604,11 +3848,29 @@ export interface UserManagementApiUmUsersGroupsGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersGroupsGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmUsersGroupsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmUsersGroupsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmUsersGroupsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3639,11 +3901,29 @@ export interface UserManagementApiUmUsersOwnsGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersOwnsGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof UserManagementApiUmUsersOwnsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof UserManagementApiUmUsersOwnsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof UserManagementApiUmUsersOwnsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3674,7 +3954,7 @@ export interface UserManagementApiUmUsersPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersPost
      */
@@ -3716,7 +3996,7 @@ export interface UserManagementApiUmUsersPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof UserManagementApiUmUsersPut
      */
@@ -3763,7 +4043,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umGroupsGet(requestParameters: UserManagementApiUmGroupsGetRequest = {}, options?: any) {
-        return UserManagementApiFp(this.configuration).umGroupsGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umGroupsGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3799,7 +4079,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umGroupsResourcesGet(requestParameters: UserManagementApiUmGroupsResourcesGetRequest, options?: any) {
-        return UserManagementApiFp(this.configuration).umGroupsResourcesGet(requestParameters.groupId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umGroupsResourcesGet(requestParameters.groupId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3835,7 +4115,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umGroupsSharesGet(requestParameters: UserManagementApiUmGroupsSharesGetRequest, options?: any) {
-        return UserManagementApiFp(this.configuration).umGroupsSharesGet(requestParameters.groupId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umGroupsSharesGet(requestParameters.groupId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3883,7 +4163,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umGroupsUsersGet(requestParameters: UserManagementApiUmGroupsUsersGetRequest, options?: any) {
-        return UserManagementApiFp(this.configuration).umGroupsUsersGet(requestParameters.groupId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umGroupsUsersGet(requestParameters.groupId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3931,7 +4211,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umResourcesGet(requestParameters: UserManagementApiUmResourcesGetRequest = {}, options?: any) {
-        return UserManagementApiFp(this.configuration).umResourcesGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umResourcesGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3967,7 +4247,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umUsersGet(requestParameters: UserManagementApiUmUsersGetRequest = {}, options?: any) {
-        return UserManagementApiFp(this.configuration).umUsersGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umUsersGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3979,7 +4259,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umUsersGroupsGet(requestParameters: UserManagementApiUmUsersGroupsGetRequest, options?: any) {
-        return UserManagementApiFp(this.configuration).umUsersGroupsGet(requestParameters.userId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umUsersGroupsGet(requestParameters.userId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3991,7 +4271,7 @@ export class UserManagementApi extends BaseAPI {
      * @memberof UserManagementApi
      */
     public umUsersOwnsGet(requestParameters: UserManagementApiUmUsersOwnsGetRequest, options?: any) {
-        return UserManagementApiFp(this.configuration).umUsersOwnsGet(requestParameters.userId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return UserManagementApiFp(this.configuration).umUsersOwnsGet(requestParameters.userId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

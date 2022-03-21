@@ -31,28 +31,28 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
     name: string;
 
     /**
-     * Algorithm for the balancing.
+     * Balancing algorithm
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
     algorithm: NetworkLoadBalancerForwardingRulePropertiesAlgorithmEnum;
 
     /**
-     * Protocol of the balancing.
+     * Balancing protocol
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
     protocol: NetworkLoadBalancerForwardingRulePropertiesProtocolEnum;
 
     /**
-     * Listening IP. (inbound)
+     * Listening (inbound) IP
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
     listenerIp: string;
 
     /**
-     * Listening port number. (inbound) (range: 1 to 65535)
+     * Listening (inbound) port number; valid range is 1 to 65535.
      * @type {number}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
@@ -66,7 +66,7 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
     healthCheck?: NetworkLoadBalancerForwardingRuleHealthCheck;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<NetworkLoadBalancerForwardingRuleTarget>}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */

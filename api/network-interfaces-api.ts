@@ -40,20 +40,18 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsDelete: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsDelete: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsDelete.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsDelete.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsDelete.');
             }
@@ -134,20 +132,18 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFindById: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFindById: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFindById.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFindById.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFindById.');
             }
@@ -227,18 +223,19 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsGet: async (datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsGet: async (datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsGet.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsGet.');
             }
@@ -298,6 +295,17 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -333,24 +341,21 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
          * @param {NicProperties} nic The properties of the NIC to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsPatch: async (datacenterId: string, serverId: string, nicId: string, nic: NicProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsPatch: async (datacenterId: string, serverId: string, nicId: string, nic: NicProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsPatch.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsPatch.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsPatch.');
             }
-            // verify required parameter 'nic' is not null or undefined
             if (nic === null || nic === undefined) {
                 throw new RequiredError('nic','Required parameter nic was null or undefined when calling datacentersServersNicsPatch.');
             }
@@ -438,20 +443,18 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
          * @param {Nic} nic The NIC to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsPost: async (datacenterId: string, serverId: string, nic: Nic, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsPost: async (datacenterId: string, serverId: string, nic: Nic, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsPost.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsPost.');
             }
-            // verify required parameter 'nic' is not null or undefined
             if (nic === null || nic === undefined) {
                 throw new RequiredError('nic','Required parameter nic was null or undefined when calling datacentersServersNicsPost.');
             }
@@ -539,24 +542,21 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
          * @param {NicPut} nic The modified NIC
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsPut: async (datacenterId: string, serverId: string, nicId: string, nic: NicPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsPut: async (datacenterId: string, serverId: string, nicId: string, nic: NicPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsPut.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsPut.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsPut.');
             }
-            // verify required parameter 'nic' is not null or undefined
             if (nic === null || nic === undefined) {
                 throw new RequiredError('nic','Required parameter nic was null or undefined when calling datacentersServersNicsPut.');
             }
@@ -653,7 +653,8 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -669,7 +670,8 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -684,14 +686,17 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersServersNicsGet(datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Nics>> {
-            const axiosArgs = await NetworkInterfacesApiAxiosParamCreator(configuration).datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, options);
+        async datacentersServersNicsGet(datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Nics>> {
+            const axiosArgs = await NetworkInterfacesApiAxiosParamCreator(configuration).datacentersServersNicsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -703,7 +708,8 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
          * @param {NicProperties} nic The properties of the NIC to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -719,7 +725,8 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
          * @param {Nic} nic The NIC to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -736,7 +743,8 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
          * @param {NicPut} nic The modified NIC
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -761,7 +769,7 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -776,7 +784,7 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -790,8 +798,8 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -808,7 +816,7 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
          * @param {NicProperties} nic The properties of the NIC to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -823,7 +831,7 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
          * @param {Nic} nic The NIC to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -839,7 +847,7 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
          * @param {NicPut} nic The modified NIC
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -891,7 +899,7 @@ export interface NetworkInterfacesApiDatacentersServersNicsDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsDelete
      */
@@ -940,7 +948,7 @@ export interface NetworkInterfacesApiDatacentersServersNicsFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsFindById
      */
@@ -982,14 +990,14 @@ export interface NetworkInterfacesApiDatacentersServersNicsGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsGet
      */
     readonly xContractNumber?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsGet
      */
@@ -1001,6 +1009,24 @@ export interface NetworkInterfacesApiDatacentersServersNicsGetRequest {
      * @memberof NetworkInterfacesApiDatacentersServersNicsGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NetworkInterfacesApiDatacentersServersNicsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NetworkInterfacesApiDatacentersServersNicsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NetworkInterfacesApiDatacentersServersNicsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -1052,7 +1078,7 @@ export interface NetworkInterfacesApiDatacentersServersNicsPatchRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsPatch
      */
@@ -1101,7 +1127,7 @@ export interface NetworkInterfacesApiDatacentersServersNicsPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsPost
      */
@@ -1157,7 +1183,7 @@ export interface NetworkInterfacesApiDatacentersServersNicsPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkInterfacesApiDatacentersServersNicsPut
      */
@@ -1204,7 +1230,7 @@ export class NetworkInterfacesApi extends BaseAPI {
      * @memberof NetworkInterfacesApi
      */
     public datacentersServersNicsGet(requestParameters: NetworkInterfacesApiDatacentersServersNicsGetRequest, options?: any) {
-        return NetworkInterfacesApiFp(this.configuration).datacentersServersNicsGet(requestParameters.datacenterId, requestParameters.serverId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return NetworkInterfacesApiFp(this.configuration).datacentersServersNicsGet(requestParameters.datacenterId, requestParameters.serverId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

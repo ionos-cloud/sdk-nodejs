@@ -38,12 +38,12 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsDelete: async (backupunitId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'backupunitId' is not null or undefined
+        backupunitsDelete: async (backupunitId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (backupunitId === null || backupunitId === undefined) {
                 throw new RequiredError('backupunitId','Required parameter backupunitId was null or undefined when calling backupunitsDelete.');
             }
@@ -120,12 +120,12 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsFindById: async (backupunitId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'backupunitId' is not null or undefined
+        backupunitsFindById: async (backupunitId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (backupunitId === null || backupunitId === undefined) {
                 throw new RequiredError('backupunitId','Required parameter backupunitId was null or undefined when calling backupunitsFindById.');
             }
@@ -201,11 +201,14 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @summary List backup units
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
+        backupunitsGet: async (pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/backupunits`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -246,6 +249,17 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -279,16 +293,15 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @param {BackupUnitProperties} backupUnit The properties of the backup unit to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsPatch: async (backupunitId: string, backupUnit: BackupUnitProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'backupunitId' is not null or undefined
+        backupunitsPatch: async (backupunitId: string, backupUnit: BackupUnitProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (backupunitId === null || backupunitId === undefined) {
                 throw new RequiredError('backupunitId','Required parameter backupunitId was null or undefined when calling backupunitsPatch.');
             }
-            // verify required parameter 'backupUnit' is not null or undefined
             if (backupUnit === null || backupUnit === undefined) {
                 throw new RequiredError('backupUnit','Required parameter backupUnit was null or undefined when calling backupunitsPatch.');
             }
@@ -372,12 +385,12 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @param {BackupUnit} backupUnit The backup unit to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsPost: async (backupUnit: BackupUnit, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'backupUnit' is not null or undefined
+        backupunitsPost: async (backupUnit: BackupUnit, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (backupUnit === null || backupUnit === undefined) {
                 throw new RequiredError('backupUnit','Required parameter backupUnit was null or undefined when calling backupunitsPost.');
             }
@@ -461,16 +474,15 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @param {BackupUnit} backupUnit The modified backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsPut: async (backupunitId: string, backupUnit: BackupUnit, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'backupunitId' is not null or undefined
+        backupunitsPut: async (backupunitId: string, backupUnit: BackupUnit, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (backupunitId === null || backupunitId === undefined) {
                 throw new RequiredError('backupunitId','Required parameter backupunitId was null or undefined when calling backupunitsPut.');
             }
-            // verify required parameter 'backupUnit' is not null or undefined
             if (backupUnit === null || backupUnit === undefined) {
                 throw new RequiredError('backupUnit','Required parameter backupUnit was null or undefined when calling backupunitsPut.');
             }
@@ -553,12 +565,14 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
          * @summary Retrieve BU single sign-on URLs
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        backupunitsSsourlGet: async (backupunitId: string, pretty?: boolean, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'backupunitId' is not null or undefined
+        backupunitsSsourlGet: async (backupunitId: string, pretty?: boolean, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (backupunitId === null || backupunitId === undefined) {
                 throw new RequiredError('backupunitId','Required parameter backupunitId was null or undefined when calling backupunitsSsourlGet.');
             }
@@ -596,6 +610,17 @@ export const BackupUnitsApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['pretty'] = pretty;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -637,7 +662,8 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -651,7 +677,8 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -664,12 +691,15 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @summary List backup units
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async backupunitsGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BackupUnits>> {
-            const axiosArgs = await BackupUnitsApiAxiosParamCreator(configuration).backupunitsGet(pretty, depth, xContractNumber, options);
+        async backupunitsGet(pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BackupUnits>> {
+            const axiosArgs = await BackupUnitsApiAxiosParamCreator(configuration).backupunitsGet(pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -679,7 +709,8 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @param {BackupUnitProperties} backupUnit The properties of the backup unit to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -693,7 +724,8 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @param {BackupUnit} backupUnit The backup unit to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -708,7 +740,8 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @param {BackupUnit} backupUnit The modified backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -721,12 +754,15 @@ export const BackupUnitsApiFp = function(configuration?: Configuration) {
          * @summary Retrieve BU single sign-on URLs
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async backupunitsSsourlGet(backupunitId: string, pretty?: boolean, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BackupUnitSSO>> {
-            const axiosArgs = await BackupUnitsApiAxiosParamCreator(configuration).backupunitsSsourlGet(backupunitId, pretty, xContractNumber, options);
+        async backupunitsSsourlGet(backupunitId: string, pretty?: boolean, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<BackupUnitSSO>> {
+            const axiosArgs = await BackupUnitsApiAxiosParamCreator(configuration).backupunitsSsourlGet(backupunitId, pretty, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
     }
@@ -744,7 +780,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -757,7 +793,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -769,7 +805,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @summary List backup units
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -783,7 +819,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @param {BackupUnitProperties} backupUnit The properties of the backup unit to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -796,7 +832,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @param {BackupUnit} backupUnit The backup unit to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -810,7 +846,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @param {BackupUnit} backupUnit The modified backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -822,7 +858,7 @@ export const BackupUnitsApiFactory = function (configuration?: Configuration, ba
          * @summary Retrieve BU single sign-on URLs
          * @param {string} backupunitId The unique ID of the backup unit.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -860,7 +896,7 @@ export interface BackupUnitsApiBackupunitsDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsDelete
      */
@@ -895,7 +931,7 @@ export interface BackupUnitsApiBackupunitsFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsFindById
      */
@@ -923,11 +959,29 @@ export interface BackupUnitsApiBackupunitsGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof BackupUnitsApiBackupunitsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof BackupUnitsApiBackupunitsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof BackupUnitsApiBackupunitsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -965,7 +1019,7 @@ export interface BackupUnitsApiBackupunitsPatchRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsPatch
      */
@@ -1000,7 +1054,7 @@ export interface BackupUnitsApiBackupunitsPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsPost
      */
@@ -1042,7 +1096,7 @@ export interface BackupUnitsApiBackupunitsPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsPut
      */
@@ -1070,11 +1124,29 @@ export interface BackupUnitsApiBackupunitsSsourlGetRequest {
     readonly pretty?: boolean
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof BackupUnitsApiBackupunitsSsourlGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof BackupUnitsApiBackupunitsSsourlGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof BackupUnitsApiBackupunitsSsourlGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof BackupUnitsApiBackupunitsSsourlGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -1117,7 +1189,7 @@ export class BackupUnitsApi extends BaseAPI {
      * @memberof BackupUnitsApi
      */
     public backupunitsGet(requestParameters: BackupUnitsApiBackupunitsGetRequest = {}, options?: any) {
-        return BackupUnitsApiFp(this.configuration).backupunitsGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return BackupUnitsApiFp(this.configuration).backupunitsGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1165,6 +1237,6 @@ export class BackupUnitsApi extends BaseAPI {
      * @memberof BackupUnitsApi
      */
     public backupunitsSsourlGet(requestParameters: BackupUnitsApiBackupunitsSsourlGetRequest, options?: any) {
-        return BackupUnitsApiFp(this.configuration).backupunitsSsourlGet(requestParameters.backupunitId, requestParameters.pretty, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return BackupUnitsApiFp(this.configuration).backupunitsSsourlGet(requestParameters.backupunitId, requestParameters.pretty, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 }

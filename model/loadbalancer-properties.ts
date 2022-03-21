@@ -33,7 +33,7 @@ export interface LoadbalancerProperties {
      * @type {string}
      * @memberof LoadbalancerProperties
      */
-    ip?: string;
+    ip?: string | null;
 
     /**
      * Indicates if the loadbalancer will reserve an IP using DHCP.

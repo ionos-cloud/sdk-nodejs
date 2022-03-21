@@ -46,21 +46,21 @@ export interface Requests {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<Request>}
      * @memberof Requests
      */
     items?: Array<Request>;
 
     /**
-     * The offset specified in the request (or, if none was specified, the default offset of 0)
+     * The offset, specified in the request (if not is specified, 0 is used by default).
      * @type {number}
      * @memberof Requests
      */
     offset: number;
 
     /**
-     * The limit specified in the request (if none was specified, use the endpoint\'s default pagination limit).
+     * The limit, specified in the request (if not specified, the endpoint\'s default pagination limit is used).
      * @type {number}
      * @memberof Requests
      */

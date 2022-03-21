@@ -44,7 +44,7 @@ export interface BackupUnits {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<BackupUnit>}
      * @memberof BackupUnits
      */

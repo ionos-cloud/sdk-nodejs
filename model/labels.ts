@@ -44,7 +44,7 @@ export interface Labels {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<Label>}
      * @memberof Labels
      */

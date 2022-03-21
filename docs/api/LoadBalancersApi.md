@@ -44,7 +44,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -59,7 +59,7 @@ api_instance
 | **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -103,7 +103,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -118,7 +118,7 @@ api_instance
 | **nicId** | **string** | The unique ID of the NIC. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -153,6 +153,8 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List balanced NICs
 api_instance
   .datacentersLoadbalancersBalancednicsGet({
@@ -161,6 +163,9 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -175,7 +180,7 @@ api_instance
 | **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -219,7 +224,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -234,7 +239,7 @@ api_instance
 | **nic** | [**Nic**](../models/Nic.md) | The NIC to be attached. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -277,7 +282,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -291,7 +296,7 @@ api_instance
 | **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -334,7 +339,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -348,7 +353,7 @@ api_instance
 | **loadbalancerId** | **string** | The unique ID of the Load Balancer. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -383,6 +388,8 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List Load Balancers
 api_instance
   .datacentersLoadbalancersGet({
@@ -392,6 +399,9 @@ api_instance
     xContractNumber: 56,
     offset: 56,
     limit: 56, 
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -405,8 +415,8 @@ api_instance
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
-| **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
+| **offset** | **number** | The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional][default to 0] |
 | **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
 
 ### Return type
@@ -451,7 +461,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -466,7 +476,7 @@ api_instance
 | **loadbalancer** | [**LoadbalancerProperties**](../models/LoadbalancerProperties.md) | The properties of the Load Balancer to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -509,7 +519,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -523,7 +533,7 @@ api_instance
 | **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | The Load Balancer to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -567,7 +577,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -582,7 +592,7 @@ api_instance
 | **loadbalancer** | [**Loadbalancer**](../models/Loadbalancer.md) | The modified Load Balancer. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 

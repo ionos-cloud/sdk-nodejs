@@ -35,7 +35,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -48,7 +48,7 @@ api_instance
 | **regionId** | **string** | The unique ID of the region. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -91,7 +91,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -105,7 +105,7 @@ api_instance
 | **locationId** | **string** | The unique ID of the location. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -140,12 +140,17 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LocationsApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List locations
 api_instance
   .locationsGet({
     pretty: true,
     depth: 56,
     xContractNumber: 56
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -158,7 +163,7 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 

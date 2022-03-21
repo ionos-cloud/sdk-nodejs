@@ -37,7 +37,7 @@ export interface NatGatewayProperties {
     publicIps: Array<string>;
 
     /**
-     * Collection of LANs connected to the NAT Gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet.
+     * Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
      * @type {Array<NatGatewayLanProperties>}
      * @memberof NatGatewayProperties
      */

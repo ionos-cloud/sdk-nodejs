@@ -51,7 +51,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -65,7 +65,7 @@ api_instance
 | **natGatewayId** | **string** | The unique ID of the NAT Gateway. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -108,7 +108,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -122,7 +122,7 @@ api_instance
 | **natGatewayId** | **string** | The unique ID of the NAT Gateway. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -165,7 +165,7 @@ api_instance
     flowLogId: flowLogId_example,
     pretty: true,
     depth: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -222,7 +222,7 @@ api_instance
     flowLogId: flowLogId_example,
     pretty: true,
     depth: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -271,6 +271,8 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List NAT Gateway Flow Logs
 api_instance
   .datacentersNatgatewaysFlowlogsGet({
@@ -280,6 +282,9 @@ api_instance
     depth: 56,
     offset: 56,
     limit: 56, 
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -294,7 +299,7 @@ api_instance
 | **natGatewayId** | **string** | The unique ID of the NAT Gateway. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **offset** | **number** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [optional][default to 0] |
+| **offset** | **number** | The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional][default to 0] |
 | **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
 
 ### Return type
@@ -339,7 +344,7 @@ api_instance
     natGatewayFlowLogProperties: natGatewayFlowLogProperties_example,
     pretty: true,
     depth: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -397,7 +402,7 @@ api_instance
     natGatewayFlowLog: natGatewayFlowLog_example,
     pretty: true,
     depth: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -455,7 +460,7 @@ api_instance
     natGatewayFlowLog: natGatewayFlowLog_example,
     pretty: true,
     depth: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -505,6 +510,8 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List NAT Gateways
 api_instance
   .datacentersNatgatewaysGet({
@@ -512,6 +519,9 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -525,7 +535,7 @@ api_instance
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -569,7 +579,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -584,7 +594,7 @@ api_instance
 | **natGatewayProperties** | [**NatGatewayProperties**](../models/NatGatewayProperties.md) | The properties of the NAT Gateway to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -627,7 +637,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -641,7 +651,7 @@ api_instance
 | **natGateway** | [**NatGateway**](../models/NatGateway.md) | The NAT Gateway to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -685,7 +695,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -700,7 +710,7 @@ api_instance
 | **natGateway** | [**NatGatewayPut**](../models/NatGatewayPut.md) | The modified NAT Gateway. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -744,7 +754,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -759,7 +769,7 @@ api_instance
 | **natGatewayRuleId** | **string** | The unique ID of the NAT Gateway rule. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -803,7 +813,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -818,7 +828,7 @@ api_instance
 | **natGatewayRuleId** | **string** | The unique ID of the NAT Gateway rule. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -853,6 +863,8 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List NAT Gateway rules
 api_instance
   .datacentersNatgatewaysRulesGet({
@@ -861,6 +873,9 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))
@@ -875,7 +890,7 @@ api_instance
 | **natGatewayId** | **string** | The unique ID of the NAT Gateway. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -920,7 +935,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -936,7 +951,7 @@ api_instance
 | **natGatewayRuleProperties** | [**NatGatewayRuleProperties**](../models/NatGatewayRuleProperties.md) | The properties of the NAT Gateway rule to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -980,7 +995,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -995,7 +1010,7 @@ api_instance
 | **natGatewayRule** | [**NatGatewayRule**](../models/NatGatewayRule.md) | The NAT Gateway rule to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
@@ -1040,7 +1055,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -1056,7 +1071,7 @@ api_instance
 | **natGatewayRule** | [**NatGatewayRulePut**](../models/NatGatewayRulePut.md) | The modified NAT Gateway rule. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | [optional][default to undefined] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 

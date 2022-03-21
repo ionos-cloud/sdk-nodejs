@@ -45,7 +45,7 @@ export interface ResourceGroups {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<Resource>}
      * @memberof ResourceGroups
      */

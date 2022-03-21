@@ -36,7 +36,7 @@ export interface NetworkLoadBalancerProperties {
     listenerLan: number;
 
     /**
-     * Collection of IP addresses of the Network Load Balancer. (Inbound and outbound) IP of the listenerLan must be a customer reserved IP for the public Load Balancer and private IP for the private Load balancer.
+     * Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.
      * @type {Array<string>}
      * @memberof NetworkLoadBalancerProperties
      */
@@ -50,7 +50,7 @@ export interface NetworkLoadBalancerProperties {
     targetLan: number;
 
     /**
-     * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.
+     * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
      * @type {Array<string>}
      * @memberof NetworkLoadBalancerProperties
      */

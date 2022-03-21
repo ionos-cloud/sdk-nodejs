@@ -32,7 +32,7 @@ api_instance
   .templatesFindById({
     templateId: templateId_example,
     depth: 56, 
-    options: {}
+        options: {}
   })
   .then((response) => console.log(response.data))
   .catch((error) => console.log(error.response.data));
@@ -78,10 +78,15 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TemplatesApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
 // List Cubes Templates
 api_instance
   .templatesGet({
     depth: 56
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
     options: {}
   })
   .then((response) => console.log(response.data))

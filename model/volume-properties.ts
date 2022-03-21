@@ -78,7 +78,7 @@ export interface VolumeProperties {
     sshKeys?: Array<string>;
 
     /**
-     * The bus type of the volume. Default is VIRTIO
+     * The bus type for this volume; default is VIRTIO.
      * @type {string}
      * @memberof VolumeProperties
      */
@@ -160,6 +160,13 @@ export interface VolumeProperties {
      * @memberof VolumeProperties
      */
     userData?: string;
+
+    /**
+     * The UUID of the attached server.
+     * @type {string}
+     * @memberof VolumeProperties
+     */
+    bootServer?: string;
 }
 
 
@@ -211,9 +218,11 @@ export enum VolumePropertiesLicenceTypeEnum {
     Unknown = 'UNKNOWN',
     Windows = 'WINDOWS',
     Windows2016 = 'WINDOWS2016',
+    Windows2022 = 'WINDOWS2022',
     Linux = 'LINUX',
     Other = 'OTHER'
 }
+
 
 
 

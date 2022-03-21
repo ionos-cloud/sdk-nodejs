@@ -45,7 +45,7 @@ export interface Templates {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<Template>}
      * @memberof Templates
      */

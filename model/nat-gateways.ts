@@ -46,7 +46,7 @@ export interface NatGateways {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<NatGateway>}
      * @memberof NatGateways
      */

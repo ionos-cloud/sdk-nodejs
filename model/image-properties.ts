@@ -178,6 +178,7 @@ export enum ImagePropertiesLicenceTypeEnum {
     Unknown = 'UNKNOWN',
     Windows = 'WINDOWS',
     Windows2016 = 'WINDOWS2016',
+    Windows2022 = 'WINDOWS2022',
     Linux = 'LINUX',
     Other = 'OTHER'
 }

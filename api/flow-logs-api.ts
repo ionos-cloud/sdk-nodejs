@@ -41,23 +41,20 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} flowlogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFlowlogsDelete: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFlowlogsDelete: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFlowlogsDelete.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFlowlogsDelete.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFlowlogsDelete.');
             }
-            // verify required parameter 'flowlogId' is not null or undefined
             if (flowlogId === null || flowlogId === undefined) {
                 throw new RequiredError('flowlogId','Required parameter flowlogId was null or undefined when calling datacentersServersNicsFlowlogsDelete.');
             }
@@ -133,23 +130,20 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} flowlogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFlowlogsFindById: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFlowlogsFindById: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFlowlogsFindById.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFlowlogsFindById.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFlowlogsFindById.');
             }
-            // verify required parameter 'flowlogId' is not null or undefined
             if (flowlogId === null || flowlogId === undefined) {
                 throw new RequiredError('flowlogId','Required parameter flowlogId was null or undefined when calling datacentersServersNicsFlowlogsFindById.');
             }
@@ -224,21 +218,21 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFlowlogsGet: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFlowlogsGet: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFlowlogsGet.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFlowlogsGet.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFlowlogsGet.');
             }
@@ -299,6 +293,17 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -328,27 +333,23 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {FlowLogProperties} flowlog The Flow Log record to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFlowlogsPatch: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, flowlog: FlowLogProperties, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFlowlogsPatch: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, flowlog: FlowLogProperties, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFlowlogsPatch.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFlowlogsPatch.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFlowlogsPatch.');
             }
-            // verify required parameter 'flowlogId' is not null or undefined
             if (flowlogId === null || flowlogId === undefined) {
                 throw new RequiredError('flowlogId','Required parameter flowlogId was null or undefined when calling datacentersServersNicsFlowlogsPatch.');
             }
-            // verify required parameter 'flowlog' is not null or undefined
             if (flowlog === null || flowlog === undefined) {
                 throw new RequiredError('flowlog','Required parameter flowlog was null or undefined when calling datacentersServersNicsFlowlogsPatch.');
             }
@@ -431,23 +432,20 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {FlowLog} flowlog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFlowlogsPost: async (datacenterId: string, serverId: string, nicId: string, flowlog: FlowLog, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFlowlogsPost: async (datacenterId: string, serverId: string, nicId: string, flowlog: FlowLog, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFlowlogsPost.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFlowlogsPost.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFlowlogsPost.');
             }
-            // verify required parameter 'flowlog' is not null or undefined
             if (flowlog === null || flowlog === undefined) {
                 throw new RequiredError('flowlog','Required parameter flowlog was null or undefined when calling datacentersServersNicsFlowlogsPost.');
             }
@@ -530,27 +528,23 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
          * @param {FlowLogPut} flowlog The modified Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFlowlogsPut: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, flowlog: FlowLogPut, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFlowlogsPut: async (datacenterId: string, serverId: string, nicId: string, flowlogId: string, flowlog: FlowLogPut, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFlowlogsPut.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFlowlogsPut.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFlowlogsPut.');
             }
-            // verify required parameter 'flowlogId' is not null or undefined
             if (flowlogId === null || flowlogId === undefined) {
                 throw new RequiredError('flowlogId','Required parameter flowlogId was null or undefined when calling datacentersServersNicsFlowlogsPut.');
             }
-            // verify required parameter 'flowlog' is not null or undefined
             if (flowlog === null || flowlog === undefined) {
                 throw new RequiredError('flowlog','Required parameter flowlog was null or undefined when calling datacentersServersNicsFlowlogsPut.');
             }
@@ -642,6 +636,7 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
          * @param {string} flowlogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -658,6 +653,7 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
          * @param {string} flowlogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -673,13 +669,16 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersServersNicsFlowlogsGet(datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlowLogs>> {
-            const axiosArgs = await FlowLogsApiAxiosParamCreator(configuration).datacentersServersNicsFlowlogsGet(datacenterId, serverId, nicId, pretty, depth, offset, limit, options);
+        async datacentersServersNicsFlowlogsGet(datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlowLogs>> {
+            const axiosArgs = await FlowLogsApiAxiosParamCreator(configuration).datacentersServersNicsFlowlogsGet(datacenterId, serverId, nicId, pretty, depth, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -692,6 +691,7 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
          * @param {FlowLogProperties} flowlog The Flow Log record to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -708,6 +708,7 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
          * @param {FlowLog} flowlog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -725,6 +726,7 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
          * @param {FlowLogPut} flowlog The modified Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -779,7 +781,7 @@ export const FlowLogsApiFactory = function (configuration?: Configuration, baseP
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -977,7 +979,7 @@ export interface FlowLogsApiDatacentersServersNicsFlowlogsGetRequest {
     readonly depth?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof FlowLogsApiDatacentersServersNicsFlowlogsGet
      */
@@ -989,6 +991,24 @@ export interface FlowLogsApiDatacentersServersNicsFlowlogsGetRequest {
      * @memberof FlowLogsApiDatacentersServersNicsFlowlogsGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof FlowLogsApiDatacentersServersNicsFlowlogsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof FlowLogsApiDatacentersServersNicsFlowlogsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof FlowLogsApiDatacentersServersNicsFlowlogsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -1192,7 +1212,7 @@ export class FlowLogsApi extends BaseAPI {
      * @memberof FlowLogsApi
      */
     public datacentersServersNicsFlowlogsGet(requestParameters: FlowLogsApiDatacentersServersNicsFlowlogsGetRequest, options?: any) {
-        return FlowLogsApiFp(this.configuration).datacentersServersNicsFlowlogsGet(requestParameters.datacenterId, requestParameters.serverId, requestParameters.nicId, requestParameters.pretty, requestParameters.depth, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return FlowLogsApiFp(this.configuration).datacentersServersNicsFlowlogsGet(requestParameters.datacenterId, requestParameters.serverId, requestParameters.nicId, requestParameters.pretty, requestParameters.depth, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

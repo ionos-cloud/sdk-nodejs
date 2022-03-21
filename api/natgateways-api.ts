@@ -55,16 +55,15 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysDelete: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysDelete: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysDelete.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysDelete.');
             }
@@ -143,16 +142,15 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFindByNatGatewayId: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFindByNatGatewayId: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFindByNatGatewayId.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFindByNatGatewayId.');
             }
@@ -232,19 +230,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFlowlogsDelete: async (datacenterId: string, natGatewayId: string, flowLogId: string, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFlowlogsDelete: async (datacenterId: string, natGatewayId: string, flowLogId: string, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFlowlogsDelete.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFlowlogsDelete.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNatgatewaysFlowlogsDelete.');
             }
@@ -318,19 +314,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFlowlogsFindByFlowLogId: async (datacenterId: string, natGatewayId: string, flowLogId: string, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFlowlogsFindByFlowLogId: async (datacenterId: string, natGatewayId: string, flowLogId: string, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFlowlogsFindByFlowLogId.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFlowlogsFindByFlowLogId.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNatgatewaysFlowlogsFindByFlowLogId.');
             }
@@ -403,17 +397,18 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFlowlogsGet: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFlowlogsGet: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFlowlogsGet.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFlowlogsGet.');
             }
@@ -473,6 +468,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -501,23 +507,20 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {FlowLogProperties} natGatewayFlowLogProperties The properties of the Flow Log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFlowlogsPatch: async (datacenterId: string, natGatewayId: string, flowLogId: string, natGatewayFlowLogProperties: FlowLogProperties, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFlowlogsPatch: async (datacenterId: string, natGatewayId: string, flowLogId: string, natGatewayFlowLogProperties: FlowLogProperties, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFlowlogsPatch.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFlowlogsPatch.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNatgatewaysFlowlogsPatch.');
             }
-            // verify required parameter 'natGatewayFlowLogProperties' is not null or undefined
             if (natGatewayFlowLogProperties === null || natGatewayFlowLogProperties === undefined) {
                 throw new RequiredError('natGatewayFlowLogProperties','Required parameter natGatewayFlowLogProperties was null or undefined when calling datacentersNatgatewaysFlowlogsPatch.');
             }
@@ -598,19 +601,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {FlowLog} natGatewayFlowLog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFlowlogsPost: async (datacenterId: string, natGatewayId: string, natGatewayFlowLog: FlowLog, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFlowlogsPost: async (datacenterId: string, natGatewayId: string, natGatewayFlowLog: FlowLog, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFlowlogsPost.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFlowlogsPost.');
             }
-            // verify required parameter 'natGatewayFlowLog' is not null or undefined
             if (natGatewayFlowLog === null || natGatewayFlowLog === undefined) {
                 throw new RequiredError('natGatewayFlowLog','Required parameter natGatewayFlowLog was null or undefined when calling datacentersNatgatewaysFlowlogsPost.');
             }
@@ -691,23 +692,20 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {FlowLogPut} natGatewayFlowLog The modified NAT Gateway Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysFlowlogsPut: async (datacenterId: string, natGatewayId: string, flowLogId: string, natGatewayFlowLog: FlowLogPut, pretty?: boolean, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysFlowlogsPut: async (datacenterId: string, natGatewayId: string, flowLogId: string, natGatewayFlowLog: FlowLogPut, pretty?: boolean, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysFlowlogsPut.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysFlowlogsPut.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNatgatewaysFlowlogsPut.');
             }
-            // verify required parameter 'natGatewayFlowLog' is not null or undefined
             if (natGatewayFlowLog === null || natGatewayFlowLog === undefined) {
                 throw new RequiredError('natGatewayFlowLog','Required parameter natGatewayFlowLog was null or undefined when calling datacentersNatgatewaysFlowlogsPut.');
             }
@@ -786,12 +784,14 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysGet.');
             }
@@ -836,6 +836,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -870,20 +881,18 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {NatGatewayProperties} natGatewayProperties The properties of the NAT Gateway to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysPatch: async (datacenterId: string, natGatewayId: string, natGatewayProperties: NatGatewayProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysPatch: async (datacenterId: string, natGatewayId: string, natGatewayProperties: NatGatewayProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysPatch.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysPatch.');
             }
-            // verify required parameter 'natGatewayProperties' is not null or undefined
             if (natGatewayProperties === null || natGatewayProperties === undefined) {
                 throw new RequiredError('natGatewayProperties','Required parameter natGatewayProperties was null or undefined when calling datacentersNatgatewaysPatch.');
             }
@@ -969,16 +978,15 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {NatGateway} natGateway The NAT Gateway to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysPost: async (datacenterId: string, natGateway: NatGateway, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysPost: async (datacenterId: string, natGateway: NatGateway, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysPost.');
             }
-            // verify required parameter 'natGateway' is not null or undefined
             if (natGateway === null || natGateway === undefined) {
                 throw new RequiredError('natGateway','Required parameter natGateway was null or undefined when calling datacentersNatgatewaysPost.');
             }
@@ -1064,20 +1072,18 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {NatGatewayPut} natGateway The modified NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysPut: async (datacenterId: string, natGatewayId: string, natGateway: NatGatewayPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysPut: async (datacenterId: string, natGatewayId: string, natGateway: NatGatewayPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysPut.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysPut.');
             }
-            // verify required parameter 'natGateway' is not null or undefined
             if (natGateway === null || natGateway === undefined) {
                 throw new RequiredError('natGateway','Required parameter natGateway was null or undefined when calling datacentersNatgatewaysPut.');
             }
@@ -1164,20 +1170,18 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysRulesDelete: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysRulesDelete: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysRulesDelete.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysRulesDelete.');
             }
-            // verify required parameter 'natGatewayRuleId' is not null or undefined
             if (natGatewayRuleId === null || natGatewayRuleId === undefined) {
                 throw new RequiredError('natGatewayRuleId','Required parameter natGatewayRuleId was null or undefined when calling datacentersNatgatewaysRulesDelete.');
             }
@@ -1258,20 +1262,18 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysRulesFindByNatGatewayRuleId: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysRulesFindByNatGatewayRuleId: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysRulesFindByNatGatewayRuleId.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysRulesFindByNatGatewayRuleId.');
             }
-            // verify required parameter 'natGatewayRuleId' is not null or undefined
             if (natGatewayRuleId === null || natGatewayRuleId === undefined) {
                 throw new RequiredError('natGatewayRuleId','Required parameter natGatewayRuleId was null or undefined when calling datacentersNatgatewaysRulesFindByNatGatewayRuleId.');
             }
@@ -1351,16 +1353,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysRulesGet: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysRulesGet: async (datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysRulesGet.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysRulesGet.');
             }
@@ -1406,6 +1409,17 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1441,24 +1455,21 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {NatGatewayRuleProperties} natGatewayRuleProperties The properties of the NAT Gateway rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysRulesPatch: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, natGatewayRuleProperties: NatGatewayRuleProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysRulesPatch: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, natGatewayRuleProperties: NatGatewayRuleProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysRulesPatch.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysRulesPatch.');
             }
-            // verify required parameter 'natGatewayRuleId' is not null or undefined
             if (natGatewayRuleId === null || natGatewayRuleId === undefined) {
                 throw new RequiredError('natGatewayRuleId','Required parameter natGatewayRuleId was null or undefined when calling datacentersNatgatewaysRulesPatch.');
             }
-            // verify required parameter 'natGatewayRuleProperties' is not null or undefined
             if (natGatewayRuleProperties === null || natGatewayRuleProperties === undefined) {
                 throw new RequiredError('natGatewayRuleProperties','Required parameter natGatewayRuleProperties was null or undefined when calling datacentersNatgatewaysRulesPatch.');
             }
@@ -1546,20 +1557,18 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {NatGatewayRule} natGatewayRule The NAT Gateway rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysRulesPost: async (datacenterId: string, natGatewayId: string, natGatewayRule: NatGatewayRule, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysRulesPost: async (datacenterId: string, natGatewayId: string, natGatewayRule: NatGatewayRule, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysRulesPost.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysRulesPost.');
             }
-            // verify required parameter 'natGatewayRule' is not null or undefined
             if (natGatewayRule === null || natGatewayRule === undefined) {
                 throw new RequiredError('natGatewayRule','Required parameter natGatewayRule was null or undefined when calling datacentersNatgatewaysRulesPost.');
             }
@@ -1647,24 +1656,21 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
          * @param {NatGatewayRulePut} natGatewayRule The modified NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNatgatewaysRulesPut: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, natGatewayRule: NatGatewayRulePut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNatgatewaysRulesPut: async (datacenterId: string, natGatewayId: string, natGatewayRuleId: string, natGatewayRule: NatGatewayRulePut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNatgatewaysRulesPut.');
             }
-            // verify required parameter 'natGatewayId' is not null or undefined
             if (natGatewayId === null || natGatewayId === undefined) {
                 throw new RequiredError('natGatewayId','Required parameter natGatewayId was null or undefined when calling datacentersNatgatewaysRulesPut.');
             }
-            // verify required parameter 'natGatewayRuleId' is not null or undefined
             if (natGatewayRuleId === null || natGatewayRuleId === undefined) {
                 throw new RequiredError('natGatewayRuleId','Required parameter natGatewayRuleId was null or undefined when calling datacentersNatgatewaysRulesPut.');
             }
-            // verify required parameter 'natGatewayRule' is not null or undefined
             if (natGatewayRule === null || natGatewayRule === undefined) {
                 throw new RequiredError('natGatewayRule','Required parameter natGatewayRule was null or undefined when calling datacentersNatgatewaysRulesPut.');
             }
@@ -1760,7 +1766,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1775,7 +1782,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1791,6 +1799,7 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1806,6 +1815,7 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1820,13 +1830,16 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersNatgatewaysFlowlogsGet(datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlowLogs>> {
-            const axiosArgs = await NATGatewaysApiAxiosParamCreator(configuration).datacentersNatgatewaysFlowlogsGet(datacenterId, natGatewayId, pretty, depth, offset, limit, options);
+        async datacentersNatgatewaysFlowlogsGet(datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlowLogs>> {
+            const axiosArgs = await NATGatewaysApiAxiosParamCreator(configuration).datacentersNatgatewaysFlowlogsGet(datacenterId, natGatewayId, pretty, depth, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1838,6 +1851,7 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {FlowLogProperties} natGatewayFlowLogProperties The properties of the Flow Log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1853,6 +1867,7 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {FlowLog} natGatewayFlowLog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1869,6 +1884,7 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {FlowLogPut} natGatewayFlowLog The modified NAT Gateway Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1882,12 +1898,15 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersNatgatewaysGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NatGateways>> {
-            const axiosArgs = await NATGatewaysApiAxiosParamCreator(configuration).datacentersNatgatewaysGet(datacenterId, pretty, depth, xContractNumber, options);
+        async datacentersNatgatewaysGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NatGateways>> {
+            const axiosArgs = await NATGatewaysApiAxiosParamCreator(configuration).datacentersNatgatewaysGet(datacenterId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1898,7 +1917,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {NatGatewayProperties} natGatewayProperties The properties of the NAT Gateway to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1913,7 +1933,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {NatGateway} natGateway The NAT Gateway to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1929,7 +1950,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {NatGatewayPut} natGateway The modified NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1945,7 +1967,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1961,7 +1984,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1976,12 +2000,15 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersNatgatewaysRulesGet(datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NatGatewayRules>> {
-            const axiosArgs = await NATGatewaysApiAxiosParamCreator(configuration).datacentersNatgatewaysRulesGet(datacenterId, natGatewayId, pretty, depth, xContractNumber, options);
+        async datacentersNatgatewaysRulesGet(datacenterId: string, natGatewayId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NatGatewayRules>> {
+            const axiosArgs = await NATGatewaysApiAxiosParamCreator(configuration).datacentersNatgatewaysRulesGet(datacenterId, natGatewayId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1993,7 +2020,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {NatGatewayRuleProperties} natGatewayRuleProperties The properties of the NAT Gateway rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2009,7 +2037,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {NatGatewayRule} natGatewayRule The NAT Gateway rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2026,7 +2055,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
          * @param {NatGatewayRulePut} natGatewayRule The modified NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2050,7 +2080,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2064,7 +2094,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2106,7 +2136,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2164,7 +2194,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2179,7 +2209,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {NatGatewayProperties} natGatewayProperties The properties of the NAT Gateway to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2193,7 +2223,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {NatGateway} natGateway The NAT Gateway to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2208,7 +2238,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {NatGatewayPut} natGateway The modified NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2223,7 +2253,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2238,7 +2268,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2252,7 +2282,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2268,7 +2298,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {NatGatewayRuleProperties} natGatewayRuleProperties The properties of the NAT Gateway rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2283,7 +2313,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {NatGatewayRule} natGatewayRule The NAT Gateway rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2299,7 +2329,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
          * @param {NatGatewayRulePut} natGatewayRule The modified NAT Gateway rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2344,7 +2374,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysDelete
      */
@@ -2386,7 +2416,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysFindByNatGatewayIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysFindByNatGatewayId
      */
@@ -2512,7 +2542,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysFlowlogsGetRequest {
     readonly depth?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysFlowlogsGet
      */
@@ -2524,6 +2554,24 @@ export interface NATGatewaysApiDatacentersNatgatewaysFlowlogsGetRequest {
      * @memberof NATGatewaysApiDatacentersNatgatewaysFlowlogsGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysFlowlogsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysFlowlogsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysFlowlogsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2694,11 +2742,29 @@ export interface NATGatewaysApiDatacentersNatgatewaysGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2743,7 +2809,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysPatchRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysPatch
      */
@@ -2785,7 +2851,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysPost
      */
@@ -2834,7 +2900,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysPut
      */
@@ -2883,7 +2949,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysRulesDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysRulesDelete
      */
@@ -2932,7 +2998,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysRulesFindByNatGatewayRuleId
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysRulesFindByNatGatewayRuleId
      */
@@ -2974,11 +3040,29 @@ export interface NATGatewaysApiDatacentersNatgatewaysRulesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysRulesGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysRulesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysRulesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NATGatewaysApiDatacentersNatgatewaysRulesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3030,7 +3114,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysRulesPatchRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysRulesPatch
      */
@@ -3079,7 +3163,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysRulesPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysRulesPost
      */
@@ -3135,7 +3219,7 @@ export interface NATGatewaysApiDatacentersNatgatewaysRulesPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NATGatewaysApiDatacentersNatgatewaysRulesPut
      */
@@ -3206,7 +3290,7 @@ export class NATGatewaysApi extends BaseAPI {
      * @memberof NATGatewaysApi
      */
     public datacentersNatgatewaysFlowlogsGet(requestParameters: NATGatewaysApiDatacentersNatgatewaysFlowlogsGetRequest, options?: any) {
-        return NATGatewaysApiFp(this.configuration).datacentersNatgatewaysFlowlogsGet(requestParameters.datacenterId, requestParameters.natGatewayId, requestParameters.pretty, requestParameters.depth, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return NATGatewaysApiFp(this.configuration).datacentersNatgatewaysFlowlogsGet(requestParameters.datacenterId, requestParameters.natGatewayId, requestParameters.pretty, requestParameters.depth, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3254,7 +3338,7 @@ export class NATGatewaysApi extends BaseAPI {
      * @memberof NATGatewaysApi
      */
     public datacentersNatgatewaysGet(requestParameters: NATGatewaysApiDatacentersNatgatewaysGetRequest, options?: any) {
-        return NATGatewaysApiFp(this.configuration).datacentersNatgatewaysGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return NATGatewaysApiFp(this.configuration).datacentersNatgatewaysGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3326,7 +3410,7 @@ export class NATGatewaysApi extends BaseAPI {
      * @memberof NATGatewaysApi
      */
     public datacentersNatgatewaysRulesGet(requestParameters: NATGatewaysApiDatacentersNatgatewaysRulesGetRequest, options?: any) {
-        return NATGatewaysApiFp(this.configuration).datacentersNatgatewaysRulesGet(requestParameters.datacenterId, requestParameters.natGatewayId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return NATGatewaysApiFp(this.configuration).datacentersNatgatewaysRulesGet(requestParameters.datacenterId, requestParameters.natGatewayId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

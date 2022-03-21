@@ -130,7 +130,7 @@ export interface KubernetesNodePoolProperties {
     annotations?: { [key: string]: string; };
 
     /**
-     * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
+     * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than maximum number possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.
      * @type {Array<string>}
      * @memberof KubernetesNodePoolProperties
      */
@@ -142,6 +142,13 @@ export interface KubernetesNodePoolProperties {
      * @memberof KubernetesNodePoolProperties
      */
     availableUpgradeVersions?: Array<string>;
+
+    /**
+     * Public IP address for the gateway performing source NAT for the node pool\'s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.
+     * @type {string}
+     * @memberof KubernetesNodePoolProperties
+     */
+    gatewayIp?: string;
 }
 
 
@@ -169,6 +176,7 @@ export enum KubernetesNodePoolPropertiesStorageTypeEnum {
     Hdd = 'HDD',
     Ssd = 'SSD'
 }
+
 
 
 

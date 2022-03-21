@@ -46,7 +46,7 @@ export interface Lans {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<Lan>}
      * @memberof Lans
      */

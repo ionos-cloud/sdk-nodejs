@@ -33,11 +33,11 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
          * @summary Retrieve Cubes Templates
          * @param {string} templateId The unique Template ID.
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        templatesFindById: async (templateId: string, depth?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'templateId' is not null or undefined
+        templatesFindById: async (templateId: string, depth?: number,  options: any = {}): Promise<RequestArgs> => {
             if (templateId === null || templateId === undefined) {
                 throw new RequiredError('templateId','Required parameter templateId was null or undefined when calling templatesFindById.');
             }
@@ -98,10 +98,13 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
          * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
          * @summary List Cubes Templates
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        templatesGet: async (depth?: number, options: any = {}): Promise<RequestArgs> => {
+        templatesGet: async (depth?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/templates`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -135,6 +138,17 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -168,6 +182,7 @@ export const TemplatesApiFp = function(configuration?: Configuration) {
          * @summary Retrieve Cubes Templates
          * @param {string} templateId The unique Template ID.
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -179,11 +194,14 @@ export const TemplatesApiFp = function(configuration?: Configuration) {
          * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
          * @summary List Cubes Templates
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async templatesGet(depth?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Templates>> {
-            const axiosArgs = await TemplatesApiAxiosParamCreator(configuration).templatesGet(depth, options);
+        async templatesGet(depth?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Templates>> {
+            const axiosArgs = await TemplatesApiAxiosParamCreator(configuration).templatesGet(depth, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
     }
@@ -252,6 +270,24 @@ export interface TemplatesApiTemplatesGetRequest {
      * @memberof TemplatesApiTemplatesGet
      */
     readonly depth?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof TemplatesApiTemplatesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof TemplatesApiTemplatesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof TemplatesApiTemplatesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -282,6 +318,6 @@ export class TemplatesApi extends BaseAPI {
      * @memberof TemplatesApi
      */
     public templatesGet(requestParameters: TemplatesApiTemplatesGetRequest = {}, options?: any) {
-        return TemplatesApiFp(this.configuration).templatesGet(requestParameters.depth, options).then((request) => request(this.axios, this.basePath));
+        return TemplatesApiFp(this.configuration).templatesGet(requestParameters.depth, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 }

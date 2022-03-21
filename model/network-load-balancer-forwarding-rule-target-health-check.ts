@@ -22,21 +22,21 @@
 export interface NetworkLoadBalancerForwardingRuleTargetHealthCheck {
 
     /**
-     * Check specifies whether the target VM\'s health is checked. If turned off, a target VM is always considered available. If turned on, the target VM is available when accepting periodic TCP connections, to ensure that it is really able to serve requests. The address and port to send the tests to are those of the target VM. The health check only consists of a connection attempt.
+     * Makes the target available only if it accepts periodic health check TCP connection attempts; when turned off, the target is considered always available. The health check only consists of a connection attempt to the address and port of the target.
      * @type {boolean}
      * @memberof NetworkLoadBalancerForwardingRuleTargetHealthCheck
      */
     check?: boolean;
 
     /**
-     * CheckInterval determines the duration (in milliseconds) between consecutive health checks. If unspecified a default of 2000 ms is used.
+     * The interval in milliseconds between consecutive health checks; default is 2000.
      * @type {number}
      * @memberof NetworkLoadBalancerForwardingRuleTargetHealthCheck
      */
     checkInterval?: number;
 
     /**
-     * Maintenance specifies if a target VM should be marked as down, even if it is not.
+     * Maintenance mode prevents the target from receiving balanced traffic.
      * @type {boolean}
      * @memberof NetworkLoadBalancerForwardingRuleTargetHealthCheck
      */

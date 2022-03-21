@@ -46,21 +46,21 @@ export interface IpBlocks {
     href?: string;
 
     /**
-     * Array of items in that collection
+     * Array of items in the collection.
      * @type {Array<IpBlock>}
      * @memberof IpBlocks
      */
     items?: Array<IpBlock>;
 
     /**
-     * The offset specified in the request (or, if none was specified, the default offset of 0)
+     * The offset, specified in the request (if not is specified, 0 is used by default).
      * @type {number}
      * @memberof IpBlocks
      */
     offset?: number;
 
     /**
-     * The limit specified in the request (if none was specified, use the endpoint\'s default pagination limit).
+     * The limit, specified in the request (if not specified, the endpoint\'s default pagination limit is used).
      * @type {number}
      * @memberof IpBlocks
      */

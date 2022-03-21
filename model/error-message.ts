@@ -29,7 +29,7 @@ export interface ErrorMessage {
     errorCode?: string;
 
     /**
-     * Human-readable message.
+     * A human-readable message.
      * @type {string}
      * @memberof ErrorMessage
      */

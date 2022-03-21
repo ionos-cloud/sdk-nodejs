@@ -46,7 +46,7 @@ export interface NetworkLoadBalancers {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<NetworkLoadBalancer>}
      * @memberof NetworkLoadBalancers
      */

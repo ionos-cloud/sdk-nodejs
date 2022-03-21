@@ -45,7 +45,7 @@ export interface Images {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<Image>}
      * @memberof Images
      */

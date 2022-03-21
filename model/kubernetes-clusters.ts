@@ -44,7 +44,7 @@ export interface KubernetesClusters {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<KubernetesCluster>}
      * @memberof KubernetesClusters
      */

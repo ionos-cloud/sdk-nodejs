@@ -39,24 +39,21 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @param {string} firewallruleId The unique ID of the firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFirewallrulesDelete: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFirewallrulesDelete: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFirewallrulesDelete.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFirewallrulesDelete.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFirewallrulesDelete.');
             }
-            // verify required parameter 'firewallruleId' is not null or undefined
             if (firewallruleId === null || firewallruleId === undefined) {
                 throw new RequiredError('firewallruleId','Required parameter firewallruleId was null or undefined when calling datacentersServersNicsFirewallrulesDelete.');
             }
@@ -139,24 +136,21 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @param {string} firewallruleId The unique ID of the firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFirewallrulesFindById: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFirewallrulesFindById: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFirewallrulesFindById.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFirewallrulesFindById.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFirewallrulesFindById.');
             }
-            // verify required parameter 'firewallruleId' is not null or undefined
             if (firewallruleId === null || firewallruleId === undefined) {
                 throw new RequiredError('firewallruleId','Required parameter firewallruleId was null or undefined when calling datacentersServersNicsFirewallrulesFindById.');
             }
@@ -238,22 +232,22 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFirewallrulesGet: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFirewallrulesGet: async (datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFirewallrulesGet.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFirewallrulesGet.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFirewallrulesGet.');
             }
@@ -314,6 +308,17 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -350,28 +355,24 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @param {FirewallruleProperties} firewallrule The properties of the firewall rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFirewallrulesPatch: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, firewallrule: FirewallruleProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFirewallrulesPatch: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, firewallrule: FirewallruleProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFirewallrulesPatch.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFirewallrulesPatch.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFirewallrulesPatch.');
             }
-            // verify required parameter 'firewallruleId' is not null or undefined
             if (firewallruleId === null || firewallruleId === undefined) {
                 throw new RequiredError('firewallruleId','Required parameter firewallruleId was null or undefined when calling datacentersServersNicsFirewallrulesPatch.');
             }
-            // verify required parameter 'firewallrule' is not null or undefined
             if (firewallrule === null || firewallrule === undefined) {
                 throw new RequiredError('firewallrule','Required parameter firewallrule was null or undefined when calling datacentersServersNicsFirewallrulesPatch.');
             }
@@ -461,24 +462,21 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @param {FirewallRule} firewallrule The firewall rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFirewallrulesPost: async (datacenterId: string, serverId: string, nicId: string, firewallrule: FirewallRule, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFirewallrulesPost: async (datacenterId: string, serverId: string, nicId: string, firewallrule: FirewallRule, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFirewallrulesPost.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFirewallrulesPost.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFirewallrulesPost.');
             }
-            // verify required parameter 'firewallrule' is not null or undefined
             if (firewallrule === null || firewallrule === undefined) {
                 throw new RequiredError('firewallrule','Required parameter firewallrule was null or undefined when calling datacentersServersNicsFirewallrulesPost.');
             }
@@ -568,28 +566,24 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
          * @param {FirewallRule} firewallrule The modified firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersNicsFirewallrulesPut: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, firewallrule: FirewallRule, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersServersNicsFirewallrulesPut: async (datacenterId: string, serverId: string, nicId: string, firewallruleId: string, firewallrule: FirewallRule, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersNicsFirewallrulesPut.');
             }
-            // verify required parameter 'serverId' is not null or undefined
             if (serverId === null || serverId === undefined) {
                 throw new RequiredError('serverId','Required parameter serverId was null or undefined when calling datacentersServersNicsFirewallrulesPut.');
             }
-            // verify required parameter 'nicId' is not null or undefined
             if (nicId === null || nicId === undefined) {
                 throw new RequiredError('nicId','Required parameter nicId was null or undefined when calling datacentersServersNicsFirewallrulesPut.');
             }
-            // verify required parameter 'firewallruleId' is not null or undefined
             if (firewallruleId === null || firewallruleId === undefined) {
                 throw new RequiredError('firewallruleId','Required parameter firewallruleId was null or undefined when calling datacentersServersNicsFirewallrulesPut.');
             }
-            // verify required parameter 'firewallrule' is not null or undefined
             if (firewallrule === null || firewallrule === undefined) {
                 throw new RequiredError('firewallrule','Required parameter firewallrule was null or undefined when calling datacentersServersNicsFirewallrulesPut.');
             }
@@ -688,7 +682,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {string} firewallruleId The unique ID of the firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -705,7 +700,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {string} firewallruleId The unique ID of the firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -721,14 +717,17 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersServersNicsFirewallrulesGet(datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FirewallRules>> {
-            const axiosArgs = await FirewallRulesApiAxiosParamCreator(configuration).datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, options);
+        async datacentersServersNicsFirewallrulesGet(datacenterId: string, serverId: string, nicId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FirewallRules>> {
+            const axiosArgs = await FirewallRulesApiAxiosParamCreator(configuration).datacentersServersNicsFirewallrulesGet(datacenterId, serverId, nicId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -741,7 +740,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {FirewallruleProperties} firewallrule The properties of the firewall rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -758,7 +758,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {FirewallRule} firewallrule The firewall rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -776,7 +777,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
          * @param {FirewallRule} firewallrule The modified firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -802,7 +804,7 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {string} firewallruleId The unique ID of the firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -818,7 +820,7 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {string} firewallruleId The unique ID of the firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -833,8 +835,8 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {string} nicId The unique ID of the NIC.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -852,7 +854,7 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {FirewallruleProperties} firewallrule The properties of the firewall rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -868,7 +870,7 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {FirewallRule} firewallrule The firewall rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -885,7 +887,7 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
          * @param {FirewallRule} firewallrule The modified firewall rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -944,7 +946,7 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesDeleteReques
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesDelete
      */
@@ -1000,7 +1002,7 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesFindByIdRequ
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesFindById
      */
@@ -1049,14 +1051,14 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesGet
      */
     readonly xContractNumber?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesGet
      */
@@ -1068,6 +1070,24 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesGetRequest {
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -1126,7 +1146,7 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesPatchRequest
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesPatch
      */
@@ -1182,7 +1202,7 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesPostRequest 
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesPost
      */
@@ -1245,7 +1265,7 @@ export interface FirewallRulesApiDatacentersServersNicsFirewallrulesPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof FirewallRulesApiDatacentersServersNicsFirewallrulesPut
      */
@@ -1292,7 +1312,7 @@ export class FirewallRulesApi extends BaseAPI {
      * @memberof FirewallRulesApi
      */
     public datacentersServersNicsFirewallrulesGet(requestParameters: FirewallRulesApiDatacentersServersNicsFirewallrulesGetRequest, options?: any) {
-        return FirewallRulesApiFp(this.configuration).datacentersServersNicsFirewallrulesGet(requestParameters.datacenterId, requestParameters.serverId, requestParameters.nicId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return FirewallRulesApiFp(this.configuration).datacentersServersNicsFirewallrulesGet(requestParameters.datacenterId, requestParameters.serverId, requestParameters.nicId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

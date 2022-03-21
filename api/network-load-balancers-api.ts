@@ -55,16 +55,15 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersDelete: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersDelete: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersDelete.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersDelete.');
             }
@@ -143,16 +142,15 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFindByNetworkLoadBalancerId: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFindByNetworkLoadBalancerId: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFindByNetworkLoadBalancerId.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFindByNetworkLoadBalancerId.');
             }
@@ -232,20 +230,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFlowlogsDelete: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFlowlogsDelete: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsDelete.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsDelete.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsDelete.');
             }
@@ -326,20 +322,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFlowlogsFindByFlowLogId: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFlowlogsFindByFlowLogId: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsFindByFlowLogId.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsFindByFlowLogId.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsFindByFlowLogId.');
             }
@@ -419,16 +413,17 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFlowlogsGet: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFlowlogsGet: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsGet.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsGet.');
             }
@@ -474,6 +469,17 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -509,24 +515,21 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {FlowLogProperties} networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFlowlogsPatch: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, networkLoadBalancerFlowLogProperties: FlowLogProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFlowlogsPatch: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, networkLoadBalancerFlowLogProperties: FlowLogProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPatch.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPatch.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPatch.');
             }
-            // verify required parameter 'networkLoadBalancerFlowLogProperties' is not null or undefined
             if (networkLoadBalancerFlowLogProperties === null || networkLoadBalancerFlowLogProperties === undefined) {
                 throw new RequiredError('networkLoadBalancerFlowLogProperties','Required parameter networkLoadBalancerFlowLogProperties was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPatch.');
             }
@@ -614,20 +617,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {FlowLog} networkLoadBalancerFlowLog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFlowlogsPost: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancerFlowLog: FlowLog, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFlowlogsPost: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancerFlowLog: FlowLog, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPost.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPost.');
             }
-            // verify required parameter 'networkLoadBalancerFlowLog' is not null or undefined
             if (networkLoadBalancerFlowLog === null || networkLoadBalancerFlowLog === undefined) {
                 throw new RequiredError('networkLoadBalancerFlowLog','Required parameter networkLoadBalancerFlowLog was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPost.');
             }
@@ -715,24 +716,21 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {FlowLogPut} networkLoadBalancerFlowLog The modified NLB Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersFlowlogsPut: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, networkLoadBalancerFlowLog: FlowLogPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersFlowlogsPut: async (datacenterId: string, networkLoadBalancerId: string, flowLogId: string, networkLoadBalancerFlowLog: FlowLogPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPut.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPut.');
             }
-            // verify required parameter 'flowLogId' is not null or undefined
             if (flowLogId === null || flowLogId === undefined) {
                 throw new RequiredError('flowLogId','Required parameter flowLogId was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPut.');
             }
-            // verify required parameter 'networkLoadBalancerFlowLog' is not null or undefined
             if (networkLoadBalancerFlowLog === null || networkLoadBalancerFlowLog === undefined) {
                 throw new RequiredError('networkLoadBalancerFlowLog','Required parameter networkLoadBalancerFlowLog was null or undefined when calling datacentersNetworkloadbalancersFlowlogsPut.');
             }
@@ -820,20 +818,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersForwardingrulesDelete: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersForwardingrulesDelete: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesDelete.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesDelete.');
             }
-            // verify required parameter 'forwardingRuleId' is not null or undefined
             if (forwardingRuleId === null || forwardingRuleId === undefined) {
                 throw new RequiredError('forwardingRuleId','Required parameter forwardingRuleId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesDelete.');
             }
@@ -914,20 +910,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId.');
             }
-            // verify required parameter 'forwardingRuleId' is not null or undefined
             if (forwardingRuleId === null || forwardingRuleId === undefined) {
                 throw new RequiredError('forwardingRuleId','Required parameter forwardingRuleId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId.');
             }
@@ -1007,16 +1001,17 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersForwardingrulesGet: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersForwardingrulesGet: async (datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesGet.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesGet.');
             }
@@ -1062,6 +1057,17 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1097,24 +1103,21 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {NetworkLoadBalancerForwardingRuleProperties} networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersForwardingrulesPatch: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, networkLoadBalancerForwardingRuleProperties: NetworkLoadBalancerForwardingRuleProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersForwardingrulesPatch: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, networkLoadBalancerForwardingRuleProperties: NetworkLoadBalancerForwardingRuleProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPatch.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPatch.');
             }
-            // verify required parameter 'forwardingRuleId' is not null or undefined
             if (forwardingRuleId === null || forwardingRuleId === undefined) {
                 throw new RequiredError('forwardingRuleId','Required parameter forwardingRuleId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPatch.');
             }
-            // verify required parameter 'networkLoadBalancerForwardingRuleProperties' is not null or undefined
             if (networkLoadBalancerForwardingRuleProperties === null || networkLoadBalancerForwardingRuleProperties === undefined) {
                 throw new RequiredError('networkLoadBalancerForwardingRuleProperties','Required parameter networkLoadBalancerForwardingRuleProperties was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPatch.');
             }
@@ -1202,20 +1205,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {NetworkLoadBalancerForwardingRule} networkLoadBalancerForwardingRule The forwarding rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersForwardingrulesPost: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancerForwardingRule: NetworkLoadBalancerForwardingRule, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersForwardingrulesPost: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancerForwardingRule: NetworkLoadBalancerForwardingRule, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPost.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPost.');
             }
-            // verify required parameter 'networkLoadBalancerForwardingRule' is not null or undefined
             if (networkLoadBalancerForwardingRule === null || networkLoadBalancerForwardingRule === undefined) {
                 throw new RequiredError('networkLoadBalancerForwardingRule','Required parameter networkLoadBalancerForwardingRule was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPost.');
             }
@@ -1303,24 +1304,21 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {NetworkLoadBalancerForwardingRulePut} networkLoadBalancerForwardingRule The modified NLB forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersForwardingrulesPut: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, networkLoadBalancerForwardingRule: NetworkLoadBalancerForwardingRulePut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersForwardingrulesPut: async (datacenterId: string, networkLoadBalancerId: string, forwardingRuleId: string, networkLoadBalancerForwardingRule: NetworkLoadBalancerForwardingRulePut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPut.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPut.');
             }
-            // verify required parameter 'forwardingRuleId' is not null or undefined
             if (forwardingRuleId === null || forwardingRuleId === undefined) {
                 throw new RequiredError('forwardingRuleId','Required parameter forwardingRuleId was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPut.');
             }
-            // verify required parameter 'networkLoadBalancerForwardingRule' is not null or undefined
             if (networkLoadBalancerForwardingRule === null || networkLoadBalancerForwardingRule === undefined) {
                 throw new RequiredError('networkLoadBalancerForwardingRule','Required parameter networkLoadBalancerForwardingRule was null or undefined when calling datacentersNetworkloadbalancersForwardingrulesPut.');
             }
@@ -1406,14 +1404,16 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersGet.');
             }
@@ -1472,6 +1472,17 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
                 localVarQueryParameter['limit'] = limit;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -1506,20 +1517,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {NetworkLoadBalancerProperties} networkLoadBalancerProperties The properties of the Network Load Balancer to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersPatch: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancerProperties: NetworkLoadBalancerProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersPatch: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancerProperties: NetworkLoadBalancerProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersPatch.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersPatch.');
             }
-            // verify required parameter 'networkLoadBalancerProperties' is not null or undefined
             if (networkLoadBalancerProperties === null || networkLoadBalancerProperties === undefined) {
                 throw new RequiredError('networkLoadBalancerProperties','Required parameter networkLoadBalancerProperties was null or undefined when calling datacentersNetworkloadbalancersPatch.');
             }
@@ -1605,16 +1614,15 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {NetworkLoadBalancer} networkLoadBalancer The Network Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersPost: async (datacenterId: string, networkLoadBalancer: NetworkLoadBalancer, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersPost: async (datacenterId: string, networkLoadBalancer: NetworkLoadBalancer, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersPost.');
             }
-            // verify required parameter 'networkLoadBalancer' is not null or undefined
             if (networkLoadBalancer === null || networkLoadBalancer === undefined) {
                 throw new RequiredError('networkLoadBalancer','Required parameter networkLoadBalancer was null or undefined when calling datacentersNetworkloadbalancersPost.');
             }
@@ -1700,20 +1708,18 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
          * @param {NetworkLoadBalancerPut} networkLoadBalancer The modified Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersNetworkloadbalancersPut: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancer: NetworkLoadBalancerPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'datacenterId' is not null or undefined
+        datacentersNetworkloadbalancersPut: async (datacenterId: string, networkLoadBalancerId: string, networkLoadBalancer: NetworkLoadBalancerPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersNetworkloadbalancersPut.');
             }
-            // verify required parameter 'networkLoadBalancerId' is not null or undefined
             if (networkLoadBalancerId === null || networkLoadBalancerId === undefined) {
                 throw new RequiredError('networkLoadBalancerId','Required parameter networkLoadBalancerId was null or undefined when calling datacentersNetworkloadbalancersPut.');
             }
-            // verify required parameter 'networkLoadBalancer' is not null or undefined
             if (networkLoadBalancer === null || networkLoadBalancer === undefined) {
                 throw new RequiredError('networkLoadBalancer','Required parameter networkLoadBalancer was null or undefined when calling datacentersNetworkloadbalancersPut.');
             }
@@ -1808,7 +1814,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1823,7 +1830,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1839,7 +1847,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1855,7 +1864,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1870,12 +1880,15 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersNetworkloadbalancersFlowlogsGet(datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlowLogs>> {
-            const axiosArgs = await NetworkLoadBalancersApiAxiosParamCreator(configuration).datacentersNetworkloadbalancersFlowlogsGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, options);
+        async datacentersNetworkloadbalancersFlowlogsGet(datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<FlowLogs>> {
+            const axiosArgs = await NetworkLoadBalancersApiAxiosParamCreator(configuration).datacentersNetworkloadbalancersFlowlogsGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1887,7 +1900,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {FlowLogProperties} networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1903,7 +1917,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {FlowLog} networkLoadBalancerFlowLog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1920,7 +1935,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {FlowLogPut} networkLoadBalancerFlowLog The modified NLB Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1936,7 +1952,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1952,7 +1969,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1967,12 +1985,15 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersNetworkloadbalancersForwardingrulesGet(datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkLoadBalancerForwardingRules>> {
-            const axiosArgs = await NetworkLoadBalancersApiAxiosParamCreator(configuration).datacentersNetworkloadbalancersForwardingrulesGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, options);
+        async datacentersNetworkloadbalancersForwardingrulesGet(datacenterId: string, networkLoadBalancerId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkLoadBalancerForwardingRules>> {
+            const axiosArgs = await NetworkLoadBalancersApiAxiosParamCreator(configuration).datacentersNetworkloadbalancersForwardingrulesGet(datacenterId, networkLoadBalancerId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1984,7 +2005,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {NetworkLoadBalancerForwardingRuleProperties} networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2000,7 +2022,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {NetworkLoadBalancerForwardingRule} networkLoadBalancerForwardingRule The forwarding rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2017,7 +2040,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {NetworkLoadBalancerForwardingRulePut} networkLoadBalancerForwardingRule The modified NLB forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2031,14 +2055,17 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersNetworkloadbalancersGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkLoadBalancers>> {
-            const axiosArgs = await NetworkLoadBalancersApiAxiosParamCreator(configuration).datacentersNetworkloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, options);
+        async datacentersNetworkloadbalancersGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<NetworkLoadBalancers>> {
+            const axiosArgs = await NetworkLoadBalancersApiAxiosParamCreator(configuration).datacentersNetworkloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2049,7 +2076,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {NetworkLoadBalancerProperties} networkLoadBalancerProperties The properties of the Network Load Balancer to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2064,7 +2092,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {NetworkLoadBalancer} networkLoadBalancer The Network Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2080,7 +2109,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
          * @param {NetworkLoadBalancerPut} networkLoadBalancer The modified Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2104,7 +2134,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2118,7 +2148,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2133,7 +2163,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2148,7 +2178,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} flowLogId The unique ID of the Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2162,7 +2192,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2178,7 +2208,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {FlowLogProperties} networkLoadBalancerFlowLogProperties The properties of the Flow Log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2193,7 +2223,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {FlowLog} networkLoadBalancerFlowLog The Flow Log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2209,7 +2239,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {FlowLogPut} networkLoadBalancerFlowLog The modified NLB Flow Log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2224,7 +2254,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2239,7 +2269,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2253,7 +2283,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2269,7 +2299,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {NetworkLoadBalancerForwardingRuleProperties} networkLoadBalancerForwardingRuleProperties The properties of the forwarding rule to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2284,7 +2314,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {NetworkLoadBalancerForwardingRule} networkLoadBalancerForwardingRule The forwarding rule to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2300,7 +2330,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {NetworkLoadBalancerForwardingRulePut} networkLoadBalancerForwardingRule The modified NLB forwarding rule.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2313,8 +2343,8 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
-         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -2330,7 +2360,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {NetworkLoadBalancerProperties} networkLoadBalancerProperties The properties of the Network Load Balancer to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2344,7 +2374,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {NetworkLoadBalancer} networkLoadBalancer The Network Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2359,7 +2389,7 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
          * @param {NetworkLoadBalancerPut} networkLoadBalancer The modified Network Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2404,7 +2434,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersDeleteReq
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersDelete
      */
@@ -2446,7 +2476,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFindByNet
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFindByNetworkLoadBalancerId
      */
@@ -2495,7 +2525,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsD
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsDelete
      */
@@ -2544,7 +2574,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsF
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsFindByFlowLogId
      */
@@ -2586,11 +2616,29 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsG
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2642,7 +2690,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsP
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsPatch
      */
@@ -2691,7 +2739,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsP
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsPost
      */
@@ -2747,7 +2795,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsP
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsPut
      */
@@ -2796,7 +2844,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardin
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesDelete
      */
@@ -2845,7 +2893,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardin
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId
      */
@@ -2887,11 +2935,29 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardin
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2943,7 +3009,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardin
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesPatch
      */
@@ -2992,7 +3058,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardin
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesPost
      */
@@ -3048,7 +3114,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardin
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesPut
      */
@@ -3083,14 +3149,14 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersGetReques
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersGet
      */
     readonly xContractNumber?: number
 
     /**
-     * The first element (from the complete list of the elements) to include in the response (use together with limit for pagination).
+     * The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersGet
      */
@@ -3102,6 +3168,24 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersGetReques
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersGet
      */
     readonly limit?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -3146,7 +3230,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersPatchRequ
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersPatch
      */
@@ -3188,7 +3272,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersPostReque
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersPost
      */
@@ -3237,7 +3321,7 @@ export interface NetworkLoadBalancersApiDatacentersNetworkloadbalancersPutReques
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof NetworkLoadBalancersApiDatacentersNetworkloadbalancersPut
      */
@@ -3308,7 +3392,7 @@ export class NetworkLoadBalancersApi extends BaseAPI {
      * @memberof NetworkLoadBalancersApi
      */
     public datacentersNetworkloadbalancersFlowlogsGet(requestParameters: NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsGetRequest, options?: any) {
-        return NetworkLoadBalancersApiFp(this.configuration).datacentersNetworkloadbalancersFlowlogsGet(requestParameters.datacenterId, requestParameters.networkLoadBalancerId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return NetworkLoadBalancersApiFp(this.configuration).datacentersNetworkloadbalancersFlowlogsGet(requestParameters.datacenterId, requestParameters.networkLoadBalancerId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3380,7 +3464,7 @@ export class NetworkLoadBalancersApi extends BaseAPI {
      * @memberof NetworkLoadBalancersApi
      */
     public datacentersNetworkloadbalancersForwardingrulesGet(requestParameters: NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesGetRequest, options?: any) {
-        return NetworkLoadBalancersApiFp(this.configuration).datacentersNetworkloadbalancersForwardingrulesGet(requestParameters.datacenterId, requestParameters.networkLoadBalancerId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return NetworkLoadBalancersApiFp(this.configuration).datacentersNetworkloadbalancersForwardingrulesGet(requestParameters.datacenterId, requestParameters.networkLoadBalancerId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -3428,7 +3512,7 @@ export class NetworkLoadBalancersApi extends BaseAPI {
      * @memberof NetworkLoadBalancersApi
      */
     public datacentersNetworkloadbalancersGet(requestParameters: NetworkLoadBalancersApiDatacentersNetworkloadbalancersGetRequest, options?: any) {
-        return NetworkLoadBalancersApiFp(this.configuration).datacentersNetworkloadbalancersGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, options).then((request) => request(this.axios, this.basePath));
+        return NetworkLoadBalancersApiFp(this.configuration).datacentersNetworkloadbalancersGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

@@ -45,7 +45,7 @@ export interface S3Keys {
     href?: string;
 
     /**
-     * Array of items in that collection.
+     * Array of items in the collection.
      * @type {Array<S3Key>}
      * @memberof S3Keys
      */

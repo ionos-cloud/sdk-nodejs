@@ -50,12 +50,12 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sDelete: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sDelete: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sDelete.');
             }
@@ -132,12 +132,12 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sFindByClusterId: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sFindByClusterId: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sFindByClusterId.');
             }
@@ -213,11 +213,14 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @summary List Kubernetes clusters
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sGet: async (pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
+        k8sGet: async (pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/k8s`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -258,6 +261,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -290,12 +304,14 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sKubeconfigGet: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sKubeconfigGet: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sKubeconfigGet.');
             }
@@ -340,6 +356,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -373,16 +400,15 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsDelete: async (k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsDelete: async (k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsDelete.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsDelete.');
             }
@@ -461,16 +487,15 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsFindById: async (k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsFindById: async (k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsFindById.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsFindById.');
             }
@@ -548,12 +573,14 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsGet: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsGet: async (k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsGet.');
             }
@@ -598,6 +625,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -632,20 +670,18 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsNodesDelete: async (k8sClusterId: string, nodepoolId: string, nodeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsNodesDelete: async (k8sClusterId: string, nodepoolId: string, nodeId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsNodesDelete.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsNodesDelete.');
             }
-            // verify required parameter 'nodeId' is not null or undefined
             if (nodeId === null || nodeId === undefined) {
                 throw new RequiredError('nodeId','Required parameter nodeId was null or undefined when calling k8sNodepoolsNodesDelete.');
             }
@@ -726,20 +762,18 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsNodesFindById: async (k8sClusterId: string, nodepoolId: string, nodeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsNodesFindById: async (k8sClusterId: string, nodepoolId: string, nodeId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsNodesFindById.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsNodesFindById.');
             }
-            // verify required parameter 'nodeId' is not null or undefined
             if (nodeId === null || nodeId === undefined) {
                 throw new RequiredError('nodeId','Required parameter nodeId was null or undefined when calling k8sNodepoolsNodesFindById.');
             }
@@ -819,16 +853,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsNodesGet: async (k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsNodesGet: async (k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsNodesGet.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsNodesGet.');
             }
@@ -874,6 +909,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
                 localVarQueryParameter['depth'] = depth;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
                 xContractNumber = configuration.getDefaultParamValue('xContractNumber');
             }
@@ -908,20 +954,18 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsNodesReplacePost: async (k8sClusterId: string, nodepoolId: string, nodeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsNodesReplacePost: async (k8sClusterId: string, nodepoolId: string, nodeId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsNodesReplacePost.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsNodesReplacePost.');
             }
-            // verify required parameter 'nodeId' is not null or undefined
             if (nodeId === null || nodeId === undefined) {
                 throw new RequiredError('nodeId','Required parameter nodeId was null or undefined when calling k8sNodepoolsNodesReplacePost.');
             }
@@ -1001,16 +1045,15 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {KubernetesNodePoolForPost} kubernetesNodePool The Kubernetes node pool to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsPost: async (k8sClusterId: string, kubernetesNodePool: KubernetesNodePoolForPost, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsPost: async (k8sClusterId: string, kubernetesNodePool: KubernetesNodePoolForPost, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsPost.');
             }
-            // verify required parameter 'kubernetesNodePool' is not null or undefined
             if (kubernetesNodePool === null || kubernetesNodePool === undefined) {
                 throw new RequiredError('kubernetesNodePool','Required parameter kubernetesNodePool was null or undefined when calling k8sNodepoolsPost.');
             }
@@ -1096,20 +1139,18 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {KubernetesNodePoolForPut} kubernetesNodePool Details of the Kubernetes Node Pool
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sNodepoolsPut: async (k8sClusterId: string, nodepoolId: string, kubernetesNodePool: KubernetesNodePoolForPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sNodepoolsPut: async (k8sClusterId: string, nodepoolId: string, kubernetesNodePool: KubernetesNodePoolForPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sNodepoolsPut.');
             }
-            // verify required parameter 'nodepoolId' is not null or undefined
             if (nodepoolId === null || nodepoolId === undefined) {
                 throw new RequiredError('nodepoolId','Required parameter nodepoolId was null or undefined when calling k8sNodepoolsPut.');
             }
-            // verify required parameter 'kubernetesNodePool' is not null or undefined
             if (kubernetesNodePool === null || kubernetesNodePool === undefined) {
                 throw new RequiredError('kubernetesNodePool','Required parameter kubernetesNodePool was null or undefined when calling k8sNodepoolsPut.');
             }
@@ -1194,12 +1235,12 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {KubernetesClusterForPost} kubernetesCluster The Kubernetes cluster to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sPost: async (kubernetesCluster: KubernetesClusterForPost, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'kubernetesCluster' is not null or undefined
+        k8sPost: async (kubernetesCluster: KubernetesClusterForPost, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (kubernetesCluster === null || kubernetesCluster === undefined) {
                 throw new RequiredError('kubernetesCluster','Required parameter kubernetesCluster was null or undefined when calling k8sPost.');
             }
@@ -1283,16 +1324,15 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
          * @param {KubernetesClusterForPut} kubernetesCluster The modified Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sPut: async (k8sClusterId: string, kubernetesCluster: KubernetesClusterForPut, pretty?: boolean, depth?: number, xContractNumber?: number, options: any = {}): Promise<RequestArgs> => {
-            // verify required parameter 'k8sClusterId' is not null or undefined
+        k8sPut: async (k8sClusterId: string, kubernetesCluster: KubernetesClusterForPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (k8sClusterId === null || k8sClusterId === undefined) {
                 throw new RequiredError('k8sClusterId','Required parameter k8sClusterId was null or undefined when calling k8sPut.');
             }
-            // verify required parameter 'kubernetesCluster' is not null or undefined
             if (kubernetesCluster === null || kubernetesCluster === undefined) {
                 throw new RequiredError('kubernetesCluster','Required parameter kubernetesCluster was null or undefined when calling k8sPut.');
             }
@@ -1373,10 +1413,13 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
         /**
          * Retrieve current default Kubernetes version for clusters and nodepools.
          * @summary Retrieve current default Kubernetes version
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sVersionsDefaultGet: async (options: any = {}): Promise<RequestArgs> => {
+        k8sVersionsDefaultGet: async ( orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/k8s/versions/default`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -1403,6 +1446,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
                 localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -1425,10 +1479,13 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
         /**
          * List available Kubernetes versions.
          * @summary List Kubernetes versions
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        k8sVersionsGet: async (options: any = {}): Promise<RequestArgs> => {
+        k8sVersionsGet: async ( orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             const localVarPath = `/k8s/versions`;
             // use dummy base URL string because the URL constructor only accepts absolute URLs.
             const localVarUrlObj = new URL(localVarPath, 'https://example.com');
@@ -1455,6 +1512,17 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
                 localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
             }
 
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
 
     
             localVarHeaderParameter['Content-Type'] = 'application/json';
@@ -1489,7 +1557,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1503,7 +1572,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1516,12 +1586,15 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @summary List Kubernetes clusters
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async k8sGet(pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<KubernetesClusters>> {
-            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sGet(pretty, depth, xContractNumber, options);
+        async k8sGet(pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<KubernetesClusters>> {
+            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sGet(pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1530,12 +1603,15 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async k8sKubeconfigGet(k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
-            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber, options);
+        async k8sKubeconfigGet(k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1545,7 +1621,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1560,7 +1637,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1574,12 +1652,15 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async k8sNodepoolsGet(k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<KubernetesNodePools>> {
-            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber, options);
+        async k8sNodepoolsGet(k8sClusterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<KubernetesNodePools>> {
+            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1590,7 +1671,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1606,7 +1688,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1621,12 +1704,15 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async k8sNodepoolsNodesGet(k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<KubernetesNodes>> {
-            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, options);
+        async k8sNodepoolsNodesGet(k8sClusterId: string, nodepoolId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<KubernetesNodes>> {
+            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -1637,7 +1723,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1652,7 +1739,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {KubernetesNodePoolForPost} kubernetesNodePool The Kubernetes node pool to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1668,7 +1756,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {KubernetesNodePoolForPut} kubernetesNodePool Details of the Kubernetes Node Pool
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1682,7 +1771,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {KubernetesClusterForPost} kubernetesCluster The Kubernetes cluster to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1697,7 +1787,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
          * @param {KubernetesClusterForPut} kubernetesCluster The modified Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1708,21 +1799,27 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
         /**
          * Retrieve current default Kubernetes version for clusters and nodepools.
          * @summary Retrieve current default Kubernetes version
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async k8sVersionsDefaultGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
-            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sVersionsDefaultGet(options);
+        async k8sVersionsDefaultGet(orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<string>> {
+            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sVersionsDefaultGet(orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
          * List available Kubernetes versions.
          * @summary List Kubernetes versions
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async k8sVersionsGet(options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
-            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sVersionsGet(options);
+        async k8sVersionsGet(orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Array<string>>> {
+            const axiosArgs = await KubernetesApiAxiosParamCreator(configuration).k8sVersionsGet(orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
     }
@@ -1740,7 +1837,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1753,7 +1850,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1765,7 +1862,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @summary List Kubernetes clusters
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1778,7 +1875,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1792,7 +1889,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1806,7 +1903,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1819,7 +1916,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1834,7 +1931,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1849,7 +1946,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1863,7 +1960,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1878,7 +1975,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {string} nodeId The unique ID of the Kubernetes node.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1892,7 +1989,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {KubernetesNodePoolForPost} kubernetesNodePool The Kubernetes node pool to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1907,7 +2004,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {KubernetesNodePoolForPut} kubernetesNodePool Details of the Kubernetes Node Pool
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1920,7 +2017,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {KubernetesClusterForPost} kubernetesCluster The Kubernetes cluster to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1934,7 +2031,7 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
          * @param {KubernetesClusterForPut} kubernetesCluster The modified Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -1990,7 +2087,7 @@ export interface KubernetesApiK8sDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sDelete
      */
@@ -2025,7 +2122,7 @@ export interface KubernetesApiK8sFindByClusterIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sFindByClusterId
      */
@@ -2053,11 +2150,29 @@ export interface KubernetesApiK8sGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof KubernetesApiK8sGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof KubernetesApiK8sGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof KubernetesApiK8sGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2088,11 +2203,29 @@ export interface KubernetesApiK8sKubeconfigGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sKubeconfigGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof KubernetesApiK8sKubeconfigGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof KubernetesApiK8sKubeconfigGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof KubernetesApiK8sKubeconfigGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2130,7 +2263,7 @@ export interface KubernetesApiK8sNodepoolsDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsDelete
      */
@@ -2172,7 +2305,7 @@ export interface KubernetesApiK8sNodepoolsFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsFindById
      */
@@ -2207,11 +2340,29 @@ export interface KubernetesApiK8sNodepoolsGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof KubernetesApiK8sNodepoolsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof KubernetesApiK8sNodepoolsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof KubernetesApiK8sNodepoolsGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2256,7 +2407,7 @@ export interface KubernetesApiK8sNodepoolsNodesDeleteRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsNodesDelete
      */
@@ -2305,7 +2456,7 @@ export interface KubernetesApiK8sNodepoolsNodesFindByIdRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsNodesFindById
      */
@@ -2347,11 +2498,29 @@ export interface KubernetesApiK8sNodepoolsNodesGetRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsNodesGet
      */
     readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof KubernetesApiK8sNodepoolsNodesGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof KubernetesApiK8sNodepoolsNodesGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof KubernetesApiK8sNodepoolsNodesGet
+     */
+    filters?: Map<string, string>
 }
 
 /**
@@ -2396,7 +2565,7 @@ export interface KubernetesApiK8sNodepoolsNodesReplacePostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsNodesReplacePost
      */
@@ -2438,7 +2607,7 @@ export interface KubernetesApiK8sNodepoolsPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsPost
      */
@@ -2487,7 +2656,7 @@ export interface KubernetesApiK8sNodepoolsPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sNodepoolsPut
      */
@@ -2522,7 +2691,7 @@ export interface KubernetesApiK8sPostRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sPost
      */
@@ -2564,7 +2733,7 @@ export interface KubernetesApiK8sPutRequest {
     readonly depth?: number
 
     /**
-     * Users with multiple contracts must provide the contract number, against which all API requests are to be executed.
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
      * @type {number}
      * @memberof KubernetesApiK8sPut
      */
@@ -2611,7 +2780,7 @@ export class KubernetesApi extends BaseAPI {
      * @memberof KubernetesApi
      */
     public k8sGet(requestParameters: KubernetesApiK8sGetRequest = {}, options?: any) {
-        return KubernetesApiFp(this.configuration).k8sGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return KubernetesApiFp(this.configuration).k8sGet(requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2623,7 +2792,7 @@ export class KubernetesApi extends BaseAPI {
      * @memberof KubernetesApi
      */
     public k8sKubeconfigGet(requestParameters: KubernetesApiK8sKubeconfigGetRequest, options?: any) {
-        return KubernetesApiFp(this.configuration).k8sKubeconfigGet(requestParameters.k8sClusterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return KubernetesApiFp(this.configuration).k8sKubeconfigGet(requestParameters.k8sClusterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2659,7 +2828,7 @@ export class KubernetesApi extends BaseAPI {
      * @memberof KubernetesApi
      */
     public k8sNodepoolsGet(requestParameters: KubernetesApiK8sNodepoolsGetRequest, options?: any) {
-        return KubernetesApiFp(this.configuration).k8sNodepoolsGet(requestParameters.k8sClusterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return KubernetesApiFp(this.configuration).k8sNodepoolsGet(requestParameters.k8sClusterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -2695,7 +2864,7 @@ export class KubernetesApi extends BaseAPI {
      * @memberof KubernetesApi
      */
     public k8sNodepoolsNodesGet(requestParameters: KubernetesApiK8sNodepoolsNodesGetRequest, options?: any) {
-        return KubernetesApiFp(this.configuration).k8sNodepoolsNodesGet(requestParameters.k8sClusterId, requestParameters.nodepoolId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return KubernetesApiFp(this.configuration).k8sNodepoolsNodesGet(requestParameters.k8sClusterId, requestParameters.nodepoolId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

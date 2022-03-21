@@ -40,7 +40,7 @@ export interface NicProperties {
      * @type {Array<string>}
      * @memberof NicProperties
      */
-    ips?: Array<string>;
+    ips?: Array<string> | null;
 
     /**
      * Indicates if the NIC will reserve an IP using DHCP.
@@ -64,21 +64,21 @@ export interface NicProperties {
     firewallActive?: boolean;
 
     /**
-     * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken.
+     * The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used.
      * @type {string}
      * @memberof NicProperties
      */
     firewallType?: NicPropertiesFirewallTypeEnum;
 
     /**
-     * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter.
+     * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
      * @type {number}
      * @memberof NicProperties
      */
     deviceNumber?: number;
 
     /**
-     * The PCI slot number of the NIC.
+     * The PCI slot number for the NIC.
      * @type {number}
      * @memberof NicProperties
      */
