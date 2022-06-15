@@ -15,6 +15,7 @@
 
 
 export * from './api/default-api';
+export * from './api/application-load-balancers-api';
 export * from './api/backup-units-api';
 export * from './api/contract-resources-api';
 export * from './api/data-centers-api';
@@ -34,6 +35,7 @@ export * from './api/private-cross-connects-api';
 export * from './api/requests-api';
 export * from './api/servers-api';
 export * from './api/snapshots-api';
+export * from './api/target-groups-api';
 export * from './api/templates-api';
 export * from './api/user-management-api';
 export * from './api/user-s3-keys-api';

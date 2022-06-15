@@ -476,6 +476,9 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
             localVarQueryParameter['maxResults'] = maxResults;
         }
         if (filters !== undefined) {
+            if(typeof(filters) === "object"){
+                filters = new Map(Object.entries(filters))
+            }
             filters.forEach((value: string, key: string) => {
                 localVarQueryParameter["filter." + key] = value;
             });
@@ -1064,6 +1067,9 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
             localVarQueryParameter['maxResults'] = maxResults;
         }
         if (filters !== undefined) {
+            if(typeof(filters) === "object"){
+                filters = new Map(Object.entries(filters))
+            }
             filters.forEach((value: string, key: string) => {
                 localVarQueryParameter["filter." + key] = value;
             });
@@ -1479,6 +1485,9 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
             localVarQueryParameter['maxResults'] = maxResults;
         }
         if (filters !== undefined) {
+            if(typeof(filters) === "object"){
+                filters = new Map(Object.entries(filters))
+            }
             filters.forEach((value: string, key: string) => {
                 localVarQueryParameter["filter." + key] = value;
             });

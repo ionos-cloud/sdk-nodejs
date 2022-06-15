@@ -142,13 +142,6 @@ export interface KubernetesNodePoolProperties {
      * @memberof KubernetesNodePoolProperties
      */
     availableUpgradeVersions?: Array<string>;
-
-    /**
-     * Public IP address for the gateway performing source NAT for the node pool\'s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.
-     * @type {string}
-     * @memberof KubernetesNodePoolProperties
-     */
-    gatewayIp?: string;
 }
 
 
@@ -176,7 +169,6 @@ export enum KubernetesNodePoolPropertiesStorageTypeEnum {
     Hdd = 'HDD',
     Ssd = 'SSD'
 }
-
 
 
 
