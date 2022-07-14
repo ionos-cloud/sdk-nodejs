@@ -451,11 +451,12 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {boolean} [deleteVolumes] If true, all attached storage volumes will also be deleted.
          
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersDelete: async (datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+        datacentersServersDelete: async (datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, deleteVolumes?: boolean,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersDelete.');
             }
@@ -502,6 +503,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             }
             if (depth !== undefined) {
                 localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((deleteVolumes === undefined) && (configuration !== undefined)) {
+                deleteVolumes = configuration.getDefaultParamValue('deleteVolumes');
+            }
+            if (deleteVolumes !== undefined) {
+                localVarQueryParameter['deleteVolumes'] = deleteVolumes;
             }
 
             if ((xContractNumber === undefined) && (configuration !== undefined)) {
@@ -2245,12 +2253,13 @@ export const ServersApiFp = function(configuration?: Configuration) {
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {boolean} [deleteVolumes] If true, all attached storage volumes will also be deleted.
          
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersServersDelete(datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const axiosArgs = await ServersApiAxiosParamCreator(configuration).datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber, options);
+        async datacentersServersDelete(datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, deleteVolumes?: boolean, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const axiosArgs = await ServersApiAxiosParamCreator(configuration).datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber, deleteVolumes, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2620,11 +2629,12 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {boolean} [deleteVolumes] If true, all attached storage volumes will also be deleted.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersDelete(datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<void> {
-            return ServersApiFp(configuration).datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        datacentersServersDelete(datacenterId: string, serverId: string, pretty?: boolean, depth?: number, xContractNumber?: number, deleteVolumes?: boolean, options?: any): AxiosPromise<void> {
+            return ServersApiFp(configuration).datacentersServersDelete(datacenterId, serverId, pretty, depth, xContractNumber, deleteVolumes, options).then((request) => request(axios, basePath));
         },
         /**
          * Retrieve information about the specified server within the data center, such as its configuration, provisioning status, and so on.
@@ -3137,6 +3147,13 @@ export interface ServersApiDatacentersServersDeleteRequest {
      * @memberof ServersApiDatacentersServersDelete
      */
     readonly xContractNumber?: number
+
+    /**
+     * If true, all attached storage volumes will also be deleted.
+     * @type {boolean}
+     * @memberof ServersApiDatacentersServersDelete
+     */
+    readonly deleteVolumes?: boolean
 }
 
 /**
@@ -4052,7 +4069,7 @@ export class ServersApi extends BaseAPI {
      * @memberof ServersApi
      */
     public datacentersServersDelete(requestParameters: ServersApiDatacentersServersDeleteRequest, options?: any) {
-        return ServersApiFp(this.configuration).datacentersServersDelete(requestParameters.datacenterId, requestParameters.serverId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+        return ServersApiFp(this.configuration).datacentersServersDelete(requestParameters.datacenterId, requestParameters.serverId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.deleteVolumes, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

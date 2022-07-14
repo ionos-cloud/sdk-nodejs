@@ -111,6 +111,13 @@ export interface GroupProperties {
      * @memberof GroupProperties
      */
     accessAndManageCertificates?: boolean;
+
+    /**
+     * Privilege for a group to manage DBaaS related functionality.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    manageDbaas?: boolean;
 }
 
 
