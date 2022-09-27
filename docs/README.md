@@ -26,7 +26,7 @@ npm i --save @ionos-cloud/sdk-nodejs
 const sdk = require('@ionos-cloud/sdk-nodejs')
 
 const config = new sdk.Configuration({username: 'YOUR_USERNAME', password: 'YOUR_PASSWORD'});
-const dcApi = new sdk.DataCenterApi(config);
+const dcApi = new sdk.DataCentersApi(config);
 
 dcApi.datacentersGet().then((response) => console.log(response));
 ```
