@@ -34,14 +34,18 @@ npm i --save @ionos-cloud/sdk-nodejs
 ## Usage
 Import the SDK using:
 
-```const sdk = require('@ionos-cloud/sdk-nodejs')```
+```javascript 
+const sdk = require('@ionos-cloud/sdk-nodejs')
+```
 
 Or, if the import is done from an ES module, use:
 
-```import * as sdk from '@ionos-cloud/sdk-nodejs';```
+```javascript
+import * as sdk from '@ionos-cloud/sdk-nodejs';
+```
 
 Usage example:
-```javscript
+```javascript
 const config = new sdk.Configuration({username: 'YOUR_USERNAME', password: 'YOUR_PASSWORD'});
 const dcApi = new sdk.DataCentersApi(config);
 
