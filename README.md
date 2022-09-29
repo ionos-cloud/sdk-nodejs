@@ -41,7 +41,7 @@ Or, if the import is done from an ES module, use:
 ```import * as sdk from '@ionos-cloud/sdk-nodejs';```
 
 Usage example:
-```javscript
+```javascript
 const config = new sdk.Configuration({username: 'YOUR_USERNAME', password: 'YOUR_PASSWORD'});
 const dcApi = new sdk.DataCentersApi(config);
 
