@@ -65,7 +65,7 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((depth === undefined) && (configuration !== undefined)) {
@@ -128,7 +128,7 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((depth === undefined) && (configuration !== undefined)) {

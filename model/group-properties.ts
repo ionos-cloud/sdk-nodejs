@@ -117,7 +117,7 @@ export interface GroupProperties {
      * @type {boolean}
      * @memberof GroupProperties
      */
-    manageDbaas?: boolean;
+    manageDBaaS?: boolean;
 }
 
 

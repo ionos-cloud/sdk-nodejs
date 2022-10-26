@@ -81,7 +81,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -187,7 +187,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -274,7 +274,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -360,7 +360,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -479,7 +479,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -572,7 +572,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -670,7 +670,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -766,7 +766,7 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {

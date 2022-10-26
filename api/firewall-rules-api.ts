@@ -84,7 +84,7 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -181,7 +181,7 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -277,7 +277,7 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -406,7 +406,7 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -509,7 +509,7 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {
@@ -617,7 +617,7 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
                     : await configuration.apiKey;
-                localVarHeaderParameter["Authorization"] = localVarApiKeyValue;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
             }
 
             if ((pretty === undefined) && (configuration !== undefined)) {

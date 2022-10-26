@@ -1,6 +1,6 @@
 {
   "name": "@ionos-cloud/sdk-nodejs",
-  "version": "6.1.1",
+  "version": "6.1.2",
   "description": "NodeJS SDK for the Ionos Cloud API",
   "author": "Ionos",
   "keywords": [
