@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface FlowLogPut {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof FlowLogPut
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof FlowLogPut
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof FlowLogPut
@@ -45,11 +31,25 @@ export interface FlowLogPut {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof FlowLogPut
+     */
+    id?: string;
+
+    /**
      * 
      * @type {FlowLogProperties}
      * @memberof FlowLogPut
      */
     properties: FlowLogProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof FlowLogPut
+     */
+    type?: Type;
 }
 
 

@@ -22,158 +22,158 @@
 export interface ResourceLimits {
 
     /**
-     * The maximum number of cores per server.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    coresPerServer: number;
-
-    /**
-     * The maximum number of cores per contract.
+     * The maximum number of CPU cores per contract.
      * @type {number}
      * @memberof ResourceLimits
      */
     coresPerContract: number;
 
     /**
-     * The number of cores provisioned.
+     * The maximum number of CPU cores per server.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    coresPerServer: number;
+
+    /**
+     * The number of CPU cores provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
     coresProvisioned: number;
 
     /**
-     * The maximum RAM per server.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ramPerServer: number;
-
-    /**
-     * The maximum RAM per contract.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ramPerContract: number;
-
-    /**
-     * RAM provisioned.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ramProvisioned: number;
-
-    /**
-     * HDD limit per volume.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    hddLimitPerVolume: number;
-
-    /**
-     * HDD limit per contract.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    hddLimitPerContract: number;
-
-    /**
-     * HDD volume provisioned.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    hddVolumeProvisioned: number;
-
-    /**
-     * SSD limit per volume.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ssdLimitPerVolume: number;
-
-    /**
-     * SSD limit per contract.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ssdLimitPerContract: number;
-
-    /**
-     * SSD volume provisioned.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ssdVolumeProvisioned: number;
-
-    /**
-     * DAS (Direct Attached Storage) volume provisioned.
+     * The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
     dasVolumeProvisioned: number;
 
     /**
-     * Total reservable IP limit for the customer.
+     * The maximum amount of disk space (in MB) that can be provided under this contract.
      * @type {number}
      * @memberof ResourceLimits
      */
-    reservableIps: number;
+    hddLimitPerContract: number;
 
     /**
-     * Reserved ips for the contract.
+     * The maximum size (in MB) of an idividual hard disk volume.
      * @type {number}
      * @memberof ResourceLimits
      */
-    reservedIpsOnContract: number;
+    hddLimitPerVolume: number;
 
     /**
-     * Reserved ips in use.
+     * The amount of hard disk space (in MB) that is currently provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
-    reservedIpsInUse: number;
+    hddVolumeProvisioned: number;
 
     /**
-     * K8s clusters total limit.
+     * The maximum number of Kubernetes clusters that can be created under this contract.
      * @type {number}
      * @memberof ResourceLimits
      */
     k8sClusterLimitTotal: number;
 
     /**
-     * K8s clusters provisioned.
+     * The amount of Kubernetes clusters that is currently provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
     k8sClustersProvisioned: number;
 
     /**
-     * NLB total limit.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    nlbLimitTotal: number;
-
-    /**
-     * NLBs provisioned.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    nlbProvisioned: number;
-
-    /**
-     * NAT Gateway total limit.
+     * The NAT Gateway total limit.
      * @type {number}
      * @memberof ResourceLimits
      */
     natGatewayLimitTotal: number;
 
     /**
-     * NAT Gateways provisioned.
+     * The NAT Gateways provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
     natGatewayProvisioned: number;
+
+    /**
+     * The NLB total limit.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    nlbLimitTotal: number;
+
+    /**
+     * The NLBs provisioned.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    nlbProvisioned: number;
+
+    /**
+     * The maximum amount of RAM (in MB) that can be provisioned under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ramPerContract: number;
+
+    /**
+     * The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ramPerServer: number;
+
+    /**
+     * The amount of RAM (in MB) provisioned under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ramProvisioned: number;
+
+    /**
+     * The maximum number of static public IP addresses that can be reserved by this customer across contracts.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    reservableIps: number;
+
+    /**
+     * The number of static public IP addresses in use.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    reservedIpsInUse: number;
+
+    /**
+     * The maximum number of static public IP addresses that can be reserved for this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    reservedIpsOnContract: number;
+
+    /**
+     * The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ssdLimitPerContract: number;
+
+    /**
+     * The maximum size (in MB) of an individual solid state disk volume.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ssdLimitPerVolume: number;
+
+    /**
+     * The amount of solid state disk space (in MB) that is currently provisioned.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ssdVolumeProvisioned: number;
 }
 
 

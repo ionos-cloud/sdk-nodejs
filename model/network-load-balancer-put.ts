@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface NetworkLoadBalancerPut {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof NetworkLoadBalancerPut
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NetworkLoadBalancerPut
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof NetworkLoadBalancerPut
@@ -45,11 +31,25 @@ export interface NetworkLoadBalancerPut {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NetworkLoadBalancerPut
+     */
+    id?: string;
+
+    /**
      * 
      * @type {NetworkLoadBalancerProperties}
      * @memberof NetworkLoadBalancerPut
      */
     properties: NetworkLoadBalancerProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NetworkLoadBalancerPut
+     */
+    type?: Type;
 }
 
 

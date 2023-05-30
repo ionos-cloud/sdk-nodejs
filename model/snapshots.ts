@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface Snapshots {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof Snapshots
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Snapshots
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof Snapshots
@@ -45,11 +31,25 @@ export interface Snapshots {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Snapshots
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Snapshot>}
      * @memberof Snapshots
      */
     items?: Array<Snapshot>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Snapshots
+     */
+    type?: Type;
 }
 
 

@@ -732,7 +732,7 @@ export const LANsApiAxiosParamCreator = function (configuration?: Configuration)
             };
         },
         /**
-         * Create a LAN within the data center.
+         * Creates a LAN within the data center.
          * @summary Create LANs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {LanPost} lan The LAN to create.
@@ -1054,7 +1054,7 @@ export const LANsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a LAN within the data center.
+         * Creates a LAN within the data center.
          * @summary Create LANs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {LanPost} lan The LAN to create.
@@ -1200,7 +1200,7 @@ export const LANsApiFactory = function (configuration?: Configuration, basePath?
             return LANsApiFp(configuration).datacentersLansPatch(datacenterId, lanId, lan, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a LAN within the data center.
+         * Creates a LAN within the data center.
          * @summary Create LANs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {LanPost} lan The LAN to create.
@@ -1786,7 +1786,7 @@ export class LANsApi extends BaseAPI {
     }
 
     /**
-     * Create a LAN within the data center.
+     * Creates a LAN within the data center.
      * @summary Create LANs
      * @param {LANsApiDatacentersLansPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.

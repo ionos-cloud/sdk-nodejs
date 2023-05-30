@@ -9,8 +9,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersVolumesFindById**](VolumesApi.md#datacentersvolumesfindbyid) | **GET** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve volumes |
 | [**datacentersVolumesGet**](VolumesApi.md#datacentersvolumesget) | **GET** /datacenters/{datacenterId}/volumes | List volumes |
 | [**datacentersVolumesPatch**](VolumesApi.md#datacentersvolumespatch) | **PATCH** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify volumes |
-| [**datacentersVolumesPost**](VolumesApi.md#datacentersvolumespost) | **POST** /datacenters/{datacenterId}/volumes | Create volumes |
-| [**datacentersVolumesPut**](VolumesApi.md#datacentersvolumesput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify volumes |
+| [**datacentersVolumesPost**](VolumesApi.md#datacentersvolumespost) | **POST** /datacenters/{datacenterId}/volumes | Create a Volume |
+| [**datacentersVolumesPut**](VolumesApi.md#datacentersvolumesput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume by ID |
 | [**datacentersVolumesRestoreSnapshotPost**](VolumesApi.md#datacentersvolumesrestoresnapshotpost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore volume snapshots |
 
 
@@ -320,9 +320,9 @@ Basic Authentication, Token Authentication
 
 > <Volume> datacentersVolumesPost(datacenterId, volume, opts)
 
-Create volumes
+Create a Volume
 
-Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
 
 ### Examples
 
@@ -335,7 +335,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.VolumesApi(config);
-// Create volumes
+// Create a Volume
 api_instance
   .datacentersVolumesPost({
     datacenterId: datacenterId_example,
@@ -377,9 +377,9 @@ Basic Authentication, Token Authentication
 
 > <Volume> datacentersVolumesPut(datacenterId, volumeId, volume, opts)
 
-Modify volumes
+Modify a Volume by ID
 
-Modify the properties of the specified volume within the data center.
+Modifies the properties of the specified volume within the data center.
 
 ### Examples
 
@@ -392,7 +392,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.VolumesApi(config);
-// Modify volumes
+// Modify a Volume by ID
 api_instance
   .datacentersVolumesPut({
     datacenterId: datacenterId_example,

@@ -27,8 +27,8 @@ import { Info } from '../model';
 export const DefaultApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Display API information
-         * @summary Display API information
+         * Retrieves the API information such as API version.
+         * @summary Get API information
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -115,8 +115,8 @@ export const DefaultApiAxiosParamCreator = function (configuration?: Configurati
 export const DefaultApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Display API information
-         * @summary Display API information
+         * Retrieves the API information such as API version.
+         * @summary Get API information
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -140,8 +140,8 @@ export const DefaultApiFp = function(configuration?: Configuration) {
 export const DefaultApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Display API information
-         * @summary Display API information
+         * Retrieves the API information such as API version.
+         * @summary Get API information
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -208,8 +208,8 @@ export interface DefaultApiApiInfoGetRequest {
  */
 export class DefaultApi extends BaseAPI {
     /**
-     * Display API information
-     * @summary Display API information
+     * Retrieves the API information such as API version.
+     * @summary Get API information
      * @param {DefaultApiApiInfoGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

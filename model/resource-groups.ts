@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface ResourceGroups {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof ResourceGroups
-     */
-    id?: string;
-
-    /**
-     * The type of the resource.
-     * @type {Type}
-     * @memberof ResourceGroups
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof ResourceGroups
@@ -45,11 +31,25 @@ export interface ResourceGroups {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof ResourceGroups
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Resource>}
      * @memberof ResourceGroups
      */
     items?: Array<Resource>;
+
+    /**
+     * The type of the resource.
+     * @type {Type}
+     * @memberof ResourceGroups
+     */
+    type?: Type;
 }
 
 

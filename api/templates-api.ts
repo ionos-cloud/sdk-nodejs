@@ -29,9 +29,9 @@ import { Templates } from '../model';
 export const TemplatesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-         * @summary Retrieve Cubes Templates
-         * @param {string} templateId The unique Template ID.
+         * Retrieves the properties of the Cubes template specified by its ID.
+         * @summary Get Cubes Template by ID
+         * @param {string} templateId The unique template ID.
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          
          * @param {*} [options] Override http request option.
@@ -95,8 +95,8 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
-         * @summary List Cubes Templates
+         * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.
+         * @summary Get Cubes Templates
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
          * @param {number} [maxResults] - Limits the number of results returned.
@@ -181,9 +181,9 @@ export const TemplatesApiAxiosParamCreator = function (configuration?: Configura
 export const TemplatesApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-         * @summary Retrieve Cubes Templates
-         * @param {string} templateId The unique Template ID.
+         * Retrieves the properties of the Cubes template specified by its ID.
+         * @summary Get Cubes Template by ID
+         * @param {string} templateId The unique template ID.
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          
          * @param {*} [options] Override http request option.
@@ -194,8 +194,8 @@ export const TemplatesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
-         * @summary List Cubes Templates
+         * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.
+         * @summary Get Cubes Templates
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
          * @param {number} [maxResults] - Limits the number of results returned.
@@ -217,9 +217,9 @@ export const TemplatesApiFp = function(configuration?: Configuration) {
 export const TemplatesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-         * @summary Retrieve Cubes Templates
-         * @param {string} templateId The unique Template ID.
+         * Retrieves the properties of the Cubes template specified by its ID.
+         * @summary Get Cubes Template by ID
+         * @param {string} templateId The unique template ID.
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -228,8 +228,8 @@ export const TemplatesApiFactory = function (configuration?: Configuration, base
             return TemplatesApiFp(configuration).templatesFindById(templateId, depth, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
-         * @summary List Cubes Templates
+         * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.
+         * @summary Get Cubes Templates
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
@@ -247,7 +247,7 @@ export const TemplatesApiFactory = function (configuration?: Configuration, base
  */
 export interface TemplatesApiTemplatesFindByIdRequest {
     /**
-     * The unique Template ID.
+     * The unique template ID.
      * @type {string}
      * @memberof TemplatesApiTemplatesFindById
      */
@@ -301,8 +301,8 @@ export interface TemplatesApiTemplatesGetRequest {
  */
 export class TemplatesApi extends BaseAPI {
     /**
-     * Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
-     * @summary Retrieve Cubes Templates
+     * Retrieves the properties of the Cubes template specified by its ID.
+     * @summary Get Cubes Template by ID
      * @param {TemplatesApiTemplatesFindByIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -313,8 +313,8 @@ export class TemplatesApi extends BaseAPI {
     }
 
     /**
-     * List all of the available Cubes Templates.  This operation is only supported for the Cubes.
-     * @summary List Cubes Templates
+     * Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.
+     * @summary Get Cubes Templates
      * @param {TemplatesApiTemplatesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

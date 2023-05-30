@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface Location {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof Location
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Location
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof Location
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Location
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface Location {
      * @memberof Location
      */
     properties: LocationProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Location
+     */
+    type?: Type;
 }
 
 

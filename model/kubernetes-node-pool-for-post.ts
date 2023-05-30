@@ -24,25 +24,18 @@ import { KubernetesNodePoolPropertiesForPost } from './kubernetes-node-pool-prop
 export interface KubernetesNodePoolForPost {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof KubernetesNodePoolForPost
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof KubernetesNodePoolForPost
      */
     id?: string;
-
-    /**
-     * The type of object.
-     * @type {string}
-     * @memberof KubernetesNodePoolForPost
-     */
-    type?: KubernetesNodePoolForPostTypeEnum;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof KubernetesNodePoolForPost
-     */
-    href?: string;
 
     /**
      * 
@@ -57,7 +50,17 @@ export interface KubernetesNodePoolForPost {
      * @memberof KubernetesNodePoolForPost
      */
     properties: KubernetesNodePoolPropertiesForPost;
+
+    /**
+     * The object type.
+     * @type {string}
+     * @memberof KubernetesNodePoolForPost
+     */
+    type?: KubernetesNodePoolForPostTypeEnum;
 }
+
+
+
 
 
 
@@ -68,9 +71,6 @@ export interface KubernetesNodePoolForPost {
 export enum KubernetesNodePoolForPostTypeEnum {
     Nodepool = 'nodepool'
 }
-
-
-
 
 
 

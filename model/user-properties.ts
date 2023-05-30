@@ -22,25 +22,11 @@
 export interface UserProperties {
 
     /**
-     * The first name of the user.
-     * @type {string}
+     * Indicates if the user is active.
+     * @type {boolean}
      * @memberof UserProperties
      */
-    firstname?: string;
-
-    /**
-     * The last name of the user.
-     * @type {string}
-     * @memberof UserProperties
-     */
-    lastname?: string;
-
-    /**
-     * The email address of the user.
-     * @type {string}
-     * @memberof UserProperties
-     */
-    email?: string;
+    active?: boolean;
 
     /**
      * Indicates if the user has admin rights.
@@ -50,6 +36,20 @@ export interface UserProperties {
     administrator?: boolean;
 
     /**
+     * The email address of the user.
+     * @type {string}
+     * @memberof UserProperties
+     */
+    email?: string;
+
+    /**
+     * The first name of the user.
+     * @type {string}
+     * @memberof UserProperties
+     */
+    firstname?: string;
+
+    /**
      * Indicates if secure authentication should be forced on the user.
      * @type {boolean}
      * @memberof UserProperties
@@ -57,11 +57,11 @@ export interface UserProperties {
     forceSecAuth?: boolean;
 
     /**
-     * Indicates if secure authentication is active for the user.
-     * @type {boolean}
+     * The last name of the user.
+     * @type {string}
      * @memberof UserProperties
      */
-    secAuthActive?: boolean;
+    lastname?: string;
 
     /**
      * Canonical (S3) ID of the user for a given identity.
@@ -71,11 +71,11 @@ export interface UserProperties {
     s3CanonicalUserId?: string;
 
     /**
-     * Indicates if the user is active.
+     * Indicates if secure authentication is active for the user.
      * @type {boolean}
      * @memberof UserProperties
      */
-    active?: boolean;
+    secAuthActive?: boolean;
 }
 
 

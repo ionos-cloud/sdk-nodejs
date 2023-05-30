@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface Requests {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Requests
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Requests
-     */
-    type?: Type;
+    _links: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Requests {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Requests
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Request>}
      * @memberof Requests
      */
     items?: Array<Request>;
-
-    /**
-     * The offset, specified in the request (if not is specified, 0 is used by default).
-     * @type {number}
-     * @memberof Requests
-     */
-    offset: number;
 
     /**
      * The limit, specified in the request (if not specified, the endpoint\'s default pagination limit is used).
@@ -67,11 +60,18 @@ export interface Requests {
     limit: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset, specified in the request (if not is specified, 0 is used by default).
+     * @type {number}
      * @memberof Requests
      */
-    _links: PaginationLinks;
+    offset: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Requests
+     */
+    type?: Type;
 }
 
 

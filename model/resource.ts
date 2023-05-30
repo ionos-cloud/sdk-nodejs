@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface Resource {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {ResourceEntities}
      * @memberof Resource
      */
-    id?: string;
-
-    /**
-     * The type of the resource.
-     * @type {Type}
-     * @memberof Resource
-     */
-    type?: Type;
+    entities?: ResourceEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface Resource {
      * @memberof Resource
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Resource
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface Resource {
     properties?: ResourceProperties;
 
     /**
-     * 
-     * @type {ResourceEntities}
+     * The type of the resource.
+     * @type {Type}
      * @memberof Resource
      */
-    entities?: ResourceEntities;
+    type?: Type;
 }
 
 

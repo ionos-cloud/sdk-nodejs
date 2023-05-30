@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface Locations {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof Locations
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Locations
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof Locations
@@ -45,11 +31,25 @@ export interface Locations {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Locations
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Location>}
      * @memberof Locations
      */
     items?: Array<Location>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Locations
+     */
+    type?: Type;
 }
 
 

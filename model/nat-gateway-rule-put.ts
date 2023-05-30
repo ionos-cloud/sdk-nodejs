@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface NatGatewayRulePut {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof NatGatewayRulePut
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NatGatewayRulePut
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof NatGatewayRulePut
@@ -45,11 +31,25 @@ export interface NatGatewayRulePut {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NatGatewayRulePut
+     */
+    id?: string;
+
+    /**
      * 
      * @type {NatGatewayRuleProperties}
      * @memberof NatGatewayRulePut
      */
     properties: NatGatewayRuleProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NatGatewayRulePut
+     */
+    type?: Type;
 }
 
 

@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface ApplicationLoadBalancerForwardingRule {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof ApplicationLoadBalancerForwardingRule
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof ApplicationLoadBalancerForwardingRule
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof ApplicationLoadBalancerForwardingRule
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof ApplicationLoadBalancerForwardingRule
-     */
-    href?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface ApplicationLoadBalancerForwardingRule {
      * @memberof ApplicationLoadBalancerForwardingRule
      */
     properties: ApplicationLoadBalancerForwardingRuleProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof ApplicationLoadBalancerForwardingRule
+     */
+    type?: Type;
 }
 
 

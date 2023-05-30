@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface NetworkLoadBalancer {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {NetworkLoadBalancerEntities}
      * @memberof NetworkLoadBalancer
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NetworkLoadBalancer
-     */
-    type?: Type;
+    entities?: NetworkLoadBalancerEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface NetworkLoadBalancer {
      * @memberof NetworkLoadBalancer
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NetworkLoadBalancer
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface NetworkLoadBalancer {
     properties: NetworkLoadBalancerProperties;
 
     /**
-     * 
-     * @type {NetworkLoadBalancerEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof NetworkLoadBalancer
      */
-    entities?: NetworkLoadBalancerEntities;
+    type?: Type;
 }
 
 

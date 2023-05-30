@@ -25,32 +25,11 @@ import { KubernetesNodePoolLan } from './kubernetes-node-pool-lan';
 export interface KubernetesNodePoolPropertiesForPut {
 
     /**
-     * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * @type {string}
+     * The annotations attached to the node pool.
+     * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
-    name?: string;
-
-    /**
-     * The number of nodes that make up the node pool.
-     * @type {number}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    nodeCount: number;
-
-    /**
-     * The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
-     * @type {string}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    k8sVersion?: string;
-
-    /**
-     * 
-     * @type {KubernetesMaintenanceWindow}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    maintenanceWindow?: KubernetesMaintenanceWindow;
+    annotations?: { [key: string]: string; };
 
     /**
      * 
@@ -60,28 +39,49 @@ export interface KubernetesNodePoolPropertiesForPut {
     autoScaling?: KubernetesAutoScaling;
 
     /**
-     * array of additional LANs attached to worker nodes
-     * @type {Array<KubernetesNodePoolLan>}
+     * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
+     * @type {string}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
-    lans?: Array<KubernetesNodePoolLan>;
+    k8sVersion?: string;
 
     /**
-     * map of labels attached to node pool.
+     * The labels attached to the node pool.
      * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     labels?: { [key: string]: string; };
 
     /**
-     * map of annotations attached to node pool.
-     * @type {{ [key: string]: string; }}
+     * The array of existing private LANs to attach to worker nodes.
+     * @type {Array<KubernetesNodePoolLan>}
      * @memberof KubernetesNodePoolPropertiesForPut
      */
-    annotations?: { [key: string]: string; };
+    lans?: Array<KubernetesNodePoolLan>;
 
     /**
-     * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.
+     * 
+     * @type {KubernetesMaintenanceWindow}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    maintenanceWindow?: KubernetesMaintenanceWindow;
+
+    /**
+     * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * @type {string}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    name?: string;
+
+    /**
+     * The number of worker nodes of the node pool.
+     * @type {number}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    nodeCount: number;
+
+    /**
+     * Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool\'s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.
      * @type {Array<string>}
      * @memberof KubernetesNodePoolPropertiesForPut
      */

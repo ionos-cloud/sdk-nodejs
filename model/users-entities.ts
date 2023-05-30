@@ -25,17 +25,17 @@ export interface UsersEntities {
 
     /**
      * 
-     * @type {ResourcesUsers}
-     * @memberof UsersEntities
-     */
-    owns?: ResourcesUsers;
-
-    /**
-     * 
      * @type {GroupUsers}
      * @memberof UsersEntities
      */
     groups?: GroupUsers;
+
+    /**
+     * 
+     * @type {ResourcesUsers}
+     * @memberof UsersEntities
+     */
+    owns?: ResourcesUsers;
 }
 
 

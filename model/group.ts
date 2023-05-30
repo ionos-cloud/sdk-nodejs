@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface Group {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {GroupEntities}
      * @memberof Group
      */
-    id?: string;
-
-    /**
-     * The type of the resource.
-     * @type {Type}
-     * @memberof Group
-     */
-    type?: Type;
+    entities?: GroupEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,6 +39,13 @@ export interface Group {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Group
+     */
+    id?: string;
+
+    /**
      * 
      * @type {GroupProperties}
      * @memberof Group
@@ -53,11 +53,11 @@ export interface Group {
     properties: GroupProperties;
 
     /**
-     * 
-     * @type {GroupEntities}
+     * The type of the resource.
+     * @type {Type}
      * @memberof Group
      */
-    entities?: GroupEntities;
+    type?: Type;
 }
 
 

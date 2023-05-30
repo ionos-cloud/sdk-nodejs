@@ -22,11 +22,39 @@
 export interface GroupProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * Activity log access privilege.
+     * @type {boolean}
      * @memberof GroupProperties
      */
-    name?: string;
+    accessActivityLog?: boolean;
+
+    /**
+     * Privilege for a group to access and manage certificates.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageCertificates?: boolean;
+
+    /**
+     * Privilege for a group to access and manage dns records.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageDns?: boolean;
+
+    /**
+     * Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageMonitoring?: boolean;
+
+    /**
+     * Create backup unit privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    createBackupUnit?: boolean;
 
     /**
      * Create data center privilege.
@@ -36,46 +64,11 @@ export interface GroupProperties {
     createDataCenter?: boolean;
 
     /**
-     * Create snapshot privilege.
+     * Create Flow Logs privilege.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    createSnapshot?: boolean;
-
-    /**
-     * Reserve IP block privilege.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    reserveIp?: boolean;
-
-    /**
-     * Activity log access privilege.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    accessActivityLog?: boolean;
-
-    /**
-     * Create pcc privilege.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    createPcc?: boolean;
-
-    /**
-     * S3 privilege.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    s3Privilege?: boolean;
-
-    /**
-     * Create backup unit privilege.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    createBackupUnit?: boolean;
+    createFlowLog?: boolean;
 
     /**
      * Create internet access privilege.
@@ -92,25 +85,18 @@ export interface GroupProperties {
     createK8sCluster?: boolean;
 
     /**
-     * Create Flow Logs privilege.
+     * Create pcc privilege.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    createFlowLog?: boolean;
+    createPcc?: boolean;
 
     /**
-     * Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
+     * Create snapshot privilege.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    accessAndManageMonitoring?: boolean;
-
-    /**
-     * Privilege for a group to access and manage certificates.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    accessAndManageCertificates?: boolean;
+    createSnapshot?: boolean;
 
     /**
      * Privilege for a group to manage DBaaS related functionality.
@@ -118,6 +104,41 @@ export interface GroupProperties {
      * @memberof GroupProperties
      */
     manageDBaaS?: boolean;
+
+    /**
+     * Privilege for a group to access and manage the Data Platform.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    manageDataplatform?: boolean;
+
+    /**
+     * Privilege for group accessing container registry related functionality.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    manageRegistry?: boolean;
+
+    /**
+     * The name of the resource.
+     * @type {string}
+     * @memberof GroupProperties
+     */
+    name?: string;
+
+    /**
+     * Reserve IP block privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    reserveIp?: boolean;
+
+    /**
+     * S3 privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    s3Privilege?: boolean;
 }
 
 

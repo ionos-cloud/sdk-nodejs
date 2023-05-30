@@ -25,18 +25,11 @@ import { Volume } from './volume';
 export interface Volumes {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Volumes
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Volumes
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Volumes {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Volumes
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Volume>}
      * @memberof Volumes
      */
     items?: Array<Volume>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof Volumes
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface Volumes {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof Volumes
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Volumes
+     */
+    type?: Type;
 }
 
 

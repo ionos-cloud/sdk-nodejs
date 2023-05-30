@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface Nic {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {NicEntities}
      * @memberof Nic
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Nic
-     */
-    type?: Type;
+    entities?: NicEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface Nic {
      * @memberof Nic
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Nic
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface Nic {
     properties: NicProperties;
 
     /**
-     * 
-     * @type {NicEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof Nic
      */
-    entities?: NicEntities;
+    type?: Type;
 }
 
 

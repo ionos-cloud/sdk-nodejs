@@ -26,25 +26,25 @@ import { Type } from './type';
 export interface ApplicationLoadBalancer {
 
     /**
+     * 
+     * @type {ApplicationLoadBalancerEntities}
+     * @memberof ApplicationLoadBalancer
+     */
+    entities?: ApplicationLoadBalancerEntities;
+
+    /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof ApplicationLoadBalancer
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof ApplicationLoadBalancer
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof ApplicationLoadBalancer
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof ApplicationLoadBalancer
-     */
-    href?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface ApplicationLoadBalancer {
     properties: ApplicationLoadBalancerProperties;
 
     /**
-     * 
-     * @type {ApplicationLoadBalancerEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof ApplicationLoadBalancer
      */
-    entities?: ApplicationLoadBalancerEntities;
+    type?: Type;
 }
 
 

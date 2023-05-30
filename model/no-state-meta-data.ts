@@ -22,20 +22,6 @@
 export interface NoStateMetaData {
 
     /**
-     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
-     * @type {string}
-     * @memberof NoStateMetaData
-     */
-    etag?: string;
-
-    /**
-     * The time when the resource was created.
-     * @type {string}
-     * @memberof NoStateMetaData
-     */
-    createdDate?: string;
-
-    /**
      * The user who has created the resource.
      * @type {string}
      * @memberof NoStateMetaData
@@ -50,11 +36,18 @@ export interface NoStateMetaData {
     createdByUserId?: string;
 
     /**
-     * The last time the resource was modified.
+     * The time when the resource was created.
      * @type {string}
      * @memberof NoStateMetaData
      */
-    lastModifiedDate?: string;
+    createdDate?: string;
+
+    /**
+     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
+     * @type {string}
+     * @memberof NoStateMetaData
+     */
+    etag?: string;
 
     /**
      * The user who last modified the resource.
@@ -69,6 +62,13 @@ export interface NoStateMetaData {
      * @memberof NoStateMetaData
      */
     lastModifiedByUserId?: string;
+
+    /**
+     * The last time the resource was modified.
+     * @type {string}
+     * @memberof NoStateMetaData
+     */
+    lastModifiedDate?: string;
 }
 
 

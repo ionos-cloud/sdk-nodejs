@@ -25,25 +25,25 @@ import { Type } from './type';
 export interface ApplicationLoadBalancerForwardingRules {
 
     /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof ApplicationLoadBalancerForwardingRules
+     */
+    _links?: PaginationLinks;
+
+    /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof ApplicationLoadBalancerForwardingRules
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof ApplicationLoadBalancerForwardingRules
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof ApplicationLoadBalancerForwardingRules
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof ApplicationLoadBalancerForwardingRules
-     */
-    href?: string;
 
     /**
      * Array of items in the collection.
@@ -53,13 +53,6 @@ export interface ApplicationLoadBalancerForwardingRules {
     items?: Array<ApplicationLoadBalancerForwardingRule>;
 
     /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof ApplicationLoadBalancerForwardingRules
-     */
-    offset?: number;
-
-    /**
      * The limit (if specified in the request).
      * @type {number}
      * @memberof ApplicationLoadBalancerForwardingRules
@@ -67,11 +60,18 @@ export interface ApplicationLoadBalancerForwardingRules {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof ApplicationLoadBalancerForwardingRules
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof ApplicationLoadBalancerForwardingRules
+     */
+    type?: Type;
 }
 
 

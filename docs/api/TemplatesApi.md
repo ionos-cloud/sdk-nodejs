@@ -4,17 +4,17 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**templatesFindById**](TemplatesApi.md#templatesfindbyid) | **GET** /templates/{templateId} | Retrieve Cubes Templates |
-| [**templatesGet**](TemplatesApi.md#templatesget) | **GET** /templates | List Cubes Templates |
+| [**templatesFindById**](TemplatesApi.md#templatesfindbyid) | **GET** /templates/{templateId} | Get Cubes Template by ID |
+| [**templatesGet**](TemplatesApi.md#templatesget) | **GET** /templates | Get Cubes Templates |
 
 
 ## templatesFindById
 
 > <Template> templatesFindById(templateId, opts)
 
-Retrieve Cubes Templates
+Get Cubes Template by ID
 
-Retrieve the properties of the specified Cubes Template.  This operation is only supported for the Cubes.
+Retrieves the properties of the Cubes template specified by its ID.
 
 ### Examples
 
@@ -27,7 +27,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TemplatesApi(config);
-// Retrieve Cubes Templates
+// Get Cubes Template by ID
 api_instance
   .templatesFindById({
     templateId: templateId_example,
@@ -42,7 +42,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **templateId** | **string** | The unique Template ID. | [default to undefined] |
+| **templateId** | **string** | The unique template ID. | [default to undefined] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 
 ### Return type
@@ -63,9 +63,9 @@ Basic Authentication, Token Authentication
 
 > <Templates> templatesGet(opts)
 
-List Cubes Templates
+Get Cubes Templates
 
-List all of the available Cubes Templates.  This operation is only supported for the Cubes.
+Retrieves all available templates.  Templates provide a pre-defined configuration for Cube servers.    >Templates are read-only and cannot be created, modified, or deleted by users.
 
 ### Examples
 
@@ -80,7 +80,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.TemplatesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List Cubes Templates
+// Get Cubes Templates
 api_instance
   .templatesGet({
     depth: 56

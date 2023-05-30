@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**imagesFindById**](ImagesApi.md#imagesfindbyid) | **GET** /images/{imageId} | Retrieve images |
 | [**imagesGet**](ImagesApi.md#imagesget) | **GET** /images | List images |
 | [**imagesPatch**](ImagesApi.md#imagespatch) | **PATCH** /images/{imageId} | Partially modify images |
-| [**imagesPut**](ImagesApi.md#imagesput) | **PUT** /images/{imageId} | Modify images |
+| [**imagesPut**](ImagesApi.md#imagesput) | **PUT** /images/{imageId} | Modify an Image by ID |
 
 
 ## imagesDelete
@@ -240,9 +240,9 @@ Basic Authentication, Token Authentication
 
 > <Image> imagesPut(imageId, image, opts)
 
-Modify images
+Modify an Image by ID
 
-Modify the properties of the specified image.
+Modifies the properties of the specified image.
 
 ### Examples
 
@@ -255,7 +255,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ImagesApi(config);
-// Modify images
+// Modify an Image by ID
 api_instance
   .imagesPut({
     imageId: imageId_example,

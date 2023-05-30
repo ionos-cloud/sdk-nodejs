@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface NetworkLoadBalancerForwardingRule {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof NetworkLoadBalancerForwardingRule
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NetworkLoadBalancerForwardingRule
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRule
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NetworkLoadBalancerForwardingRule
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface NetworkLoadBalancerForwardingRule {
      * @memberof NetworkLoadBalancerForwardingRule
      */
     properties: NetworkLoadBalancerForwardingRuleProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NetworkLoadBalancerForwardingRule
+     */
+    type?: Type;
 }
 
 

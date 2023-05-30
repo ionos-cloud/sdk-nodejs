@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface LanNics {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof LanNics
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof LanNics
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface LanNics {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof LanNics
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Nic>}
      * @memberof LanNics
      */
     items?: Array<Nic>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof LanNics
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface LanNics {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof LanNics
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof LanNics
+     */
+    type?: Type;
 }
 
 

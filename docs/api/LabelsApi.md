@@ -7,30 +7,30 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersLabelsDelete**](LabelsApi.md#datacenterslabelsdelete) | **DELETE** /datacenters/{datacenterId}/labels/{key} | Delete data center labels |
 | [**datacentersLabelsFindByKey**](LabelsApi.md#datacenterslabelsfindbykey) | **GET** /datacenters/{datacenterId}/labels/{key} | Retrieve data center labels |
 | [**datacentersLabelsGet**](LabelsApi.md#datacenterslabelsget) | **GET** /datacenters/{datacenterId}/labels | List data center labels |
-| [**datacentersLabelsPost**](LabelsApi.md#datacenterslabelspost) | **POST** /datacenters/{datacenterId}/labels | Create data center labels |
-| [**datacentersLabelsPut**](LabelsApi.md#datacenterslabelsput) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify data center labels |
+| [**datacentersLabelsPost**](LabelsApi.md#datacenterslabelspost) | **POST** /datacenters/{datacenterId}/labels | Create a Data Center Label |
+| [**datacentersLabelsPut**](LabelsApi.md#datacenterslabelsput) | **PUT** /datacenters/{datacenterId}/labels/{key} | Modify a Data Center Label by Key |
 | [**datacentersServersLabelsDelete**](LabelsApi.md#datacentersserverslabelsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete server labels |
 | [**datacentersServersLabelsFindByKey**](LabelsApi.md#datacentersserverslabelsfindbykey) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve server labels |
 | [**datacentersServersLabelsGet**](LabelsApi.md#datacentersserverslabelsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/labels | List server labels |
-| [**datacentersServersLabelsPost**](LabelsApi.md#datacentersserverslabelspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Create server labels |
-| [**datacentersServersLabelsPut**](LabelsApi.md#datacentersserverslabelsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify server labels |
+| [**datacentersServersLabelsPost**](LabelsApi.md#datacentersserverslabelspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/labels | Create a Server Label |
+| [**datacentersServersLabelsPut**](LabelsApi.md#datacentersserverslabelsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Server Label |
 | [**datacentersVolumesLabelsDelete**](LabelsApi.md#datacentersvolumeslabelsdelete) | **DELETE** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete volume labels |
 | [**datacentersVolumesLabelsFindByKey**](LabelsApi.md#datacentersvolumeslabelsfindbykey) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve volume labels |
 | [**datacentersVolumesLabelsGet**](LabelsApi.md#datacentersvolumeslabelsget) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels |
-| [**datacentersVolumesLabelsPost**](LabelsApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create volume labels |
-| [**datacentersVolumesLabelsPut**](LabelsApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify volume labels |
+| [**datacentersVolumesLabelsPost**](LabelsApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create a Volume Label |
+| [**datacentersVolumesLabelsPut**](LabelsApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Volume Label |
 | [**ipblocksLabelsDelete**](LabelsApi.md#ipblockslabelsdelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels |
 | [**ipblocksLabelsFindByKey**](LabelsApi.md#ipblockslabelsfindbykey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels |
 | [**ipblocksLabelsGet**](LabelsApi.md#ipblockslabelsget) | **GET** /ipblocks/{ipblockId}/labels | List IP block labels |
 | [**ipblocksLabelsPost**](LabelsApi.md#ipblockslabelspost) | **POST** /ipblocks/{ipblockId}/labels | Create IP block labels |
-| [**ipblocksLabelsPut**](LabelsApi.md#ipblockslabelsput) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify IP block labels |
+| [**ipblocksLabelsPut**](LabelsApi.md#ipblockslabelsput) | **PUT** /ipblocks/{ipblockId}/labels/{key} | Modify a IP Block Label by ID |
 | [**labelsFindByUrn**](LabelsApi.md#labelsfindbyurn) | **GET** /labels/{labelurn} | Retrieve labels by URN |
 | [**labelsGet**](LabelsApi.md#labelsget) | **GET** /labels | List labels  |
 | [**snapshotsLabelsDelete**](LabelsApi.md#snapshotslabelsdelete) | **DELETE** /snapshots/{snapshotId}/labels/{key} | Delete snapshot labels |
 | [**snapshotsLabelsFindByKey**](LabelsApi.md#snapshotslabelsfindbykey) | **GET** /snapshots/{snapshotId}/labels/{key} | Retrieve snapshot labels |
 | [**snapshotsLabelsGet**](LabelsApi.md#snapshotslabelsget) | **GET** /snapshots/{snapshotId}/labels | List snapshot labels |
-| [**snapshotsLabelsPost**](LabelsApi.md#snapshotslabelspost) | **POST** /snapshots/{snapshotId}/labels | Create snapshot labels |
-| [**snapshotsLabelsPut**](LabelsApi.md#snapshotslabelsput) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify snapshot labels |
+| [**snapshotsLabelsPost**](LabelsApi.md#snapshotslabelspost) | **POST** /snapshots/{snapshotId}/labels | Create a Snapshot Label |
+| [**snapshotsLabelsPut**](LabelsApi.md#snapshotslabelsput) | **PUT** /snapshots/{snapshotId}/labels/{key} | Modify a Snapshot Label by ID |
 
 
 ## datacentersLabelsDelete
@@ -211,9 +211,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersLabelsPost(datacenterId, label, opts)
 
-Create data center labels
+Create a Data Center Label
 
-Add a new label to the specified data center.
+Adds a new label to the specified data center.
 
 ### Examples
 
@@ -226,7 +226,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Create data center labels
+// Create a Data Center Label
 api_instance
   .datacentersLabelsPost({
     datacenterId: datacenterId_example,
@@ -268,9 +268,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersLabelsPut(datacenterId, key, label, opts)
 
-Modify data center labels
+Modify a Data Center Label by Key
 
-Modify the specified data center label.
+Modifies the specified data center label.
 
 ### Examples
 
@@ -283,7 +283,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify data center labels
+// Modify a Data Center Label by Key
 api_instance
   .datacentersLabelsPut({
     datacenterId: datacenterId_example,
@@ -507,9 +507,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersServersLabelsPost(datacenterId, serverId, label, opts)
 
-Create server labels
+Create a Server Label
 
-Add a new label to the specified server.
+Adds a new label to the specified server.
 
 ### Examples
 
@@ -522,7 +522,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Create server labels
+// Create a Server Label
 api_instance
   .datacentersServersLabelsPost({
     datacenterId: datacenterId_example,
@@ -566,9 +566,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersServersLabelsPut(datacenterId, serverId, key, label, opts)
 
-Modify server labels
+Modify a Server Label
 
-Modify the specified server label.
+Modifies the specified server label.
 
 ### Examples
 
@@ -581,7 +581,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify server labels
+// Modify a Server Label
 api_instance
   .datacentersServersLabelsPut({
     datacenterId: datacenterId_example,
@@ -807,9 +807,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersVolumesLabelsPost(datacenterId, volumeId, label, opts)
 
-Create volume labels
+Create a Volume Label
 
-Add a new label to the specified volume.
+Adds a new label to the specified volume.
 
 ### Examples
 
@@ -822,7 +822,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Create volume labels
+// Create a Volume Label
 api_instance
   .datacentersVolumesLabelsPost({
     datacenterId: datacenterId_example,
@@ -866,9 +866,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, opts)
 
-Modify volume labels
+Modify a Volume Label
 
-Modify the specified volume label.
+Modifies the specified volume label.
 
 ### Examples
 
@@ -881,7 +881,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify volume labels
+// Modify a Volume Label
 api_instance
   .datacentersVolumesLabelsPut({
     datacenterId: datacenterId_example,
@@ -1158,9 +1158,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> ipblocksLabelsPut(ipblockId, key, label, opts)
 
-Modify IP block labels
+Modify a IP Block Label by ID
 
-Modify the specified IP block label.
+Modifies the specified IP block label.
 
 ### Examples
 
@@ -1173,7 +1173,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify IP block labels
+// Modify a IP Block Label by ID
 api_instance
   .ipblocksLabelsPut({
     ipblockId: ipblockId_example,
@@ -1504,9 +1504,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> snapshotsLabelsPost(snapshotId, label, opts)
 
-Create snapshot labels
+Create a Snapshot Label
 
-Add a new label to the specified snapshot.
+Adds a new label to the specified snapshot.
 
 ### Examples
 
@@ -1519,7 +1519,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Create snapshot labels
+// Create a Snapshot Label
 api_instance
   .snapshotsLabelsPost({
     snapshotId: snapshotId_example,
@@ -1561,9 +1561,9 @@ Basic Authentication, Token Authentication
 
 > <LabelResource> snapshotsLabelsPut(snapshotId, key, label, opts)
 
-Modify snapshot labels
+Modify a Snapshot Label by ID
 
-Modify the specified snapshot label.
+Modifies the specified snapshot label.
 
 ### Examples
 
@@ -1576,7 +1576,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LabelsApi(config);
-// Modify snapshot labels
+// Modify a Snapshot Label by ID
 api_instance
   .snapshotsLabelsPut({
     snapshotId: snapshotId_example,

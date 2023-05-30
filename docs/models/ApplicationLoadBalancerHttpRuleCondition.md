@@ -3,10 +3,10 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **type** | **string** | Type of the HTTP rule condition. | [default to undefined] |
-| **condition** | **string** | Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP. | [default to undefined] |
-| **negate** | **boolean** | Specifies whether the condition is negated or not; the default is False. | [optional] [default to undefined] |
-| **key** | **string** | Must be null when type is PATH, METHOD, HOST, or SOURCE_IP. Key can only be set when type is COOKIES, HEADER, or QUERY. | [optional] [default to undefined] |
-| **value** | **string** | Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH, ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR if provided and if type is SOURCE_IP. | [optional] [default to undefined] |
+| **condition** | **string** | The matching rule for the HTTP rule condition attribute; this parameter is mandatory for \'HEADER\', \'PATH\', \'QUERY\', \'METHOD\', \'HOST\', and \'COOKIE\' types. It must be \'null\' if the type is \'SOURCE_IP\'. | [default to undefined] |
+| **key** | **string** | The key can only be set when the HTTP rule condition type is \'COOKIES\', \'HEADER\', or \'QUERY\'. For the type \'PATH\', \'METHOD\', \'HOST\', or \'SOURCE_IP\' the value must be \'null\'. | [optional] [default to undefined] |
+| **negate** | **boolean** | Specifies whether the condition should be negated; the default value is \'FALSE\'. | [optional] [default to undefined] |
+| **type** | **string** | The HTTP rule condition type. | [default to undefined] |
+| **value** | **string** | This parameter is mandatory for the conditions \'CONTAINS\', \'EQUALS\', \'MATCHES\', \'STARTS_WITH\', \'ENDS_WITH\', or if the type is \'SOURCE_IP\'. Specify a valid CIDR. If the condition is \'EXISTS\', the value must be \'null\'. | [optional] [default to undefined] |
 
 

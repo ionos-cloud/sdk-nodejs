@@ -45,8 +45,8 @@ import { KubernetesNodes } from '../model';
 export const KubernetesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Delete the specified Kubernetes cluster.
-         * @summary Delete Kubernetes clusters
+         * Deletes the K8s cluster specified  by its ID.
+         * @summary Delete a Kubernetes Cluster by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -127,9 +127,9 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve the specified Kubernetes cluster.
-         * @summary Retrieve Kubernetes clusters
-         * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
+         * Retrieves the K8s cluster specified by its ID.
+         * @summary Get a Kubernetes Cluster by ID
+         * @param {string} k8sClusterId The unique ID of the K8s cluster to be retrieved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -209,8 +209,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * List all available Kubernetes clusters.
-         * @summary List Kubernetes clusters
+         * Retrieves a list of all K8s clusters provisioned under your account.
+         * @summary Get Kubernetes Clusters
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -302,8 +302,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
-         * @summary Retrieve Kubernetes configuration files
+         * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, \'application/yaml\' is specified.
+         * @summary Get Kubernetes Configuration File
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -400,8 +400,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Delete the specified Kubernetes node pool.
-         * @summary Delete Kubernetes node pools
+         * Deletes the K8s node pool specified by its ID.
+         * @summary Delete a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -487,8 +487,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve the specified Kubernetes node pool.
-         * @summary Retrieve Kubernetes node pools
+         * Retrieves the K8s node pool specified by its ID.
+         * @summary Get a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -574,8 +574,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * List all Kubernetes node pools, included the specified Kubernetes cluster.
-         * @summary List Kubernetes node pools
+         * Retrieves a list of K8s node pools of a cluster specified by its ID.
+         * @summary Get Kubernetes Node Pools
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -672,8 +672,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Delete the specified Kubernetes node.
-         * @summary Delete Kubernetes nodes
+         * Deletes the K8s node specified by its ID.
+         * @summary Delete a Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -764,8 +764,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve the specified Kubernetes node.
-         * @summary Retrieve Kubernetes nodes
+         * Retrieves the K8s node specified by its ID.
+         * @summary Get Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -856,8 +856,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * List all the nodes, included in the specified Kubernetes node pool.
-         * @summary List Kubernetes nodes
+         * Retrieves the list of all K8s nodes of the specified node pool.
+         * @summary Get Kubernetes Nodes
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -959,8 +959,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.
-         * @summary Recreate Kubernetes nodes
+         * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is \'Active,\' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable \'active\' node during this process.
+         * @summary Recreate a Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -1051,8 +1051,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Create a Kubernetes node pool inside the specified Kubernetes cluster.
-         * @summary Create Kubernetes node pools
+         * Creates a node pool inside the specified K8s cluster.
+         * @summary Create a Kubernetes Node Pool
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {KubernetesNodePoolForPost} kubernetesNodePool The Kubernetes node pool to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1144,8 +1144,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Modify the specified Kubernetes node pool.
-         * @summary Modify Kubernetes node pools
+         * Modifies the K8s node pool specified by its ID.
+         * @summary Modify a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {KubernetesNodePoolForPut} kubernetesNodePool Details of the Kubernetes Node Pool
@@ -1242,8 +1242,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Create a Kubernetes cluster.
-         * @summary Create Kubernetes clusters
+         * Creates a K8s cluster provisioned under your account.
+         * @summary Create a Kubernetes Cluster
          * @param {KubernetesClusterForPost} kubernetesCluster The Kubernetes cluster to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1330,8 +1330,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Modify the specified Kubernetes cluster.
-         * @summary Modify Kubernetes clusters
+         * Modifies the K8s cluster specified by its ID.
+         * @summary Modify a Kubernetes Cluster by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {KubernetesClusterForPut} kubernetesCluster The modified Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1423,8 +1423,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve current default Kubernetes version for clusters and nodepools.
-         * @summary Retrieve current default Kubernetes version
+         * Retrieves the current default K8s version to be used by the clusters and node pools.
+         * @summary Get Default Kubernetes Version
          * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
          * @param {number} [maxResults] - Limits the number of results returned.
          * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -1492,8 +1492,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * List available Kubernetes versions.
-         * @summary List Kubernetes versions
+         * Lists available K8s versions.
+         * @summary Get Kubernetes Versions
          * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
          * @param {number} [maxResults] - Limits the number of results returned.
          * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -1570,8 +1570,8 @@ export const KubernetesApiAxiosParamCreator = function (configuration?: Configur
 export const KubernetesApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Delete the specified Kubernetes cluster.
-         * @summary Delete Kubernetes clusters
+         * Deletes the K8s cluster specified  by its ID.
+         * @summary Delete a Kubernetes Cluster by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1585,9 +1585,9 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the specified Kubernetes cluster.
-         * @summary Retrieve Kubernetes clusters
-         * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
+         * Retrieves the K8s cluster specified by its ID.
+         * @summary Get a Kubernetes Cluster by ID
+         * @param {string} k8sClusterId The unique ID of the K8s cluster to be retrieved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1600,8 +1600,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all available Kubernetes clusters.
-         * @summary List Kubernetes clusters
+         * Retrieves a list of all K8s clusters provisioned under your account.
+         * @summary Get Kubernetes Clusters
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1616,8 +1616,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
-         * @summary Retrieve Kubernetes configuration files
+         * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, \'application/yaml\' is specified.
+         * @summary Get Kubernetes Configuration File
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1633,8 +1633,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Delete the specified Kubernetes node pool.
-         * @summary Delete Kubernetes node pools
+         * Deletes the K8s node pool specified by its ID.
+         * @summary Delete a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1649,8 +1649,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the specified Kubernetes node pool.
-         * @summary Retrieve Kubernetes node pools
+         * Retrieves the K8s node pool specified by its ID.
+         * @summary Get a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1665,8 +1665,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all Kubernetes node pools, included the specified Kubernetes cluster.
-         * @summary List Kubernetes node pools
+         * Retrieves a list of K8s node pools of a cluster specified by its ID.
+         * @summary Get Kubernetes Node Pools
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1682,8 +1682,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Delete the specified Kubernetes node.
-         * @summary Delete Kubernetes nodes
+         * Deletes the K8s node specified by its ID.
+         * @summary Delete a Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -1699,8 +1699,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the specified Kubernetes node.
-         * @summary Retrieve Kubernetes nodes
+         * Retrieves the K8s node specified by its ID.
+         * @summary Get Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -1716,8 +1716,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all the nodes, included in the specified Kubernetes node pool.
-         * @summary List Kubernetes nodes
+         * Retrieves the list of all K8s nodes of the specified node pool.
+         * @summary Get Kubernetes Nodes
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1734,8 +1734,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.
-         * @summary Recreate Kubernetes nodes
+         * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is \'Active,\' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable \'active\' node during this process.
+         * @summary Recreate a Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -1751,8 +1751,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a Kubernetes node pool inside the specified Kubernetes cluster.
-         * @summary Create Kubernetes node pools
+         * Creates a node pool inside the specified K8s cluster.
+         * @summary Create a Kubernetes Node Pool
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {KubernetesNodePoolForPost} kubernetesNodePool The Kubernetes node pool to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1767,8 +1767,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified Kubernetes node pool.
-         * @summary Modify Kubernetes node pools
+         * Modifies the K8s node pool specified by its ID.
+         * @summary Modify a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {KubernetesNodePoolForPut} kubernetesNodePool Details of the Kubernetes Node Pool
@@ -1784,8 +1784,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a Kubernetes cluster.
-         * @summary Create Kubernetes clusters
+         * Creates a K8s cluster provisioned under your account.
+         * @summary Create a Kubernetes Cluster
          * @param {KubernetesClusterForPost} kubernetesCluster The Kubernetes cluster to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1799,8 +1799,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified Kubernetes cluster.
-         * @summary Modify Kubernetes clusters
+         * Modifies the K8s cluster specified by its ID.
+         * @summary Modify a Kubernetes Cluster by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {KubernetesClusterForPut} kubernetesCluster The modified Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1815,8 +1815,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve current default Kubernetes version for clusters and nodepools.
-         * @summary Retrieve current default Kubernetes version
+         * Retrieves the current default K8s version to be used by the clusters and node pools.
+         * @summary Get Default Kubernetes Version
          * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
          * @param {number} [maxResults] - Limits the number of results returned.
          * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -1828,8 +1828,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List available Kubernetes versions.
-         * @summary List Kubernetes versions
+         * Lists available K8s versions.
+         * @summary Get Kubernetes Versions
          * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
          * @param {number} [maxResults] - Limits the number of results returned.
          * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
@@ -1850,8 +1850,8 @@ export const KubernetesApiFp = function(configuration?: Configuration) {
 export const KubernetesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Delete the specified Kubernetes cluster.
-         * @summary Delete Kubernetes clusters
+         * Deletes the K8s cluster specified  by its ID.
+         * @summary Delete a Kubernetes Cluster by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1863,9 +1863,9 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sDelete(k8sClusterId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the specified Kubernetes cluster.
-         * @summary Retrieve Kubernetes clusters
-         * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
+         * Retrieves the K8s cluster specified by its ID.
+         * @summary Get a Kubernetes Cluster by ID
+         * @param {string} k8sClusterId The unique ID of the K8s cluster to be retrieved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1876,8 +1876,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sFindByClusterId(k8sClusterId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all available Kubernetes clusters.
-         * @summary List Kubernetes clusters
+         * Retrieves a list of all K8s clusters provisioned under your account.
+         * @summary Get Kubernetes Clusters
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1888,8 +1888,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sGet(pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
-         * @summary Retrieve Kubernetes configuration files
+         * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, \'application/yaml\' is specified.
+         * @summary Get Kubernetes Configuration File
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1901,8 +1901,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sKubeconfigGet(k8sClusterId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete the specified Kubernetes node pool.
-         * @summary Delete Kubernetes node pools
+         * Deletes the K8s node pool specified by its ID.
+         * @summary Delete a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1915,8 +1915,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsDelete(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the specified Kubernetes node pool.
-         * @summary Retrieve Kubernetes node pools
+         * Retrieves the K8s node pool specified by its ID.
+         * @summary Get a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1929,8 +1929,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsFindById(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all Kubernetes node pools, included the specified Kubernetes cluster.
-         * @summary List Kubernetes node pools
+         * Retrieves a list of K8s node pools of a cluster specified by its ID.
+         * @summary Get Kubernetes Node Pools
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1942,8 +1942,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsGet(k8sClusterId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete the specified Kubernetes node.
-         * @summary Delete Kubernetes nodes
+         * Deletes the K8s node specified by its ID.
+         * @summary Delete a Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -1957,8 +1957,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the specified Kubernetes node.
-         * @summary Retrieve Kubernetes nodes
+         * Retrieves the K8s node specified by its ID.
+         * @summary Get Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -1972,8 +1972,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all the nodes, included in the specified Kubernetes node pool.
-         * @summary List Kubernetes nodes
+         * Retrieves the list of all K8s nodes of the specified node pool.
+         * @summary Get Kubernetes Nodes
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1986,8 +1986,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.
-         * @summary Recreate Kubernetes nodes
+         * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is \'Active,\' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable \'active\' node during this process.
+         * @summary Recreate a Kubernetes Node by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {string} nodeId The unique ID of the Kubernetes node.
@@ -2001,8 +2001,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a Kubernetes node pool inside the specified Kubernetes cluster.
-         * @summary Create Kubernetes node pools
+         * Creates a node pool inside the specified K8s cluster.
+         * @summary Create a Kubernetes Node Pool
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {KubernetesNodePoolForPost} kubernetesNodePool The Kubernetes node pool to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2015,8 +2015,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified Kubernetes node pool.
-         * @summary Modify Kubernetes node pools
+         * Modifies the K8s node pool specified by its ID.
+         * @summary Modify a Kubernetes Node Pool by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {string} nodepoolId The unique ID of the Kubernetes node pool.
          * @param {KubernetesNodePoolForPut} kubernetesNodePool Details of the Kubernetes Node Pool
@@ -2030,8 +2030,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a Kubernetes cluster.
-         * @summary Create Kubernetes clusters
+         * Creates a K8s cluster provisioned under your account.
+         * @summary Create a Kubernetes Cluster
          * @param {KubernetesClusterForPost} kubernetesCluster The Kubernetes cluster to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -2043,8 +2043,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sPost(kubernetesCluster, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified Kubernetes cluster.
-         * @summary Modify Kubernetes clusters
+         * Modifies the K8s cluster specified by its ID.
+         * @summary Modify a Kubernetes Cluster by ID
          * @param {string} k8sClusterId The unique ID of the Kubernetes cluster.
          * @param {KubernetesClusterForPut} kubernetesCluster The modified Kubernetes cluster.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2057,8 +2057,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sPut(k8sClusterId, kubernetesCluster, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve current default Kubernetes version for clusters and nodepools.
-         * @summary Retrieve current default Kubernetes version
+         * Retrieves the current default K8s version to be used by the clusters and node pools.
+         * @summary Get Default Kubernetes Version
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2066,8 +2066,8 @@ export const KubernetesApiFactory = function (configuration?: Configuration, bas
             return KubernetesApiFp(configuration).k8sVersionsDefaultGet(options).then((request) => request(axios, basePath));
         },
         /**
-         * List available Kubernetes versions.
-         * @summary List Kubernetes versions
+         * Lists available K8s versions.
+         * @summary Get Kubernetes Versions
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
@@ -2119,7 +2119,7 @@ export interface KubernetesApiK8sDeleteRequest {
  */
 export interface KubernetesApiK8sFindByClusterIdRequest {
     /**
-     * The unique ID of the Kubernetes cluster.
+     * The unique ID of the K8s cluster to be retrieved.
      * @type {string}
      * @memberof KubernetesApiK8sFindByClusterId
      */
@@ -2766,8 +2766,8 @@ export interface KubernetesApiK8sPutRequest {
  */
 export class KubernetesApi extends BaseAPI {
     /**
-     * Delete the specified Kubernetes cluster.
-     * @summary Delete Kubernetes clusters
+     * Deletes the K8s cluster specified  by its ID.
+     * @summary Delete a Kubernetes Cluster by ID
      * @param {KubernetesApiK8sDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2778,8 +2778,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the specified Kubernetes cluster.
-     * @summary Retrieve Kubernetes clusters
+     * Retrieves the K8s cluster specified by its ID.
+     * @summary Get a Kubernetes Cluster by ID
      * @param {KubernetesApiK8sFindByClusterIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2790,8 +2790,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * List all available Kubernetes clusters.
-     * @summary List Kubernetes clusters
+     * Retrieves a list of all K8s clusters provisioned under your account.
+     * @summary Get Kubernetes Clusters
      * @param {KubernetesApiK8sGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2802,8 +2802,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
-     * @summary Retrieve Kubernetes configuration files
+     * Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, \'application/yaml\' is specified.
+     * @summary Get Kubernetes Configuration File
      * @param {KubernetesApiK8sKubeconfigGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2814,8 +2814,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Delete the specified Kubernetes node pool.
-     * @summary Delete Kubernetes node pools
+     * Deletes the K8s node pool specified by its ID.
+     * @summary Delete a Kubernetes Node Pool by ID
      * @param {KubernetesApiK8sNodepoolsDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2826,8 +2826,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the specified Kubernetes node pool.
-     * @summary Retrieve Kubernetes node pools
+     * Retrieves the K8s node pool specified by its ID.
+     * @summary Get a Kubernetes Node Pool by ID
      * @param {KubernetesApiK8sNodepoolsFindByIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2838,8 +2838,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * List all Kubernetes node pools, included the specified Kubernetes cluster.
-     * @summary List Kubernetes node pools
+     * Retrieves a list of K8s node pools of a cluster specified by its ID.
+     * @summary Get Kubernetes Node Pools
      * @param {KubernetesApiK8sNodepoolsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2850,8 +2850,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Delete the specified Kubernetes node.
-     * @summary Delete Kubernetes nodes
+     * Deletes the K8s node specified by its ID.
+     * @summary Delete a Kubernetes Node by ID
      * @param {KubernetesApiK8sNodepoolsNodesDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2862,8 +2862,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the specified Kubernetes node.
-     * @summary Retrieve Kubernetes nodes
+     * Retrieves the K8s node specified by its ID.
+     * @summary Get Kubernetes Node by ID
      * @param {KubernetesApiK8sNodepoolsNodesFindByIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2874,8 +2874,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * List all the nodes, included in the specified Kubernetes node pool.
-     * @summary List Kubernetes nodes
+     * Retrieves the list of all K8s nodes of the specified node pool.
+     * @summary Get Kubernetes Nodes
      * @param {KubernetesApiK8sNodepoolsNodesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2886,8 +2886,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.
-     * @summary Recreate Kubernetes nodes
+     * Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is \'Active,\' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable \'active\' node during this process.
+     * @summary Recreate a Kubernetes Node by ID
      * @param {KubernetesApiK8sNodepoolsNodesReplacePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2898,8 +2898,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Create a Kubernetes node pool inside the specified Kubernetes cluster.
-     * @summary Create Kubernetes node pools
+     * Creates a node pool inside the specified K8s cluster.
+     * @summary Create a Kubernetes Node Pool
      * @param {KubernetesApiK8sNodepoolsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2910,8 +2910,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified Kubernetes node pool.
-     * @summary Modify Kubernetes node pools
+     * Modifies the K8s node pool specified by its ID.
+     * @summary Modify a Kubernetes Node Pool by ID
      * @param {KubernetesApiK8sNodepoolsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2922,8 +2922,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Create a Kubernetes cluster.
-     * @summary Create Kubernetes clusters
+     * Creates a K8s cluster provisioned under your account.
+     * @summary Create a Kubernetes Cluster
      * @param {KubernetesApiK8sPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2934,8 +2934,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified Kubernetes cluster.
-     * @summary Modify Kubernetes clusters
+     * Modifies the K8s cluster specified by its ID.
+     * @summary Modify a Kubernetes Cluster by ID
      * @param {KubernetesApiK8sPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -2946,8 +2946,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * Retrieve current default Kubernetes version for clusters and nodepools.
-     * @summary Retrieve current default Kubernetes version
+     * Retrieves the current default K8s version to be used by the clusters and node pools.
+     * @summary Get Default Kubernetes Version
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KubernetesApi
@@ -2957,8 +2957,8 @@ export class KubernetesApi extends BaseAPI {
     }
 
     /**
-     * List available Kubernetes versions.
-     * @summary List Kubernetes versions
+     * Lists available K8s versions.
+     * @summary Get Kubernetes Versions
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      * @memberof KubernetesApi

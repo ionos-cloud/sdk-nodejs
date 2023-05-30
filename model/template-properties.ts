@@ -22,18 +22,18 @@
 export interface TemplateProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
-     * @memberof TemplateProperties
-     */
-    name: string;
-
-    /**
      * The CPU cores count.
      * @type {number}
      * @memberof TemplateProperties
      */
     cores: number;
+
+    /**
+     * The resource name.
+     * @type {string}
+     * @memberof TemplateProperties
+     */
+    name: string;
 
     /**
      * The RAM size in MB.

@@ -24,6 +24,13 @@ import { Type } from './type';
 export interface Templates {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof Templates
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof Templates
@@ -31,25 +38,18 @@ export interface Templates {
     id?: string;
 
     /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Templates
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof Templates
-     */
-    href?: string;
-
-    /**
      * Array of items in the collection.
      * @type {Array<Template>}
      * @memberof Templates
      */
     items?: Array<Template>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Templates
+     */
+    type?: Type;
 }
 
 

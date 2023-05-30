@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface BalancedNics {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof BalancedNics
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof BalancedNics
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface BalancedNics {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof BalancedNics
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Nic>}
      * @memberof BalancedNics
      */
     items?: Array<Nic>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof BalancedNics
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface BalancedNics {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof BalancedNics
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof BalancedNics
+     */
+    type?: Type;
 }
 
 

@@ -43,8 +43,8 @@ import { Volume } from '../model';
 export const ServersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Detach the specified CD-ROM from the server.
-         * @summary Detach CD-ROMs
+         * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
+         * @summary Detach a CD-ROM by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} cdromId The unique ID of the CD-ROM.
@@ -135,8 +135,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Retrieve the properties of the CD-ROM, attached to the specified server.
-         * @summary Retrieve attached CD-ROMs
+         * Retrieves the properties of the CD-ROM attached to the specified server.
+         * @summary Get Attached CD-ROM by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} cdromId The unique ID of the CD-ROM.
@@ -227,8 +227,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * List all CD-ROMs, attached to the specified server.
-         * @summary List attached CD-ROMs 
+         * Lists all CD-ROMs attached to the specified server.
+         * @summary Get Attached CD-ROMs 
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -346,8 +346,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
-         * @summary Attach CD-ROMs
+         * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
+         * @summary Attach a CD-ROM
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Image} cdrom The CD-ROM to be attached.
@@ -444,7 +444,7 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+         * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
          * @summary Delete servers
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
@@ -846,8 +846,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
-         * @summary Create servers
+         * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+         * @summary Create a Server
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Server} server The server to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -939,8 +939,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Modify the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
-         * @summary Modify servers
+         * Modifies the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
+         * @summary Modify a Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Server} server The modified server
@@ -1227,8 +1227,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
-         * @summary Resume Cubes instances
+         * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Resume a Cube Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1314,8 +1314,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Start the specified server within the data center; if the server\'s public IP address has been deallocated, a new IP address will be assigned.
-         * @summary Start servers
+         * Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server\'s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Start an Enterprise Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1401,8 +1401,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
-         * @summary Stop VMs
+         * Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Stop an Enterprise Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1488,8 +1488,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
-         * @summary Suspend Cubes instances
+         * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Suspend a Cube Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1678,8 +1678,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
-         * @summary Upgrade servers
+         * Upgrades the server version.
+         * @summary Upgrade a Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1765,8 +1765,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
-         * @summary Detach volumes
+         * Detachs the specified volume from the server.  Note that only the volume\'s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
+         * @summary Detach a Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} volumeId The unique ID of the volume.
@@ -1857,8 +1857,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Retrieve the properties of the volume, attached to the specified server.
-         * @summary Retrieve attached volumes
+         * Retrieves the properties of the volume attached to the specified server.
+         * @summary Get Attached Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} volumeId The unique ID of the volume.
@@ -1949,8 +1949,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * List all volumes, attached to the specified server.
-         * @summary List attached volumes
+         * Lists all volumes attached to the specified server.
+         * @summary Get Attached Volumes
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2068,8 +2068,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
-         * @summary Attach volumes
+         * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see \'Creating a Volume\' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
+         * @summary Attach a Volume to a Server
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Volume} volume The volume to be attached (or created and attached).
@@ -2175,8 +2175,8 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
 export const ServersApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Detach the specified CD-ROM from the server.
-         * @summary Detach CD-ROMs
+         * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
+         * @summary Detach a CD-ROM by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} cdromId The unique ID of the CD-ROM.
@@ -2192,8 +2192,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the properties of the CD-ROM, attached to the specified server.
-         * @summary Retrieve attached CD-ROMs
+         * Retrieves the properties of the CD-ROM attached to the specified server.
+         * @summary Get Attached CD-ROM by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} cdromId The unique ID of the CD-ROM.
@@ -2209,8 +2209,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all CD-ROMs, attached to the specified server.
-         * @summary List attached CD-ROMs 
+         * Lists all CD-ROMs attached to the specified server.
+         * @summary Get Attached CD-ROMs 
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2229,8 +2229,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
-         * @summary Attach CD-ROMs
+         * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
+         * @summary Attach a CD-ROM
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Image} cdrom The CD-ROM to be attached.
@@ -2246,7 +2246,7 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+         * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
          * @summary Delete servers
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
@@ -2316,8 +2316,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
-         * @summary Create servers
+         * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+         * @summary Create a Server
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Server} server The server to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2332,8 +2332,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
-         * @summary Modify servers
+         * Modifies the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
+         * @summary Modify a Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Server} server The modified server
@@ -2383,8 +2383,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
-         * @summary Resume Cubes instances
+         * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Resume a Cube Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2399,8 +2399,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Start the specified server within the data center; if the server\'s public IP address has been deallocated, a new IP address will be assigned.
-         * @summary Start servers
+         * Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server\'s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Start an Enterprise Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2415,8 +2415,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
-         * @summary Stop VMs
+         * Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Stop an Enterprise Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2431,8 +2431,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
-         * @summary Suspend Cubes instances
+         * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Suspend a Cube Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2465,8 +2465,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
-         * @summary Upgrade servers
+         * Upgrades the server version.
+         * @summary Upgrade a Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2481,8 +2481,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
-         * @summary Detach volumes
+         * Detachs the specified volume from the server.  Note that only the volume\'s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
+         * @summary Detach a Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} volumeId The unique ID of the volume.
@@ -2498,8 +2498,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the properties of the volume, attached to the specified server.
-         * @summary Retrieve attached volumes
+         * Retrieves the properties of the volume attached to the specified server.
+         * @summary Get Attached Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} volumeId The unique ID of the volume.
@@ -2515,8 +2515,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all volumes, attached to the specified server.
-         * @summary List attached volumes
+         * Lists all volumes attached to the specified server.
+         * @summary Get Attached Volumes
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2535,8 +2535,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
-         * @summary Attach volumes
+         * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see \'Creating a Volume\' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
+         * @summary Attach a Volume to a Server
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Volume} volume The volume to be attached (or created and attached).
@@ -2561,8 +2561,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
 export const ServersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Detach the specified CD-ROM from the server.
-         * @summary Detach CD-ROMs
+         * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
+         * @summary Detach a CD-ROM by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} cdromId The unique ID of the CD-ROM.
@@ -2576,8 +2576,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersCdromsDelete(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the properties of the CD-ROM, attached to the specified server.
-         * @summary Retrieve attached CD-ROMs
+         * Retrieves the properties of the CD-ROM attached to the specified server.
+         * @summary Get Attached CD-ROM by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} cdromId The unique ID of the CD-ROM.
@@ -2591,8 +2591,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersCdromsFindById(datacenterId, serverId, cdromId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all CD-ROMs, attached to the specified server.
-         * @summary List attached CD-ROMs 
+         * Lists all CD-ROMs attached to the specified server.
+         * @summary Get Attached CD-ROMs 
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2607,8 +2607,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersCdromsGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
-         * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
-         * @summary Attach CD-ROMs
+         * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
+         * @summary Attach a CD-ROM
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Image} cdrom The CD-ROM to be attached.
@@ -2622,7 +2622,7 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersCdromsPost(datacenterId, serverId, cdrom, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+         * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
          * @summary Delete servers
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
@@ -2682,8 +2682,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersPatch(datacenterId, serverId, server, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
-         * @summary Create servers
+         * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+         * @summary Create a Server
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Server} server The server to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2696,8 +2696,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersPost(datacenterId, server, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
-         * @summary Modify servers
+         * Modifies the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
+         * @summary Modify a Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Server} server The modified server
@@ -2739,8 +2739,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersRemoteConsoleGet(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
-         * @summary Resume Cubes instances
+         * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Resume a Cube Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2753,8 +2753,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersResumePost(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Start the specified server within the data center; if the server\'s public IP address has been deallocated, a new IP address will be assigned.
-         * @summary Start servers
+         * Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server\'s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Start an Enterprise Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2767,8 +2767,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersStartPost(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
-         * @summary Stop VMs
+         * Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Stop an Enterprise Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2781,8 +2781,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersStopPost(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
-         * @summary Suspend Cubes instances
+         * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+         * @summary Suspend a Cube Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2809,8 +2809,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersTokenGet(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
-         * @summary Upgrade servers
+         * Upgrades the server version.
+         * @summary Upgrade a Server by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2823,8 +2823,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersUpgradePost(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
-         * @summary Detach volumes
+         * Detachs the specified volume from the server.  Note that only the volume\'s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
+         * @summary Detach a Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} volumeId The unique ID of the volume.
@@ -2838,8 +2838,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersVolumesDelete(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the properties of the volume, attached to the specified server.
-         * @summary Retrieve attached volumes
+         * Retrieves the properties of the volume attached to the specified server.
+         * @summary Get Attached Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} volumeId The unique ID of the volume.
@@ -2853,8 +2853,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersVolumesFindById(datacenterId, serverId, volumeId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all volumes, attached to the specified server.
-         * @summary List attached volumes
+         * Lists all volumes attached to the specified server.
+         * @summary Get Attached Volumes
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2869,8 +2869,8 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
             return ServersApiFp(configuration).datacentersServersVolumesGet(datacenterId, serverId, pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
-         * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
-         * @summary Attach volumes
+         * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see \'Creating a Volume\' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
+         * @summary Attach a Volume to a Server
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Volume} volume The volume to be attached (or created and attached).
@@ -4013,8 +4013,8 @@ export interface ServersApiDatacentersServersVolumesPostRequest {
  */
 export class ServersApi extends BaseAPI {
     /**
-     * Detach the specified CD-ROM from the server.
-     * @summary Detach CD-ROMs
+     * Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
+     * @summary Detach a CD-ROM by ID
      * @param {ServersApiDatacentersServersCdromsDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4025,8 +4025,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the properties of the CD-ROM, attached to the specified server.
-     * @summary Retrieve attached CD-ROMs
+     * Retrieves the properties of the CD-ROM attached to the specified server.
+     * @summary Get Attached CD-ROM by ID
      * @param {ServersApiDatacentersServersCdromsFindByIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4037,8 +4037,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * List all CD-ROMs, attached to the specified server.
-     * @summary List attached CD-ROMs 
+     * Lists all CD-ROMs attached to the specified server.
+     * @summary Get Attached CD-ROMs 
      * @param {ServersApiDatacentersServersCdromsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4049,8 +4049,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
-     * @summary Attach CD-ROMs
+     * Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
+     * @summary Attach a CD-ROM
      * @param {ServersApiDatacentersServersCdromsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4061,7 +4061,7 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+     * Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
      * @summary Delete servers
      * @param {ServersApiDatacentersServersDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
@@ -4109,8 +4109,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
-     * @summary Create servers
+     * Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+     * @summary Create a Server
      * @param {ServersApiDatacentersServersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4121,8 +4121,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
-     * @summary Modify servers
+     * Modifies the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
+     * @summary Modify a Server by ID
      * @param {ServersApiDatacentersServersPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4157,8 +4157,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
-     * @summary Resume Cubes instances
+     * Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+     * @summary Resume a Cube Server by ID
      * @param {ServersApiDatacentersServersResumePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4169,8 +4169,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Start the specified server within the data center; if the server\'s public IP address has been deallocated, a new IP address will be assigned.
-     * @summary Start servers
+     * Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server\'s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+     * @summary Start an Enterprise Server by ID
      * @param {ServersApiDatacentersServersStartPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4181,8 +4181,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
-     * @summary Stop VMs
+     * Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+     * @summary Stop an Enterprise Server by ID
      * @param {ServersApiDatacentersServersStopPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4193,8 +4193,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
-     * @summary Suspend Cubes instances
+     * Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
+     * @summary Suspend a Cube Server by ID
      * @param {ServersApiDatacentersServersSuspendPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4217,8 +4217,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
-     * @summary Upgrade servers
+     * Upgrades the server version.
+     * @summary Upgrade a Server by ID
      * @param {ServersApiDatacentersServersUpgradePostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4229,8 +4229,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
-     * @summary Detach volumes
+     * Detachs the specified volume from the server.  Note that only the volume\'s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
+     * @summary Detach a Volume by ID
      * @param {ServersApiDatacentersServersVolumesDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4241,8 +4241,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the properties of the volume, attached to the specified server.
-     * @summary Retrieve attached volumes
+     * Retrieves the properties of the volume attached to the specified server.
+     * @summary Get Attached Volume by ID
      * @param {ServersApiDatacentersServersVolumesFindByIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4253,8 +4253,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * List all volumes, attached to the specified server.
-     * @summary List attached volumes
+     * Lists all volumes attached to the specified server.
+     * @summary Get Attached Volumes
      * @param {ServersApiDatacentersServersVolumesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4265,8 +4265,8 @@ export class ServersApi extends BaseAPI {
     }
 
     /**
-     * Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
-     * @summary Attach volumes
+     * Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see \'Creating a Volume\' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
+     * @summary Attach a Volume to a Server
      * @param {ServersApiDatacentersServersVolumesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

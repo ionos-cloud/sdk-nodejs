@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface IpBlocks {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof IpBlocks
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof IpBlocks
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface IpBlocks {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof IpBlocks
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<IpBlock>}
      * @memberof IpBlocks
      */
     items?: Array<IpBlock>;
-
-    /**
-     * The offset, specified in the request (if not is specified, 0 is used by default).
-     * @type {number}
-     * @memberof IpBlocks
-     */
-    offset?: number;
 
     /**
      * The limit, specified in the request (if not specified, the endpoint\'s default pagination limit is used).
@@ -67,11 +60,18 @@ export interface IpBlocks {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset, specified in the request (if not is specified, 0 is used by default).
+     * @type {number}
      * @memberof IpBlocks
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof IpBlocks
+     */
+    type?: Type;
 }
 
 

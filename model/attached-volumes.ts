@@ -25,25 +25,25 @@ import { Volume } from './volume';
 export interface AttachedVolumes {
 
     /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof AttachedVolumes
+     */
+    _links?: PaginationLinks;
+
+    /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof AttachedVolumes
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof AttachedVolumes
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof AttachedVolumes
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof AttachedVolumes
-     */
-    href?: string;
 
     /**
      * Array of items in the collection.
@@ -53,13 +53,6 @@ export interface AttachedVolumes {
     items?: Array<Volume>;
 
     /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof AttachedVolumes
-     */
-    offset?: number;
-
-    /**
      * The limit (if specified in the request).
      * @type {number}
      * @memberof AttachedVolumes
@@ -67,11 +60,18 @@ export interface AttachedVolumes {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof AttachedVolumes
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof AttachedVolumes
+     */
+    type?: Type;
 }
 
 

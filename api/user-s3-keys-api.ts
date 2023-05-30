@@ -385,8 +385,8 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Enable or disable the specified user S3 key.
-         * @summary Modify S3 keys by key ID
+         * Enables or disables the specified user S3 key.
+         * @summary Modify a S3 Key by Key ID
          * @param {string} userId The unique ID of the user.
          * @param {string} keyId The unique ID of the S3 key.
          * @param {S3Key} s3Key The modified S3 key.
@@ -646,8 +646,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Enable or disable the specified user S3 key.
-         * @summary Modify S3 keys by key ID
+         * Enables or disables the specified user S3 key.
+         * @summary Modify a S3 Key by Key ID
          * @param {string} userId The unique ID of the user.
          * @param {string} keyId The unique ID of the S3 key.
          * @param {S3Key} s3Key The modified S3 key.
@@ -742,8 +742,8 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
             return UserS3KeysApiFp(configuration).umUsersS3keysPost(userId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Enable or disable the specified user S3 key.
-         * @summary Modify S3 keys by key ID
+         * Enables or disables the specified user S3 key.
+         * @summary Modify a S3 Key by Key ID
          * @param {string} userId The unique ID of the user.
          * @param {string} keyId The unique ID of the S3 key.
          * @param {S3Key} s3Key The modified S3 key.
@@ -1094,8 +1094,8 @@ export class UserS3KeysApi extends BaseAPI {
     }
 
     /**
-     * Enable or disable the specified user S3 key.
-     * @summary Modify S3 keys by key ID
+     * Enables or disables the specified user S3 key.
+     * @summary Modify a S3 Key by Key ID
      * @param {UserS3KeysApiUmUsersS3keysPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

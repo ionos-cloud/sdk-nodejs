@@ -4,21 +4,21 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**targetGroupsDelete**](TargetGroupsApi.md#targetgroupsdelete) | **DELETE** /targetgroups/{targetGroupId} | Remove target groups |
-| [**targetgroupsFindByTargetGroupId**](TargetGroupsApi.md#targetgroupsfindbytargetgroupid) | **GET** /targetgroups/{targetGroupId} | Retrieve target groups |
-| [**targetgroupsGet**](TargetGroupsApi.md#targetgroupsget) | **GET** /targetgroups | List target groups |
-| [**targetgroupsPatch**](TargetGroupsApi.md#targetgroupspatch) | **PATCH** /targetgroups/{targetGroupId} | Partially modify target groups |
-| [**targetgroupsPost**](TargetGroupsApi.md#targetgroupspost) | **POST** /targetgroups | Create target groups |
-| [**targetgroupsPut**](TargetGroupsApi.md#targetgroupsput) | **PUT** /targetgroups/{targetGroupId} | Modify target groups |
+| [**targetGroupsDelete**](TargetGroupsApi.md#targetgroupsdelete) | **DELETE** /targetgroups/{targetGroupId} | Delete a Target Group by ID |
+| [**targetgroupsFindByTargetGroupId**](TargetGroupsApi.md#targetgroupsfindbytargetgroupid) | **GET** /targetgroups/{targetGroupId} | Get a Target Group by ID |
+| [**targetgroupsGet**](TargetGroupsApi.md#targetgroupsget) | **GET** /targetgroups | Get Target Groups |
+| [**targetgroupsPatch**](TargetGroupsApi.md#targetgroupspatch) | **PATCH** /targetgroups/{targetGroupId} | Partially Modify a Target Group by ID |
+| [**targetgroupsPost**](TargetGroupsApi.md#targetgroupspost) | **POST** /targetgroups | Create a Target Group |
+| [**targetgroupsPut**](TargetGroupsApi.md#targetgroupsput) | **PUT** /targetgroups/{targetGroupId} | Modify a Target Group by ID |
 
 
 ## targetGroupsDelete
 
 > targetGroupsDelete(targetGroupId, opts)
 
-Remove target groups
+Delete a Target Group by ID
 
-Remove the specified target group.
+Deletes the target group specified by its ID.
 
 ### Examples
 
@@ -31,7 +31,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TargetGroupsApi(config);
-// Remove target groups
+// Delete a Target Group by ID
 api_instance
   .targetGroupsDelete({
     targetGroupId: targetGroupId_example,
@@ -71,9 +71,9 @@ Basic Authentication, Token Authentication
 
 > <TargetGroup> targetgroupsFindByTargetGroupId(targetGroupId, opts)
 
-Retrieve target groups
+Get a Target Group by ID
 
-Retrieve the properties of the specified target group.
+Retrieves the properties of the target group specified by its ID.
 
 ### Examples
 
@@ -86,7 +86,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TargetGroupsApi(config);
-// Retrieve target groups
+// Get a Target Group by ID
 api_instance
   .targetgroupsFindByTargetGroupId({
     targetGroupId: targetGroupId_example,
@@ -126,9 +126,9 @@ Basic Authentication, Token Authentication
 
 > <TargetGroups> targetgroupsGet(opts)
 
-List target groups
+Get Target Groups
 
-List all target groups.
+Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
 
 ### Examples
 
@@ -143,7 +143,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.TargetGroupsApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List target groups
+// Get Target Groups
 api_instance
   .targetgroupsGet({
     pretty: true,
@@ -188,9 +188,9 @@ Basic Authentication, Token Authentication
 
 > <TargetGroup> targetgroupsPatch(targetGroupId, targetGroupProperties, opts)
 
-Partially modify target groups
+Partially Modify a Target Group by ID
 
-Update the properties of the specified target group.
+Updates the properties of the target group specified by its ID.
 
 ### Examples
 
@@ -203,7 +203,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TargetGroupsApi(config);
-// Partially modify target groups
+// Partially Modify a Target Group by ID
 api_instance
   .targetgroupsPatch({
     targetGroupId: targetGroupId_example,
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 
 > <TargetGroup> targetgroupsPost(targetGroup, opts)
 
-Create target groups
+Create a Target Group
 
-Create a target group.
+Creates a target group.
 
 ### Examples
 
@@ -260,7 +260,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TargetGroupsApi(config);
-// Create target groups
+// Create a Target Group
 api_instance
   .targetgroupsPost({
     targetGroup: targetGroup_example,
@@ -300,9 +300,9 @@ Basic Authentication, Token Authentication
 
 > <TargetGroup> targetgroupsPut(targetGroupId, targetGroup, opts)
 
-Modify target groups
+Modify a Target Group by ID
 
-Modify the properties of the specified target group.
+Modifies the properties of the target group specified by its ID.
 
 ### Examples
 
@@ -315,7 +315,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.TargetGroupsApi(config);
-// Modify target groups
+// Modify a Target Group by ID
 api_instance
   .targetgroupsPut({
     targetGroupId: targetGroupId_example,

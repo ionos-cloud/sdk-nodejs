@@ -305,8 +305,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Add a new label to the specified data center.
-         * @summary Create data center labels
+         * Adds a new label to the specified data center.
+         * @summary Create a Data Center Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {LabelResource} label The label to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -398,8 +398,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Modify the specified data center label.
-         * @summary Modify data center labels
+         * Modifies the specified data center label.
+         * @summary Modify a Data Center Label by Key
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -783,8 +783,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Add a new label to the specified server.
-         * @summary Create server labels
+         * Adds a new label to the specified server.
+         * @summary Create a Server Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {LabelResource} label The label to create.
@@ -881,8 +881,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Modify the specified server label.
-         * @summary Modify server labels
+         * Modifies the specified server label.
+         * @summary Modify a Server Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} key The label key
@@ -1271,8 +1271,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Add a new label to the specified volume.
-         * @summary Create volume labels
+         * Adds a new label to the specified volume.
+         * @summary Create a Volume Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {LabelResource} label The label to create.
@@ -1369,8 +1369,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Modify the specified volume label.
-         * @summary Modify volume labels
+         * Modifies the specified volume label.
+         * @summary Modify a Volume Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {string} key The label key
@@ -1837,8 +1837,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Modify the specified IP block label.
-         * @summary Modify IP block labels
+         * Modifies the specified IP block label.
+         * @summary Modify a IP Block Label by ID
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -2382,8 +2382,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Add a new label to the specified snapshot.
-         * @summary Create snapshot labels
+         * Adds a new label to the specified snapshot.
+         * @summary Create a Snapshot Label
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {LabelResource} label The label to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2475,8 +2475,8 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Modify the specified snapshot label.
-         * @summary Modify snapshot labels
+         * Modifies the specified snapshot label.
+         * @summary Modify a Snapshot Label by ID
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -2631,8 +2631,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new label to the specified data center.
-         * @summary Create data center labels
+         * Adds a new label to the specified data center.
+         * @summary Create a Data Center Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {LabelResource} label The label to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2647,8 +2647,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified data center label.
-         * @summary Modify data center labels
+         * Modifies the specified data center label.
+         * @summary Modify a Data Center Label by Key
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -2716,8 +2716,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new label to the specified server.
-         * @summary Create server labels
+         * Adds a new label to the specified server.
+         * @summary Create a Server Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {LabelResource} label The label to create.
@@ -2733,8 +2733,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified server label.
-         * @summary Modify server labels
+         * Modifies the specified server label.
+         * @summary Modify a Server Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} key The label key
@@ -2803,8 +2803,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new label to the specified volume.
-         * @summary Create volume labels
+         * Adds a new label to the specified volume.
+         * @summary Create a Volume Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {LabelResource} label The label to create.
@@ -2820,8 +2820,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified volume label.
-         * @summary Modify volume labels
+         * Modifies the specified volume label.
+         * @summary Modify a Volume Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {string} key The label key
@@ -2903,8 +2903,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified IP block label.
-         * @summary Modify IP block labels
+         * Modifies the specified IP block label.
+         * @summary Modify a IP Block Label by ID
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -3000,8 +3000,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new label to the specified snapshot.
-         * @summary Create snapshot labels
+         * Adds a new label to the specified snapshot.
+         * @summary Create a Snapshot Label
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {LabelResource} label The label to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -3016,8 +3016,8 @@ export const LabelsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified snapshot label.
-         * @summary Modify snapshot labels
+         * Modifies the specified snapshot label.
+         * @summary Modify a Snapshot Label by ID
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -3083,8 +3083,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).datacentersLabelsGet(datacenterId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new label to the specified data center.
-         * @summary Create data center labels
+         * Adds a new label to the specified data center.
+         * @summary Create a Data Center Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {LabelResource} label The label to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -3097,8 +3097,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).datacentersLabelsPost(datacenterId, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified data center label.
-         * @summary Modify data center labels
+         * Modifies the specified data center label.
+         * @summary Modify a Data Center Label by Key
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -3156,8 +3156,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).datacentersServersLabelsGet(datacenterId, serverId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new label to the specified server.
-         * @summary Create server labels
+         * Adds a new label to the specified server.
+         * @summary Create a Server Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {LabelResource} label The label to create.
@@ -3171,8 +3171,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).datacentersServersLabelsPost(datacenterId, serverId, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified server label.
-         * @summary Modify server labels
+         * Modifies the specified server label.
+         * @summary Modify a Server Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} key The label key
@@ -3231,8 +3231,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).datacentersVolumesLabelsGet(datacenterId, volumeId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new label to the specified volume.
-         * @summary Create volume labels
+         * Adds a new label to the specified volume.
+         * @summary Create a Volume Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {LabelResource} label The label to create.
@@ -3246,8 +3246,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).datacentersVolumesLabelsPost(datacenterId, volumeId, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified volume label.
-         * @summary Modify volume labels
+         * Modifies the specified volume label.
+         * @summary Modify a Volume Label
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {string} key The label key
@@ -3317,8 +3317,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).ipblocksLabelsPost(ipblockId, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified IP block label.
-         * @summary Modify IP block labels
+         * Modifies the specified IP block label.
+         * @summary Modify a IP Block Label by ID
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -3398,8 +3398,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).snapshotsLabelsGet(snapshotId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new label to the specified snapshot.
-         * @summary Create snapshot labels
+         * Adds a new label to the specified snapshot.
+         * @summary Create a Snapshot Label
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {LabelResource} label The label to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -3412,8 +3412,8 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
             return LabelsApiFp(configuration).snapshotsLabelsPost(snapshotId, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified snapshot label.
-         * @summary Modify snapshot labels
+         * Modifies the specified snapshot label.
+         * @summary Modify a Snapshot Label by ID
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {string} key The label key
          * @param {LabelResource} label The modified label
@@ -4764,8 +4764,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Add a new label to the specified data center.
-     * @summary Create data center labels
+     * Adds a new label to the specified data center.
+     * @summary Create a Data Center Label
      * @param {LabelsApiDatacentersLabelsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4776,8 +4776,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified data center label.
-     * @summary Modify data center labels
+     * Modifies the specified data center label.
+     * @summary Modify a Data Center Label by Key
      * @param {LabelsApiDatacentersLabelsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4824,8 +4824,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Add a new label to the specified server.
-     * @summary Create server labels
+     * Adds a new label to the specified server.
+     * @summary Create a Server Label
      * @param {LabelsApiDatacentersServersLabelsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4836,8 +4836,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified server label.
-     * @summary Modify server labels
+     * Modifies the specified server label.
+     * @summary Modify a Server Label
      * @param {LabelsApiDatacentersServersLabelsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4884,8 +4884,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Add a new label to the specified volume.
-     * @summary Create volume labels
+     * Adds a new label to the specified volume.
+     * @summary Create a Volume Label
      * @param {LabelsApiDatacentersVolumesLabelsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4896,8 +4896,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified volume label.
-     * @summary Modify volume labels
+     * Modifies the specified volume label.
+     * @summary Modify a Volume Label
      * @param {LabelsApiDatacentersVolumesLabelsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -4956,8 +4956,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified IP block label.
-     * @summary Modify IP block labels
+     * Modifies the specified IP block label.
+     * @summary Modify a IP Block Label by ID
      * @param {LabelsApiIpblocksLabelsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5028,8 +5028,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Add a new label to the specified snapshot.
-     * @summary Create snapshot labels
+     * Adds a new label to the specified snapshot.
+     * @summary Create a Snapshot Label
      * @param {LabelsApiSnapshotsLabelsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -5040,8 +5040,8 @@ export class LabelsApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified snapshot label.
-     * @summary Modify snapshot labels
+     * Modifies the specified snapshot label.
+     * @summary Modify a Snapshot Label by ID
      * @param {LabelsApiSnapshotsLabelsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

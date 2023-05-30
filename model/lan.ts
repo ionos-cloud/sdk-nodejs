@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface Lan {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {LanEntities}
      * @memberof Lan
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Lan
-     */
-    type?: Type;
+    entities?: LanEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface Lan {
      * @memberof Lan
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Lan
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface Lan {
     properties: LanProperties;
 
     /**
-     * 
-     * @type {LanEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof Lan
      */
-    entities?: LanEntities;
+    type?: Type;
 }
 
 

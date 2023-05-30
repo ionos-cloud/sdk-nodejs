@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface TargetGroup {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof TargetGroup
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof TargetGroup
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof TargetGroup
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof TargetGroup
-     */
-    href?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface TargetGroup {
      * @memberof TargetGroup
      */
     properties: TargetGroupProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof TargetGroup
+     */
+    type?: Type;
 }
 
 

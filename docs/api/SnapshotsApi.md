@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**snapshotsFindById**](SnapshotsApi.md#snapshotsfindbyid) | **GET** /snapshots/{snapshotId} | Retrieve snapshots by ID |
 | [**snapshotsGet**](SnapshotsApi.md#snapshotsget) | **GET** /snapshots | List snapshots |
 | [**snapshotsPatch**](SnapshotsApi.md#snapshotspatch) | **PATCH** /snapshots/{snapshotId} | Partially modify snapshots |
-| [**snapshotsPut**](SnapshotsApi.md#snapshotsput) | **PUT** /snapshots/{snapshotId} | Modify snapshots |
+| [**snapshotsPut**](SnapshotsApi.md#snapshotsput) | **PUT** /snapshots/{snapshotId} | Modify a Snapshot by ID |
 
 
 ## snapshotsDelete
@@ -240,9 +240,9 @@ Basic Authentication, Token Authentication
 
 > <Snapshot> snapshotsPut(snapshotId, snapshot, opts)
 
-Modify snapshots
+Modify a Snapshot by ID
 
-Modify the properties of the specified snapshot.
+Modifies the properties of the specified snapshot.
 
 ### Examples
 
@@ -255,7 +255,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.SnapshotsApi(config);
-// Modify snapshots
+// Modify a Snapshot by ID
 api_instance
   .snapshotsPut({
     snapshotId: snapshotId_example,

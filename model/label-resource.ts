@@ -24,25 +24,18 @@ import { NoStateMetaData } from './no-state-meta-data';
 export interface LabelResource {
 
     /**
-     * Label on a resource is identified using label key.
-     * @type {string}
-     * @memberof LabelResource
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {string}
-     * @memberof LabelResource
-     */
-    type?: LabelResourceTypeEnum;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof LabelResource
      */
     href?: string;
+
+    /**
+     * Label on a resource is identified using label key.
+     * @type {string}
+     * @memberof LabelResource
+     */
+    id?: string;
 
     /**
      * 
@@ -57,7 +50,17 @@ export interface LabelResource {
      * @memberof LabelResource
      */
     properties: LabelResourceProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {string}
+     * @memberof LabelResource
+     */
+    type?: LabelResourceTypeEnum;
 }
+
+
+
 
 
 
@@ -68,9 +71,6 @@ export interface LabelResource {
 export enum LabelResourceTypeEnum {
     Label = 'label'
 }
-
-
-
 
 
 

@@ -1240,8 +1240,8 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             };
         },
         /**
-         * Add an existing user to the specified group. 
-         * @summary Add group members
+         * Adds an existing user to the specified group. 
+         * @summary Add a Group Member
          * @param {string} groupId The unique ID of the group.
          * @param {User} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2464,8 +2464,8 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add an existing user to the specified group. 
-         * @summary Add group members
+         * Adds an existing user to the specified group. 
+         * @summary Add a Group Member
          * @param {string} groupId The unique ID of the group.
          * @param {User} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2825,8 +2825,8 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
             return UserManagementApiFp(configuration).umGroupsUsersGet(groupId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add an existing user to the specified group. 
-         * @summary Add group members
+         * Adds an existing user to the specified group. 
+         * @summary Add a Group Member
          * @param {string} groupId The unique ID of the group.
          * @param {User} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -4191,8 +4191,8 @@ export class UserManagementApi extends BaseAPI {
     }
 
     /**
-     * Add an existing user to the specified group. 
-     * @summary Add group members
+     * Adds an existing user to the specified group. 
+     * @summary Add a Group Member
      * @param {UserManagementApiUmGroupsUsersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

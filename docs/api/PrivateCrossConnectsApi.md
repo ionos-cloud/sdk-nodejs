@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**pccsFindById**](PrivateCrossConnectsApi.md#pccsfindbyid) | **GET** /pccs/{pccId} | Retrieve private Cross-Connects |
 | [**pccsGet**](PrivateCrossConnectsApi.md#pccsget) | **GET** /pccs | List private Cross-Connects |
 | [**pccsPatch**](PrivateCrossConnectsApi.md#pccspatch) | **PATCH** /pccs/{pccId} | Partially modify private Cross-Connects |
-| [**pccsPost**](PrivateCrossConnectsApi.md#pccspost) | **POST** /pccs | Create private Cross-Connects |
+| [**pccsPost**](PrivateCrossConnectsApi.md#pccspost) | **POST** /pccs | Create a Private Cross-Connect |
 
 
 ## pccsDelete
@@ -240,9 +240,9 @@ Basic Authentication, Token Authentication
 
 > <PrivateCrossConnect> pccsPost(pcc, opts)
 
-Create private Cross-Connects
+Create a Private Cross-Connect
 
-Create a private Cross-Connect.
+Creates a private Cross-Connect.
 
 ### Examples
 
@@ -255,7 +255,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.PrivateCrossConnectsApi(config);
-// Create private Cross-Connects
+// Create a Private Cross-Connect
 api_instance
   .pccsPost({
     pcc: pcc_example,

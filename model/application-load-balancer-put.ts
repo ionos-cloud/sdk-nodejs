@@ -24,6 +24,13 @@ import { Type } from './type';
 export interface ApplicationLoadBalancerPut {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof ApplicationLoadBalancerPut
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof ApplicationLoadBalancerPut
@@ -31,25 +38,18 @@ export interface ApplicationLoadBalancerPut {
     id?: string;
 
     /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof ApplicationLoadBalancerPut
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof ApplicationLoadBalancerPut
-     */
-    href?: string;
-
-    /**
      * 
      * @type {ApplicationLoadBalancerProperties}
      * @memberof ApplicationLoadBalancerPut
      */
     properties: ApplicationLoadBalancerProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof ApplicationLoadBalancerPut
+     */
+    type?: Type;
 }
 
 

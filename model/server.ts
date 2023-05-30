@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface Server {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {ServerEntities}
      * @memberof Server
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Server
-     */
-    type?: Type;
+    entities?: ServerEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface Server {
      * @memberof Server
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Server
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface Server {
     properties: ServerProperties;
 
     /**
-     * 
-     * @type {ServerEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof Server
      */
-    entities?: ServerEntities;
+    type?: Type;
 }
 
 

@@ -29,11 +29,11 @@ export interface LabelProperties {
     key?: string;
 
     /**
-     * A label value
+     * URL to the Resource (absolute path) on which the label is applied.
      * @type {string}
      * @memberof LabelProperties
      */
-    value?: string;
+    resourceHref?: string;
 
     /**
      * The ID of the resource.
@@ -50,11 +50,11 @@ export interface LabelProperties {
     resourceType?: string;
 
     /**
-     * URL to the Resource (absolute path) on which the label is applied.
+     * A label value
      * @type {string}
      * @memberof LabelProperties
      */
-    resourceHref?: string;
+    value?: string;
 }
 
 

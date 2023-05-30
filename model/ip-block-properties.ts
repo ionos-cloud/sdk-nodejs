@@ -23,6 +23,13 @@ import { IpConsumer } from './ip-consumer';
 export interface IpBlockProperties {
 
     /**
+     * Read-Only attribute. Lists consumption detail for an individual IP
+     * @type {Array<IpConsumer>}
+     * @memberof IpBlockProperties
+     */
+    ipConsumers?: Array<IpConsumer>;
+
+    /**
      * Collection of IPs, associated with the IP Block.
      * @type {Array<string>}
      * @memberof IpBlockProperties
@@ -37,13 +44,6 @@ export interface IpBlockProperties {
     location: string;
 
     /**
-     * The size of the IP block.
-     * @type {number}
-     * @memberof IpBlockProperties
-     */
-    size: number;
-
-    /**
      * The name of the  resource.
      * @type {string}
      * @memberof IpBlockProperties
@@ -51,11 +51,11 @@ export interface IpBlockProperties {
     name?: string;
 
     /**
-     * Read-Only attribute. Lists consumption detail for an individual IP
-     * @type {Array<IpConsumer>}
+     * The size of the IP block.
+     * @type {number}
      * @memberof IpBlockProperties
      */
-    ipConsumers?: Array<IpConsumer>;
+    size: number;
 }
 
 

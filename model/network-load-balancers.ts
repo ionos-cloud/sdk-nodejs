@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface NetworkLoadBalancers {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof NetworkLoadBalancers
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NetworkLoadBalancers
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface NetworkLoadBalancers {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NetworkLoadBalancers
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<NetworkLoadBalancer>}
      * @memberof NetworkLoadBalancers
      */
     items?: Array<NetworkLoadBalancer>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof NetworkLoadBalancers
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface NetworkLoadBalancers {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof NetworkLoadBalancers
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NetworkLoadBalancers
+     */
+    type?: Type;
 }
 
 

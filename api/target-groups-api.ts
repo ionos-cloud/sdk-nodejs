@@ -33,8 +33,8 @@ import { TargetGroups } from '../model';
 export const TargetGroupsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Remove the specified target group.
-         * @summary Remove target groups
+         * Deletes the target group specified by its ID.
+         * @summary Delete a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -115,8 +115,8 @@ export const TargetGroupsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Retrieve the properties of the specified target group.
-         * @summary Retrieve target groups
+         * Retrieves the properties of the target group specified by its ID.
+         * @summary Get a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -197,8 +197,8 @@ export const TargetGroupsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * List all target groups.
-         * @summary List target groups
+         * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
+         * @summary Get Target Groups
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -306,8 +306,8 @@ export const TargetGroupsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Update the properties of the specified target group.
-         * @summary Partially modify target groups
+         * Updates the properties of the target group specified by its ID.
+         * @summary Partially Modify a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {TargetGroupProperties} targetGroupProperties The target group properties to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -399,8 +399,8 @@ export const TargetGroupsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Create a target group.
-         * @summary Create target groups
+         * Creates a target group.
+         * @summary Create a Target Group
          * @param {TargetGroup} targetGroup The target group to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -487,8 +487,8 @@ export const TargetGroupsApiAxiosParamCreator = function (configuration?: Config
             };
         },
         /**
-         * Modify the properties of the specified target group.
-         * @summary Modify target groups
+         * Modifies the properties of the target group specified by its ID.
+         * @summary Modify a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {TargetGroupPut} targetGroup The modified target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -589,8 +589,8 @@ export const TargetGroupsApiAxiosParamCreator = function (configuration?: Config
 export const TargetGroupsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Remove the specified target group.
-         * @summary Remove target groups
+         * Deletes the target group specified by its ID.
+         * @summary Delete a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -604,8 +604,8 @@ export const TargetGroupsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the properties of the specified target group.
-         * @summary Retrieve target groups
+         * Retrieves the properties of the target group specified by its ID.
+         * @summary Get a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -619,8 +619,8 @@ export const TargetGroupsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all target groups.
-         * @summary List target groups
+         * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
+         * @summary Get Target Groups
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -637,8 +637,8 @@ export const TargetGroupsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified target group.
-         * @summary Partially modify target groups
+         * Updates the properties of the target group specified by its ID.
+         * @summary Partially Modify a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {TargetGroupProperties} targetGroupProperties The target group properties to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -653,8 +653,8 @@ export const TargetGroupsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a target group.
-         * @summary Create target groups
+         * Creates a target group.
+         * @summary Create a Target Group
          * @param {TargetGroup} targetGroup The target group to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -668,8 +668,8 @@ export const TargetGroupsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified target group.
-         * @summary Modify target groups
+         * Modifies the properties of the target group specified by its ID.
+         * @summary Modify a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {TargetGroupPut} targetGroup The modified target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -693,8 +693,8 @@ export const TargetGroupsApiFp = function(configuration?: Configuration) {
 export const TargetGroupsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Remove the specified target group.
-         * @summary Remove target groups
+         * Deletes the target group specified by its ID.
+         * @summary Delete a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -706,8 +706,8 @@ export const TargetGroupsApiFactory = function (configuration?: Configuration, b
             return TargetGroupsApiFp(configuration).targetGroupsDelete(targetGroupId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the properties of the specified target group.
-         * @summary Retrieve target groups
+         * Retrieves the properties of the target group specified by its ID.
+         * @summary Get a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -719,8 +719,8 @@ export const TargetGroupsApiFactory = function (configuration?: Configuration, b
             return TargetGroupsApiFp(configuration).targetgroupsFindByTargetGroupId(targetGroupId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all target groups.
-         * @summary List target groups
+         * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
+         * @summary Get Target Groups
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -733,8 +733,8 @@ export const TargetGroupsApiFactory = function (configuration?: Configuration, b
             return TargetGroupsApiFp(configuration).targetgroupsGet(pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified target group.
-         * @summary Partially modify target groups
+         * Updates the properties of the target group specified by its ID.
+         * @summary Partially Modify a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {TargetGroupProperties} targetGroupProperties The target group properties to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -747,8 +747,8 @@ export const TargetGroupsApiFactory = function (configuration?: Configuration, b
             return TargetGroupsApiFp(configuration).targetgroupsPatch(targetGroupId, targetGroupProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a target group.
-         * @summary Create target groups
+         * Creates a target group.
+         * @summary Create a Target Group
          * @param {TargetGroup} targetGroup The target group to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -760,8 +760,8 @@ export const TargetGroupsApiFactory = function (configuration?: Configuration, b
             return TargetGroupsApiFp(configuration).targetgroupsPost(targetGroup, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified target group.
-         * @summary Modify target groups
+         * Modifies the properties of the target group specified by its ID.
+         * @summary Modify a Target Group by ID
          * @param {string} targetGroupId The unique ID of the target group.
          * @param {TargetGroupPut} targetGroup The modified target group.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1033,8 +1033,8 @@ export interface TargetGroupsApiTargetgroupsPutRequest {
  */
 export class TargetGroupsApi extends BaseAPI {
     /**
-     * Remove the specified target group.
-     * @summary Remove target groups
+     * Deletes the target group specified by its ID.
+     * @summary Delete a Target Group by ID
      * @param {TargetGroupsApiTargetGroupsDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1045,8 +1045,8 @@ export class TargetGroupsApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the properties of the specified target group.
-     * @summary Retrieve target groups
+     * Retrieves the properties of the target group specified by its ID.
+     * @summary Get a Target Group by ID
      * @param {TargetGroupsApiTargetgroupsFindByTargetGroupIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1057,8 +1057,8 @@ export class TargetGroupsApi extends BaseAPI {
     }
 
     /**
-     * List all target groups.
-     * @summary List target groups
+     * Lists target groups.  A target group is a set of one or more registered targets. You must specify an IP address, a port number, and a weight for each target. Any object with an IP address in your VDC can be a target, for example, a VM, another load balancer, etc. You can register a target with multiple target groups.
+     * @summary Get Target Groups
      * @param {TargetGroupsApiTargetgroupsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1069,8 +1069,8 @@ export class TargetGroupsApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified target group.
-     * @summary Partially modify target groups
+     * Updates the properties of the target group specified by its ID.
+     * @summary Partially Modify a Target Group by ID
      * @param {TargetGroupsApiTargetgroupsPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1081,8 +1081,8 @@ export class TargetGroupsApi extends BaseAPI {
     }
 
     /**
-     * Create a target group.
-     * @summary Create target groups
+     * Creates a target group.
+     * @summary Create a Target Group
      * @param {TargetGroupsApiTargetgroupsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1093,8 +1093,8 @@ export class TargetGroupsApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified target group.
-     * @summary Modify target groups
+     * Modifies the properties of the target group specified by its ID.
+     * @summary Modify a Target Group by ID
      * @param {TargetGroupsApiTargetgroupsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

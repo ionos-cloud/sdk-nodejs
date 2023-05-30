@@ -23,11 +23,11 @@ import { CpuArchitectureProperties } from './cpu-architecture-properties';
 export interface DatacenterProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * Array of features and CPU families available in a location
+     * @type {Array<CpuArchitectureProperties>}
      * @memberof DatacenterProperties
      */
-    name?: string;
+    cpuArchitecture?: Array<CpuArchitectureProperties>;
 
     /**
      * A description for the datacenter, such as staging, production.
@@ -37,6 +37,13 @@ export interface DatacenterProperties {
     description?: string;
 
     /**
+     * List of features supported by the location where this data center is provisioned.
+     * @type {Array<string>}
+     * @memberof DatacenterProperties
+     */
+    features?: Array<string>;
+
+    /**
      * The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests).
      * @type {string}
      * @memberof DatacenterProperties
@@ -44,18 +51,11 @@ export interface DatacenterProperties {
     location: string;
 
     /**
-     * The version of the data center; incremented with every change.
-     * @type {number}
+     * The name of the  resource.
+     * @type {string}
      * @memberof DatacenterProperties
      */
-    version?: number;
-
-    /**
-     * List of features supported by the location where this data center is provisioned.
-     * @type {Array<string>}
-     * @memberof DatacenterProperties
-     */
-    features?: Array<string>;
+    name?: string;
 
     /**
      * Boolean value representing if the data center requires extra protection, such as two-step verification.
@@ -65,11 +65,11 @@ export interface DatacenterProperties {
     secAuthProtection?: boolean;
 
     /**
-     * Array of features and CPU families available in a location
-     * @type {Array<CpuArchitectureProperties>}
+     * The version of the data center; incremented with every change.
+     * @type {number}
      * @memberof DatacenterProperties
      */
-    cpuArchitecture?: Array<CpuArchitectureProperties>;
+    version?: number;
 }
 
 

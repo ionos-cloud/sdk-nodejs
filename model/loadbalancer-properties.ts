@@ -22,11 +22,11 @@
 export interface LoadbalancerProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * Indicates if the loadbalancer will reserve an IP using DHCP.
+     * @type {boolean}
      * @memberof LoadbalancerProperties
      */
-    name?: string;
+    dhcp?: boolean;
 
     /**
      * IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically.
@@ -36,11 +36,11 @@ export interface LoadbalancerProperties {
     ip?: string | null;
 
     /**
-     * Indicates if the loadbalancer will reserve an IP using DHCP.
-     * @type {boolean}
+     * The name of the  resource.
+     * @type {string}
      * @memberof LoadbalancerProperties
      */
-    dhcp?: boolean;
+    name?: string;
 }
 
 

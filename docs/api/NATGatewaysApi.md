@@ -10,18 +10,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersNatgatewaysFlowlogsFindByFlowLogId**](NATGatewaysApi.md#datacentersnatgatewaysflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Retrieve NAT Gateway Flow Logs |
 | [**datacentersNatgatewaysFlowlogsGet**](NATGatewaysApi.md#datacentersnatgatewaysflowlogsget) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | List NAT Gateway Flow Logs |
 | [**datacentersNatgatewaysFlowlogsPatch**](NATGatewaysApi.md#datacentersnatgatewaysflowlogspatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Partially modify NAT Gateway Flow Logs |
-| [**datacentersNatgatewaysFlowlogsPost**](NATGatewaysApi.md#datacentersnatgatewaysflowlogspost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create NAT Gateway Flow Logs |
+| [**datacentersNatgatewaysFlowlogsPost**](NATGatewaysApi.md#datacentersnatgatewaysflowlogspost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create a NAT Gateway Flow Log |
 | [**datacentersNatgatewaysFlowlogsPut**](NATGatewaysApi.md#datacentersnatgatewaysflowlogsput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Modify NAT Gateway Flow Logs |
 | [**datacentersNatgatewaysGet**](NATGatewaysApi.md#datacentersnatgatewaysget) | **GET** /datacenters/{datacenterId}/natgateways | List NAT Gateways |
 | [**datacentersNatgatewaysPatch**](NATGatewaysApi.md#datacentersnatgatewayspatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Partially modify NAT Gateways |
-| [**datacentersNatgatewaysPost**](NATGatewaysApi.md#datacentersnatgatewayspost) | **POST** /datacenters/{datacenterId}/natgateways | Create NAT Gateways |
+| [**datacentersNatgatewaysPost**](NATGatewaysApi.md#datacentersnatgatewayspost) | **POST** /datacenters/{datacenterId}/natgateways | Create a NAT Gateway |
 | [**datacentersNatgatewaysPut**](NATGatewaysApi.md#datacentersnatgatewaysput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Modify NAT Gateways |
 | [**datacentersNatgatewaysRulesDelete**](NATGatewaysApi.md#datacentersnatgatewaysrulesdelete) | **DELETE** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Delete NAT Gateway rules |
 | [**datacentersNatgatewaysRulesFindByNatGatewayRuleId**](NATGatewaysApi.md#datacentersnatgatewaysrulesfindbynatgatewayruleid) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Retrieve NAT Gateway rules |
 | [**datacentersNatgatewaysRulesGet**](NATGatewaysApi.md#datacentersnatgatewaysrulesget) | **GET** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | List NAT Gateway rules |
-| [**datacentersNatgatewaysRulesPatch**](NATGatewaysApi.md#datacentersnatgatewaysrulespatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially modify NAT Gateway rules |
-| [**datacentersNatgatewaysRulesPost**](NATGatewaysApi.md#datacentersnatgatewaysrulespost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create NAT Gateway rules |
-| [**datacentersNatgatewaysRulesPut**](NATGatewaysApi.md#datacentersnatgatewaysrulesput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify NAT Gateway rules |
+| [**datacentersNatgatewaysRulesPatch**](NATGatewaysApi.md#datacentersnatgatewaysrulespatch) | **PATCH** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially Modify a NAT Gateway Rule by ID |
+| [**datacentersNatgatewaysRulesPost**](NATGatewaysApi.md#datacentersnatgatewaysrulespost) | **POST** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create a NAT Gateway Rule |
+| [**datacentersNatgatewaysRulesPut**](NATGatewaysApi.md#datacentersnatgatewaysrulesput) | **PUT** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify a NAT Gateway Rule by ID |
 
 
 ## datacentersNatgatewaysDelete
@@ -379,9 +379,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersNatgatewaysFlowlogsPost(datacenterId, natGatewayId, natGatewayFlowLog, opts)
 
-Create NAT Gateway Flow Logs
+Create a NAT Gateway Flow Log
 
-Add a new Flow Log for the specified NAT Gateway.
+Adds a new Flow Log to the specified NAT Gateway.
 
 ### Examples
 
@@ -394,7 +394,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
-// Create NAT Gateway Flow Logs
+// Create a NAT Gateway Flow Log
 api_instance
   .datacentersNatgatewaysFlowlogsPost({
     datacenterId: datacenterId_example,
@@ -614,9 +614,9 @@ Basic Authentication, Token Authentication
 
 > <NatGateway> datacentersNatgatewaysPost(datacenterId, natGateway, opts)
 
-Create NAT Gateways
+Create a NAT Gateway
 
-Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
+Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
 
 ### Examples
 
@@ -629,7 +629,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
-// Create NAT Gateways
+// Create a NAT Gateway
 api_instance
   .datacentersNatgatewaysPost({
     datacenterId: datacenterId_example,
@@ -910,9 +910,9 @@ Basic Authentication, Token Authentication
 
 > <NatGatewayRule> datacentersNatgatewaysRulesPatch(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, opts)
 
-Partially modify NAT Gateway rules
+Partially Modify a NAT Gateway Rule by ID
 
-Update the properties of the specified NAT Gateway rule.
+Updates the properties of the specified NAT Gateway rule.
 
 ### Examples
 
@@ -925,7 +925,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
-// Partially modify NAT Gateway rules
+// Partially Modify a NAT Gateway Rule by ID
 api_instance
   .datacentersNatgatewaysRulesPatch({
     datacenterId: datacenterId_example,
@@ -971,9 +971,9 @@ Basic Authentication, Token Authentication
 
 > <NatGatewayRule> datacentersNatgatewaysRulesPost(datacenterId, natGatewayId, natGatewayRule, opts)
 
-Create NAT Gateway rules
+Create a NAT Gateway Rule
 
-Create a rule for the specified NAT Gateway.
+Creates a rule for the specified NAT Gateway.
 
 ### Examples
 
@@ -986,7 +986,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
-// Create NAT Gateway rules
+// Create a NAT Gateway Rule
 api_instance
   .datacentersNatgatewaysRulesPost({
     datacenterId: datacenterId_example,
@@ -1030,7 +1030,7 @@ Basic Authentication, Token Authentication
 
 > <NatGatewayRule> datacentersNatgatewaysRulesPut(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRule, opts)
 
-Modify NAT Gateway rules
+Modify a NAT Gateway Rule by ID
 
 Modify the specified NAT Gateway rule.
 
@@ -1045,7 +1045,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NATGatewaysApi(config);
-// Modify NAT Gateway rules
+// Modify a NAT Gateway Rule by ID
 api_instance
   .datacentersNatgatewaysRulesPut({
     datacenterId: datacenterId_example,

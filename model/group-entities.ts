@@ -25,17 +25,17 @@ export interface GroupEntities {
 
     /**
      * 
-     * @type {GroupMembers}
-     * @memberof GroupEntities
-     */
-    users?: GroupMembers;
-
-    /**
-     * 
      * @type {ResourceGroups}
      * @memberof GroupEntities
      */
     resources?: ResourceGroups;
+
+    /**
+     * 
+     * @type {GroupMembers}
+     * @memberof GroupEntities
+     */
+    users?: GroupMembers;
 }
 
 

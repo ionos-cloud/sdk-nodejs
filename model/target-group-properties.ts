@@ -25,32 +25,11 @@ import { TargetGroupTarget } from './target-group-target';
 export interface TargetGroupProperties {
 
     /**
-     * The name of the target group.
-     * @type {string}
-     * @memberof TargetGroupProperties
-     */
-    name: string;
-
-    /**
-     * Balancing algorithm
+     * The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target.
      * @type {string}
      * @memberof TargetGroupProperties
      */
     algorithm: TargetGroupPropertiesAlgorithmEnum;
-
-    /**
-     * Balancing protocol
-     * @type {string}
-     * @memberof TargetGroupProperties
-     */
-    protocol: TargetGroupPropertiesProtocolEnum;
-
-    /**
-     * Array of items in the collection.
-     * @type {Array<TargetGroupTarget>}
-     * @memberof TargetGroupProperties
-     */
-    targets?: Array<TargetGroupTarget>;
 
     /**
      * 
@@ -65,8 +44,28 @@ export interface TargetGroupProperties {
      * @memberof TargetGroupProperties
      */
     httpHealthCheck?: TargetGroupHttpHealthCheck;
-}
 
+    /**
+     * The target group name.
+     * @type {string}
+     * @memberof TargetGroupProperties
+     */
+    name: string;
+
+    /**
+     * The forwarding protocol. Only the value \'HTTP\' is allowed.
+     * @type {string}
+     * @memberof TargetGroupProperties
+     */
+    protocol: TargetGroupPropertiesProtocolEnum;
+
+    /**
+     * Array of items in the collection.
+     * @type {Array<TargetGroupTarget>}
+     * @memberof TargetGroupProperties
+     */
+    targets?: Array<TargetGroupTarget>;
+}
 
 
 /**
@@ -80,6 +79,9 @@ export enum TargetGroupPropertiesAlgorithmEnum {
     SourceIp = 'SOURCE_IP'
 }
 
+
+
+
 /**
     * @export
     * @enum {string}
@@ -87,8 +89,6 @@ export enum TargetGroupPropertiesAlgorithmEnum {
 export enum TargetGroupPropertiesProtocolEnum {
     Http = 'HTTP'
 }
-
-
 
 
 

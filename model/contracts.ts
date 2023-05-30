@@ -24,6 +24,13 @@ import { Type } from './type';
 export interface Contracts {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof Contracts
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof Contracts
@@ -31,25 +38,18 @@ export interface Contracts {
     id?: string;
 
     /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Contracts
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof Contracts
-     */
-    href?: string;
-
-    /**
      * Array of items in the collection.
      * @type {Array<Contract>}
      * @memberof Contracts
      */
     items?: Array<Contract>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Contracts
+     */
+    type?: Type;
 }
 
 

@@ -613,8 +613,8 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Add a new Flow Log for the Network Load Balancer.
-         * @summary Create NLB Flow Logs
+         * Adds a new Flow Log for the Network Load Balancer.
+         * @summary Create a NLB Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {FlowLog} networkLoadBalancerFlowLog The Flow Log to create.
@@ -1204,8 +1204,8 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Create a forwarding rule for the specified Network Load Balancer.
-         * @summary Create NLB forwarding rules
+         * Creates a forwarding rule for the specified Network Load Balancer.
+         * @summary Create a NLB Forwarding Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {NetworkLoadBalancerForwardingRule} networkLoadBalancerForwardingRule The forwarding rule to create.
@@ -1617,8 +1617,8 @@ export const NetworkLoadBalancersApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Create a Network Load Balancer within the data center.
-         * @summary Create Network Load Balancers
+         * Creates a Network Load Balancer within the data center.
+         * @summary Create a Network Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {NetworkLoadBalancer} networkLoadBalancer The Network Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1919,8 +1919,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new Flow Log for the Network Load Balancer.
-         * @summary Create NLB Flow Logs
+         * Adds a new Flow Log for the Network Load Balancer.
+         * @summary Create a NLB Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {FlowLog} networkLoadBalancerFlowLog The Flow Log to create.
@@ -2024,8 +2024,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a forwarding rule for the specified Network Load Balancer.
-         * @summary Create NLB forwarding rules
+         * Creates a forwarding rule for the specified Network Load Balancer.
+         * @summary Create a NLB Forwarding Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {NetworkLoadBalancerForwardingRule} networkLoadBalancerForwardingRule The forwarding rule to create.
@@ -2095,8 +2095,8 @@ export const NetworkLoadBalancersApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a Network Load Balancer within the data center.
-         * @summary Create Network Load Balancers
+         * Creates a Network Load Balancer within the data center.
+         * @summary Create a Network Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {NetworkLoadBalancer} networkLoadBalancer The Network Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2225,8 +2225,8 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
             return NetworkLoadBalancersApiFp(configuration).datacentersNetworkloadbalancersFlowlogsPatch(datacenterId, networkLoadBalancerId, flowLogId, networkLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new Flow Log for the Network Load Balancer.
-         * @summary Create NLB Flow Logs
+         * Adds a new Flow Log for the Network Load Balancer.
+         * @summary Create a NLB Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {FlowLog} networkLoadBalancerFlowLog The Flow Log to create.
@@ -2316,8 +2316,8 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
             return NetworkLoadBalancersApiFp(configuration).datacentersNetworkloadbalancersForwardingrulesPatch(datacenterId, networkLoadBalancerId, forwardingRuleId, networkLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a forwarding rule for the specified Network Load Balancer.
-         * @summary Create NLB forwarding rules
+         * Creates a forwarding rule for the specified Network Load Balancer.
+         * @summary Create a NLB Forwarding Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} networkLoadBalancerId The unique ID of the Network Load Balancer.
          * @param {NetworkLoadBalancerForwardingRule} networkLoadBalancerForwardingRule The forwarding rule to create.
@@ -2377,8 +2377,8 @@ export const NetworkLoadBalancersApiFactory = function (configuration?: Configur
             return NetworkLoadBalancersApiFp(configuration).datacentersNetworkloadbalancersPatch(datacenterId, networkLoadBalancerId, networkLoadBalancerProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a Network Load Balancer within the data center.
-         * @summary Create Network Load Balancers
+         * Creates a Network Load Balancer within the data center.
+         * @summary Create a Network Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {NetworkLoadBalancer} networkLoadBalancer The Network Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -3417,8 +3417,8 @@ export class NetworkLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Add a new Flow Log for the Network Load Balancer.
-     * @summary Create NLB Flow Logs
+     * Adds a new Flow Log for the Network Load Balancer.
+     * @summary Create a NLB Flow Log
      * @param {NetworkLoadBalancersApiDatacentersNetworkloadbalancersFlowlogsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3489,8 +3489,8 @@ export class NetworkLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Create a forwarding rule for the specified Network Load Balancer.
-     * @summary Create NLB forwarding rules
+     * Creates a forwarding rule for the specified Network Load Balancer.
+     * @summary Create a NLB Forwarding Rule
      * @param {NetworkLoadBalancersApiDatacentersNetworkloadbalancersForwardingrulesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3537,8 +3537,8 @@ export class NetworkLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Create a Network Load Balancer within the data center.
-     * @summary Create Network Load Balancers
+     * Creates a Network Load Balancer within the data center.
+     * @summary Create a Network Load Balancer
      * @param {NetworkLoadBalancersApiDatacentersNetworkloadbalancersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

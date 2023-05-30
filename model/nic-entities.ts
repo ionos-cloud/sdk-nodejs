@@ -25,17 +25,17 @@ export interface NicEntities {
 
     /**
      * 
-     * @type {FlowLogs}
-     * @memberof NicEntities
-     */
-    flowlogs?: FlowLogs;
-
-    /**
-     * 
      * @type {FirewallRules}
      * @memberof NicEntities
      */
     firewallrules?: FirewallRules;
+
+    /**
+     * 
+     * @type {FlowLogs}
+     * @memberof NicEntities
+     */
+    flowlogs?: FlowLogs;
 }
 
 

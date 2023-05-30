@@ -12,8 +12,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersLoadbalancersFindById**](LoadBalancersApi.md#datacentersloadbalancersfindbyid) | **GET** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve Load Balancers |
 | [**datacentersLoadbalancersGet**](LoadBalancersApi.md#datacentersloadbalancersget) | **GET** /datacenters/{datacenterId}/loadbalancers | List Load Balancers |
 | [**datacentersLoadbalancersPatch**](LoadBalancersApi.md#datacentersloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify Load Balancers |
-| [**datacentersLoadbalancersPost**](LoadBalancersApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create Load Balancers |
-| [**datacentersLoadbalancersPut**](LoadBalancersApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify Load Balancers |
+| [**datacentersLoadbalancersPost**](LoadBalancersApi.md#datacentersloadbalancerspost) | **POST** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer |
+| [**datacentersLoadbalancersPut**](LoadBalancersApi.md#datacentersloadbalancersput) | **PUT** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer by ID |
 
 
 ## datacentersLoadbalancersBalancednicsDelete
@@ -202,7 +202,7 @@ Basic Authentication, Token Authentication
 
 Attach balanced NICs
 
-Attach an existing NIC to the specified Load Balancer.
+Attachs an existing NIC to the specified Load Balancer.
 
 ### Examples
 
@@ -496,9 +496,9 @@ Basic Authentication, Token Authentication
 
 > <Loadbalancer> datacentersLoadbalancersPost(datacenterId, loadbalancer, opts)
 
-Create Load Balancers
+Create a Load Balancer
 
-Create a Load Balancer within the data center.
+Creates a Load Balancer within the data center.
 
 ### Examples
 
@@ -511,7 +511,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Create Load Balancers
+// Create a Load Balancer
 api_instance
   .datacentersLoadbalancersPost({
     datacenterId: datacenterId_example,
@@ -553,9 +553,9 @@ Basic Authentication, Token Authentication
 
 > <Loadbalancer> datacentersLoadbalancersPut(datacenterId, loadbalancerId, loadbalancer, opts)
 
-Modify Load Balancers
+Modify a Load Balancer by ID
 
-Modify the properties of the specified Load Balancer within the data center.
+Modifies the properties of the specified Load Balancer within the data center.
 
 ### Examples
 
@@ -568,7 +568,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LoadBalancersApi(config);
-// Modify Load Balancers
+// Modify a Load Balancer by ID
 api_instance
   .datacentersLoadbalancersPut({
     datacenterId: datacenterId_example,

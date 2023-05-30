@@ -23,20 +23,6 @@ import { BackupUnit } from './backup-unit';
 export interface BackupUnits {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof BackupUnits
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {string}
-     * @memberof BackupUnits
-     */
-    type?: BackupUnitsTypeEnum;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof BackupUnits
@@ -44,12 +30,28 @@ export interface BackupUnits {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof BackupUnits
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<BackupUnit>}
      * @memberof BackupUnits
      */
     items?: Array<BackupUnit>;
+
+    /**
+     * The type of object that has been created.
+     * @type {string}
+     * @memberof BackupUnits
+     */
+    type?: BackupUnitsTypeEnum;
 }
+
+
 
 
 
@@ -60,8 +62,6 @@ export interface BackupUnits {
 export enum BackupUnitsTypeEnum {
     Collection = 'collection'
 }
-
-
 
 
 

@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface Loadbalancer {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {LoadbalancerEntities}
      * @memberof Loadbalancer
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Loadbalancer
-     */
-    type?: Type;
+    entities?: LoadbalancerEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface Loadbalancer {
      * @memberof Loadbalancer
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Loadbalancer
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface Loadbalancer {
     properties: LoadbalancerProperties;
 
     /**
-     * 
-     * @type {LoadbalancerEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof Loadbalancer
      */
-    entities?: LoadbalancerEntities;
+    type?: Type;
 }
 
 

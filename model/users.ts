@@ -25,18 +25,11 @@ import { User } from './user';
 export interface Users {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Users
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Users
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Users {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Users
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<User>}
      * @memberof Users
      */
     items?: Array<User>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof Users
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface Users {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof Users
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Users
+     */
+    type?: Type;
 }
 
 

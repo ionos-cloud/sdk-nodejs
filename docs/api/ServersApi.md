@@ -4,37 +4,37 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersServersCdromsDelete**](ServersApi.md#datacentersserverscdromsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach CD-ROMs |
-| [**datacentersServersCdromsFindById**](ServersApi.md#datacentersserverscdromsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve attached CD-ROMs |
-| [**datacentersServersCdromsGet**](ServersApi.md#datacentersserverscdromsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs  |
-| [**datacentersServersCdromsPost**](ServersApi.md#datacentersserverscdromspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach CD-ROMs |
+| [**datacentersServersCdromsDelete**](ServersApi.md#datacentersserverscdromsdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM by ID |
+| [**datacentersServersCdromsFindById**](ServersApi.md#datacentersserverscdromsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Get Attached CD-ROM by ID |
+| [**datacentersServersCdromsGet**](ServersApi.md#datacentersserverscdromsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Get Attached CD-ROMs  |
+| [**datacentersServersCdromsPost**](ServersApi.md#datacentersserverscdromspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM |
 | [**datacentersServersDelete**](ServersApi.md#datacentersserversdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId} | Delete servers |
 | [**datacentersServersFindById**](ServersApi.md#datacentersserversfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId} | Retrieve servers by ID |
 | [**datacentersServersGet**](ServersApi.md#datacentersserversget) | **GET** /datacenters/{datacenterId}/servers | List servers  |
 | [**datacentersServersPatch**](ServersApi.md#datacentersserverspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId} | Partially modify servers |
-| [**datacentersServersPost**](ServersApi.md#datacentersserverspost) | **POST** /datacenters/{datacenterId}/servers | Create servers |
-| [**datacentersServersPut**](ServersApi.md#datacentersserversput) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify servers |
+| [**datacentersServersPost**](ServersApi.md#datacentersserverspost) | **POST** /datacenters/{datacenterId}/servers | Create a Server |
+| [**datacentersServersPut**](ServersApi.md#datacentersserversput) | **PUT** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server by ID |
 | [**datacentersServersRebootPost**](ServersApi.md#datacentersserversrebootpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot servers |
 | [**datacentersServersRemoteConsoleGet**](ServersApi.md#datacentersserversremoteconsoleget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/remoteconsole | Get Remote Console link |
-| [**datacentersServersResumePost**](ServersApi.md#datacentersserversresumepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume Cubes instances |
-| [**datacentersServersStartPost**](ServersApi.md#datacentersserversstartpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start servers |
-| [**datacentersServersStopPost**](ServersApi.md#datacentersserversstoppost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop VMs |
-| [**datacentersServersSuspendPost**](ServersApi.md#datacentersserverssuspendpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend Cubes instances |
+| [**datacentersServersResumePost**](ServersApi.md#datacentersserversresumepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume a Cube Server by ID |
+| [**datacentersServersStartPost**](ServersApi.md#datacentersserversstartpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start an Enterprise Server by ID |
+| [**datacentersServersStopPost**](ServersApi.md#datacentersserversstoppost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop an Enterprise Server by ID |
+| [**datacentersServersSuspendPost**](ServersApi.md#datacentersserverssuspendpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server by ID |
 | [**datacentersServersTokenGet**](ServersApi.md#datacentersserverstokenget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token |
-| [**datacentersServersUpgradePost**](ServersApi.md#datacentersserversupgradepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade servers |
-| [**datacentersServersVolumesDelete**](ServersApi.md#datacentersserversvolumesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach volumes |
-| [**datacentersServersVolumesFindById**](ServersApi.md#datacentersserversvolumesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve attached volumes |
-| [**datacentersServersVolumesGet**](ServersApi.md#datacentersserversvolumesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | List attached volumes |
-| [**datacentersServersVolumesPost**](ServersApi.md#datacentersserversvolumespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach volumes |
+| [**datacentersServersUpgradePost**](ServersApi.md#datacentersserversupgradepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server by ID |
+| [**datacentersServersVolumesDelete**](ServersApi.md#datacentersserversvolumesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a Volume by ID |
+| [**datacentersServersVolumesFindById**](ServersApi.md#datacentersserversvolumesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Get Attached Volume by ID |
+| [**datacentersServersVolumesGet**](ServersApi.md#datacentersserversvolumesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes | Get Attached Volumes |
+| [**datacentersServersVolumesPost**](ServersApi.md#datacentersserversvolumespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a Volume to a Server |
 
 
 ## datacentersServersCdromsDelete
 
 > datacentersServersCdromsDelete(datacenterId, serverId, cdromId, opts)
 
-Detach CD-ROMs
+Detach a CD-ROM by ID
 
-Detach the specified CD-ROM from the server.
+Detachs the specified CD-ROM from the server.  Detaching a CD-ROM deletes the CD-ROM. The image will not be deleted.  Note that detaching a CD-ROM leads to a reset of the server.
 
 ### Examples
 
@@ -47,7 +47,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Detach CD-ROMs
+// Detach a CD-ROM by ID
 api_instance
   .datacentersServersCdromsDelete({
     datacenterId: datacenterId_example,
@@ -91,9 +91,9 @@ Basic Authentication, Token Authentication
 
 > <Image> datacentersServersCdromsFindById(datacenterId, serverId, cdromId, opts)
 
-Retrieve attached CD-ROMs
+Get Attached CD-ROM by ID
 
-Retrieve the properties of the CD-ROM, attached to the specified server.
+Retrieves the properties of the CD-ROM attached to the specified server.
 
 ### Examples
 
@@ -106,7 +106,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Retrieve attached CD-ROMs
+// Get Attached CD-ROM by ID
 api_instance
   .datacentersServersCdromsFindById({
     datacenterId: datacenterId_example,
@@ -150,9 +150,9 @@ Basic Authentication, Token Authentication
 
 > <Cdroms> datacentersServersCdromsGet(datacenterId, serverId, opts)
 
-List attached CD-ROMs 
+Get Attached CD-ROMs 
 
-List all CD-ROMs, attached to the specified server.
+Lists all CD-ROMs attached to the specified server.
 
 ### Examples
 
@@ -167,7 +167,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ServersApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List attached CD-ROMs 
+// Get Attached CD-ROMs 
 api_instance
   .datacentersServersCdromsGet({
     datacenterId: datacenterId_example,
@@ -216,9 +216,9 @@ Basic Authentication, Token Authentication
 
 > <Image> datacentersServersCdromsPost(datacenterId, serverId, cdrom, opts)
 
-Attach CD-ROMs
+Attach a CD-ROM
 
-Attach a CD-ROM to an existing server. Up to two CD-ROMs can be attached to the same server. 
+Attachs a CD-ROM to an existing server specified by its ID.   CD-ROMs cannot be created stand-alone like volumes. They are either attached to a server or do not exist. They always have an ISO-Image associated; empty CD-ROMs can not be provisioned. It is possible to attach up to two CD-ROMs to the same server.   Note that attaching a CD-ROM leads to a reset of the server.
 
 ### Examples
 
@@ -231,7 +231,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Attach CD-ROMs
+// Attach a CD-ROM
 api_instance
   .datacentersServersCdromsPost({
     datacenterId: datacenterId_example,
@@ -277,7 +277,7 @@ Basic Authentication, Token Authentication
 
 Delete servers
 
-Delete the specified server in your data center. The attached storage volumes will not be removed — a separate API call must be made for these actions.
+Delete the specified server in your data center. The attached storage volumes will also be removed if the query parameter is set to true otherwise a separate API call must be made for these actions.
 
 ### Examples
 
@@ -516,9 +516,9 @@ Basic Authentication, Token Authentication
 
 > <Server> datacentersServersPost(datacenterId, server, opts)
 
-Create servers
+Create a Server
 
-Create a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
+Creates a server within the specified data center. You can also use this request to configure the boot volumes and connect to existing LANs at the same time.
 
 ### Examples
 
@@ -531,7 +531,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Create servers
+// Create a Server
 api_instance
   .datacentersServersPost({
     datacenterId: datacenterId_example,
@@ -573,9 +573,9 @@ Basic Authentication, Token Authentication
 
 > <Server> datacentersServersPut(datacenterId, serverId, server, opts)
 
-Modify servers
+Modify a Server by ID
 
-Modify the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
+Modifies the properties of the specified server within the data center.  Starting with v5, the \'allowReboot\' attribute is retired; while previously required for changing certain server properties, this behavior is now implicit, and the backend will perform this automatically. For example, in earlier versions, when the CPU family is changed, \'allowReboot\' had to be set to \'true\'; this is no longer required, the reboot will be performed automatically.
 
 ### Examples
 
@@ -588,7 +588,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Modify servers
+// Modify a Server by ID
 api_instance
   .datacentersServersPut({
     datacenterId: datacenterId_example,
@@ -751,9 +751,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersResumePost(datacenterId, serverId, opts)
 
-Resume Cubes instances
+Resume a Cube Server by ID
 
-Resume a suspended Cube instance; no billing event will be generated.  This operation is only supported for the Cubes.
+Resumes a suspended Cube Server specified by its ID.  Since the suspended instance was not deleted the allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
 
 ### Examples
 
@@ -766,7 +766,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Resume Cubes instances
+// Resume a Cube Server by ID
 api_instance
   .datacentersServersResumePost({
     datacenterId: datacenterId_example,
@@ -808,9 +808,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersStartPost(datacenterId, serverId, opts)
 
-Start servers
+Start an Enterprise Server by ID
 
-Start the specified server within the data center; if the server\'s public IP address has been deallocated, a new IP address will be assigned.
+Starts the Enterprise Server specified by its ID.  >Note that you cannot use this method to start a Cube Server.  By starting the Enterprise Server, cores and RAM are provisioned, and the billing continues.  If the server\'s public IPv4 address has been deallocated, a new IPv4 address will be assigned. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
 
 ### Examples
 
@@ -823,7 +823,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Start servers
+// Start an Enterprise Server by ID
 api_instance
   .datacentersServersStartPost({
     datacenterId: datacenterId_example,
@@ -865,9 +865,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersStopPost(datacenterId, serverId, opts)
 
-Stop VMs
+Stop an Enterprise Server by ID
 
-Stop the specified server within the data center: the VM will be forcefully shut down, the billing will cease, and any allocated public IPs will be deallocated.  This operation is not supported for the Cubes.
+Stops the Enterprise Server specified by its ID.   >Note that you cannot use this method to stop a Cube Server.   By stopping the Enterprise Server, cores and RAM are freed and no longer charged.  Public IPv4 IPs that are not reserved are returned to the IPv4 pool. IPv6 blocks and addresses will remain unchanged when stopping and starting a server.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
 
 ### Examples
 
@@ -880,7 +880,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Stop VMs
+// Stop an Enterprise Server by ID
 api_instance
   .datacentersServersStopPost({
     datacenterId: datacenterId_example,
@@ -922,9 +922,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersSuspendPost(datacenterId, serverId, opts)
 
-Suspend Cubes instances
+Suspend a Cube Server by ID
 
-Suspend the specified Cubes instance within the data center. The instance will not be deleted, and allocated resources will continue to be billed.  This operation is only supported for the Cubes.
+Suspends the specified Cubes instance within the data center.   The instance is not deleted and allocated resources continue to be billed. You can perform this operation only for Cube Servers.  To check the status of the request, you can use the \'Location\' HTTP header in the response (see \'Requests\' for more information).
 
 ### Examples
 
@@ -937,7 +937,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Suspend Cubes instances
+// Suspend a Cube Server by ID
 api_instance
   .datacentersServersSuspendPost({
     datacenterId: datacenterId_example,
@@ -1041,9 +1041,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersUpgradePost(datacenterId, serverId, opts)
 
-Upgrade servers
+Upgrade a Server by ID
 
-Upgrade the server version, if needed. To determine if an upgrade is available, execute  the following call:  \'/datacenters/{datacenterId}/servers?upgradeNeeded=true\'
+Upgrades the server version.
 
 ### Examples
 
@@ -1056,7 +1056,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Upgrade servers
+// Upgrade a Server by ID
 api_instance
   .datacentersServersUpgradePost({
     datacenterId: datacenterId_example,
@@ -1098,9 +1098,9 @@ Basic Authentication, Token Authentication
 
 > datacentersServersVolumesDelete(datacenterId, serverId, volumeId, opts)
 
-Detach volumes
+Detach a Volume by ID
 
-Detach the specified volume from the server without deleting it from the data center. A separate request must be made to perform the deletion.
+Detachs the specified volume from the server.  Note that only the volume\'s connection to the specified server is disconnected. If you want to delete the volume, you must submit a separate request to perform the deletion.
 
 ### Examples
 
@@ -1113,7 +1113,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Detach volumes
+// Detach a Volume by ID
 api_instance
   .datacentersServersVolumesDelete({
     datacenterId: datacenterId_example,
@@ -1157,9 +1157,9 @@ Basic Authentication, Token Authentication
 
 > <Volume> datacentersServersVolumesFindById(datacenterId, serverId, volumeId, opts)
 
-Retrieve attached volumes
+Get Attached Volume by ID
 
-Retrieve the properties of the volume, attached to the specified server.
+Retrieves the properties of the volume attached to the specified server.
 
 ### Examples
 
@@ -1172,7 +1172,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Retrieve attached volumes
+// Get Attached Volume by ID
 api_instance
   .datacentersServersVolumesFindById({
     datacenterId: datacenterId_example,
@@ -1216,9 +1216,9 @@ Basic Authentication, Token Authentication
 
 > <AttachedVolumes> datacentersServersVolumesGet(datacenterId, serverId, opts)
 
-List attached volumes
+Get Attached Volumes
 
-List all volumes, attached to the specified server.
+Lists all volumes attached to the specified server.
 
 ### Examples
 
@@ -1233,7 +1233,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ServersApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List attached volumes
+// Get Attached Volumes
 api_instance
   .datacentersServersVolumesGet({
     datacenterId: datacenterId_example,
@@ -1282,9 +1282,9 @@ Basic Authentication, Token Authentication
 
 > <Volume> datacentersServersVolumesPost(datacenterId, serverId, volume, opts)
 
-Attach volumes
+Attach a Volume to a Server
 
-Attach an existing storage volume to the specified server.  A volume scan also be created and attached in one step by providing the new volume description as payload.  The combined total of attached volumes and NICs cannot exceed 24 per server.
+Attachs an existing storage volume to the specified server.  You can attach an existing volume in the VDC to a server. To move a volume from one server to another, you must first detach the volume from the first server and attach it to the second server.  It is also possible to create and attach a volume in one step by simply providing a new volume description as a payload. The only difference is the URL; see \'Creating a Volume\' for details about volumes.  Note that the combined total of attached volumes and NICs cannot exceed 24 per server.
 
 ### Examples
 
@@ -1297,7 +1297,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ServersApi(config);
-// Attach volumes
+// Attach a Volume to a Server
 api_instance
   .datacentersServersVolumesPost({
     datacenterId: datacenterId_example,

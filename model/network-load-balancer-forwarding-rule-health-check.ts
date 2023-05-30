@@ -36,18 +36,18 @@ export interface NetworkLoadBalancerForwardingRuleHealthCheck {
     connectTimeout?: number;
 
     /**
-     * The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).
-     * @type {number}
-     * @memberof NetworkLoadBalancerForwardingRuleHealthCheck
-     */
-    targetTimeout?: number;
-
-    /**
      * The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535 and default is three reconnection attempts.
      * @type {number}
      * @memberof NetworkLoadBalancerForwardingRuleHealthCheck
      */
     retries?: number;
+
+    /**
+     * The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds).
+     * @type {number}
+     * @memberof NetworkLoadBalancerForwardingRuleHealthCheck
+     */
+    targetTimeout?: number;
 }
 
 

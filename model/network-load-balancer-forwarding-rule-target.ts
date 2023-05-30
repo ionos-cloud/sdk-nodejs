@@ -23,6 +23,13 @@ import { NetworkLoadBalancerForwardingRuleTargetHealthCheck } from './network-lo
 export interface NetworkLoadBalancerForwardingRuleTarget {
 
     /**
+     * 
+     * @type {NetworkLoadBalancerForwardingRuleTargetHealthCheck}
+     * @memberof NetworkLoadBalancerForwardingRuleTarget
+     */
+    healthCheck?: NetworkLoadBalancerForwardingRuleTargetHealthCheck;
+
+    /**
      * The IP of the balanced target VM.
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleTarget
@@ -42,13 +49,6 @@ export interface NetworkLoadBalancerForwardingRuleTarget {
      * @memberof NetworkLoadBalancerForwardingRuleTarget
      */
     weight: number;
-
-    /**
-     * 
-     * @type {NetworkLoadBalancerForwardingRuleTargetHealthCheck}
-     * @memberof NetworkLoadBalancerForwardingRuleTarget
-     */
-    healthCheck?: NetworkLoadBalancerForwardingRuleTargetHealthCheck;
 }
 
 

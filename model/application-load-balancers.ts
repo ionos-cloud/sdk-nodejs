@@ -25,25 +25,25 @@ import { Type } from './type';
 export interface ApplicationLoadBalancers {
 
     /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof ApplicationLoadBalancers
+     */
+    _links?: PaginationLinks;
+
+    /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof ApplicationLoadBalancers
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof ApplicationLoadBalancers
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof ApplicationLoadBalancers
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof ApplicationLoadBalancers
-     */
-    href?: string;
 
     /**
      * Array of items in the collection.
@@ -53,13 +53,6 @@ export interface ApplicationLoadBalancers {
     items?: Array<ApplicationLoadBalancer>;
 
     /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof ApplicationLoadBalancers
-     */
-    offset?: number;
-
-    /**
      * The limit (if specified in the request).
      * @type {number}
      * @memberof ApplicationLoadBalancers
@@ -67,11 +60,18 @@ export interface ApplicationLoadBalancers {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof ApplicationLoadBalancers
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof ApplicationLoadBalancers
+     */
+    type?: Type;
 }
 
 

@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface NatGateway {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {NatGatewayEntities}
      * @memberof NatGateway
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NatGateway
-     */
-    type?: Type;
+    entities?: NatGatewayEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface NatGateway {
      * @memberof NatGateway
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NatGateway
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface NatGateway {
     properties: NatGatewayProperties;
 
     /**
-     * 
-     * @type {NatGatewayEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof NatGateway
      */
-    entities?: NatGatewayEntities;
+    type?: Type;
 }
 
 

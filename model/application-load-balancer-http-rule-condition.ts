@@ -22,55 +22,41 @@
 export interface ApplicationLoadBalancerHttpRuleCondition {
 
     /**
-     * Type of the HTTP rule condition.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerHttpRuleCondition
-     */
-    type: ApplicationLoadBalancerHttpRuleConditionTypeEnum;
-
-    /**
-     * Matching rule for the HTTP rule condition attribute; mandatory for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null when type is SOURCE_IP.
+     * The matching rule for the HTTP rule condition attribute; this parameter is mandatory for \'HEADER\', \'PATH\', \'QUERY\', \'METHOD\', \'HOST\', and \'COOKIE\' types. It must be \'null\' if the type is \'SOURCE_IP\'.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRuleCondition
      */
     condition: ApplicationLoadBalancerHttpRuleConditionConditionEnum;
 
     /**
-     * Specifies whether the condition is negated or not; the default is False.
-     * @type {boolean}
-     * @memberof ApplicationLoadBalancerHttpRuleCondition
-     */
-    negate?: boolean;
-
-    /**
-     * Must be null when type is PATH, METHOD, HOST, or SOURCE_IP. Key can only be set when type is COOKIES, HEADER, or QUERY.
+     * The key can only be set when the HTTP rule condition type is \'COOKIES\', \'HEADER\', or \'QUERY\'. For the type \'PATH\', \'METHOD\', \'HOST\', or \'SOURCE_IP\' the value must be \'null\'.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRuleCondition
      */
     key?: string;
 
     /**
-     * Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH, ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR if provided and if type is SOURCE_IP.
+     * Specifies whether the condition should be negated; the default value is \'FALSE\'.
+     * @type {boolean}
+     * @memberof ApplicationLoadBalancerHttpRuleCondition
+     */
+    negate?: boolean;
+
+    /**
+     * The HTTP rule condition type.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerHttpRuleCondition
+     */
+    type: ApplicationLoadBalancerHttpRuleConditionTypeEnum;
+
+    /**
+     * This parameter is mandatory for the conditions \'CONTAINS\', \'EQUALS\', \'MATCHES\', \'STARTS_WITH\', \'ENDS_WITH\', or if the type is \'SOURCE_IP\'. Specify a valid CIDR. If the condition is \'EXISTS\', the value must be \'null\'.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRuleCondition
      */
     value?: string;
 }
 
-
-/**
-    * @export
-    * @enum {string}
-    */
-export enum ApplicationLoadBalancerHttpRuleConditionTypeEnum {
-    Header = 'HEADER',
-    Path = 'PATH',
-    Query = 'QUERY',
-    Method = 'METHOD',
-    Host = 'HOST',
-    Cookie = 'COOKIE',
-    SourceIp = 'SOURCE_IP'
-}
 
 /**
     * @export
@@ -86,6 +72,20 @@ export enum ApplicationLoadBalancerHttpRuleConditionConditionEnum {
 }
 
 
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ApplicationLoadBalancerHttpRuleConditionTypeEnum {
+    Header = 'HEADER',
+    Path = 'PATH',
+    Query = 'QUERY',
+    Method = 'METHOD',
+    Host = 'HOST',
+    Cookie = 'COOKIE',
+    SourceIp = 'SOURCE_IP'
+}
 
 
 

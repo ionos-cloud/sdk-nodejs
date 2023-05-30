@@ -25,25 +25,18 @@ import { VolumeProperties } from './volume-properties';
 export interface Volume {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof Volume
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof Volume
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Volume
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof Volume
-     */
-    href?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface Volume {
      * @memberof Volume
      */
     properties: VolumeProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Volume
+     */
+    type?: Type;
 }
 
 

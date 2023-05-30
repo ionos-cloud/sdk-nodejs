@@ -22,49 +22,57 @@
 export interface TargetGroupHttpHealthCheck {
 
     /**
-     * The path (destination URL) for the HTTP health check request; the default is /.
-     * @type {string}
-     * @memberof TargetGroupHttpHealthCheck
-     */
-    path?: string;
-
-    /**
-     * The method for the HTTP health check.
-     * @type {string}
-     * @memberof TargetGroupHttpHealthCheck
-     */
-    method?: TargetGroupHttpHealthCheckMethodEnum;
-
-    /**
-     * 
+     * Specify the target\'s response type to match ALB\'s request.
      * @type {string}
      * @memberof TargetGroupHttpHealthCheck
      */
     matchType: TargetGroupHttpHealthCheckMatchTypeEnum;
 
     /**
-     * The response returned by the request, depending on the match type.
+     * The method used for the health check request.
      * @type {string}
      * @memberof TargetGroupHttpHealthCheck
      */
-    response: string;
+    method?: TargetGroupHttpHealthCheckMethodEnum;
 
     /**
-     * 
+     * Specifies whether to negate an individual entry; the default value is \'FALSE\'.
+     * @type {boolean}
+     * @memberof TargetGroupHttpHealthCheck
+     */
+    negate?: boolean;
+
+    /**
+     * The destination URL for HTTP the health check; the default is \'/\'.
+     * @type {string}
+     * @memberof TargetGroupHttpHealthCheck
+     */
+    path?: string;
+
+    /**
+     * Specifies whether to use a regular expression to parse the response body; the default value is \'FALSE\'.  By using regular expressions, you can flexibly customize the expected response from a healthy server.
      * @type {boolean}
      * @memberof TargetGroupHttpHealthCheck
      */
     regex?: boolean;
 
     /**
-     * 
-     * @type {boolean}
+     * The response returned by the request. It can be a status code or a response body depending on the definition of \'matchType\'.
+     * @type {string}
      * @memberof TargetGroupHttpHealthCheck
      */
-    negate?: boolean;
+    response: string;
 }
 
 
+/**
+    * @export
+    * @enum {string}
+    */
+export enum TargetGroupHttpHealthCheckMatchTypeEnum {
+    StatusCode = 'STATUS_CODE',
+    ResponseBody = 'RESPONSE_BODY'
+}
 
 /**
     * @export
@@ -80,14 +88,6 @@ export enum TargetGroupHttpHealthCheckMethodEnum {
     Options = 'OPTIONS'
 }
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum TargetGroupHttpHealthCheckMatchTypeEnum {
-    StatusCode = 'STATUS_CODE',
-    ResponseBody = 'RESPONSE_BODY'
-}
 
 
 

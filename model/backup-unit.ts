@@ -24,25 +24,18 @@ import { DatacenterElementMetadata } from './datacenter-element-metadata';
 export interface BackupUnit {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof BackupUnit
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {string}
-     * @memberof BackupUnit
-     */
-    type?: BackupUnitTypeEnum;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof BackupUnit
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof BackupUnit
+     */
+    id?: string;
 
     /**
      * 
@@ -57,7 +50,17 @@ export interface BackupUnit {
      * @memberof BackupUnit
      */
     properties: BackupUnitProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {string}
+     * @memberof BackupUnit
+     */
+    type?: BackupUnitTypeEnum;
 }
+
+
+
 
 
 
@@ -68,9 +71,6 @@ export interface BackupUnit {
 export enum BackupUnitTypeEnum {
     Backupunit = 'backupunit'
 }
-
-
-
 
 
 

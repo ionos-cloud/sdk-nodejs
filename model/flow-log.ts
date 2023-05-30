@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface FlowLog {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof FlowLog
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof FlowLog
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof FlowLog
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof FlowLog
-     */
-    href?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface FlowLog {
      * @memberof FlowLog
      */
     properties: FlowLogProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof FlowLog
+     */
+    type?: Type;
 }
 
 

@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface FirewallRule {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof FirewallRule
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof FirewallRule
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof FirewallRule
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof FirewallRule
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface FirewallRule {
      * @memberof FirewallRule
      */
     properties: FirewallruleProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof FirewallRule
+     */
+    type?: Type;
 }
 
 

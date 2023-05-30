@@ -381,8 +381,8 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Create a private Cross-Connect.
-         * @summary Create private Cross-Connects
+         * Creates a private Cross-Connect.
+         * @summary Create a Private Cross-Connect
          * @param {PrivateCrossConnect} pcc The private Cross-Connect to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -540,8 +540,8 @@ export const PrivateCrossConnectsApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a private Cross-Connect.
-         * @summary Create private Cross-Connects
+         * Creates a private Cross-Connect.
+         * @summary Create a Private Cross-Connect
          * @param {PrivateCrossConnect} pcc The private Cross-Connect to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -616,8 +616,8 @@ export const PrivateCrossConnectsApiFactory = function (configuration?: Configur
             return PrivateCrossConnectsApiFp(configuration).pccsPatch(pccId, pcc, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a private Cross-Connect.
-         * @summary Create private Cross-Connects
+         * Creates a private Cross-Connect.
+         * @summary Create a Private Cross-Connect
          * @param {PrivateCrossConnect} pcc The private Cross-Connect to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -880,8 +880,8 @@ export class PrivateCrossConnectsApi extends BaseAPI {
     }
 
     /**
-     * Create a private Cross-Connect.
-     * @summary Create private Cross-Connects
+     * Creates a private Cross-Connect.
+     * @summary Create a Private Cross-Connect
      * @param {PrivateCrossConnectsApiPccsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

@@ -25,25 +25,25 @@ import { Type } from './type';
 export interface TargetGroups {
 
     /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof TargetGroups
+     */
+    _links?: PaginationLinks;
+
+    /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof TargetGroups
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof TargetGroups
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof TargetGroups
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof TargetGroups
-     */
-    href?: string;
 
     /**
      * Array of items in the collection.
@@ -53,13 +53,6 @@ export interface TargetGroups {
     items?: Array<TargetGroup>;
 
     /**
-     * The offset, specified in the request (if not is specified, 0 is used by default).
-     * @type {number}
-     * @memberof TargetGroups
-     */
-    offset?: number;
-
-    /**
      * The limit, specified in the request (if not specified, the endpoint\'s default pagination limit is used).
      * @type {number}
      * @memberof TargetGroups
@@ -67,11 +60,18 @@ export interface TargetGroups {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset, specified in the request (if not is specified, 0 is used by default).
+     * @type {number}
      * @memberof TargetGroups
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof TargetGroups
+     */
+    type?: Type;
 }
 
 

@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve firewall rules |
 | [**datacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List firewall rules |
 | [**datacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify firewall rules |
-| [**datacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create firewall rules |
-| [**datacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify firewall rules |
+| [**datacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#datacentersserversnicsfirewallrulespost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule |
+| [**datacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#datacentersserversnicsfirewallrulesput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule |
 
 
 ## datacentersServersNicsFirewallrulesDelete
@@ -269,9 +269,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRule> datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, opts)
 
-Create firewall rules
+Create a Firewall Rule
 
-Create a firewall rule for the specified NIC.
+Creates a firewall rule for the specified NIC.
 
 ### Examples
 
@@ -284,7 +284,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Create firewall rules
+// Create a Firewall Rule
 api_instance
   .datacentersServersNicsFirewallrulesPost({
     datacenterId: datacenterId_example,
@@ -330,9 +330,9 @@ Basic Authentication, Token Authentication
 
 > <FirewallRule> datacentersServersNicsFirewallrulesPut(datacenterId, serverId, nicId, firewallruleId, firewallrule, opts)
 
-Modify firewall rules
+Modify a Firewall Rule
 
-Modify the properties of the specified firewall rule.
+Modifies the properties of the specified firewall rule.
 
 ### Examples
 
@@ -345,7 +345,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.FirewallRulesApi(config);
-// Modify firewall rules
+// Modify a Firewall Rule
 api_instance
   .datacentersServersNicsFirewallrulesPut({
     datacenterId: datacenterId_example,

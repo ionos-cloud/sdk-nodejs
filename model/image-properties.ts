@@ -22,32 +22,11 @@
 export interface ImageProperties {
 
     /**
-     * The name of the  resource.
+     * Cloud init compatibility.
      * @type {string}
      * @memberof ImageProperties
      */
-    name?: string;
-
-    /**
-     * Human-readable description.
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    description?: string;
-
-    /**
-     * Location of that image/snapshot. 
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    location?: string;
-
-    /**
-     * The size of the image in GB.
-     * @type {number}
-     * @memberof ImageProperties
-     */
-    size?: number;
+    cloudInit?: ImagePropertiesCloudInitEnum;
 
     /**
      * Hot-plug capable CPU (no reboot required).
@@ -64,46 +43,11 @@ export interface ImageProperties {
     cpuHotUnplug?: boolean;
 
     /**
-     * Hot-plug capable RAM (no reboot required).
-     * @type {boolean}
+     * Human-readable description.
+     * @type {string}
      * @memberof ImageProperties
      */
-    ramHotPlug?: boolean;
-
-    /**
-     * Hot-unplug capable RAM (no reboot required).
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    ramHotUnplug?: boolean;
-
-    /**
-     * Hot-plug capable NIC (no reboot required).
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    nicHotPlug?: boolean;
-
-    /**
-     * Hot-unplug capable NIC (no reboot required).
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    nicHotUnplug?: boolean;
-
-    /**
-     * Hot-plug capable Virt-IO drive (no reboot required).
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    discVirtioHotPlug?: boolean;
-
-    /**
-     * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    discVirtioHotUnplug?: boolean;
+    description?: string;
 
     /**
      * Hot-plug capable SCSI drive (no reboot required).
@@ -120,11 +64,25 @@ export interface ImageProperties {
     discScsiHotUnplug?: boolean;
 
     /**
-     * OS type for this image.
-     * @type {string}
+     * Hot-plug capable Virt-IO drive (no reboot required).
+     * @type {boolean}
      * @memberof ImageProperties
      */
-    licenceType: ImagePropertiesLicenceTypeEnum;
+    discVirtioHotPlug?: boolean;
+
+    /**
+     * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    discVirtioHotUnplug?: boolean;
+
+    /**
+     * List of image aliases mapped for this image
+     * @type {Array<string>}
+     * @memberof ImageProperties
+     */
+    imageAliases?: Array<string>;
 
     /**
      * The image type.
@@ -134,6 +92,41 @@ export interface ImageProperties {
     imageType?: ImagePropertiesImageTypeEnum;
 
     /**
+     * The OS type of this image.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    licenceType: ImagePropertiesLicenceTypeEnum;
+
+    /**
+     * The location of this image/snapshot.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    location?: string;
+
+    /**
+     * The resource name.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    name?: string;
+
+    /**
+     * Hot-plug capable NIC (no reboot required).
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    nicHotPlug?: boolean;
+
+    /**
+     * Hot-unplug capable NIC (no reboot required).
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    nicHotUnplug?: boolean;
+
+    /**
      * Indicates whether the image is part of a public repository.
      * @type {boolean}
      * @memberof ImageProperties
@@ -141,47 +134,44 @@ export interface ImageProperties {
     _public?: boolean;
 
     /**
-     * List of image aliases mapped for this Image
-     * @type {Array<string>}
+     * Hot-plug capable RAM (no reboot required).
+     * @type {boolean}
      * @memberof ImageProperties
      */
-    imageAliases?: Array<string>;
+    ramHotPlug?: boolean;
 
     /**
-     * Cloud init compatibility.
-     * @type {string}
+     * Hot-unplug capable RAM (no reboot required).
+     * @type {boolean}
      * @memberof ImageProperties
      */
-    cloudInit?: ImagePropertiesCloudInitEnum;
+    ramHotUnplug?: boolean;
+
+    /**
+     * The image size in GB.
+     * @type {number}
+     * @memberof ImageProperties
+     */
+    size?: number;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /**
     * @export
     * @enum {string}
     */
-export enum ImagePropertiesLicenceTypeEnum {
-    Unknown = 'UNKNOWN',
-    Windows = 'WINDOWS',
-    Windows2016 = 'WINDOWS2016',
-    Windows2022 = 'WINDOWS2022',
-    Linux = 'LINUX',
-    Other = 'OTHER'
+export enum ImagePropertiesCloudInitEnum {
+    None = 'NONE',
+    V1 = 'V1'
 }
+
+
+
+
+
+
+
+
 
 /**
     * @export
@@ -193,16 +183,27 @@ export enum ImagePropertiesImageTypeEnum {
     Unknown = 'UNKNOWN'
 }
 
-
-
 /**
     * @export
     * @enum {string}
     */
-export enum ImagePropertiesCloudInitEnum {
-    None = 'NONE',
-    V1 = 'V1'
+export enum ImagePropertiesLicenceTypeEnum {
+    Unknown = 'UNKNOWN',
+    Windows = 'WINDOWS',
+    Windows2016 = 'WINDOWS2016',
+    Windows2022 = 'WINDOWS2022',
+    Rhel = 'RHEL',
+    Linux = 'LINUX',
+    Other = 'OTHER'
 }
+
+
+
+
+
+
+
+
 
 
 

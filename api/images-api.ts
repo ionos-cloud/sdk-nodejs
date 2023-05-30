@@ -381,8 +381,8 @@ export const ImagesApiAxiosParamCreator = function (configuration?: Configuratio
             };
         },
         /**
-         * Modify the properties of the specified image.
-         * @summary Modify images
+         * Modifies the properties of the specified image.
+         * @summary Modify an Image by ID
          * @param {string} imageId The unique ID of the image.
          * @param {Image} image The modified image
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -545,8 +545,8 @@ export const ImagesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified image.
-         * @summary Modify images
+         * Modifies the properties of the specified image.
+         * @summary Modify an Image by ID
          * @param {string} imageId The unique ID of the image.
          * @param {Image} image The modified image
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -622,8 +622,8 @@ export const ImagesApiFactory = function (configuration?: Configuration, basePat
             return ImagesApiFp(configuration).imagesPatch(imageId, image, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified image.
-         * @summary Modify images
+         * Modifies the properties of the specified image.
+         * @summary Modify an Image by ID
          * @param {string} imageId The unique ID of the image.
          * @param {Image} image The modified image
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -894,8 +894,8 @@ export class ImagesApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified image.
-     * @summary Modify images
+     * Modifies the properties of the specified image.
+     * @summary Modify an Image by ID
      * @param {ImagesApiImagesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

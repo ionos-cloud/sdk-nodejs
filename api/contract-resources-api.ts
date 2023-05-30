@@ -27,8 +27,8 @@ import { Contracts } from '../model';
 export const ContractResourcesApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Retrieve the properties of the user\'s contract. In this version, the resource became a collection.
-         * @summary Retrieve contracts
+         * Retrieves the properties of the user\'s contract. This operation allows you to obtain the resource limits and the general contract information.
+         * @summary Get Contract Information
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -129,8 +129,8 @@ export const ContractResourcesApiAxiosParamCreator = function (configuration?: C
 export const ContractResourcesApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Retrieve the properties of the user\'s contract. In this version, the resource became a collection.
-         * @summary Retrieve contracts
+         * Retrieves the properties of the user\'s contract. This operation allows you to obtain the resource limits and the general contract information.
+         * @summary Get Contract Information
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -154,8 +154,8 @@ export const ContractResourcesApiFp = function(configuration?: Configuration) {
 export const ContractResourcesApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Retrieve the properties of the user\'s contract. In this version, the resource became a collection.
-         * @summary Retrieve contracts
+         * Retrieves the properties of the user\'s contract. This operation allows you to obtain the resource limits and the general contract information.
+         * @summary Get Contract Information
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -222,8 +222,8 @@ export interface ContractResourcesApiContractsGetRequest {
  */
 export class ContractResourcesApi extends BaseAPI {
     /**
-     * Retrieve the properties of the user\'s contract. In this version, the resource became a collection.
-     * @summary Retrieve contracts
+     * Retrieves the properties of the user\'s contract. This operation allows you to obtain the resource limits and the general contract information.
+     * @summary Get Contract Information
      * @param {ContractResourcesApiContractsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

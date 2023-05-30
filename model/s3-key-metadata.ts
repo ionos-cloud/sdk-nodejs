@@ -22,18 +22,18 @@
 export interface S3KeyMetadata {
 
     /**
-     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
-     * @type {string}
-     * @memberof S3KeyMetadata
-     */
-    etag?: string;
-
-    /**
      * The time when the S3 key was created.
      * @type {string}
      * @memberof S3KeyMetadata
      */
     createdDate?: string;
+
+    /**
+     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
+     * @type {string}
+     * @memberof S3KeyMetadata
+     */
+    etag?: string;
 }
 
 

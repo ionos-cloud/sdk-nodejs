@@ -29,6 +29,34 @@ export interface DataCenterEntities {
 
     /**
      * 
+     * @type {Lans}
+     * @memberof DataCenterEntities
+     */
+    lans?: Lans;
+
+    /**
+     * 
+     * @type {Loadbalancers}
+     * @memberof DataCenterEntities
+     */
+    loadbalancers?: Loadbalancers;
+
+    /**
+     * 
+     * @type {NatGateways}
+     * @memberof DataCenterEntities
+     */
+    natgateways?: NatGateways;
+
+    /**
+     * 
+     * @type {NetworkLoadBalancers}
+     * @memberof DataCenterEntities
+     */
+    networkloadbalancers?: NetworkLoadBalancers;
+
+    /**
+     * 
      * @type {Servers}
      * @memberof DataCenterEntities
      */
@@ -40,34 +68,6 @@ export interface DataCenterEntities {
      * @memberof DataCenterEntities
      */
     volumes?: Volumes;
-
-    /**
-     * 
-     * @type {Loadbalancers}
-     * @memberof DataCenterEntities
-     */
-    loadbalancers?: Loadbalancers;
-
-    /**
-     * 
-     * @type {Lans}
-     * @memberof DataCenterEntities
-     */
-    lans?: Lans;
-
-    /**
-     * 
-     * @type {NetworkLoadBalancers}
-     * @memberof DataCenterEntities
-     */
-    networkloadbalancers?: NetworkLoadBalancers;
-
-    /**
-     * 
-     * @type {NatGateways}
-     * @memberof DataCenterEntities
-     */
-    natgateways?: NatGateways;
 }
 
 

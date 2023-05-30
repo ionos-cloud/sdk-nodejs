@@ -49,8 +49,8 @@ import { FlowLogs } from '../model';
 export const ApplicationLoadBalancersApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Remove the specified Application Load Balancer from the data center..
-         * @summary Delete Application Load Balancers
+         * Removes the specified Application Load Balancer from the data center.
+         * @summary Delete an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -136,8 +136,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Retrieve the properties of the specified Application Load Balancer within the data center.
-         * @summary Retrieve Application Load Balancers
+         * Retrieves the properties of the specified Application Load Balancer within the data center.
+         * @summary Get an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -223,11 +223,11 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Delete the specified Application Load Balancer Flow Log.
-         * @summary Delete ALB Flow Logs
+         * Deletes the Application Load Balancer flow log specified by its ID.
+         * @summary Delete an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -315,11 +315,11 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Retrieve the specified Application Load Balancer Flow Log.
-         * @summary Retrieve ALB Flow Logs
+         * Retrieves the Application Load Balancer flow log specified by its ID.
+         * @summary Get an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -407,8 +407,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * List the Flow Logs for the specified Application Load Balancer.
-         * @summary List ALB Flow Logs
+         * Retrieves the flow logs for the specified Application Load Balancer.
+         * @summary Get ALB Flow Logs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -510,12 +510,12 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Update the properties of the specified Application Load Balancer Flow Log.
-         * @summary Partially modify ALB Flow Logs
+         * Updates the properties of the Application Load Balancer flow log specified by its ID.
+         * @summary Partially Modify an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
-         * @param {FlowLogProperties} applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated.
+         * @param {string} flowLogId The unique ID of the flow log.
+         * @param {FlowLogProperties} applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -613,11 +613,11 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Add a new Flow Log for the Application Load Balancer.
-         * @summary Create ALB Flow Logs
+         * Creates a flow log for the Application Load Balancer specified by ID.
+         * @summary Create an ALB Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {FlowLog} applicationLoadBalancerFlowLog The Flow Log to create.
+         * @param {FlowLog} applicationLoadBalancerFlowLog The flow log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -711,12 +711,12 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Modify the specified Application Load Balancer Flow Log.
-         * @summary Modify ALB Flow Logs
+         * Modifies the Application Load Balancer flow log specified by its ID.
+         * @summary Modify an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
-         * @param {FlowLogPut} applicationLoadBalancerFlowLog The modified ALB Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
+         * @param {FlowLogPut} applicationLoadBalancerFlowLog The modified ALB flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -814,8 +814,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Delete the specified Application Load Balancer forwarding rule.
-         * @summary Delete ALB forwarding rules
+         * Deletes the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Delete an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -906,8 +906,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Retrieve the specified Application Load Balancer forwarding rule.
-         * @summary Retrieve ALB forwarding rules
+         * Retrieves the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Get an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -998,8 +998,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * List the forwarding rules for the specified Application Load Balancer.
-         * @summary List ALB forwarding rules
+         * Lists the forwarding rules of the specified Application Load Balancer.
+         * @summary Get ALB Forwarding Rules
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1101,8 +1101,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Update the properties of the specified Application Load Balancer forwarding rule.
-         * @summary Partially modify ALB forwarding rules
+         * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Partially modify an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -1204,8 +1204,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Create a forwarding rule for the Application Load Balancer.
-         * @summary Create ALB forwarding rules
+         * Creates a forwarding rule for the specified Application Load Balancer.
+         * @summary Create an ALB Forwarding Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerForwardingRule} applicationLoadBalancerForwardingRule The forwarding rule to create.
@@ -1302,8 +1302,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Modify the specified Application Load Balancer forwarding rule.
-         * @summary Modify ALB forwarding rules
+         * Modifies the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Modify an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -1405,8 +1405,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * List all Application Load Balancers within the data center.
-         * @summary List Application Load Balancers
+         * Lists all Application Load Balancers within a data center.
+         * @summary Get Application Load Balancers
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -1519,8 +1519,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Update the properties of the specified Application Load Balancer within the data center.
-         * @summary Partially modify Application Load Balancers
+         * Updates the properties of the specified Application Load Balancer within the data center.
+         * @summary Partially Modify an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerProperties} applicationLoadBalancerProperties The Application Load Balancer properties to be updated.
@@ -1617,8 +1617,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Create an Application Load Balancer within the datacenter.
-         * @summary Create Application Load Balancers
+         * Creates an Application Load Balancer within the data center.
+         * @summary Create an Application Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {ApplicationLoadBalancer} applicationLoadBalancer The Application Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1710,8 +1710,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
             };
         },
         /**
-         * Modify the properties of the specified Application Load Balancer within the data center.
-         * @summary Modify Application Load Balancers
+         * Modifies the properties of the specified Application Load Balancer within the data center.
+         * @summary Modify an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerPut} applicationLoadBalancer The modified Application Load Balancer.
@@ -1817,8 +1817,8 @@ export const ApplicationLoadBalancersApiAxiosParamCreator = function (configurat
 export const ApplicationLoadBalancersApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Remove the specified Application Load Balancer from the data center..
-         * @summary Delete Application Load Balancers
+         * Removes the specified Application Load Balancer from the data center.
+         * @summary Delete an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1833,8 +1833,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the properties of the specified Application Load Balancer within the data center.
-         * @summary Retrieve Application Load Balancers
+         * Retrieves the properties of the specified Application Load Balancer within the data center.
+         * @summary Get an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1849,11 +1849,11 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Delete the specified Application Load Balancer Flow Log.
-         * @summary Delete ALB Flow Logs
+         * Deletes the Application Load Balancer flow log specified by its ID.
+         * @summary Delete an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1866,11 +1866,11 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the specified Application Load Balancer Flow Log.
-         * @summary Retrieve ALB Flow Logs
+         * Retrieves the Application Load Balancer flow log specified by its ID.
+         * @summary Get an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1883,8 +1883,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List the Flow Logs for the specified Application Load Balancer.
-         * @summary List ALB Flow Logs
+         * Retrieves the flow logs for the specified Application Load Balancer.
+         * @summary Get ALB Flow Logs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1901,12 +1901,12 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified Application Load Balancer Flow Log.
-         * @summary Partially modify ALB Flow Logs
+         * Updates the properties of the Application Load Balancer flow log specified by its ID.
+         * @summary Partially Modify an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
-         * @param {FlowLogProperties} applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated.
+         * @param {string} flowLogId The unique ID of the flow log.
+         * @param {FlowLogProperties} applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1919,11 +1919,11 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new Flow Log for the Application Load Balancer.
-         * @summary Create ALB Flow Logs
+         * Creates a flow log for the Application Load Balancer specified by ID.
+         * @summary Create an ALB Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {FlowLog} applicationLoadBalancerFlowLog The Flow Log to create.
+         * @param {FlowLog} applicationLoadBalancerFlowLog The flow log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1936,12 +1936,12 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified Application Load Balancer Flow Log.
-         * @summary Modify ALB Flow Logs
+         * Modifies the Application Load Balancer flow log specified by its ID.
+         * @summary Modify an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
-         * @param {FlowLogPut} applicationLoadBalancerFlowLog The modified ALB Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
+         * @param {FlowLogPut} applicationLoadBalancerFlowLog The modified ALB flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1954,8 +1954,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Delete the specified Application Load Balancer forwarding rule.
-         * @summary Delete ALB forwarding rules
+         * Deletes the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Delete an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -1971,8 +1971,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the specified Application Load Balancer forwarding rule.
-         * @summary Retrieve ALB forwarding rules
+         * Retrieves the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Get an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -1988,8 +1988,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List the forwarding rules for the specified Application Load Balancer.
-         * @summary List ALB forwarding rules
+         * Lists the forwarding rules of the specified Application Load Balancer.
+         * @summary Get ALB Forwarding Rules
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2006,8 +2006,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified Application Load Balancer forwarding rule.
-         * @summary Partially modify ALB forwarding rules
+         * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Partially modify an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -2024,8 +2024,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a forwarding rule for the Application Load Balancer.
-         * @summary Create ALB forwarding rules
+         * Creates a forwarding rule for the specified Application Load Balancer.
+         * @summary Create an ALB Forwarding Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerForwardingRule} applicationLoadBalancerForwardingRule The forwarding rule to create.
@@ -2041,8 +2041,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the specified Application Load Balancer forwarding rule.
-         * @summary Modify ALB forwarding rules
+         * Modifies the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Modify an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -2059,8 +2059,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all Application Load Balancers within the data center.
-         * @summary List Application Load Balancers
+         * Lists all Application Load Balancers within a data center.
+         * @summary Get Application Load Balancers
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -2078,8 +2078,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified Application Load Balancer within the data center.
-         * @summary Partially modify Application Load Balancers
+         * Updates the properties of the specified Application Load Balancer within the data center.
+         * @summary Partially Modify an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerProperties} applicationLoadBalancerProperties The Application Load Balancer properties to be updated.
@@ -2095,8 +2095,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create an Application Load Balancer within the datacenter.
-         * @summary Create Application Load Balancers
+         * Creates an Application Load Balancer within the data center.
+         * @summary Create an Application Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {ApplicationLoadBalancer} applicationLoadBalancer The Application Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2111,8 +2111,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified Application Load Balancer within the data center.
-         * @summary Modify Application Load Balancers
+         * Modifies the properties of the specified Application Load Balancer within the data center.
+         * @summary Modify an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerPut} applicationLoadBalancer The modified Application Load Balancer.
@@ -2137,8 +2137,8 @@ export const ApplicationLoadBalancersApiFp = function(configuration?: Configurat
 export const ApplicationLoadBalancersApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Remove the specified Application Load Balancer from the data center..
-         * @summary Delete Application Load Balancers
+         * Removes the specified Application Load Balancer from the data center.
+         * @summary Delete an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2151,8 +2151,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersDelete(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the properties of the specified Application Load Balancer within the data center.
-         * @summary Retrieve Application Load Balancers
+         * Retrieves the properties of the specified Application Load Balancer within the data center.
+         * @summary Get an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2165,11 +2165,11 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFindByApplicationLoadBalancerId(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete the specified Application Load Balancer Flow Log.
-         * @summary Delete ALB Flow Logs
+         * Deletes the Application Load Balancer flow log specified by its ID.
+         * @summary Delete an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -2180,11 +2180,11 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFlowlogsDelete(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the specified Application Load Balancer Flow Log.
-         * @summary Retrieve ALB Flow Logs
+         * Retrieves the Application Load Balancer flow log specified by its ID.
+         * @summary Get an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -2195,8 +2195,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFlowlogsFindByFlowLogId(datacenterId, applicationLoadBalancerId, flowLogId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List the Flow Logs for the specified Application Load Balancer.
-         * @summary List ALB Flow Logs
+         * Retrieves the flow logs for the specified Application Load Balancer.
+         * @summary Get ALB Flow Logs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2209,12 +2209,12 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFlowlogsGet(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified Application Load Balancer Flow Log.
-         * @summary Partially modify ALB Flow Logs
+         * Updates the properties of the Application Load Balancer flow log specified by its ID.
+         * @summary Partially Modify an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
-         * @param {FlowLogProperties} applicationLoadBalancerFlowLogProperties The properties of the ALB Flow Log to be updated.
+         * @param {string} flowLogId The unique ID of the flow log.
+         * @param {FlowLogProperties} applicationLoadBalancerFlowLogProperties The properties of the ALB flow log to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -2225,11 +2225,11 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFlowlogsPatch(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new Flow Log for the Application Load Balancer.
-         * @summary Create ALB Flow Logs
+         * Creates a flow log for the Application Load Balancer specified by ID.
+         * @summary Create an ALB Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {FlowLog} applicationLoadBalancerFlowLog The Flow Log to create.
+         * @param {FlowLog} applicationLoadBalancerFlowLog The flow log to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -2240,12 +2240,12 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFlowlogsPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified Application Load Balancer Flow Log.
-         * @summary Modify ALB Flow Logs
+         * Modifies the Application Load Balancer flow log specified by its ID.
+         * @summary Modify an ALB Flow Log by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
-         * @param {string} flowLogId The unique ID of the Flow Log.
-         * @param {FlowLogPut} applicationLoadBalancerFlowLog The modified ALB Flow Log.
+         * @param {string} flowLogId The unique ID of the flow log.
+         * @param {FlowLogPut} applicationLoadBalancerFlowLog The modified ALB flow log.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -2256,8 +2256,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersFlowlogsPut(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Delete the specified Application Load Balancer forwarding rule.
-         * @summary Delete ALB forwarding rules
+         * Deletes the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Delete an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -2271,8 +2271,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersForwardingrulesDelete(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the specified Application Load Balancer forwarding rule.
-         * @summary Retrieve ALB forwarding rules
+         * Retrieves the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Get an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -2286,8 +2286,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId(datacenterId, applicationLoadBalancerId, forwardingRuleId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List the forwarding rules for the specified Application Load Balancer.
-         * @summary List ALB forwarding rules
+         * Lists the forwarding rules of the specified Application Load Balancer.
+         * @summary Get ALB Forwarding Rules
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2300,8 +2300,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersForwardingrulesGet(datacenterId, applicationLoadBalancerId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified Application Load Balancer forwarding rule.
-         * @summary Partially modify ALB forwarding rules
+         * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Partially modify an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -2316,8 +2316,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersForwardingrulesPatch(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a forwarding rule for the Application Load Balancer.
-         * @summary Create ALB forwarding rules
+         * Creates a forwarding rule for the specified Application Load Balancer.
+         * @summary Create an ALB Forwarding Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerForwardingRule} applicationLoadBalancerForwardingRule The forwarding rule to create.
@@ -2331,8 +2331,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersForwardingrulesPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the specified Application Load Balancer forwarding rule.
-         * @summary Modify ALB forwarding rules
+         * Modifies the Application Load Balancer forwarding rule specified by its ID.
+         * @summary Modify an ALB Forwarding Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {string} forwardingRuleId The unique ID of the forwarding rule.
@@ -2347,8 +2347,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersForwardingrulesPut(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all Application Load Balancers within the data center.
-         * @summary List Application Load Balancers
+         * Lists all Application Load Balancers within a data center.
+         * @summary Get Application Load Balancers
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -2362,8 +2362,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified Application Load Balancer within the data center.
-         * @summary Partially modify Application Load Balancers
+         * Updates the properties of the specified Application Load Balancer within the data center.
+         * @summary Partially Modify an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerProperties} applicationLoadBalancerProperties The Application Load Balancer properties to be updated.
@@ -2377,8 +2377,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersPatch(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create an Application Load Balancer within the datacenter.
-         * @summary Create Application Load Balancers
+         * Creates an Application Load Balancer within the data center.
+         * @summary Create an Application Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {ApplicationLoadBalancer} applicationLoadBalancer The Application Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2391,8 +2391,8 @@ export const ApplicationLoadBalancersApiFactory = function (configuration?: Conf
             return ApplicationLoadBalancersApiFp(configuration).datacentersApplicationloadbalancersPost(datacenterId, applicationLoadBalancer, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified Application Load Balancer within the data center.
-         * @summary Modify Application Load Balancers
+         * Modifies the properties of the specified Application Load Balancer within the data center.
+         * @summary Modify an Application Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} applicationLoadBalancerId The unique ID of the Application Load Balancer.
          * @param {ApplicationLoadBalancerPut} applicationLoadBalancer The modified Application Load Balancer.
@@ -2513,7 +2513,7 @@ export interface ApplicationLoadBalancersApiDatacentersApplicationloadbalancersF
     readonly applicationLoadBalancerId: string
 
     /**
-     * The unique ID of the Flow Log.
+     * The unique ID of the flow log.
      * @type {string}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsDelete
      */
@@ -2562,7 +2562,7 @@ export interface ApplicationLoadBalancersApiDatacentersApplicationloadbalancersF
     readonly applicationLoadBalancerId: string
 
     /**
-     * The unique ID of the Flow Log.
+     * The unique ID of the flow log.
      * @type {string}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsFindByFlowLogId
      */
@@ -2671,14 +2671,14 @@ export interface ApplicationLoadBalancersApiDatacentersApplicationloadbalancersF
     readonly applicationLoadBalancerId: string
 
     /**
-     * The unique ID of the Flow Log.
+     * The unique ID of the flow log.
      * @type {string}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPatch
      */
     readonly flowLogId: string
 
     /**
-     * The properties of the ALB Flow Log to be updated.
+     * The properties of the ALB flow log to be updated.
      * @type {FlowLogProperties}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPatch
      */
@@ -2727,7 +2727,7 @@ export interface ApplicationLoadBalancersApiDatacentersApplicationloadbalancersF
     readonly applicationLoadBalancerId: string
 
     /**
-     * The Flow Log to create.
+     * The flow log to create.
      * @type {FlowLog}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPost
      */
@@ -2776,14 +2776,14 @@ export interface ApplicationLoadBalancersApiDatacentersApplicationloadbalancersF
     readonly applicationLoadBalancerId: string
 
     /**
-     * The unique ID of the Flow Log.
+     * The unique ID of the flow log.
      * @type {string}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPut
      */
     readonly flowLogId: string
 
     /**
-     * The modified ALB Flow Log.
+     * The modified ALB flow log.
      * @type {FlowLogPut}
      * @memberof ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPut
      */
@@ -3345,8 +3345,8 @@ export interface ApplicationLoadBalancersApiDatacentersApplicationloadbalancersP
  */
 export class ApplicationLoadBalancersApi extends BaseAPI {
     /**
-     * Remove the specified Application Load Balancer from the data center..
-     * @summary Delete Application Load Balancers
+     * Removes the specified Application Load Balancer from the data center.
+     * @summary Delete an Application Load Balancer by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3357,8 +3357,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the properties of the specified Application Load Balancer within the data center.
-     * @summary Retrieve Application Load Balancers
+     * Retrieves the properties of the specified Application Load Balancer within the data center.
+     * @summary Get an Application Load Balancer by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFindByApplicationLoadBalancerIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3369,8 +3369,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Delete the specified Application Load Balancer Flow Log.
-     * @summary Delete ALB Flow Logs
+     * Deletes the Application Load Balancer flow log specified by its ID.
+     * @summary Delete an ALB Flow Log by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3381,8 +3381,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the specified Application Load Balancer Flow Log.
-     * @summary Retrieve ALB Flow Logs
+     * Retrieves the Application Load Balancer flow log specified by its ID.
+     * @summary Get an ALB Flow Log by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsFindByFlowLogIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3393,8 +3393,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * List the Flow Logs for the specified Application Load Balancer.
-     * @summary List ALB Flow Logs
+     * Retrieves the flow logs for the specified Application Load Balancer.
+     * @summary Get ALB Flow Logs
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3405,8 +3405,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified Application Load Balancer Flow Log.
-     * @summary Partially modify ALB Flow Logs
+     * Updates the properties of the Application Load Balancer flow log specified by its ID.
+     * @summary Partially Modify an ALB Flow Log by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3417,8 +3417,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Add a new Flow Log for the Application Load Balancer.
-     * @summary Create ALB Flow Logs
+     * Creates a flow log for the Application Load Balancer specified by ID.
+     * @summary Create an ALB Flow Log
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3429,8 +3429,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified Application Load Balancer Flow Log.
-     * @summary Modify ALB Flow Logs
+     * Modifies the Application Load Balancer flow log specified by its ID.
+     * @summary Modify an ALB Flow Log by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersFlowlogsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3441,8 +3441,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Delete the specified Application Load Balancer forwarding rule.
-     * @summary Delete ALB forwarding rules
+     * Deletes the Application Load Balancer forwarding rule specified by its ID.
+     * @summary Delete an ALB Forwarding Rule by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersForwardingrulesDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3453,8 +3453,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the specified Application Load Balancer forwarding rule.
-     * @summary Retrieve ALB forwarding rules
+     * Retrieves the Application Load Balancer forwarding rule specified by its ID.
+     * @summary Get an ALB Forwarding Rule by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3465,8 +3465,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * List the forwarding rules for the specified Application Load Balancer.
-     * @summary List ALB forwarding rules
+     * Lists the forwarding rules of the specified Application Load Balancer.
+     * @summary Get ALB Forwarding Rules
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersForwardingrulesGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3477,8 +3477,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified Application Load Balancer forwarding rule.
-     * @summary Partially modify ALB forwarding rules
+     * Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
+     * @summary Partially modify an ALB Forwarding Rule by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersForwardingrulesPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3489,8 +3489,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Create a forwarding rule for the Application Load Balancer.
-     * @summary Create ALB forwarding rules
+     * Creates a forwarding rule for the specified Application Load Balancer.
+     * @summary Create an ALB Forwarding Rule
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersForwardingrulesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3501,8 +3501,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Modify the specified Application Load Balancer forwarding rule.
-     * @summary Modify ALB forwarding rules
+     * Modifies the Application Load Balancer forwarding rule specified by its ID.
+     * @summary Modify an ALB Forwarding Rule by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersForwardingrulesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3513,8 +3513,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * List all Application Load Balancers within the data center.
-     * @summary List Application Load Balancers
+     * Lists all Application Load Balancers within a data center.
+     * @summary Get Application Load Balancers
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3525,8 +3525,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified Application Load Balancer within the data center.
-     * @summary Partially modify Application Load Balancers
+     * Updates the properties of the specified Application Load Balancer within the data center.
+     * @summary Partially Modify an Application Load Balancer by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3537,8 +3537,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Create an Application Load Balancer within the datacenter.
-     * @summary Create Application Load Balancers
+     * Creates an Application Load Balancer within the data center.
+     * @summary Create an Application Load Balancer
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3549,8 +3549,8 @@ export class ApplicationLoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified Application Load Balancer within the data center.
-     * @summary Modify Application Load Balancers
+     * Modifies the properties of the specified Application Load Balancer within the data center.
+     * @summary Modify an Application Load Balancer by ID
      * @param {ApplicationLoadBalancersApiDatacentersApplicationloadbalancersPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

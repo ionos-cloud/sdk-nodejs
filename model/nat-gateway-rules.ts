@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface NatGatewayRules {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof NatGatewayRules
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NatGatewayRules
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof NatGatewayRules
@@ -45,11 +31,25 @@ export interface NatGatewayRules {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NatGatewayRules
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<NatGatewayRule>}
      * @memberof NatGatewayRules
      */
     items?: Array<NatGatewayRule>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NatGatewayRules
+     */
+    type?: Type;
 }
 
 

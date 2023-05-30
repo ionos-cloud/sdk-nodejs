@@ -22,40 +22,41 @@
 export interface KubernetesNodeMetadata {
 
     /**
-     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
-     * @type {string}
-     * @memberof KubernetesNodeMetadata
-     */
-    etag?: string;
-
-    /**
-     * The last time the resource was created.
+     * The date the resource was created.
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     createdDate?: string;
 
     /**
-     * The last time the resource was modified.
+     * The resource entity tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity tags are also added as \'ETag\' response headers to requests that do not use the \'depth\' parameter.
+     * @type {string}
+     * @memberof KubernetesNodeMetadata
+     */
+    etag?: string;
+
+    /**
+     * The date the resource was last modified.
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     lastModifiedDate?: string;
 
     /**
-     * State of the resource.
-     * @type {string}
-     * @memberof KubernetesNodeMetadata
-     */
-    state?: KubernetesNodeMetadataStateEnum;
-
-    /**
-     * The last time the software was updated on the node.
+     * The date when the software on the node was last updated.
      * @type {string}
      * @memberof KubernetesNodeMetadata
      */
     lastSoftwareUpdatedDate?: string;
+
+    /**
+     * The resource state.
+     * @type {string}
+     * @memberof KubernetesNodeMetadata
+     */
+    state?: KubernetesNodeMetadataStateEnum;
 }
+
 
 
 
@@ -73,7 +74,6 @@ export enum KubernetesNodeMetadataStateEnum {
     Rebuilding = 'REBUILDING',
     Busy = 'BUSY'
 }
-
 
 
 

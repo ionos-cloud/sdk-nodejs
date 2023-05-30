@@ -23,32 +23,32 @@ import { CpuArchitectureProperties } from './cpu-architecture-properties';
 export interface LocationProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * A list of available CPU types and related resources available in the location.
+     * @type {Array<CpuArchitectureProperties>}
      * @memberof LocationProperties
      */
-    name?: string;
+    cpuArchitecture?: Array<CpuArchitectureProperties>;
 
     /**
-     * List of features supported by the location
+     * A list of available features in the location.
      * @type {Array<string>}
      * @memberof LocationProperties
      */
     features?: Array<string>;
 
     /**
-     * List of image aliases available for the location
+     * A list of image aliases available in the location.
      * @type {Array<string>}
      * @memberof LocationProperties
      */
     imageAliases?: Array<string>;
 
     /**
-     * Array of features and CPU families available in a location
-     * @type {Array<CpuArchitectureProperties>}
+     * The location name.
+     * @type {string}
      * @memberof LocationProperties
      */
-    cpuArchitecture?: Array<CpuArchitectureProperties>;
+    name?: string;
 }
 
 

@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface NetworkLoadBalancerForwardingRules {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof NetworkLoadBalancerForwardingRules
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NetworkLoadBalancerForwardingRules
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface NetworkLoadBalancerForwardingRules {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NetworkLoadBalancerForwardingRules
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<NetworkLoadBalancerForwardingRule>}
      * @memberof NetworkLoadBalancerForwardingRules
      */
     items?: Array<NetworkLoadBalancerForwardingRule>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof NetworkLoadBalancerForwardingRules
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface NetworkLoadBalancerForwardingRules {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof NetworkLoadBalancerForwardingRules
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NetworkLoadBalancerForwardingRules
+     */
+    type?: Type;
 }
 
 

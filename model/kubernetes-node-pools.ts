@@ -23,6 +23,13 @@ import { KubernetesNodePool } from './kubernetes-node-pool';
 export interface KubernetesNodePools {
 
     /**
+     * The URL to the collection representation (absolute path).
+     * @type {string}
+     * @memberof KubernetesNodePools
+     */
+    href?: string;
+
+    /**
      * A unique representation of the Kubernetes node pool as a resource collection.
      * @type {string}
      * @memberof KubernetesNodePools
@@ -30,26 +37,21 @@ export interface KubernetesNodePools {
     id?: string;
 
     /**
-     * The type of resource within a collection.
-     * @type {string}
-     * @memberof KubernetesNodePools
-     */
-    type?: KubernetesNodePoolsTypeEnum;
-
-    /**
-     * URL to the collection representation (absolute path).
-     * @type {string}
-     * @memberof KubernetesNodePools
-     */
-    href?: string;
-
-    /**
      * Array of items in the collection.
      * @type {Array<KubernetesNodePool>}
      * @memberof KubernetesNodePools
      */
     items?: Array<KubernetesNodePool>;
+
+    /**
+     * The resource type within a collection.
+     * @type {string}
+     * @memberof KubernetesNodePools
+     */
+    type?: KubernetesNodePoolsTypeEnum;
 }
+
+
 
 
 
@@ -60,8 +62,6 @@ export interface KubernetesNodePools {
 export enum KubernetesNodePoolsTypeEnum {
     Collection = 'collection'
 }
-
-
 
 
 

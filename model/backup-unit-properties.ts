@@ -22,6 +22,13 @@
 export interface BackupUnitProperties {
 
     /**
+     * The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.
+     * @type {string}
+     * @memberof BackupUnitProperties
+     */
+    email?: string;
+
+    /**
      * The name of the  resource (alphanumeric characters only).
      * @type {string}
      * @memberof BackupUnitProperties
@@ -34,13 +41,6 @@ export interface BackupUnitProperties {
      * @memberof BackupUnitProperties
      */
     password?: string;
-
-    /**
-     * The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user.
-     * @type {string}
-     * @memberof BackupUnitProperties
-     */
-    email?: string;
 }
 
 

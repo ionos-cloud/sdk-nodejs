@@ -23,6 +23,34 @@ import { ApplicationLoadBalancerHttpRuleCondition } from './application-load-bal
 export interface ApplicationLoadBalancerHttpRule {
 
     /**
+     * An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.
+     * @type {Array<ApplicationLoadBalancerHttpRuleCondition>}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    conditions?: Array<ApplicationLoadBalancerHttpRuleCondition>;
+
+    /**
+     * Specifies the content type and is valid only for \'STATIC\' actions.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    contentType?: string;
+
+    /**
+     * Indicates whether the query part of the URI should be dropped and is valid only for \'REDIRECT\' actions. Default value is \'FALSE\', the redirect URI does not contain any query parameters.
+     * @type {boolean}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    dropQuery?: boolean;
+
+    /**
+     * The location for the redirection; this parameter is mandatory and valid only for \'REDIRECT\' actions.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    location?: string;
+
+    /**
      * The unique name of the Application Load Balancer HTTP rule.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRule
@@ -30,61 +58,40 @@ export interface ApplicationLoadBalancerHttpRule {
     name: string;
 
     /**
-     * Type of the HTTP rule.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    type: ApplicationLoadBalancerHttpRuleTypeEnum;
-
-    /**
-     * The ID of the target group; mandatory and only valid for FORWARD actions.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    targetGroup?: string;
-
-    /**
-     * Default is false; valid only for REDIRECT actions.
-     * @type {boolean}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    dropQuery?: boolean;
-
-    /**
-     * The location for redirecting; mandatory and valid only for REDIRECT actions.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    location?: string;
-
-    /**
-     * Valid only for REDIRECT and STATIC actions. For REDIRECT actions, default is 301 and possible values are 301, 302, 303, 307, and 308. For STATIC actions, default is 503 and valid range is 200 to 599.
-     * @type {number}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    statusCode?: ApplicationLoadBalancerHttpRuleStatusCodeEnum;
-
-    /**
-     * The response message of the request; mandatory for STATIC actions.
+     * The response message of the request; this parameter is mandatory for \'STATIC\' actions.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRule
      */
     responseMessage?: string;
 
     /**
-     * Valid only for STATIC actions.
+     * The status code is for \'REDIRECT\' and \'STATIC\' actions only.   If the HTTP rule is \'REDIRECT\' the valid values are: 301, 302, 303, 307, 308; default value is \'301\'.  If the HTTP rule is \'STATIC\' the valid values are from the range 200-599; default value is \'503\'.
+     * @type {number}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    statusCode?: number;
+
+    /**
+     * The ID of the target group; this parameter is mandatory and is valid only for \'FORWARD\' actions.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRule
      */
-    contentType?: string;
+    targetGroup?: string;
 
     /**
-     * An array of items in the collection.The action is only performed if each and every condition is met; if no conditions are set, the rule will always be performed.
-     * @type {Array<ApplicationLoadBalancerHttpRuleCondition>}
+     * The HTTP rule type.
+     * @type {string}
      * @memberof ApplicationLoadBalancerHttpRule
      */
-    conditions?: Array<ApplicationLoadBalancerHttpRuleCondition>;
+    type: ApplicationLoadBalancerHttpRuleTypeEnum;
 }
+
+
+
+
+
+
+
 
 
 
@@ -97,27 +104,6 @@ export enum ApplicationLoadBalancerHttpRuleTypeEnum {
     Static = 'STATIC',
     Redirect = 'REDIRECT'
 }
-
-
-
-
-/**
-    * @export
-    * @enum {string}
-    */
-export enum ApplicationLoadBalancerHttpRuleStatusCodeEnum {
-    NUMBER_301 = 301,
-    NUMBER_302 = 302,
-    NUMBER_303 = 303,
-    NUMBER_307 = 307,
-    NUMBER_308 = 308,
-    NUMBER_200 = 200,
-    NUMBER_503 = 503,
-    NUMBER_599 = 599
-}
-
-
-
 
 
 

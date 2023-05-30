@@ -23,18 +23,18 @@ import { IPFailover } from './ipfailover';
 export interface LanPropertiesPost {
 
     /**
-     * The name of the  resource.
-     * @type {string}
-     * @memberof LanPropertiesPost
-     */
-    name?: string;
-
-    /**
      * IP failover configurations for lan
      * @type {Array<IPFailover>}
      * @memberof LanPropertiesPost
      */
     ipFailover?: Array<IPFailover>;
+
+    /**
+     * The name of the  resource.
+     * @type {string}
+     * @memberof LanPropertiesPost
+     */
+    name?: string;
 
     /**
      * The unique identifier of the private Cross-Connect the LAN is connected to, if any.

@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface PrivateCrossConnects {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof PrivateCrossConnects
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof PrivateCrossConnects
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof PrivateCrossConnects
@@ -45,11 +31,25 @@ export interface PrivateCrossConnects {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof PrivateCrossConnects
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<PrivateCrossConnect>}
      * @memberof PrivateCrossConnects
      */
     items?: Array<PrivateCrossConnect>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof PrivateCrossConnects
+     */
+    type?: Type;
 }
 
 

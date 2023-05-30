@@ -25,81 +25,11 @@ import { KubernetesNodePoolLan } from './kubernetes-node-pool-lan';
 export interface KubernetesNodePoolProperties {
 
     /**
-     * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * @type {string}
+     * The annotations attached to the node pool.
+     * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolProperties
      */
-    name: string;
-
-    /**
-     * A valid ID of the data center, to which user has access.
-     * @type {string}
-     * @memberof KubernetesNodePoolProperties
-     */
-    datacenterId: string;
-
-    /**
-     * The number of nodes that make up the node pool.
-     * @type {number}
-     * @memberof KubernetesNodePoolProperties
-     */
-    nodeCount: number;
-
-    /**
-     * A valid CPU family name.
-     * @type {string}
-     * @memberof KubernetesNodePoolProperties
-     */
-    cpuFamily: string;
-
-    /**
-     * The number of cores for the node.
-     * @type {number}
-     * @memberof KubernetesNodePoolProperties
-     */
-    coresCount: number;
-
-    /**
-     * The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB.
-     * @type {number}
-     * @memberof KubernetesNodePoolProperties
-     */
-    ramSize: number;
-
-    /**
-     * The availability zone in which the target VM should be provisioned.
-     * @type {string}
-     * @memberof KubernetesNodePoolProperties
-     */
-    availabilityZone: KubernetesNodePoolPropertiesAvailabilityZoneEnum;
-
-    /**
-     * The type of hardware for the volume.
-     * @type {string}
-     * @memberof KubernetesNodePoolProperties
-     */
-    storageType: KubernetesNodePoolPropertiesStorageTypeEnum;
-
-    /**
-     * The size of the volume in GB. The size should be greater than 10GB.
-     * @type {number}
-     * @memberof KubernetesNodePoolProperties
-     */
-    storageSize: number;
-
-    /**
-     * The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
-     * @type {string}
-     * @memberof KubernetesNodePoolProperties
-     */
-    k8sVersion?: string;
-
-    /**
-     * 
-     * @type {KubernetesMaintenanceWindow}
-     * @memberof KubernetesNodePoolProperties
-     */
-    maintenanceWindow?: KubernetesMaintenanceWindow;
+    annotations?: { [key: string]: string; };
 
     /**
      * 
@@ -109,44 +39,110 @@ export interface KubernetesNodePoolProperties {
     autoScaling?: KubernetesAutoScaling;
 
     /**
-     * array of additional LANs attached to worker nodes
-     * @type {Array<KubernetesNodePoolLan>}
+     * The availability zone in which the target VM should be provisioned.
+     * @type {string}
      * @memberof KubernetesNodePoolProperties
      */
-    lans?: Array<KubernetesNodePoolLan>;
+    availabilityZone: KubernetesNodePoolPropertiesAvailabilityZoneEnum;
 
     /**
-     * map of labels attached to node pool.
+     * The list of available versions for upgrading the node pool.
+     * @type {Array<string>}
+     * @memberof KubernetesNodePoolProperties
+     */
+    availableUpgradeVersions?: Array<string>;
+
+    /**
+     * The total number of cores for the nodes.
+     * @type {number}
+     * @memberof KubernetesNodePoolProperties
+     */
+    coresCount: number;
+
+    /**
+     * The CPU type for the nodes.
+     * @type {string}
+     * @memberof KubernetesNodePoolProperties
+     */
+    cpuFamily: string;
+
+    /**
+     * The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located.
+     * @type {string}
+     * @memberof KubernetesNodePoolProperties
+     */
+    datacenterId: string;
+
+    /**
+     * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
+     * @type {string}
+     * @memberof KubernetesNodePoolProperties
+     */
+    k8sVersion?: string;
+
+    /**
+     * The labels attached to the node pool.
      * @type {{ [key: string]: string; }}
      * @memberof KubernetesNodePoolProperties
      */
     labels?: { [key: string]: string; };
 
     /**
-     * map of annotations attached to node pool.
-     * @type {{ [key: string]: string; }}
+     * The array of existing private LANs to attach to worker nodes.
+     * @type {Array<KubernetesNodePoolLan>}
      * @memberof KubernetesNodePoolProperties
      */
-    annotations?: { [key: string]: string; };
+    lans?: Array<KubernetesNodePoolLan>;
 
     /**
-     * Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one more IP than maximum number possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1 when auto scaling is used). The extra IP is used when the nodes are rebuilt.
+     * 
+     * @type {KubernetesMaintenanceWindow}
+     * @memberof KubernetesNodePoolProperties
+     */
+    maintenanceWindow?: KubernetesMaintenanceWindow;
+
+    /**
+     * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * @type {string}
+     * @memberof KubernetesNodePoolProperties
+     */
+    name: string;
+
+    /**
+     * The number of worker nodes of the node pool.
+     * @type {number}
+     * @memberof KubernetesNodePoolProperties
+     */
+    nodeCount: number;
+
+    /**
+     * Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool\'s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.
      * @type {Array<string>}
      * @memberof KubernetesNodePoolProperties
      */
     publicIps?: Array<string>;
 
     /**
-     * List of available versions for upgrading the node pool.
-     * @type {Array<string>}
+     * The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB.
+     * @type {number}
      * @memberof KubernetesNodePoolProperties
      */
-    availableUpgradeVersions?: Array<string>;
+    ramSize: number;
+
+    /**
+     * The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD.
+     * @type {number}
+     * @memberof KubernetesNodePoolProperties
+     */
+    storageSize: number;
+
+    /**
+     * The storage type for the nodes.
+     * @type {string}
+     * @memberof KubernetesNodePoolProperties
+     */
+    storageType: KubernetesNodePoolPropertiesStorageTypeEnum;
 }
-
-
-
-
 
 
 
@@ -161,6 +157,19 @@ export enum KubernetesNodePoolPropertiesAvailabilityZoneEnum {
     Zone2 = 'ZONE_2'
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**
     * @export
     * @enum {string}
@@ -169,15 +178,6 @@ export enum KubernetesNodePoolPropertiesStorageTypeEnum {
     Hdd = 'HDD',
     Ssd = 'SSD'
 }
-
-
-
-
-
-
-
-
-
 
 
 

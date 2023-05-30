@@ -427,8 +427,8 @@ export const FlowLogsApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Add a new Flow Log for the specified NIC.
-         * @summary Create Flow Logs
+         * Adds a new Flow Log for the specified NIC.
+         * @summary Create a Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -703,8 +703,8 @@ export const FlowLogsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new Flow Log for the specified NIC.
-         * @summary Create Flow Logs
+         * Adds a new Flow Log for the specified NIC.
+         * @summary Create a Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -809,8 +809,8 @@ export const FlowLogsApiFactory = function (configuration?: Configuration, baseP
             return FlowLogsApiFp(configuration).datacentersServersNicsFlowlogsPatch(datacenterId, serverId, nicId, flowlogId, flowlog, pretty, depth, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new Flow Log for the specified NIC.
-         * @summary Create Flow Logs
+         * Adds a new Flow Log for the specified NIC.
+         * @summary Create a Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -1231,8 +1231,8 @@ export class FlowLogsApi extends BaseAPI {
     }
 
     /**
-     * Add a new Flow Log for the specified NIC.
-     * @summary Create Flow Logs
+     * Adds a new Flow Log for the specified NIC.
+     * @summary Create a Flow Log
      * @param {FlowLogsApiDatacentersServersNicsFlowlogsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

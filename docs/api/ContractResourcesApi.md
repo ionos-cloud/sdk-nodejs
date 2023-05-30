@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**contractsGet**](ContractResourcesApi.md#contractsget) | **GET** /contracts | Retrieve contracts |
+| [**contractsGet**](ContractResourcesApi.md#contractsget) | **GET** /contracts | Get Contract Information |
 
 
 ## contractsGet
 
 > <Contracts> contractsGet(opts)
 
-Retrieve contracts
+Get Contract Information
 
-Retrieve the properties of the user\'s contract. In this version, the resource became a collection.
+Retrieves the properties of the user\'s contract. This operation allows you to obtain the resource limits and the general contract information.
 
 ### Examples
 
@@ -28,7 +28,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ContractResourcesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// Retrieve contracts
+// Get Contract Information
 api_instance
   .contractsGet({
     pretty: true,

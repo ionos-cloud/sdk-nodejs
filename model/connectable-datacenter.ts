@@ -33,14 +33,14 @@ export interface ConnectableDatacenter {
      * @type {string}
      * @memberof ConnectableDatacenter
      */
-    name?: string;
+    location?: string;
 
     /**
      * 
      * @type {string}
      * @memberof ConnectableDatacenter
      */
-    location?: string;
+    name?: string;
 }
 
 

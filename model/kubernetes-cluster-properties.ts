@@ -24,11 +24,18 @@ import { S3Bucket } from './s3-bucket';
 export interface KubernetesClusterProperties {
 
     /**
-     * A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
-     * @type {string}
+     * Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.
+     * @type {Array<string>}
      * @memberof KubernetesClusterProperties
      */
-    name: string;
+    apiSubnetAllowList?: Array<string>;
+
+    /**
+     * List of available versions for upgrading the cluster
+     * @type {Array<string>}
+     * @memberof KubernetesClusterProperties
+     */
+    availableUpgradeVersions?: Array<string>;
 
     /**
      * The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
@@ -45,25 +52,11 @@ export interface KubernetesClusterProperties {
     maintenanceWindow?: KubernetesMaintenanceWindow;
 
     /**
-     * List of available versions for upgrading the cluster
-     * @type {Array<string>}
+     * A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * @type {string}
      * @memberof KubernetesClusterProperties
      */
-    availableUpgradeVersions?: Array<string>;
-
-    /**
-     * List of versions that may be used for node pools under this cluster
-     * @type {Array<string>}
-     * @memberof KubernetesClusterProperties
-     */
-    viableNodePoolVersions?: Array<string>;
-
-    /**
-     * Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.
-     * @type {Array<string>}
-     * @memberof KubernetesClusterProperties
-     */
-    apiSubnetAllowList?: Array<string>;
+    name: string;
 
     /**
      * List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs
@@ -71,6 +64,13 @@ export interface KubernetesClusterProperties {
      * @memberof KubernetesClusterProperties
      */
     s3Buckets?: Array<S3Bucket>;
+
+    /**
+     * List of versions that may be used for node pools under this cluster
+     * @type {Array<string>}
+     * @memberof KubernetesClusterProperties
+     */
+    viableNodePoolVersions?: Array<string>;
 }
 
 

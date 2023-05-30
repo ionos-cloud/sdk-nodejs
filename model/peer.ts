@@ -26,20 +26,6 @@ export interface Peer {
      * @type {string}
      * @memberof Peer
      */
-    id?: string;
-
-    /**
-     * 
-     * @type {string}
-     * @memberof Peer
-     */
-    name?: string;
-
-    /**
-     * 
-     * @type {string}
-     * @memberof Peer
-     */
     datacenterId?: string;
 
     /**
@@ -54,7 +40,21 @@ export interface Peer {
      * @type {string}
      * @memberof Peer
      */
+    id?: string;
+
+    /**
+     * 
+     * @type {string}
+     * @memberof Peer
+     */
     location?: string;
+
+    /**
+     * 
+     * @type {string}
+     * @memberof Peer
+     */
+    name?: string;
 }
 
 

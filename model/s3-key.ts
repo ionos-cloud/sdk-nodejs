@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface S3Key {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof S3Key
-     */
-    id?: string;
-
-    /**
-     * The type of the resource.
-     * @type {Type}
-     * @memberof S3Key
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof S3Key
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof S3Key
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface S3Key {
      * @memberof S3Key
      */
     properties: S3KeyProperties;
+
+    /**
+     * The type of the resource.
+     * @type {Type}
+     * @memberof S3Key
+     */
+    type?: Type;
 }
 
 

@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface LanPost {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {LanEntities}
      * @memberof LanPost
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof LanPost
-     */
-    type?: Type;
+    entities?: LanEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface LanPost {
      * @memberof LanPost
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof LanPost
+     */
+    id?: string;
 
     /**
      * 
@@ -55,17 +55,17 @@ export interface LanPost {
 
     /**
      * 
-     * @type {LanEntities}
-     * @memberof LanPost
-     */
-    entities?: LanEntities;
-
-    /**
-     * 
      * @type {LanPropertiesPost}
      * @memberof LanPost
      */
     properties: LanPropertiesPost;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof LanPost
+     */
+    type?: Type;
 }
 
 

@@ -457,8 +457,8 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Create a firewall rule for the specified NIC.
-         * @summary Create firewall rules
+         * Creates a firewall rule for the specified NIC.
+         * @summary Create a Firewall Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -560,8 +560,8 @@ export const FirewallRulesApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Modify the properties of the specified firewall rule.
-         * @summary Modify firewall rules
+         * Modifies the properties of the specified firewall rule.
+         * @summary Modify a Firewall Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -753,8 +753,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a firewall rule for the specified NIC.
-         * @summary Create firewall rules
+         * Creates a firewall rule for the specified NIC.
+         * @summary Create a Firewall Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -771,8 +771,8 @@ export const FirewallRulesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified firewall rule.
-         * @summary Modify firewall rules
+         * Modifies the properties of the specified firewall rule.
+         * @summary Modify a Firewall Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -865,8 +865,8 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
             return FirewallRulesApiFp(configuration).datacentersServersNicsFirewallrulesPatch(datacenterId, serverId, nicId, firewallruleId, firewallrule, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a firewall rule for the specified NIC.
-         * @summary Create firewall rules
+         * Creates a firewall rule for the specified NIC.
+         * @summary Create a Firewall Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -881,8 +881,8 @@ export const FirewallRulesApiFactory = function (configuration?: Configuration, 
             return FirewallRulesApiFp(configuration).datacentersServersNicsFirewallrulesPost(datacenterId, serverId, nicId, firewallrule, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified firewall rule.
-         * @summary Modify firewall rules
+         * Modifies the properties of the specified firewall rule.
+         * @summary Modify a Firewall Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {string} nicId The unique ID of the NIC.
@@ -1331,8 +1331,8 @@ export class FirewallRulesApi extends BaseAPI {
     }
 
     /**
-     * Create a firewall rule for the specified NIC.
-     * @summary Create firewall rules
+     * Creates a firewall rule for the specified NIC.
+     * @summary Create a Firewall Rule
      * @param {FirewallRulesApiDatacentersServersNicsFirewallrulesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1343,8 +1343,8 @@ export class FirewallRulesApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified firewall rule.
-     * @summary Modify firewall rules
+     * Modifies the properties of the specified firewall rule.
+     * @summary Modify a Firewall Rule
      * @param {FirewallRulesApiDatacentersServersNicsFirewallrulesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

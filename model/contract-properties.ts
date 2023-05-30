@@ -30,18 +30,11 @@ export interface ContractProperties {
     contractNumber?: number;
 
     /**
-     * The owner of the contract.
+     * The contract owner\'s user name.
      * @type {string}
      * @memberof ContractProperties
      */
     owner?: string;
-
-    /**
-     * The status of the contract.
-     * @type {string}
-     * @memberof ContractProperties
-     */
-    status?: string;
 
     /**
      * The registration domain of the contract.
@@ -56,6 +49,13 @@ export interface ContractProperties {
      * @memberof ContractProperties
      */
     resourceLimits?: ResourceLimits;
+
+    /**
+     * The contract status.
+     * @type {string}
+     * @memberof ContractProperties
+     */
+    status?: string;
 }
 
 

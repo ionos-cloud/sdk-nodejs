@@ -26,7 +26,7 @@ export interface RequestProperties {
      * @type {string}
      * @memberof RequestProperties
      */
-    method?: string;
+    body?: string;
 
     /**
      * 
@@ -40,7 +40,7 @@ export interface RequestProperties {
      * @type {string}
      * @memberof RequestProperties
      */
-    body?: string;
+    method?: string;
 
     /**
      * 

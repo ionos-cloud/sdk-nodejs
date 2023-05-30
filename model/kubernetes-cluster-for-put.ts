@@ -25,18 +25,11 @@ import { KubernetesClusterPropertiesForPut } from './kubernetes-cluster-properti
 export interface KubernetesClusterForPut {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {KubernetesClusterEntities}
      * @memberof KubernetesClusterForPut
      */
-    id?: string;
-
-    /**
-     * The type of object.
-     * @type {string}
-     * @memberof KubernetesClusterForPut
-     */
-    type?: KubernetesClusterForPutTypeEnum;
+    entities?: KubernetesClusterEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -44,6 +37,13 @@ export interface KubernetesClusterForPut {
      * @memberof KubernetesClusterForPut
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof KubernetesClusterForPut
+     */
+    id?: string;
 
     /**
      * 
@@ -60,12 +60,16 @@ export interface KubernetesClusterForPut {
     properties: KubernetesClusterPropertiesForPut;
 
     /**
-     * 
-     * @type {KubernetesClusterEntities}
+     * The type of object.
+     * @type {string}
      * @memberof KubernetesClusterForPut
      */
-    entities?: KubernetesClusterEntities;
+    type?: KubernetesClusterForPutTypeEnum;
 }
+
+
+
+
 
 
 
@@ -76,10 +80,6 @@ export interface KubernetesClusterForPut {
 export enum KubernetesClusterForPutTypeEnum {
     K8s = 'k8s'
 }
-
-
-
-
 
 
 

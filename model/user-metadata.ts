@@ -22,18 +22,18 @@
 export interface UserMetadata {
 
     /**
-     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
-     * @type {string}
-     * @memberof UserMetadata
-     */
-    etag?: string;
-
-    /**
      * The time the user was created.
      * @type {string}
      * @memberof UserMetadata
      */
     createdDate?: string;
+
+    /**
+     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
+     * @type {string}
+     * @memberof UserMetadata
+     */
+    etag?: string;
 
     /**
      * The time of the last login by the user.

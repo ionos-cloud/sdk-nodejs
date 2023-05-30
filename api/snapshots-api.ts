@@ -381,8 +381,8 @@ export const SnapshotsApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Modify the properties of the specified snapshot.
-         * @summary Modify snapshots
+         * Modifies the properties of the specified snapshot.
+         * @summary Modify a Snapshot by ID
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {Snapshot} snapshot The modified snapshot
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -545,8 +545,8 @@ export const SnapshotsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified snapshot.
-         * @summary Modify snapshots
+         * Modifies the properties of the specified snapshot.
+         * @summary Modify a Snapshot by ID
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {Snapshot} snapshot The modified snapshot
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -622,8 +622,8 @@ export const SnapshotsApiFactory = function (configuration?: Configuration, base
             return SnapshotsApiFp(configuration).snapshotsPatch(snapshotId, snapshot, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified snapshot.
-         * @summary Modify snapshots
+         * Modifies the properties of the specified snapshot.
+         * @summary Modify a Snapshot by ID
          * @param {string} snapshotId The unique ID of the snapshot.
          * @param {Snapshot} snapshot The modified snapshot
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -894,8 +894,8 @@ export class SnapshotsApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified snapshot.
-     * @summary Modify snapshots
+     * Modifies the properties of the specified snapshot.
+     * @summary Modify a Snapshot by ID
      * @param {SnapshotsApiSnapshotsPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

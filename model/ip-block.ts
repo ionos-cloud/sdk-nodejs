@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface IpBlock {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof IpBlock
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof IpBlock
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof IpBlock
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof IpBlock
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface IpBlock {
      * @memberof IpBlock
      */
     properties: IpBlockProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof IpBlock
+     */
+    type?: Type;
 }
 
 

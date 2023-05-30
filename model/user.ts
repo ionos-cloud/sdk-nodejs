@@ -26,18 +26,11 @@ import { UsersEntities } from './users-entities';
 export interface User {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {UsersEntities}
      * @memberof User
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof User
-     */
-    type?: Type;
+    entities?: UsersEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface User {
      * @memberof User
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof User
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface User {
     properties: UserProperties;
 
     /**
-     * 
-     * @type {UsersEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof User
      */
-    entities?: UsersEntities;
+    type?: Type;
 }
 
 

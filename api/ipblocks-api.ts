@@ -397,8 +397,8 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Reserve a new IP block.
-         * @summary Reserve IP blocks
+         * Reserves a new IP block.
+         * @summary Reserve a IP Block
          * @param {IpBlock} ipblock The IP block to be reserved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -485,8 +485,8 @@ export const IPBlocksApiAxiosParamCreator = function (configuration?: Configurat
             };
         },
         /**
-         * Modify the properties of the specified IP block.
-         * @summary Modify IP blocks
+         * Modifies the properties of the specified IP block.
+         * @summary Modify a IP Block by ID
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {IpBlock} ipblock The modified IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -651,8 +651,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Reserve a new IP block.
-         * @summary Reserve IP blocks
+         * Reserves a new IP block.
+         * @summary Reserve a IP Block
          * @param {IpBlock} ipblock The IP block to be reserved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -666,8 +666,8 @@ export const IPBlocksApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified IP block.
-         * @summary Modify IP blocks
+         * Modifies the properties of the specified IP block.
+         * @summary Modify a IP Block by ID
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {IpBlock} ipblock The modified IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -745,8 +745,8 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
             return IPBlocksApiFp(configuration).ipblocksPatch(ipblockId, ipblock, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Reserve a new IP block.
-         * @summary Reserve IP blocks
+         * Reserves a new IP block.
+         * @summary Reserve a IP Block
          * @param {IpBlock} ipblock The IP block to be reserved.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -758,8 +758,8 @@ export const IPBlocksApiFactory = function (configuration?: Configuration, baseP
             return IPBlocksApiFp(configuration).ipblocksPost(ipblock, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified IP block.
-         * @summary Modify IP blocks
+         * Modifies the properties of the specified IP block.
+         * @summary Modify a IP Block by ID
          * @param {string} ipblockId The unique ID of the IP block.
          * @param {IpBlock} ipblock The modified IP block.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1079,8 +1079,8 @@ export class IPBlocksApi extends BaseAPI {
     }
 
     /**
-     * Reserve a new IP block.
-     * @summary Reserve IP blocks
+     * Reserves a new IP block.
+     * @summary Reserve a IP Block
      * @param {IPBlocksApiIpblocksPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1091,8 +1091,8 @@ export class IPBlocksApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified IP block.
-     * @summary Modify IP blocks
+     * Modifies the properties of the specified IP block.
+     * @summary Modify a IP Block by ID
      * @param {IPBlocksApiIpblocksPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

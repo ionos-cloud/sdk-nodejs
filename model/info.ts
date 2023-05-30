@@ -22,21 +22,21 @@
 export interface Info {
 
     /**
-     * API entry point
+     * The API entry point.
      * @type {string}
      * @memberof Info
      */
     href?: string;
 
     /**
-     * Name of the API
+     * The API name.
      * @type {string}
      * @memberof Info
      */
     name?: string;
 
     /**
-     * Version of the API
+     * The API version.
      * @type {string}
      * @memberof Info
      */

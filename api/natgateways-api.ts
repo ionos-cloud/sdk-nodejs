@@ -597,8 +597,8 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Add a new Flow Log for the specified NAT Gateway.
-         * @summary Create NAT Gateway Flow Logs
+         * Adds a new Flow Log to the specified NAT Gateway.
+         * @summary Create a NAT Gateway Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {FlowLog} natGatewayFlowLog The Flow Log to create.
@@ -978,8 +978,8 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
-         * @summary Create NAT Gateways
+         * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
+         * @summary Create a NAT Gateway
          * @param {string} datacenterId The unique ID of the data center.
          * @param {NatGateway} natGateway The NAT Gateway to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1456,8 +1456,8 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Update the properties of the specified NAT Gateway rule.
-         * @summary Partially modify NAT Gateway rules
+         * Updates the properties of the specified NAT Gateway rule.
+         * @summary Partially Modify a NAT Gateway Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
@@ -1559,8 +1559,8 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Create a rule for the specified NAT Gateway.
-         * @summary Create NAT Gateway rules
+         * Creates a rule for the specified NAT Gateway.
+         * @summary Create a NAT Gateway Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {NatGatewayRule} natGatewayRule The NAT Gateway rule to create.
@@ -1658,7 +1658,7 @@ export const NATGatewaysApiAxiosParamCreator = function (configuration?: Configu
         },
         /**
          * Modify the specified NAT Gateway rule.
-         * @summary Modify NAT Gateway rules
+         * @summary Modify a NAT Gateway Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
@@ -1869,8 +1869,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a new Flow Log for the specified NAT Gateway.
-         * @summary Create NAT Gateway Flow Logs
+         * Adds a new Flow Log to the specified NAT Gateway.
+         * @summary Create a NAT Gateway Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {FlowLog} natGatewayFlowLog The Flow Log to create.
@@ -1936,8 +1936,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
-         * @summary Create NAT Gateways
+         * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
+         * @summary Create a NAT Gateway
          * @param {string} datacenterId The unique ID of the data center.
          * @param {NatGateway} natGateway The NAT Gateway to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2021,8 +2021,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified NAT Gateway rule.
-         * @summary Partially modify NAT Gateway rules
+         * Updates the properties of the specified NAT Gateway rule.
+         * @summary Partially Modify a NAT Gateway Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
@@ -2039,8 +2039,8 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a rule for the specified NAT Gateway.
-         * @summary Create NAT Gateway rules
+         * Creates a rule for the specified NAT Gateway.
+         * @summary Create a NAT Gateway Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {NatGatewayRule} natGatewayRule The NAT Gateway rule to create.
@@ -2057,7 +2057,7 @@ export const NATGatewaysApiFp = function(configuration?: Configuration) {
         },
         /**
          * Modify the specified NAT Gateway rule.
-         * @summary Modify NAT Gateway rules
+         * @summary Modify a NAT Gateway Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
@@ -2169,8 +2169,8 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
             return NATGatewaysApiFp(configuration).datacentersNatgatewaysFlowlogsPatch(datacenterId, natGatewayId, flowLogId, natGatewayFlowLogProperties, pretty, depth, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a new Flow Log for the specified NAT Gateway.
-         * @summary Create NAT Gateway Flow Logs
+         * Adds a new Flow Log to the specified NAT Gateway.
+         * @summary Create a NAT Gateway Flow Log
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {FlowLog} natGatewayFlowLog The Flow Log to create.
@@ -2226,8 +2226,8 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
             return NATGatewaysApiFp(configuration).datacentersNatgatewaysPatch(datacenterId, natGatewayId, natGatewayProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
-         * @summary Create NAT Gateways
+         * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
+         * @summary Create a NAT Gateway
          * @param {string} datacenterId The unique ID of the data center.
          * @param {NatGateway} natGateway The NAT Gateway to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2299,8 +2299,8 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
             return NATGatewaysApiFp(configuration).datacentersNatgatewaysRulesGet(datacenterId, natGatewayId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified NAT Gateway rule.
-         * @summary Partially modify NAT Gateway rules
+         * Updates the properties of the specified NAT Gateway rule.
+         * @summary Partially Modify a NAT Gateway Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
@@ -2315,8 +2315,8 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
             return NATGatewaysApiFp(configuration).datacentersNatgatewaysRulesPatch(datacenterId, natGatewayId, natGatewayRuleId, natGatewayRuleProperties, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a rule for the specified NAT Gateway.
-         * @summary Create NAT Gateway rules
+         * Creates a rule for the specified NAT Gateway.
+         * @summary Create a NAT Gateway Rule
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {NatGatewayRule} natGatewayRule The NAT Gateway rule to create.
@@ -2331,7 +2331,7 @@ export const NATGatewaysApiFactory = function (configuration?: Configuration, ba
         },
         /**
          * Modify the specified NAT Gateway rule.
-         * @summary Modify NAT Gateway rules
+         * @summary Modify a NAT Gateway Rule by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} natGatewayId The unique ID of the NAT Gateway.
          * @param {string} natGatewayRuleId The unique ID of the NAT Gateway rule.
@@ -3315,8 +3315,8 @@ export class NATGatewaysApi extends BaseAPI {
     }
 
     /**
-     * Add a new Flow Log for the specified NAT Gateway.
-     * @summary Create NAT Gateway Flow Logs
+     * Adds a new Flow Log to the specified NAT Gateway.
+     * @summary Create a NAT Gateway Flow Log
      * @param {NATGatewaysApiDatacentersNatgatewaysFlowlogsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3363,8 +3363,8 @@ export class NATGatewaysApi extends BaseAPI {
     }
 
     /**
-     * Create a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
-     * @summary Create NAT Gateways
+     * Creates a NAT Gateway within the data center.  This operation is restricted to contract owner, admin, and users with \'createInternetAccess\' privileges.
+     * @summary Create a NAT Gateway
      * @param {NATGatewaysApiDatacentersNatgatewaysPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3423,8 +3423,8 @@ export class NATGatewaysApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified NAT Gateway rule.
-     * @summary Partially modify NAT Gateway rules
+     * Updates the properties of the specified NAT Gateway rule.
+     * @summary Partially Modify a NAT Gateway Rule by ID
      * @param {NATGatewaysApiDatacentersNatgatewaysRulesPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3435,8 +3435,8 @@ export class NATGatewaysApi extends BaseAPI {
     }
 
     /**
-     * Create a rule for the specified NAT Gateway.
-     * @summary Create NAT Gateway rules
+     * Creates a rule for the specified NAT Gateway.
+     * @summary Create a NAT Gateway Rule
      * @param {NATGatewaysApiDatacentersNatgatewaysRulesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -3448,7 +3448,7 @@ export class NATGatewaysApi extends BaseAPI {
 
     /**
      * Modify the specified NAT Gateway rule.
-     * @summary Modify NAT Gateway rules
+     * @summary Modify a NAT Gateway Rule by ID
      * @param {NATGatewaysApiDatacentersNatgatewaysRulesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

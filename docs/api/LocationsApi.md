@@ -4,18 +4,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**locationsFindByRegionId**](LocationsApi.md#locationsfindbyregionid) | **GET** /locations/{regionId} | List locations within regions |
-| [**locationsFindByRegionIdAndId**](LocationsApi.md#locationsfindbyregionidandid) | **GET** /locations/{regionId}/{locationId} | Retrieve specified locations |
-| [**locationsGet**](LocationsApi.md#locationsget) | **GET** /locations | List locations |
+| [**locationsFindByRegionId**](LocationsApi.md#locationsfindbyregionid) | **GET** /locations/{regionId} | Get Locations within a Region |
+| [**locationsFindByRegionIdAndId**](LocationsApi.md#locationsfindbyregionidandid) | **GET** /locations/{regionId}/{locationId} | Get Location by ID |
+| [**locationsGet**](LocationsApi.md#locationsget) | **GET** /locations | Get Locations |
 
 
 ## locationsFindByRegionId
 
 > <Locations> locationsFindByRegionId(regionId, opts)
 
-List locations within regions
+Get Locations within a Region
 
-List locations by the region ID.
+Retrieves the available locations in a region specified by its ID. The \'regionId\' consists of the two character identifier of the region (country), e.g., \'de\'.
 
 ### Examples
 
@@ -28,7 +28,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LocationsApi(config);
-// List locations within regions
+// Get Locations within a Region
 api_instance
   .locationsFindByRegionId({
     regionId: regionId_example,
@@ -68,9 +68,9 @@ Basic Authentication, Token Authentication
 
 > <Location> locationsFindByRegionIdAndId(regionId, locationId, opts)
 
-Retrieve specified locations
+Get Location by ID
 
-Retrieve the properties of the specified location
+Retrieves the information about the location specified by its ID. The \'locationId\' consists of the three-digit identifier of the city according to the IATA code.
 
 ### Examples
 
@@ -83,7 +83,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.LocationsApi(config);
-// Retrieve specified locations
+// Get Location by ID
 api_instance
   .locationsFindByRegionIdAndId({
     regionId: regionId_example,
@@ -125,9 +125,9 @@ Basic Authentication, Token Authentication
 
 > <Locations> locationsGet(opts)
 
-List locations
+Get Locations
 
-List the available locations for provisioning your virtual data centers.
+Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: \'de\')    * a three-character **locationId**, which represents a city. The \'locationId\' is typically based on the IATA code of the city\'s airport (example: \'txl\').    >Note that \'locations\' are read-only and cannot be changed.
 
 ### Examples
 
@@ -142,7 +142,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.LocationsApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List locations
+// Get Locations
 api_instance
   .locationsGet({
     pretty: true,

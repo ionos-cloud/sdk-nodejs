@@ -32,25 +32,11 @@ export interface NatGatewayRuleProperties {
     name: string;
 
     /**
-     * Type of the NAT Gateway rule.
-     * @type {NatGatewayRuleType}
-     * @memberof NatGatewayRuleProperties
-     */
-    type?: NatGatewayRuleType;
-
-    /**
      * Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is \'ICMP\' then targetPortRange start and end cannot be set.
      * @type {NatGatewayRuleProtocol}
      * @memberof NatGatewayRuleProperties
      */
     protocol?: NatGatewayRuleProtocol;
-
-    /**
-     * Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.
-     * @type {string}
-     * @memberof NatGatewayRuleProperties
-     */
-    sourceSubnet: string;
 
     /**
      * Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
@@ -60,11 +46,11 @@ export interface NatGatewayRuleProperties {
     publicIp: string;
 
     /**
-     * Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
+     * Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.
      * @type {string}
      * @memberof NatGatewayRuleProperties
      */
-    targetSubnet?: string;
+    sourceSubnet: string;
 
     /**
      * 
@@ -72,6 +58,20 @@ export interface NatGatewayRuleProperties {
      * @memberof NatGatewayRuleProperties
      */
     targetPortRange?: TargetPortRange;
+
+    /**
+     * Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
+     * @type {string}
+     * @memberof NatGatewayRuleProperties
+     */
+    targetSubnet?: string;
+
+    /**
+     * Type of the NAT Gateway rule.
+     * @type {NatGatewayRuleType}
+     * @memberof NatGatewayRuleProperties
+     */
+    type?: NatGatewayRuleType;
 }
 
 

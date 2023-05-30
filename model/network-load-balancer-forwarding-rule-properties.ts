@@ -24,13 +24,6 @@ import { NetworkLoadBalancerForwardingRuleTarget } from './network-load-balancer
 export interface NetworkLoadBalancerForwardingRuleProperties {
 
     /**
-     * The name of the Network Load Balancer forwarding rule.
-     * @type {string}
-     * @memberof NetworkLoadBalancerForwardingRuleProperties
-     */
-    name: string;
-
-    /**
      * Balancing algorithm
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
@@ -38,14 +31,14 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
     algorithm: NetworkLoadBalancerForwardingRulePropertiesAlgorithmEnum;
 
     /**
-     * Balancing protocol
-     * @type {string}
+     * 
+     * @type {NetworkLoadBalancerForwardingRuleHealthCheck}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
-    protocol: NetworkLoadBalancerForwardingRulePropertiesProtocolEnum;
+    healthCheck?: NetworkLoadBalancerForwardingRuleHealthCheck;
 
     /**
-     * Listening (inbound) IP
+     * Listening (inbound) IP.
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
@@ -59,11 +52,18 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
     listenerPort: number;
 
     /**
-     * 
-     * @type {NetworkLoadBalancerForwardingRuleHealthCheck}
+     * The name of the Network Load Balancer forwarding rule.
+     * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
-    healthCheck?: NetworkLoadBalancerForwardingRuleHealthCheck;
+    name: string;
+
+    /**
+     * Balancing protocol
+     * @type {string}
+     * @memberof NetworkLoadBalancerForwardingRuleProperties
+     */
+    protocol: NetworkLoadBalancerForwardingRulePropertiesProtocolEnum;
 
     /**
      * Array of items in the collection.
@@ -72,7 +72,6 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
      */
     targets: Array<NetworkLoadBalancerForwardingRuleTarget>;
 }
-
 
 
 /**
@@ -86,6 +85,10 @@ export enum NetworkLoadBalancerForwardingRulePropertiesAlgorithmEnum {
     SourceIp = 'SOURCE_IP'
 }
 
+
+
+
+
 /**
     * @export
     * @enum {string}
@@ -94,9 +97,6 @@ export enum NetworkLoadBalancerForwardingRulePropertiesProtocolEnum {
     Http = 'HTTP',
     Tcp = 'TCP'
 }
-
-
-
 
 
 

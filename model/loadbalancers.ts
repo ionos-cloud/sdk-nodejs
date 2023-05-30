@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface Loadbalancers {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Loadbalancers
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Loadbalancers
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Loadbalancers {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Loadbalancers
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Loadbalancer>}
      * @memberof Loadbalancers
      */
     items?: Array<Loadbalancer>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof Loadbalancers
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface Loadbalancers {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof Loadbalancers
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Loadbalancers
+     */
+    type?: Type;
 }
 
 

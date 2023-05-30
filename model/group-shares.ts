@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface GroupShares {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof GroupShares
-     */
-    id?: string;
-
-    /**
-     * Share representing groups and resource relationship
-     * @type {Type}
-     * @memberof GroupShares
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof GroupShares
@@ -45,11 +31,25 @@ export interface GroupShares {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof GroupShares
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<GroupShare>}
      * @memberof GroupShares
      */
     items?: Array<GroupShare>;
+
+    /**
+     * Share representing groups and resource relationship
+     * @type {Type}
+     * @memberof GroupShares
+     */
+    type?: Type;
 }
 
 

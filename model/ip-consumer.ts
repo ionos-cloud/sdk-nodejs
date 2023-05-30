@@ -26,7 +26,35 @@ export interface IpConsumer {
      * @type {string}
      * @memberof IpConsumer
      */
+    datacenterId?: string;
+
+    /**
+     * 
+     * @type {string}
+     * @memberof IpConsumer
+     */
+    datacenterName?: string;
+
+    /**
+     * 
+     * @type {string}
+     * @memberof IpConsumer
+     */
     ip?: string;
+
+    /**
+     * 
+     * @type {string}
+     * @memberof IpConsumer
+     */
+    k8sClusterUuid?: string;
+
+    /**
+     * 
+     * @type {string}
+     * @memberof IpConsumer
+     */
+    k8sNodePoolUuid?: string;
 
     /**
      * 
@@ -55,34 +83,6 @@ export interface IpConsumer {
      * @memberof IpConsumer
      */
     serverName?: string;
-
-    /**
-     * 
-     * @type {string}
-     * @memberof IpConsumer
-     */
-    datacenterId?: string;
-
-    /**
-     * 
-     * @type {string}
-     * @memberof IpConsumer
-     */
-    datacenterName?: string;
-
-    /**
-     * 
-     * @type {string}
-     * @memberof IpConsumer
-     */
-    k8sNodePoolUuid?: string;
-
-    /**
-     * 
-     * @type {string}
-     * @memberof IpConsumer
-     */
-    k8sClusterUuid?: string;
 }
 
 

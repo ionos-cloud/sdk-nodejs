@@ -304,8 +304,8 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Update the properties of the specified data center, rename it, or change the description.
-         * @summary Partially modify data centers
+         * Updates the properties of the specified data center, rename it, or change the description.
+         * @summary Partially modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {DatacenterProperties} datacenter The properties of the data center to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -397,8 +397,8 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
-         * @summary Create data centers
+         * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+         * @summary Create a Data Center
          * @param {Datacenter} datacenter The data center to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -485,8 +485,8 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             };
         },
         /**
-         * Modify the properties of the specified data center, rename it, or change the description.
-         * @summary Modify data centers
+         * Modifies the properties of the specified data center, rename it, or change the description.
+         * @summary Modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Datacenter} datacenter The modified data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -635,8 +635,8 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified data center, rename it, or change the description.
-         * @summary Partially modify data centers
+         * Updates the properties of the specified data center, rename it, or change the description.
+         * @summary Partially modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {DatacenterProperties} datacenter The properties of the data center to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -651,8 +651,8 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
-         * @summary Create data centers
+         * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+         * @summary Create a Data Center
          * @param {Datacenter} datacenter The data center to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -666,8 +666,8 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified data center, rename it, or change the description.
-         * @summary Modify data centers
+         * Modifies the properties of the specified data center, rename it, or change the description.
+         * @summary Modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Datacenter} datacenter The modified data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -731,8 +731,8 @@ export const DataCentersApiFactory = function (configuration?: Configuration, ba
             return DataCentersApiFp(configuration).datacentersGet(pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified data center, rename it, or change the description.
-         * @summary Partially modify data centers
+         * Updates the properties of the specified data center, rename it, or change the description.
+         * @summary Partially modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {DatacenterProperties} datacenter The properties of the data center to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -745,8 +745,8 @@ export const DataCentersApiFactory = function (configuration?: Configuration, ba
             return DataCentersApiFp(configuration).datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
-         * @summary Create data centers
+         * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+         * @summary Create a Data Center
          * @param {Datacenter} datacenter The data center to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -758,8 +758,8 @@ export const DataCentersApiFactory = function (configuration?: Configuration, ba
             return DataCentersApiFp(configuration).datacentersPost(datacenter, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified data center, rename it, or change the description.
-         * @summary Modify data centers
+         * Modifies the properties of the specified data center, rename it, or change the description.
+         * @summary Modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Datacenter} datacenter The modified data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1067,8 +1067,8 @@ export class DataCentersApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified data center, rename it, or change the description.
-     * @summary Partially modify data centers
+     * Updates the properties of the specified data center, rename it, or change the description.
+     * @summary Partially modify a Data Center by ID
      * @param {DataCentersApiDatacentersPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1079,8 +1079,8 @@ export class DataCentersApi extends BaseAPI {
     }
 
     /**
-     * Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
-     * @summary Create data centers
+     * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+     * @summary Create a Data Center
      * @param {DataCentersApiDatacentersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1091,8 +1091,8 @@ export class DataCentersApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified data center, rename it, or change the description.
-     * @summary Modify data centers
+     * Modifies the properties of the specified data center, rename it, or change the description.
+     * @summary Modify a Data Center by ID
      * @param {DataCentersApiDatacentersPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

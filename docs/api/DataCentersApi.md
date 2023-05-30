@@ -7,9 +7,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersDelete**](DataCentersApi.md#datacentersdelete) | **DELETE** /datacenters/{datacenterId} | Delete data centers |
 | [**datacentersFindById**](DataCentersApi.md#datacentersfindbyid) | **GET** /datacenters/{datacenterId} | Retrieve data centers |
 | [**datacentersGet**](DataCentersApi.md#datacentersget) | **GET** /datacenters | List your data centers |
-| [**datacentersPatch**](DataCentersApi.md#datacenterspatch) | **PATCH** /datacenters/{datacenterId} | Partially modify data centers |
-| [**datacentersPost**](DataCentersApi.md#datacenterspost) | **POST** /datacenters | Create data centers |
-| [**datacentersPut**](DataCentersApi.md#datacentersput) | **PUT** /datacenters/{datacenterId} | Modify data centers |
+| [**datacentersPatch**](DataCentersApi.md#datacenterspatch) | **PATCH** /datacenters/{datacenterId} | Partially modify a Data Center by ID |
+| [**datacentersPost**](DataCentersApi.md#datacenterspost) | **POST** /datacenters | Create a Data Center |
+| [**datacentersPut**](DataCentersApi.md#datacentersput) | **PUT** /datacenters/{datacenterId} | Modify a Data Center by ID |
 
 
 ## datacentersDelete
@@ -188,9 +188,9 @@ Basic Authentication, Token Authentication
 
 > <Datacenter> datacentersPatch(datacenterId, datacenter, opts)
 
-Partially modify data centers
+Partially modify a Data Center by ID
 
-Update the properties of the specified data center, rename it, or change the description.
+Updates the properties of the specified data center, rename it, or change the description.
 
 ### Examples
 
@@ -203,7 +203,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.DataCentersApi(config);
-// Partially modify data centers
+// Partially modify a Data Center by ID
 api_instance
   .datacentersPatch({
     datacenterId: datacenterId_example,
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 
 > <Datacenter> datacentersPost(datacenter, opts)
 
-Create data centers
+Create a Data Center
 
-Create new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
+Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
 
 ### Examples
 
@@ -260,7 +260,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.DataCentersApi(config);
-// Create data centers
+// Create a Data Center
 api_instance
   .datacentersPost({
     datacenter: datacenter_example,
@@ -300,9 +300,9 @@ Basic Authentication, Token Authentication
 
 > <Datacenter> datacentersPut(datacenterId, datacenter, opts)
 
-Modify data centers
+Modify a Data Center by ID
 
-Modify the properties of the specified data center, rename it, or change the description.
+Modifies the properties of the specified data center, rename it, or change the description.
 
 ### Examples
 
@@ -315,7 +315,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.DataCentersApi(config);
-// Modify data centers
+// Modify a Data Center by ID
 api_instance
   .datacentersPut({
     datacenterId: datacenterId_example,

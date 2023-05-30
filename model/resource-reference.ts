@@ -23,6 +23,13 @@ import { Type } from './type';
 export interface ResourceReference {
 
     /**
+     * URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof ResourceReference
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof ResourceReference
@@ -35,13 +42,6 @@ export interface ResourceReference {
      * @memberof ResourceReference
      */
     type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof ResourceReference
-     */
-    href?: string;
 }
 
 

@@ -25,25 +25,25 @@ import { Type } from './type';
 export interface FlowLogs {
 
     /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof FlowLogs
+     */
+    _links?: PaginationLinks;
+
+    /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof FlowLogs
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof FlowLogs
      */
     id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof FlowLogs
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof FlowLogs
-     */
-    href?: string;
 
     /**
      * Array of items in the collection.
@@ -53,13 +53,6 @@ export interface FlowLogs {
     items?: Array<FlowLog>;
 
     /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof FlowLogs
-     */
-    offset?: number;
-
-    /**
      * The limit (if specified in the request).
      * @type {number}
      * @memberof FlowLogs
@@ -67,11 +60,18 @@ export interface FlowLogs {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof FlowLogs
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof FlowLogs
+     */
+    type?: Type;
 }
 
 

@@ -24,6 +24,13 @@ import { Type } from './type';
 export interface Images {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof Images
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof Images
@@ -31,25 +38,18 @@ export interface Images {
     id?: string;
 
     /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Images
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof Images
-     */
-    href?: string;
-
-    /**
      * Array of items in the collection.
      * @type {Array<Image>}
      * @memberof Images
      */
     items?: Array<Image>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Images
+     */
+    type?: Type;
 }
 
 

@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**ipblocksFindById**](IPBlocksApi.md#ipblocksfindbyid) | **GET** /ipblocks/{ipblockId} | Retrieve IP blocks |
 | [**ipblocksGet**](IPBlocksApi.md#ipblocksget) | **GET** /ipblocks | List IP blocks  |
 | [**ipblocksPatch**](IPBlocksApi.md#ipblockspatch) | **PATCH** /ipblocks/{ipblockId} | Partially modify IP blocks |
-| [**ipblocksPost**](IPBlocksApi.md#ipblockspost) | **POST** /ipblocks | Reserve IP blocks |
-| [**ipblocksPut**](IPBlocksApi.md#ipblocksput) | **PUT** /ipblocks/{ipblockId} | Modify IP blocks |
+| [**ipblocksPost**](IPBlocksApi.md#ipblockspost) | **POST** /ipblocks | Reserve a IP Block |
+| [**ipblocksPut**](IPBlocksApi.md#ipblocksput) | **PUT** /ipblocks/{ipblockId} | Modify a IP Block by ID |
 
 
 ## ipblocksDelete
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 
 > <IpBlock> ipblocksPost(ipblock, opts)
 
-Reserve IP blocks
+Reserve a IP Block
 
-Reserve a new IP block.
+Reserves a new IP block.
 
 ### Examples
 
@@ -260,7 +260,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.IPBlocksApi(config);
-// Reserve IP blocks
+// Reserve a IP Block
 api_instance
   .ipblocksPost({
     ipblock: ipblock_example,
@@ -300,9 +300,9 @@ Basic Authentication, Token Authentication
 
 > <IpBlock> ipblocksPut(ipblockId, ipblock, opts)
 
-Modify IP blocks
+Modify a IP Block by ID
 
-Modify the properties of the specified IP block.
+Modifies the properties of the specified IP block.
 
 ### Examples
 
@@ -315,7 +315,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.IPBlocksApi(config);
-// Modify IP blocks
+// Modify a IP Block by ID
 api_instance
   .ipblocksPut({
     ipblockId: ipblockId_example,

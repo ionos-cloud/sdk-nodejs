@@ -23,6 +23,13 @@ import { NatGatewayLanProperties } from './nat-gateway-lan-properties';
 export interface NatGatewayProperties {
 
     /**
+     * Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
+     * @type {Array<NatGatewayLanProperties>}
+     * @memberof NatGatewayProperties
+     */
+    lans?: Array<NatGatewayLanProperties>;
+
+    /**
      * Name of the NAT Gateway.
      * @type {string}
      * @memberof NatGatewayProperties
@@ -35,13 +42,6 @@ export interface NatGatewayProperties {
      * @memberof NatGatewayProperties
      */
     publicIps: Array<string>;
-
-    /**
-     * Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
-     * @type {Array<NatGatewayLanProperties>}
-     * @memberof NatGatewayProperties
-     */
-    lans?: Array<NatGatewayLanProperties>;
 }
 
 

@@ -22,25 +22,11 @@
 export interface NicProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
+     * @type {number}
      * @memberof NicProperties
      */
-    name?: string;
-
-    /**
-     * The MAC address of the NIC.
-     * @type {string}
-     * @memberof NicProperties
-     */
-    mac?: string;
-
-    /**
-     * Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.
-     * @type {Array<string>}
-     * @memberof NicProperties
-     */
-    ips?: Array<string> | null;
+    deviceNumber?: number;
 
     /**
      * Indicates if the NIC will reserve an IP using DHCP.
@@ -48,13 +34,6 @@ export interface NicProperties {
      * @memberof NicProperties
      */
     dhcp?: boolean;
-
-    /**
-     * The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.
-     * @type {number}
-     * @memberof NicProperties
-     */
-    lan: number;
 
     /**
      * Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports.
@@ -71,11 +50,32 @@ export interface NicProperties {
     firewallType?: NicPropertiesFirewallTypeEnum;
 
     /**
-     * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
+     * Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.
+     * @type {Array<string>}
+     * @memberof NicProperties
+     */
+    ips?: Array<string> | null;
+
+    /**
+     * The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.
      * @type {number}
      * @memberof NicProperties
      */
-    deviceNumber?: number;
+    lan: number;
+
+    /**
+     * The MAC address of the NIC.
+     * @type {string}
+     * @memberof NicProperties
+     */
+    mac?: string;
+
+    /**
+     * The name of the  resource.
+     * @type {string}
+     * @memberof NicProperties
+     */
+    name?: string;
 
     /**
      * The PCI slot number for the NIC.
@@ -84,9 +84,6 @@ export interface NicProperties {
      */
     pciSlot?: number;
 }
-
-
-
 
 
 
@@ -101,6 +98,9 @@ export enum NicPropertiesFirewallTypeEnum {
     Egress = 'EGRESS',
     Bidirectional = 'BIDIRECTIONAL'
 }
+
+
+
 
 
 

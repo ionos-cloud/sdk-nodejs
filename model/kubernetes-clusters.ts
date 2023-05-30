@@ -23,33 +23,35 @@ import { KubernetesCluster } from './kubernetes-cluster';
 export interface KubernetesClusters {
 
     /**
-     * A unique representation of the Kubernetes cluster as a resource collection.
-     * @type {string}
-     * @memberof KubernetesClusters
-     */
-    id?: string;
-
-    /**
-     * The type of resource within a collection.
-     * @type {string}
-     * @memberof KubernetesClusters
-     */
-    type?: KubernetesClustersTypeEnum;
-
-    /**
-     * URL to the collection representation (absolute path).
+     * The URL to the collection representation (absolute path).
      * @type {string}
      * @memberof KubernetesClusters
      */
     href?: string;
 
     /**
-     * Array of items in the collection.
+     * The unique representation of the K8s cluster as a resource collection.
+     * @type {string}
+     * @memberof KubernetesClusters
+     */
+    id?: string;
+
+    /**
+     * Array of K8s clusters in the collection.
      * @type {Array<KubernetesCluster>}
      * @memberof KubernetesClusters
      */
     items?: Array<KubernetesCluster>;
+
+    /**
+     * The resource type within a collection.
+     * @type {string}
+     * @memberof KubernetesClusters
+     */
+    type?: KubernetesClustersTypeEnum;
 }
+
+
 
 
 
@@ -60,8 +62,6 @@ export interface KubernetesClusters {
 export enum KubernetesClustersTypeEnum {
     Collection = 'collection'
 }
-
-
 
 
 

@@ -22,25 +22,11 @@
 export interface UserPropertiesPost {
 
     /**
-     * The first name of the user.
-     * @type {string}
+     * Indicates if the user is active.
+     * @type {boolean}
      * @memberof UserPropertiesPost
      */
-    firstname?: string;
-
-    /**
-     * The last name of the user.
-     * @type {string}
-     * @memberof UserPropertiesPost
-     */
-    lastname?: string;
-
-    /**
-     * The email address of the user.
-     * @type {string}
-     * @memberof UserPropertiesPost
-     */
-    email?: string;
+    active?: boolean;
 
     /**
      * Indicates if the user has admin rights.
@@ -50,6 +36,20 @@ export interface UserPropertiesPost {
     administrator?: boolean;
 
     /**
+     * The email address of the user.
+     * @type {string}
+     * @memberof UserPropertiesPost
+     */
+    email?: string;
+
+    /**
+     * The first name of the user.
+     * @type {string}
+     * @memberof UserPropertiesPost
+     */
+    firstname?: string;
+
+    /**
      * Indicates if secure authentication should be forced on the user.
      * @type {boolean}
      * @memberof UserPropertiesPost
@@ -57,11 +57,11 @@ export interface UserPropertiesPost {
     forceSecAuth?: boolean;
 
     /**
-     * Indicates if secure authentication is active for the user.
-     * @type {boolean}
+     * The last name of the user.
+     * @type {string}
      * @memberof UserPropertiesPost
      */
-    secAuthActive?: boolean;
+    lastname?: string;
 
     /**
      * User password.
@@ -71,11 +71,11 @@ export interface UserPropertiesPost {
     password?: string;
 
     /**
-     * Indicates if the user is active.
+     * Indicates if secure authentication is active for the user.
      * @type {boolean}
      * @memberof UserPropertiesPost
      */
-    active?: boolean;
+    secAuthActive?: boolean;
 }
 
 

@@ -22,18 +22,18 @@
 export interface FlowLogProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
-     * @memberof FlowLogProperties
-     */
-    name: string;
-
-    /**
      * Specifies the traffic action pattern.
      * @type {string}
      * @memberof FlowLogProperties
      */
     action: FlowLogPropertiesActionEnum;
+
+    /**
+     * The S3 bucket name of an existing IONOS Cloud S3 bucket.
+     * @type {string}
+     * @memberof FlowLogProperties
+     */
+    bucket: string;
 
     /**
      * Specifies the traffic direction pattern.
@@ -43,13 +43,12 @@ export interface FlowLogProperties {
     direction: FlowLogPropertiesDirectionEnum;
 
     /**
-     * S3 bucket name of an existing IONOS Cloud S3 bucket.
+     * The resource name.
      * @type {string}
      * @memberof FlowLogProperties
      */
-    bucket: string;
+    name: string;
 }
-
 
 
 /**
@@ -61,6 +60,7 @@ export enum FlowLogPropertiesActionEnum {
     Rejected = 'REJECTED',
     All = 'ALL'
 }
+
 
 /**
     * @export

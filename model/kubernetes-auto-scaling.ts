@@ -22,18 +22,18 @@
 export interface KubernetesAutoScaling {
 
     /**
-     * The minimum number of worker nodes that the managed node group can scale in. Should be set together with \'maxNodeCount\'. Value for this attribute must be greater than equal to 1 and less than equal to maxNodeCount.
-     * @type {number}
-     * @memberof KubernetesAutoScaling
-     */
-    minNodeCount: number;
-
-    /**
-     * The maximum number of worker nodes that the managed node pool can scale-out. Should be set together with \'minNodeCount\'. Value for this attribute must be greater than equal to 1 and minNodeCount.
+     * The maximum number of worker nodes that the managed node pool can scale in. Must be >= minNodeCount and must be >= nodeCount. Required if autoScaling is specified.
      * @type {number}
      * @memberof KubernetesAutoScaling
      */
     maxNodeCount: number;
+
+    /**
+     * The minimum number of working nodes that the managed node pool can scale must be >= 1 and >= nodeCount. Required if autoScaling is specified.
+     * @type {number}
+     * @memberof KubernetesAutoScaling
+     */
+    minNodeCount: number;
 }
 
 

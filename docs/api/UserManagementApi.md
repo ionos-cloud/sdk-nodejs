@@ -17,7 +17,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**umGroupsSharesPut**](UserManagementApi.md#umgroupssharesput) | **PUT** /um/groups/{groupId}/shares/{resourceId} | Modify group share privileges |
 | [**umGroupsUsersDelete**](UserManagementApi.md#umgroupsusersdelete) | **DELETE** /um/groups/{groupId}/users/{userId} | Remove users from groups |
 | [**umGroupsUsersGet**](UserManagementApi.md#umgroupsusersget) | **GET** /um/groups/{groupId}/users | List group members |
-| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add group members |
+| [**umGroupsUsersPost**](UserManagementApi.md#umgroupsuserspost) | **POST** /um/groups/{groupId}/users | Add a Group Member |
 | [**umResourcesFindByType**](UserManagementApi.md#umresourcesfindbytype) | **GET** /um/resources/{resourceType} | List resources by type |
 | [**umResourcesFindByTypeAndId**](UserManagementApi.md#umresourcesfindbytypeandid) | **GET** /um/resources/{resourceType}/{resourceId} | Retrieve resources by type |
 | [**umResourcesGet**](UserManagementApi.md#umresourcesget) | **GET** /um/resources | List all resources |
@@ -783,9 +783,9 @@ Basic Authentication, Token Authentication
 
 > <User> umGroupsUsersPost(groupId, user, opts)
 
-Add group members
+Add a Group Member
 
-Add an existing user to the specified group. 
+Adds an existing user to the specified group. 
 
 ### Examples
 
@@ -798,7 +798,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserManagementApi(config);
-// Add group members
+// Add a Group Member
 api_instance
   .umGroupsUsersPost({
     groupId: groupId_example,

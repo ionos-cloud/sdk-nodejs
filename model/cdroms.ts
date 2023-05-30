@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface Cdroms {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Cdroms
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Cdroms
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Cdroms {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Cdroms
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Image>}
      * @memberof Cdroms
      */
     items?: Array<Image>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof Cdroms
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface Cdroms {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof Cdroms
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Cdroms
+     */
+    type?: Type;
 }
 
 

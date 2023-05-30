@@ -22,32 +22,11 @@
 export interface UserPropertiesPut {
 
     /**
-     * The first name of the user.
-     * @type {string}
+     * Indicates if the user is active.
+     * @type {boolean}
      * @memberof UserPropertiesPut
      */
-    firstname?: string;
-
-    /**
-     * The last name of the user.
-     * @type {string}
-     * @memberof UserPropertiesPut
-     */
-    lastname?: string;
-
-    /**
-     * The email address of the user.
-     * @type {string}
-     * @memberof UserPropertiesPut
-     */
-    email?: string;
-
-    /**
-     * password of the user
-     * @type {string}
-     * @memberof UserPropertiesPut
-     */
-    password?: string;
+    active?: boolean;
 
     /**
      * Indicates if the user has admin rights.
@@ -57,6 +36,20 @@ export interface UserPropertiesPut {
     administrator?: boolean;
 
     /**
+     * The email address of the user.
+     * @type {string}
+     * @memberof UserPropertiesPut
+     */
+    email?: string;
+
+    /**
+     * The first name of the user.
+     * @type {string}
+     * @memberof UserPropertiesPut
+     */
+    firstname?: string;
+
+    /**
      * Indicates if secure authentication should be forced on the user.
      * @type {boolean}
      * @memberof UserPropertiesPut
@@ -64,18 +57,25 @@ export interface UserPropertiesPut {
     forceSecAuth?: boolean;
 
     /**
+     * The last name of the user.
+     * @type {string}
+     * @memberof UserPropertiesPut
+     */
+    lastname?: string;
+
+    /**
+     * password of the user
+     * @type {string}
+     * @memberof UserPropertiesPut
+     */
+    password?: string;
+
+    /**
      * Indicates if secure authentication is active for the user.
      * @type {boolean}
      * @memberof UserPropertiesPut
      */
     secAuthActive?: boolean;
-
-    /**
-     * Indicates if the user is active.
-     * @type {boolean}
-     * @memberof UserPropertiesPut
-     */
-    active?: boolean;
 }
 
 

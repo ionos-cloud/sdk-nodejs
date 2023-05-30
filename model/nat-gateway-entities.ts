@@ -25,17 +25,17 @@ export interface NatGatewayEntities {
 
     /**
      * 
-     * @type {NatGatewayRules}
-     * @memberof NatGatewayEntities
-     */
-    rules?: NatGatewayRules;
-
-    /**
-     * 
      * @type {FlowLogs}
      * @memberof NatGatewayEntities
      */
     flowlogs?: FlowLogs;
+
+    /**
+     * 
+     * @type {NatGatewayRules}
+     * @memberof NatGatewayEntities
+     */
+    rules?: NatGatewayRules;
 }
 
 

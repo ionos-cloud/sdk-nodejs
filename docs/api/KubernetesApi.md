@@ -4,32 +4,32 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**k8sDelete**](KubernetesApi.md#k8sdelete) | **DELETE** /k8s/{k8sClusterId} | Delete Kubernetes clusters |
-| [**k8sFindByClusterId**](KubernetesApi.md#k8sfindbyclusterid) | **GET** /k8s/{k8sClusterId} | Retrieve Kubernetes clusters |
-| [**k8sGet**](KubernetesApi.md#k8sget) | **GET** /k8s | List Kubernetes clusters |
-| [**k8sKubeconfigGet**](KubernetesApi.md#k8skubeconfigget) | **GET** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes configuration files |
-| [**k8sNodepoolsDelete**](KubernetesApi.md#k8snodepoolsdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes node pools |
-| [**k8sNodepoolsFindById**](KubernetesApi.md#k8snodepoolsfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes node pools |
-| [**k8sNodepoolsGet**](KubernetesApi.md#k8snodepoolsget) | **GET** /k8s/{k8sClusterId}/nodepools | List Kubernetes node pools |
-| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8snodepoolsnodesdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes nodes |
-| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8snodepoolsnodesfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes nodes |
-| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8snodepoolsnodesget) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | List Kubernetes nodes |
-| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8snodepoolsnodesreplacepost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate Kubernetes nodes |
-| [**k8sNodepoolsPost**](KubernetesApi.md#k8snodepoolspost) | **POST** /k8s/{k8sClusterId}/nodepools | Create Kubernetes node pools |
-| [**k8sNodepoolsPut**](KubernetesApi.md#k8snodepoolsput) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes node pools |
-| [**k8sPost**](KubernetesApi.md#k8spost) | **POST** /k8s | Create Kubernetes clusters |
-| [**k8sPut**](KubernetesApi.md#k8sput) | **PUT** /k8s/{k8sClusterId} | Modify Kubernetes clusters |
-| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sversionsdefaultget) | **GET** /k8s/versions/default | Retrieve current default Kubernetes version |
-| [**k8sVersionsGet**](KubernetesApi.md#k8sversionsget) | **GET** /k8s/versions | List Kubernetes versions |
+| [**k8sDelete**](KubernetesApi.md#k8sdelete) | **DELETE** /k8s/{k8sClusterId} | Delete a Kubernetes Cluster by ID |
+| [**k8sFindByClusterId**](KubernetesApi.md#k8sfindbyclusterid) | **GET** /k8s/{k8sClusterId} | Get a Kubernetes Cluster by ID |
+| [**k8sGet**](KubernetesApi.md#k8sget) | **GET** /k8s | Get Kubernetes Clusters |
+| [**k8sKubeconfigGet**](KubernetesApi.md#k8skubeconfigget) | **GET** /k8s/{k8sClusterId}/kubeconfig | Get Kubernetes Configuration File |
+| [**k8sNodepoolsDelete**](KubernetesApi.md#k8snodepoolsdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete a Kubernetes Node Pool by ID |
+| [**k8sNodepoolsFindById**](KubernetesApi.md#k8snodepoolsfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Get a Kubernetes Node Pool by ID |
+| [**k8sNodepoolsGet**](KubernetesApi.md#k8snodepoolsget) | **GET** /k8s/{k8sClusterId}/nodepools | Get Kubernetes Node Pools |
+| [**k8sNodepoolsNodesDelete**](KubernetesApi.md#k8snodepoolsnodesdelete) | **DELETE** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete a Kubernetes Node by ID |
+| [**k8sNodepoolsNodesFindById**](KubernetesApi.md#k8snodepoolsnodesfindbyid) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Get Kubernetes Node by ID |
+| [**k8sNodepoolsNodesGet**](KubernetesApi.md#k8snodepoolsnodesget) | **GET** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Get Kubernetes Nodes |
+| [**k8sNodepoolsNodesReplacePost**](KubernetesApi.md#k8snodepoolsnodesreplacepost) | **POST** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate a Kubernetes Node by ID |
+| [**k8sNodepoolsPost**](KubernetesApi.md#k8snodepoolspost) | **POST** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool |
+| [**k8sNodepoolsPut**](KubernetesApi.md#k8snodepoolsput) | **PUT** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify a Kubernetes Node Pool by ID |
+| [**k8sPost**](KubernetesApi.md#k8spost) | **POST** /k8s | Create a Kubernetes Cluster |
+| [**k8sPut**](KubernetesApi.md#k8sput) | **PUT** /k8s/{k8sClusterId} | Modify a Kubernetes Cluster by ID |
+| [**k8sVersionsDefaultGet**](KubernetesApi.md#k8sversionsdefaultget) | **GET** /k8s/versions/default | Get Default Kubernetes Version |
+| [**k8sVersionsGet**](KubernetesApi.md#k8sversionsget) | **GET** /k8s/versions | Get Kubernetes Versions |
 
 
 ## k8sDelete
 
 > k8sDelete(k8sClusterId, opts)
 
-Delete Kubernetes clusters
+Delete a Kubernetes Cluster by ID
 
-Delete the specified Kubernetes cluster.
+Deletes the K8s cluster specified  by its ID.
 
 ### Examples
 
@@ -42,7 +42,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Delete Kubernetes clusters
+// Delete a Kubernetes Cluster by ID
 api_instance
   .k8sDelete({
     k8sClusterId: k8sClusterId_example,
@@ -82,9 +82,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesCluster> k8sFindByClusterId(k8sClusterId, opts)
 
-Retrieve Kubernetes clusters
+Get a Kubernetes Cluster by ID
 
-Retrieve the specified Kubernetes cluster.
+Retrieves the K8s cluster specified by its ID.
 
 ### Examples
 
@@ -97,7 +97,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Retrieve Kubernetes clusters
+// Get a Kubernetes Cluster by ID
 api_instance
   .k8sFindByClusterId({
     k8sClusterId: k8sClusterId_example,
@@ -114,7 +114,7 @@ api_instance
 
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
-| **k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | [default to undefined] |
+| **k8sClusterId** | **string** | The unique ID of the K8s cluster to be retrieved. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
@@ -137,9 +137,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesClusters> k8sGet(opts)
 
-List Kubernetes clusters
+Get Kubernetes Clusters
 
-List all available Kubernetes clusters.
+Retrieves a list of all K8s clusters provisioned under your account.
 
 ### Examples
 
@@ -154,7 +154,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.KubernetesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List Kubernetes clusters
+// Get Kubernetes Clusters
 api_instance
   .k8sGet({
     pretty: true,
@@ -195,9 +195,9 @@ Basic Authentication, Token Authentication
 
 > string k8sKubeconfigGet(k8sClusterId, opts)
 
-Retrieve Kubernetes configuration files
+Get Kubernetes Configuration File
 
-Retrieve a configuration file for the specified Kubernetes cluster, in YAML or JSON format as defined in the Accept header; the default Accept header is application/yaml.
+Retrieves the configuration file for the specified K8s cluster. You can define the format (YAML or JSON) of the returned file in the Accept header. By default, \'application/yaml\' is specified.
 
 ### Examples
 
@@ -212,7 +212,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.KubernetesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// Retrieve Kubernetes configuration files
+// Get Kubernetes Configuration File
 api_instance
   .k8sKubeconfigGet({
     k8sClusterId: k8sClusterId_example,
@@ -255,9 +255,9 @@ Basic Authentication, Token Authentication
 
 > k8sNodepoolsDelete(k8sClusterId, nodepoolId, opts)
 
-Delete Kubernetes node pools
+Delete a Kubernetes Node Pool by ID
 
-Delete the specified Kubernetes node pool.
+Deletes the K8s node pool specified by its ID.
 
 ### Examples
 
@@ -270,7 +270,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Delete Kubernetes node pools
+// Delete a Kubernetes Node Pool by ID
 api_instance
   .k8sNodepoolsDelete({
     k8sClusterId: k8sClusterId_example,
@@ -312,9 +312,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesNodePool> k8sNodepoolsFindById(k8sClusterId, nodepoolId, opts)
 
-Retrieve Kubernetes node pools
+Get a Kubernetes Node Pool by ID
 
-Retrieve the specified Kubernetes node pool.
+Retrieves the K8s node pool specified by its ID.
 
 ### Examples
 
@@ -327,7 +327,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Retrieve Kubernetes node pools
+// Get a Kubernetes Node Pool by ID
 api_instance
   .k8sNodepoolsFindById({
     k8sClusterId: k8sClusterId_example,
@@ -369,9 +369,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesNodePools> k8sNodepoolsGet(k8sClusterId, opts)
 
-List Kubernetes node pools
+Get Kubernetes Node Pools
 
-List all Kubernetes node pools, included the specified Kubernetes cluster.
+Retrieves a list of K8s node pools of a cluster specified by its ID.
 
 ### Examples
 
@@ -386,7 +386,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.KubernetesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List Kubernetes node pools
+// Get Kubernetes Node Pools
 api_instance
   .k8sNodepoolsGet({
     k8sClusterId: k8sClusterId_example,
@@ -429,9 +429,9 @@ Basic Authentication, Token Authentication
 
 > k8sNodepoolsNodesDelete(k8sClusterId, nodepoolId, nodeId, opts)
 
-Delete Kubernetes nodes
+Delete a Kubernetes Node by ID
 
-Delete the specified Kubernetes node.
+Deletes the K8s node specified by its ID.
 
 ### Examples
 
@@ -444,7 +444,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Delete Kubernetes nodes
+// Delete a Kubernetes Node by ID
 api_instance
   .k8sNodepoolsNodesDelete({
     k8sClusterId: k8sClusterId_example,
@@ -488,9 +488,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesNode> k8sNodepoolsNodesFindById(k8sClusterId, nodepoolId, nodeId, opts)
 
-Retrieve Kubernetes nodes
+Get Kubernetes Node by ID
 
-Retrieve the specified Kubernetes node.
+Retrieves the K8s node specified by its ID.
 
 ### Examples
 
@@ -503,7 +503,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Retrieve Kubernetes nodes
+// Get Kubernetes Node by ID
 api_instance
   .k8sNodepoolsNodesFindById({
     k8sClusterId: k8sClusterId_example,
@@ -547,9 +547,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesNodes> k8sNodepoolsNodesGet(k8sClusterId, nodepoolId, opts)
 
-List Kubernetes nodes
+Get Kubernetes Nodes
 
-List all the nodes, included in the specified Kubernetes node pool.
+Retrieves the list of all K8s nodes of the specified node pool.
 
 ### Examples
 
@@ -564,7 +564,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.KubernetesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List Kubernetes nodes
+// Get Kubernetes Nodes
 api_instance
   .k8sNodepoolsNodesGet({
     k8sClusterId: k8sClusterId_example,
@@ -609,9 +609,9 @@ Basic Authentication, Token Authentication
 
 > k8sNodepoolsNodesReplacePost(k8sClusterId, nodepoolId, nodeId, opts)
 
-Recreate Kubernetes nodes
+Recreate a Kubernetes Node by ID
 
-Recreate the specified Kubernetes node.  A new node is created and configured by Managed Kubernetes, based on the node pool template. Once the status is  \"Active\", all the pods are migrated from the faulty node, which is then deleted once empty. During this operation, the node pool will have an additional billable  \"Active\" node.
+Recreates the K8s node specified by its ID.  If a node becomes unusable, Managed Kubernetes allows you to recreate it with a configuration based on the node pool template. Once the status is \'Active,\' all the pods from the failed node will be migrated to the new node. The node pool has an additional billable \'active\' node during this process.
 
 ### Examples
 
@@ -624,7 +624,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Recreate Kubernetes nodes
+// Recreate a Kubernetes Node by ID
 api_instance
   .k8sNodepoolsNodesReplacePost({
     k8sClusterId: k8sClusterId_example,
@@ -668,9 +668,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesNodePool> k8sNodepoolsPost(k8sClusterId, kubernetesNodePool, opts)
 
-Create Kubernetes node pools
+Create a Kubernetes Node Pool
 
-Create a Kubernetes node pool inside the specified Kubernetes cluster.
+Creates a node pool inside the specified K8s cluster.
 
 ### Examples
 
@@ -683,7 +683,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Create Kubernetes node pools
+// Create a Kubernetes Node Pool
 api_instance
   .k8sNodepoolsPost({
     k8sClusterId: k8sClusterId_example,
@@ -725,9 +725,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesNodePool> k8sNodepoolsPut(k8sClusterId, nodepoolId, kubernetesNodePool, opts)
 
-Modify Kubernetes node pools
+Modify a Kubernetes Node Pool by ID
 
-Modify the specified Kubernetes node pool.
+Modifies the K8s node pool specified by its ID.
 
 ### Examples
 
@@ -740,7 +740,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Modify Kubernetes node pools
+// Modify a Kubernetes Node Pool by ID
 api_instance
   .k8sNodepoolsPut({
     k8sClusterId: k8sClusterId_example,
@@ -784,9 +784,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesCluster> k8sPost(kubernetesCluster, opts)
 
-Create Kubernetes clusters
+Create a Kubernetes Cluster
 
-Create a Kubernetes cluster.
+Creates a K8s cluster provisioned under your account.
 
 ### Examples
 
@@ -799,7 +799,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Create Kubernetes clusters
+// Create a Kubernetes Cluster
 api_instance
   .k8sPost({
     kubernetesCluster: kubernetesCluster_example,
@@ -839,9 +839,9 @@ Basic Authentication, Token Authentication
 
 > <KubernetesCluster> k8sPut(k8sClusterId, kubernetesCluster, opts)
 
-Modify Kubernetes clusters
+Modify a Kubernetes Cluster by ID
 
-Modify the specified Kubernetes cluster.
+Modifies the K8s cluster specified by its ID.
 
 ### Examples
 
@@ -854,7 +854,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.KubernetesApi(config);
-// Modify Kubernetes clusters
+// Modify a Kubernetes Cluster by ID
 api_instance
   .k8sPut({
     k8sClusterId: k8sClusterId_example,
@@ -896,9 +896,9 @@ Basic Authentication, Token Authentication
 
 > string k8sVersionsDefaultGet
 
-Retrieve current default Kubernetes version
+Get Default Kubernetes Version
 
-Retrieve current default Kubernetes version for clusters and nodepools.
+Retrieves the current default K8s version to be used by the clusters and node pools.
 
 ### Examples
 
@@ -913,7 +913,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.KubernetesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// Retrieve current default Kubernetes version
+// Get Default Kubernetes Version
 api_instance
   .k8sVersionsDefaultGet()
   .then((response) => console.log(response.data))
@@ -942,9 +942,9 @@ Basic Authentication, Token Authentication
 
 > Array&lt;string&gt; k8sVersionsGet
 
-List Kubernetes versions
+Get Kubernetes Versions
 
-List available Kubernetes versions.
+Lists available K8s versions.
 
 ### Examples
 
@@ -959,7 +959,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.KubernetesApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List Kubernetes versions
+// Get Kubernetes Versions
 api_instance
   .k8sVersionsGet()
   .then((response) => console.log(response.data))

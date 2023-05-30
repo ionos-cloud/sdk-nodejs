@@ -3,11 +3,11 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
+| **entities** | [**ApplicationLoadBalancerEntities**](ApplicationLoadBalancerEntities.md) |  | [optional] [default to undefined] |
+| **href** | **string** | The URL to the object representation (absolute path). | [optional] [readonly] [default to undefined] |
 | **id** | **string** | The resource\'s unique identifier. | [optional] [readonly] [default to undefined] |
-| **type** | [**Type**](Type.md) | The type of object that has been created. | [optional] [default to undefined] |
-| **href** | **string** | URL to the object representation (absolute path). | [optional] [readonly] [default to undefined] |
 | **metadata** | [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] [default to undefined] |
 | **properties** | [**ApplicationLoadBalancerProperties**](ApplicationLoadBalancerProperties.md) |  | [default to undefined] |
-| **entities** | [**ApplicationLoadBalancerEntities**](ApplicationLoadBalancerEntities.md) |  | [optional] [default to undefined] |
+| **type** | [**Type**](Type.md) | The type of object that has been created. | [optional] [default to undefined] |
 
 

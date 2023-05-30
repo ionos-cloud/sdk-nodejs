@@ -4,33 +4,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**datacentersApplicationloadbalancersDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Delete Application Load Balancers |
-| [**datacentersApplicationloadbalancersFindByApplicationLoadBalancerId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersfindbyapplicationloadbalancerid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Retrieve Application Load Balancers |
-| [**datacentersApplicationloadbalancersFlowlogsDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Delete ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsFindByFlowLogId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Retrieve ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | List ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Partially modify ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | Create ALB Flow Logs |
-| [**datacentersApplicationloadbalancersFlowlogsPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Modify ALB Flow Logs |
-| [**datacentersApplicationloadbalancersForwardingrulesDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesfindbyforwardingruleid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | List ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | Create ALB forwarding rules |
-| [**datacentersApplicationloadbalancersForwardingrulesPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify ALB forwarding rules |
-| [**datacentersApplicationloadbalancersGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers | List Application Load Balancers |
-| [**datacentersApplicationloadbalancersPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Partially modify Application Load Balancers |
-| [**datacentersApplicationloadbalancersPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers | Create Application Load Balancers |
-| [**datacentersApplicationloadbalancersPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Modify Application Load Balancers |
+| [**datacentersApplicationloadbalancersDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Delete an Application Load Balancer by ID |
+| [**datacentersApplicationloadbalancersFindByApplicationLoadBalancerId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersfindbyapplicationloadbalancerid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Get an Application Load Balancer by ID |
+| [**datacentersApplicationloadbalancersFlowlogsDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Delete an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersFlowlogsFindByFlowLogId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsfindbyflowlogid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Get an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersFlowlogsGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | Get ALB Flow Logs |
+| [**datacentersApplicationloadbalancersFlowlogsPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Partially Modify an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersFlowlogsPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs | Create an ALB Flow Log |
+| [**datacentersApplicationloadbalancersFlowlogsPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersflowlogsput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId} | Modify an ALB Flow Log by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesDelete**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesdelete) | **DELETE** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesfindbyforwardingruleid) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Get an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | Get ALB Forwarding Rules |
+| [**datacentersApplicationloadbalancersForwardingrulesPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersForwardingrulesPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulespost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules | Create an ALB Forwarding Rule |
+| [**datacentersApplicationloadbalancersForwardingrulesPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersforwardingrulesput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify an ALB Forwarding Rule by ID |
+| [**datacentersApplicationloadbalancersGet**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersget) | **GET** /datacenters/{datacenterId}/applicationloadbalancers | Get Application Load Balancers |
+| [**datacentersApplicationloadbalancersPatch**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspatch) | **PATCH** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Partially Modify an Application Load Balancer by ID |
+| [**datacentersApplicationloadbalancersPost**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancerspost) | **POST** /datacenters/{datacenterId}/applicationloadbalancers | Create an Application Load Balancer |
+| [**datacentersApplicationloadbalancersPut**](ApplicationLoadBalancersApi.md#datacentersapplicationloadbalancersput) | **PUT** /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId} | Modify an Application Load Balancer by ID |
 
 
 ## datacentersApplicationloadbalancersDelete
 
 > datacentersApplicationloadbalancersDelete(datacenterId, applicationLoadBalancerId, opts)
 
-Delete Application Load Balancers
+Delete an Application Load Balancer by ID
 
-Remove the specified Application Load Balancer from the data center..
+Removes the specified Application Load Balancer from the data center.
 
 ### Examples
 
@@ -43,7 +43,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Delete Application Load Balancers
+// Delete an Application Load Balancer by ID
 api_instance
   .datacentersApplicationloadbalancersDelete({
     datacenterId: datacenterId_example,
@@ -85,9 +85,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancer> datacentersApplicationloadbalancersFindByApplicationLoadBalancerId(datacenterId, applicationLoadBalancerId, opts)
 
-Retrieve Application Load Balancers
+Get an Application Load Balancer by ID
 
-Retrieve the properties of the specified Application Load Balancer within the data center.
+Retrieves the properties of the specified Application Load Balancer within the data center.
 
 ### Examples
 
@@ -100,7 +100,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Retrieve Application Load Balancers
+// Get an Application Load Balancer by ID
 api_instance
   .datacentersApplicationloadbalancersFindByApplicationLoadBalancerId({
     datacenterId: datacenterId_example,
@@ -142,9 +142,9 @@ Basic Authentication, Token Authentication
 
 > datacentersApplicationloadbalancersFlowlogsDelete(datacenterId, applicationLoadBalancerId, flowLogId, opts)
 
-Delete ALB Flow Logs
+Delete an ALB Flow Log by ID
 
-Delete the specified Application Load Balancer Flow Log.
+Deletes the Application Load Balancer flow log specified by its ID.
 
 ### Examples
 
@@ -157,7 +157,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Delete ALB Flow Logs
+// Delete an ALB Flow Log by ID
 api_instance
   .datacentersApplicationloadbalancersFlowlogsDelete({
     datacenterId: datacenterId_example,
@@ -178,7 +178,7 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **applicationLoadBalancerId** | **string** | The unique ID of the Application Load Balancer. | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
+| **flowLogId** | **string** | The unique ID of the flow log. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
@@ -201,9 +201,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersApplicationloadbalancersFlowlogsFindByFlowLogId(datacenterId, applicationLoadBalancerId, flowLogId, opts)
 
-Retrieve ALB Flow Logs
+Get an ALB Flow Log by ID
 
-Retrieve the specified Application Load Balancer Flow Log.
+Retrieves the Application Load Balancer flow log specified by its ID.
 
 ### Examples
 
@@ -216,7 +216,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Retrieve ALB Flow Logs
+// Get an ALB Flow Log by ID
 api_instance
   .datacentersApplicationloadbalancersFlowlogsFindByFlowLogId({
     datacenterId: datacenterId_example,
@@ -237,7 +237,7 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **applicationLoadBalancerId** | **string** | The unique ID of the Application Load Balancer. | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
+| **flowLogId** | **string** | The unique ID of the flow log. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
@@ -260,9 +260,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLogs> datacentersApplicationloadbalancersFlowlogsGet(datacenterId, applicationLoadBalancerId, opts)
 
-List ALB Flow Logs
+Get ALB Flow Logs
 
-List the Flow Logs for the specified Application Load Balancer.
+Retrieves the flow logs for the specified Application Load Balancer.
 
 ### Examples
 
@@ -277,7 +277,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List ALB Flow Logs
+// Get ALB Flow Logs
 api_instance
   .datacentersApplicationloadbalancersFlowlogsGet({
     datacenterId: datacenterId_example,
@@ -322,9 +322,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersApplicationloadbalancersFlowlogsPatch(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLogProperties, opts)
 
-Partially modify ALB Flow Logs
+Partially Modify an ALB Flow Log by ID
 
-Update the properties of the specified Application Load Balancer Flow Log.
+Updates the properties of the Application Load Balancer flow log specified by its ID.
 
 ### Examples
 
@@ -337,7 +337,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Partially modify ALB Flow Logs
+// Partially Modify an ALB Flow Log by ID
 api_instance
   .datacentersApplicationloadbalancersFlowlogsPatch({
     datacenterId: datacenterId_example,
@@ -359,8 +359,8 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **applicationLoadBalancerId** | **string** | The unique ID of the Application Load Balancer. | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
-| **applicationLoadBalancerFlowLogProperties** | [**FlowLogProperties**](../models/FlowLogProperties.md) | The properties of the ALB Flow Log to be updated. |  |
+| **flowLogId** | **string** | The unique ID of the flow log. | [default to undefined] |
+| **applicationLoadBalancerFlowLogProperties** | [**FlowLogProperties**](../models/FlowLogProperties.md) | The properties of the ALB flow log to be updated. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
@@ -383,9 +383,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersApplicationloadbalancersFlowlogsPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerFlowLog, opts)
 
-Create ALB Flow Logs
+Create an ALB Flow Log
 
-Add a new Flow Log for the Application Load Balancer.
+Creates a flow log for the Application Load Balancer specified by ID.
 
 ### Examples
 
@@ -398,7 +398,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Create ALB Flow Logs
+// Create an ALB Flow Log
 api_instance
   .datacentersApplicationloadbalancersFlowlogsPost({
     datacenterId: datacenterId_example,
@@ -419,7 +419,7 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **applicationLoadBalancerId** | **string** | The unique ID of the Application Load Balancer. | [default to undefined] |
-| **applicationLoadBalancerFlowLog** | [**FlowLog**](../models/FlowLog.md) | The Flow Log to create. |  |
+| **applicationLoadBalancerFlowLog** | [**FlowLog**](../models/FlowLog.md) | The flow log to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
@@ -442,9 +442,9 @@ Basic Authentication, Token Authentication
 
 > <FlowLog> datacentersApplicationloadbalancersFlowlogsPut(datacenterId, applicationLoadBalancerId, flowLogId, applicationLoadBalancerFlowLog, opts)
 
-Modify ALB Flow Logs
+Modify an ALB Flow Log by ID
 
-Modify the specified Application Load Balancer Flow Log.
+Modifies the Application Load Balancer flow log specified by its ID.
 
 ### Examples
 
@@ -457,7 +457,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Modify ALB Flow Logs
+// Modify an ALB Flow Log by ID
 api_instance
   .datacentersApplicationloadbalancersFlowlogsPut({
     datacenterId: datacenterId_example,
@@ -479,8 +479,8 @@ api_instance
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **applicationLoadBalancerId** | **string** | The unique ID of the Application Load Balancer. | [default to undefined] |
-| **flowLogId** | **string** | The unique ID of the Flow Log. | [default to undefined] |
-| **applicationLoadBalancerFlowLog** | [**FlowLogPut**](../models/FlowLogPut.md) | The modified ALB Flow Log. |  |
+| **flowLogId** | **string** | The unique ID of the flow log. | [default to undefined] |
+| **applicationLoadBalancerFlowLog** | [**FlowLogPut**](../models/FlowLogPut.md) | The modified ALB flow log. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
@@ -503,9 +503,9 @@ Basic Authentication, Token Authentication
 
 > datacentersApplicationloadbalancersForwardingrulesDelete(datacenterId, applicationLoadBalancerId, forwardingRuleId, opts)
 
-Delete ALB forwarding rules
+Delete an ALB Forwarding Rule by ID
 
-Delete the specified Application Load Balancer forwarding rule.
+Deletes the Application Load Balancer forwarding rule specified by its ID.
 
 ### Examples
 
@@ -518,7 +518,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Delete ALB forwarding rules
+// Delete an ALB Forwarding Rule by ID
 api_instance
   .datacentersApplicationloadbalancersForwardingrulesDelete({
     datacenterId: datacenterId_example,
@@ -562,9 +562,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancerForwardingRule> datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId(datacenterId, applicationLoadBalancerId, forwardingRuleId, opts)
 
-Retrieve ALB forwarding rules
+Get an ALB Forwarding Rule by ID
 
-Retrieve the specified Application Load Balancer forwarding rule.
+Retrieves the Application Load Balancer forwarding rule specified by its ID.
 
 ### Examples
 
@@ -577,7 +577,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Retrieve ALB forwarding rules
+// Get an ALB Forwarding Rule by ID
 api_instance
   .datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId({
     datacenterId: datacenterId_example,
@@ -621,9 +621,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancerForwardingRules> datacentersApplicationloadbalancersForwardingrulesGet(datacenterId, applicationLoadBalancerId, opts)
 
-List ALB forwarding rules
+Get ALB Forwarding Rules
 
-List the forwarding rules for the specified Application Load Balancer.
+Lists the forwarding rules of the specified Application Load Balancer.
 
 ### Examples
 
@@ -638,7 +638,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List ALB forwarding rules
+// Get ALB Forwarding Rules
 api_instance
   .datacentersApplicationloadbalancersForwardingrulesGet({
     datacenterId: datacenterId_example,
@@ -683,9 +683,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancerForwardingRule> datacentersApplicationloadbalancersForwardingrulesPatch(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRuleProperties, opts)
 
-Partially modify ALB forwarding rules
+Partially modify an ALB Forwarding Rule by ID
 
-Update the properties of the specified Application Load Balancer forwarding rule.
+Updates the properties of the Application Load Balancer forwarding rule specified by its ID.
 
 ### Examples
 
@@ -698,7 +698,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Partially modify ALB forwarding rules
+// Partially modify an ALB Forwarding Rule by ID
 api_instance
   .datacentersApplicationloadbalancersForwardingrulesPatch({
     datacenterId: datacenterId_example,
@@ -744,9 +744,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancerForwardingRule> datacentersApplicationloadbalancersForwardingrulesPost(datacenterId, applicationLoadBalancerId, applicationLoadBalancerForwardingRule, opts)
 
-Create ALB forwarding rules
+Create an ALB Forwarding Rule
 
-Create a forwarding rule for the Application Load Balancer.
+Creates a forwarding rule for the specified Application Load Balancer.
 
 ### Examples
 
@@ -759,7 +759,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Create ALB forwarding rules
+// Create an ALB Forwarding Rule
 api_instance
   .datacentersApplicationloadbalancersForwardingrulesPost({
     datacenterId: datacenterId_example,
@@ -803,9 +803,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancerForwardingRule> datacentersApplicationloadbalancersForwardingrulesPut(datacenterId, applicationLoadBalancerId, forwardingRuleId, applicationLoadBalancerForwardingRule, opts)
 
-Modify ALB forwarding rules
+Modify an ALB Forwarding Rule by ID
 
-Modify the specified Application Load Balancer forwarding rule.
+Modifies the Application Load Balancer forwarding rule specified by its ID.
 
 ### Examples
 
@@ -818,7 +818,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Modify ALB forwarding rules
+// Modify an ALB Forwarding Rule by ID
 api_instance
   .datacentersApplicationloadbalancersForwardingrulesPut({
     datacenterId: datacenterId_example,
@@ -864,9 +864,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancers> datacentersApplicationloadbalancersGet(datacenterId, opts)
 
-List Application Load Balancers
+Get Application Load Balancers
 
-List all Application Load Balancers within the data center.
+Lists all Application Load Balancers within a data center.
 
 ### Examples
 
@@ -881,7 +881,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// List Application Load Balancers
+// Get Application Load Balancers
 api_instance
   .datacentersApplicationloadbalancersGet({
     datacenterId: datacenterId_example,
@@ -928,9 +928,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancer> datacentersApplicationloadbalancersPatch(datacenterId, applicationLoadBalancerId, applicationLoadBalancerProperties, opts)
 
-Partially modify Application Load Balancers
+Partially Modify an Application Load Balancer by ID
 
-Update the properties of the specified Application Load Balancer within the data center.
+Updates the properties of the specified Application Load Balancer within the data center.
 
 ### Examples
 
@@ -943,7 +943,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Partially modify Application Load Balancers
+// Partially Modify an Application Load Balancer by ID
 api_instance
   .datacentersApplicationloadbalancersPatch({
     datacenterId: datacenterId_example,
@@ -987,9 +987,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancer> datacentersApplicationloadbalancersPost(datacenterId, applicationLoadBalancer, opts)
 
-Create Application Load Balancers
+Create an Application Load Balancer
 
-Create an Application Load Balancer within the datacenter.
+Creates an Application Load Balancer within the data center.
 
 ### Examples
 
@@ -1002,7 +1002,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Create Application Load Balancers
+// Create an Application Load Balancer
 api_instance
   .datacentersApplicationloadbalancersPost({
     datacenterId: datacenterId_example,
@@ -1044,9 +1044,9 @@ Basic Authentication, Token Authentication
 
 > <ApplicationLoadBalancer> datacentersApplicationloadbalancersPut(datacenterId, applicationLoadBalancerId, applicationLoadBalancer, opts)
 
-Modify Application Load Balancers
+Modify an Application Load Balancer by ID
 
-Modify the properties of the specified Application Load Balancer within the data center.
+Modifies the properties of the specified Application Load Balancer within the data center.
 
 ### Examples
 
@@ -1059,7 +1059,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.ApplicationLoadBalancersApi(config);
-// Modify Application Load Balancers
+// Modify an Application Load Balancer by ID
 api_instance
   .datacentersApplicationloadbalancersPut({
     datacenterId: datacenterId_example,

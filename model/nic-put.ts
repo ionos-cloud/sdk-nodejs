@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface NicPut {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof NicPut
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NicPut
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof NicPut
@@ -45,11 +31,25 @@ export interface NicPut {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NicPut
+     */
+    id?: string;
+
+    /**
      * 
      * @type {NicProperties}
      * @memberof NicPut
      */
     properties: NicProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NicPut
+     */
+    type?: Type;
 }
 
 

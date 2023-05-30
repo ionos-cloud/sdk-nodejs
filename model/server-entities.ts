@@ -33,17 +33,17 @@ export interface ServerEntities {
 
     /**
      * 
-     * @type {AttachedVolumes}
-     * @memberof ServerEntities
-     */
-    volumes?: AttachedVolumes;
-
-    /**
-     * 
      * @type {Nics}
      * @memberof ServerEntities
      */
     nics?: Nics;
+
+    /**
+     * 
+     * @type {AttachedVolumes}
+     * @memberof ServerEntities
+     */
+    volumes?: AttachedVolumes;
 }
 
 

@@ -26,18 +26,11 @@ import { Type } from './type';
 export interface Datacenter {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {DataCenterEntities}
      * @memberof Datacenter
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Datacenter
-     */
-    type?: Type;
+    entities?: DataCenterEntities;
 
     /**
      * URL to the object representation (absolute path).
@@ -45,6 +38,13 @@ export interface Datacenter {
      * @memberof Datacenter
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Datacenter
+     */
+    id?: string;
 
     /**
      * 
@@ -61,11 +61,11 @@ export interface Datacenter {
     properties: DatacenterProperties;
 
     /**
-     * 
-     * @type {DataCenterEntities}
+     * The type of object that has been created.
+     * @type {Type}
      * @memberof Datacenter
      */
-    entities?: DataCenterEntities;
+    type?: Type;
 }
 
 

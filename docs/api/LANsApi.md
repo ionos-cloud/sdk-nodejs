@@ -442,7 +442,7 @@ Basic Authentication, Token Authentication
 
 Create LANs
 
-Create a LAN within the data center.
+Creates a LAN within the data center.
 
 ### Examples
 

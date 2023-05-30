@@ -530,8 +530,8 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
-         * @summary Create volumes
+         * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+         * @summary Create a Volume
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Volume} volume The volume to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -623,8 +623,8 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             };
         },
         /**
-         * Modify the properties of the specified volume within the data center.
-         * @summary Modify volumes
+         * Modifies the properties of the specified volume within the data center.
+         * @summary Modify a Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {Volume} volume The modified volume
@@ -914,8 +914,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
-         * @summary Create volumes
+         * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+         * @summary Create a Volume
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Volume} volume The volume to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -930,8 +930,8 @@ export const VolumesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified volume within the data center.
-         * @summary Modify volumes
+         * Modifies the properties of the specified volume within the data center.
+         * @summary Modify a Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {Volume} volume The modified volume
@@ -1049,8 +1049,8 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
             return VolumesApiFp(configuration).datacentersVolumesPatch(datacenterId, volumeId, volume, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
-         * @summary Create volumes
+         * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+         * @summary Create a Volume
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Volume} volume The volume to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1063,8 +1063,8 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
             return VolumesApiFp(configuration).datacentersVolumesPost(datacenterId, volume, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified volume within the data center.
-         * @summary Modify volumes
+         * Modifies the properties of the specified volume within the data center.
+         * @summary Modify a Volume by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} volumeId The unique ID of the volume.
          * @param {Volume} volume The modified volume
@@ -1573,8 +1573,8 @@ export class VolumesApi extends BaseAPI {
     }
 
     /**
-     * Create a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
-     * @summary Create volumes
+     * Creates a storage volume within the specified data center. The volume will not be attached! Attaching volumes is described in the Servers section.
+     * @summary Create a Volume
      * @param {VolumesApiDatacentersVolumesPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1585,8 +1585,8 @@ export class VolumesApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified volume within the data center.
-     * @summary Modify volumes
+     * Modifies the properties of the specified volume within the data center.
+     * @summary Modify a Volume by ID
      * @param {VolumesApiDatacentersVolumesPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

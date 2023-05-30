@@ -23,34 +23,6 @@ import { ApplicationLoadBalancerHttpRule } from './application-load-balancer-htt
 export interface ApplicationLoadBalancerForwardingRuleProperties {
 
     /**
-     * The name of the Application Load Balancer forwarding rule.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerForwardingRuleProperties
-     */
-    name: string;
-
-    /**
-     * Balancing protocol
-     * @type {string}
-     * @memberof ApplicationLoadBalancerForwardingRuleProperties
-     */
-    protocol: ApplicationLoadBalancerForwardingRulePropertiesProtocolEnum;
-
-    /**
-     * Listening (inbound) IP
-     * @type {string}
-     * @memberof ApplicationLoadBalancerForwardingRuleProperties
-     */
-    listenerIp: string;
-
-    /**
-     * Listening (inbound) port number; valid range is 1 to 65535.
-     * @type {number}
-     * @memberof ApplicationLoadBalancerForwardingRuleProperties
-     */
-    listenerPort: number;
-
-    /**
      * The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).
      * @type {number}
      * @memberof ApplicationLoadBalancerForwardingRuleProperties
@@ -58,19 +30,51 @@ export interface ApplicationLoadBalancerForwardingRuleProperties {
     clientTimeout?: number;
 
     /**
+     * An array of items in the collection. The original order of rules is preserved during processing, except that rules of the \'FORWARD\' type are processed after the rules with other defined actions. The relative order of the \'FORWARD\' type rules is also preserved during the processing.
+     * @type {Array<ApplicationLoadBalancerHttpRule>}
+     * @memberof ApplicationLoadBalancerForwardingRuleProperties
+     */
+    httpRules?: Array<ApplicationLoadBalancerHttpRule>;
+
+    /**
+     * The listening (inbound) IP.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerForwardingRuleProperties
+     */
+    listenerIp: string;
+
+    /**
+     * The listening (inbound) port number; the valid range is 1 to 65535.
+     * @type {number}
+     * @memberof ApplicationLoadBalancerForwardingRuleProperties
+     */
+    listenerPort: number;
+
+    /**
+     * The name of the Application Load Balancer forwarding rule.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerForwardingRuleProperties
+     */
+    name: string;
+
+    /**
+     * The balancing protocol.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerForwardingRuleProperties
+     */
+    protocol: ApplicationLoadBalancerForwardingRulePropertiesProtocolEnum;
+
+    /**
      * Array of items in the collection.
      * @type {Array<string>}
      * @memberof ApplicationLoadBalancerForwardingRuleProperties
      */
     serverCertificates?: Array<string>;
-
-    /**
-     * An array of items in the collection. The original order of rules is perserved during processing, except for Forward-type rules are processed after the rules with other action defined. The relative order of Forward-type rules is also preserved during the processing.
-     * @type {Array<ApplicationLoadBalancerHttpRule>}
-     * @memberof ApplicationLoadBalancerForwardingRuleProperties
-     */
-    httpRules?: Array<ApplicationLoadBalancerHttpRule>;
 }
+
+
+
+
 
 
 
@@ -81,10 +85,6 @@ export interface ApplicationLoadBalancerForwardingRuleProperties {
 export enum ApplicationLoadBalancerForwardingRulePropertiesProtocolEnum {
     Http = 'HTTP'
 }
-
-
-
-
 
 
 

@@ -24,20 +24,6 @@ import { Type } from './type';
 export interface NetworkLoadBalancerForwardingRulePut {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof NetworkLoadBalancerForwardingRulePut
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof NetworkLoadBalancerForwardingRulePut
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRulePut
@@ -45,11 +31,25 @@ export interface NetworkLoadBalancerForwardingRulePut {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof NetworkLoadBalancerForwardingRulePut
+     */
+    id?: string;
+
+    /**
      * 
      * @type {NetworkLoadBalancerForwardingRuleProperties}
      * @memberof NetworkLoadBalancerForwardingRulePut
      */
     properties: NetworkLoadBalancerForwardingRuleProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof NetworkLoadBalancerForwardingRulePut
+     */
+    type?: Type;
 }
 
 

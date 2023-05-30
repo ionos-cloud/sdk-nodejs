@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface Servers {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Servers
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Servers
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Servers {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Servers
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Server>}
      * @memberof Servers
      */
     items?: Array<Server>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof Servers
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface Servers {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof Servers
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Servers
+     */
+    type?: Type;
 }
 
 

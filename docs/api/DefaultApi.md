@@ -4,16 +4,16 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**apiInfoGet**](DefaultApi.md#apiinfoget) | **GET** / | Display API information |
+| [**apiInfoGet**](DefaultApi.md#apiinfoget) | **GET** / | Get API information |
 
 
 ## apiInfoGet
 
 > <Info> apiInfoGet(opts)
 
-Display API information
+Get API information
 
-Display API information
+Retrieves the API information such as API version.
 
 ### Examples
 
@@ -25,7 +25,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.DefaultApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// Display API information
+// Get API information
 api_instance
   .apiInfoGet({
     pretty: true,

@@ -23,20 +23,6 @@ import { Label } from './label';
 export interface Labels {
 
     /**
-     * A unique representation of the label as a resource collection.
-     * @type {string}
-     * @memberof Labels
-     */
-    id?: string;
-
-    /**
-     * The type of resource within a collection.
-     * @type {string}
-     * @memberof Labels
-     */
-    type?: LabelsTypeEnum;
-
-    /**
      * URL to the collection representation (absolute path).
      * @type {string}
      * @memberof Labels
@@ -44,12 +30,28 @@ export interface Labels {
     href?: string;
 
     /**
+     * A unique representation of the label as a resource collection.
+     * @type {string}
+     * @memberof Labels
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Label>}
      * @memberof Labels
      */
     items?: Array<Label>;
+
+    /**
+     * The type of resource within a collection.
+     * @type {string}
+     * @memberof Labels
+     */
+    type?: LabelsTypeEnum;
 }
+
+
 
 
 
@@ -60,8 +62,6 @@ export interface Labels {
 export enum LabelsTypeEnum {
     Collection = 'collection'
 }
-
-
 
 
 

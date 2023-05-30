@@ -22,18 +22,18 @@
 export interface KubernetesNodePoolLanRoutes {
 
     /**
-     * IPv4 or IPv6 CIDR to be routed via the interface.
-     * @type {string}
-     * @memberof KubernetesNodePoolLanRoutes
-     */
-    network?: string;
-
-    /**
      * IPv4 or IPv6 Gateway IP for the route.
      * @type {string}
      * @memberof KubernetesNodePoolLanRoutes
      */
     gatewayIp?: string;
+
+    /**
+     * IPv4 or IPv6 CIDR to be routed via the interface.
+     * @type {string}
+     * @memberof KubernetesNodePoolLanRoutes
+     */
+    network?: string;
 }
 
 

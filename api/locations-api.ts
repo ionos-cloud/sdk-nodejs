@@ -29,8 +29,8 @@ import { Locations } from '../model';
 export const LocationsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * List locations by the region ID.
-         * @summary List locations within regions
+         * Retrieves the available locations in a region specified by its ID. The \'regionId\' consists of the two character identifier of the region (country), e.g., \'de\'.
+         * @summary Get Locations within a Region
          * @param {string} regionId The unique ID of the region.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -111,8 +111,8 @@ export const LocationsApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Retrieve the properties of the specified location
-         * @summary Retrieve specified locations
+         * Retrieves the information about the location specified by its ID. The \'locationId\' consists of the three-digit identifier of the city according to the IATA code.
+         * @summary Get Location by ID
          * @param {string} regionId The unique ID of the region.
          * @param {string} locationId The unique ID of the location.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -198,8 +198,8 @@ export const LocationsApiAxiosParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * List the available locations for provisioning your virtual data centers.
-         * @summary List locations
+         * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: \'de\')    * a three-character **locationId**, which represents a city. The \'locationId\' is typically based on the IATA code of the city\'s airport (example: \'txl\').    >Note that \'locations\' are read-only and cannot be changed.
+         * @summary Get Locations
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -300,8 +300,8 @@ export const LocationsApiAxiosParamCreator = function (configuration?: Configura
 export const LocationsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * List locations by the region ID.
-         * @summary List locations within regions
+         * Retrieves the available locations in a region specified by its ID. The \'regionId\' consists of the two character identifier of the region (country), e.g., \'de\'.
+         * @summary Get Locations within a Region
          * @param {string} regionId The unique ID of the region.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -315,8 +315,8 @@ export const LocationsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the properties of the specified location
-         * @summary Retrieve specified locations
+         * Retrieves the information about the location specified by its ID. The \'locationId\' consists of the three-digit identifier of the city according to the IATA code.
+         * @summary Get Location by ID
          * @param {string} regionId The unique ID of the region.
          * @param {string} locationId The unique ID of the location.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -331,8 +331,8 @@ export const LocationsApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List the available locations for provisioning your virtual data centers.
-         * @summary List locations
+         * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: \'de\')    * a three-character **locationId**, which represents a city. The \'locationId\' is typically based on the IATA code of the city\'s airport (example: \'txl\').    >Note that \'locations\' are read-only and cannot be changed.
+         * @summary Get Locations
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -356,8 +356,8 @@ export const LocationsApiFp = function(configuration?: Configuration) {
 export const LocationsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * List locations by the region ID.
-         * @summary List locations within regions
+         * Retrieves the available locations in a region specified by its ID. The \'regionId\' consists of the two character identifier of the region (country), e.g., \'de\'.
+         * @summary Get Locations within a Region
          * @param {string} regionId The unique ID of the region.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -369,8 +369,8 @@ export const LocationsApiFactory = function (configuration?: Configuration, base
             return LocationsApiFp(configuration).locationsFindByRegionId(regionId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the properties of the specified location
-         * @summary Retrieve specified locations
+         * Retrieves the information about the location specified by its ID. The \'locationId\' consists of the three-digit identifier of the city according to the IATA code.
+         * @summary Get Location by ID
          * @param {string} regionId The unique ID of the region.
          * @param {string} locationId The unique ID of the location.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -383,8 +383,8 @@ export const LocationsApiFactory = function (configuration?: Configuration, base
             return LocationsApiFp(configuration).locationsFindByRegionIdAndId(regionId, locationId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List the available locations for provisioning your virtual data centers.
-         * @summary List locations
+         * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: \'de\')    * a three-character **locationId**, which represents a city. The \'locationId\' is typically based on the IATA code of the city\'s airport (example: \'txl\').    >Note that \'locations\' are read-only and cannot be changed.
+         * @summary Get Locations
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -528,8 +528,8 @@ export interface LocationsApiLocationsGetRequest {
  */
 export class LocationsApi extends BaseAPI {
     /**
-     * List locations by the region ID.
-     * @summary List locations within regions
+     * Retrieves the available locations in a region specified by its ID. The \'regionId\' consists of the two character identifier of the region (country), e.g., \'de\'.
+     * @summary Get Locations within a Region
      * @param {LocationsApiLocationsFindByRegionIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -540,8 +540,8 @@ export class LocationsApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the properties of the specified location
-     * @summary Retrieve specified locations
+     * Retrieves the information about the location specified by its ID. The \'locationId\' consists of the three-digit identifier of the city according to the IATA code.
+     * @summary Get Location by ID
      * @param {LocationsApiLocationsFindByRegionIdAndIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -552,8 +552,8 @@ export class LocationsApi extends BaseAPI {
     }
 
     /**
-     * List the available locations for provisioning your virtual data centers.
-     * @summary List locations
+     * Retrieves the available physical locations where you can deploy cloud resources in a VDC.    A location is identified by a combination of the following characters:    * a two-character **regionId**, which represents a country (example: \'de\')    * a three-character **locationId**, which represents a city. The \'locationId\' is typically based on the IATA code of the city\'s airport (example: \'txl\').    >Note that \'locations\' are read-only and cannot be changed.
+     * @summary Get Locations
      * @param {LocationsApiLocationsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

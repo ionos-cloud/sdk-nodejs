@@ -24,19 +24,18 @@ export interface RequestTarget {
 
     /**
      * 
-     * @type {ResourceReference}
-     * @memberof RequestTarget
-     */
-    target?: ResourceReference;
-
-    /**
-     * 
      * @type {string}
      * @memberof RequestTarget
      */
     status?: RequestTargetStatusEnum;
-}
 
+    /**
+     * 
+     * @type {ResourceReference}
+     * @memberof RequestTarget
+     */
+    target?: ResourceReference;
+}
 
 
 /**
@@ -49,6 +48,7 @@ export enum RequestTargetStatusEnum {
     Done = 'DONE',
     Failed = 'FAILED'
 }
+
 
 
 

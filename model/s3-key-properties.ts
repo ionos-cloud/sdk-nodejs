@@ -22,18 +22,18 @@
 export interface S3KeyProperties {
 
     /**
-     * Secret of the S3 key.
-     * @type {string}
-     * @memberof S3KeyProperties
-     */
-    secretKey?: string;
-
-    /**
      * Denotes weather the S3 key is active.
      * @type {boolean}
      * @memberof S3KeyProperties
      */
     active?: boolean;
+
+    /**
+     * Secret of the S3 key.
+     * @type {string}
+     * @memberof S3KeyProperties
+     */
+    secretKey?: string;
 }
 
 

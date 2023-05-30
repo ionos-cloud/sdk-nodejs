@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersServersNicsFindById**](NetworkInterfacesApi.md#datacentersserversnicsfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve NICs |
 | [**datacentersServersNicsGet**](NetworkInterfacesApi.md#datacentersserversnicsget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/nics | List NICs |
 | [**datacentersServersNicsPatch**](NetworkInterfacesApi.md#datacentersserversnicspatch) | **PATCH** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs |
-| [**datacentersServersNicsPost**](NetworkInterfacesApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create NICs |
+| [**datacentersServersNicsPost**](NetworkInterfacesApi.md#datacentersserversnicspost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a NIC |
 | [**datacentersServersNicsPut**](NetworkInterfacesApi.md#datacentersserversnicsput) | **PUT** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs |
 
 
@@ -261,9 +261,9 @@ Basic Authentication, Token Authentication
 
 > <Nic> datacentersServersNicsPost(datacenterId, serverId, nic, opts)
 
-Create NICs
+Create a NIC
 
-Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
 
 ### Examples
 
@@ -276,7 +276,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.NetworkInterfacesApi(config);
-// Create NICs
+// Create a NIC
 api_instance
   .datacentersServersNicsPost({
     datacenterId: datacenterId_example,

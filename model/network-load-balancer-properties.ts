@@ -22,11 +22,18 @@
 export interface NetworkLoadBalancerProperties {
 
     /**
-     * The name of the Network Load Balancer.
-     * @type {string}
+     * Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.
+     * @type {Array<string>}
      * @memberof NetworkLoadBalancerProperties
      */
-    name: string;
+    ips?: Array<string>;
+
+    /**
+     * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
+     * @type {Array<string>}
+     * @memberof NetworkLoadBalancerProperties
+     */
+    lbPrivateIps?: Array<string>;
 
     /**
      * ID of the listening LAN (inbound).
@@ -36,11 +43,11 @@ export interface NetworkLoadBalancerProperties {
     listenerLan: number;
 
     /**
-     * Collection of the Network Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan must be customer-reserved IPs for public Load Balancers, and private IPs for private Load Balancers.
-     * @type {Array<string>}
+     * The name of the Network Load Balancer.
+     * @type {string}
      * @memberof NetworkLoadBalancerProperties
      */
-    ips?: Array<string>;
+    name: string;
 
     /**
      * ID of the balanced private target LAN (outbound).
@@ -48,13 +55,6 @@ export interface NetworkLoadBalancerProperties {
      * @memberof NetworkLoadBalancerProperties
      */
     targetLan: number;
-
-    /**
-     * Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
-     * @type {Array<string>}
-     * @memberof NetworkLoadBalancerProperties
-     */
-    lbPrivateIps?: Array<string>;
 }
 
 

@@ -322,7 +322,7 @@ export const LoadBalancersApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Attach an existing NIC to the specified Load Balancer.
+         * Attachs an existing NIC to the specified Load Balancer.
          * @summary Attach balanced NICs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} loadbalancerId The unique ID of the Load Balancer.
@@ -806,8 +806,8 @@ export const LoadBalancersApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Create a Load Balancer within the data center.
-         * @summary Create Load Balancers
+         * Creates a Load Balancer within the data center.
+         * @summary Create a Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Loadbalancer} loadbalancer The Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -899,8 +899,8 @@ export const LoadBalancersApiAxiosParamCreator = function (configuration?: Confi
             };
         },
         /**
-         * Modify the properties of the specified Load Balancer within the data center.
-         * @summary Modify Load Balancers
+         * Modifies the properties of the specified Load Balancer within the data center.
+         * @summary Modify a Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} loadbalancerId The unique ID of the Load Balancer.
          * @param {Loadbalancer} loadbalancer The modified Load Balancer.
@@ -1058,7 +1058,7 @@ export const LoadBalancersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Attach an existing NIC to the specified Load Balancer.
+         * Attachs an existing NIC to the specified Load Balancer.
          * @summary Attach balanced NICs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} loadbalancerId The unique ID of the Load Balancer.
@@ -1143,8 +1143,8 @@ export const LoadBalancersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create a Load Balancer within the data center.
-         * @summary Create Load Balancers
+         * Creates a Load Balancer within the data center.
+         * @summary Create a Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Loadbalancer} loadbalancer The Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1159,8 +1159,8 @@ export const LoadBalancersApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Modify the properties of the specified Load Balancer within the data center.
-         * @summary Modify Load Balancers
+         * Modifies the properties of the specified Load Balancer within the data center.
+         * @summary Modify a Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} loadbalancerId The unique ID of the Load Balancer.
          * @param {Loadbalancer} loadbalancer The modified Load Balancer.
@@ -1229,7 +1229,7 @@ export const LoadBalancersApiFactory = function (configuration?: Configuration, 
             return LoadBalancersApiFp(configuration).datacentersLoadbalancersBalancednicsGet(datacenterId, loadbalancerId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Attach an existing NIC to the specified Load Balancer.
+         * Attachs an existing NIC to the specified Load Balancer.
          * @summary Attach balanced NICs
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} loadbalancerId The unique ID of the Load Balancer.
@@ -1302,8 +1302,8 @@ export const LoadBalancersApiFactory = function (configuration?: Configuration, 
             return LoadBalancersApiFp(configuration).datacentersLoadbalancersPatch(datacenterId, loadbalancerId, loadbalancer, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create a Load Balancer within the data center.
-         * @summary Create Load Balancers
+         * Creates a Load Balancer within the data center.
+         * @summary Create a Load Balancer
          * @param {string} datacenterId The unique ID of the data center.
          * @param {Loadbalancer} loadbalancer The Load Balancer to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1316,8 +1316,8 @@ export const LoadBalancersApiFactory = function (configuration?: Configuration, 
             return LoadBalancersApiFp(configuration).datacentersLoadbalancersPost(datacenterId, loadbalancer, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Modify the properties of the specified Load Balancer within the data center.
-         * @summary Modify Load Balancers
+         * Modifies the properties of the specified Load Balancer within the data center.
+         * @summary Modify a Load Balancer by ID
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} loadbalancerId The unique ID of the Load Balancer.
          * @param {Loadbalancer} loadbalancer The modified Load Balancer.
@@ -1875,7 +1875,7 @@ export class LoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Attach an existing NIC to the specified Load Balancer.
+     * Attachs an existing NIC to the specified Load Balancer.
      * @summary Attach balanced NICs
      * @param {LoadBalancersApiDatacentersLoadbalancersBalancednicsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
@@ -1935,8 +1935,8 @@ export class LoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Create a Load Balancer within the data center.
-     * @summary Create Load Balancers
+     * Creates a Load Balancer within the data center.
+     * @summary Create a Load Balancer
      * @param {LoadBalancersApiDatacentersLoadbalancersPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1947,8 +1947,8 @@ export class LoadBalancersApi extends BaseAPI {
     }
 
     /**
-     * Modify the properties of the specified Load Balancer within the data center.
-     * @summary Modify Load Balancers
+     * Modifies the properties of the specified Load Balancer within the data center.
+     * @summary Modify a Load Balancer by ID
      * @param {LoadBalancersApiDatacentersLoadbalancersPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

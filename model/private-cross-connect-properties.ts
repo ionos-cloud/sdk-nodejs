@@ -24,11 +24,11 @@ import { Peer } from './peer';
 export interface PrivateCrossConnectProperties {
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.
+     * @type {Array<ConnectableDatacenter>}
      * @memberof PrivateCrossConnectProperties
      */
-    name?: string;
+    connectableDatacenters?: Array<ConnectableDatacenter>;
 
     /**
      * Human-readable description.
@@ -38,18 +38,18 @@ export interface PrivateCrossConnectProperties {
     description?: string;
 
     /**
+     * The name of the  resource.
+     * @type {string}
+     * @memberof PrivateCrossConnectProperties
+     */
+    name?: string;
+
+    /**
      * Read-Only attribute. Lists LAN\'s joined to this private Cross-Connect.
      * @type {Array<Peer>}
      * @memberof PrivateCrossConnectProperties
      */
     peers?: Array<Peer>;
-
-    /**
-     * Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.
-     * @type {Array<ConnectableDatacenter>}
-     * @memberof PrivateCrossConnectProperties
-     */
-    connectableDatacenters?: Array<ConnectableDatacenter>;
 }
 
 

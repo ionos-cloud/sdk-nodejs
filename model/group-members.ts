@@ -24,20 +24,6 @@ import { User } from './user';
 export interface GroupMembers {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof GroupMembers
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof GroupMembers
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof GroupMembers
@@ -45,11 +31,25 @@ export interface GroupMembers {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof GroupMembers
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<User>}
      * @memberof GroupMembers
      */
     items?: Array<User>;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof GroupMembers
+     */
+    type?: Type;
 }
 
 

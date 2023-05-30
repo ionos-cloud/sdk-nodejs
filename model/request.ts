@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface Request {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof Request
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Request
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof Request
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Request
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface Request {
      * @memberof Request
      */
     properties: RequestProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Request
+     */
+    type?: Type;
 }
 
 

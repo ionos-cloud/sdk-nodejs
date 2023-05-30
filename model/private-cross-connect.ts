@@ -25,25 +25,18 @@ import { Type } from './type';
 export interface PrivateCrossConnect {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof PrivateCrossConnect
-     */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof PrivateCrossConnect
-     */
-    type?: Type;
-
-    /**
      * URL to the object representation (absolute path).
      * @type {string}
      * @memberof PrivateCrossConnect
      */
     href?: string;
+
+    /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof PrivateCrossConnect
+     */
+    id?: string;
 
     /**
      * 
@@ -58,6 +51,13 @@ export interface PrivateCrossConnect {
      * @memberof PrivateCrossConnect
      */
     properties: PrivateCrossConnectProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof PrivateCrossConnect
+     */
+    type?: Type;
 }
 
 

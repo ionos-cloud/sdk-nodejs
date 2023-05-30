@@ -23,21 +23,28 @@ import { KubernetesNodePoolLanRoutes } from './kubernetes-node-pool-lan-routes';
 export interface KubernetesNodePoolLan {
 
     /**
-     * The LAN ID of an existing LAN at the related datacenter
-     * @type {number}
+     * The datacenter ID, requires system privileges, for internal usage only
+     * @type {string}
      * @memberof KubernetesNodePoolLan
      */
-    id: number;
+    datacenterId?: string;
 
     /**
-     * Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP.
+     * Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.
      * @type {boolean}
      * @memberof KubernetesNodePoolLan
      */
     dhcp?: boolean;
 
     /**
-     * array of additional LANs attached to worker nodes
+     * The LAN ID of an existing LAN at the related data center
+     * @type {number}
+     * @memberof KubernetesNodePoolLan
+     */
+    id: number;
+
+    /**
+     * The array of additional LANs attached to worker nodes.
      * @type {Array<KubernetesNodePoolLanRoutes>}
      * @memberof KubernetesNodePoolLan
      */

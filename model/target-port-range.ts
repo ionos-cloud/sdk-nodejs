@@ -22,18 +22,18 @@
 export interface TargetPortRange {
 
     /**
-     * Target port range start associated with the NAT Gateway rule.
-     * @type {number}
-     * @memberof TargetPortRange
-     */
-    start?: number;
-
-    /**
      * Target port range end associated with the NAT Gateway rule.
      * @type {number}
      * @memberof TargetPortRange
      */
     end?: number;
+
+    /**
+     * Target port range start associated with the NAT Gateway rule.
+     * @type {number}
+     * @memberof TargetPortRange
+     */
+    start?: number;
 }
 
 

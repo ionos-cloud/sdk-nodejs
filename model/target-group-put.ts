@@ -24,6 +24,13 @@ import { Type } from './type';
 export interface TargetGroupPut {
 
     /**
+     * The URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof TargetGroupPut
+     */
+    href?: string;
+
+    /**
      * The resource\'s unique identifier.
      * @type {string}
      * @memberof TargetGroupPut
@@ -31,25 +38,18 @@ export interface TargetGroupPut {
     id?: string;
 
     /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof TargetGroupPut
-     */
-    type?: Type;
-
-    /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof TargetGroupPut
-     */
-    href?: string;
-
-    /**
      * 
      * @type {TargetGroupProperties}
      * @memberof TargetGroupPut
      */
     properties: TargetGroupProperties;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof TargetGroupPut
+     */
+    type?: Type;
 }
 
 

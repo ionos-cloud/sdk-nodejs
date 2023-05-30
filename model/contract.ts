@@ -24,18 +24,18 @@ import { Type } from './type';
 export interface Contract {
 
     /**
-     * The type of the resource.
-     * @type {Type}
-     * @memberof Contract
-     */
-    type?: Type;
-
-    /**
      * 
      * @type {ContractProperties}
      * @memberof Contract
      */
     properties: ContractProperties;
+
+    /**
+     * The type of the resource.
+     * @type {Type}
+     * @memberof Contract
+     */
+    type?: Type;
 }
 
 

@@ -25,18 +25,11 @@ import { Type } from './type';
 export interface Nics {
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
+     * 
+     * @type {PaginationLinks}
      * @memberof Nics
      */
-    id?: string;
-
-    /**
-     * The type of object that has been created.
-     * @type {Type}
-     * @memberof Nics
-     */
-    type?: Type;
+    _links?: PaginationLinks;
 
     /**
      * URL to the object representation (absolute path).
@@ -46,18 +39,18 @@ export interface Nics {
     href?: string;
 
     /**
+     * The resource\'s unique identifier.
+     * @type {string}
+     * @memberof Nics
+     */
+    id?: string;
+
+    /**
      * Array of items in the collection.
      * @type {Array<Nic>}
      * @memberof Nics
      */
     items?: Array<Nic>;
-
-    /**
-     * The offset (if specified in the request).
-     * @type {number}
-     * @memberof Nics
-     */
-    offset?: number;
 
     /**
      * The limit (if specified in the request).
@@ -67,11 +60,18 @@ export interface Nics {
     limit?: number;
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The offset (if specified in the request).
+     * @type {number}
      * @memberof Nics
      */
-    _links?: PaginationLinks;
+    offset?: number;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof Nics
+     */
+    type?: Type;
 }
 
 

@@ -22,32 +22,11 @@
 export interface ApplicationLoadBalancerProperties {
 
     /**
-     * The name of the Application Load Balancer.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerProperties
-     */
-    name: string;
-
-    /**
-     * ID of the listening (inbound) LAN.
-     * @type {number}
-     * @memberof ApplicationLoadBalancerProperties
-     */
-    listenerLan: number;
-
-    /**
-     * Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan are customer-reserved public IPs for the public Load Balancers, and private IPs for the private Load Balancers.
+     * Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the \'listenerLan\' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.
      * @type {Array<string>}
      * @memberof ApplicationLoadBalancerProperties
      */
     ips?: Array<string>;
-
-    /**
-     * ID of the balanced private target LAN (outbound).
-     * @type {number}
-     * @memberof ApplicationLoadBalancerProperties
-     */
-    targetLan: number;
 
     /**
      * Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
@@ -55,6 +34,27 @@ export interface ApplicationLoadBalancerProperties {
      * @memberof ApplicationLoadBalancerProperties
      */
     lbPrivateIps?: Array<string>;
+
+    /**
+     * The ID of the listening (inbound) LAN.
+     * @type {number}
+     * @memberof ApplicationLoadBalancerProperties
+     */
+    listenerLan: number;
+
+    /**
+     * The Application Load Balancer name.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerProperties
+     */
+    name: string;
+
+    /**
+     * The ID of the balanced private target LAN (outbound).
+     * @type {number}
+     * @memberof ApplicationLoadBalancerProperties
+     */
+    targetLan: number;
 }
 
 

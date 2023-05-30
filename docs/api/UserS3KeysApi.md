@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**umUsersS3keysFindByKeyId**](UserS3KeysApi.md#umuserss3keysfindbykeyid) | **GET** /um/users/{userId}/s3keys/{keyId} | Retrieve user S3 keys by key ID |
 | [**umUsersS3keysGet**](UserS3KeysApi.md#umuserss3keysget) | **GET** /um/users/{userId}/s3keys | List user S3 keys |
 | [**umUsersS3keysPost**](UserS3KeysApi.md#umuserss3keyspost) | **POST** /um/users/{userId}/s3keys | Create user S3 keys |
-| [**umUsersS3keysPut**](UserS3KeysApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify S3 keys by key ID |
+| [**umUsersS3keysPut**](UserS3KeysApi.md#umuserss3keysput) | **PUT** /um/users/{userId}/s3keys/{keyId} | Modify a S3 Key by Key ID |
 | [**umUsersS3ssourlGet**](UserS3KeysApi.md#umuserss3ssourlget) | **GET** /um/users/{userId}/s3ssourl | Retrieve S3 single sign-on URLs |
 
 
@@ -245,9 +245,9 @@ Basic Authentication, Token Authentication
 
 > <S3Key> umUsersS3keysPut(userId, keyId, s3Key, opts)
 
-Modify S3 keys by key ID
+Modify a S3 Key by Key ID
 
-Enable or disable the specified user S3 key.
+Enables or disables the specified user S3 key.
 
 ### Examples
 
@@ -260,7 +260,7 @@ const config = new ionoscloud.Configuration({
     apiKey: 'YOUR_API_KEY'
 });
 const api_instance = new ionoscloud.UserS3KeysApi(config);
-// Modify S3 keys by key ID
+// Modify a S3 Key by Key ID
 api_instance
   .umUsersS3keysPut({
     userId: userId_example,

@@ -439,8 +439,8 @@ export const NetworkInterfacesApiAxiosParamCreator = function (configuration?: C
             };
         },
         /**
-         * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
-         * @summary Create NICs
+         * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+         * @summary Create a NIC
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Nic} nic The NIC to create.
@@ -721,8 +721,8 @@ export const NetworkInterfacesApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
-         * @summary Create NICs
+         * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+         * @summary Create a NIC
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Nic} nic The NIC to create.
@@ -827,8 +827,8 @@ export const NetworkInterfacesApiFactory = function (configuration?: Configurati
             return NetworkInterfacesApiFp(configuration).datacentersServersNicsPatch(datacenterId, serverId, nicId, nic, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
-         * @summary Create NICs
+         * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+         * @summary Create a NIC
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {Nic} nic The NIC to create.
@@ -1249,8 +1249,8 @@ export class NetworkInterfacesApi extends BaseAPI {
     }
 
     /**
-     * Add a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
-     * @summary Create NICs
+     * Adds a NIC to the specified server. The combined total of NICs and attached volumes cannot exceed 24 per server.
+     * @summary Create a NIC
      * @param {NetworkInterfacesApiDatacentersServersNicsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
