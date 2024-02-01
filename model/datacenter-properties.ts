@@ -44,6 +44,13 @@ export interface DatacenterProperties {
     features?: Array<string>;
 
     /**
+     * This value is either \'null\' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.
+     * @type {string}
+     * @memberof DatacenterProperties
+     */
+    ipv6CidrBlock?: string | null;
+
+    /**
      * The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests).
      * @type {string}
      * @memberof DatacenterProperties

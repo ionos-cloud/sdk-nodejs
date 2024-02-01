@@ -49,6 +49,30 @@ export interface NetworkLoadBalancerForwardingRuleTarget {
      * @memberof NetworkLoadBalancerForwardingRuleTarget
      */
     weight: number;
+
+    /**
+     * ProxyProtocol is used to set the proxy protocol version.
+     * @type {string}
+     * @memberof NetworkLoadBalancerForwardingRuleTarget
+     */
+    proxyProtocol?: NetworkLoadBalancerForwardingRuleTargetProxyProtocolEnum;
 }
+
+
+
+
+
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum NetworkLoadBalancerForwardingRuleTargetProxyProtocolEnum {
+    None = 'none',
+    V1 = 'v1',
+    V2 = 'v2',
+    V2ssl = 'v2ssl'
+}
+
 
 

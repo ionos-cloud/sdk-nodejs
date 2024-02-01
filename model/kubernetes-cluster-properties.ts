@@ -45,6 +45,13 @@ export interface KubernetesClusterProperties {
     k8sVersion?: string;
 
     /**
+     * The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.
+     * @type {string}
+     * @memberof KubernetesClusterProperties
+     */
+    location?: string;
+
+    /**
      * 
      * @type {KubernetesMaintenanceWindow}
      * @memberof KubernetesClusterProperties
@@ -57,6 +64,27 @@ export interface KubernetesClusterProperties {
      * @memberof KubernetesClusterProperties
      */
     name: string;
+
+    /**
+     * The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster\'s location. This attribute is mandatory if the cluster is private.
+     * @type {string}
+     * @memberof KubernetesClusterProperties
+     */
+    natGatewayIp?: string;
+
+    /**
+     * The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length.
+     * @type {string}
+     * @memberof KubernetesClusterProperties
+     */
+    nodeSubnet?: string;
+
+    /**
+     * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
+     * @type {boolean}
+     * @memberof KubernetesClusterProperties
+     */
+    _public?: boolean;
 
     /**
      * List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs

@@ -55,6 +55,31 @@ export interface TargetGroupTarget {
      * @memberof TargetGroupTarget
      */
     weight: number;
+
+    /**
+     * ProxyProtocol is used to set the proxy protocol version.
+     * @type {string}
+     * @memberof TargetGroupTarget
+     */
+    proxyProtocol?: TargetGroupTargetProxyProtocolEnum;
 }
+
+
+
+
+
+
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum TargetGroupTargetProxyProtocolEnum {
+    None = 'none',
+    V1 = 'v1',
+    V2 = 'v2',
+    V2ssl = 'v2ssl'
+}
+
 
 
