@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -24,18 +24,25 @@ import { NoStateMetaData } from './no-state-meta-data';
 export interface LabelResource {
 
     /**
-     * URL to the object representation (absolute path).
-     * @type {string}
-     * @memberof LabelResource
-     */
-    href?: string;
-
-    /**
      * Label on a resource is identified using label key.
      * @type {string}
      * @memberof LabelResource
      */
     id?: string;
+
+    /**
+     * The type of object that has been created.
+     * @type {string}
+     * @memberof LabelResource
+     */
+    type?: LabelResourceTypeEnum;
+
+    /**
+     * URL to the object representation (absolute path).
+     * @type {string}
+     * @memberof LabelResource
+     */
+    href?: string;
 
     /**
      * 
@@ -50,17 +57,7 @@ export interface LabelResource {
      * @memberof LabelResource
      */
     properties: LabelResourceProperties;
-
-    /**
-     * The type of object that has been created.
-     * @type {string}
-     * @memberof LabelResource
-     */
-    type?: LabelResourceTypeEnum;
 }
-
-
-
 
 
 
@@ -71,6 +68,9 @@ export interface LabelResource {
 export enum LabelResourceTypeEnum {
     Label = 'label'
 }
+
+
+
 
 
 

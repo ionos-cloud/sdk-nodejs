@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,11 +22,25 @@
 export interface NicProperties {
 
     /**
-     * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
-     * @type {number}
+     * The name of the  resource.
+     * @type {string}
      * @memberof NicProperties
      */
-    deviceNumber?: number;
+    name?: string;
+
+    /**
+     * The MAC address of the NIC.
+     * @type {string}
+     * @memberof NicProperties
+     */
+    mac?: string;
+
+    /**
+     * Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.
+     * @type {Array<string>}
+     * @memberof NicProperties
+     */
+    ips?: Array<string> | null;
 
     /**
      * Indicates if the NIC will reserve an IP using DHCP.
@@ -36,11 +50,32 @@ export interface NicProperties {
     dhcp?: boolean;
 
     /**
+     * If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property \'null\' when adding a NIC, when changing the NIC\'s IPv6 CIDR block, when changing the LAN\'s IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property \'null\' while not changing the CIDR block, the IPv6 IP addresses won\'t be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.
+     * @type {Array<string>}
+     * @memberof NicProperties
+     */
+    ipv6Ips?: Array<string> | null;
+
+    /**
+     * If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property \'null\' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.
+     * @type {string}
+     * @memberof NicProperties
+     */
+    ipv6CidrBlock?: string | null;
+
+    /**
      * Indicates if the NIC will receive an IPv6 using DHCP. It can be set to \'true\' or \'false\' only if this NIC is connected to an IPv6 enabled LAN.
      * @type {boolean}
      * @memberof NicProperties
      */
     dhcpv6?: boolean | null;
+
+    /**
+     * The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.
+     * @type {number}
+     * @memberof NicProperties
+     */
+    lan: number;
 
     /**
      * Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports.
@@ -57,46 +92,11 @@ export interface NicProperties {
     firewallType?: NicPropertiesFirewallTypeEnum;
 
     /**
-     * Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically.
-     * @type {Array<string>}
-     * @memberof NicProperties
-     */
-    ips?: Array<string> | null;
-
-    /**
-     * If this NIC is connected to an IPv6 enabled LAN then this property contains the /80 IPv6 CIDR block of the NIC. If you leave this property \'null\' when adding a NIC to an IPv6-enabled LAN, then an IPv6 CIDR block will automatically be assigned to the NIC, but you can also specify an /80 IPv6 CIDR block for the NIC on your own, which must be inside the /64 IPv6 CIDR block of the LAN and unique. This value can only be set, if the LAN already has an IPv6 CIDR block assigned. An IPv6-enabled LAN is limited to a maximum of 65,536 NICs.
-     * @type {string}
-     * @memberof NicProperties
-     */
-    ipv6CidrBlock?: string | null;
-
-    /**
-     * If this NIC is connected to an IPv6 enabled LAN then this property contains the IPv6 IP addresses of the NIC. The maximum number of IPv6 IP addresses per NIC is 50, if you need more, contact support. If you leave this property \'null\' when adding a NIC, when changing the NIC\'s IPv6 CIDR block, when changing the LAN\'s IPv6 CIDR block or when moving the NIC to a different IPv6 enabled LAN, then we will automatically assign the same number of IPv6 addresses which you had before from the NICs new CIDR block. If you leave this property \'null\' while not changing the CIDR block, the IPv6 IP addresses won\'t be changed either. You can also provide your own self choosen IPv6 addresses, which then must be inside the IPv6 CIDR block of this NIC.
-     * @type {Array<string>}
-     * @memberof NicProperties
-     */
-    ipv6Ips?: Array<string> | null;
-
-    /**
-     * The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created.
+     * The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter.
      * @type {number}
      * @memberof NicProperties
      */
-    lan: number;
-
-    /**
-     * The MAC address of the NIC.
-     * @type {string}
-     * @memberof NicProperties
-     */
-    mac?: string;
-
-    /**
-     * The name of the  resource.
-     * @type {string}
-     * @memberof NicProperties
-     */
-    name?: string;
+    deviceNumber?: number;
 
     /**
      * The PCI slot number for the NIC.
@@ -105,6 +105,11 @@ export interface NicProperties {
      */
     pciSlot?: number;
 }
+
+
+
+
+
 
 
 
@@ -120,11 +125,6 @@ export enum NicPropertiesFirewallTypeEnum {
     Egress = 'EGRESS',
     Bidirectional = 'BIDIRECTIONAL'
 }
-
-
-
-
-
 
 
 

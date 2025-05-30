@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,13 +23,6 @@ import { RequestStatus } from './request-status';
 export interface RequestMetadata {
 
     /**
-     * The user who created the resource.
-     * @type {string}
-     * @memberof RequestMetadata
-     */
-    createdBy?: string;
-
-    /**
      * The last time the resource was created.
      * @type {string}
      * @memberof RequestMetadata
@@ -37,7 +30,14 @@ export interface RequestMetadata {
     createdDate?: string;
 
     /**
-     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
+     * The user who created the resource.
+     * @type {string}
+     * @memberof RequestMetadata
+     */
+    createdBy?: string;
+
+    /**
+     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter.
      * @type {string}
      * @memberof RequestMetadata
      */

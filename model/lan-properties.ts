@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,11 +23,25 @@ import { IPFailover } from './ipfailover';
 export interface LanProperties {
 
     /**
+     * The name of the  resource.
+     * @type {string}
+     * @memberof LanProperties
+     */
+    name?: string;
+
+    /**
      * IP failover configurations for lan
      * @type {Array<IPFailover>}
      * @memberof LanProperties
      */
     ipFailover?: Array<IPFailover>;
+
+    /**
+     * For public LANs this property is null, for private LANs it contains the private IPv4 CIDR range. This property is a read only property.
+     * @type {string}
+     * @memberof LanProperties
+     */
+    ipv4CidrBlock?: string;
 
     /**
      * For a GET request, this value is either \'null\' or contains the LAN\'s /64 IPv6 CIDR block if this LAN is IPv6 enabled. For POST/PUT/PATCH requests, \'AUTO\' will result in enabling this LAN for IPv6 and automatically assign a /64 IPv6 CIDR block to this LAN and /80 IPv6 CIDR blocks to the NICs and one /128 IPv6 address to each connected NIC. If you choose the IPv6 CIDR block for the LAN on your own, then you must provide a /64 block, which is inside the IPv6 CIDR block of the virtual datacenter and unique inside all LANs from this virtual datacenter. If you enable IPv6 on a LAN with NICs, those NICs will get a /80 IPv6 CIDR block and one IPv6 address assigned to each automatically, unless you specify them explicitly on the LAN and on the NICs. A virtual data center is limited to a maximum of 256 IPv6-enabled LANs.
@@ -37,21 +51,14 @@ export interface LanProperties {
     ipv6CidrBlock?: string | null;
 
     /**
-     * The name of the  resource.
-     * @type {string}
-     * @memberof LanProperties
-     */
-    name?: string;
-
-    /**
-     * The unique identifier of the private Cross-Connect the LAN is connected to, if any.
+     * The unique identifier of the Cross Connect the LAN is connected to, if any. It needs to be ensured that IP addresses of the NICs of all LANs connected to a given Cross Connect is not duplicated and belongs to the same subnet range.
      * @type {string}
      * @memberof LanProperties
      */
     pcc?: string;
 
     /**
-     * This LAN faces the public Internet.
+     * Indicates if the LAN is connected to the internet or not.
      * @type {boolean}
      * @memberof LanProperties
      */

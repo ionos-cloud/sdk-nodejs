@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -16,6 +16,7 @@
 import { KubernetesAutoScaling } from './kubernetes-auto-scaling';
 import { KubernetesMaintenanceWindow } from './kubernetes-maintenance-window';
 import { KubernetesNodePoolLan } from './kubernetes-node-pool-lan';
+import { KubernetesNodePoolServerType } from './kubernetes-node-pool-server-type';
 
 /**
  * 
@@ -23,48 +24,6 @@ import { KubernetesNodePoolLan } from './kubernetes-node-pool-lan';
  * @interface KubernetesNodePoolPropertiesForPut
  */
 export interface KubernetesNodePoolPropertiesForPut {
-
-    /**
-     * The annotations attached to the node pool.
-     * @type {{ [key: string]: string; }}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    annotations?: { [key: string]: string; };
-
-    /**
-     * 
-     * @type {KubernetesAutoScaling}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    autoScaling?: KubernetesAutoScaling;
-
-    /**
-     * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
-     * @type {string}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    k8sVersion?: string;
-
-    /**
-     * The labels attached to the node pool.
-     * @type {{ [key: string]: string; }}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    labels?: { [key: string]: string; };
-
-    /**
-     * The array of existing private LANs to attach to worker nodes.
-     * @type {Array<KubernetesNodePoolLan>}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    lans?: Array<KubernetesNodePoolLan>;
-
-    /**
-     * 
-     * @type {KubernetesMaintenanceWindow}
-     * @memberof KubernetesNodePoolPropertiesForPut
-     */
-    maintenanceWindow?: KubernetesMaintenanceWindow;
 
     /**
      * A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
@@ -79,6 +38,55 @@ export interface KubernetesNodePoolPropertiesForPut {
      * @memberof KubernetesNodePoolPropertiesForPut
      */
     nodeCount: number;
+
+    /**
+     * 
+     * @type {KubernetesNodePoolServerType}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    serverType?: KubernetesNodePoolServerType;
+
+    /**
+     * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
+     * @type {string}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    k8sVersion?: string;
+
+    /**
+     * 
+     * @type {KubernetesMaintenanceWindow}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    maintenanceWindow?: KubernetesMaintenanceWindow;
+
+    /**
+     * 
+     * @type {KubernetesAutoScaling}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    autoScaling?: KubernetesAutoScaling;
+
+    /**
+     * The array of existing private LANs to attach to worker nodes.
+     * @type {Array<KubernetesNodePoolLan>}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    lans?: Array<KubernetesNodePoolLan>;
+
+    /**
+     * The labels attached to the node pool.
+     * @type {{ [key: string]: string; }}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    labels?: { [key: string]: string; };
+
+    /**
+     * The annotations attached to the node pool.
+     * @type {{ [key: string]: string; }}
+     * @memberof KubernetesNodePoolPropertiesForPut
+     */
+    annotations?: { [key: string]: string; };
 
     /**
      * Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool\'s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt.

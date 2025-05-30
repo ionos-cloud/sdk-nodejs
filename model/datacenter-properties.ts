@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,11 +23,11 @@ import { CpuArchitectureProperties } from './cpu-architecture-properties';
 export interface DatacenterProperties {
 
     /**
-     * Array of features and CPU families available in a location
-     * @type {Array<CpuArchitectureProperties>}
+     * The name of the  resource.
+     * @type {string}
      * @memberof DatacenterProperties
      */
-    cpuArchitecture?: Array<CpuArchitectureProperties>;
+    name?: string;
 
     /**
      * A description for the datacenter, such as staging, production.
@@ -37,20 +37,6 @@ export interface DatacenterProperties {
     description?: string;
 
     /**
-     * List of features supported by the location where this data center is provisioned.
-     * @type {Array<string>}
-     * @memberof DatacenterProperties
-     */
-    features?: Array<string>;
-
-    /**
-     * This value is either \'null\' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.
-     * @type {string}
-     * @memberof DatacenterProperties
-     */
-    ipv6CidrBlock?: string | null;
-
-    /**
      * The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests).
      * @type {string}
      * @memberof DatacenterProperties
@@ -58,11 +44,18 @@ export interface DatacenterProperties {
     location: string;
 
     /**
-     * The name of the  resource.
-     * @type {string}
+     * The version of the data center; incremented with every change.
+     * @type {number}
      * @memberof DatacenterProperties
      */
-    name?: string;
+    version?: number;
+
+    /**
+     * List of features supported by the location where this data center is provisioned.
+     * @type {Array<string>}
+     * @memberof DatacenterProperties
+     */
+    features?: Array<string>;
 
     /**
      * Boolean value representing if the data center requires extra protection, such as two-step verification.
@@ -72,11 +65,25 @@ export interface DatacenterProperties {
     secAuthProtection?: boolean;
 
     /**
-     * The version of the data center; incremented with every change.
-     * @type {number}
+     * Array of features and CPU families available in a location
+     * @type {Array<CpuArchitectureProperties>}
      * @memberof DatacenterProperties
      */
-    version?: number;
+    cpuArchitecture?: Array<CpuArchitectureProperties>;
+
+    /**
+     * This value is either \'null\' or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed.
+     * @type {string}
+     * @memberof DatacenterProperties
+     */
+    ipv6CidrBlock?: string | null;
+
+    /**
+     * Optional property to define the default security group of the datacenter.
+     * @type {string}
+     * @memberof DatacenterProperties
+     */
+    defaultSecurityGroupId?: string;
 }
 
 

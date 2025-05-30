@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,18 +22,18 @@
 export interface KubernetesNodeProperties {
 
     /**
-     * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
-     * @type {string}
-     * @memberof KubernetesNodeProperties
-     */
-    k8sVersion: string;
-
-    /**
      * The Kubernetes node name.
      * @type {string}
      * @memberof KubernetesNodeProperties
      */
     name: string;
+
+    /**
+     * The public IP associated with the node.
+     * @type {string}
+     * @memberof KubernetesNodeProperties
+     */
+    publicIP?: string;
 
     /**
      * The private IP associated with the node.
@@ -43,11 +43,11 @@ export interface KubernetesNodeProperties {
     privateIP?: string;
 
     /**
-     * The public IP associated with the node.
+     * The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions.
      * @type {string}
      * @memberof KubernetesNodeProperties
      */
-    publicIP?: string;
+    k8sVersion: string;
 }
 
 

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -25,11 +25,18 @@ import { Type } from './type';
 export interface ApplicationLoadBalancers {
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * The resource\'s unique identifier.
+     * @type {string}
      * @memberof ApplicationLoadBalancers
      */
-    _links?: PaginationLinks;
+    id?: string;
+
+    /**
+     * The type of object that has been created.
+     * @type {Type}
+     * @memberof ApplicationLoadBalancers
+     */
+    type?: Type;
 
     /**
      * The URL to the object representation (absolute path).
@@ -39,25 +46,11 @@ export interface ApplicationLoadBalancers {
     href?: string;
 
     /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof ApplicationLoadBalancers
-     */
-    id?: string;
-
-    /**
      * Array of items in the collection.
      * @type {Array<ApplicationLoadBalancer>}
      * @memberof ApplicationLoadBalancers
      */
     items?: Array<ApplicationLoadBalancer>;
-
-    /**
-     * The limit (if specified in the request).
-     * @type {number}
-     * @memberof ApplicationLoadBalancers
-     */
-    limit?: number;
 
     /**
      * The offset (if specified in the request).
@@ -67,11 +60,18 @@ export interface ApplicationLoadBalancers {
     offset?: number;
 
     /**
-     * The type of object that has been created.
-     * @type {Type}
+     * The limit (if specified in the request).
+     * @type {number}
      * @memberof ApplicationLoadBalancers
      */
-    type?: Type;
+    limit?: number;
+
+    /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof ApplicationLoadBalancers
+     */
+    _links?: PaginationLinks;
 }
 
 

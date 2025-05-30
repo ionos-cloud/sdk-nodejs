@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,18 +22,11 @@
 export interface ApplicationLoadBalancerProperties {
 
     /**
-     * Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the \'listenerLan\' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.
-     * @type {Array<string>}
+     * The Application Load Balancer name.
+     * @type {string}
      * @memberof ApplicationLoadBalancerProperties
      */
-    ips?: Array<string>;
-
-    /**
-     * Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
-     * @type {Array<string>}
-     * @memberof ApplicationLoadBalancerProperties
-     */
-    lbPrivateIps?: Array<string>;
+    name: string;
 
     /**
      * The ID of the listening (inbound) LAN.
@@ -43,11 +36,11 @@ export interface ApplicationLoadBalancerProperties {
     listenerLan: number;
 
     /**
-     * The Application Load Balancer name.
-     * @type {string}
+     * Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the \'listenerLan\' are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers.
+     * @type {Array<string>}
      * @memberof ApplicationLoadBalancerProperties
      */
-    name: string;
+    ips?: Array<string>;
 
     /**
      * The ID of the balanced private target LAN (outbound).
@@ -55,6 +48,27 @@ export interface ApplicationLoadBalancerProperties {
      * @memberof ApplicationLoadBalancerProperties
      */
     targetLan: number;
+
+    /**
+     * Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet.
+     * @type {Array<string>}
+     * @memberof ApplicationLoadBalancerProperties
+     */
+    lbPrivateIps?: Array<string>;
+
+    /**
+     * Turn logging on and off for this product. Default value is \'false\'.
+     * @type {boolean}
+     * @memberof ApplicationLoadBalancerProperties
+     */
+    centralLogging?: boolean;
+
+    /**
+     * Specifies the format of the logs.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerProperties
+     */
+    loggingFormat?: string;
 }
 
 

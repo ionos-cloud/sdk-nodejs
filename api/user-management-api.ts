@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -38,6 +38,8 @@ import { Resources } from '../model';
 import { ResourcesUsers } from '../model';
 // @ts-ignore
 import { User } from '../model';
+// @ts-ignore
+import { UserGroupPost } from '../model';
 // @ts-ignore
 import { UserPost } from '../model';
 // @ts-ignore
@@ -78,13 +80,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -160,13 +162,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -239,13 +241,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -334,13 +336,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -427,13 +429,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -518,13 +520,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -619,13 +621,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -706,13 +708,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -790,13 +792,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -895,13 +897,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -993,13 +995,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1087,13 +1089,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1171,13 +1173,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1243,7 +1245,7 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * Adds an existing user to the specified group. 
          * @summary Add a Group Member
          * @param {string} groupId The unique ID of the group.
-         * @param {User} user The user to add.
+         * @param {UserGroupPost} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -1251,7 +1253,7 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsUsersPost: async (groupId: string, user: User, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+        umGroupsUsersPost: async (groupId: string, user: UserGroupPost, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (groupId === null || groupId === undefined) {
                 throw new RequiredError('groupId','Required parameter groupId was null or undefined when calling umGroupsUsersPost.');
             }
@@ -1271,13 +1273,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1360,13 +1362,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1447,13 +1449,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1526,13 +1528,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1622,13 +1624,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1704,13 +1706,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1785,13 +1787,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1897,13 +1899,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1995,13 +1997,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2090,13 +2092,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2183,13 +2185,13 @@ export const UserManagementApiAxiosParamCreator = function (configuration?: Conf
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2467,7 +2469,7 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * Adds an existing user to the specified group. 
          * @summary Add a Group Member
          * @param {string} groupId The unique ID of the group.
-         * @param {User} user The user to add.
+         * @param {UserGroupPost} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -2475,7 +2477,7 @@ export const UserManagementApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async umGroupsUsersPost(groupId: string, user: User, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
+        async umGroupsUsersPost(groupId: string, user: UserGroupPost, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<User>> {
             const axiosArgs = await UserManagementApiAxiosParamCreator(configuration).umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber, options);
             return runRequest(axiosArgs, configuration);
         },
@@ -2828,14 +2830,14 @@ export const UserManagementApiFactory = function (configuration?: Configuration,
          * Adds an existing user to the specified group. 
          * @summary Add a Group Member
          * @param {string} groupId The unique ID of the group.
-         * @param {User} user The user to add.
+         * @param {UserGroupPost} user The user to add.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        umGroupsUsersPost(groupId: string, user: User, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<User> {
+        umGroupsUsersPost(groupId: string, user: UserGroupPost, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<User> {
             return UserManagementApiFp(configuration).umGroupsUsersPost(groupId, user, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
@@ -3564,10 +3566,10 @@ export interface UserManagementApiUmGroupsUsersPostRequest {
 
     /**
      * The user to add.
-     * @type {User}
+     * @type {UserGroupPost}
      * @memberof UserManagementApiUmGroupsUsersPost
      */
-    readonly user: User
+    readonly user: UserGroupPost
 
     /**
      * Controls whether the response is pretty-printed (with indentations and new lines).

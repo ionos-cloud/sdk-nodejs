@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,18 +22,18 @@
 export interface ApplicationLoadBalancerHttpRuleCondition {
 
     /**
+     * The HTTP rule condition type.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerHttpRuleCondition
+     */
+    type: ApplicationLoadBalancerHttpRuleConditionTypeEnum;
+
+    /**
      * The matching rule for the HTTP rule condition attribute; this parameter is mandatory for \'HEADER\', \'PATH\', \'QUERY\', \'METHOD\', \'HOST\', and \'COOKIE\' types. It must be \'null\' if the type is \'SOURCE_IP\'.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRuleCondition
      */
     condition: ApplicationLoadBalancerHttpRuleConditionConditionEnum;
-
-    /**
-     * The key can only be set when the HTTP rule condition type is \'COOKIES\', \'HEADER\', or \'QUERY\'. For the type \'PATH\', \'METHOD\', \'HOST\', or \'SOURCE_IP\' the value must be \'null\'.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerHttpRuleCondition
-     */
-    key?: string;
 
     /**
      * Specifies whether the condition should be negated; the default value is \'FALSE\'.
@@ -43,11 +43,11 @@ export interface ApplicationLoadBalancerHttpRuleCondition {
     negate?: boolean;
 
     /**
-     * The HTTP rule condition type.
+     * The key can only be set when the HTTP rule condition type is \'COOKIES\', \'HEADER\', or \'QUERY\'. For the type \'PATH\', \'METHOD\', \'HOST\', or \'SOURCE_IP\' the value must be \'null\'.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRuleCondition
      */
-    type: ApplicationLoadBalancerHttpRuleConditionTypeEnum;
+    key?: string;
 
     /**
      * This parameter is mandatory for the conditions \'CONTAINS\', \'EQUALS\', \'MATCHES\', \'STARTS_WITH\', \'ENDS_WITH\', or if the type is \'SOURCE_IP\'. Specify a valid CIDR. If the condition is \'EXISTS\', the value must be \'null\'.
@@ -56,21 +56,6 @@ export interface ApplicationLoadBalancerHttpRuleCondition {
      */
     value?: string;
 }
-
-
-/**
-    * @export
-    * @enum {string}
-    */
-export enum ApplicationLoadBalancerHttpRuleConditionConditionEnum {
-    Exists = 'EXISTS',
-    Contains = 'CONTAINS',
-    Equals = 'EQUALS',
-    Matches = 'MATCHES',
-    StartsWith = 'STARTS_WITH',
-    EndsWith = 'ENDS_WITH'
-}
-
 
 
 /**
@@ -86,6 +71,21 @@ export enum ApplicationLoadBalancerHttpRuleConditionTypeEnum {
     Cookie = 'COOKIE',
     SourceIp = 'SOURCE_IP'
 }
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum ApplicationLoadBalancerHttpRuleConditionConditionEnum {
+    Exists = 'EXISTS',
+    Contains = 'CONTAINS',
+    Equals = 'EQUALS',
+    Matches = 'MATCHES',
+    StartsWith = 'STARTS_WITH',
+    EndsWith = 'ENDS_WITH'
+}
+
+
 
 
 

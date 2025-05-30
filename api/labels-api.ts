@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -65,13 +65,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -152,13 +152,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -236,13 +236,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -336,13 +336,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -434,13 +434,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -533,13 +533,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -625,13 +625,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -714,13 +714,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -819,13 +819,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -922,13 +922,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1021,13 +1021,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1113,13 +1113,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1202,13 +1202,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1307,13 +1307,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1410,13 +1410,476 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("Authorization")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
+            }
+
+            if ((pretty === undefined) && (configuration !== undefined)) {
+                pretty = configuration.getDefaultParamValue('pretty');
+            }
+            if (pretty !== undefined) {
+                localVarQueryParameter['pretty'] = pretty;
+            }
+
+            if ((depth === undefined) && (configuration !== undefined)) {
+                depth = configuration.getDefaultParamValue('depth');
+            }
+            if (depth !== undefined) {
+                localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((xContractNumber === undefined) && (configuration !== undefined)) {
+                xContractNumber = configuration.getDefaultParamValue('xContractNumber');
+            }
+            if (xContractNumber !== undefined && xContractNumber !== null) {
+                localVarHeaderParameter['X-Contract-Number'] = String(JSON.stringify(xContractNumber));
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            const queryParameters = new URLSearchParams(localVarUrlObj.search);
+            for (const key in localVarQueryParameter) {
+                queryParameters.set(key, localVarQueryParameter[key]);
+            }
+            for (const key in options.query) {
+                queryParameters.set(key, options.query[key]);
+            }
+            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const nonString = typeof label !== 'string';
+            const needsSerialization = nonString && configuration && configuration.isJsonMime
+                ? configuration.isJsonMime(localVarRequestOptions.headers['Content-Type'])
+                : nonString;
+            localVarRequestOptions.data =  needsSerialization
+                ? JSON.stringify(label !== undefined ? label : {})
+                : (label || "");
+
+            return {
+                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Delete the specified image label.
+         * @summary Delete image label
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsDelete: async (imageId: string, key: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+            if (imageId === null || imageId === undefined) {
+                throw new RequiredError('imageId','Required parameter imageId was null or undefined when calling imagesLabelsDelete.');
+            }
+            if (key === null || key === undefined) {
+                throw new RequiredError('key','Required parameter key was null or undefined when calling imagesLabelsDelete.');
+            }
+            const localVarPath = `/images/{imageId}/labels/{key}`
+                .replace(`{${"imageId"}}`, encodeURIComponent(String(imageId)))
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'DELETE', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuthentication required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            // authentication TokenAuthentication required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("Authorization")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
+            }
+
+            if ((pretty === undefined) && (configuration !== undefined)) {
+                pretty = configuration.getDefaultParamValue('pretty');
+            }
+            if (pretty !== undefined) {
+                localVarQueryParameter['pretty'] = pretty;
+            }
+
+            if ((depth === undefined) && (configuration !== undefined)) {
+                depth = configuration.getDefaultParamValue('depth');
+            }
+            if (depth !== undefined) {
+                localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((xContractNumber === undefined) && (configuration !== undefined)) {
+                xContractNumber = configuration.getDefaultParamValue('xContractNumber');
+            }
+            if (xContractNumber !== undefined && xContractNumber !== null) {
+                localVarHeaderParameter['X-Contract-Number'] = String(JSON.stringify(xContractNumber));
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            const queryParameters = new URLSearchParams(localVarUrlObj.search);
+            for (const key in localVarQueryParameter) {
+                queryParameters.set(key, localVarQueryParameter[key]);
+            }
+            for (const key in options.query) {
+                queryParameters.set(key, options.query[key]);
+            }
+            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Retrieve the properties of the specified image label.
+         * @summary Retrieve image labels
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsFindByKey: async (imageId: string, key: string, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+            if (imageId === null || imageId === undefined) {
+                throw new RequiredError('imageId','Required parameter imageId was null or undefined when calling imagesLabelsFindByKey.');
+            }
+            if (key === null || key === undefined) {
+                throw new RequiredError('key','Required parameter key was null or undefined when calling imagesLabelsFindByKey.');
+            }
+            const localVarPath = `/images/{imageId}/labels/{key}`
+                .replace(`{${"imageId"}}`, encodeURIComponent(String(imageId)))
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuthentication required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            // authentication TokenAuthentication required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("Authorization")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
+            }
+
+            if ((pretty === undefined) && (configuration !== undefined)) {
+                pretty = configuration.getDefaultParamValue('pretty');
+            }
+            if (pretty !== undefined) {
+                localVarQueryParameter['pretty'] = pretty;
+            }
+
+            if ((depth === undefined) && (configuration !== undefined)) {
+                depth = configuration.getDefaultParamValue('depth');
+            }
+            if (depth !== undefined) {
+                localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((xContractNumber === undefined) && (configuration !== undefined)) {
+                xContractNumber = configuration.getDefaultParamValue('xContractNumber');
+            }
+            if (xContractNumber !== undefined && xContractNumber !== null) {
+                localVarHeaderParameter['X-Contract-Number'] = String(JSON.stringify(xContractNumber));
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            const queryParameters = new URLSearchParams(localVarUrlObj.search);
+            for (const key in localVarQueryParameter) {
+                queryParameters.set(key, localVarQueryParameter[key]);
+            }
+            for (const key in options.query) {
+                queryParameters.set(key, options.query[key]);
+            }
+            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * List all the the labels for the specified image.
+         * @summary List image labels
+         * @param {string} imageId The unique ID of the image.
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsGet: async (imageId: string, pretty?: boolean, depth?: number, xContractNumber?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
+            if (imageId === null || imageId === undefined) {
+                throw new RequiredError('imageId','Required parameter imageId was null or undefined when calling imagesLabelsGet.');
+            }
+            const localVarPath = `/images/{imageId}/labels`
+                .replace(`{${"imageId"}}`, encodeURIComponent(String(imageId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'GET', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuthentication required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            // authentication TokenAuthentication required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("Authorization")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
+            }
+
+            if ((pretty === undefined) && (configuration !== undefined)) {
+                pretty = configuration.getDefaultParamValue('pretty');
+            }
+            if (pretty !== undefined) {
+                localVarQueryParameter['pretty'] = pretty;
+            }
+
+            if ((depth === undefined) && (configuration !== undefined)) {
+                depth = configuration.getDefaultParamValue('depth');
+            }
+            if (depth !== undefined) {
+                localVarQueryParameter['depth'] = depth;
+            }
+
+        if (orderBy !== undefined) {
+            localVarQueryParameter['orderBy'] = orderBy;
+        }
+        if (maxResults !== undefined) {
+            localVarQueryParameter['maxResults'] = maxResults;
+        }
+        if (filters !== undefined) {
+            if(typeof(filters) === "object"){
+                filters = new Map(Object.entries(filters))
+            }
+            filters.forEach((value: string, key: string) => {
+                localVarQueryParameter["filter." + key] = value;
+            });
+        }
+            if ((xContractNumber === undefined) && (configuration !== undefined)) {
+                xContractNumber = configuration.getDefaultParamValue('xContractNumber');
+            }
+            if (xContractNumber !== undefined && xContractNumber !== null) {
+                localVarHeaderParameter['X-Contract-Number'] = String(JSON.stringify(xContractNumber));
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            const queryParameters = new URLSearchParams(localVarUrlObj.search);
+            for (const key in localVarQueryParameter) {
+                queryParameters.set(key, localVarQueryParameter[key]);
+            }
+            for (const key in options.query) {
+                queryParameters.set(key, options.query[key]);
+            }
+            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+
+            return {
+                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Adds a new label to the specified image.
+         * @summary Create an Image Label
+         * @param {string} imageId The unique ID of the image
+         * @param {LabelResource} label The label to create.
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsPost: async (imageId: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+            if (imageId === null || imageId === undefined) {
+                throw new RequiredError('imageId','Required parameter imageId was null or undefined when calling imagesLabelsPost.');
+            }
+            if (label === null || label === undefined) {
+                throw new RequiredError('label','Required parameter label was null or undefined when calling imagesLabelsPost.');
+            }
+            const localVarPath = `/images/{imageId}/labels`
+                .replace(`{${"imageId"}}`, encodeURIComponent(String(imageId)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuthentication required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            // authentication TokenAuthentication required
+            if (configuration && configuration.apiKey) {
+                const localVarApiKeyValue = typeof configuration.apiKey === 'function'
+                    ? await configuration.apiKey("Authorization")
+                    : await configuration.apiKey;
+                localVarHeaderParameter["Authorization"] = "Bearer " + localVarApiKeyValue;
+            }
+
+            if ((pretty === undefined) && (configuration !== undefined)) {
+                pretty = configuration.getDefaultParamValue('pretty');
+            }
+            if (pretty !== undefined) {
+                localVarQueryParameter['pretty'] = pretty;
+            }
+
+            if ((depth === undefined) && (configuration !== undefined)) {
+                depth = configuration.getDefaultParamValue('depth');
+            }
+            if (depth !== undefined) {
+                localVarQueryParameter['depth'] = depth;
+            }
+
+            if ((xContractNumber === undefined) && (configuration !== undefined)) {
+                xContractNumber = configuration.getDefaultParamValue('xContractNumber');
+            }
+            if (xContractNumber !== undefined && xContractNumber !== null) {
+                localVarHeaderParameter['X-Contract-Number'] = String(JSON.stringify(xContractNumber));
+            }
+
+
+    
+            localVarHeaderParameter['Content-Type'] = 'application/json';
+            const queryParameters = new URLSearchParams(localVarUrlObj.search);
+            for (const key in localVarQueryParameter) {
+                queryParameters.set(key, localVarQueryParameter[key]);
+            }
+            for (const key in options.query) {
+                queryParameters.set(key, options.query[key]);
+            }
+            localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
+            let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
+            localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
+            const nonString = typeof label !== 'string';
+            const needsSerialization = nonString && configuration && configuration.isJsonMime
+                ? configuration.isJsonMime(localVarRequestOptions.headers['Content-Type'])
+                : nonString;
+            localVarRequestOptions.data =  needsSerialization
+                ? JSON.stringify(label !== undefined ? label : {})
+                : (label || "");
+
+            return {
+                url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
+                options: localVarRequestOptions,
+            };
+        },
+        /**
+         * Modifies the specified data center label.
+         * @summary Modify an Image Label by Key
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {LabelResource} label The modified label
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsPut: async (imageId: string, key: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+            if (imageId === null || imageId === undefined) {
+                throw new RequiredError('imageId','Required parameter imageId was null or undefined when calling imagesLabelsPut.');
+            }
+            if (key === null || key === undefined) {
+                throw new RequiredError('key','Required parameter key was null or undefined when calling imagesLabelsPut.');
+            }
+            if (label === null || label === undefined) {
+                throw new RequiredError('label','Required parameter label was null or undefined when calling imagesLabelsPut.');
+            }
+            const localVarPath = `/images/{imageId}/labels/{key}`
+                .replace(`{${"imageId"}}`, encodeURIComponent(String(imageId)))
+                .replace(`{${"key"}}`, encodeURIComponent(String(key)));
+            // use dummy base URL string because the URL constructor only accepts absolute URLs.
+            const localVarUrlObj = new URL(localVarPath, 'https://example.com');
+            let baseOptions;
+            if (configuration) {
+                baseOptions = configuration.baseOptions;
+            }
+
+            const localVarRequestOptions = { method: 'PUT', ...baseOptions, ...options};
+            const localVarHeaderParameter = {} as any;
+            const localVarQueryParameter = {} as any;
+
+            // authentication BasicAuthentication required
+            // http basic authentication required
+            if (configuration && (configuration.username || configuration.password)) {
+                localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
+            }
+
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1504,13 +1967,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1591,13 +2054,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1675,13 +2138,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1775,13 +2238,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1873,13 +2336,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1962,13 +2425,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2041,13 +2504,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2142,13 +2605,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2229,13 +2692,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2313,13 +2776,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2413,13 +2876,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2511,13 +2974,13 @@ export const LabelsApiAxiosParamCreator = function (configuration?: Configuratio
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2835,6 +3298,88 @@ export const LabelsApiFp = function(configuration?: Configuration) {
          */
         async datacentersVolumesLabelsPut(datacenterId: string, volumeId: string, key: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LabelResource>> {
             const axiosArgs = await LabelsApiAxiosParamCreator(configuration).datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, pretty, depth, xContractNumber, options);
+            return runRequest(axiosArgs, configuration);
+        },
+        /**
+         * Delete the specified image label.
+         * @summary Delete image label
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async imagesLabelsDelete(imageId: string, key: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const axiosArgs = await LabelsApiAxiosParamCreator(configuration).imagesLabelsDelete(imageId, key, pretty, depth, xContractNumber, options);
+            return runRequest(axiosArgs, configuration);
+        },
+        /**
+         * Retrieve the properties of the specified image label.
+         * @summary Retrieve image labels
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async imagesLabelsFindByKey(imageId: string, key: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LabelResource>> {
+            const axiosArgs = await LabelsApiAxiosParamCreator(configuration).imagesLabelsFindByKey(imageId, key, pretty, depth, xContractNumber, options);
+            return runRequest(axiosArgs, configuration);
+        },
+        /**
+         * List all the the labels for the specified image.
+         * @summary List image labels
+         * @param {string} imageId The unique ID of the image.
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {string} [orderBy] - Sorts the results alphanumerically in ascending order based on the specified property.
+         * @param {number} [maxResults] - Limits the number of results returned.
+         * @param {Map<string,string>} [filters] - Filters query parameters limit results to those containing a matching value for a specific property.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async imagesLabelsGet(imageId: string, pretty?: boolean, depth?: number, xContractNumber?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LabelResources>> {
+            const axiosArgs = await LabelsApiAxiosParamCreator(configuration).imagesLabelsGet(imageId, pretty, depth, xContractNumber, orderBy, maxResults, filters, options);
+            return runRequest(axiosArgs, configuration);
+        },
+        /**
+         * Adds a new label to the specified image.
+         * @summary Create an Image Label
+         * @param {string} imageId The unique ID of the image
+         * @param {LabelResource} label The label to create.
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async imagesLabelsPost(imageId: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LabelResource>> {
+            const axiosArgs = await LabelsApiAxiosParamCreator(configuration).imagesLabelsPost(imageId, label, pretty, depth, xContractNumber, options);
+            return runRequest(axiosArgs, configuration);
+        },
+        /**
+         * Modifies the specified data center label.
+         * @summary Modify an Image Label by Key
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {LabelResource} label The modified label
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        async imagesLabelsPut(imageId: string, key: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<LabelResource>> {
+            const axiosArgs = await LabelsApiAxiosParamCreator(configuration).imagesLabelsPut(imageId, key, label, pretty, depth, xContractNumber, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -3260,6 +3805,76 @@ export const LabelsApiFactory = function (configuration?: Configuration, basePat
          */
         datacentersVolumesLabelsPut(datacenterId: string, volumeId: string, key: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<LabelResource> {
             return LabelsApiFp(configuration).datacentersVolumesLabelsPut(datacenterId, volumeId, key, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Delete the specified image label.
+         * @summary Delete image label
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsDelete(imageId: string, key: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<void> {
+            return LabelsApiFp(configuration).imagesLabelsDelete(imageId, key, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Retrieve the properties of the specified image label.
+         * @summary Retrieve image labels
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsFindByKey(imageId: string, key: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<LabelResource> {
+            return LabelsApiFp(configuration).imagesLabelsFindByKey(imageId, key, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * List all the the labels for the specified image.
+         * @summary List image labels
+         * @param {string} imageId The unique ID of the image.
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsGet(imageId: string, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<LabelResources> {
+            return LabelsApiFp(configuration).imagesLabelsGet(imageId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Adds a new label to the specified image.
+         * @summary Create an Image Label
+         * @param {string} imageId The unique ID of the image
+         * @param {LabelResource} label The label to create.
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsPost(imageId: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<LabelResource> {
+            return LabelsApiFp(configuration).imagesLabelsPost(imageId, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
+        },
+        /**
+         * Modifies the specified data center label.
+         * @summary Modify an Image Label by Key
+         * @param {string} imageId The unique ID of the image.
+         * @param {string} key The label key
+         * @param {LabelResource} label The modified label
+         * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
+         * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+         * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+         * @param {*} [options] Override http request option.
+         * @throws {RequiredError}
+         */
+        imagesLabelsPut(imageId: string, key: string, label: LabelResource, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<LabelResource> {
+            return LabelsApiFp(configuration).imagesLabelsPut(imageId, key, label, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete the specified IP block label.
@@ -4184,6 +4799,234 @@ export interface LabelsApiDatacentersVolumesLabelsPutRequest {
 }
 
 /**
+ * Request parameters for imagesLabelsDelete operation in LabelsApi.
+ * @export
+ * @interface LabelsApiImagesLabelsDeleteRequest
+ */
+export interface LabelsApiImagesLabelsDeleteRequest {
+    /**
+     * The unique ID of the image.
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsDelete
+     */
+    readonly imageId: string
+
+    /**
+     * The label key
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsDelete
+     */
+    readonly key: string
+
+    /**
+     * Controls whether the response is pretty-printed (with indentations and new lines).
+     * @type {boolean}
+     * @memberof LabelsApiImagesLabelsDelete
+     */
+    readonly pretty?: boolean
+
+    /**
+     * Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsDelete
+     */
+    readonly depth?: number
+
+    /**
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsDelete
+     */
+    readonly xContractNumber?: number
+}
+
+/**
+ * Request parameters for imagesLabelsFindByKey operation in LabelsApi.
+ * @export
+ * @interface LabelsApiImagesLabelsFindByKeyRequest
+ */
+export interface LabelsApiImagesLabelsFindByKeyRequest {
+    /**
+     * The unique ID of the image.
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsFindByKey
+     */
+    readonly imageId: string
+
+    /**
+     * The label key
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsFindByKey
+     */
+    readonly key: string
+
+    /**
+     * Controls whether the response is pretty-printed (with indentations and new lines).
+     * @type {boolean}
+     * @memberof LabelsApiImagesLabelsFindByKey
+     */
+    readonly pretty?: boolean
+
+    /**
+     * Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsFindByKey
+     */
+    readonly depth?: number
+
+    /**
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsFindByKey
+     */
+    readonly xContractNumber?: number
+}
+
+/**
+ * Request parameters for imagesLabelsGet operation in LabelsApi.
+ * @export
+ * @interface LabelsApiImagesLabelsGetRequest
+ */
+export interface LabelsApiImagesLabelsGetRequest {
+    /**
+     * The unique ID of the image.
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    readonly imageId: string
+
+    /**
+     * Controls whether the response is pretty-printed (with indentations and new lines).
+     * @type {boolean}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    readonly pretty?: boolean
+
+    /**
+     * Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    readonly depth?: number
+
+    /**
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    readonly xContractNumber?: number
+    /**
+     * sorts the results alphanumerically in ascending order based on the specified property
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    readonly orderBy?: string
+    /**
+     * limits the number of results returned
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    readonly maxResults?: number
+    /**
+     * limits results to those containing a matching value for a specific property
+     * @type {Map<string,string>}
+     * @memberof LabelsApiImagesLabelsGet
+     */
+    filters?: Map<string, string>
+}
+
+/**
+ * Request parameters for imagesLabelsPost operation in LabelsApi.
+ * @export
+ * @interface LabelsApiImagesLabelsPostRequest
+ */
+export interface LabelsApiImagesLabelsPostRequest {
+    /**
+     * The unique ID of the image
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsPost
+     */
+    readonly imageId: string
+
+    /**
+     * The label to create.
+     * @type {LabelResource}
+     * @memberof LabelsApiImagesLabelsPost
+     */
+    readonly label: LabelResource
+
+    /**
+     * Controls whether the response is pretty-printed (with indentations and new lines).
+     * @type {boolean}
+     * @memberof LabelsApiImagesLabelsPost
+     */
+    readonly pretty?: boolean
+
+    /**
+     * Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsPost
+     */
+    readonly depth?: number
+
+    /**
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsPost
+     */
+    readonly xContractNumber?: number
+}
+
+/**
+ * Request parameters for imagesLabelsPut operation in LabelsApi.
+ * @export
+ * @interface LabelsApiImagesLabelsPutRequest
+ */
+export interface LabelsApiImagesLabelsPutRequest {
+    /**
+     * The unique ID of the image.
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsPut
+     */
+    readonly imageId: string
+
+    /**
+     * The label key
+     * @type {string}
+     * @memberof LabelsApiImagesLabelsPut
+     */
+    readonly key: string
+
+    /**
+     * The modified label
+     * @type {LabelResource}
+     * @memberof LabelsApiImagesLabelsPut
+     */
+    readonly label: LabelResource
+
+    /**
+     * Controls whether the response is pretty-printed (with indentations and new lines).
+     * @type {boolean}
+     * @memberof LabelsApiImagesLabelsPut
+     */
+    readonly pretty?: boolean
+
+    /**
+     * Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsPut
+     */
+    readonly depth?: number
+
+    /**
+     * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
+     * @type {number}
+     * @memberof LabelsApiImagesLabelsPut
+     */
+    readonly xContractNumber?: number
+}
+
+/**
  * Request parameters for ipblocksLabelsDelete operation in LabelsApi.
  * @export
  * @interface LabelsApiIpblocksLabelsDeleteRequest
@@ -4905,6 +5748,66 @@ export class LabelsApi extends BaseAPI {
      */
     public datacentersVolumesLabelsPut(requestParameters: LabelsApiDatacentersVolumesLabelsPutRequest, options?: any) {
         return LabelsApiFp(this.configuration).datacentersVolumesLabelsPut(requestParameters.datacenterId, requestParameters.volumeId, requestParameters.key, requestParameters.label, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Delete the specified image label.
+     * @summary Delete image label
+     * @param {LabelsApiImagesLabelsDeleteRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LabelsApi
+     */
+    public imagesLabelsDelete(requestParameters: LabelsApiImagesLabelsDeleteRequest, options?: any) {
+        return LabelsApiFp(this.configuration).imagesLabelsDelete(requestParameters.imageId, requestParameters.key, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Retrieve the properties of the specified image label.
+     * @summary Retrieve image labels
+     * @param {LabelsApiImagesLabelsFindByKeyRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LabelsApi
+     */
+    public imagesLabelsFindByKey(requestParameters: LabelsApiImagesLabelsFindByKeyRequest, options?: any) {
+        return LabelsApiFp(this.configuration).imagesLabelsFindByKey(requestParameters.imageId, requestParameters.key, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * List all the the labels for the specified image.
+     * @summary List image labels
+     * @param {LabelsApiImagesLabelsGetRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LabelsApi
+     */
+    public imagesLabelsGet(requestParameters: LabelsApiImagesLabelsGetRequest, options?: any) {
+        return LabelsApiFp(this.configuration).imagesLabelsGet(requestParameters.imageId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Adds a new label to the specified image.
+     * @summary Create an Image Label
+     * @param {LabelsApiImagesLabelsPostRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LabelsApi
+     */
+    public imagesLabelsPost(requestParameters: LabelsApiImagesLabelsPostRequest, options?: any) {
+        return LabelsApiFp(this.configuration).imagesLabelsPost(requestParameters.imageId, requestParameters.label, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
+    }
+
+    /**
+     * Modifies the specified data center label.
+     * @summary Modify an Image Label by Key
+     * @param {LabelsApiImagesLabelsPutRequest} requestParameters Request parameters.
+     * @param {*} [options] Override http request option.
+     * @throws {RequiredError}
+     * @memberof LabelsApi
+     */
+    public imagesLabelsPut(requestParameters: LabelsApiImagesLabelsPutRequest, options?: any) {
+        return LabelsApiFp(this.configuration).imagesLabelsPut(requestParameters.imageId, requestParameters.key, requestParameters.label, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**

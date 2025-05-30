@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -31,9 +31,9 @@ import { PrivateCrossConnects } from '../model';
 export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Remove the specified private Cross-Connect (only if not connected to any data centers).
-         * @summary Delete private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
+         * Remove the specified Cross Connect. Cross connect can be deleted only if it is not connected to any LANs. For non administrator users a cross connect can be deleted only if you are granted access via the user groups you are member of.
+         * @summary Delete Private Cross-Connects
+         * @param {string} pccId The unique ID of the Cross Connect.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -58,13 +58,13 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -113,9 +113,9 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.
-         * @summary Retrieve private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
+         * Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response body when the Cross Connect is created and in the list of Private Cross-Connects, returned by GET. For contract owner and administrators all Private Cross-Connects in your contract can be retrieved. For non administrator users it only returns the cross connects you are granted access via the user groups you are member of.
+         * @summary Retrieve a Cross Connect
+         * @param {string} pccId The unique ID of the Cross Connect.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -140,13 +140,13 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -195,8 +195,8 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * List all private Cross-Connects for your account.
-         * @summary List private Cross-Connects
+         * List all Private Cross-Connects. For contract owner and administrators it returns all Private Cross-Connects in your contract. For non administrator users it only returns the Private Cross-Connects you are granted access via the user groups you are member of.
+         * @summary List Private Cross-Connects
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -219,13 +219,13 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -288,10 +288,10 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Update the properties of the specified private Cross-Connect.
-         * @summary Partially modify private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
-         * @param {PrivateCrossConnectProperties} pcc The properties of the private Cross-Connect to be updated.
+         * Update the properties of the specified Cross Connect.For non administrator users you can only update the Private Cross-Connects you are granted access via the user groups you are member of
+         * @summary Partially modify a Private Cross-Connects
+         * @param {string} pccId The unique ID of the Cross Connect.
+         * @param {PrivateCrossConnectProperties} pcc The properties of the Cross Connect to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -319,13 +319,13 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -381,9 +381,9 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             };
         },
         /**
-         * Creates a private Cross-Connect.
-         * @summary Create a Private Cross-Connect
-         * @param {PrivateCrossConnect} pcc The private Cross-Connect to create.
+         * Creates a Cross-Connect. Only contract owners, administrators and users with createPcc user privilege can create a cross connect. Please note that connecting a LAN to a cross connect is to be done via the /lan endpoint.
+         * @summary Create a Cross Connect
+         * @param {PrivateCrossConnect} pcc The Cross Connect to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -407,13 +407,13 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -478,9 +478,9 @@ export const PrivateCrossConnectsApiAxiosParamCreator = function (configuration?
 export const PrivateCrossConnectsApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Remove the specified private Cross-Connect (only if not connected to any data centers).
-         * @summary Delete private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
+         * Remove the specified Cross Connect. Cross connect can be deleted only if it is not connected to any LANs. For non administrator users a cross connect can be deleted only if you are granted access via the user groups you are member of.
+         * @summary Delete Private Cross-Connects
+         * @param {string} pccId The unique ID of the Cross Connect.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -493,9 +493,9 @@ export const PrivateCrossConnectsApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.
-         * @summary Retrieve private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
+         * Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response body when the Cross Connect is created and in the list of Private Cross-Connects, returned by GET. For contract owner and administrators all Private Cross-Connects in your contract can be retrieved. For non administrator users it only returns the cross connects you are granted access via the user groups you are member of.
+         * @summary Retrieve a Cross Connect
+         * @param {string} pccId The unique ID of the Cross Connect.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -508,8 +508,8 @@ export const PrivateCrossConnectsApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List all private Cross-Connects for your account.
-         * @summary List private Cross-Connects
+         * List all Private Cross-Connects. For contract owner and administrators it returns all Private Cross-Connects in your contract. For non administrator users it only returns the Private Cross-Connects you are granted access via the user groups you are member of.
+         * @summary List Private Cross-Connects
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -524,10 +524,10 @@ export const PrivateCrossConnectsApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Update the properties of the specified private Cross-Connect.
-         * @summary Partially modify private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
-         * @param {PrivateCrossConnectProperties} pcc The properties of the private Cross-Connect to be updated.
+         * Update the properties of the specified Cross Connect.For non administrator users you can only update the Private Cross-Connects you are granted access via the user groups you are member of
+         * @summary Partially modify a Private Cross-Connects
+         * @param {string} pccId The unique ID of the Cross Connect.
+         * @param {PrivateCrossConnectProperties} pcc The properties of the Cross Connect to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -540,9 +540,9 @@ export const PrivateCrossConnectsApiFp = function(configuration?: Configuration)
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Creates a private Cross-Connect.
-         * @summary Create a Private Cross-Connect
-         * @param {PrivateCrossConnect} pcc The private Cross-Connect to create.
+         * Creates a Cross-Connect. Only contract owners, administrators and users with createPcc user privilege can create a cross connect. Please note that connecting a LAN to a cross connect is to be done via the /lan endpoint.
+         * @summary Create a Cross Connect
+         * @param {PrivateCrossConnect} pcc The Cross Connect to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -564,9 +564,9 @@ export const PrivateCrossConnectsApiFp = function(configuration?: Configuration)
 export const PrivateCrossConnectsApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Remove the specified private Cross-Connect (only if not connected to any data centers).
-         * @summary Delete private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
+         * Remove the specified Cross Connect. Cross connect can be deleted only if it is not connected to any LANs. For non administrator users a cross connect can be deleted only if you are granted access via the user groups you are member of.
+         * @summary Delete Private Cross-Connects
+         * @param {string} pccId The unique ID of the Cross Connect.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -577,9 +577,9 @@ export const PrivateCrossConnectsApiFactory = function (configuration?: Configur
             return PrivateCrossConnectsApiFp(configuration).pccsDelete(pccId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.
-         * @summary Retrieve private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
+         * Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response body when the Cross Connect is created and in the list of Private Cross-Connects, returned by GET. For contract owner and administrators all Private Cross-Connects in your contract can be retrieved. For non administrator users it only returns the cross connects you are granted access via the user groups you are member of.
+         * @summary Retrieve a Cross Connect
+         * @param {string} pccId The unique ID of the Cross Connect.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -590,8 +590,8 @@ export const PrivateCrossConnectsApiFactory = function (configuration?: Configur
             return PrivateCrossConnectsApiFp(configuration).pccsFindById(pccId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List all private Cross-Connects for your account.
-         * @summary List private Cross-Connects
+         * List all Private Cross-Connects. For contract owner and administrators it returns all Private Cross-Connects in your contract. For non administrator users it only returns the Private Cross-Connects you are granted access via the user groups you are member of.
+         * @summary List Private Cross-Connects
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -602,10 +602,10 @@ export const PrivateCrossConnectsApiFactory = function (configuration?: Configur
             return PrivateCrossConnectsApiFp(configuration).pccsGet(pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Update the properties of the specified private Cross-Connect.
-         * @summary Partially modify private Cross-Connects
-         * @param {string} pccId The unique ID of the private Cross-Connect.
-         * @param {PrivateCrossConnectProperties} pcc The properties of the private Cross-Connect to be updated.
+         * Update the properties of the specified Cross Connect.For non administrator users you can only update the Private Cross-Connects you are granted access via the user groups you are member of
+         * @summary Partially modify a Private Cross-Connects
+         * @param {string} pccId The unique ID of the Cross Connect.
+         * @param {PrivateCrossConnectProperties} pcc The properties of the Cross Connect to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -616,9 +616,9 @@ export const PrivateCrossConnectsApiFactory = function (configuration?: Configur
             return PrivateCrossConnectsApiFp(configuration).pccsPatch(pccId, pcc, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Creates a private Cross-Connect.
-         * @summary Create a Private Cross-Connect
-         * @param {PrivateCrossConnect} pcc The private Cross-Connect to create.
+         * Creates a Cross-Connect. Only contract owners, administrators and users with createPcc user privilege can create a cross connect. Please note that connecting a LAN to a cross connect is to be done via the /lan endpoint.
+         * @summary Create a Cross Connect
+         * @param {PrivateCrossConnect} pcc The Cross Connect to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -638,7 +638,7 @@ export const PrivateCrossConnectsApiFactory = function (configuration?: Configur
  */
 export interface PrivateCrossConnectsApiPccsDeleteRequest {
     /**
-     * The unique ID of the private Cross-Connect.
+     * The unique ID of the Cross Connect.
      * @type {string}
      * @memberof PrivateCrossConnectsApiPccsDelete
      */
@@ -673,7 +673,7 @@ export interface PrivateCrossConnectsApiPccsDeleteRequest {
  */
 export interface PrivateCrossConnectsApiPccsFindByIdRequest {
     /**
-     * The unique ID of the private Cross-Connect.
+     * The unique ID of the Cross Connect.
      * @type {string}
      * @memberof PrivateCrossConnectsApiPccsFindById
      */
@@ -754,14 +754,14 @@ export interface PrivateCrossConnectsApiPccsGetRequest {
  */
 export interface PrivateCrossConnectsApiPccsPatchRequest {
     /**
-     * The unique ID of the private Cross-Connect.
+     * The unique ID of the Cross Connect.
      * @type {string}
      * @memberof PrivateCrossConnectsApiPccsPatch
      */
     readonly pccId: string
 
     /**
-     * The properties of the private Cross-Connect to be updated.
+     * The properties of the Cross Connect to be updated.
      * @type {PrivateCrossConnectProperties}
      * @memberof PrivateCrossConnectsApiPccsPatch
      */
@@ -796,7 +796,7 @@ export interface PrivateCrossConnectsApiPccsPatchRequest {
  */
 export interface PrivateCrossConnectsApiPccsPostRequest {
     /**
-     * The private Cross-Connect to create.
+     * The Cross Connect to create.
      * @type {PrivateCrossConnect}
      * @memberof PrivateCrossConnectsApiPccsPost
      */
@@ -832,8 +832,8 @@ export interface PrivateCrossConnectsApiPccsPostRequest {
  */
 export class PrivateCrossConnectsApi extends BaseAPI {
     /**
-     * Remove the specified private Cross-Connect (only if not connected to any data centers).
-     * @summary Delete private Cross-Connects
+     * Remove the specified Cross Connect. Cross connect can be deleted only if it is not connected to any LANs. For non administrator users a cross connect can be deleted only if you are granted access via the user groups you are member of.
+     * @summary Delete Private Cross-Connects
      * @param {PrivateCrossConnectsApiPccsDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -844,8 +844,8 @@ export class PrivateCrossConnectsApi extends BaseAPI {
     }
 
     /**
-     * Retrieve a private Cross-Connect by the resource ID. Cross-Connect ID is in the response body when the private Cross-Connect is created, and in the list of private Cross-Connects, returned by GET.
-     * @summary Retrieve private Cross-Connects
+     * Retrieve a Cross Connect by the resource ID. Cross Connect ID is in the response body when the Cross Connect is created and in the list of Private Cross-Connects, returned by GET. For contract owner and administrators all Private Cross-Connects in your contract can be retrieved. For non administrator users it only returns the cross connects you are granted access via the user groups you are member of.
+     * @summary Retrieve a Cross Connect
      * @param {PrivateCrossConnectsApiPccsFindByIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -856,8 +856,8 @@ export class PrivateCrossConnectsApi extends BaseAPI {
     }
 
     /**
-     * List all private Cross-Connects for your account.
-     * @summary List private Cross-Connects
+     * List all Private Cross-Connects. For contract owner and administrators it returns all Private Cross-Connects in your contract. For non administrator users it only returns the Private Cross-Connects you are granted access via the user groups you are member of.
+     * @summary List Private Cross-Connects
      * @param {PrivateCrossConnectsApiPccsGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -868,8 +868,8 @@ export class PrivateCrossConnectsApi extends BaseAPI {
     }
 
     /**
-     * Update the properties of the specified private Cross-Connect.
-     * @summary Partially modify private Cross-Connects
+     * Update the properties of the specified Cross Connect.For non administrator users you can only update the Private Cross-Connects you are granted access via the user groups you are member of
+     * @summary Partially modify a Private Cross-Connects
      * @param {PrivateCrossConnectsApiPccsPatchRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -880,8 +880,8 @@ export class PrivateCrossConnectsApi extends BaseAPI {
     }
 
     /**
-     * Creates a private Cross-Connect.
-     * @summary Create a Private Cross-Connect
+     * Creates a Cross-Connect. Only contract owners, administrators and users with createPcc user privilege can create a cross connect. Please note that connecting a LAN to a cross connect is to be done via the /lan endpoint.
+     * @summary Create a Cross Connect
      * @param {PrivateCrossConnectsApiPccsPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

@@ -20,7 +20,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersServersStartPost**](ServersApi.md#datacentersserversstartpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/start | Start an Enterprise Server by ID |
 | [**datacentersServersStopPost**](ServersApi.md#datacentersserversstoppost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop an Enterprise Server by ID |
 | [**datacentersServersSuspendPost**](ServersApi.md#datacentersserverssuspendpost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server by ID |
-| [**datacentersServersTokenGet**](ServersApi.md#datacentersserverstokenget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token |
+| [**datacentersServersTokenGet**](ServersApi.md#datacentersserverstokenget) | **GET** /datacenters/{datacenterId}/servers/{serverId}/token | Get JSON Web Token |
 | [**datacentersServersUpgradePost**](ServersApi.md#datacentersserversupgradepost) | **POST** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server by ID |
 | [**datacentersServersVolumesDelete**](ServersApi.md#datacentersserversvolumesdelete) | **DELETE** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a Volume by ID |
 | [**datacentersServersVolumesFindById**](ServersApi.md#datacentersserversvolumesfindbyid) | **GET** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Get Attached Volume by ID |
@@ -79,7 +79,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -138,7 +138,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -204,7 +204,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -263,7 +263,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -322,7 +322,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -379,7 +379,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -414,7 +414,6 @@ api_instance
     datacenterId: datacenterId_example,
     pretty: true,
     depth: 56,
-    upgradeNeeded: true,
     xContractNumber: 56,
     offset: 56,
     limit: 56, 
@@ -434,7 +433,6 @@ api_instance
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
-| **upgradeNeeded** | **boolean** | Filter servers that can or that cannot be upgraded. | [optional][default to undefined] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 | **offset** | **number** | The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional][default to 0] |
 | **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
@@ -445,7 +443,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -504,7 +502,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -561,7 +559,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -620,7 +618,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -677,7 +675,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -739,7 +737,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -796,7 +794,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -853,7 +851,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -910,7 +908,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -967,7 +965,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -979,7 +977,7 @@ Basic Authentication, Token Authentication
 
 > <Token> datacentersServersTokenGet(datacenterId, serverId, opts)
 
-Get JASON Web Token
+Get JSON Web Token
 
 Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server\'s console).
 
@@ -996,7 +994,7 @@ const config = new ionoscloud.Configuration({
 const api_instance = new ionoscloud.ServersApi(config);
 var filterMap = new Map()
 filterMap.set("<property_name>", "<property_value>")
-// Get JASON Web Token
+// Get JSON Web Token
 api_instance
   .datacentersServersTokenGet({
     datacenterId: datacenterId_example,
@@ -1029,7 +1027,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1086,7 +1084,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1145,7 +1143,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1204,7 +1202,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1270,7 +1268,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1329,7 +1327,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

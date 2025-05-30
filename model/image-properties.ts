@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,11 +22,32 @@
 export interface ImageProperties {
 
     /**
-     * Cloud init compatibility.
+     * The resource name.
      * @type {string}
      * @memberof ImageProperties
      */
-    cloudInit?: ImagePropertiesCloudInitEnum;
+    name?: string;
+
+    /**
+     * Human-readable description.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    description?: string;
+
+    /**
+     * The location of this image/snapshot.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    location?: string;
+
+    /**
+     * The image size in GB.
+     * @type {number}
+     * @memberof ImageProperties
+     */
+    size?: number;
 
     /**
      * Hot-plug capable CPU (no reboot required).
@@ -43,74 +64,18 @@ export interface ImageProperties {
     cpuHotUnplug?: boolean;
 
     /**
-     * Human-readable description.
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    description?: string;
-
-    /**
-     * Hot-plug capable SCSI drive (no reboot required).
+     * Hot-plug capable RAM (no reboot required).
      * @type {boolean}
      * @memberof ImageProperties
      */
-    discScsiHotPlug?: boolean;
+    ramHotPlug?: boolean;
 
     /**
-     * Hot-unplug capable SCSI drive (no reboot required). Not supported with Windows VMs.
+     * Hot-unplug capable RAM (no reboot required).
      * @type {boolean}
      * @memberof ImageProperties
      */
-    discScsiHotUnplug?: boolean;
-
-    /**
-     * Hot-plug capable Virt-IO drive (no reboot required).
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    discVirtioHotPlug?: boolean;
-
-    /**
-     * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
-     * @type {boolean}
-     * @memberof ImageProperties
-     */
-    discVirtioHotUnplug?: boolean;
-
-    /**
-     * List of image aliases mapped for this image
-     * @type {Array<string>}
-     * @memberof ImageProperties
-     */
-    imageAliases?: Array<string>;
-
-    /**
-     * The image type.
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    imageType?: ImagePropertiesImageTypeEnum;
-
-    /**
-     * The OS type of this image.
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    licenceType: ImagePropertiesLicenceTypeEnum;
-
-    /**
-     * The location of this image/snapshot.
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    location?: string;
-
-    /**
-     * The resource name.
-     * @type {string}
-     * @memberof ImageProperties
-     */
-    name?: string;
+    ramHotUnplug?: boolean;
 
     /**
      * Hot-plug capable NIC (no reboot required).
@@ -127,6 +92,69 @@ export interface ImageProperties {
     nicHotUnplug?: boolean;
 
     /**
+     * Hot-plug capable Virt-IO drive (no reboot required).
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    discVirtioHotPlug?: boolean;
+
+    /**
+     * Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs.
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    discVirtioHotUnplug?: boolean;
+
+    /**
+     * Hot-plug capable SCSI drive (no reboot required).
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    discScsiHotPlug?: boolean;
+
+    /**
+     * Hot-unplug capable SCSI drive (no reboot required). Not supported with Windows VMs.
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    discScsiHotUnplug?: boolean;
+
+    /**
+     * If set to `true` will expose the serial id of the disk attached to the server. If set to `false` will not expose the serial id. Some operating systems or software solutions require the serial id to be exposed to work properly. Exposing the serial  can influence licensed software (e.g. Windows) behavior
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    exposeSerial?: boolean;
+
+    /**
+     * Indicates if the image requires the legacy BIOS for compatibility or specific needs.
+     * @type {boolean}
+     * @memberof ImageProperties
+     */
+    requireLegacyBios?: boolean;
+
+    /**
+     * The OS type of this image.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    licenceType: ImagePropertiesLicenceTypeEnum;
+
+    /**
+     * The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    applicationType?: string;
+
+    /**
+     * The image type.
+     * @type {string}
+     * @memberof ImageProperties
+     */
+    imageType?: ImagePropertiesImageTypeEnum;
+
+    /**
      * Indicates whether the image is part of a public repository.
      * @type {boolean}
      * @memberof ImageProperties
@@ -134,43 +162,52 @@ export interface ImageProperties {
     _public?: boolean;
 
     /**
-     * Hot-plug capable RAM (no reboot required).
-     * @type {boolean}
+     * List of image aliases mapped for this image
+     * @type {Array<string>}
      * @memberof ImageProperties
      */
-    ramHotPlug?: boolean;
+    imageAliases?: Array<string>;
 
     /**
-     * Hot-unplug capable RAM (no reboot required).
-     * @type {boolean}
+     * Cloud init compatibility.
+     * @type {string}
      * @memberof ImageProperties
      */
-    ramHotUnplug?: boolean;
-
-    /**
-     * The image size in GB.
-     * @type {number}
-     * @memberof ImageProperties
-     */
-    size?: number;
+    cloudInit?: ImagePropertiesCloudInitEnum;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /**
     * @export
     * @enum {string}
     */
-export enum ImagePropertiesCloudInitEnum {
-    None = 'NONE',
-    V1 = 'V1'
+export enum ImagePropertiesLicenceTypeEnum {
+    Unknown = 'UNKNOWN',
+    Windows = 'WINDOWS',
+    Windows2016 = 'WINDOWS2016',
+    Windows2019 = 'WINDOWS2019',
+    Windows2022 = 'WINDOWS2022',
+    Windows2025 = 'WINDOWS2025',
+    Rhel = 'RHEL',
+    Linux = 'LINUX',
+    Other = 'OTHER'
 }
-
-
-
-
-
-
-
 
 
 /**
@@ -183,27 +220,16 @@ export enum ImagePropertiesImageTypeEnum {
     Unknown = 'UNKNOWN'
 }
 
+
+
 /**
     * @export
     * @enum {string}
     */
-export enum ImagePropertiesLicenceTypeEnum {
-    Unknown = 'UNKNOWN',
-    Windows = 'WINDOWS',
-    Windows2016 = 'WINDOWS2016',
-    Windows2022 = 'WINDOWS2022',
-    Rhel = 'RHEL',
-    Linux = 'LINUX',
-    Other = 'OTHER'
+export enum ImagePropertiesCloudInitEnum {
+    None = 'NONE',
+    V1 = 'V1'
 }
-
-
-
-
-
-
-
-
 
 
 

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,11 +22,11 @@
 export interface TargetGroupHttpHealthCheck {
 
     /**
-     * Specify the target\'s response type to match ALB\'s request.
+     * The destination URL for HTTP the health check; the default is \'/\'.
      * @type {string}
      * @memberof TargetGroupHttpHealthCheck
      */
-    matchType: TargetGroupHttpHealthCheckMatchTypeEnum;
+    path?: string;
 
     /**
      * The method used for the health check request.
@@ -36,18 +36,18 @@ export interface TargetGroupHttpHealthCheck {
     method?: TargetGroupHttpHealthCheckMethodEnum;
 
     /**
-     * Specifies whether to negate an individual entry; the default value is \'FALSE\'.
-     * @type {boolean}
-     * @memberof TargetGroupHttpHealthCheck
-     */
-    negate?: boolean;
-
-    /**
-     * The destination URL for HTTP the health check; the default is \'/\'.
+     * Specify the target\'s response type to match ALB\'s request.
      * @type {string}
      * @memberof TargetGroupHttpHealthCheck
      */
-    path?: string;
+    matchType: TargetGroupHttpHealthCheckMatchTypeEnum;
+
+    /**
+     * The response returned by the request. It can be a status code or a response body depending on the definition of \'matchType\'.
+     * @type {string}
+     * @memberof TargetGroupHttpHealthCheck
+     */
+    response: string;
 
     /**
      * Specifies whether to use a regular expression to parse the response body; the default value is \'FALSE\'.  By using regular expressions, you can flexibly customize the expected response from a healthy server.
@@ -57,22 +57,14 @@ export interface TargetGroupHttpHealthCheck {
     regex?: boolean;
 
     /**
-     * The response returned by the request. It can be a status code or a response body depending on the definition of \'matchType\'.
-     * @type {string}
+     * Specifies whether to negate an individual entry; the default value is \'FALSE\'.
+     * @type {boolean}
      * @memberof TargetGroupHttpHealthCheck
      */
-    response: string;
+    negate?: boolean;
 }
 
 
-/**
-    * @export
-    * @enum {string}
-    */
-export enum TargetGroupHttpHealthCheckMatchTypeEnum {
-    StatusCode = 'STATUS_CODE',
-    ResponseBody = 'RESPONSE_BODY'
-}
 
 /**
     * @export
@@ -88,6 +80,14 @@ export enum TargetGroupHttpHealthCheckMethodEnum {
     Options = 'OPTIONS'
 }
 
+/**
+    * @export
+    * @enum {string}
+    */
+export enum TargetGroupHttpHealthCheckMatchTypeEnum {
+    StatusCode = 'STATUS_CODE',
+    ResponseBody = 'RESPONSE_BODY'
+}
 
 
 

@@ -19,6 +19,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 | [**datacentersVolumesLabelsGet**](LabelsApi.md#datacentersvolumeslabelsget) | **GET** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels |
 | [**datacentersVolumesLabelsPost**](LabelsApi.md#datacentersvolumeslabelspost) | **POST** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create a Volume Label |
 | [**datacentersVolumesLabelsPut**](LabelsApi.md#datacentersvolumeslabelsput) | **PUT** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Volume Label |
+| [**imagesLabelsDelete**](LabelsApi.md#imageslabelsdelete) | **DELETE** /images/{imageId}/labels/{key} | Delete image label |
+| [**imagesLabelsFindByKey**](LabelsApi.md#imageslabelsfindbykey) | **GET** /images/{imageId}/labels/{key} | Retrieve image labels |
+| [**imagesLabelsGet**](LabelsApi.md#imageslabelsget) | **GET** /images/{imageId}/labels | List image labels |
+| [**imagesLabelsPost**](LabelsApi.md#imageslabelspost) | **POST** /images/{imageId}/labels | Create an Image Label |
+| [**imagesLabelsPut**](LabelsApi.md#imageslabelsput) | **PUT** /images/{imageId}/labels/{key} | Modify an Image Label by Key |
 | [**ipblocksLabelsDelete**](LabelsApi.md#ipblockslabelsdelete) | **DELETE** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels |
 | [**ipblocksLabelsFindByKey**](LabelsApi.md#ipblockslabelsfindbykey) | **GET** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels |
 | [**ipblocksLabelsGet**](LabelsApi.md#ipblockslabelsget) | **GET** /ipblocks/{ipblockId}/labels | List IP block labels |
@@ -82,7 +87,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -139,7 +144,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -199,7 +204,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -256,7 +261,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -315,7 +320,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -374,7 +379,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -433,7 +438,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -495,7 +500,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -554,7 +559,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -615,7 +620,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -674,7 +679,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -733,7 +738,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -795,7 +800,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -854,7 +859,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -915,7 +920,297 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## imagesLabelsDelete
+
+> imagesLabelsDelete(imageId, key, opts)
+
+Delete image label
+
+Delete the specified image label.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LabelsApi(config);
+// Delete image label
+api_instance
+  .imagesLabelsDelete({
+    imageId: imageId_example,
+    key: key_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+        options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+nil (empty response body)
+
+### Authorization
+
+BasicAuthentication, TokenAuthentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## imagesLabelsFindByKey
+
+> <LabelResource> imagesLabelsFindByKey(imageId, key, opts)
+
+Retrieve image labels
+
+Retrieve the properties of the specified image label.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LabelsApi(config);
+// Retrieve image labels
+api_instance
+  .imagesLabelsFindByKey({
+    imageId: imageId_example,
+    key: key_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+        options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**LabelResource**](../models/LabelResource.md)
+
+### Authorization
+
+BasicAuthentication, TokenAuthentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## imagesLabelsGet
+
+> <LabelResources> imagesLabelsGet(imageId, opts)
+
+List image labels
+
+List all the the labels for the specified image.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LabelsApi(config);
+var filterMap = new Map()
+filterMap.set("<property_name>", "<property_value>")
+// List image labels
+api_instance
+  .imagesLabelsGet({
+    imageId: imageId_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+    orderBy: "<property_name>"
+    maxResults: 2,
+    filters: filterMap
+    options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**LabelResources**](../models/LabelResources.md)
+
+### Authorization
+
+BasicAuthentication, TokenAuthentication
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+## imagesLabelsPost
+
+> <LabelResource> imagesLabelsPost(imageId, label, opts)
+
+Create an Image Label
+
+Adds a new label to the specified image.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LabelsApi(config);
+// Create an Image Label
+api_instance
+  .imagesLabelsPost({
+    imageId: imageId_example,
+    label: label_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+        options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **imageId** | **string** | The unique ID of the image | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**LabelResource**](../models/LabelResource.md)
+
+### Authorization
+
+BasicAuthentication, TokenAuthentication
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+## imagesLabelsPut
+
+> <LabelResource> imagesLabelsPut(imageId, key, label, opts)
+
+Modify an Image Label by Key
+
+Modifies the specified data center label.
+
+### Examples
+
+```javascript
+const ionoscloud = require('@ionos-cloud/sdk-nodejs');
+// setup authorization
+const config = new ionoscloud.Configuration({
+    username: 'YOUR_USERNAME',
+    password: 'YOUR_PASSWORD',
+    apiKey: 'YOUR_API_KEY'
+});
+const api_instance = new ionoscloud.LabelsApi(config);
+// Modify an Image Label by Key
+api_instance
+  .imagesLabelsPut({
+    imageId: imageId_example,
+    key: key_example,
+    label: label_example,
+    pretty: true,
+    depth: 56,
+    xContractNumber: 56, 
+        options: {}
+  })
+  .then((response) => console.log(response.data))
+  .catch((error) => console.log(error.response.data));
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **imageId** | **string** | The unique ID of the image. | [default to undefined] |
+| **key** | **string** | The label key | [default to undefined] |
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label |  |
+| **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
+| **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
+| **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
+
+### Return type
+
+[**LabelResource**](../models/LabelResource.md)
+
+### Authorization
+
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -972,7 +1267,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1029,7 +1324,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1089,7 +1384,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1146,7 +1441,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1205,7 +1500,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1260,7 +1555,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1318,7 +1613,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1375,7 +1670,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1432,7 +1727,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1492,7 +1787,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1549,7 +1844,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1608,7 +1903,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

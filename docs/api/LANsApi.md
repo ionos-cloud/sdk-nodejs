@@ -64,7 +64,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -121,7 +121,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -185,7 +185,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -244,7 +244,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -310,7 +310,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -369,7 +369,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -428,7 +428,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -438,7 +438,7 @@ Basic Authentication, Token Authentication
 
 ## datacentersLansPost
 
-> <LanPost> datacentersLansPost(datacenterId, lan, opts)
+> <Lan> datacentersLansPost(datacenterId, lan, opts)
 
 Create LANs
 
@@ -474,18 +474,18 @@ api_instance
 | Name | Type | Description | Notes |
 | ---- | ---- | ----------- | ----- |
 | **datacenterId** | **string** | The unique ID of the data center. | [default to undefined] |
-| **lan** | [**LanPost**](../models/LanPost.md) | The LAN to create. |  |
+| **lan** | [**Lan**](../models/Lan.md) | The LAN to create. |  |
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
 
 ### Return type
 
-[**LanPost**](../models/LanPost.md)
+[**Lan**](../models/Lan.md)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -544,7 +544,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

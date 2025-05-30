@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,13 +23,6 @@ import { KubernetesCluster } from './kubernetes-cluster';
 export interface KubernetesClusters {
 
     /**
-     * The URL to the collection representation (absolute path).
-     * @type {string}
-     * @memberof KubernetesClusters
-     */
-    href?: string;
-
-    /**
      * The unique representation of the K8s cluster as a resource collection.
      * @type {string}
      * @memberof KubernetesClusters
@@ -37,21 +30,26 @@ export interface KubernetesClusters {
     id?: string;
 
     /**
-     * Array of K8s clusters in the collection.
-     * @type {Array<KubernetesCluster>}
-     * @memberof KubernetesClusters
-     */
-    items?: Array<KubernetesCluster>;
-
-    /**
      * The resource type within a collection.
      * @type {string}
      * @memberof KubernetesClusters
      */
     type?: KubernetesClustersTypeEnum;
+
+    /**
+     * The URL to the collection representation (absolute path).
+     * @type {string}
+     * @memberof KubernetesClusters
+     */
+    href?: string;
+
+    /**
+     * Array of K8s clusters in the collection.
+     * @type {Array<KubernetesCluster>}
+     * @memberof KubernetesClusters
+     */
+    items?: Array<KubernetesCluster>;
 }
-
-
 
 
 
@@ -62,6 +60,8 @@ export interface KubernetesClusters {
 export enum KubernetesClustersTypeEnum {
     Collection = 'collection'
 }
+
+
 
 
 

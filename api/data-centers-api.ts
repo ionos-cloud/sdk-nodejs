@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -21,7 +21,11 @@ import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, bac
 // @ts-ignore
 import { Datacenter } from '../model';
 // @ts-ignore
-import { DatacenterProperties } from '../model';
+import { DatacenterPost } from '../model';
+// @ts-ignore
+import { DatacenterPropertiesPut } from '../model';
+// @ts-ignore
+import { DatacenterPut } from '../model';
 // @ts-ignore
 import { Datacenters } from '../model';
 /**
@@ -58,13 +62,13 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -140,13 +144,13 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -221,13 +225,13 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -307,7 +311,7 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
          * Updates the properties of the specified data center, rename it, or change the description.
          * @summary Partially modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
-         * @param {DatacenterProperties} datacenter The properties of the data center to be updated.
+         * @param {DatacenterPropertiesPut} datacenter The properties of the data center to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -315,7 +319,7 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersPatch: async (datacenterId: string, datacenter: DatacenterProperties, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+        datacentersPatch: async (datacenterId: string, datacenter: DatacenterPropertiesPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersPatch.');
             }
@@ -335,13 +339,13 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -399,7 +403,7 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
         /**
          * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
          * @summary Create a Data Center
-         * @param {Datacenter} datacenter The data center to create.
+         * @param {DatacenterPost} datacenter The data center to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -407,7 +411,7 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersPost: async (datacenter: Datacenter, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+        datacentersPost: async (datacenter: DatacenterPost, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenter === null || datacenter === undefined) {
                 throw new RequiredError('datacenter','Required parameter datacenter was null or undefined when calling datacentersPost.');
             }
@@ -423,13 +427,13 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -488,7 +492,7 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
          * Modifies the properties of the specified data center, rename it, or change the description.
          * @summary Modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
-         * @param {Datacenter} datacenter The modified data center.
+         * @param {DatacenterPut} datacenter The modified data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -496,7 +500,7 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersPut: async (datacenterId: string, datacenter: Datacenter, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
+        datacentersPut: async (datacenterId: string, datacenter: DatacenterPut, pretty?: boolean, depth?: number, xContractNumber?: number,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersPut.');
             }
@@ -516,13 +520,13 @@ export const DataCentersApiAxiosParamCreator = function (configuration?: Configu
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -638,7 +642,7 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
          * Updates the properties of the specified data center, rename it, or change the description.
          * @summary Partially modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
-         * @param {DatacenterProperties} datacenter The properties of the data center to be updated.
+         * @param {DatacenterPropertiesPut} datacenter The properties of the data center to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -646,14 +650,14 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersPatch(datacenterId: string, datacenter: DatacenterProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datacenter>> {
+        async datacentersPatch(datacenterId: string, datacenter: DatacenterPropertiesPut, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datacenter>> {
             const axiosArgs = await DataCentersApiAxiosParamCreator(configuration).datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
          * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
          * @summary Create a Data Center
-         * @param {Datacenter} datacenter The data center to create.
+         * @param {DatacenterPost} datacenter The data center to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -661,7 +665,7 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersPost(datacenter: Datacenter, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datacenter>> {
+        async datacentersPost(datacenter: DatacenterPost, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datacenter>> {
             const axiosArgs = await DataCentersApiAxiosParamCreator(configuration).datacentersPost(datacenter, pretty, depth, xContractNumber, options);
             return runRequest(axiosArgs, configuration);
         },
@@ -669,7 +673,7 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
          * Modifies the properties of the specified data center, rename it, or change the description.
          * @summary Modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
-         * @param {Datacenter} datacenter The modified data center.
+         * @param {DatacenterPut} datacenter The modified data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -677,7 +681,7 @@ export const DataCentersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersPut(datacenterId: string, datacenter: Datacenter, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datacenter>> {
+        async datacentersPut(datacenterId: string, datacenter: DatacenterPut, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Datacenter>> {
             const axiosArgs = await DataCentersApiAxiosParamCreator(configuration).datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber, options);
             return runRequest(axiosArgs, configuration);
         },
@@ -734,41 +738,41 @@ export const DataCentersApiFactory = function (configuration?: Configuration, ba
          * Updates the properties of the specified data center, rename it, or change the description.
          * @summary Partially modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
-         * @param {DatacenterProperties} datacenter The properties of the data center to be updated.
+         * @param {DatacenterPropertiesPut} datacenter The properties of the data center to be updated.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersPatch(datacenterId: string, datacenter: DatacenterProperties, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Datacenter> {
+        datacentersPatch(datacenterId: string, datacenter: DatacenterPropertiesPut, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Datacenter> {
             return DataCentersApiFp(configuration).datacentersPatch(datacenterId, datacenter, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
          * Creates new data centers, and data centers that already contain elements, such as servers and storage volumes.  Virtual data centers are the foundation of the platform; they act as logical containers for all other objects you create, such as servers and storage volumes. You can provision as many data centers as needed. Data centers have their own private networks and are logically segmented from each other to create isolation.
          * @summary Create a Data Center
-         * @param {Datacenter} datacenter The data center to create.
+         * @param {DatacenterPost} datacenter The data center to create.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersPost(datacenter: Datacenter, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Datacenter> {
+        datacentersPost(datacenter: DatacenterPost, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Datacenter> {
             return DataCentersApiFp(configuration).datacentersPost(datacenter, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
          * Modifies the properties of the specified data center, rename it, or change the description.
          * @summary Modify a Data Center by ID
          * @param {string} datacenterId The unique ID of the data center.
-         * @param {Datacenter} datacenter The modified data center.
+         * @param {DatacenterPut} datacenter The modified data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersPut(datacenterId: string, datacenter: Datacenter, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Datacenter> {
+        datacentersPut(datacenterId: string, datacenter: DatacenterPut, pretty?: boolean, depth?: number, xContractNumber?: number, options?: any): AxiosPromise<Datacenter> {
             return DataCentersApiFp(configuration).datacentersPut(datacenterId, datacenter, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
     };
@@ -919,10 +923,10 @@ export interface DataCentersApiDatacentersPatchRequest {
 
     /**
      * The properties of the data center to be updated.
-     * @type {DatacenterProperties}
+     * @type {DatacenterPropertiesPut}
      * @memberof DataCentersApiDatacentersPatch
      */
-    readonly datacenter: DatacenterProperties
+    readonly datacenter: DatacenterPropertiesPut
 
     /**
      * Controls whether the response is pretty-printed (with indentations and new lines).
@@ -954,10 +958,10 @@ export interface DataCentersApiDatacentersPatchRequest {
 export interface DataCentersApiDatacentersPostRequest {
     /**
      * The data center to create.
-     * @type {Datacenter}
+     * @type {DatacenterPost}
      * @memberof DataCentersApiDatacentersPost
      */
-    readonly datacenter: Datacenter
+    readonly datacenter: DatacenterPost
 
     /**
      * Controls whether the response is pretty-printed (with indentations and new lines).
@@ -996,10 +1000,10 @@ export interface DataCentersApiDatacentersPutRequest {
 
     /**
      * The modified data center.
-     * @type {Datacenter}
+     * @type {DatacenterPut}
      * @memberof DataCentersApiDatacentersPut
      */
-    readonly datacenter: Datacenter
+    readonly datacenter: DatacenterPut
 
     /**
      * Controls whether the response is pretty-printed (with indentations and new lines).

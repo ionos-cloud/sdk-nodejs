@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -24,32 +24,32 @@ import { Peer } from './peer';
 export interface PrivateCrossConnectProperties {
 
     /**
-     * Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect.
-     * @type {Array<ConnectableDatacenter>}
-     * @memberof PrivateCrossConnectProperties
-     */
-    connectableDatacenters?: Array<ConnectableDatacenter>;
-
-    /**
-     * Human-readable description.
-     * @type {string}
-     * @memberof PrivateCrossConnectProperties
-     */
-    description?: string;
-
-    /**
-     * The name of the  resource.
+     * The name of the Cross Connect.
      * @type {string}
      * @memberof PrivateCrossConnectProperties
      */
     name?: string;
 
     /**
-     * Read-Only attribute. Lists LAN\'s joined to this private Cross-Connect.
+     * Human-readable description of the Cross Connect.
+     * @type {string}
+     * @memberof PrivateCrossConnectProperties
+     */
+    description?: string;
+
+    /**
+     * Read-Only attribute. Lists LAN\'s connected to this Cross Connect.
      * @type {Array<Peer>}
      * @memberof PrivateCrossConnectProperties
      */
     peers?: Array<Peer>;
+
+    /**
+     * Read-Only attribute. Lists data centers that can be connected to this Cross Connect. If the Cross Connect is not connected to any LANs it lists all VDCs the user has access to. If the Cross Connect is connected to at least 1 LAN it lists all VDCs the user has access to in the location of the connected LAN.
+     * @type {Array<ConnectableDatacenter>}
+     * @memberof PrivateCrossConnectProperties
+     */
+    connectableDatacenters?: Array<ConnectableDatacenter>;
 }
 
 

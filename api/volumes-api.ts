@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -18,6 +18,10 @@ import { Configuration, DEFAULT_MAX_RETRIES, DEFAULT_MAX_WAIT_TIME } from '../co
 // Some imports not used depending on template conditions
 // @ts-ignore
 import { BASE_PATH, COLLECTION_FORMATS, RequestArgs, BaseAPI, RequiredError, backOff, runRequest } from '../base';
+// @ts-ignore
+import { CreateSnapshot } from '../model';
+// @ts-ignore
+import { RestoreSnapshot } from '../model';
 // @ts-ignore
 import { Snapshot } from '../model';
 // @ts-ignore
@@ -40,15 +44,12 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-         * @param {string} [name] Snapshot name
-         * @param {string} [description] Snapshot description
-         * @param {boolean} [secAuthProtection] Flag for enabling extra protection for this snapshot, such as two-step verification.
-         * @param {string} [licenceType] The OS type for this snapshot.
+         * @param {CreateSnapshot} [snapshot] The payload of the snapshot.
          
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesCreateSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, name?: string, description?: string, secAuthProtection?: boolean, licenceType?: string,  options: any = {}): Promise<RequestArgs> => {
+        datacentersVolumesCreateSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshot?: CreateSnapshot,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesCreateSnapshotPost.');
             }
@@ -68,15 +69,14 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-            const localVarFormParams = new URLSearchParams();
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -106,26 +106,8 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-            if (name !== undefined) { 
-                localVarFormParams.set('name', name as any);
-            }
     
-            if (description !== undefined) { 
-                localVarFormParams.set('description', description as any);
-            }
-    
-            if (secAuthProtection !== undefined) { 
-                localVarFormParams.set('secAuthProtection', secAuthProtection as any);
-            }
-    
-            if (licenceType !== undefined) { 
-                localVarFormParams.set('licenceType', licenceType as any);
-            }
-    
-    
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-    
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -136,7 +118,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = localVarFormParams.toString();
+            const nonString = typeof snapshot !== 'string';
+            const needsSerialization = nonString && configuration && configuration.isJsonMime
+                ? configuration.isJsonMime(localVarRequestOptions.headers['Content-Type'])
+                : nonString;
+            localVarRequestOptions.data =  needsSerialization
+                ? JSON.stringify(snapshot !== undefined ? snapshot : {})
+                : (snapshot || "");
 
             return {
                 url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
@@ -176,13 +164,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -263,13 +251,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -349,13 +337,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -468,13 +456,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -561,13 +549,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -659,13 +647,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -728,12 +716,12 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-         * @param {string} [snapshotId] The unique ID of the snapshot.
+         * @param {RestoreSnapshot} [restoreSnapshot] The payload used to restore a snapshot.
          
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesRestoreSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshotId?: string,  options: any = {}): Promise<RequestArgs> => {
+        datacentersVolumesRestoreSnapshotPost: async (datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, restoreSnapshot?: RestoreSnapshot,  options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersVolumesRestoreSnapshotPost.');
             }
@@ -753,15 +741,14 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             const localVarRequestOptions = { method: 'POST', ...baseOptions, ...options};
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
-            const localVarFormParams = new URLSearchParams();
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -791,14 +778,8 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             }
 
 
-            if (snapshotId !== undefined) { 
-                localVarFormParams.set('snapshotId', snapshotId as any);
-            }
     
-    
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
-    
-            localVarHeaderParameter['Content-Type'] = 'application/x-www-form-urlencoded';
+            localVarHeaderParameter['Content-Type'] = 'application/json';
             const queryParameters = new URLSearchParams(localVarUrlObj.search);
             for (const key in localVarQueryParameter) {
                 queryParameters.set(key, localVarQueryParameter[key]);
@@ -809,7 +790,13 @@ export const VolumesApiAxiosParamCreator = function (configuration?: Configurati
             localVarUrlObj.search = (new URLSearchParams(queryParameters)).toString();
             let headersFromBaseOptions = baseOptions && baseOptions.headers ? baseOptions.headers : {};
             localVarRequestOptions.headers = {...localVarHeaderParameter, ...headersFromBaseOptions, ...options.headers};
-            localVarRequestOptions.data = localVarFormParams.toString();
+            const nonString = typeof restoreSnapshot !== 'string';
+            const needsSerialization = nonString && configuration && configuration.isJsonMime
+                ? configuration.isJsonMime(localVarRequestOptions.headers['Content-Type'])
+                : nonString;
+            localVarRequestOptions.data =  needsSerialization
+                ? JSON.stringify(restoreSnapshot !== undefined ? restoreSnapshot : {})
+                : (restoreSnapshot || "");
 
             return {
                 url: localVarUrlObj.pathname + localVarUrlObj.search + localVarUrlObj.hash,
@@ -833,16 +820,13 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-         * @param {string} [name] Snapshot name
-         * @param {string} [description] Snapshot description
-         * @param {boolean} [secAuthProtection] Flag for enabling extra protection for this snapshot, such as two-step verification.
-         * @param {string} [licenceType] The OS type for this snapshot.
+         * @param {CreateSnapshot} [snapshot] The payload of the snapshot.
          
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersVolumesCreateSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, name?: string, description?: string, secAuthProtection?: boolean, licenceType?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Snapshot>> {
-            const axiosArgs = await VolumesApiAxiosParamCreator(configuration).datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, name, description, secAuthProtection, licenceType, options);
+        async datacentersVolumesCreateSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshot?: CreateSnapshot, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Snapshot>> {
+            const axiosArgs = await VolumesApiAxiosParamCreator(configuration).datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshot, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -954,13 +938,13 @@ export const VolumesApiFp = function(configuration?: Configuration) {
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-         * @param {string} [snapshotId] The unique ID of the snapshot.
+         * @param {RestoreSnapshot} [restoreSnapshot] The payload used to restore a snapshot.
          
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersVolumesRestoreSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshotId?: string, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
-            const axiosArgs = await VolumesApiAxiosParamCreator(configuration).datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshotId, options);
+        async datacentersVolumesRestoreSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, restoreSnapshot?: RestoreSnapshot, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<void>> {
+            const axiosArgs = await VolumesApiAxiosParamCreator(configuration).datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, restoreSnapshot, options);
             return runRequest(axiosArgs, configuration);
         },
     }
@@ -980,15 +964,12 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-         * @param {string} [name] Snapshot name
-         * @param {string} [description] Snapshot description
-         * @param {boolean} [secAuthProtection] Flag for enabling extra protection for this snapshot, such as two-step verification.
-         * @param {string} [licenceType] The OS type for this snapshot.
+         * @param {CreateSnapshot} [snapshot] The payload of the snapshot.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesCreateSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, name?: string, description?: string, secAuthProtection?: boolean, licenceType?: string, options?: any): AxiosPromise<Snapshot> {
-            return VolumesApiFp(configuration).datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, name, description, secAuthProtection, licenceType, options).then((request) => request(axios, basePath));
+        datacentersVolumesCreateSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshot?: CreateSnapshot, options?: any): AxiosPromise<Snapshot> {
+            return VolumesApiFp(configuration).datacentersVolumesCreateSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshot, options).then((request) => request(axios, basePath));
         },
         /**
          * Delete the specified volume within the data center. Use with caution, the volume will be permanently removed!
@@ -1085,12 +1066,12 @@ export const VolumesApiFactory = function (configuration?: Configuration, basePa
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
-         * @param {string} [snapshotId] The unique ID of the snapshot.
+         * @param {RestoreSnapshot} [restoreSnapshot] The payload used to restore a snapshot.
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersVolumesRestoreSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, snapshotId?: string, options?: any): AxiosPromise<void> {
-            return VolumesApiFp(configuration).datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, snapshotId, options).then((request) => request(axios, basePath));
+        datacentersVolumesRestoreSnapshotPost(datacenterId: string, volumeId: string, pretty?: boolean, depth?: number, xContractNumber?: number, restoreSnapshot?: RestoreSnapshot, options?: any): AxiosPromise<void> {
+            return VolumesApiFp(configuration).datacentersVolumesRestoreSnapshotPost(datacenterId, volumeId, pretty, depth, xContractNumber, restoreSnapshot, options).then((request) => request(axios, basePath));
         },
     };
 };
@@ -1137,32 +1118,11 @@ export interface VolumesApiDatacentersVolumesCreateSnapshotPostRequest {
     readonly xContractNumber?: number
 
     /**
-     * Snapshot name
-     * @type {string}
+     * The payload of the snapshot.
+     * @type {CreateSnapshot}
      * @memberof VolumesApiDatacentersVolumesCreateSnapshotPost
      */
-    readonly name?: string
-
-    /**
-     * Snapshot description
-     * @type {string}
-     * @memberof VolumesApiDatacentersVolumesCreateSnapshotPost
-     */
-    readonly description?: string
-
-    /**
-     * Flag for enabling extra protection for this snapshot, such as two-step verification.
-     * @type {boolean}
-     * @memberof VolumesApiDatacentersVolumesCreateSnapshotPost
-     */
-    readonly secAuthProtection?: boolean
-
-    /**
-     * The OS type for this snapshot.
-     * @type {string}
-     * @memberof VolumesApiDatacentersVolumesCreateSnapshotPost
-     */
-    readonly licenceType?: string
+    readonly snapshot?: CreateSnapshot
 }
 
 /**
@@ -1498,11 +1458,11 @@ export interface VolumesApiDatacentersVolumesRestoreSnapshotPostRequest {
     readonly xContractNumber?: number
 
     /**
-     * The unique ID of the snapshot.
-     * @type {string}
+     * The payload used to restore a snapshot.
+     * @type {RestoreSnapshot}
      * @memberof VolumesApiDatacentersVolumesRestoreSnapshotPost
      */
-    readonly snapshotId?: string
+    readonly restoreSnapshot?: RestoreSnapshot
 }
 
 /**
@@ -1521,7 +1481,7 @@ export class VolumesApi extends BaseAPI {
      * @memberof VolumesApi
      */
     public datacentersVolumesCreateSnapshotPost(requestParameters: VolumesApiDatacentersVolumesCreateSnapshotPostRequest, options?: any) {
-        return VolumesApiFp(this.configuration).datacentersVolumesCreateSnapshotPost(requestParameters.datacenterId, requestParameters.volumeId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.name, requestParameters.description, requestParameters.secAuthProtection, requestParameters.licenceType, options).then((request) => request(this.axios, this.basePath));
+        return VolumesApiFp(this.configuration).datacentersVolumesCreateSnapshotPost(requestParameters.datacenterId, requestParameters.volumeId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.snapshot, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -1605,6 +1565,6 @@ export class VolumesApi extends BaseAPI {
      * @memberof VolumesApi
      */
     public datacentersVolumesRestoreSnapshotPost(requestParameters: VolumesApiDatacentersVolumesRestoreSnapshotPostRequest, options?: any) {
-        return VolumesApiFp(this.configuration).datacentersVolumesRestoreSnapshotPost(requestParameters.datacenterId, requestParameters.volumeId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.snapshotId, options).then((request) => request(this.axios, this.basePath));
+        return VolumesApiFp(this.configuration).datacentersVolumesRestoreSnapshotPost(requestParameters.datacenterId, requestParameters.volumeId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.restoreSnapshot, options).then((request) => request(this.axios, this.basePath));
     }
 }

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,11 +23,11 @@ import { KubernetesNodePoolLanRoutes } from './kubernetes-node-pool-lan-routes';
 export interface KubernetesNodePoolLan {
 
     /**
-     * The datacenter ID, requires system privileges, for internal usage only
-     * @type {string}
+     * The LAN ID of an existing LAN at the related data center
+     * @type {number}
      * @memberof KubernetesNodePoolLan
      */
-    datacenterId?: string;
+    id: number;
 
     /**
      * Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP.
@@ -35,13 +35,6 @@ export interface KubernetesNodePoolLan {
      * @memberof KubernetesNodePoolLan
      */
     dhcp?: boolean;
-
-    /**
-     * The LAN ID of an existing LAN at the related data center
-     * @type {number}
-     * @memberof KubernetesNodePoolLan
-     */
-    id: number;
 
     /**
      * The array of additional LANs attached to worker nodes.

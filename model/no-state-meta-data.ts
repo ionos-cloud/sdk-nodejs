@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,6 +22,20 @@
 export interface NoStateMetaData {
 
     /**
+     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter.
+     * @type {string}
+     * @memberof NoStateMetaData
+     */
+    etag?: string;
+
+    /**
+     * The time when the resource was created.
+     * @type {string}
+     * @memberof NoStateMetaData
+     */
+    createdDate?: string;
+
+    /**
      * The user who has created the resource.
      * @type {string}
      * @memberof NoStateMetaData
@@ -36,18 +50,11 @@ export interface NoStateMetaData {
     createdByUserId?: string;
 
     /**
-     * The time when the resource was created.
+     * The last time the resource was modified.
      * @type {string}
      * @memberof NoStateMetaData
      */
-    createdDate?: string;
-
-    /**
-     * Resource\'s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an \'ETag response header to requests which don\'t use \'depth\' parameter. 
-     * @type {string}
-     * @memberof NoStateMetaData
-     */
-    etag?: string;
+    lastModifiedDate?: string;
 
     /**
      * The user who last modified the resource.
@@ -62,13 +69,6 @@ export interface NoStateMetaData {
      * @memberof NoStateMetaData
      */
     lastModifiedByUserId?: string;
-
-    /**
-     * The last time the resource was modified.
-     * @type {string}
-     * @memberof NoStateMetaData
-     */
-    lastModifiedDate?: string;
 }
 
 

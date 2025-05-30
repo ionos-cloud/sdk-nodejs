@@ -73,7 +73,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -130,7 +130,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -187,7 +187,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -244,7 +244,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -308,7 +308,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -367,7 +367,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -424,7 +424,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -483,7 +483,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -543,7 +543,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -602,7 +602,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -659,7 +659,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -718,7 +718,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -777,7 +777,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -836,7 +836,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -898,7 +898,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -959,7 +959,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1018,7 +1018,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -1079,7 +1079,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -17,6 +17,7 @@ import { Lans } from './lans';
 import { Loadbalancers } from './loadbalancers';
 import { NatGateways } from './nat-gateways';
 import { NetworkLoadBalancers } from './network-load-balancers';
+import { SecurityGroups } from './security-groups';
 import { Servers } from './servers';
 import { Volumes } from './volumes';
 
@@ -26,34 +27,6 @@ import { Volumes } from './volumes';
  * @interface DataCenterEntities
  */
 export interface DataCenterEntities {
-
-    /**
-     * 
-     * @type {Lans}
-     * @memberof DataCenterEntities
-     */
-    lans?: Lans;
-
-    /**
-     * 
-     * @type {Loadbalancers}
-     * @memberof DataCenterEntities
-     */
-    loadbalancers?: Loadbalancers;
-
-    /**
-     * 
-     * @type {NatGateways}
-     * @memberof DataCenterEntities
-     */
-    natgateways?: NatGateways;
-
-    /**
-     * 
-     * @type {NetworkLoadBalancers}
-     * @memberof DataCenterEntities
-     */
-    networkloadbalancers?: NetworkLoadBalancers;
 
     /**
      * 
@@ -68,6 +41,41 @@ export interface DataCenterEntities {
      * @memberof DataCenterEntities
      */
     volumes?: Volumes;
+
+    /**
+     * 
+     * @type {Loadbalancers}
+     * @memberof DataCenterEntities
+     */
+    loadbalancers?: Loadbalancers;
+
+    /**
+     * 
+     * @type {Lans}
+     * @memberof DataCenterEntities
+     */
+    lans?: Lans;
+
+    /**
+     * 
+     * @type {NetworkLoadBalancers}
+     * @memberof DataCenterEntities
+     */
+    networkloadbalancers?: NetworkLoadBalancers;
+
+    /**
+     * 
+     * @type {NatGateways}
+     * @memberof DataCenterEntities
+     */
+    natgateways?: NatGateways;
+
+    /**
+     * 
+     * @type {SecurityGroups}
+     * @memberof DataCenterEntities
+     */
+    securitygroups?: SecurityGroups;
 }
 
 

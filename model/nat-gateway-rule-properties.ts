@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -32,18 +32,18 @@ export interface NatGatewayRuleProperties {
     name: string;
 
     /**
+     * Type of the NAT Gateway rule.
+     * @type {NatGatewayRuleType}
+     * @memberof NatGatewayRuleProperties
+     */
+    type?: NatGatewayRuleType;
+
+    /**
      * Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is \'ICMP\' then targetPortRange start and end cannot be set.
      * @type {NatGatewayRuleProtocol}
      * @memberof NatGatewayRuleProperties
      */
     protocol?: NatGatewayRuleProtocol;
-
-    /**
-     * Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
-     * @type {string}
-     * @memberof NatGatewayRuleProperties
-     */
-    publicIp: string;
 
     /**
      * Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address.
@@ -53,11 +53,11 @@ export interface NatGatewayRuleProperties {
     sourceSubnet: string;
 
     /**
-     * 
-     * @type {TargetPortRange}
+     * Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource
+     * @type {string}
      * @memberof NatGatewayRuleProperties
      */
-    targetPortRange?: TargetPortRange;
+    publicIp: string;
 
     /**
      * Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
@@ -67,11 +67,11 @@ export interface NatGatewayRuleProperties {
     targetSubnet?: string;
 
     /**
-     * Type of the NAT Gateway rule.
-     * @type {NatGatewayRuleType}
+     * 
+     * @type {TargetPortRange}
      * @memberof NatGatewayRuleProperties
      */
-    type?: NatGatewayRuleType;
+    targetPortRange?: TargetPortRange;
 }
 
 

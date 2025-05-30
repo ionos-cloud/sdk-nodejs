@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,39 +22,11 @@
 export interface GroupProperties {
 
     /**
-     * Activity log access privilege.
-     * @type {boolean}
+     * The name of the resource.
+     * @type {string}
      * @memberof GroupProperties
      */
-    accessActivityLog?: boolean;
-
-    /**
-     * Privilege for a group to access and manage certificates.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    accessAndManageCertificates?: boolean;
-
-    /**
-     * Privilege for a group to access and manage dns records.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    accessAndManageDns?: boolean;
-
-    /**
-     * Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    accessAndManageMonitoring?: boolean;
-
-    /**
-     * Create backup unit privilege.
-     * @type {boolean}
-     * @memberof GroupProperties
-     */
-    createBackupUnit?: boolean;
+    name?: string;
 
     /**
      * Create data center privilege.
@@ -64,11 +36,46 @@ export interface GroupProperties {
     createDataCenter?: boolean;
 
     /**
-     * Create Flow Logs privilege.
+     * Create snapshot privilege.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    createFlowLog?: boolean;
+    createSnapshot?: boolean;
+
+    /**
+     * Reserve IP block privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    reserveIp?: boolean;
+
+    /**
+     * Activity log access privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessActivityLog?: boolean;
+
+    /**
+     * User privilege to create a cross connect.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    createPcc?: boolean;
+
+    /**
+     * S3 privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    s3Privilege?: boolean;
+
+    /**
+     * Create backup unit privilege.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    createBackupUnit?: boolean;
 
     /**
      * Create internet access privilege.
@@ -85,18 +92,25 @@ export interface GroupProperties {
     createK8sCluster?: boolean;
 
     /**
-     * Create pcc privilege.
+     * Create Flow Logs privilege.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    createPcc?: boolean;
+    createFlowLog?: boolean;
 
     /**
-     * Create snapshot privilege.
+     * Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
      * @type {boolean}
      * @memberof GroupProperties
      */
-    createSnapshot?: boolean;
+    accessAndManageMonitoring?: boolean;
+
+    /**
+     * Privilege for a group to access and manage certificates.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageCertificates?: boolean;
 
     /**
      * Privilege for a group to manage DBaaS related functionality.
@@ -106,11 +120,11 @@ export interface GroupProperties {
     manageDBaaS?: boolean;
 
     /**
-     * Privilege for a group to access and manage the Data Platform.
+     * Privilege for a group to access and manage dns records.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    manageDataplatform?: boolean;
+    accessAndManageDns?: boolean;
 
     /**
      * Privilege for group accessing container registry related functionality.
@@ -120,25 +134,74 @@ export interface GroupProperties {
     manageRegistry?: boolean;
 
     /**
-     * The name of the resource.
-     * @type {string}
-     * @memberof GroupProperties
-     */
-    name?: string;
-
-    /**
-     * Reserve IP block privilege.
+     * Privilege for a group to access and manage the Data Platform.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    reserveIp?: boolean;
+    manageDataplatform?: boolean;
 
     /**
-     * S3 privilege.
+     * Privilege for a group to access and manage Logs.
      * @type {boolean}
      * @memberof GroupProperties
      */
-    s3Privilege?: boolean;
+    accessAndManageLogging?: boolean;
+
+    /**
+     * Privilege for a group to access and manage CDN.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageCdn?: boolean;
+
+    /**
+     * Privilege for a group to access and manage VPN.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageVpn?: boolean;
+
+    /**
+     * Privilege for a group to access and manage API Gateway.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageApiGateway?: boolean;
+
+    /**
+     * Privilege for a group to access and manage KaaS.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageKaas?: boolean;
+
+    /**
+     * Privilege for a group to access and manage Network File Storage.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageNetworkFileStorage?: boolean;
+
+    /**
+     * Privilege for a group to access and manage AI Model Hub.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageAiModelHub?: boolean;
+
+    /**
+     * Privilege for a group to access and manage Password Policies.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    accessAndManageIamResources?: boolean;
+
+    /**
+     * Privilege for a group to access and manage Network Security Groups.
+     * @type {boolean}
+     * @memberof GroupProperties
+     */
+    createNetworkSecurityGroups?: boolean;
 }
 
 

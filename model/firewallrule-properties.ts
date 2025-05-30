@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,6 +22,48 @@
 export interface FirewallruleProperties {
 
     /**
+     * The name of the  resource.
+     * @type {string}
+     * @memberof FirewallruleProperties
+     */
+    name?: string;
+
+    /**
+     * The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).
+     * @type {string}
+     * @memberof FirewallruleProperties
+     */
+    protocol?: FirewallrulePropertiesProtocolEnum;
+
+    /**
+     * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.
+     * @type {string}
+     * @memberof FirewallruleProperties
+     */
+    sourceMac?: string | null;
+
+    /**
+     * The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic.
+     * @type {string}
+     * @memberof FirewallruleProperties
+     */
+    ipVersion?: FirewallrulePropertiesIpVersionEnum;
+
+    /**
+     * Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion).
+     * @type {string}
+     * @memberof FirewallruleProperties
+     */
+    sourceIp?: string | null;
+
+    /**
+     * If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion).
+     * @type {string}
+     * @memberof FirewallruleProperties
+     */
+    targetIp?: string | null;
+
+    /**
      * Defines the allowed code (from 0 to 254) if protocol ICMP or ICMPv6 is chosen. Value null allows all codes.
      * @type {number}
      * @memberof FirewallruleProperties
@@ -36,60 +78,18 @@ export interface FirewallruleProperties {
     icmpType?: number | null;
 
     /**
-     * The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic.
-     * @type {string}
-     * @memberof FirewallruleProperties
-     */
-    ipVersion?: FirewallrulePropertiesIpVersionEnum;
-
-    /**
-     * The name of the  resource.
-     * @type {string}
-     * @memberof FirewallruleProperties
-     */
-    name?: string;
-
-    /**
-     * Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports.
-     * @type {number}
-     * @memberof FirewallruleProperties
-     */
-    portRangeEnd?: number;
-
-    /**
-     * Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.
+     * Defines the start range of the allowed port (from 1 to 65535) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports.
      * @type {number}
      * @memberof FirewallruleProperties
      */
     portRangeStart?: number;
 
     /**
-     * The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests).
-     * @type {string}
+     * Defines the end range of the allowed port (from 1 to 65535) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports.
+     * @type {number}
      * @memberof FirewallruleProperties
      */
-    protocol: FirewallrulePropertiesProtocolEnum;
-
-    /**
-     * Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion).
-     * @type {string}
-     * @memberof FirewallruleProperties
-     */
-    sourceIp?: string | null;
-
-    /**
-     * Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address.
-     * @type {string}
-     * @memberof FirewallruleProperties
-     */
-    sourceMac?: string | null;
-
-    /**
-     * If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion).
-     * @type {string}
-     * @memberof FirewallruleProperties
-     */
-    targetIp?: string | null;
+    portRangeEnd?: number;
 
     /**
      * The type of the firewall rule. If not specified, the default INGRESS value is used.
@@ -100,6 +100,22 @@ export interface FirewallruleProperties {
 }
 
 
+
+/**
+    * @export
+    * @enum {string}
+    */
+export enum FirewallrulePropertiesProtocolEnum {
+    Tcp = 'TCP',
+    Udp = 'UDP',
+    Icmp = 'ICMP',
+    Icmpv6 = 'ICMPv6',
+    Gre = 'GRE',
+    Vrrp = 'VRRP',
+    Esp = 'ESP',
+    Ah = 'AH',
+    Any = 'ANY'
+}
 
 
 /**
@@ -113,18 +129,6 @@ export enum FirewallrulePropertiesIpVersionEnum {
 
 
 
-
-/**
-    * @export
-    * @enum {string}
-    */
-export enum FirewallrulePropertiesProtocolEnum {
-    Tcp = 'TCP',
-    Udp = 'UDP',
-    Icmp = 'ICMP',
-    Icmpv6 = 'ICMPv6',
-    Any = 'ANY'
-}
 
 
 

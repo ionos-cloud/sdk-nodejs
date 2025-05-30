@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -24,11 +24,18 @@ import { PaginationLinks } from './pagination-links';
 export interface LabelResources {
 
     /**
-     * 
-     * @type {PaginationLinks}
+     * A unique representation of the label as a resource collection.
+     * @type {string}
      * @memberof LabelResources
      */
-    _links?: PaginationLinks;
+    id?: string;
+
+    /**
+     * The type of resource within a collection.
+     * @type {string}
+     * @memberof LabelResources
+     */
+    type?: LabelResourcesTypeEnum;
 
     /**
      * URL to the collection representation (absolute path).
@@ -38,25 +45,11 @@ export interface LabelResources {
     href?: string;
 
     /**
-     * A unique representation of the label as a resource collection.
-     * @type {string}
-     * @memberof LabelResources
-     */
-    id?: string;
-
-    /**
      * Array of items in the collection.
      * @type {Array<LabelResource>}
      * @memberof LabelResources
      */
     items?: Array<LabelResource>;
-
-    /**
-     * The limit (if specified in the request).
-     * @type {number}
-     * @memberof LabelResources
-     */
-    limit?: number;
 
     /**
      * The offset (if specified in the request).
@@ -66,17 +59,19 @@ export interface LabelResources {
     offset?: number;
 
     /**
-     * The type of resource within a collection.
-     * @type {string}
+     * The limit (if specified in the request).
+     * @type {number}
      * @memberof LabelResources
      */
-    type?: LabelResourcesTypeEnum;
+    limit?: number;
+
+    /**
+     * 
+     * @type {PaginationLinks}
+     * @memberof LabelResources
+     */
+    _links?: PaginationLinks;
 }
-
-
-
-
-
 
 
 
@@ -87,6 +82,11 @@ export interface LabelResources {
 export enum LabelResourcesTypeEnum {
     Collection = 'collection'
 }
+
+
+
+
+
 
 
 

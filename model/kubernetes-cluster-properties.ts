@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -24,18 +24,11 @@ import { S3Bucket } from './s3-bucket';
 export interface KubernetesClusterProperties {
 
     /**
-     * Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.
-     * @type {Array<string>}
+     * A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * @type {string}
      * @memberof KubernetesClusterProperties
      */
-    apiSubnetAllowList?: Array<string>;
-
-    /**
-     * List of available versions for upgrading the cluster
-     * @type {Array<string>}
-     * @memberof KubernetesClusterProperties
-     */
-    availableUpgradeVersions?: Array<string>;
+    name: string;
 
     /**
      * The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster\'s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions.
@@ -45,13 +38,6 @@ export interface KubernetesClusterProperties {
     k8sVersion?: string;
 
     /**
-     * The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.
-     * @type {string}
-     * @memberof KubernetesClusterProperties
-     */
-    location?: string;
-
-    /**
      * 
      * @type {KubernetesMaintenanceWindow}
      * @memberof KubernetesClusterProperties
@@ -59,11 +45,32 @@ export interface KubernetesClusterProperties {
     maintenanceWindow?: KubernetesMaintenanceWindow;
 
     /**
-     * A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between.
+     * List of available versions for upgrading the cluster
+     * @type {Array<string>}
+     * @memberof KubernetesClusterProperties
+     */
+    availableUpgradeVersions?: Array<string>;
+
+    /**
+     * List of versions that may be used for node pools under this cluster
+     * @type {Array<string>}
+     * @memberof KubernetesClusterProperties
+     */
+    viableNodePoolVersions?: Array<string>;
+
+    /**
+     * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
+     * @type {boolean}
+     * @memberof KubernetesClusterProperties
+     */
+    _public?: boolean;
+
+    /**
+     * The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private.
      * @type {string}
      * @memberof KubernetesClusterProperties
      */
-    name: string;
+    location?: string;
 
     /**
      * The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster\'s location. This attribute is mandatory if the cluster is private.
@@ -80,25 +87,18 @@ export interface KubernetesClusterProperties {
     nodeSubnet?: string;
 
     /**
-     * The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
-     * @type {boolean}
+     * Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6.
+     * @type {Array<string>}
      * @memberof KubernetesClusterProperties
      */
-    _public?: boolean;
+    apiSubnetAllowList?: Array<string>;
 
     /**
-     * List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs
+     * List of Object storage buckets configured for K8s usage. For now it contains only one bucket used to store K8s API audit logs
      * @type {Array<S3Bucket>}
      * @memberof KubernetesClusterProperties
      */
     s3Buckets?: Array<S3Bucket>;
-
-    /**
-     * List of versions that may be used for node pools under this cluster
-     * @type {Array<string>}
-     * @memberof KubernetesClusterProperties
-     */
-    viableNodePoolVersions?: Array<string>;
 }
 
 

@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -25,11 +25,18 @@ import { KubernetesClusterPropertiesForPut } from './kubernetes-cluster-properti
 export interface KubernetesClusterForPut {
 
     /**
-     * 
-     * @type {KubernetesClusterEntities}
+     * The resource\'s unique identifier.
+     * @type {string}
      * @memberof KubernetesClusterForPut
      */
-    entities?: KubernetesClusterEntities;
+    id?: string;
+
+    /**
+     * The type of object.
+     * @type {string}
+     * @memberof KubernetesClusterForPut
+     */
+    type?: KubernetesClusterForPutTypeEnum;
 
     /**
      * URL to the object representation (absolute path).
@@ -37,13 +44,6 @@ export interface KubernetesClusterForPut {
      * @memberof KubernetesClusterForPut
      */
     href?: string;
-
-    /**
-     * The resource\'s unique identifier.
-     * @type {string}
-     * @memberof KubernetesClusterForPut
-     */
-    id?: string;
 
     /**
      * 
@@ -60,16 +60,12 @@ export interface KubernetesClusterForPut {
     properties: KubernetesClusterPropertiesForPut;
 
     /**
-     * The type of object.
-     * @type {string}
+     * 
+     * @type {KubernetesClusterEntities}
      * @memberof KubernetesClusterForPut
      */
-    type?: KubernetesClusterForPutTypeEnum;
+    entities?: KubernetesClusterEntities;
 }
-
-
-
-
 
 
 
@@ -80,6 +76,10 @@ export interface KubernetesClusterForPut {
 export enum KubernetesClusterForPutTypeEnum {
     K8s = 'k8s'
 }
+
+
+
+
 
 
 

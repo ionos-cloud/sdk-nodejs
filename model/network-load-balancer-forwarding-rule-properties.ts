@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -24,6 +24,13 @@ import { NetworkLoadBalancerForwardingRuleTarget } from './network-load-balancer
 export interface NetworkLoadBalancerForwardingRuleProperties {
 
     /**
+     * The name of the Network Load Balancer forwarding rule.
+     * @type {string}
+     * @memberof NetworkLoadBalancerForwardingRuleProperties
+     */
+    name: string;
+
+    /**
      * Balancing algorithm
      * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
@@ -31,11 +38,11 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
     algorithm: NetworkLoadBalancerForwardingRulePropertiesAlgorithmEnum;
 
     /**
-     * 
-     * @type {NetworkLoadBalancerForwardingRuleHealthCheck}
+     * Balancing protocol
+     * @type {string}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
-    healthCheck?: NetworkLoadBalancerForwardingRuleHealthCheck;
+    protocol: NetworkLoadBalancerForwardingRulePropertiesProtocolEnum;
 
     /**
      * Listening (inbound) IP.
@@ -52,18 +59,11 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
     listenerPort: number;
 
     /**
-     * The name of the Network Load Balancer forwarding rule.
-     * @type {string}
+     * 
+     * @type {NetworkLoadBalancerForwardingRuleHealthCheck}
      * @memberof NetworkLoadBalancerForwardingRuleProperties
      */
-    name: string;
-
-    /**
-     * Balancing protocol
-     * @type {string}
-     * @memberof NetworkLoadBalancerForwardingRuleProperties
-     */
-    protocol: NetworkLoadBalancerForwardingRulePropertiesProtocolEnum;
+    healthCheck?: NetworkLoadBalancerForwardingRuleHealthCheck;
 
     /**
      * Array of items in the collection.
@@ -72,6 +72,7 @@ export interface NetworkLoadBalancerForwardingRuleProperties {
      */
     targets: Array<NetworkLoadBalancerForwardingRuleTarget>;
 }
+
 
 
 /**
@@ -85,10 +86,6 @@ export enum NetworkLoadBalancerForwardingRulePropertiesAlgorithmEnum {
     SourceIp = 'SOURCE_IP'
 }
 
-
-
-
-
 /**
     * @export
     * @enum {string}
@@ -97,6 +94,9 @@ export enum NetworkLoadBalancerForwardingRulePropertiesProtocolEnum {
     Http = 'HTTP',
     Tcp = 'TCP'
 }
+
+
+
 
 
 

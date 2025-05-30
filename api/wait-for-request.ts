@@ -8,9 +8,9 @@ export async function waitForRequest(config: Configuration, path: string) {
   const options: Record<string, any> = {}
   if (config.apiKey) {
     options.headers = {
-      Authorization: typeof config.apiKey === 'function'
+      Authorization: 'Bearer ' + (typeof config.apiKey === 'function'
         ? await config.apiKey('Authorization')
-        : await config.apiKey
+        : await config.apiKey)
     }
   } else {
     if (config.username || config.password) {

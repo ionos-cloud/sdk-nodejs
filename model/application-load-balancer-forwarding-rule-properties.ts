@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,18 +23,18 @@ import { ApplicationLoadBalancerHttpRule } from './application-load-balancer-htt
 export interface ApplicationLoadBalancerForwardingRuleProperties {
 
     /**
-     * The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).
-     * @type {number}
+     * The name of the Application Load Balancer forwarding rule.
+     * @type {string}
      * @memberof ApplicationLoadBalancerForwardingRuleProperties
      */
-    clientTimeout?: number;
+    name: string;
 
     /**
-     * An array of items in the collection. The original order of rules is preserved during processing, except that rules of the \'FORWARD\' type are processed after the rules with other defined actions. The relative order of the \'FORWARD\' type rules is also preserved during the processing.
-     * @type {Array<ApplicationLoadBalancerHttpRule>}
+     * The balancing protocol.
+     * @type {string}
      * @memberof ApplicationLoadBalancerForwardingRuleProperties
      */
-    httpRules?: Array<ApplicationLoadBalancerHttpRule>;
+    protocol: ApplicationLoadBalancerForwardingRulePropertiesProtocolEnum;
 
     /**
      * The listening (inbound) IP.
@@ -51,18 +51,11 @@ export interface ApplicationLoadBalancerForwardingRuleProperties {
     listenerPort: number;
 
     /**
-     * The name of the Application Load Balancer forwarding rule.
-     * @type {string}
+     * The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds).
+     * @type {number}
      * @memberof ApplicationLoadBalancerForwardingRuleProperties
      */
-    name: string;
-
-    /**
-     * The balancing protocol.
-     * @type {string}
-     * @memberof ApplicationLoadBalancerForwardingRuleProperties
-     */
-    protocol: ApplicationLoadBalancerForwardingRulePropertiesProtocolEnum;
+    clientTimeout?: number;
 
     /**
      * Array of items in the collection.
@@ -70,11 +63,14 @@ export interface ApplicationLoadBalancerForwardingRuleProperties {
      * @memberof ApplicationLoadBalancerForwardingRuleProperties
      */
     serverCertificates?: Array<string>;
+
+    /**
+     * An array of items in the collection. The original order of rules is preserved during processing, except that rules of the \'FORWARD\' type are processed after the rules with other defined actions. The relative order of the \'FORWARD\' type rules is also preserved during the processing.
+     * @type {Array<ApplicationLoadBalancerHttpRule>}
+     * @memberof ApplicationLoadBalancerForwardingRuleProperties
+     */
+    httpRules?: Array<ApplicationLoadBalancerHttpRule>;
 }
-
-
-
-
 
 
 
@@ -85,6 +81,10 @@ export interface ApplicationLoadBalancerForwardingRuleProperties {
 export enum ApplicationLoadBalancerForwardingRulePropertiesProtocolEnum {
     Http = 'HTTP'
 }
+
+
+
+
 
 
 

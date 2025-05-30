@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -37,6 +37,13 @@ export interface ContractProperties {
     owner?: string;
 
     /**
+     * The contract status.
+     * @type {string}
+     * @memberof ContractProperties
+     */
+    status?: string;
+
+    /**
      * The registration domain of the contract.
      * @type {string}
      * @memberof ContractProperties
@@ -49,13 +56,6 @@ export interface ContractProperties {
      * @memberof ContractProperties
      */
     resourceLimits?: ResourceLimits;
-
-    /**
-     * The contract status.
-     * @type {string}
-     * @memberof ContractProperties
-     */
-    status?: string;
 }
 
 

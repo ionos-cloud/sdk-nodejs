@@ -56,7 +56,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -124,13 +124,13 @@ api_instance
 | **filterCreatedAfter** | **string** | Filter the list to only include the requests created after the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. | [optional][default to undefined] |
 | **filterCreatedBefore** | **string** | Filter the list to only include the requests created before the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. | [optional][default to undefined] |
 | **filterCreatedDate** | **string** | Filter the list to only include the requests that contain the createdDate, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
-| **filterCreatedBy** | **string** | Filter the list to only include the requests that contain the createdBy, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
-| **filterEtag** | **string** | Filter the list to only include the requests that contain the specified etag. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
-| **filterRequestStatus** | **string** | Filter the list to only include the requests that contain the specified requestStatus. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
-| **filterMethod** | **string** | Filter the list to only include the requests that contain the specified method. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
-| **filterHeaders** | **string** | Filter the list to only include the requests that contain the specified headers. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
-| **filterBody** | **string** | Filter the list to only include the requests that contain the specified body. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
-| **filterUrl** | **string** | Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | [optional][default to undefined] |
+| **filterCreatedBy** | **string** | Filter the list to only include the requests that contain the createdBy, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterEtag** | **string** | Filter the list to only include the requests that contain the specified etag. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterRequestStatus** | **string** | Filter the list to only include the requests that contain the specified requestStatus. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterMethod** | **string** | Filter the list to only include the requests that contain the specified method. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterHeaders** | **string** | Filter the list to only include the requests that contain the specified headers. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterBody** | **string** | Filter the list to only include the requests that contain the specified body. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
+| **filterUrl** | **string** | Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | [optional][default to undefined] |
 | **offset** | **number** | The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [optional][default to 0] |
 | **limit** | **number** | The maximum number of elements to return (use together with offset for pagination). | [optional][default to 1000] |
 
@@ -140,7 +140,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -200,7 +200,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 

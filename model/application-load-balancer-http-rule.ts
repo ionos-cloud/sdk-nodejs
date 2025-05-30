@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -23,18 +23,25 @@ import { ApplicationLoadBalancerHttpRuleCondition } from './application-load-bal
 export interface ApplicationLoadBalancerHttpRule {
 
     /**
-     * An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.
-     * @type {Array<ApplicationLoadBalancerHttpRuleCondition>}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    conditions?: Array<ApplicationLoadBalancerHttpRuleCondition>;
-
-    /**
-     * Specifies the content type and is valid only for \'STATIC\' actions.
+     * The unique name of the Application Load Balancer HTTP rule.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRule
      */
-    contentType?: string;
+    name: string;
+
+    /**
+     * The HTTP rule type.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    type: ApplicationLoadBalancerHttpRuleTypeEnum;
+
+    /**
+     * The ID of the target group; this parameter is mandatory and is valid only for \'FORWARD\' actions.
+     * @type {string}
+     * @memberof ApplicationLoadBalancerHttpRule
+     */
+    targetGroup?: string;
 
     /**
      * Indicates whether the query part of the URI should be dropped and is valid only for \'REDIRECT\' actions. Default value is \'FALSE\', the redirect URI does not contain any query parameters.
@@ -51,11 +58,11 @@ export interface ApplicationLoadBalancerHttpRule {
     location?: string;
 
     /**
-     * The unique name of the Application Load Balancer HTTP rule.
-     * @type {string}
+     * The status code is for \'REDIRECT\' and \'STATIC\' actions only.   If the HTTP rule is \'REDIRECT\' the valid values are: 301, 302, 303, 307, 308; default value is \'301\'.  If the HTTP rule is \'STATIC\' the valid values are from the range 200-599; default value is \'503\'.
+     * @type {number}
      * @memberof ApplicationLoadBalancerHttpRule
      */
-    name: string;
+    statusCode?: number;
 
     /**
      * The response message of the request; this parameter is mandatory for \'STATIC\' actions.
@@ -65,33 +72,19 @@ export interface ApplicationLoadBalancerHttpRule {
     responseMessage?: string;
 
     /**
-     * The status code is for \'REDIRECT\' and \'STATIC\' actions only.   If the HTTP rule is \'REDIRECT\' the valid values are: 301, 302, 303, 307, 308; default value is \'301\'.  If the HTTP rule is \'STATIC\' the valid values are from the range 200-599; default value is \'503\'.
-     * @type {number}
-     * @memberof ApplicationLoadBalancerHttpRule
-     */
-    statusCode?: number;
-
-    /**
-     * The ID of the target group; this parameter is mandatory and is valid only for \'FORWARD\' actions.
+     * Specifies the content type and is valid only for \'STATIC\' actions.
      * @type {string}
      * @memberof ApplicationLoadBalancerHttpRule
      */
-    targetGroup?: string;
+    contentType?: string;
 
     /**
-     * The HTTP rule type.
-     * @type {string}
+     * An array of items in the collection. The action will be executed only if each condition is met; the rule will always be applied if no conditions are set.
+     * @type {Array<ApplicationLoadBalancerHttpRuleCondition>}
      * @memberof ApplicationLoadBalancerHttpRule
      */
-    type: ApplicationLoadBalancerHttpRuleTypeEnum;
+    conditions?: Array<ApplicationLoadBalancerHttpRuleCondition>;
 }
-
-
-
-
-
-
-
 
 
 
@@ -104,6 +97,13 @@ export enum ApplicationLoadBalancerHttpRuleTypeEnum {
     Static = 'STATIC',
     Redirect = 'REDIRECT'
 }
+
+
+
+
+
+
+
 
 
 

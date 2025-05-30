@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -31,10 +31,10 @@ import { S3ObjectStorageSSO } from '../model';
 export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Delete the specified user S3 key.
-         * @summary Delete S3 keys
+         * Delete the specified user Object storage key.
+         * @summary Delete Object storage keys
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -63,13 +63,13 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -118,10 +118,10 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.
-         * @summary Retrieve user S3 keys by key ID
+         * Retrieve the specified user Object storage key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the Object storage key is created, and in the list of all user Object storage keys, returned by GET.
+         * @summary Retrieve user Object storage keys by key ID
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -150,13 +150,13 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -205,8 +205,8 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-         * @summary List user S3 keys
+         * List Object storage keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+         * @summary List user Object storage keys
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -234,13 +234,13 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -303,8 +303,8 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
-         * @summary Create user S3 keys
+         * Create an Object storage key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
+         * @summary Create user Object storage keys
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -330,13 +330,13 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -385,11 +385,11 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Enables or disables the specified user S3 key.
-         * @summary Modify a S3 Key by Key ID
+         * Enables or disables the specified user Object storage key.
+         * @summary Modify a Object storage Key by Key ID
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
-         * @param {S3Key} s3Key The modified S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
+         * @param {S3Key} s3Key The modified Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -421,13 +421,13 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -483,8 +483,8 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             };
         },
         /**
-         * Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-         * @summary Retrieve S3 single sign-on URLs
+         * Retrieve Ionos Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+         * @summary Retrieve Object storage single sign-on URLs
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -511,13 +511,13 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -582,10 +582,10 @@ export const UserS3KeysApiAxiosParamCreator = function (configuration?: Configur
 export const UserS3KeysApiFp = function(configuration?: Configuration) {
     return {
         /**
-         * Delete the specified user S3 key.
-         * @summary Delete S3 keys
+         * Delete the specified user Object storage key.
+         * @summary Delete Object storage keys
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -598,10 +598,10 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.
-         * @summary Retrieve user S3 keys by key ID
+         * Retrieve the specified user Object storage key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the Object storage key is created, and in the list of all user Object storage keys, returned by GET.
+         * @summary Retrieve user Object storage keys by key ID
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -614,8 +614,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-         * @summary List user S3 keys
+         * List Object storage keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+         * @summary List user Object storage keys
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -631,8 +631,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
-         * @summary Create user S3 keys
+         * Create an Object storage key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
+         * @summary Create user Object storage keys
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -646,11 +646,11 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Enables or disables the specified user S3 key.
-         * @summary Modify a S3 Key by Key ID
+         * Enables or disables the specified user Object storage key.
+         * @summary Modify a Object storage Key by Key ID
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
-         * @param {S3Key} s3Key The modified S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
+         * @param {S3Key} s3Key The modified Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -663,8 +663,8 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
             return runRequest(axiosArgs, configuration);
         },
         /**
-         * Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-         * @summary Retrieve S3 single sign-on URLs
+         * Retrieve Ionos Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+         * @summary Retrieve Object storage single sign-on URLs
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -688,10 +688,10 @@ export const UserS3KeysApiFp = function(configuration?: Configuration) {
 export const UserS3KeysApiFactory = function (configuration?: Configuration, basePath?: string, axios?: AxiosInstance) {
     return {
         /**
-         * Delete the specified user S3 key.
-         * @summary Delete S3 keys
+         * Delete the specified user Object storage key.
+         * @summary Delete Object storage keys
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -702,10 +702,10 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
             return UserS3KeysApiFp(configuration).umUsersS3keysDelete(userId, keyId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.
-         * @summary Retrieve user S3 keys by key ID
+         * Retrieve the specified user Object storage key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the Object storage key is created, and in the list of all user Object storage keys, returned by GET.
+         * @summary Retrieve user Object storage keys by key ID
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -716,8 +716,8 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
             return UserS3KeysApiFp(configuration).umUsersS3keysFindByKeyId(userId, keyId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-         * @summary List user S3 keys
+         * List Object storage keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+         * @summary List user Object storage keys
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -729,8 +729,8 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
             return UserS3KeysApiFp(configuration).umUsersS3keysGet(userId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
-         * @summary Create user S3 keys
+         * Create an Object storage key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
+         * @summary Create user Object storage keys
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
@@ -742,11 +742,11 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
             return UserS3KeysApiFp(configuration).umUsersS3keysPost(userId, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Enables or disables the specified user S3 key.
-         * @summary Modify a S3 Key by Key ID
+         * Enables or disables the specified user Object storage key.
+         * @summary Modify a Object storage Key by Key ID
          * @param {string} userId The unique ID of the user.
-         * @param {string} keyId The unique ID of the S3 key.
-         * @param {S3Key} s3Key The modified S3 key.
+         * @param {string} keyId The unique ID of the Object storage key.
+         * @param {S3Key} s3Key The modified Object storage key.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -757,8 +757,8 @@ export const UserS3KeysApiFactory = function (configuration?: Configuration, bas
             return UserS3KeysApiFp(configuration).umUsersS3keysPut(userId, keyId, s3Key, pretty, depth, xContractNumber, options).then((request) => request(axios, basePath));
         },
         /**
-         * Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-         * @summary Retrieve S3 single sign-on URLs
+         * Retrieve Ionos Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+         * @summary Retrieve Object storage single sign-on URLs
          * @param {string} userId The unique ID of the user.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -785,7 +785,7 @@ export interface UserS3KeysApiUmUsersS3keysDeleteRequest {
     readonly userId: string
 
     /**
-     * The unique ID of the S3 key.
+     * The unique ID of the Object storage key.
      * @type {string}
      * @memberof UserS3KeysApiUmUsersS3keysDelete
      */
@@ -827,7 +827,7 @@ export interface UserS3KeysApiUmUsersS3keysFindByKeyIdRequest {
     readonly userId: string
 
     /**
-     * The unique ID of the S3 key.
+     * The unique ID of the Object storage key.
      * @type {string}
      * @memberof UserS3KeysApiUmUsersS3keysFindByKeyId
      */
@@ -957,14 +957,14 @@ export interface UserS3KeysApiUmUsersS3keysPutRequest {
     readonly userId: string
 
     /**
-     * The unique ID of the S3 key.
+     * The unique ID of the Object storage key.
      * @type {string}
      * @memberof UserS3KeysApiUmUsersS3keysPut
      */
     readonly keyId: string
 
     /**
-     * The modified S3 key.
+     * The modified Object storage key.
      * @type {S3Key}
      * @memberof UserS3KeysApiUmUsersS3keysPut
      */
@@ -1046,8 +1046,8 @@ export interface UserS3KeysApiUmUsersS3ssourlGetRequest {
  */
 export class UserS3KeysApi extends BaseAPI {
     /**
-     * Delete the specified user S3 key.
-     * @summary Delete S3 keys
+     * Delete the specified user Object storage key.
+     * @summary Delete Object storage keys
      * @param {UserS3KeysApiUmUsersS3keysDeleteRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1058,8 +1058,8 @@ export class UserS3KeysApi extends BaseAPI {
     }
 
     /**
-     * Retrieve the specified user S3 key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the S3 key is created, and in the list of all user S3 keys, returned by GET.
-     * @summary Retrieve user S3 keys by key ID
+     * Retrieve the specified user Object storage key. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. The key ID is in the response body when the Object storage key is created, and in the list of all user Object storage keys, returned by GET.
+     * @summary Retrieve user Object storage keys by key ID
      * @param {UserS3KeysApiUmUsersS3keysFindByKeyIdRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1070,8 +1070,8 @@ export class UserS3KeysApi extends BaseAPI {
     }
 
     /**
-     * List S3 keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-     * @summary List user S3 keys
+     * List Object storage keys by user ID. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+     * @summary List user Object storage keys
      * @param {UserS3KeysApiUmUsersS3keysGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1082,8 +1082,8 @@ export class UserS3KeysApi extends BaseAPI {
     }
 
     /**
-     * Create an S3 key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
-     * @summary Create user S3 keys
+     * Create an Object storage key for the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET. A maximum of five keys per user can be generated.
+     * @summary Create user Object storage keys
      * @param {UserS3KeysApiUmUsersS3keysPostRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1094,8 +1094,8 @@ export class UserS3KeysApi extends BaseAPI {
     }
 
     /**
-     * Enables or disables the specified user S3 key.
-     * @summary Modify a S3 Key by Key ID
+     * Enables or disables the specified user Object storage key.
+     * @summary Modify a Object storage Key by Key ID
      * @param {UserS3KeysApiUmUsersS3keysPutRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
@@ -1106,8 +1106,8 @@ export class UserS3KeysApi extends BaseAPI {
     }
 
     /**
-     * Retrieve S3 Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
-     * @summary Retrieve S3 single sign-on URLs
+     * Retrieve Ionos Object Storage single sign-on URLs for the the specified user. The user ID is in the response body when the user is created, and in the list of the users, returned by GET.
+     * @summary Retrieve Object storage single sign-on URLs
      * @param {UserS3KeysApiUmUsersS3ssourlGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

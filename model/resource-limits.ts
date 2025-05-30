@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,18 +22,18 @@
 export interface ResourceLimits {
 
     /**
-     * The maximum number of CPU cores per contract.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    coresPerContract: number;
-
-    /**
      * The maximum number of CPU cores per server.
      * @type {number}
      * @memberof ResourceLimits
      */
     coresPerServer: number;
+
+    /**
+     * The maximum number of CPU cores per contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    coresPerContract: number;
 
     /**
      * The number of CPU cores provisioned.
@@ -43,18 +43,25 @@ export interface ResourceLimits {
     coresProvisioned: number;
 
     /**
-     * The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.
+     * The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.
      * @type {number}
      * @memberof ResourceLimits
      */
-    dasVolumeProvisioned: number;
+    ramPerServer: number;
 
     /**
-     * The maximum amount of disk space (in MB) that can be provided under this contract.
+     * The maximum amount of RAM (in MB) that can be provisioned under this contract.
      * @type {number}
      * @memberof ResourceLimits
      */
-    hddLimitPerContract: number;
+    ramPerContract: number;
+
+    /**
+     * The amount of RAM (in MB) provisioned under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ramProvisioned: number;
 
     /**
      * The maximum size (in MB) of an idividual hard disk volume.
@@ -64,11 +71,67 @@ export interface ResourceLimits {
     hddLimitPerVolume: number;
 
     /**
+     * The maximum amount of disk space (in MB) that can be provided under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    hddLimitPerContract: number;
+
+    /**
      * The amount of hard disk space (in MB) that is currently provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
     hddVolumeProvisioned: number;
+
+    /**
+     * The maximum size (in MB) of an individual solid state disk volume.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ssdLimitPerVolume: number;
+
+    /**
+     * The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ssdLimitPerContract: number;
+
+    /**
+     * The amount of solid state disk space (in MB) that is currently provisioned.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    ssdVolumeProvisioned: number;
+
+    /**
+     * The amount of DAS disk space (in MB) in a Cube server that is currently provisioned.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    dasVolumeProvisioned: number;
+
+    /**
+     * The maximum number of static public IP addresses that can be reserved by this customer across contracts.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    reservableIps: number;
+
+    /**
+     * The maximum number of static public IP addresses that can be reserved for this contract.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    reservedIpsOnContract: number;
+
+    /**
+     * The number of static public IP addresses in use.
+     * @type {number}
+     * @memberof ResourceLimits
+     */
+    reservedIpsInUse: number;
 
     /**
      * The maximum number of Kubernetes clusters that can be created under this contract.
@@ -85,20 +148,6 @@ export interface ResourceLimits {
     k8sClustersProvisioned: number;
 
     /**
-     * The NAT Gateway total limit.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    natGatewayLimitTotal: number;
-
-    /**
-     * The NAT Gateways provisioned.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    natGatewayProvisioned: number;
-
-    /**
      * The NLB total limit.
      * @type {number}
      * @memberof ResourceLimits
@@ -113,67 +162,39 @@ export interface ResourceLimits {
     nlbProvisioned: number;
 
     /**
-     * The maximum amount of RAM (in MB) that can be provisioned under this contract.
+     * The NAT Gateway total limit.
      * @type {number}
      * @memberof ResourceLimits
      */
-    ramPerContract: number;
+    natGatewayLimitTotal: number;
 
     /**
-     * The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract.
+     * The NAT Gateways provisioned.
      * @type {number}
      * @memberof ResourceLimits
      */
-    ramPerServer: number;
+    natGatewayProvisioned: number;
 
     /**
-     * The amount of RAM (in MB) provisioned under this contract.
+     * The maximum number of security groups per VDC.
      * @type {number}
      * @memberof ResourceLimits
      */
-    ramProvisioned: number;
+    securityGroupsPerVdc: number;
 
     /**
-     * The maximum number of static public IP addresses that can be reserved by this customer across contracts.
+     * The maximum number of security groups that can be attached to a NIC or a VM individually. For example, a user can have maximum 10 security groups per NIC and 10 per VM.
      * @type {number}
      * @memberof ResourceLimits
      */
-    reservableIps: number;
+    securityGroupsPerResource: number;
 
     /**
-     * The number of static public IP addresses in use.
+     * The maximum number of rules per security group.
      * @type {number}
      * @memberof ResourceLimits
      */
-    reservedIpsInUse: number;
-
-    /**
-     * The maximum number of static public IP addresses that can be reserved for this contract.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    reservedIpsOnContract: number;
-
-    /**
-     * The maximum amount of solid state disk space (in MB) that can be provisioned under this contract.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ssdLimitPerContract: number;
-
-    /**
-     * The maximum size (in MB) of an individual solid state disk volume.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ssdLimitPerVolume: number;
-
-    /**
-     * The amount of solid state disk space (in MB) that is currently provisioned.
-     * @type {number}
-     * @memberof ResourceLimits
-     */
-    ssdVolumeProvisioned: number;
+    rulesPerSecurityGroup: number;
 }
 
 

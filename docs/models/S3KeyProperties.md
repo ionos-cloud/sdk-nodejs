@@ -3,7 +3,7 @@
 ## Properties
 | Name | Type | Description | Notes |
 | ------------ | ------------- | ------------- | ------------- |
-| **active** | **boolean** | Denotes weather the S3 key is active. | [optional] [default to undefined] |
-| **secretKey** | **string** | Secret of the S3 key. | [optional] [readonly] [default to undefined] |
+| **secretKey** | **string** | Secret of the Object storage key. | [optional] [readonly] [default to undefined] |
+| **active** | **boolean** | Denotes weather the Object storage key is active. | [optional] [default to undefined] |
 
 

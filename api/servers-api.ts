@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -80,13 +80,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -172,13 +172,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -263,13 +263,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -382,13 +382,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -477,13 +477,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -571,13 +571,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -631,7 +631,6 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {boolean} [upgradeNeeded] Filter servers that can or that cannot be upgraded.
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
@@ -641,7 +640,7 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersGet: async (datacenterId: string, pretty?: boolean, depth?: number, upgradeNeeded?: boolean, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
+        datacentersServersGet: async (datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number,  orderBy?: string, maxResults?: number, filters?: Map<string, string>, options: any = {}): Promise<RequestArgs> => {
             if (datacenterId === null || datacenterId === undefined) {
                 throw new RequiredError('datacenterId','Required parameter datacenterId was null or undefined when calling datacentersServersGet.');
             }
@@ -658,13 +657,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -684,13 +683,6 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             }
             if (depth !== undefined) {
                 localVarQueryParameter['depth'] = depth;
-            }
-
-            if ((upgradeNeeded === undefined) && (configuration !== undefined)) {
-                upgradeNeeded = configuration.getDefaultParamValue('upgradeNeeded');
-            }
-            if (upgradeNeeded !== undefined) {
-                localVarQueryParameter['upgradeNeeded'] = upgradeNeeded;
             }
 
             if ((offset === undefined) && (configuration !== undefined)) {
@@ -784,13 +776,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -877,13 +869,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -975,13 +967,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1069,13 +1061,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1158,13 +1150,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1259,13 +1251,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1346,13 +1338,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1433,13 +1425,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1520,13 +1512,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1576,7 +1568,7 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
         },
         /**
          * Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server\'s console).
-         * @summary Get JASON Web Token
+         * @summary Get JSON Web Token
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -1609,13 +1601,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1710,13 +1702,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1802,13 +1794,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1894,13 +1886,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -1985,13 +1977,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2104,13 +2096,13 @@ export const ServersApiAxiosParamCreator = function (configuration?: Configurati
             const localVarHeaderParameter = {} as any;
             const localVarQueryParameter = {} as any;
 
-            // authentication Basic Authentication required
+            // authentication BasicAuthentication required
             // http basic authentication required
             if (configuration && (configuration.username || configuration.password)) {
                 localVarRequestOptions["auth"] = { username: configuration.username, password: configuration.password };
             }
 
-            // authentication Token Authentication required
+            // authentication TokenAuthentication required
             if (configuration && configuration.apiKey) {
                 const localVarApiKeyValue = typeof configuration.apiKey === 'function'
                     ? await configuration.apiKey("Authorization")
@@ -2284,7 +2276,6 @@ export const ServersApiFp = function(configuration?: Configuration) {
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {boolean} [upgradeNeeded] Filter servers that can or that cannot be upgraded.
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
@@ -2294,8 +2285,8 @@ export const ServersApiFp = function(configuration?: Configuration) {
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        async datacentersServersGet(datacenterId: string, pretty?: boolean, depth?: number, upgradeNeeded?: boolean, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Servers>> {
-            const axiosArgs = await ServersApiAxiosParamCreator(configuration).datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
+        async datacentersServersGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, orderBy?: string, maxResults?: number, filters?: Map<string, string>, options?: any): Promise<(axios?: AxiosInstance, basePath?: string) => AxiosPromise<Servers>> {
+            const axiosArgs = await ServersApiAxiosParamCreator(configuration).datacentersServersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, orderBy, maxResults, filters, options);
             return runRequest(axiosArgs, configuration);
         },
         /**
@@ -2448,7 +2439,7 @@ export const ServersApiFp = function(configuration?: Configuration) {
         },
         /**
          * Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server\'s console).
-         * @summary Get JASON Web Token
+         * @summary Get JSON Web Token
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -2656,15 +2647,14 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
          * @param {string} datacenterId The unique ID of the data center.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
          * @param {number} [depth] Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on
-         * @param {boolean} [upgradeNeeded] Filter servers that can or that cannot be upgraded.
          * @param {number} [xContractNumber] Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
          * @param {number} [offset] The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination).
          * @param {number} [limit] The maximum number of elements to return (use together with offset for pagination).
          * @param {*} [options] Override http request option.
          * @throws {RequiredError}
          */
-        datacentersServersGet(datacenterId: string, pretty?: boolean, depth?: number, upgradeNeeded?: boolean, xContractNumber?: number, offset?: number, limit?: number, options?: any): AxiosPromise<Servers> {
-            return ServersApiFp(configuration).datacentersServersGet(datacenterId, pretty, depth, upgradeNeeded, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
+        datacentersServersGet(datacenterId: string, pretty?: boolean, depth?: number, xContractNumber?: number, offset?: number, limit?: number, options?: any): AxiosPromise<Servers> {
+            return ServersApiFp(configuration).datacentersServersGet(datacenterId, pretty, depth, xContractNumber, offset, limit, options).then((request) => request(axios, basePath));
         },
         /**
          * Update the properties of the specified server within the data center.
@@ -2796,7 +2786,7 @@ export const ServersApiFactory = function (configuration?: Configuration, basePa
         },
         /**
          * Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server\'s console).
-         * @summary Get JASON Web Token
+         * @summary Get JSON Web Token
          * @param {string} datacenterId The unique ID of the data center.
          * @param {string} serverId The unique ID of the server.
          * @param {boolean} [pretty] Controls whether the response is pretty-printed (with indentations and new lines).
@@ -3224,13 +3214,6 @@ export interface ServersApiDatacentersServersGetRequest {
      * @memberof ServersApiDatacentersServersGet
      */
     readonly depth?: number
-
-    /**
-     * Filter servers that can or that cannot be upgraded.
-     * @type {boolean}
-     * @memberof ServersApiDatacentersServersGet
-     */
-    readonly upgradeNeeded?: boolean
 
     /**
      * Users with multiple contracts must provide the contract number, for which all API requests are to be executed.
@@ -4093,7 +4076,7 @@ export class ServersApi extends BaseAPI {
      * @memberof ServersApi
      */
     public datacentersServersGet(requestParameters: ServersApiDatacentersServersGetRequest, options?: any) {
-        return ServersApiFp(this.configuration).datacentersServersGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.upgradeNeeded, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
+        return ServersApiFp(this.configuration).datacentersServersGet(requestParameters.datacenterId, requestParameters.pretty, requestParameters.depth, requestParameters.xContractNumber, requestParameters.offset, requestParameters.limit, requestParameters.orderBy, requestParameters.maxResults, requestParameters.filters, options).then((request) => request(this.axios, this.basePath));
     }
 
     /**
@@ -4206,7 +4189,7 @@ export class ServersApi extends BaseAPI {
 
     /**
      * Retrieve a JSON Web Token from the server for use in login operations (such as accessing the server\'s console).
-     * @summary Get JASON Web Token
+     * @summary Get JSON Web Token
      * @param {ServersApiDatacentersServersTokenGetRequest} requestParameters Request parameters.
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}

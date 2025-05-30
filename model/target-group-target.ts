@@ -2,7 +2,7 @@
 /* eslint-disable */
 /**
  * CLOUD API
- * IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
+ *  IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions can be managed through the Cloud API, in addition or as an alternative to the \"Data Center Designer\" (DCD) browser-based tool.    Both methods employ consistent concepts and features, deliver similar power and flexibility, and can be used to perform a multitude of management tasks, including adding servers, volumes, configuring networks, and so on.
  *
  * The version of the OpenAPI document: 6.0
  * 
@@ -22,25 +22,11 @@
 export interface TargetGroupTarget {
 
     /**
-     * When the health check is enabled, the target is available only when it accepts regular TCP or HTTP connection attempts for state checking. The state check consists of one connection attempt with the target\'s address and port. The default value is \'TRUE\'.
-     * @type {boolean}
-     * @memberof TargetGroupTarget
-     */
-    healthCheckEnabled?: boolean;
-
-    /**
      * The IP address of the balanced target.
      * @type {string}
      * @memberof TargetGroupTarget
      */
     ip: string;
-
-    /**
-     * When the maintenance mode is enabled, the target is prevented from receiving traffic; the default value is \'FALSE\'.
-     * @type {boolean}
-     * @memberof TargetGroupTarget
-     */
-    maintenanceEnabled?: boolean;
 
     /**
      * The port of the balanced target service; the valid range is 1 to 65535.
@@ -57,14 +43,26 @@ export interface TargetGroupTarget {
     weight: number;
 
     /**
-     * ProxyProtocol is used to set the proxy protocol version.
+     * Proxy protocol version.
      * @type {string}
      * @memberof TargetGroupTarget
      */
     proxyProtocol?: TargetGroupTargetProxyProtocolEnum;
+
+    /**
+     * When the health check is enabled, the target is available only when it accepts regular TCP or HTTP connection attempts for state checking. The state check consists of one connection attempt with the target\'s address and port. The default value is \'TRUE\'.
+     * @type {boolean}
+     * @memberof TargetGroupTarget
+     */
+    healthCheckEnabled?: boolean;
+
+    /**
+     * When the maintenance mode is enabled, the target is prevented from receiving traffic; the default value is \'FALSE\'.
+     * @type {boolean}
+     * @memberof TargetGroupTarget
+     */
+    maintenanceEnabled?: boolean;
 }
-
-
 
 
 
@@ -80,6 +78,8 @@ export enum TargetGroupTargetProxyProtocolEnum {
     V2 = 'v2',
     V2ssl = 'v2ssl'
 }
+
+
 
 
 

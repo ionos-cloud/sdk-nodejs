@@ -41,10 +41,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56,
-    name: name_example,
-    description: description_example,
-    secAuthProtection: true,
-    licenceType: licenceType_example, 
+    snapshot: snapshot_example, 
         options: {}
   })
   .then((response) => console.log(response.data))
@@ -60,10 +57,7 @@ api_instance
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
-| **name** | **string** | Snapshot name | [optional][default to undefined] |
-| **description** | **string** | Snapshot description | [optional][default to undefined] |
-| **secAuthProtection** | **boolean** | Flag for enabling extra protection for this snapshot, such as two-step verification. | [optional][default to undefined] |
-| **licenceType** | **string** | The OS type for this snapshot. | [optional][default to undefined] |
+| **snapshot** | [**CreateSnapshot**](../models/CreateSnapshot.md) | The payload of the snapshot. | [optional] |
 
 ### Return type
 
@@ -71,11 +65,11 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
-- **Content-Type**: application/x-www-form-urlencoded
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -128,7 +122,7 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -185,7 +179,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -249,7 +243,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -308,7 +302,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -365,7 +359,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -424,7 +418,7 @@ api_instance
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
@@ -459,7 +453,7 @@ api_instance
     pretty: true,
     depth: 56,
     xContractNumber: 56,
-    snapshotId: snapshotId_example, 
+    restoreSnapshot: restoreSnapshot_example, 
         options: {}
   })
   .then((response) => console.log(response.data))
@@ -475,7 +469,7 @@ api_instance
 | **pretty** | **boolean** | Controls whether the response is pretty-printed (with indentations and new lines). | [optional][default to true] |
 | **depth** | **number** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children\&#39;s children are included.  - depth&#x3D;... and so on | [optional][default to 0] |
 | **xContractNumber** | **number** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | [optional][default to undefined] |
-| **snapshotId** | **string** | The unique ID of the snapshot. | [optional][default to undefined] |
+| **restoreSnapshot** | [**RestoreSnapshot**](../models/RestoreSnapshot.md) | The payload used to restore a snapshot. | [optional] |
 
 ### Return type
 
@@ -483,10 +477,10 @@ nil (empty response body)
 
 ### Authorization
 
-Basic Authentication, Token Authentication
+BasicAuthentication, TokenAuthentication
 
 ### HTTP request headers
 
-- **Content-Type**: application/x-www-form-urlencoded
+- **Content-Type**: application/json
 - **Accept**: application/json
 
