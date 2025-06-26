@@ -14,6 +14,6 @@
 | **bootVolume** | [**ResourceReference**](ResourceReference.md) |  | [optional] [default to undefined] |
 | **cpuFamily** | **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE and VCPU servers. | [optional] [default to undefined] |
 | **type** | **string** | Server type: CUBE, ENTERPRISE or VCPU. | [optional] [default to undefined] |
-| **nicMultiQueue** | **boolean** | Activate or deactivate the Multi Queue feature on all NICs of this server. This feature is beneficial to  enable when the NICs are experiencing performance issues (e.g. low throughput). Toggling this feature will also initiate a restart of the server. If the specified value is `true`, the feature will  be activated; if it is not specified or set to `false`, the feature will be deactivated. It is not allowed for servers of type Cube. | [optional] [default to false] |
+| **nicMultiQueue** | **boolean** | Activate or deactivate the Multi Queue feature on all NICs of this server. This feature is beneficial to  enable when the NICs are experiencing performance issues (e.g. low throughput). Toggling this feature will also initiate a restart of the server. If the specified value is `true`, the feature will  be activated; if it is not specified or set to `false`, the feature will be deactivated. It is not allowed for servers of type Cube. | [optional] [default to undefined] |
 
 
